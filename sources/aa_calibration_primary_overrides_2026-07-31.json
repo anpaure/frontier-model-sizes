@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-31",
+  "purpose": "Primary-source metadata corrections applied only to the AA calibration view. The frozen Artificial Analysis source row remains unchanged.",
+  "overrides": [
+    {
+      "override_id": "aa-motif-3-beta-open-weights-2026-07-31",
+      "identity": {
+        "aa_model_id": "a3043d4f-9b92-4261-8ea2-a2d391b09cf4",
+        "aa_slug": "motif-0714",
+        "aa_name": "Motif 3 (Beta)",
+        "aa_release_date": "2026-07-14",
+        "hugging_face_repository_id": "Motif-Technologies/Motif-3-Beta"
+      },
+      "expected_raw": {
+        "is_open_weights": false,
+        "open_source_categorization": "proprietary",
+        "parameters_b": 314.0,
+        "active_parameters_b": 13.0,
+        "model_weights_source_url": ""
+      },
+      "replacement": {
+        "is_open_weights": true,
+        "open_source_categorization": "commercial-license",
+        "parameters_b": 314.0,
+        "active_parameters_b": 13.0,
+        "model_weights_source_url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta",
+        "license_name": "Custom non-commercial research license",
+        "license_url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta/blob/eee28175b11eada7e98142fef20afd5136ae92de/README.md#license",
+        "commercial_allowed": false
+      },
+      "primary_source": {
+        "source_type": "official_open_weight_model_repository",
+        "source_url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta/blob/eee28175b11eada7e98142fef20afd5136ae92de/README.md",
+        "repository_url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta",
+        "repository_commit": "eee28175b11eada7e98142fef20afd5136ae92de",
+        "repository_created_at_utc": "2026-07-20T22:03:02.000Z",
+        "repository_last_modified_at_utc": "2026-07-30T08:33:15.000Z",
+        "weights_available_at_utc": "2026-07-20T22:03:02.000Z",
+        "weights_availability_basis": "repository_creation",
+        "model_card_sha256": "99b3f5c9c3607ca945fbcd81444d8dd70c7853ca36cb12c347feba8928dde240",
+        "remote_model_card_body_sha256_without_trailing_newline": "4017800ca45f3083e55a79d3c589a7ae414b31c866abaec63c9ea019b3aa3ecf",
+        "model_card_total_parameters_b": 314.0,
+        "model_card_active_parameters_b": 13.0,
+        "hugging_face_safetensors_total_parameters": 314841775750,
+        "calibration_total_parameters_b": 314.0,
+        "parameter_value_basis": "publisher_disclosed_rounded_total",
+        "architecture_class": "sparse_moe",
+        "weights_publicly_downloadable": true,
+        "license_scope": "Personal, educational, and non-commercial research use; commercial use requires separate permission.",
+        "local_evidence": [
+          {
+            "kind": "commit_pinned_model_card",
+            "path": "sources/aa_calibration_evidence/motif_3_beta_readme_eee2817.md",
+            "sha256": "99b3f5c9c3607ca945fbcd81444d8dd70c7853ca36cb12c347feba8928dde240"
+          },
+          {
+            "kind": "commit_pinned_hugging_face_model_api",
+            "path": "sources/aa_calibration_evidence/motif_3_beta_hf_api_eee2817.json",
+            "sha256": "469bc665426ec0500d39e5ffc1fea43c0d4b37445f76c4022011034b94090f97"
+          }
+        ]
+      },
+      "identity_reconciliation": {
+        "status": "exact_checkpoint_identity",
+        "evidence": "The AA and official repository labels both identify Motif 3 Beta and report the same 314B total / 13B active architecture. The public repository appeared six days after AA's checkpoint release date, so the AA date is preserved as the benchmark checkpoint date.",
+        "weights_repository_lag_days": 6,
+        "parameter_label_available_date": "2026-07-20"
+      },
+      "lineage": {
+        "lineage_class": "independent_pretrain",
+        "base_model_id": null,
+        "family_balance_key": "Motif-Technologies/Motif-3-Beta",
+        "evidence": "The official model card describes Motif 3 as built from the ground up with an in-house design, not as a re-parameterization of an existing open-weight architecture."
+      }
+    },
+    {
+      "override_id": "aa-motif-2-12-7b-reasoning-open-weights-2026-07-31",
+      "identity": {
+        "aa_model_id": "666eb13f-0d22-4438-8eb0-01876e1a8604",
+        "aa_slug": "motif-2-12-7b",
+        "aa_name": "Motif-2-12.7B-Reasoning",
+        "aa_release_date": "2025-12-04",
+        "hugging_face_repository_id": "Motif-Technologies/Motif-2-12.7B-Reasoning"
+      },
+      "expected_raw": {
+        "is_open_weights": false,
+        "open_source_categorization": "proprietary",
+        "parameters_b": 12.7,
+        "active_parameters_b": null,
+        "model_weights_source_url": ""
+      },
+      "replacement": {
+        "is_open_weights": true,
+        "open_source_categorization": "permissive",
+        "parameters_b": 12.703860896,
+        "active_parameters_b": null,
+        "model_weights_source_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning",
+        "license_name": "Apache 2.0",
+        "license_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning/blob/02d060835415f43d57dc6bee72b1e2779d8e57e5/README.md",
+        "commercial_allowed": true
+      },
+      "primary_source": {
+        "source_type": "official_open_weight_model_repository",
+        "source_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning/blob/02d060835415f43d57dc6bee72b1e2779d8e57e5/README.md",
+        "repository_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning",
+        "repository_commit": "02d060835415f43d57dc6bee72b1e2779d8e57e5",
+        "repository_created_at_utc": "2025-11-28T10:02:43.000Z",
+        "repository_last_modified_at_utc": "2026-03-10T01:02:00.000Z",
+        "weights_commit": "a259d49eca076d37c62c0a9eb7dca7893c763ceb",
+        "weights_commit_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning/commit/a259d49eca076d37c62c0a9eb7dca7893c763ceb",
+        "weights_available_at_utc": "2025-12-01T14:20:20.000Z",
+        "weights_availability_basis": "weights_upload_commit",
+        "model_card_sha256": "012a563e2fccc4636132d5290fefe37c6a564bcbadea4d4e0ce9b8744e6be2be",
+        "remote_model_card_body_sha256_without_trailing_newline": "bd3825e1d54f582934358af27c50549aeb7dedfe5b3e6e79ea497c242e470589",
+        "safetensors_metadata_url": "https://huggingface.co/api/models/Motif-Technologies/Motif-2-12.7B-Reasoning/revision/02d060835415f43d57dc6bee72b1e2779d8e57e5",
+        "config_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning/blob/02d060835415f43d57dc6bee72b1e2779d8e57e5/config.json",
+        "config_sha256": "96cf9dceebd739abd0e09501605d72757d53485f5f2ee9a552bf5dab82398814",
+        "model_card_total_parameters_b": 12.7,
+        "model_card_active_parameters_b": null,
+        "hugging_face_safetensors_total_parameters": 12703860896,
+        "calibration_total_parameters_b": 12.703860896,
+        "parameter_value_basis": "exact_safetensors_tensor_count",
+        "architecture_class": "dense",
+        "architecture_evidence": "The commit-pinned official config contains one standard dense feed-forward stack and no expert or router fields; the repository exposes one complete 12,703,860,896-parameter safetensors checkpoint.",
+        "weights_publicly_downloadable": true,
+        "license_scope": "Apache License 2.0, including commercial use.",
+        "local_evidence": [
+          {
+            "kind": "commit_pinned_model_card",
+            "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_readme_02d0608.md",
+            "sha256": "012a563e2fccc4636132d5290fefe37c6a564bcbadea4d4e0ce9b8744e6be2be"
+          },
+          {
+            "kind": "commit_pinned_config",
+            "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_config_02d0608.json",
+            "sha256": "96cf9dceebd739abd0e09501605d72757d53485f5f2ee9a552bf5dab82398814"
+          },
+          {
+            "kind": "commit_pinned_hugging_face_model_api",
+            "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_hf_api_02d0608.json",
+            "sha256": "31653c8ab94cc873a3fa0997c6f73996c26a17d72af3a07b3ef9fb3abe427479"
+          },
+          {
+            "kind": "hugging_face_commit_history",
+            "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_hf_commits_2026-03-10.json",
+            "sha256": "b2a33c294aeb5408e7353773d7b492c14ff68bcc2dba632807f19f8cf2ebb14e"
+          }
+        ]
+      },
+      "identity_reconciliation": {
+        "status": "exact_checkpoint_identity",
+        "evidence": "The AA slug and name exactly match the official Motif-2-12.7B-Reasoning checkpoint. The official card identifies it as the reasoning-enhanced Motif-2 model and the repository metadata pins its Motif-2-12.7B-Base lineage.",
+        "weights_repository_lag_days": -3,
+        "parameter_label_available_date": "2025-12-01"
+      },
+      "lineage": {
+        "lineage_class": "same_base_posttrain",
+        "base_model_id": "Motif-Technologies/Motif-2-12.7B-Base",
+        "posttraining_parent_model_id": "Motif-Technologies/Motif-2-12.7B-Instruct",
+        "family_balance_key": "Motif-Technologies/Motif-2-12.7B-Base",
+        "evidence": "The official card says this checkpoint is a reasoning-enhanced version of Motif-2-12.7B-Instruct, while its Hugging Face base-model metadata identifies Motif-2-12.7B-Base. It is therefore a post-trained sibling, not an independent pretraining observation."
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+model,release_date,openrouter_first_seen,aa_score,first_day_prompt_price_usd_per_mtoken,first_day_completion_price_usd_per_mtoken,first_day_blended_price_usd_per_mtoken,status,predicted_active_date_historical_price_b,k3_anchored_total_date_historical_price_t,predicted_active_score_date_historical_price_b,k3_anchored_total_score_date_historical_price_t
+Claude Fable 5,2026-06-09,2026-06-10,59.8606463217303,10.0,50.0,22.360679774997898,zero-weight historical-price sensitivity,155.5706599854739,5.713316113374278,230.00188203327644,5.397726380788262
+GPT-5.6 Sol,2026-07-09,2026-07-10,58.889831189723,5.0,30.0,12.24744871391589,zero-weight historical-price sensitivity,107.45431366369738,3.9462483591938207,162.3767937306579,3.8106883969800736
+Kimi K3,2026-07-16,2026-07-17,57.1123394372091,3.0,15.0,6.708203932499369,disclosed total anchor,75.69797052664593,2.78,118.45825203891354,2.78

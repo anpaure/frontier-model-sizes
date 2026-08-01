@@ -1,0 +1,59 @@
+{
+  "files": {
+    "all_models": {
+      "path": "sources/epoch_all_ai_models_2026-07-31.csv",
+      "sha256": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579"
+    },
+    "eci_components": {
+      "path": "sources/epoch_eci_benchmarks_2026-07-31.csv",
+      "sha256": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1"
+    },
+    "eci_scores": {
+      "path": "sources/epoch_eci_reproduced_scores_2026-07-31.csv",
+      "sha256": "1c2ad9d6b62deccfb1cd32f200c616d76a3efc8f5acb01ad3fa182c1b4da6c5e"
+    },
+    "edi_scores": {
+      "path": "sources/epoch_edi_reproduced_scores_2026-07-31.csv",
+      "sha256": "df7902472f979dff3589861e27bf7175e300a739a083f6afe4323e587cdf112b"
+    },
+    "published_archive": {
+      "path": "sources/epoch_benchmark_data_2026-07-31.zip",
+      "sha256": "cc844ca094e4372ff81eb636f3503317d1d495d4f4c493bd6b7a37dd5f83049c"
+    },
+    "reproduction_metadata": {
+      "path": "sources/epoch_eci_reproduction_metadata_2026-07-31.json",
+      "sha256": "b1618a49c1483e15abeefcdffc512ce8cc1cf8ed34cf76348941977a2c5b9be4"
+    }
+  },
+  "fit_inventory": {
+    "anchors": {
+      "Claude 3.5 Sonnet": 130.0,
+      "GPT-5": 150.0
+    },
+    "eci_model_set_sha256": "b0b656ec9201cee19f598ea2afb2210fa3eae421da7958ad8a70b328b109cf1a",
+    "eci_rows": 213,
+    "eci_selected_version_set_sha256": "6a9ceba468c2122bf9a93973853537f3ac47a628af12c628daced94ecf09cb87",
+    "edi_benchmark_set_sha256": "819a190ccadd5dc39f3784434f80158c7ef9f2d91eab0245abded097b7a6d561",
+    "edi_rows": 54
+  },
+  "inventory": {
+    "all_model_rows": 3574,
+    "all_model_unique_names": 3569,
+    "benchmark_ids": 54,
+    "benchmark_name_set_sha256": "819a190ccadd5dc39f3784434f80158c7ef9f2d91eab0245abded097b7a6d561",
+    "benchmarks": 54,
+    "component_rows": 2059,
+    "duplicate_model_benchmark_name_pairs": 0,
+    "identity_join_policy": "within_snapshot_only; join canonical names across snapshots, never bare model_id or benchmark_id",
+    "model_ids": 213,
+    "model_name_set_sha256": "b0b656ec9201cee19f598ea2afb2210fa3eae421da7958ad8a70b328b109cf1a",
+    "model_version_set_sha256": "f0688416c5e69f6d65f5ffc5f50daf843685c062cf07c8342bb12dbbf98975e0",
+    "model_versions": 399,
+    "models": 213,
+    "published_rows": 768
+  },
+  "official_commit": "542567e72a415b72624e5bbd12603cfd3f485179",
+  "official_repository": "https://github.com/epoch-research/eci-public",
+  "schema_version": "1.0",
+  "snapshot_as_of": "2026-07-31"
+}

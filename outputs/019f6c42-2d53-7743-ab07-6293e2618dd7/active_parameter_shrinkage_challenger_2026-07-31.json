@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "status": "zero-weight retrospective challenger",
+    "target": "total pretrained parameters in billions",
+    "fixed_rule": "geometric 50/50 blend of the direct-total prediction and the predicted-active-to-high-sparsity transport",
+    "high_sparsity_threshold_total_to_active": 15.0,
+    "component_outer_split": "strictly earlier parameter-training eligibility date; entire test developer removed",
+    "nested_meta_split": "only earlier high-sparsity held-out prediction rows whose parameter labels were eligible before the test release; entire test developer removed again",
+    "important_selection_caveat": "Evaluation membership uses the disclosed total/active ratio. That is valid for retrospective conditional accuracy but is not an available feature for the undisclosed frontier targets."
+  },
+  "inventory": {
+    "high_sparsity_rows": 47,
+    "high_sparsity_developers": 15,
+    "frontier_like_rows": 28,
+    "frontier_like_developers": 10,
+    "nested_eligible_rows": 31,
+    "nested_eligible_developers": 14,
+    "nested_frontier_rows": 21,
+    "nested_frontier_developers": 9
+  },
+  "fixed_50_50_evaluation": {
+    "all_high_sparsity": {
+      "baseline": {
+        "n": 47,
+        "developers": 15,
+        "median_multiplicative_error": 1.986495131195065,
+        "mean_absolute_log10_error": 0.40312080574778386,
+        "rmse_log10": 0.523861346171142,
+        "p80_multiplicative_error": 4.598523634730482,
+        "within_2x": 0.5106382978723404,
+        "signed_bias_factor": 0.8169124783356844
+      },
+      "candidate": {
+        "n": 47,
+        "developers": 15,
+        "median_multiplicative_error": 1.7744109546574234,
+        "mean_absolute_log10_error": 0.32945691912396413,
+        "rmse_log10": 0.4264500498746093,
+        "p80_multiplicative_error": 3.365655843177589,
+        "within_2x": 0.5957446808510638,
+        "signed_bias_factor": 0.8628957699298044
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+        "observed_delta": -0.08180548041010692,
+        "ci_90": [
+          -0.12776642574423472,
+          -0.03711101303568301
+        ],
+        "probability_candidate_better": 0.9987,
+        "developers": 15,
+        "samples": 20000,
+        "random_seed": 20260731
+      }
+    },
+    "frontier_like_high_sparsity": {
+      "baseline": {
+        "n": 28,
+        "developers": 10,
+        "median_multiplicative_error": 1.8859312137299837,
+        "mean_absolute_log10_error": 0.312346439536518,
+        "rmse_log10": 0.3965689506758041,
+        "p80_multiplicative_error": 3.2543620752038986,
+        "within_2x": 0.6071428571428571,
+        "signed_bias_factor": 1.570299170512291
+      },
+      "candidate": {
+        "n": 28,
+        "developers": 10,
+        "median_multiplicative_error": 1.727453932666269,
+        "mean_absolute_log10_error": 0.26341910751001574,
+        "rmse_log10": 0.3333269321483636,
+        "p80_multiplicative_error": 2.425207378020931,
+        "within_2x": 0.6785714285714286,
+        "signed_bias_factor": 1.2433258989207359
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+        "observed_delta": -0.0626114742265769,
+        "ci_90": [
+          -0.08954378559891722,
+          -0.036670355961736664
+        ],
+        "probability_candidate_better": 1.0,
+        "developers": 10,
+        "samples": 20000,
+        "random_seed": 20260831
+      }
+    }
+  },
+  "nested_weight_evaluation": {
+    "weight_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "minimum_meta_training_rows": 15,
+    "minimum_meta_training_developers": 6,
+    "selection_loss": "equal-developer mean absolute log10 error",
+    "tie_break": "lower active-transport weight",
+    "selected_weight_counts": {
+      "0.0": 0,
+      "0.25": 0,
+      "0.5": 16,
+      "0.75": 10,
+      "1.0": 5
+    },
+    "all_high_sparsity": {
+      "baseline": {
+        "n": 31,
+        "developers": 14,
+        "median_multiplicative_error": 1.9167392761708337,
+        "mean_absolute_log10_error": 0.34502413202758586,
+        "rmse_log10": 0.43973452484792436,
+        "p80_multiplicative_error": 3.8207209376748454,
+        "within_2x": 0.5483870967741935,
+        "signed_bias_factor": 1.035764707799783
+      },
+      "candidate": {
+        "n": 31,
+        "developers": 14,
+        "median_multiplicative_error": 1.8144079554680312,
+        "mean_absolute_log10_error": 0.30263679252159814,
+        "rmse_log10": 0.36544560573402735,
+        "p80_multiplicative_error": 2.5609870632087697,
+        "within_2x": 0.6129032258064516,
+        "signed_bias_factor": 0.9050483675756553
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+        "observed_delta": -0.06245683112487143,
+        "ci_90": [
+          -0.109547337329786,
+          -0.01567538430368952
+        ],
+        "probability_candidate_better": 0.9872,
+        "developers": 14,
+        "samples": 20000,
+        "random_seed": 20260732
+      }
+    },
+    "frontier_like_high_sparsity": {
+      "baseline": {
+        "n": 21,
+        "developers": 9,
+        "median_multiplicative_error": 1.9167392761708337,
+        "mean_absolute_log10_error": 0.28779384478633635,
+        "rmse_log10": 0.3413105374910709,
+        "p80_multiplicative_error": 3.1557511219657917,
+        "within_2x": 0.5714285714285714,
+        "signed_bias_factor": 1.7250373216823234
+      },
+      "candidate": {
+        "n": 21,
+        "developers": 9,
+        "median_multiplicative_error": 1.724483713423857,
+        "mean_absolute_log10_error": 0.24262745228889154,
+        "rmse_log10": 0.267199264792547,
+        "p80_multiplicative_error": 2.1123886985950695,
+        "within_2x": 0.6666666666666666,
+        "signed_bias_factor": 1.1842624692765193
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+        "observed_delta": -0.05795473785854602,
+        "ci_90": [
+          -0.10463056008486776,
+          -0.01096057256406911
+        ],
+        "probability_candidate_better": 0.9783,
+        "developers": 9,
+        "samples": 20000,
+        "random_seed": 20260832
+      }
+    }
+  },
+  "kimi_k3_external_check": {
+    "model": "Kimi K3",
+    "release_date": "2026-07-16",
+    "developer": "kimi",
+    "source_component_developer_excluded": true,
+    "source_train_max_date": "2026-07-15",
+    "disclosed_total_b": 2780.0,
+    "disclosed_active_b": 104.2,
+    "disclosed_total_to_active_ratio": 26.679462571976966,
+    "direct_total_predicted_b": 5727.960955047083,
+    "active_transport_predicted_b": 1416.2311735793182,
+    "fixed_50_50_predicted_b": 2848.1778149516654,
+    "direct_total_error_factor": 2.0604176097291664,
+    "active_transport_error_factor": 1.9629563674791555,
+    "fixed_50_50_error_factor": 1.0245243938675055,
+    "fixed_50_50_signed_log10_error": 0.010522303387214965,
+    "nested_selected_active_weight": 1.0,
+    "nested_error_factor": 1.9629563674791555,
+    "status": "retrospective external scale check: K3 was excluded from every component training fold, but this challenger was examined after K3's parameter disclosure"
+  },
+  "promotion_gates": {
+    "empirical": {
+      "at_least_40_high_sparsity_rows": true,
+      "at_least_12_high_sparsity_developers": true,
+      "at_least_20_frontier_rows": true,
+      "at_least_8_frontier_developers": true,
+      "fixed_all_ci90_wholly_favorable": true,
+      "fixed_frontier_ci90_wholly_favorable": true,
+      "fixed_all_median_improves": true,
+      "fixed_frontier_median_improves": true,
+      "nested_all_ci90_wholly_favorable": true,
+      "nested_frontier_ci90_wholly_favorable": true
+    },
+    "applicability_and_prospective": {
+      "target_high_sparsity_status_independently_observed_pre_outcome": false,
+      "target_active_fraction_or_equivalent_architecture_observed_pre_outcome": false,
+      "challenger_preregistered_before_evaluated_outcomes": false
+    },
+    "all_gates_pass": false
+  },
+  "decision": {
+    "promote_to_live_factor": false,
+    "incremental_live_weight": 0.0,
+    "change_headline_forecasts": false,
+    "preserve_as_challenger": true,
+    "reason": "The fixed and nested shrinkage rules improve developer-clustered held-out accuracy, including the frontier subset, but cohort membership depends on target sparsity that is not independently observed for Fable, Sol, or Opus 5. The rule was also examined retrospectively rather than frozen before these outcomes.",
+    "applicability_requirement": "Before this branch can receive nonzero weight for a target, a pre-outcome source independent of the target's total-parameter label must establish a qualifying high-sparsity active fraction or an architecture-to-sparsity mapping validated prospectively.",
+    "next_validation": "Freeze the 50/50 rule now and score it without refitting on the next independently identified high-sparsity disclosures from at least three new developers."
+  },
+  "limitations": [
+    "Artificial Analysis measurements are current-snapshot rather than release-vintage benchmark observations.",
+    "The direct-total and active-transport predictions share AA score/date inputs and are correlated; the blend is shrinkage, not independent evidence.",
+    "The >=15x evaluation cohort is defined using disclosed total and active counts, so target applicability must be established independently before prediction.",
+    "K3 is held out from component training but the 50/50 challenger was examined after K3's disclosure; it is not a prospective validation.",
+    "The nested selector validates historical weight transport but does not remove the target-classification problem."
+  ],
+  "source_files": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_predictions_2026-07-18.csv": "bc14a7641f3149419fc202ef7b12a68c4d398d70dafe372ea5d0e43876b40edf",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_audit_2026-07-18.json": "36cb8a21e93f6847399f0aa943e3604688b9c7d9b06bc583d938d8b8770d38a0",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600"
+  },
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_shrinkage_challenger_predictions_2026-07-31.csv",
+    "result": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_shrinkage_challenger_2026-07-31.json"
+  }
+}

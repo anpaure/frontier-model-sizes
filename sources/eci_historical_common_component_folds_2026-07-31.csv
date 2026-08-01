@@ -1,0 +1,5 @@
+target_model,target_model_version,target_release_date,target_developer_token,target_family_token,training_snapshot_timestamp,target_score_snapshot_timestamp,locked_benchmarks,expected_total_b
+Gemma 3 27B,gemma-3-27b-it,2025-03-12,Google,Gemma,20250305190317,20250403051524,GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025,27
+Mistral Small 3.1,mistral-small-2503,2025-03-17,Mistral,Mistral,20250305190317,20250403051524,GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025,24
+Llama 4 Scout,Llama-4-Scout-17B-16E-Instruct,2025-04-05,Meta,Llama,20250403051524,20250510183121,GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025,109
+Llama 4 Maverick,Llama-4-Maverick-17B-128E-Instruct-FP8,2025-04-05,Meta,Llama,20250403051524,20250510183121,GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025,400

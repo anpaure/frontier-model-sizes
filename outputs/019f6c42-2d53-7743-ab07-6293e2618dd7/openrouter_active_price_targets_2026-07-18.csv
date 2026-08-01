@@ -1,0 +1,4 @@
+model,release_date,aa_score,blended_price_usd_per_mtoken,price_over_training_max,predicted_active_date_price_b,predicted_active_score_date_price_b,k3_anchored_total_date_price_t,k3_anchored_total_score_date_price_t,k3_anchor_source,status
+Claude Fable 5,2026-06-09,59.8606463217303,22.360679775,6.454972243675451,133.94497841443115,204.45635139959637,5.7662493552006655,5.532831921420005,Kimi K3 official technical report Table 1,0%-weight extrapolative sensitivity
+GPT-5.6 Sol,2026-07-09,58.889831189723,12.8598211496,3.712310601223595,94.29275673802773,145.0417059306177,4.0592454765901556,3.925000984399446,Kimi K3 official technical report Table 1,0%-weight extrapolative sensitivity
+Kimi K3,2026-07-16,57.1123394372091,6.7082039325,1.9364916731026354,64.57699226209759,102.73015066486975,2.78,2.7799999999999994,Kimi K3 official technical report Table 1,disclosed total anchor

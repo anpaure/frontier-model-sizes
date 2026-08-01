@@ -1,0 +1,36 @@
+{
+  "collection_mode": "frozen offline rebuild",
+  "decision_scope": "release dates only; no parameter identities added",
+  "files": {
+    "sources/epoch_all_ai_models_2026-07-31.csv": {
+      "sha256": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579"
+    },
+    "sources/no_cot_exact_date_overrides_2026-07-18.csv": {
+      "sha256": "97ac63a7ce7e81d664e73eecf944f8255ac49b4236857b1fec10bbb1ca406bc6"
+    },
+    "sources/qwen3_30b_a3b_instruct_2507_hf_commits_2026-07-18.json.gz": {
+      "sha256": "3c7411ef7686583910f5b39300a3dadef40830674c69755a0967bcf99d314951"
+    }
+  },
+  "generated_on": "2026-07-18",
+  "integrity_policy": {
+    "all_four_month_only_rows_resolved": true,
+    "legacy_epoch_parameter_join_exclusion_preserved": true,
+    "network_in_frozen_pipeline": false,
+    "qwen_epoch_parameter_join_not_inferred": true,
+    "verbatim_qwen_commit_response_preserved": true
+  },
+  "inventory": {
+    "epoch_date_rows": 3,
+    "first_party_huggingface_date_rows": 1,
+    "paper_rows_overridden": 4,
+    "qwen_commit_rows_preserved": 21
+  },
+  "qwen_source": {
+    "commits_url": "https://huggingface.co/api/models/Qwen/Qwen3-30B-A3B-Instruct-2507/commits/main?limit=100",
+    "initial_commit": "c9051e5f23e735fd6549f86b616377617848a621",
+    "initial_timestamp": "2025-07-28T07:31:28.000Z",
+    "raw_uncompressed_sha256": "f6e9219ad0e28eefd5af38c60602589cb10403315d986747766bcafcffc30d22",
+    "repository": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+  }
+}

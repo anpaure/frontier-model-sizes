@@ -1,0 +1,394 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-18",
+    "target": "log10 disclosed total parameters in billions",
+    "base_predictions": "strictly-earlier chronological family-held-out factor predictions",
+    "meta_split": "weights learned only from earlier base-prediction rows with the test family removed",
+    "grid": "non-negative simplex in 0.02 increments",
+    "missing_factor_policy": "renormalize weights over factors available for that checkpoint",
+    "nested_minimums": {
+      "rows": 12,
+      "families": 5
+    }
+  },
+  "live_final_weights_percent": {
+    "aa": 9.5625,
+    "eci": 9.5625,
+    "price": 3.375,
+    "horizon": 25.0,
+    "compute": 2.5,
+    "ikp": 0.0,
+    "crowd": 50.0
+  },
+  "jointly_optimizable_core_weights_normalized": {
+    "AA": 0.20509383378016086,
+    "ECI": 0.20509383378016086,
+    "No-CoT": 0.5361930294906166,
+    "Compute": 0.05361930294906166
+  },
+  "not_optimizable": {
+    "API price": "Validated separately on 10 strictly chronological checkpoints from 6 developers. The current 6.75% within-evidence price weight improves held-out error, but the overlap is too small and frontier prices are outside calibration support, so price is not jointly optimized on this factor panel.",
+    "IKP factual capacity": "Evaluated separately on 13 exact model matches from 11 families, including a 7-model/7-family later chronological subset. The fixed 10% diagnostic blend has favorable bootstrap results, but promotion requires at least 8 chronological models. Its live within-evidence weight is therefore 0%; its different coverage also prevents joint optimization on the 44-row core panel.",
+    "Human crowd": "Fable and Sol parameter outcomes remain undisclosed, and the forecasts were collected after benchmark outcomes were visible."
+  },
+  "separate_api_price_validation": {
+    "coverage": {
+      "developer_families": 6,
+      "explicit_crosswalk_entries": 17,
+      "strictly_chronological_paired_models": 10,
+      "unavailable_entries": [
+        {
+          "canonical_checkpoint_id": "checkpoint:google:gemma-2-27b",
+          "normalized_model": "gemma227b",
+          "reason": "no strictly chronological prediction from one or both branches"
+        },
+        {
+          "canonical_checkpoint_id": "checkpoint:epoch:kimi-k2",
+          "normalized_model": "kimik2",
+          "reason": "no strictly chronological prediction from one or both branches"
+        },
+        {
+          "canonical_checkpoint_id": "checkpoint:meta:llama-3-1-70b",
+          "normalized_model": "llama3170b",
+          "reason": "no strictly chronological prediction from one or both branches"
+        },
+        {
+          "canonical_checkpoint_id": "checkpoint:meta:llama-3-1-8b",
+          "normalized_model": "llama318b",
+          "reason": "no strictly chronological prediction from one or both branches"
+        },
+        {
+          "canonical_checkpoint_id": "checkpoint:meta:llama-3-3-70b",
+          "normalized_model": "llama3370b",
+          "reason": "no strictly chronological prediction from one or both branches"
+        },
+        {
+          "canonical_checkpoint_id": "checkpoint:mistral:mixtral-8x22b",
+          "normalized_model": "mixtral8x22b",
+          "reason": "no strictly chronological prediction from one or both branches"
+        },
+        {
+          "canonical_checkpoint_id": "checkpoint:microsoft-research:phi-4",
+          "normalized_model": "phi4",
+          "reason": "no strictly chronological prediction from one or both branches"
+        }
+      ]
+    },
+    "evidence_only_metrics": {
+      "mean_absolute_log10_error": 0.37952852465348724,
+      "median_multiplicative_error": 1.90978095424341,
+      "n": 10,
+      "p80_multiplicative_error": 5.188334079729455,
+      "price_weight": 0.0,
+      "rmse_log10": 0.47220471617104065,
+      "signed_bias_factor": 0.8458354244640379,
+      "within_2x": 0.5
+    },
+    "current_price_weight_metrics": {
+      "mean_absolute_log10_error": 0.36065831403190884,
+      "median_multiplicative_error": 1.8441458594847302,
+      "n": 10,
+      "p80_multiplicative_error": 4.7613068835490955,
+      "price_weight": 0.0675,
+      "rmse_log10": 0.45008957109687864,
+      "signed_bias_factor": 0.8486243208492447,
+      "within_2x": 0.5
+    },
+    "paired_developer_family_bootstrap": {
+      "bootstrap_probability_blend_better": 0.9988,
+      "ci_90": [
+        -0.029732664155834865,
+        -0.007563778990862158
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.018870210621578343,
+      "paired_models": 10,
+      "price_weight": 0.0675,
+      "random_seed": 20260718,
+      "samples": 20000
+    },
+    "decision": {
+      "bootstrap_promotion_probability": 0.9,
+      "change_live_weight": false,
+      "current_evidence_level_price_weight": 0.0675,
+      "current_final_weight_for_fable_sol": 0.03375,
+      "current_weight_has_favorable_paired_bootstrap": true,
+      "reason": "The current small price branch improves the clean overlap, but only 10 models/6 developers qualify and current frontier prices exceed calibration support. This validates the sign and conservative scale, not a larger optimized weight."
+    }
+  },
+  "separate_ikp_validation": {
+    "coverage": {
+      "models": 13,
+      "families": 11,
+      "chronological_models": 7,
+      "chronological_families": 7
+    },
+    "existing_metrics": {
+      "n": 13,
+      "families": 11,
+      "vendors": 11,
+      "mean_absolute_log10_error": 0.40373658774002413,
+      "median_multiplicative_error": 2.122288579348835,
+      "rmse_log10": 0.47751984547861615,
+      "p80_multiplicative_error": 5.156291622232553,
+      "within_2x": 0.38461538461538464,
+      "signed_bias_factor": 1.0403817968768365
+    },
+    "ikp_metrics": {
+      "n": 13,
+      "families": 11,
+      "vendors": 11,
+      "mean_absolute_log10_error": 0.28002920686593363,
+      "median_multiplicative_error": 1.6801802620491855,
+      "rmse_log10": 0.35762888682720617,
+      "p80_multiplicative_error": 2.7060867390979664,
+      "within_2x": 0.6153846153846154,
+      "signed_bias_factor": 1.2197154912259822
+    },
+    "fixed_10pct_blend_metrics": {
+      "n": 13,
+      "families": 11,
+      "vendors": 11,
+      "mean_absolute_log10_error": 0.36407075975310943,
+      "median_multiplicative_error": 1.7976681525070095,
+      "rmse_log10": 0.4319452508540062,
+      "p80_multiplicative_error": 4.418786588436011,
+      "within_2x": 0.6153846153846154,
+      "signed_bias_factor": 1.0570592340629772
+    },
+    "full_overlap_family_bootstrap": {
+      "metric": "family-balanced mean absolute log10 error delta; blend minus existing ensemble",
+      "observed_delta": -0.03718790158249496,
+      "ci_90": [
+        -0.05380362353237397,
+        -0.01862161520323456
+      ],
+      "probability_blend_better": 0.9993,
+      "families": 11,
+      "samples": 20000,
+      "random_seed": 20260718
+    },
+    "chronological_family_bootstrap": {
+      "metric": "family-balanced mean absolute log10 error delta; blend minus existing ensemble",
+      "observed_delta": -0.032236241508135484,
+      "ci_90": [
+        -0.05408690091927382,
+        -0.006985169720860059
+      ],
+      "probability_blend_better": 0.981,
+      "families": 7,
+      "samples": 20000,
+      "random_seed": 20260718
+    },
+    "decision": {
+      "promote_incremental_ikp_weight": false,
+      "incremental_evidence_weight": 0.0,
+      "incremental_final_weight_when_crowd_is_50pct": 0.0,
+      "change_fable_center": false,
+      "change_sol_center": false,
+      "evidence_gates": {
+        "minimum_overlap_models": 12,
+        "minimum_overlap_families": 10,
+        "minimum_chronological_subset_models": 8,
+        "minimum_chronological_subset_families": 7,
+        "maximum_bootstrap_ci90_upper": 0.0,
+        "minimum_bootstrap_probability_better": 0.9
+      },
+      "reason": "IKP is retained as a direct Fable sensitivity because it does not pass every encoded incremental-validation gate."
+    }
+  },
+  "coverage": {
+    "matched_checkpoints": 44,
+    "families": 25,
+    "rows_by_factor": {
+      "AA": 13,
+      "ECI": 40,
+      "No-CoT": 6,
+      "Compute": 35
+    },
+    "availability_patterns": {
+      "AA|Compute": 2,
+      "AA|Compute|ECI": 3,
+      "AA|Compute|ECI|No-CoT": 1,
+      "AA|ECI": 6,
+      "AA|ECI|No-CoT": 1,
+      "Compute|ECI": 27,
+      "Compute|No-CoT": 2,
+      "ECI|No-CoT": 2
+    }
+  },
+  "global_in_sample_optimization": {
+    "mse": {
+      "weights": {
+        "AA": 0.68,
+        "ECI": 0.04,
+        "No-CoT": 0.14,
+        "Compute": 0.14
+      },
+      "objective_value": 0.17078619005194276,
+      "metrics": {
+        "n": 44,
+        "median_multiplicative_error": 2.113818495135074,
+        "geomean_multiplicative_error": 2.2274127330387006,
+        "rmse_log10": 0.41326285830200465,
+        "p80_multiplicative_error": 3.2851477880653523,
+        "within_2x": 0.45454545454545453,
+        "signed_bias_factor": 1.2081550435896837
+      },
+      "status": "diagnostic in-sample fit; not eligible for live weights"
+    },
+    "mae": {
+      "weights": {
+        "AA": 0.64,
+        "ECI": 0.08,
+        "No-CoT": 0.12,
+        "Compute": 0.16
+      },
+      "objective_value": 0.3450973172531539,
+      "metrics": {
+        "n": 44,
+        "median_multiplicative_error": 2.221170544578493,
+        "geomean_multiplicative_error": 2.213590678215265,
+        "rmse_log10": 0.4157689895169703,
+        "p80_multiplicative_error": 3.6203426338552194,
+        "within_2x": 0.4090909090909091,
+        "signed_bias_factor": 1.1735105271181225
+      },
+      "status": "diagnostic in-sample fit; not eligible for live weights"
+    },
+    "median_absolute": {
+      "weights": {
+        "AA": 0.1,
+        "ECI": 0.58,
+        "No-CoT": 0.18,
+        "Compute": 0.14
+      },
+      "objective_value": 0.2723656913969156,
+      "metrics": {
+        "n": 44,
+        "median_multiplicative_error": 1.872257984613237,
+        "geomean_multiplicative_error": 2.411432404781321,
+        "rmse_log10": 0.4597419238116452,
+        "p80_multiplicative_error": 4.95894420840023,
+        "within_2x": 0.5227272727272727,
+        "signed_bias_factor": 0.9603458378882097
+      },
+      "status": "diagnostic in-sample fit; not eligible for live weights"
+    },
+    "p80_absolute": {
+      "weights": {
+        "AA": 0.54,
+        "ECI": 0.04,
+        "No-CoT": 0.12,
+        "Compute": 0.3
+      },
+      "objective_value": 0.489128782665612,
+      "metrics": {
+        "n": 44,
+        "median_multiplicative_error": 2.428361617134698,
+        "geomean_multiplicative_error": 2.2819093951978697,
+        "rmse_log10": 0.4232701501882355,
+        "p80_multiplicative_error": 3.084102352932467,
+        "within_2x": 0.4090909090909091,
+        "signed_bias_factor": 1.120477388359491
+      },
+      "status": "diagnostic in-sample fit; not eligible for live weights"
+    }
+  },
+  "global_mse_weight_family_bootstrap": {
+    "samples": 1000,
+    "family_clusters": 25,
+    "weight_quantiles_5_50_95": {
+      "AA": [
+        0.039000000000000055,
+        0.68,
+        0.96
+      ],
+      "ECI": [
+        0.0,
+        0.02,
+        0.34
+      ],
+      "No-CoT": [
+        0.02,
+        0.12,
+        0.84
+      ],
+      "Compute": [
+        0.02,
+        0.08,
+        0.3
+      ]
+    },
+    "probability_weight_is_zero": {
+      "AA": 0.027,
+      "ECI": 0.326,
+      "No-CoT": 0.022,
+      "Compute": 0.014
+    }
+  },
+  "nested_outer_evaluation": {
+    "eligible_predictions": 32,
+    "metrics": {
+      "optimized_mse": {
+        "n": 32,
+        "median_multiplicative_error": 2.3210575971670804,
+        "geomean_multiplicative_error": 2.4486936975824483,
+        "rmse_log10": 0.45793346690770614,
+        "p80_multiplicative_error": 3.9984595376227148,
+        "within_2x": 0.40625,
+        "signed_bias_factor": 0.8644171409061541
+      },
+      "optimized_mae": {
+        "n": 32,
+        "median_multiplicative_error": 2.4432295928554795,
+        "geomean_multiplicative_error": 2.4073869474633036,
+        "rmse_log10": 0.4589931726774649,
+        "p80_multiplicative_error": 3.873120898074775,
+        "within_2x": 0.375,
+        "signed_bias_factor": 0.8355984482842398
+      },
+      "current_weights": {
+        "n": 32,
+        "median_multiplicative_error": 2.136412798109862,
+        "geomean_multiplicative_error": 2.322790200128067,
+        "rmse_log10": 0.44831459740648505,
+        "p80_multiplicative_error": 4.903685718960279,
+        "within_2x": 0.4375,
+        "signed_bias_factor": 1.0300951203068214
+      },
+      "equal_weights": {
+        "n": 32,
+        "median_multiplicative_error": 2.1476917925854377,
+        "geomean_multiplicative_error": 2.2790004786099147,
+        "rmse_log10": 0.4369479589981592,
+        "p80_multiplicative_error": 3.7374821983184248,
+        "within_2x": 0.40625,
+        "signed_bias_factor": 0.8801307876257534
+      }
+    },
+    "paired_family_bootstrap": {
+      "metric": "mean absolute log10 error, optimized MSE minus current weights",
+      "observed_delta": 0.022924478381935898,
+      "ci_90": [
+        -0.04380484274045228,
+        0.0798115889942811
+      ],
+      "bootstrap_probability_optimized_better": 0.272,
+      "samples": 10000,
+      "family_clusters": 21
+    }
+  },
+  "decision": {
+    "update_live_weights": false,
+    "reason": "Direct optimization of the four common core factors fails to improve genuinely held-out checkpoints and is extremely unstable across loss functions and family bootstrap samples. Price remains separately fixed; IKP's current audit decision assigns 0% live evidence weight because it does not pass every promotion gate.",
+    "next_data_needed": "Disclosed outcomes with overlapping AA, ECI, no-CoT, compute, and comparable provider-price coverage; eventual Fable/Sol disclosures for crowd calibration."
+  },
+  "source_files": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_chronological_backtest_2026-07-17.json": "7ae67d3d92cfe72771cf460a8ef254cd73f3be775e618124e7ddbca7f170088c",
+    "site/public/data/forecast-model.json": "9d9cc4676a0b3455134adbc0b90d07e9b45bd642cb2339204c77fd6eebfc44c0",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_incremental_price_backtest_2026-07-18.json": "18be22bc18aee2ea64492a19b025764724e3a59806fc0873e72dbbf89c7b1289",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_parameter_signal_audit_2026-07-18.json": "75bbf6a3d44a29af0853f9b554d9744260d34e192b96ae73ed2317e7b95eaa7d"
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "generated_on": "2026-07-31",
+  "question": "Does a six-benchmark, coverage-shrunk knowledge-residual ridge improve total-parameter recovery in archive-vintage nested chronological whole-developer-held-out tests?",
+  "predeclared_model": {
+    "baseline": "60% score-only + 40% score-and-exact-date ECI log-parameter regression",
+    "candidate": "baseline offset plus six separate snapshot-vintage component-ECI residual coefficients",
+    "knowledge_benchmarks": [
+      "GPQA diamond",
+      "MMLU",
+      "OpenBookQA",
+      "ScienceQA",
+      "SimpleQA Verified",
+      "TriviaQA"
+    ],
+    "global_ridge_alphas": [
+      0.3,
+      1.0,
+      3.0,
+      10.0,
+      30.0,
+      100.0,
+      300.0
+    ],
+    "coefficient_penalty": "one inner-selected global alpha, multiplied by maximum developer coverage / benchmark developer coverage",
+    "sparse_row_shrinkage": "observed/(observed+2) multiplies every component residual",
+    "coverage_prior_benchmarks": 2.0,
+    "outer_split": "first archived observation; same vintage; strictly earlier releases; entire target developer excluded",
+    "inner_split": "within outer training only; each validation row uses strictly earlier releases and excludes the entire validation developer",
+    "inner_selection_metric": "equal-developer mean absolute log10 error",
+    "near_tie_rule": "within 0.002 log10 MAE, choose stronger shrinkage"
+  },
+  "inventory": {
+    "historical_snapshots": 15,
+    "historical_score_rows": 2308,
+    "historical_component_rows": 20350,
+    "historical_knowledge_rows": 4066,
+    "parameter_checkpoints": 89,
+    "parameter_developers": 19,
+    "archive_canonical_csv_captures": 5,
+    "archive_benchmark_zip_eci_captures": 10,
+    "outer_predictions": 18,
+    "outer_developers": 5
+  },
+  "cohorts": {
+    "all_first_observed": {
+      "rows": 18,
+      "developers": 5,
+      "models": [
+        "DeepSeek-R1 (May 2025)",
+        "DeepSeek-V2 (MoE-236B, May 2024)",
+        "DeepSeek-V3 (Mar 2025)",
+        "DeepSeek-V3.2",
+        "DeepSeek-V4-Pro",
+        "GLM-4.7",
+        "GLM-5",
+        "GLM-5.2",
+        "Kimi K2 Thinking",
+        "Kimi K2.5",
+        "Kimi K2.6",
+        "Kimi K2.7 Code",
+        "Magistral Small 1.1",
+        "Mistral Large 2 (Jul 2024)",
+        "Mistral Large 2 (Nov 2024)",
+        "Mistral Small 3.1",
+        "Qwen2.5-Coder-32B",
+        "Qwen3-235B-A22B-Thinking (Jul 2025)"
+      ],
+      "baseline": {
+        "n": 18,
+        "median_multiplicative_error": 3.648218557292669,
+        "geomean_multiplicative_error": 3.977999210874179,
+        "mean_absolute_log10_error": 0.5996646926363244,
+        "rmse_log10": 0.6744985533499366,
+        "p80_multiplicative_error": 7.415066002040343,
+        "within_2x": 0.16666666666666666,
+        "signed_bias_factor": 0.2918300138590612
+      },
+      "candidate": {
+        "n": 18,
+        "median_multiplicative_error": 3.494406408539451,
+        "geomean_multiplicative_error": 3.726348351668911,
+        "mean_absolute_log10_error": 0.5712834517775961,
+        "rmse_log10": 0.6510332616576112,
+        "p80_multiplicative_error": 7.321448090511565,
+        "within_2x": 0.2777777777777778,
+        "signed_bias_factor": 0.30540572702367663
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus baseline",
+        "paired_rows": 18,
+        "developers": 5,
+        "observed_delta": -0.026614382615434973,
+        "ci_90": [
+          -0.046628330788445464,
+          -0.006039729555842266
+        ],
+        "probability_candidate_better": 0.97865,
+        "samples": 20000,
+        "random_seed": 20260731
+      }
+    },
+    "frontier_like": {
+      "rows": 16,
+      "developers": 5,
+      "models": [
+        "DeepSeek-R1 (May 2025)",
+        "DeepSeek-V2 (MoE-236B, May 2024)",
+        "DeepSeek-V3 (Mar 2025)",
+        "DeepSeek-V3.2",
+        "DeepSeek-V4-Pro",
+        "GLM-4.7",
+        "GLM-5",
+        "GLM-5.2",
+        "Kimi K2 Thinking",
+        "Kimi K2.5",
+        "Kimi K2.6",
+        "Kimi K2.7 Code",
+        "Magistral Small 1.1",
+        "Mistral Large 2 (Jul 2024)",
+        "Mistral Large 2 (Nov 2024)",
+        "Qwen3-235B-A22B-Thinking (Jul 2025)"
+      ],
+      "baseline": {
+        "n": 16,
+        "median_multiplicative_error": 3.7754671099660992,
+        "geomean_multiplicative_error": 4.492054947978819,
+        "mean_absolute_log10_error": 0.6524450600244245,
+        "rmse_log10": 0.7126102876347126,
+        "p80_multiplicative_error": 8.788836866273908,
+        "within_2x": 0.0625,
+        "signed_bias_factor": 0.24850939194020003
+      },
+      "candidate": {
+        "n": 16,
+        "median_multiplicative_error": 3.6021775624509624,
+        "geomean_multiplicative_error": 4.1376889322488335,
+        "mean_absolute_log10_error": 0.6167578376864429,
+        "rmse_log10": 0.6866071421762454,
+        "p80_multiplicative_error": 8.933874100520768,
+        "within_2x": 0.1875,
+        "signed_bias_factor": 0.26251948635707223
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus baseline",
+        "paired_rows": 16,
+        "developers": 5,
+        "observed_delta": -0.0364279132626437,
+        "ci_90": [
+          -0.05767368029154015,
+          -0.017202472236982142
+        ],
+        "probability_candidate_better": 1.0,
+        "samples": 20000,
+        "random_seed": 20260732
+      }
+    },
+    "available_within_90_days": {
+      "rows": 9,
+      "developers": 3,
+      "models": [
+        "DeepSeek-V3.2",
+        "DeepSeek-V4-Pro",
+        "GLM-4.7",
+        "GLM-5",
+        "GLM-5.2",
+        "Kimi K2 Thinking",
+        "Kimi K2.5",
+        "Kimi K2.6",
+        "Kimi K2.7 Code"
+      ],
+      "baseline": {
+        "n": 9,
+        "median_multiplicative_error": 3.726600164559399,
+        "geomean_multiplicative_error": 3.7685621883086573,
+        "mean_absolute_log10_error": 0.5761756863363334,
+        "rmse_log10": 0.6154437413135293,
+        "p80_multiplicative_error": 5.130133194605315,
+        "within_2x": 0.1111111111111111,
+        "signed_bias_factor": 0.26535319042958483
+      },
+      "candidate": {
+        "n": 9,
+        "median_multiplicative_error": 3.543509038151452,
+        "geomean_multiplicative_error": 3.4728241501632504,
+        "mean_absolute_log10_error": 0.5406827929429934,
+        "rmse_log10": 0.585208969138043,
+        "p80_multiplicative_error": 4.788050908867532,
+        "within_2x": 0.2222222222222222,
+        "signed_bias_factor": 0.2879500823423472
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus baseline",
+        "paired_rows": 9,
+        "developers": 3,
+        "observed_delta": -0.03324379820061207,
+        "ci_90": [
+          -0.05107018742678735,
+          -0.015417408974436775
+        ],
+        "probability_candidate_better": 1.0,
+        "samples": 20000,
+        "random_seed": 20260733
+      }
+    },
+    "interval_prospective": {
+      "rows": 2,
+      "developers": 1,
+      "models": [
+        "Kimi K2.5",
+        "Kimi K2.7 Code"
+      ],
+      "baseline": {
+        "n": 2,
+        "median_multiplicative_error": 4.5893718805313926,
+        "geomean_multiplicative_error": 4.525157608734624,
+        "mean_absolute_log10_error": 0.6556337100410496,
+        "rmse_log10": 0.6596938226399254,
+        "p80_multiplicative_error": 5.048394575626548,
+        "within_2x": 0.0,
+        "signed_bias_factor": 0.22098677802288336
+      },
+      "candidate": {
+        "n": 2,
+        "median_multiplicative_error": 4.2818275811241095,
+        "geomean_multiplicative_error": 4.23655867634577,
+        "mean_absolute_log10_error": 0.6270132257639609,
+        "rmse_log10": 0.630213593076572,
+        "p80_multiplicative_error": 4.654416477748292,
+        "within_2x": 0.0,
+        "signed_bias_factor": 0.23604063495765076
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus baseline",
+        "paired_rows": 2,
+        "developers": 1,
+        "observed_delta": -0.028620484277088742,
+        "ci_90": [
+          -0.028620484277088742,
+          -0.028620484277088742
+        ],
+        "probability_candidate_better": 1.0,
+        "samples": 20000,
+        "random_seed": 20260734
+      }
+    },
+    "benchmark_zip": {
+      "rows": 8,
+      "developers": 4,
+      "models": [
+        "DeepSeek-R1 (May 2025)",
+        "DeepSeek-V3 (Mar 2025)",
+        "DeepSeek-V3.2",
+        "GLM-4.7",
+        "GLM-5",
+        "Kimi K2 Thinking",
+        "Kimi K2.5",
+        "Qwen3-235B-A22B-Thinking (Jul 2025)"
+      ],
+      "baseline": {
+        "n": 8,
+        "median_multiplicative_error": 4.373174753305393,
+        "geomean_multiplicative_error": 5.313043426593624,
+        "mean_absolute_log10_error": 0.7253433656656005,
+        "rmse_log10": 0.8047316402620429,
+        "p80_multiplicative_error": 12.066764735380325,
+        "within_2x": 0.125,
+        "signed_bias_factor": 0.1882160411101956
+      },
+      "candidate": {
+        "n": 8,
+        "median_multiplicative_error": 4.174056427212598,
+        "geomean_multiplicative_error": 4.945443112898183,
+        "mean_absolute_log10_error": 0.694205210567148,
+        "rmse_log10": 0.7811173262450628,
+        "p80_multiplicative_error": 11.491830775006438,
+        "within_2x": 0.125,
+        "signed_bias_factor": 0.20220634979945587
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus baseline",
+        "paired_rows": 8,
+        "developers": 4,
+        "observed_delta": -0.03145530939596432,
+        "ci_90": [
+          -0.054938359531523887,
+          -0.009484345323202487
+        ],
+        "probability_candidate_better": 1.0,
+        "samples": 20000,
+        "random_seed": 20260735
+      }
+    },
+    "canonical_csv": {
+      "rows": 10,
+      "developers": 5,
+      "models": [
+        "DeepSeek-V2 (MoE-236B, May 2024)",
+        "DeepSeek-V4-Pro",
+        "GLM-5.2",
+        "Kimi K2.6",
+        "Kimi K2.7 Code",
+        "Magistral Small 1.1",
+        "Mistral Large 2 (Jul 2024)",
+        "Mistral Large 2 (Nov 2024)",
+        "Mistral Small 3.1",
+        "Qwen2.5-Coder-32B"
+      ],
+      "baseline": {
+        "n": 10,
+        "median_multiplicative_error": 3.648218557292669,
+        "geomean_multiplicative_error": 3.155889251136885,
+        "mean_absolute_log10_error": 0.4991217542129032,
+        "rmse_log10": 0.5484820206506432,
+        "p80_multiplicative_error": 4.1285663273342195,
+        "within_2x": 0.2,
+        "signed_bias_factor": 0.41448480400171117
+      },
+      "candidate": {
+        "n": 10,
+        "median_multiplicative_error": 3.168786883750945,
+        "geomean_multiplicative_error": 2.9712968650943896,
+        "mean_absolute_log10_error": 0.47294604474595464,
+        "rmse_log10": 0.5242178288879512,
+        "p80_multiplicative_error": 3.949890190505537,
+        "within_2x": 0.4,
+        "signed_bias_factor": 0.42475948604022734
+      },
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; candidate minus baseline",
+        "paired_rows": 10,
+        "developers": 5,
+        "observed_delta": -0.01629734417414619,
+        "ci_90": [
+          -0.039879460756093096,
+          0.009669012191835469
+        ],
+        "probability_candidate_better": 0.86075,
+        "samples": 20000,
+        "random_seed": 20260736
+      }
+    }
+  },
+  "selected_alpha_counts": {
+    "0.3": 18
+  },
+  "current_target_coverage": [
+    {
+      "model": "Claude Fable 5",
+      "observed_knowledge_benchmarks": [
+        "SimpleQA Verified"
+      ],
+      "observed_count": 1,
+      "coverage_shrinkage": 0.3333333333333333,
+      "passes_minimum": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "observed_knowledge_benchmarks": [
+        "GPQA diamond",
+        "SimpleQA Verified"
+      ],
+      "observed_count": 2,
+      "coverage_shrinkage": 0.5,
+      "passes_minimum": false
+    }
+  ],
+  "promotion_gates": {
+    "thresholds": {
+      "minimum_outer_rows": 20,
+      "minimum_outer_developers": 6,
+      "minimum_frontier_rows": 8,
+      "minimum_frontier_developers": 4,
+      "minimum_rows_per_source_format": 6,
+      "minimum_developers_per_source_format": 3,
+      "minimum_prospective_rows": 5,
+      "minimum_prospective_developers": 3,
+      "minimum_current_target_knowledge_benchmarks": 3,
+      "maximum_clustered_ci90_upper": 0.0
+    },
+    "results": {
+      "outer_coverage": false,
+      "all_clustered_interval_wholly_favorable": true,
+      "all_median_improves": true,
+      "frontier_coverage": true,
+      "frontier_clustered_interval_wholly_favorable": true,
+      "source_format_stability": true,
+      "prospective_coverage": false,
+      "prospective_median_non_degradation": true,
+      "current_target_component_coverage": false
+    },
+    "all_pass": false
+  },
+  "decision": {
+    "promote_archive_vintage_knowledge_branch": false,
+    "incremental_live_weight": 0.0,
+    "change_live_forecasts": false,
+    "reason": "At least one predeclared archive-vintage coverage, stability, or target-coverage gate failed; retain zero live weight."
+  },
+  "limitations": [
+    "Most first-observed archive targets are historical backfills, not models released between adjacent captures.",
+    "The truly interval-prospective cohort remains small and developer-concentrated.",
+    "Only six knowledge benchmarks are predeclared; benchmark availability is non-random across model and date.",
+    "Fable and Sol expose fewer knowledge components than the promotion minimum, so sparse-coverage shrinkage is material.",
+    "The audit tests an incremental ECI component branch only and makes no full-ensemble vintage claim."
+  ],
+  "source_files": {
+    "sources/epoch_eci_historical_snapshots_2026-07-18.tar.gz": "0ce76d6662dd34efe9847e418cb0ade2654b320b8df49c998e2f7df989ba2150",
+    "sources/epoch_eci_historical_collection_metadata_2026-07-18.json": "8123f9fbaa0d33ad92d56d3c7ca6608c74a5ecc1fa014fab461d9accfbd0b178",
+    "sources/epoch_eci_historical_reconstructed_inputs_2026-07-18.csv.gz": "acff420e202c12cccbdb68480cff21734ff08efed8c46b7dd4bad4eab498ab3d",
+    "sources/epoch_eci_historical_model_scores_2026-07-18.csv": "98b18176aeb56d9b5015c80ab50ed7d27c3bac28e7d699c11968b45dc052c3fa",
+    "sources/epoch_eci_historical_benchmark_parameters_2026-07-18.csv": "be50dfe17d23b7d8301699e9e30d5f606ad99ab79194ecf7eb64ebfeb18da60b",
+    "sources/epoch_eci_benchmarks_2026-07-31.csv": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794"
+  },
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_vintage_knowledge_residual_predictions_2026-07-31.csv"
+  }
+}

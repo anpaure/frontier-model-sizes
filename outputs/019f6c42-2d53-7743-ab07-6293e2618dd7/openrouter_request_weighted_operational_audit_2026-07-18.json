@@ -1,0 +1,4984 @@
+{
+  "candidate_specifications": {
+    "date_price": [
+      "release_decimal_year",
+      "log10_blended_price"
+    ],
+    "date_price_one_week_throughput": [
+      "release_decimal_year",
+      "log10_blended_price",
+      "log10_one_week_throughput"
+    ],
+    "date_price_p50_latency_supported": [
+      "release_decimal_year",
+      "log10_blended_price",
+      "log10_latency_p50_supported"
+    ],
+    "date_price_p50_throughput_all": [
+      "release_decimal_year",
+      "log10_blended_price",
+      "log10_throughput_p50_all"
+    ],
+    "date_price_p50_throughput_latency_supported": [
+      "release_decimal_year",
+      "log10_blended_price",
+      "log10_throughput_p50_supported",
+      "log10_latency_p50_supported"
+    ],
+    "date_price_p50_throughput_supported": [
+      "release_decimal_year",
+      "log10_blended_price",
+      "log10_throughput_p50_supported"
+    ],
+    "date_price_p50_throughput_tail_spreads_supported": [
+      "release_decimal_year",
+      "log10_blended_price",
+      "log10_throughput_p50_supported",
+      "log10_throughput_p90_over_p50_supported",
+      "log10_latency_p90_over_p50_supported"
+    ]
+  },
+  "compatibility_filename_date": "2026-07-18",
+  "decision": {
+    "change_headline_forecasts": false,
+    "incremental_live_weight": 0.0,
+    "promote_operational_feature": false,
+    "reason": "No request-supported throughput, latency, joint, or tail-spread candidate passes the predeclared family-interval and chronological-direction gates."
+  },
+  "fit": "family-balanced Huber robust ridge with standardized features; every candidate uses the same complete checkpoint panel",
+  "heldout_metrics": {
+    "chronological_family": {
+      "date_price": {
+        "mean_absolute_log10_error": 0.4325082814561078,
+        "median_multiplicative_error": 2.418215135806258,
+        "n": 57,
+        "p80_multiplicative_error": 4.21039151964671,
+        "rmse_log10": 0.5379155408017257,
+        "signed_bias_factor": 1.7620016798353624,
+        "within_2x": 0.38596491228070173
+      },
+      "date_price_one_week_throughput": {
+        "mean_absolute_log10_error": 0.421956700611931,
+        "median_multiplicative_error": 2.289598340332051,
+        "n": 57,
+        "p80_multiplicative_error": 4.384433354555622,
+        "rmse_log10": 0.5382101053561423,
+        "signed_bias_factor": 1.702237208316014,
+        "within_2x": 0.45614035087719296
+      },
+      "date_price_p50_latency_supported": {
+        "mean_absolute_log10_error": 0.443414487448699,
+        "median_multiplicative_error": 2.419479110090287,
+        "n": 57,
+        "p80_multiplicative_error": 4.347338126605467,
+        "rmse_log10": 0.5596526345774825,
+        "signed_bias_factor": 1.7533143278708918,
+        "within_2x": 0.38596491228070173
+      },
+      "date_price_p50_throughput_all": {
+        "mean_absolute_log10_error": 0.4272055720379449,
+        "median_multiplicative_error": 2.5861804284904335,
+        "n": 57,
+        "p80_multiplicative_error": 4.946709886383547,
+        "rmse_log10": 0.5341126777130585,
+        "signed_bias_factor": 1.6629781618929793,
+        "within_2x": 0.38596491228070173
+      },
+      "date_price_p50_throughput_latency_supported": {
+        "mean_absolute_log10_error": 0.4422238149084344,
+        "median_multiplicative_error": 2.6196579571326195,
+        "n": 57,
+        "p80_multiplicative_error": 4.4677362650984,
+        "rmse_log10": 0.5610177647523427,
+        "signed_bias_factor": 1.626044028302751,
+        "within_2x": 0.40350877192982454
+      },
+      "date_price_p50_throughput_supported": {
+        "mean_absolute_log10_error": 0.4361096617842247,
+        "median_multiplicative_error": 2.3941930199155745,
+        "n": 57,
+        "p80_multiplicative_error": 4.900096351564074,
+        "rmse_log10": 0.5440736906974906,
+        "signed_bias_factor": 1.6667102691830777,
+        "within_2x": 0.43859649122807015
+      },
+      "date_price_p50_throughput_tail_spreads_supported": {
+        "mean_absolute_log10_error": 0.4133082452255841,
+        "median_multiplicative_error": 2.209269816478443,
+        "n": 57,
+        "p80_multiplicative_error": 4.792151276911124,
+        "rmse_log10": 0.5320981470456464,
+        "signed_bias_factor": 1.454670199572731,
+        "within_2x": 0.45614035087719296
+      }
+    },
+    "family": {
+      "date_price": {
+        "mean_absolute_log10_error": 0.3949088404956792,
+        "median_multiplicative_error": 2.014230710505449,
+        "n": 81,
+        "p80_multiplicative_error": 4.5097659896982005,
+        "rmse_log10": 0.4943787655352684,
+        "signed_bias_factor": 1.377354198643336,
+        "within_2x": 0.48148148148148145
+      },
+      "date_price_one_week_throughput": {
+        "mean_absolute_log10_error": 0.409812176950466,
+        "median_multiplicative_error": 1.9940824162466797,
+        "n": 81,
+        "p80_multiplicative_error": 4.6624621000191455,
+        "rmse_log10": 0.5127756112824973,
+        "signed_bias_factor": 1.3912744340693546,
+        "within_2x": 0.5061728395061729
+      },
+      "date_price_p50_latency_supported": {
+        "mean_absolute_log10_error": 0.4073799088980805,
+        "median_multiplicative_error": 2.0784677871757764,
+        "n": 81,
+        "p80_multiplicative_error": 4.566591122930133,
+        "rmse_log10": 0.5186610583304331,
+        "signed_bias_factor": 1.3863591390089671,
+        "within_2x": 0.4567901234567901
+      },
+      "date_price_p50_throughput_all": {
+        "mean_absolute_log10_error": 0.3999145455979587,
+        "median_multiplicative_error": 2.0381697697613057,
+        "n": 81,
+        "p80_multiplicative_error": 4.595482336659881,
+        "rmse_log10": 0.5003384003283577,
+        "signed_bias_factor": 1.3771722187736393,
+        "within_2x": 0.49382716049382713
+      },
+      "date_price_p50_throughput_latency_supported": {
+        "mean_absolute_log10_error": 0.4154069781603629,
+        "median_multiplicative_error": 2.0929876712472786,
+        "n": 81,
+        "p80_multiplicative_error": 4.9557895815158055,
+        "rmse_log10": 0.5314399184718726,
+        "signed_bias_factor": 1.3732570577869763,
+        "within_2x": 0.4691358024691358
+      },
+      "date_price_p50_throughput_supported": {
+        "mean_absolute_log10_error": 0.40137188911970956,
+        "median_multiplicative_error": 2.041094076429655,
+        "n": 81,
+        "p80_multiplicative_error": 4.560580994396747,
+        "rmse_log10": 0.5030994273643693,
+        "signed_bias_factor": 1.3784896954867725,
+        "within_2x": 0.4691358024691358
+      },
+      "date_price_p50_throughput_tail_spreads_supported": {
+        "mean_absolute_log10_error": 0.41964847741204353,
+        "median_multiplicative_error": 2.1444112416042858,
+        "n": 81,
+        "p80_multiplicative_error": 4.613442063834765,
+        "rmse_log10": 0.5312508296968949,
+        "signed_bias_factor": 1.3998894369154007,
+        "within_2x": 0.4691358024691358
+      }
+    }
+  },
+  "inventory": {
+    "complete_checkpoints": 81,
+    "complete_families": 16,
+    "endpoint_default_rows": 1036,
+    "feature_metadata": {
+      "latency_p50_supported": {
+        "control_counts": {
+          "aion-labs/aion-2.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0-mini": {
+            "quantization": 1
+          },
+          "amazon/nova-2-lite-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "amazon/nova-micro-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "anthropic/claude-3-haiku": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-fable-5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-fable-5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1:batch": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.6": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.6:batch": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.7": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.7:batch": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.8": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-4.8-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.8:batch": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-5": {
+            "provider+quantization": 5,
+            "quantization": 2
+          },
+          "anthropic/claude-opus-5-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-sonnet-4": {
+            "provider+quantization": 2
+          },
+          "anthropic/claude-sonnet-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.6": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5:batch": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "arcee-ai/trinity-large-thinking": {
+            "provider+quantization": 1
+          },
+          "bytedance-seed/seed-1.6-flash": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-lite": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-mini": {
+            "quantization": 1
+          },
+          "bytedance/ui-tars-1.5-7b": {
+            "provider+quantization": 1
+          },
+          "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+            "quantization": 1
+          },
+          "cohere/command-r-08-2024": {
+            "quantization": 1
+          },
+          "cohere/command-r7b-12-2024": {
+            "quantization": 1
+          },
+          "deepseek/deepseek-chat": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-chat-v3-0324": {
+            "provider+quantization": 4
+          },
+          "deepseek/deepseek-chat-v3.1": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "deepseek/deepseek-r1": {
+            "provider+quantization": 2
+          },
+          "deepseek/deepseek-r1-0528": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v3.1-terminus": {
+            "provider+quantization": 5
+          },
+          "deepseek/deepseek-v3.2": {
+            "provider+quantization": 13,
+            "quantization": 1
+          },
+          "deepseek/deepseek-v3.2-exp": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v4-flash": {
+            "provider+quantization": 16,
+            "quantization": 5
+          },
+          "deepseek/deepseek-v4-pro": {
+            "provider+quantization": 13,
+            "quantization": 4
+          },
+          "google/gemini-2.5-flash": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-flash-image": {
+            "provider+quantization": 1
+          },
+          "google/gemini-2.5-flash-lite": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash-lite:batch": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash:batch": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-pro": {
+            "provider+quantization": 2
+          },
+          "google/gemini-2.5-pro:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-pro-image": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "google/gemini-3-pro-image-preview": {
+            "quantization": 1
+          },
+          "google/gemini-3.1-flash-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-image-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview-customtools": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-pro-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemma-3-12b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3-27b-it": {
+            "provider+quantization": 5
+          },
+          "google/gemma-3-4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3n-e4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-4-26b-a4b-it": {
+            "provider+quantization": 6,
+            "quantization": 3
+          },
+          "google/gemma-4-31b-it": {
+            "provider": 1,
+            "provider+quantization": 9,
+            "quantization": 8
+          },
+          "gryphe/mythomax-l2-13b": {
+            "quantization": 3
+          },
+          "ibm-granite/granite-4.0-h-micro": {
+            "provider+quantization": 1
+          },
+          "ibm-granite/granite-4.1-8b": {
+            "provider+quantization": 1
+          },
+          "inception/mercury-2": {
+            "quantization": 1
+          },
+          "inclusionai/ling-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ling-2.6-flash": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ring-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "meituan/longcat-2.0": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.1-70b-instruct": {
+            "provider+quantization": 3
+          },
+          "meta-llama/llama-3.1-8b-instruct": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "meta-llama/llama-3.2-1b-instruct": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.2-3b-instruct": {
+            "provider+quantization": 2
+          },
+          "meta-llama/llama-3.3-70b-instruct": {
+            "provider+quantization": 7,
+            "quantization": 5
+          },
+          "meta-llama/llama-4-maverick": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "meta-llama/llama-4-scout": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "meta-llama/llama-guard-4-12b": {
+            "provider+quantization": 2
+          },
+          "meta/muse-spark-1.1": {
+            "quantization": 1
+          },
+          "microsoft/phi-4": {
+            "provider+quantization": 1
+          },
+          "microsoft/wizardlm-2-8x22b": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-01": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2": {
+            "provider+quantization": 2
+          },
+          "minimax/minimax-m2-her": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2.1": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-m2.5": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "minimax/minimax-m2.7": {
+            "provider+quantization": 7,
+            "quantization": 2
+          },
+          "minimax/minimax-m3": {
+            "provider+quantization": 9
+          },
+          "minimax/minimax-m3:batch": {
+            "provider+quantization": 9
+          },
+          "mistralai/devstral-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-14b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-3b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-8b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3-5": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3.1": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-nemo": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "mistralai/mistral-small-24b-instruct-2501": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-2603": {
+            "provider+quantization": 2
+          },
+          "mistralai/mistral-small-3.1-24b-instruct": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-3.2-24b-instruct": {
+            "provider+quantization": 4
+          },
+          "mistralai/mixtral-8x22b-instruct": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2-0905": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2-thinking": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2.5": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "moonshotai/kimi-k2.6": {
+            "provider+quantization": 11,
+            "quantization": 10
+          },
+          "moonshotai/kimi-k2.7-code": {
+            "provider+quantization": 4,
+            "quantization": 7
+          },
+          "moonshotai/kimi-k3": {
+            "global": 2,
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "nex-agi/nex-n2-mini": {
+            "quantization": 1
+          },
+          "nex-agi/nex-n2-pro": {
+            "quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-70b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-70b": {
+            "provider+quantization": 1
+          },
+          "nvidia/nemotron-3-nano-30b-a3b": {
+            "provider+quantization": 1,
+            "quantization": 2
+          },
+          "nvidia/nemotron-3-super-120b-a12b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "nvidia/nemotron-3-ultra-550b-a55b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "openai/gpt-3.5-turbo": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4.1-mini": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "openai/gpt-4.1-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-05-13": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-2024-08-06": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-11-20": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-mini-2024-07-18": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1-codex-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.2:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.3-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.3-codex": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.4-image-2": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.5:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-sol": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-sol-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-terra": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-terra-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-audio-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-chat-latest": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-oss-120b": {
+            "provider": 1,
+            "provider+quantization": 10,
+            "quantization": 6
+          },
+          "openai/gpt-oss-20b": {
+            "provider+quantization": 8,
+            "quantization": 1
+          },
+          "openai/gpt-oss-safeguard-20b": {
+            "provider+quantization": 1
+          },
+          "openai/o3": {
+            "provider+quantization": 1
+          },
+          "openai/o3-mini": {
+            "provider+quantization": 1
+          },
+          "openai/o4-mini": {
+            "provider+quantization": 1
+          },
+          "perceptron/perceptron-mk1": {
+            "quantization": 1
+          },
+          "perplexity/sonar": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro-search": {
+            "quantization": 1
+          },
+          "poolside/laguna-s-2.1": {
+            "quantization": 1
+          },
+          "poolside/laguna-xs-2.1": {
+            "quantization": 1
+          },
+          "qwen/qwen-2.5-72b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen-2.5-7b-instruct": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen2.5-vl-72b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-14b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "qwen/qwen3-235b-a22b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-235b-a22b-2507": {
+            "provider+quantization": 10,
+            "quantization": 2
+          },
+          "qwen/qwen3-30b-a3b": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-30b-a3b-instruct-2507": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-32b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "qwen/qwen3-8b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder": {
+            "provider": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-30b-a3b-instruct": {
+            "provider+quantization": 3
+          },
+          "qwen/qwen3-coder-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder-next": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-next-80b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-235b-a22b-instruct": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-vl-235b-a22b-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-30b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-32b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-8b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3.5-122b-a10b": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3.5-27b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-35b-a3b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-397b-a17b": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-9b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-flash-02-23": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-02-15": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-20260420": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-27b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.6-35b-a3b": {
+            "provider+quantization": 9
+          },
+          "qwen/qwen3.6-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-flash": {
+            "quantization": 1
+          },
+          "qwen/qwen3.7-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-plus": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3-lunaris-8b": {
+            "provider+quantization": 2
+          },
+          "sao10k/l3.1-euryale-70b": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3.3-euryale-70b": {
+            "quantization": 1
+          },
+          "stepfun/step-3.5-flash": {
+            "provider+quantization": 1
+          },
+          "stepfun/step-3.7-flash": {
+            "quantization": 2
+          },
+          "tencent/hy3": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "tencent/hy3-preview": {
+            "quantization": 1
+          },
+          "thedrummer/cydonia-24b-v4.1": {
+            "provider+quantization": 1
+          },
+          "thedrummer/rocinante-12b": {
+            "provider+quantization": 1
+          },
+          "thedrummer/skyfall-36b-v2": {
+            "provider+quantization": 1
+          },
+          "thedrummer/unslopnemo-12b": {
+            "provider+quantization": 1
+          },
+          "thinkingmachines/inkling": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "undi95/remm-slerp-l2-13b": {
+            "quantization": 1
+          },
+          "upstage/solar-pro-3": {
+            "quantization": 1
+          },
+          "x-ai/grok-4.20": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.20-multi-agent": {
+            "provider+quantization": 1
+          },
+          "x-ai/grok-4.3": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.5": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-build-0.1": {
+            "provider+quantization": 1
+          },
+          "xiaomi/mimo-v2.5": {
+            "provider+quantization": 6,
+            "quantization": 1
+          },
+          "xiaomi/mimo-v2.5-pro": {
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "z-ai/glm-4.5": {
+            "provider+quantization": 1
+          },
+          "z-ai/glm-4.5-air": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.5v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.6": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "z-ai/glm-4.6v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.7": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "z-ai/glm-4.7-flash": {
+            "provider+quantization": 4
+          },
+          "z-ai/glm-5": {
+            "provider+quantization": 12
+          },
+          "z-ai/glm-5-turbo": {
+            "quantization": 1
+          },
+          "z-ai/glm-5.1": {
+            "provider+quantization": 14,
+            "quantization": 2
+          },
+          "z-ai/glm-5.2": {
+            "provider+quantization": 20,
+            "quantization": 13
+          },
+          "z-ai/glm-5v-turbo": {
+            "provider+quantization": 1
+          }
+        },
+        "eligible_endpoint_rows": 799,
+        "minimum_requests": 100,
+        "models": 264,
+        "normalization_hierarchy": "provider+quantization when n>=4, then provider, quantization, global",
+        "request_weight": "min(log1p(request_count), log1p(10000))",
+        "request_weighted": true
+      },
+      "latency_p90_over_p50_supported": {
+        "control_counts": {
+          "aion-labs/aion-2.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0-mini": {
+            "quantization": 1
+          },
+          "amazon/nova-2-lite-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "amazon/nova-micro-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "anthropic/claude-3-haiku": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-fable-5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-fable-5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1:batch": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.6": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.6:batch": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.7": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.7:batch": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.8": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-4.8-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.8:batch": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-5": {
+            "provider+quantization": 5,
+            "quantization": 2
+          },
+          "anthropic/claude-opus-5-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-sonnet-4": {
+            "provider+quantization": 2
+          },
+          "anthropic/claude-sonnet-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.6": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5:batch": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "arcee-ai/trinity-large-thinking": {
+            "provider+quantization": 1
+          },
+          "bytedance-seed/seed-1.6-flash": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-lite": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-mini": {
+            "quantization": 1
+          },
+          "bytedance/ui-tars-1.5-7b": {
+            "provider+quantization": 1
+          },
+          "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+            "quantization": 1
+          },
+          "cohere/command-r-08-2024": {
+            "quantization": 1
+          },
+          "cohere/command-r7b-12-2024": {
+            "quantization": 1
+          },
+          "deepseek/deepseek-chat": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-chat-v3-0324": {
+            "provider+quantization": 4
+          },
+          "deepseek/deepseek-chat-v3.1": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "deepseek/deepseek-r1": {
+            "provider+quantization": 2
+          },
+          "deepseek/deepseek-r1-0528": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v3.1-terminus": {
+            "provider+quantization": 5
+          },
+          "deepseek/deepseek-v3.2": {
+            "provider+quantization": 13,
+            "quantization": 1
+          },
+          "deepseek/deepseek-v3.2-exp": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v4-flash": {
+            "provider+quantization": 16,
+            "quantization": 5
+          },
+          "deepseek/deepseek-v4-pro": {
+            "provider+quantization": 13,
+            "quantization": 4
+          },
+          "google/gemini-2.5-flash": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-flash-image": {
+            "provider+quantization": 1
+          },
+          "google/gemini-2.5-flash-lite": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash-lite:batch": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash:batch": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-pro": {
+            "provider+quantization": 2
+          },
+          "google/gemini-2.5-pro:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-pro-image": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "google/gemini-3-pro-image-preview": {
+            "quantization": 1
+          },
+          "google/gemini-3.1-flash-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-image-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview-customtools": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-pro-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemma-3-12b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3-27b-it": {
+            "provider+quantization": 5
+          },
+          "google/gemma-3-4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3n-e4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-4-26b-a4b-it": {
+            "provider+quantization": 6,
+            "quantization": 3
+          },
+          "google/gemma-4-31b-it": {
+            "provider": 1,
+            "provider+quantization": 9,
+            "quantization": 8
+          },
+          "gryphe/mythomax-l2-13b": {
+            "quantization": 3
+          },
+          "ibm-granite/granite-4.0-h-micro": {
+            "provider+quantization": 1
+          },
+          "ibm-granite/granite-4.1-8b": {
+            "provider+quantization": 1
+          },
+          "inception/mercury-2": {
+            "quantization": 1
+          },
+          "inclusionai/ling-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ling-2.6-flash": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ring-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "meituan/longcat-2.0": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.1-70b-instruct": {
+            "provider+quantization": 3
+          },
+          "meta-llama/llama-3.1-8b-instruct": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "meta-llama/llama-3.2-1b-instruct": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.2-3b-instruct": {
+            "provider+quantization": 2
+          },
+          "meta-llama/llama-3.3-70b-instruct": {
+            "provider+quantization": 7,
+            "quantization": 5
+          },
+          "meta-llama/llama-4-maverick": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "meta-llama/llama-4-scout": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "meta-llama/llama-guard-4-12b": {
+            "provider+quantization": 2
+          },
+          "meta/muse-spark-1.1": {
+            "quantization": 1
+          },
+          "microsoft/phi-4": {
+            "provider+quantization": 1
+          },
+          "microsoft/wizardlm-2-8x22b": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-01": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2": {
+            "provider+quantization": 2
+          },
+          "minimax/minimax-m2-her": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2.1": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-m2.5": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "minimax/minimax-m2.7": {
+            "provider+quantization": 7,
+            "quantization": 2
+          },
+          "minimax/minimax-m3": {
+            "provider+quantization": 9
+          },
+          "minimax/minimax-m3:batch": {
+            "provider+quantization": 9
+          },
+          "mistralai/devstral-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-14b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-3b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-8b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3-5": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3.1": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-nemo": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "mistralai/mistral-small-24b-instruct-2501": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-2603": {
+            "provider+quantization": 2
+          },
+          "mistralai/mistral-small-3.1-24b-instruct": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-3.2-24b-instruct": {
+            "provider+quantization": 4
+          },
+          "mistralai/mixtral-8x22b-instruct": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2-0905": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2-thinking": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2.5": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "moonshotai/kimi-k2.6": {
+            "provider+quantization": 11,
+            "quantization": 10
+          },
+          "moonshotai/kimi-k2.7-code": {
+            "provider+quantization": 4,
+            "quantization": 7
+          },
+          "moonshotai/kimi-k3": {
+            "global": 2,
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "nex-agi/nex-n2-mini": {
+            "quantization": 1
+          },
+          "nex-agi/nex-n2-pro": {
+            "quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-70b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-70b": {
+            "provider+quantization": 1
+          },
+          "nvidia/nemotron-3-nano-30b-a3b": {
+            "provider+quantization": 1,
+            "quantization": 2
+          },
+          "nvidia/nemotron-3-super-120b-a12b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "nvidia/nemotron-3-ultra-550b-a55b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "openai/gpt-3.5-turbo": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4.1-mini": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "openai/gpt-4.1-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-05-13": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-2024-08-06": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-11-20": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-mini-2024-07-18": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1-codex-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.2:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.3-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.3-codex": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.4-image-2": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.5:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-sol": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-sol-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-terra": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-terra-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-audio-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-chat-latest": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-oss-120b": {
+            "provider": 1,
+            "provider+quantization": 10,
+            "quantization": 6
+          },
+          "openai/gpt-oss-20b": {
+            "provider+quantization": 8,
+            "quantization": 1
+          },
+          "openai/gpt-oss-safeguard-20b": {
+            "provider+quantization": 1
+          },
+          "openai/o3": {
+            "provider+quantization": 1
+          },
+          "openai/o3-mini": {
+            "provider+quantization": 1
+          },
+          "openai/o4-mini": {
+            "provider+quantization": 1
+          },
+          "perceptron/perceptron-mk1": {
+            "quantization": 1
+          },
+          "perplexity/sonar": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro-search": {
+            "quantization": 1
+          },
+          "poolside/laguna-s-2.1": {
+            "quantization": 1
+          },
+          "poolside/laguna-xs-2.1": {
+            "quantization": 1
+          },
+          "qwen/qwen-2.5-72b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen-2.5-7b-instruct": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen2.5-vl-72b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-14b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "qwen/qwen3-235b-a22b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-235b-a22b-2507": {
+            "provider+quantization": 10,
+            "quantization": 2
+          },
+          "qwen/qwen3-30b-a3b": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-30b-a3b-instruct-2507": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-32b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "qwen/qwen3-8b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder": {
+            "provider": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-30b-a3b-instruct": {
+            "provider+quantization": 3
+          },
+          "qwen/qwen3-coder-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder-next": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-next-80b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-235b-a22b-instruct": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-vl-235b-a22b-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-30b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-32b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-8b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3.5-122b-a10b": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3.5-27b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-35b-a3b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-397b-a17b": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-9b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-flash-02-23": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-02-15": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-20260420": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-27b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.6-35b-a3b": {
+            "provider+quantization": 9
+          },
+          "qwen/qwen3.6-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-flash": {
+            "quantization": 1
+          },
+          "qwen/qwen3.7-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-plus": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3-lunaris-8b": {
+            "provider+quantization": 2
+          },
+          "sao10k/l3.1-euryale-70b": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3.3-euryale-70b": {
+            "quantization": 1
+          },
+          "stepfun/step-3.5-flash": {
+            "provider+quantization": 1
+          },
+          "stepfun/step-3.7-flash": {
+            "quantization": 2
+          },
+          "tencent/hy3": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "tencent/hy3-preview": {
+            "quantization": 1
+          },
+          "thedrummer/cydonia-24b-v4.1": {
+            "provider+quantization": 1
+          },
+          "thedrummer/rocinante-12b": {
+            "provider+quantization": 1
+          },
+          "thedrummer/skyfall-36b-v2": {
+            "provider+quantization": 1
+          },
+          "thedrummer/unslopnemo-12b": {
+            "provider+quantization": 1
+          },
+          "thinkingmachines/inkling": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "undi95/remm-slerp-l2-13b": {
+            "quantization": 1
+          },
+          "upstage/solar-pro-3": {
+            "quantization": 1
+          },
+          "x-ai/grok-4.20": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.20-multi-agent": {
+            "provider+quantization": 1
+          },
+          "x-ai/grok-4.3": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.5": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-build-0.1": {
+            "provider+quantization": 1
+          },
+          "xiaomi/mimo-v2.5": {
+            "provider+quantization": 6,
+            "quantization": 1
+          },
+          "xiaomi/mimo-v2.5-pro": {
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "z-ai/glm-4.5": {
+            "provider+quantization": 1
+          },
+          "z-ai/glm-4.5-air": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.5v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.6": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "z-ai/glm-4.6v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.7": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "z-ai/glm-4.7-flash": {
+            "provider+quantization": 4
+          },
+          "z-ai/glm-5": {
+            "provider+quantization": 12
+          },
+          "z-ai/glm-5-turbo": {
+            "quantization": 1
+          },
+          "z-ai/glm-5.1": {
+            "provider+quantization": 14,
+            "quantization": 2
+          },
+          "z-ai/glm-5.2": {
+            "provider+quantization": 20,
+            "quantization": 13
+          },
+          "z-ai/glm-5v-turbo": {
+            "provider+quantization": 1
+          }
+        },
+        "eligible_endpoint_rows": 799,
+        "minimum_requests": 100,
+        "models": 264,
+        "normalization_hierarchy": "provider+quantization when n>=4, then provider, quantization, global",
+        "request_weight": "min(log1p(request_count), log1p(10000))",
+        "request_weighted": true
+      },
+      "throughput_p50_all": {
+        "control_counts": {
+          "ai21/jamba-large-1.7": {
+            "quantization": 1
+          },
+          "aion-labs/aion-2.0": {
+            "provider+quantization": 1
+          },
+          "aion-labs/aion-3.0": {
+            "provider+quantization": 1
+          },
+          "aion-labs/aion-3.0-mini": {
+            "provider+quantization": 1
+          },
+          "aion-labs/aion-rp-llama-3.1-8b": {
+            "provider+quantization": 1
+          },
+          "amazon/nova-2-lite-v1": {
+            "provider+quantization": 2
+          },
+          "amazon/nova-lite-v1": {
+            "provider+quantization": 2
+          },
+          "amazon/nova-micro-v1": {
+            "provider+quantization": 2
+          },
+          "amazon/nova-premier-v1": {
+            "provider+quantization": 1
+          },
+          "amazon/nova-pro-v1": {
+            "provider+quantization": 2
+          },
+          "anthracite-org/magnum-v4-72b": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-3-haiku": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-fable-5": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-fable-5:batch": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-haiku-4.5": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-haiku-4.5:batch": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.1:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.5": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.5:batch": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.6": {
+            "provider+quantization": 6
+          },
+          "anthropic/claude-opus-4.6:batch": {
+            "provider+quantization": 6
+          },
+          "anthropic/claude-opus-4.7": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.7:batch": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.8": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-4.8-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.8:batch": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-5": {
+            "provider+quantization": 6,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-5-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-sonnet-4": {
+            "provider+quantization": 2
+          },
+          "anthropic/claude-sonnet-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.6": {
+            "provider+quantization": 6,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5": {
+            "provider+quantization": 6
+          },
+          "anthropic/claude-sonnet-5:batch": {
+            "provider+quantization": 6
+          },
+          "arcee-ai/trinity-large-thinking": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "baidu/ernie-4.5-vl-424b-a47b": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-1.6": {
+            "provider+quantization": 1
+          },
+          "bytedance-seed/seed-1.6-flash": {
+            "provider+quantization": 1
+          },
+          "bytedance-seed/seed-2.0-lite": {
+            "provider+quantization": 1
+          },
+          "bytedance-seed/seed-2.0-mini": {
+            "provider+quantization": 1
+          },
+          "bytedance/ui-tars-1.5-7b": {
+            "provider+quantization": 1
+          },
+          "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+            "quantization": 1
+          },
+          "cohere/command-a": {
+            "provider+quantization": 1
+          },
+          "cohere/command-r-08-2024": {
+            "provider+quantization": 1
+          },
+          "cohere/command-r-plus-08-2024": {
+            "provider+quantization": 1
+          },
+          "cohere/command-r7b-12-2024": {
+            "provider+quantization": 1
+          },
+          "deepcogito/cogito-v2.1-671b": {
+            "provider+quantization": 1
+          },
+          "deepseek/deepseek-chat": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-chat-v3-0324": {
+            "provider+quantization": 4
+          },
+          "deepseek/deepseek-chat-v3.1": {
+            "provider+quantization": 6,
+            "quantization": 2
+          },
+          "deepseek/deepseek-r1": {
+            "provider+quantization": 2
+          },
+          "deepseek/deepseek-r1-0528": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-r1-distill-llama-70b": {
+            "provider+quantization": 1
+          },
+          "deepseek/deepseek-v3.1-terminus": {
+            "provider+quantization": 5
+          },
+          "deepseek/deepseek-v3.2": {
+            "provider+quantization": 14
+          },
+          "deepseek/deepseek-v3.2-exp": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v4-flash": {
+            "provider+quantization": 16,
+            "quantization": 5
+          },
+          "deepseek/deepseek-v4-pro": {
+            "provider+quantization": 15,
+            "quantization": 3
+          },
+          "google/gemini-2.5-flash": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-flash-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-2.5-flash-lite": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash-lite:batch": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash:batch": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-pro": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "google/gemini-2.5-pro:batch": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "google/gemini-3-flash-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-pro-image": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "google/gemini-3-pro-image-preview": {
+            "quantization": 1
+          },
+          "google/gemini-3.1-flash-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-image-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview-customtools": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-pro-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemma-2-27b-it": {
+            "quantization": 1
+          },
+          "google/gemma-3-12b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3-27b-it": {
+            "provider+quantization": 5
+          },
+          "google/gemma-3-4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3n-e4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-4-26b-a4b-it": {
+            "provider+quantization": 6,
+            "quantization": 3
+          },
+          "google/gemma-4-31b-it": {
+            "provider": 1,
+            "provider+quantization": 10,
+            "quantization": 7
+          },
+          "google/lyria-3-clip-preview": {
+            "provider+quantization": 1
+          },
+          "google/lyria-3-pro-preview": {
+            "provider+quantization": 1
+          },
+          "gryphe/mythomax-l2-13b": {
+            "provider+quantization": 1,
+            "quantization": 3
+          },
+          "ibm-granite/granite-4.0-h-micro": {
+            "provider+quantization": 1
+          },
+          "ibm-granite/granite-4.1-8b": {
+            "provider+quantization": 1
+          },
+          "inception/mercury-2": {
+            "quantization": 1
+          },
+          "inclusionai/ling-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ling-2.6-flash": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ring-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "kwaipilot/kat-coder-air-v2.5": {
+            "provider+quantization": 1
+          },
+          "kwaipilot/kat-coder-pro-v2": {
+            "provider+quantization": 2
+          },
+          "kwaipilot/kat-coder-pro-v2.5": {
+            "provider+quantization": 1
+          },
+          "mancer/weaver": {
+            "provider+quantization": 1
+          },
+          "meituan/longcat-2.0": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.1-70b-instruct": {
+            "provider+quantization": 3
+          },
+          "meta-llama/llama-3.1-8b-instruct": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "meta-llama/llama-3.2-1b-instruct": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.2-3b-instruct": {
+            "provider+quantization": 2
+          },
+          "meta-llama/llama-3.3-70b-instruct": {
+            "provider+quantization": 8,
+            "quantization": 5
+          },
+          "meta-llama/llama-4-maverick": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "meta-llama/llama-4-scout": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "meta-llama/llama-guard-4-12b": {
+            "provider+quantization": 2
+          },
+          "meta/muse-spark-1.1": {
+            "quantization": 1
+          },
+          "microsoft/phi-4": {
+            "provider+quantization": 1
+          },
+          "microsoft/wizardlm-2-8x22b": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-01": {
+            "quantization": 1
+          },
+          "minimax/minimax-m1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "minimax/minimax-m2": {
+            "provider+quantization": 3
+          },
+          "minimax/minimax-m2-her": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2.1": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "minimax/minimax-m2.5": {
+            "provider+quantization": 12,
+            "quantization": 2
+          },
+          "minimax/minimax-m2.7": {
+            "provider+quantization": 10,
+            "quantization": 2
+          },
+          "minimax/minimax-m3": {
+            "provider+quantization": 9
+          },
+          "minimax/minimax-m3:batch": {
+            "provider+quantization": 9
+          },
+          "mistralai/codestral-2508": {
+            "provider+quantization": 1
+          },
+          "mistralai/devstral-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-14b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-3b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-8b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large-2407": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3-5": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3.1": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-nemo": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "mistralai/mistral-saba": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-24b-instruct-2501": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-2603": {
+            "provider+quantization": 2
+          },
+          "mistralai/mistral-small-3.1-24b-instruct": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-3.2-24b-instruct": {
+            "provider+quantization": 4
+          },
+          "mistralai/mixtral-8x22b-instruct": {
+            "provider+quantization": 1
+          },
+          "mistralai/voxtral-small-24b-2507": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2-0905": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2-thinking": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2.5": {
+            "provider+quantization": 6,
+            "quantization": 3
+          },
+          "moonshotai/kimi-k2.6": {
+            "provider+quantization": 12,
+            "quantization": 10
+          },
+          "moonshotai/kimi-k2.7-code": {
+            "provider+quantization": 6,
+            "quantization": 10
+          },
+          "moonshotai/kimi-k3": {
+            "global": 2,
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "morph/morph-v3-fast": {
+            "provider+quantization": 1
+          },
+          "morph/morph-v3-large": {
+            "provider+quantization": 1
+          },
+          "nex-agi/nex-n2-mini": {
+            "quantization": 1
+          },
+          "nex-agi/nex-n2-pro": {
+            "quantization": 2
+          },
+          "nousresearch/hermes-3-llama-3.1-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-70b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-70b": {
+            "provider+quantization": 1
+          },
+          "nvidia/nemotron-3-nano-30b-a3b": {
+            "provider+quantization": 1,
+            "quantization": 2
+          },
+          "nvidia/nemotron-3-super-120b-a12b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "nvidia/nemotron-3-ultra-550b-a55b": {
+            "provider+quantization": 4
+          },
+          "openai/gpt-3.5-turbo": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-3.5-turbo-0613": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-3.5-turbo-16k": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-3.5-turbo-instruct": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4-turbo": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4.1-mini": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "openai/gpt-4.1-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-05-13": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-08-06": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-11-20": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-mini-2024-07-18": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-image": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5-image-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1-codex": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1-codex-max": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1-codex-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.2-codex": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.2-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.2:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.3-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.3-codex": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4": {
+            "provider+quantization": 4
+          },
+          "openai/gpt-5.4-image-2": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4:batch": {
+            "provider+quantization": 4
+          },
+          "openai/gpt-5.5": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.5:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna": {
+            "provider+quantization": 4
+          },
+          "openai/gpt-5.6-luna-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-sol": {
+            "provider+quantization": 4
+          },
+          "openai/gpt-5.6-sol-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-terra": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-terra-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-audio": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-audio-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-chat-latest": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-oss-120b": {
+            "provider": 1,
+            "provider+quantization": 14,
+            "quantization": 3
+          },
+          "openai/gpt-oss-20b": {
+            "provider+quantization": 9,
+            "quantization": 2
+          },
+          "openai/gpt-oss-safeguard-20b": {
+            "provider+quantization": 1
+          },
+          "openai/o1": {
+            "provider+quantization": 1
+          },
+          "openai/o1-pro": {
+            "provider+quantization": 1
+          },
+          "openai/o3": {
+            "provider+quantization": 1
+          },
+          "openai/o3-mini": {
+            "provider+quantization": 1
+          },
+          "openai/o3-mini-high": {
+            "provider+quantization": 1
+          },
+          "openai/o3-pro": {
+            "provider+quantization": 1
+          },
+          "openai/o4-mini": {
+            "provider+quantization": 1
+          },
+          "openai/o4-mini-high": {
+            "provider+quantization": 1
+          },
+          "perceptron/perceptron-mk1": {
+            "quantization": 1
+          },
+          "perplexity/sonar": {
+            "provider+quantization": 1
+          },
+          "perplexity/sonar-deep-research": {
+            "provider+quantization": 1
+          },
+          "perplexity/sonar-pro": {
+            "provider+quantization": 1
+          },
+          "perplexity/sonar-pro-search": {
+            "provider+quantization": 1
+          },
+          "perplexity/sonar-reasoning-pro": {
+            "provider+quantization": 1
+          },
+          "poolside/laguna-s-2.1": {
+            "quantization": 1
+          },
+          "poolside/laguna-xs-2.1": {
+            "quantization": 1
+          },
+          "qwen/qwen-2.5-72b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen-2.5-7b-instruct": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen-2.5-coder-32b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen-plus-2025-07-28": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen-plus-2025-07-28:thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen2.5-vl-72b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-14b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "qwen/qwen3-235b-a22b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-235b-a22b-2507": {
+            "provider+quantization": 10,
+            "quantization": 2
+          },
+          "qwen/qwen3-235b-a22b-thinking-2507": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-30b-a3b": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-30b-a3b-instruct-2507": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-30b-a3b-thinking-2507": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-32b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "qwen/qwen3-8b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder": {
+            "provider": 1,
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "qwen/qwen3-coder-30b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-coder-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder-next": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "qwen/qwen3-coder-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-next-80b-a3b-instruct": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-next-80b-a3b-thinking": {
+            "provider+quantization": 3
+          },
+          "qwen/qwen3-vl-235b-a22b-instruct": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-vl-235b-a22b-thinking": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-vl-30b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-30b-a3b-thinking": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-vl-32b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-8b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-vl-8b-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-122b-a10b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-27b": {
+            "provider+quantization": 6
+          },
+          "qwen/qwen3.5-35b-a3b": {
+            "provider+quantization": 8,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-397b-a17b": {
+            "provider+quantization": 9,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-9b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-flash-02-23": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-02-15": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-20260420": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-27b": {
+            "provider+quantization": 8,
+            "quantization": 1
+          },
+          "qwen/qwen3.6-35b-a3b": {
+            "provider+quantization": 9
+          },
+          "qwen/qwen3.6-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-max-preview": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-flash": {
+            "quantization": 1
+          },
+          "qwen/qwen3.7-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-plus": {
+            "provider+quantization": 1
+          },
+          "rekaai/reka-edge": {
+            "quantization": 1
+          },
+          "rekaai/reka-flash-3": {
+            "quantization": 1
+          },
+          "relace/relace-apply-3": {
+            "quantization": 1
+          },
+          "relace/relace-search": {
+            "quantization": 1
+          },
+          "sakana/fugu-ultra": {
+            "quantization": 1
+          },
+          "sao10k/l3-lunaris-8b": {
+            "provider+quantization": 2
+          },
+          "sao10k/l3.1-euryale-70b": {
+            "provider+quantization": 2
+          },
+          "sao10k/l3.3-euryale-70b": {
+            "quantization": 1
+          },
+          "stepfun/step-3.5-flash": {
+            "provider+quantization": 1
+          },
+          "stepfun/step-3.7-flash": {
+            "provider+quantization": 1,
+            "quantization": 2
+          },
+          "tencent/hunyuan-a13b-instruct": {
+            "provider+quantization": 1
+          },
+          "tencent/hy3": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "tencent/hy3-preview": {
+            "quantization": 1
+          },
+          "thedrummer/cydonia-24b-v4.1": {
+            "provider+quantization": 1
+          },
+          "thedrummer/rocinante-12b": {
+            "provider+quantization": 1
+          },
+          "thedrummer/skyfall-36b-v2": {
+            "provider+quantization": 1
+          },
+          "thedrummer/unslopnemo-12b": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "thinkingmachines/inkling": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "undi95/remm-slerp-l2-13b": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "upstage/solar-pro-3": {
+            "quantization": 1
+          },
+          "x-ai/grok-4.20": {
+            "provider+quantization": 2
+          },
+          "x-ai/grok-4.20-multi-agent": {
+            "provider+quantization": 2
+          },
+          "x-ai/grok-4.3": {
+            "provider+quantization": 2
+          },
+          "x-ai/grok-4.5": {
+            "provider+quantization": 2
+          },
+          "x-ai/grok-build-0.1": {
+            "provider+quantization": 2
+          },
+          "xiaomi/mimo-v2.5": {
+            "provider+quantization": 6,
+            "quantization": 1
+          },
+          "xiaomi/mimo-v2.5-pro": {
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "z-ai/glm-4.5": {
+            "provider+quantization": 1
+          },
+          "z-ai/glm-4.5-air": {
+            "provider+quantization": 3
+          },
+          "z-ai/glm-4.5v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.6": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "z-ai/glm-4.6v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.7": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "z-ai/glm-4.7-flash": {
+            "provider+quantization": 4
+          },
+          "z-ai/glm-5": {
+            "provider+quantization": 13
+          },
+          "z-ai/glm-5-turbo": {
+            "quantization": 1
+          },
+          "z-ai/glm-5.1": {
+            "provider+quantization": 16,
+            "quantization": 3
+          },
+          "z-ai/glm-5.2": {
+            "provider+quantization": 20,
+            "quantization": 13
+          },
+          "z-ai/glm-5v-turbo": {
+            "provider+quantization": 1
+          }
+        },
+        "eligible_endpoint_rows": 965,
+        "minimum_requests": 1,
+        "models": 326,
+        "normalization_hierarchy": "provider+quantization when n>=4, then provider, quantization, global",
+        "request_weight": "equal endpoint weight",
+        "request_weighted": false
+      },
+      "throughput_p50_supported": {
+        "control_counts": {
+          "aion-labs/aion-2.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0-mini": {
+            "quantization": 1
+          },
+          "amazon/nova-2-lite-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "amazon/nova-micro-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "anthropic/claude-3-haiku": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-fable-5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-fable-5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1:batch": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.6": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.6:batch": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.7": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.7:batch": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.8": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-4.8-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.8:batch": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-5": {
+            "provider+quantization": 5,
+            "quantization": 2
+          },
+          "anthropic/claude-opus-5-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-sonnet-4": {
+            "provider+quantization": 2
+          },
+          "anthropic/claude-sonnet-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.6": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5:batch": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "arcee-ai/trinity-large-thinking": {
+            "provider+quantization": 1
+          },
+          "bytedance-seed/seed-1.6-flash": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-lite": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-mini": {
+            "quantization": 1
+          },
+          "bytedance/ui-tars-1.5-7b": {
+            "provider+quantization": 1
+          },
+          "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+            "quantization": 1
+          },
+          "cohere/command-r-08-2024": {
+            "quantization": 1
+          },
+          "cohere/command-r7b-12-2024": {
+            "quantization": 1
+          },
+          "deepseek/deepseek-chat": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-chat-v3-0324": {
+            "provider+quantization": 4
+          },
+          "deepseek/deepseek-chat-v3.1": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "deepseek/deepseek-r1": {
+            "provider+quantization": 2
+          },
+          "deepseek/deepseek-r1-0528": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v3.1-terminus": {
+            "provider+quantization": 5
+          },
+          "deepseek/deepseek-v3.2": {
+            "provider+quantization": 13,
+            "quantization": 1
+          },
+          "deepseek/deepseek-v3.2-exp": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v4-flash": {
+            "provider+quantization": 16,
+            "quantization": 5
+          },
+          "deepseek/deepseek-v4-pro": {
+            "provider+quantization": 13,
+            "quantization": 4
+          },
+          "google/gemini-2.5-flash": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-flash-image": {
+            "provider+quantization": 1
+          },
+          "google/gemini-2.5-flash-lite": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash-lite:batch": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash:batch": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-pro": {
+            "provider+quantization": 2
+          },
+          "google/gemini-2.5-pro:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-pro-image": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "google/gemini-3-pro-image-preview": {
+            "quantization": 1
+          },
+          "google/gemini-3.1-flash-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-image-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview-customtools": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-pro-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemma-3-12b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3-27b-it": {
+            "provider+quantization": 5
+          },
+          "google/gemma-3-4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3n-e4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-4-26b-a4b-it": {
+            "provider+quantization": 6,
+            "quantization": 3
+          },
+          "google/gemma-4-31b-it": {
+            "provider": 1,
+            "provider+quantization": 9,
+            "quantization": 8
+          },
+          "gryphe/mythomax-l2-13b": {
+            "quantization": 3
+          },
+          "ibm-granite/granite-4.0-h-micro": {
+            "provider+quantization": 1
+          },
+          "ibm-granite/granite-4.1-8b": {
+            "provider+quantization": 1
+          },
+          "inception/mercury-2": {
+            "quantization": 1
+          },
+          "inclusionai/ling-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ling-2.6-flash": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ring-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "meituan/longcat-2.0": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.1-70b-instruct": {
+            "provider+quantization": 3
+          },
+          "meta-llama/llama-3.1-8b-instruct": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "meta-llama/llama-3.2-1b-instruct": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.2-3b-instruct": {
+            "provider+quantization": 2
+          },
+          "meta-llama/llama-3.3-70b-instruct": {
+            "provider+quantization": 7,
+            "quantization": 5
+          },
+          "meta-llama/llama-4-maverick": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "meta-llama/llama-4-scout": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "meta-llama/llama-guard-4-12b": {
+            "provider+quantization": 2
+          },
+          "meta/muse-spark-1.1": {
+            "quantization": 1
+          },
+          "microsoft/phi-4": {
+            "provider+quantization": 1
+          },
+          "microsoft/wizardlm-2-8x22b": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-01": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2": {
+            "provider+quantization": 2
+          },
+          "minimax/minimax-m2-her": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2.1": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-m2.5": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "minimax/minimax-m2.7": {
+            "provider+quantization": 7,
+            "quantization": 2
+          },
+          "minimax/minimax-m3": {
+            "provider+quantization": 9
+          },
+          "minimax/minimax-m3:batch": {
+            "provider+quantization": 9
+          },
+          "mistralai/devstral-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-14b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-3b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-8b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3-5": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3.1": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-nemo": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "mistralai/mistral-small-24b-instruct-2501": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-2603": {
+            "provider+quantization": 2
+          },
+          "mistralai/mistral-small-3.1-24b-instruct": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-3.2-24b-instruct": {
+            "provider+quantization": 4
+          },
+          "mistralai/mixtral-8x22b-instruct": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2-0905": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2-thinking": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2.5": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "moonshotai/kimi-k2.6": {
+            "provider+quantization": 11,
+            "quantization": 10
+          },
+          "moonshotai/kimi-k2.7-code": {
+            "provider+quantization": 4,
+            "quantization": 7
+          },
+          "moonshotai/kimi-k3": {
+            "global": 2,
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "nex-agi/nex-n2-mini": {
+            "quantization": 1
+          },
+          "nex-agi/nex-n2-pro": {
+            "quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-70b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-70b": {
+            "provider+quantization": 1
+          },
+          "nvidia/nemotron-3-nano-30b-a3b": {
+            "provider+quantization": 1,
+            "quantization": 2
+          },
+          "nvidia/nemotron-3-super-120b-a12b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "nvidia/nemotron-3-ultra-550b-a55b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "openai/gpt-3.5-turbo": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4.1-mini": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "openai/gpt-4.1-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-05-13": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-2024-08-06": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-11-20": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-mini-2024-07-18": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1-codex-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.2:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.3-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.3-codex": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.4-image-2": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.5:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-sol": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-sol-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-terra": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-terra-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-audio-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-chat-latest": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-oss-120b": {
+            "provider": 1,
+            "provider+quantization": 10,
+            "quantization": 6
+          },
+          "openai/gpt-oss-20b": {
+            "provider+quantization": 8,
+            "quantization": 1
+          },
+          "openai/gpt-oss-safeguard-20b": {
+            "provider+quantization": 1
+          },
+          "openai/o3": {
+            "provider+quantization": 1
+          },
+          "openai/o3-mini": {
+            "provider+quantization": 1
+          },
+          "openai/o4-mini": {
+            "provider+quantization": 1
+          },
+          "perceptron/perceptron-mk1": {
+            "quantization": 1
+          },
+          "perplexity/sonar": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro-search": {
+            "quantization": 1
+          },
+          "poolside/laguna-s-2.1": {
+            "quantization": 1
+          },
+          "poolside/laguna-xs-2.1": {
+            "quantization": 1
+          },
+          "qwen/qwen-2.5-72b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen-2.5-7b-instruct": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen2.5-vl-72b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-14b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "qwen/qwen3-235b-a22b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-235b-a22b-2507": {
+            "provider+quantization": 10,
+            "quantization": 2
+          },
+          "qwen/qwen3-30b-a3b": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-30b-a3b-instruct-2507": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-32b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "qwen/qwen3-8b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder": {
+            "provider": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-30b-a3b-instruct": {
+            "provider+quantization": 3
+          },
+          "qwen/qwen3-coder-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder-next": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-next-80b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-235b-a22b-instruct": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-vl-235b-a22b-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-30b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-32b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-8b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3.5-122b-a10b": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3.5-27b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-35b-a3b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-397b-a17b": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-9b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-flash-02-23": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-02-15": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-20260420": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-27b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.6-35b-a3b": {
+            "provider+quantization": 9
+          },
+          "qwen/qwen3.6-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-flash": {
+            "quantization": 1
+          },
+          "qwen/qwen3.7-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-plus": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3-lunaris-8b": {
+            "provider+quantization": 2
+          },
+          "sao10k/l3.1-euryale-70b": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3.3-euryale-70b": {
+            "quantization": 1
+          },
+          "stepfun/step-3.5-flash": {
+            "provider+quantization": 1
+          },
+          "stepfun/step-3.7-flash": {
+            "quantization": 2
+          },
+          "tencent/hy3": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "tencent/hy3-preview": {
+            "quantization": 1
+          },
+          "thedrummer/cydonia-24b-v4.1": {
+            "provider+quantization": 1
+          },
+          "thedrummer/rocinante-12b": {
+            "provider+quantization": 1
+          },
+          "thedrummer/skyfall-36b-v2": {
+            "provider+quantization": 1
+          },
+          "thedrummer/unslopnemo-12b": {
+            "provider+quantization": 1
+          },
+          "thinkingmachines/inkling": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "undi95/remm-slerp-l2-13b": {
+            "quantization": 1
+          },
+          "upstage/solar-pro-3": {
+            "quantization": 1
+          },
+          "x-ai/grok-4.20": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.20-multi-agent": {
+            "provider+quantization": 1
+          },
+          "x-ai/grok-4.3": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.5": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-build-0.1": {
+            "provider+quantization": 1
+          },
+          "xiaomi/mimo-v2.5": {
+            "provider+quantization": 6,
+            "quantization": 1
+          },
+          "xiaomi/mimo-v2.5-pro": {
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "z-ai/glm-4.5": {
+            "provider+quantization": 1
+          },
+          "z-ai/glm-4.5-air": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.5v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.6": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "z-ai/glm-4.6v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.7": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "z-ai/glm-4.7-flash": {
+            "provider+quantization": 4
+          },
+          "z-ai/glm-5": {
+            "provider+quantization": 12
+          },
+          "z-ai/glm-5-turbo": {
+            "quantization": 1
+          },
+          "z-ai/glm-5.1": {
+            "provider+quantization": 14,
+            "quantization": 2
+          },
+          "z-ai/glm-5.2": {
+            "provider+quantization": 20,
+            "quantization": 13
+          },
+          "z-ai/glm-5v-turbo": {
+            "provider+quantization": 1
+          }
+        },
+        "eligible_endpoint_rows": 799,
+        "minimum_requests": 100,
+        "models": 264,
+        "normalization_hierarchy": "provider+quantization when n>=4, then provider, quantization, global",
+        "request_weight": "min(log1p(request_count), log1p(10000))",
+        "request_weighted": true
+      },
+      "throughput_p90_over_p50_supported": {
+        "control_counts": {
+          "aion-labs/aion-2.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0": {
+            "quantization": 1
+          },
+          "aion-labs/aion-3.0-mini": {
+            "quantization": 1
+          },
+          "amazon/nova-2-lite-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "amazon/nova-micro-v1": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "anthropic/claude-3-haiku": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-fable-5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-fable-5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-haiku-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.1:batch": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-opus-4.6": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.6:batch": {
+            "provider+quantization": 4
+          },
+          "anthropic/claude-opus-4.7": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.7:batch": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "anthropic/claude-opus-4.8": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-4.8-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-opus-4.8:batch": {
+            "provider+quantization": 5
+          },
+          "anthropic/claude-opus-5": {
+            "provider+quantization": 5,
+            "quantization": 2
+          },
+          "anthropic/claude-opus-5-fast": {
+            "provider+quantization": 1
+          },
+          "anthropic/claude-sonnet-4": {
+            "provider+quantization": 2
+          },
+          "anthropic/claude-sonnet-4.5": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.5:batch": {
+            "provider+quantization": 3
+          },
+          "anthropic/claude-sonnet-4.6": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "anthropic/claude-sonnet-5:batch": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "arcee-ai/trinity-large-thinking": {
+            "provider+quantization": 1
+          },
+          "bytedance-seed/seed-1.6-flash": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-lite": {
+            "quantization": 1
+          },
+          "bytedance-seed/seed-2.0-mini": {
+            "quantization": 1
+          },
+          "bytedance/ui-tars-1.5-7b": {
+            "provider+quantization": 1
+          },
+          "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+            "quantization": 1
+          },
+          "cohere/command-r-08-2024": {
+            "quantization": 1
+          },
+          "cohere/command-r7b-12-2024": {
+            "quantization": 1
+          },
+          "deepseek/deepseek-chat": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-chat-v3-0324": {
+            "provider+quantization": 4
+          },
+          "deepseek/deepseek-chat-v3.1": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "deepseek/deepseek-r1": {
+            "provider+quantization": 2
+          },
+          "deepseek/deepseek-r1-0528": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v3.1-terminus": {
+            "provider+quantization": 5
+          },
+          "deepseek/deepseek-v3.2": {
+            "provider+quantization": 13,
+            "quantization": 1
+          },
+          "deepseek/deepseek-v3.2-exp": {
+            "provider+quantization": 3
+          },
+          "deepseek/deepseek-v4-flash": {
+            "provider+quantization": 16,
+            "quantization": 5
+          },
+          "deepseek/deepseek-v4-pro": {
+            "provider+quantization": 13,
+            "quantization": 4
+          },
+          "google/gemini-2.5-flash": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-flash-image": {
+            "provider+quantization": 1
+          },
+          "google/gemini-2.5-flash-lite": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash-lite:batch": {
+            "provider+quantization": 3
+          },
+          "google/gemini-2.5-flash:batch": {
+            "provider+quantization": 4
+          },
+          "google/gemini-2.5-pro": {
+            "provider+quantization": 2
+          },
+          "google/gemini-2.5-pro:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-flash-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3-pro-image": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "google/gemini-3-pro-image-preview": {
+            "quantization": 1
+          },
+          "google/gemini-3.1-flash-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-image-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-image": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-flash-lite-preview": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.1-pro-preview-customtools": {
+            "provider+quantization": 1
+          },
+          "google/gemini-3.1-pro-preview:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash-lite:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.5-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash": {
+            "provider+quantization": 2
+          },
+          "google/gemini-3.6-flash:batch": {
+            "provider+quantization": 2
+          },
+          "google/gemma-3-12b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3-27b-it": {
+            "provider+quantization": 5
+          },
+          "google/gemma-3-4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-3n-e4b-it": {
+            "provider+quantization": 1
+          },
+          "google/gemma-4-26b-a4b-it": {
+            "provider+quantization": 6,
+            "quantization": 3
+          },
+          "google/gemma-4-31b-it": {
+            "provider": 1,
+            "provider+quantization": 9,
+            "quantization": 8
+          },
+          "gryphe/mythomax-l2-13b": {
+            "quantization": 3
+          },
+          "ibm-granite/granite-4.0-h-micro": {
+            "provider+quantization": 1
+          },
+          "ibm-granite/granite-4.1-8b": {
+            "provider+quantization": 1
+          },
+          "inception/mercury-2": {
+            "quantization": 1
+          },
+          "inclusionai/ling-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ling-2.6-flash": {
+            "provider+quantization": 1
+          },
+          "inclusionai/ring-2.6-1t": {
+            "provider+quantization": 1
+          },
+          "meituan/longcat-2.0": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.1-70b-instruct": {
+            "provider+quantization": 3
+          },
+          "meta-llama/llama-3.1-8b-instruct": {
+            "provider+quantization": 4,
+            "quantization": 1
+          },
+          "meta-llama/llama-3.2-1b-instruct": {
+            "provider+quantization": 1
+          },
+          "meta-llama/llama-3.2-3b-instruct": {
+            "provider+quantization": 2
+          },
+          "meta-llama/llama-3.3-70b-instruct": {
+            "provider+quantization": 7,
+            "quantization": 5
+          },
+          "meta-llama/llama-4-maverick": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "meta-llama/llama-4-scout": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "meta-llama/llama-guard-4-12b": {
+            "provider+quantization": 2
+          },
+          "meta/muse-spark-1.1": {
+            "quantization": 1
+          },
+          "microsoft/phi-4": {
+            "provider+quantization": 1
+          },
+          "microsoft/wizardlm-2-8x22b": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-01": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2": {
+            "provider+quantization": 2
+          },
+          "minimax/minimax-m2-her": {
+            "quantization": 1
+          },
+          "minimax/minimax-m2.1": {
+            "provider+quantization": 1
+          },
+          "minimax/minimax-m2.5": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "minimax/minimax-m2.7": {
+            "provider+quantization": 7,
+            "quantization": 2
+          },
+          "minimax/minimax-m3": {
+            "provider+quantization": 9
+          },
+          "minimax/minimax-m3:batch": {
+            "provider+quantization": 9
+          },
+          "mistralai/devstral-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-14b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-3b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/ministral-8b-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-large-2512": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3-5": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-medium-3.1": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-nemo": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "mistralai/mistral-small-24b-instruct-2501": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-2603": {
+            "provider+quantization": 2
+          },
+          "mistralai/mistral-small-3.1-24b-instruct": {
+            "provider+quantization": 1
+          },
+          "mistralai/mistral-small-3.2-24b-instruct": {
+            "provider+quantization": 4
+          },
+          "mistralai/mixtral-8x22b-instruct": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2": {
+            "provider+quantization": 1
+          },
+          "moonshotai/kimi-k2-0905": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2-thinking": {
+            "provider+quantization": 2
+          },
+          "moonshotai/kimi-k2.5": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "moonshotai/kimi-k2.6": {
+            "provider+quantization": 11,
+            "quantization": 10
+          },
+          "moonshotai/kimi-k2.7-code": {
+            "provider+quantization": 4,
+            "quantization": 7
+          },
+          "moonshotai/kimi-k3": {
+            "global": 2,
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "nex-agi/nex-n2-mini": {
+            "quantization": 1
+          },
+          "nex-agi/nex-n2-pro": {
+            "quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-3-llama-3.1-70b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-405b": {
+            "provider+quantization": 1
+          },
+          "nousresearch/hermes-4-70b": {
+            "provider+quantization": 1
+          },
+          "nvidia/nemotron-3-nano-30b-a3b": {
+            "provider+quantization": 1,
+            "quantization": 2
+          },
+          "nvidia/nemotron-3-super-120b-a12b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "nvidia/nemotron-3-ultra-550b-a55b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "openai/gpt-3.5-turbo": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4.1-mini": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "openai/gpt-4.1-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-05-13": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-2024-08-06": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-2024-11-20": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-4o-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-4o-mini-2024-07-18": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.1-codex-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.1:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.2-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.2:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.3-chat": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.3-codex": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.4-image-2": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.4-mini": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-mini:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4-nano:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.4:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.5-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5.5:batch": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-luna-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-sol": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-sol-pro": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-5.6-terra": {
+            "provider+quantization": 3
+          },
+          "openai/gpt-5.6-terra-pro": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-5:batch": {
+            "provider+quantization": 2
+          },
+          "openai/gpt-audio-mini": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-chat-latest": {
+            "provider+quantization": 1
+          },
+          "openai/gpt-oss-120b": {
+            "provider": 1,
+            "provider+quantization": 10,
+            "quantization": 6
+          },
+          "openai/gpt-oss-20b": {
+            "provider+quantization": 8,
+            "quantization": 1
+          },
+          "openai/gpt-oss-safeguard-20b": {
+            "provider+quantization": 1
+          },
+          "openai/o3": {
+            "provider+quantization": 1
+          },
+          "openai/o3-mini": {
+            "provider+quantization": 1
+          },
+          "openai/o4-mini": {
+            "provider+quantization": 1
+          },
+          "perceptron/perceptron-mk1": {
+            "quantization": 1
+          },
+          "perplexity/sonar": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro": {
+            "quantization": 1
+          },
+          "perplexity/sonar-pro-search": {
+            "quantization": 1
+          },
+          "poolside/laguna-s-2.1": {
+            "quantization": 1
+          },
+          "poolside/laguna-xs-2.1": {
+            "quantization": 1
+          },
+          "qwen/qwen-2.5-72b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen-2.5-7b-instruct": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen2.5-vl-72b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-14b": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "qwen/qwen3-235b-a22b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-235b-a22b-2507": {
+            "provider+quantization": 10,
+            "quantization": 2
+          },
+          "qwen/qwen3-30b-a3b": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3-30b-a3b-instruct-2507": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-32b": {
+            "provider+quantization": 3,
+            "quantization": 1
+          },
+          "qwen/qwen3-8b": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder": {
+            "provider": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-30b-a3b-instruct": {
+            "provider+quantization": 3
+          },
+          "qwen/qwen3-coder-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-coder-next": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "qwen/qwen3-coder-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-max-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-next-80b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-235b-a22b-instruct": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3-vl-235b-a22b-thinking": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-30b-a3b-instruct": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3-vl-32b-instruct": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3-vl-8b-instruct": {
+            "provider+quantization": 2
+          },
+          "qwen/qwen3.5-122b-a10b": {
+            "provider+quantization": 4
+          },
+          "qwen/qwen3.5-27b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-35b-a3b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-397b-a17b": {
+            "provider+quantization": 5,
+            "quantization": 1
+          },
+          "qwen/qwen3.5-9b": {
+            "provider+quantization": 5
+          },
+          "qwen/qwen3.5-flash-02-23": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-02-15": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.5-plus-20260420": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-27b": {
+            "provider+quantization": 7,
+            "quantization": 1
+          },
+          "qwen/qwen3.6-35b-a3b": {
+            "provider+quantization": 9
+          },
+          "qwen/qwen3.6-flash": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.6-plus": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-flash": {
+            "quantization": 1
+          },
+          "qwen/qwen3.7-max": {
+            "provider+quantization": 1
+          },
+          "qwen/qwen3.7-plus": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3-lunaris-8b": {
+            "provider+quantization": 2
+          },
+          "sao10k/l3.1-euryale-70b": {
+            "provider+quantization": 1
+          },
+          "sao10k/l3.3-euryale-70b": {
+            "quantization": 1
+          },
+          "stepfun/step-3.5-flash": {
+            "provider+quantization": 1
+          },
+          "stepfun/step-3.7-flash": {
+            "quantization": 2
+          },
+          "tencent/hy3": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "tencent/hy3-preview": {
+            "quantization": 1
+          },
+          "thedrummer/cydonia-24b-v4.1": {
+            "provider+quantization": 1
+          },
+          "thedrummer/rocinante-12b": {
+            "provider+quantization": 1
+          },
+          "thedrummer/skyfall-36b-v2": {
+            "provider+quantization": 1
+          },
+          "thedrummer/unslopnemo-12b": {
+            "provider+quantization": 1
+          },
+          "thinkingmachines/inkling": {
+            "provider+quantization": 2,
+            "quantization": 1
+          },
+          "undi95/remm-slerp-l2-13b": {
+            "quantization": 1
+          },
+          "upstage/solar-pro-3": {
+            "quantization": 1
+          },
+          "x-ai/grok-4.20": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.20-multi-agent": {
+            "provider+quantization": 1
+          },
+          "x-ai/grok-4.3": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-4.5": {
+            "provider+quantization": 1,
+            "quantization": 1
+          },
+          "x-ai/grok-build-0.1": {
+            "provider+quantization": 1
+          },
+          "xiaomi/mimo-v2.5": {
+            "provider+quantization": 6,
+            "quantization": 1
+          },
+          "xiaomi/mimo-v2.5-pro": {
+            "provider+quantization": 4,
+            "quantization": 2
+          },
+          "z-ai/glm-4.5": {
+            "provider+quantization": 1
+          },
+          "z-ai/glm-4.5-air": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.5v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.6": {
+            "provider+quantization": 3,
+            "quantization": 2
+          },
+          "z-ai/glm-4.6v": {
+            "provider+quantization": 2
+          },
+          "z-ai/glm-4.7": {
+            "provider+quantization": 5,
+            "quantization": 3
+          },
+          "z-ai/glm-4.7-flash": {
+            "provider+quantization": 4
+          },
+          "z-ai/glm-5": {
+            "provider+quantization": 12
+          },
+          "z-ai/glm-5-turbo": {
+            "quantization": 1
+          },
+          "z-ai/glm-5.1": {
+            "provider+quantization": 14,
+            "quantization": 2
+          },
+          "z-ai/glm-5.2": {
+            "provider+quantization": 20,
+            "quantization": 13
+          },
+          "z-ai/glm-5v-turbo": {
+            "provider+quantization": 1
+          }
+        },
+        "eligible_endpoint_rows": 799,
+        "minimum_requests": 100,
+        "models": 264,
+        "normalization_hierarchy": "provider+quantization when n>=4, then provider, quantization, global",
+        "request_weight": "min(log1p(request_count), log1p(10000))",
+        "request_weighted": true
+      }
+    },
+    "incomplete_checkpoints": [
+      {
+        "canonical_checkpoint_id": "checkpoint:alibaba:qwen2-5-coder-32b",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Qwen2.5-Coder-32B"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:alibaba:qwen3-235b-a22b-thinking-jul-2025",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Qwen3-235B-A22B-Thinking (Jul 2025)"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:cohere-command-a",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Cohere Command A"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:deepseek-r1-distill-llama-70b",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "DeepSeek-R1-Distill-Llama-70B"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:ernie-4-5-vl-424b-a47b-4-5",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "ERNIE-4.5-VL-424B-A47B (\u6587\u5fc3\u5927\u6a21\u578b4.5)"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:minimax-m1-80k",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "MiniMax-M1-80k"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:mistral-large-2",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Mistral Large 2"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:mistral-saba",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Mistral Saba"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:reka-edge",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Reka Edge"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:reka-flash-3",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Reka Flash 3"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:voxtral-small",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Voxtral Small"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:google:gemma-2-27b",
+        "missing_features": [
+          "throughput_p50_supported",
+          "latency_p50_supported",
+          "throughput_p90_over_p50_supported",
+          "latency_p90_over_p50_supported"
+        ],
+        "model": "Gemma 2 27B"
+      }
+    ]
+  },
+  "limitations": [
+    "The 30-minute window is a frozen cross-section and can reflect transient traffic or routing.",
+    "Request count measures traffic, not statistical independence; capped log weights reduce but do not remove popularity bias.",
+    "Latency and throughput remain serving-stack outcomes affected by hardware, batching, speculative decoding, quantization, and provider policy.",
+    "Candidate specifications were tested together, so isolated favorable point estimates are not treated as confirmatory evidence."
+  ],
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_request_weighted_operational_predictions_2026-07-18.csv"
+  },
+  "paired_family_bootstraps": [
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.0,
+      "candidate": "date_price_one_week_throughput",
+      "ci_90": [
+        0.005994893072700872,
+        0.027606867122831415
+      ],
+      "family_clusters": 16,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.014903336454786753,
+      "paired_checkpoints": 81,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.0,
+      "candidate": "date_price_p50_throughput_all",
+      "ci_90": [
+        0.0020807499295596166,
+        0.010044239170922708
+      ],
+      "family_clusters": 16,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.005005705102279545,
+      "paired_checkpoints": 81,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.00205,
+      "candidate": "date_price_p50_throughput_supported",
+      "ci_90": [
+        0.001494320269834179,
+        0.014209994346971585
+      ],
+      "family_clusters": 16,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.006463048624030299,
+      "paired_checkpoints": 81,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.14075,
+      "candidate": "date_price_p50_latency_supported",
+      "ci_90": [
+        -0.006147316024640495,
+        0.03611903719466289
+      ],
+      "family_clusters": 16,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.012471068402401142,
+      "paired_checkpoints": 81,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.06435,
+      "candidate": "date_price_p50_throughput_latency_supported",
+      "ci_90": [
+        -0.0017224541994363515,
+        0.04786629524852387
+      ],
+      "family_clusters": 16,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.02049813766468367,
+      "paired_checkpoints": 81,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.0908,
+      "candidate": "date_price_p50_throughput_tail_spreads_supported",
+      "ci_90": [
+        -0.005904230767313622,
+        0.04950972852817062
+      ],
+      "family_clusters": 16,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.024739636916364383,
+      "paired_checkpoints": 81,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.64825,
+      "candidate": "date_price_one_week_throughput",
+      "ci_90": [
+        -0.03909776116056619,
+        0.034757091116673654
+      ],
+      "family_clusters": 13,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": -0.010551580844176678,
+      "paired_checkpoints": 57,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.5321,
+      "candidate": "date_price_p50_throughput_all",
+      "ci_90": [
+        -0.043344902339537125,
+        0.04555126410591619
+      ],
+      "family_clusters": 13,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": -0.005302709418162743,
+      "paired_checkpoints": 57,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.3922,
+      "candidate": "date_price_p50_throughput_supported",
+      "ci_90": [
+        -0.03483635399850712,
+        0.05540299946727285
+      ],
+      "family_clusters": 13,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": 0.003601380328117021,
+      "paired_checkpoints": 57,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.1257,
+      "candidate": "date_price_p50_latency_supported",
+      "ci_90": [
+        -0.0042716595731154185,
+        0.028318765491696412
+      ],
+      "family_clusters": 13,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": 0.010906205992591234,
+      "paired_checkpoints": 57,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.32195,
+      "candidate": "date_price_p50_throughput_latency_supported",
+      "ci_90": [
+        -0.03418044206376721,
+        0.06730680732697886
+      ],
+      "family_clusters": 13,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": 0.009715533452326675,
+      "paired_checkpoints": 57,
+      "samples": 20000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.64575,
+      "candidate": "date_price_p50_throughput_tail_spreads_supported",
+      "ci_90": [
+        -0.06871423286346723,
+        0.05252810012427834
+      ],
+      "family_clusters": 13,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": -0.019200036230523576,
+      "paired_checkpoints": 57,
+      "samples": 20000
+    }
+  ],
+  "promotion_policy": "family bootstrap >=90% favorable, family 90% CI wholly below zero, and chronological-family observed direction favorable",
+  "question": "Do request-supported 30-minute throughput, latency, or percentile spreads add parameter-count information after date and API price?",
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-31",
+  "source_manifest": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "sources/openrouter_endpoint_tier_signals_2026-07-18.csv": "fbaf4171bf502ae4893b9af41ea819a93f133f44bc25897757b1d8f7cdad3670",
+    "sources/openrouter_model_signals_2026-07-18.csv": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd",
+    "sources/openrouter_provider_signals_2026-07-18.csv": "a939726b7d2c58a8698c0839530d8c646a08229942c9f62da84f40a3c42c2263"
+  },
+  "supported_candidates": []
+}

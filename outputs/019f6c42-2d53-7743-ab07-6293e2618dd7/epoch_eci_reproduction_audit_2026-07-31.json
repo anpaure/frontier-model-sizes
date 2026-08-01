@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0",
+  "snapshot_as_of": "2026-07-31",
+  "reproduction": {
+    "official_repository": "https://github.com/epoch-research/eci-public",
+    "official_commit": "542567e72a415b72624e5bbd12603cfd3f485179",
+    "bootstrap_samples": 500,
+    "bootstrap_seed": 12345,
+    "input_rows": 2059,
+    "input_models": 213,
+    "input_benchmarks": 54,
+    "reproduced_models": 213,
+    "anchors": {
+      "GPT-5": 150.0,
+      "Claude 3.5 Sonnet": 130.0
+    },
+    "all_models_exactly_covered": true
+  },
+  "published_score_crosscheck": {
+    "published_nonblank_scores": 196,
+    "published_blank_scores": 17,
+    "maximum_absolute_score_difference": 0.004936622809793789,
+    "tolerance": 0.01,
+    "all_nonblank_scores_match_within_display_rounding": true
+  },
+  "release_date_crosscheck": {
+    "published_release_dates_used": 211,
+    "canonical_input_date_fallbacks": 2,
+    "published_vs_input_date_disagreements": 43,
+    "policy": "Use the published checkpoint-level Release date for chronological regression; preserve and use the canonical ECI-input date only when the published date is blank.",
+    "known_fallback_models": [
+      "Claude Instant",
+      "Gemma 2 9B"
+    ]
+  },
+  "upstream_test_context": {
+    "fit_implementation": "Pinned official Epoch eci-public code",
+    "snapshot_manifest_verified": true,
+    "manifest": "sources/epoch_snapshot_manifest_2026-07-31.json"
+  },
+  "files": {
+    "eci_input": "sources/epoch_eci_benchmarks_2026-07-31.csv",
+    "published_archive": "sources/epoch_benchmark_data_2026-07-31.zip",
+    "reproduced_scores": "sources/epoch_eci_reproduced_scores_2026-07-31.csv",
+    "reproduction_metadata": "sources/epoch_eci_reproduction_metadata_2026-07-31.json",
+    "crosscheck": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_eci_reproduction_crosscheck_2026-07-31.csv"
+  },
+  "source_hashes": {
+    "sources/epoch_eci_benchmarks_2026-07-31.csv": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+    "sources/epoch_benchmark_data_2026-07-31.zip": "cc844ca094e4372ff81eb636f3503317d1d495d4f4c493bd6b7a37dd5f83049c",
+    "sources/epoch_eci_reproduced_scores_2026-07-31.csv": "1c2ad9d6b62deccfb1cd32f200c616d76a3efc8f5acb01ad3fa182c1b4da6c5e",
+    "sources/epoch_eci_reproduction_metadata_2026-07-31.json": "b1618a49c1483e15abeefcdffc512ce8cc1cf8ed34cf76348941977a2c5b9be4",
+    "sources/epoch_snapshot_manifest_2026-07-31.json": "dcd11ed05aa8aee9931b7136c5603604a1dee07dc3e9cef9f90126bd05d01e44",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_eci_reproduction_crosscheck_2026-07-31.csv": "72959e4a9b32a19de5cfc62b070fb74f11340498982147e512a1ed550c0176bf"
+  }
+}

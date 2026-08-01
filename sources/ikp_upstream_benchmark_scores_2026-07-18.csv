@@ -1,0 +1,82 @@
+model,mmlu,mmlu_pro,gpqa_diamond,simpleqa,hle,source_notes
+mistral-7b,60.1,,,,,mistral.ai
+mixtral-8x7b,70.6,,,,,arxiv 2401.04088
+mixtral-8x22b,77.3,,,,,mistral.ai
+mistral-nemo-12b,68.0,,,,,nvidia HF (NeMo joint release)
+mistral-small-24b,81.0,,,,,mistral.ai/news/mistral-small-3
+mistral-large,84.0,,,,,mistral.ai/news/mistral-large-2407
+command-r-plus,75.7,,,,,docs.cohere.com
+command-a,,71.2,52.7,,,Command A tech report
+phi-3-mini,68.8,,,,,arxiv 2404.14219
+phi-4,84.8,70.4,56.1,3.0,,Phi-4 tech report
+grok-3,,79.9,75.4,,,x.ai/news/grok-3
+grok-3-mini-think,,78.9,79.1,,,x.ai/news/grok-3
+grok-4,86.6,87.0,87.5,,24.0,x.ai/news/grok-4
+nemotron-70b,85.2,,,,,nvidia HF
+nemotron-super-49b-think,,79.5,71.97,,,build.nvidia.com
+nemotron-nano-9b-v2,,,64.48,,,nvidia HF
+hermes-4-405b,87.2,80.5,70.5,,,arxiv 2508.18255
+hunyuan-a13b,88.17,67.23,71.2,,,tencent HF
+ernie-4.5-300b-a47b,,77.6,81.1,,,yiyan.baidu.com
+minimax-m1-think,,81.1,70.0,,,arxiv 2506.13585
+jamba-large,81.2,53.5,36.9,,,ai21labs HF
+olmo-3.1-32b,86.4,,57.5,,,allenai HF
+smollm2-1.7b,,19.4,,,,HF model card
+granite-3.3-2b,55.88,,,,,ibm-granite HF
+gemini-2.5-pro,,86.0,84.0,52.9,17.7,Gemini 2.5 Pro model card
+gemini-2.5-flash,,,82.8,26.9,,Gemini 2.5 Flash model card
+gemini-2.5-flash-lite,85.9,73.9,65.0,58.8,,Flash-Lite model card
+gemini-2.0-flash,,71.6,51.0,8.6,,Gemini 2.0 Flash model card
+gemma-2-2b,52.2,,,,,Gemma 2 tech report
+gemma-2-27b,75.2,,,,,Gemma 2 tech report
+gemma-3-1b,,14.7,19.2,2.2,,Gemma 3 tech report
+gemma-3-4b,,43.6,30.8,4.0,,Gemma 3 tech report
+gemma-3-12b,,60.6,40.9,6.3,,Gemma 3 tech report
+gemma-3-27b,,67.5,42.4,10.0,,Gemma 3 tech report
+llama-3-8b,67.4,,,,,meta-llama eval_details
+llama-3-70b,82.0,,,,,meta-llama eval_details
+llama-3.1-8b,69.4,48.3,30.4,,,Llama 3.1 8B HF
+llama-3.1-70b,84.0,65.1,,,,Llama 3.1 eval_details
+llama-3.2-1b,49.3,,27.2,,,Llama 3.2 HF
+llama-3.2-3b,63.4,,32.8,,,Llama 3.2 HF
+llama-3.3-70b,86.0,68.9,50.5,,,Llama 3.3 HF
+llama-4-scout,,74.3,57.2,,,llama.com/models/llama-4
+llama-4-maverick,,80.5,69.8,,,llama.com/models/llama-4
+gpt-3.5-turbo,70.0,,,,,GPT-4 tech report
+gpt-4,86.4,,,,,GPT-4 tech report
+gpt-4-turbo,86.7,,49.3,24.2,,openai/simple-evals
+gpt-4o,88.7,,53.1,40.1,,openai/simple-evals
+gpt-4o-mini,82.0,,40.2,9.5,,openai/simple-evals
+gpt-4.1,90.2,,66.3,41.6,,openai/simple-evals
+gpt-4.1-mini,87.5,,65.0,16.8,,openai/simple-evals
+gpt-4.1-nano,80.1,,50.3,7.6,,openai/simple-evals
+o1,91.8,,75.7,42.6,,openai/simple-evals
+o3,92.9,,82.8,49.4,,openai/simple-evals
+o3-mini,85.9,,74.9,13.4,,openai/simple-evals
+o4-mini-think,90.0,,77.6,20.2,,openai/simple-evals
+gpt-5-think,,,,55.0,,GPT-5 system card
+gpt-5,,,,46.0,,GPT-5 system card
+gpt-5-mini-think,,,,22.0,,GPT-5 system card
+gpt-5-nano-think,,,,11.0,,GPT-5 system card
+gpt-5-pro,,,88.4,,,openai.com/index/introducing-gpt-5
+gpt-oss-120b-think,90.0,,80.1,16.8,14.9,gpt-oss model card
+gpt-oss-20b-think,85.3,,71.5,6.7,10.9,gpt-oss model card
+claude-3-haiku,75.2,,33.3,,,Claude 3 model card
+claude-3.5-haiku,77.6,65.0,41.6,,,Claude 3.5 addendum
+claude-3.7-sonnet-think,,,84.8,,,Claude 3.7 Sonnet news
+claude-opus-4,,,74.9,,,Claude 4 news
+claude-opus-4.1,,,81.0,,,Opus 4.5 system card (comparison)
+claude-sonnet-4,,,70.0,,,Claude 4 news
+claude-sonnet-4.5,,,83.4,,,Opus 4.5 system card
+claude-opus-4.5,,,87.0,,,Opus 4.5 system card
+deepseek-v3,88.5,75.9,59.1,24.9,,DeepSeek-V3 HF
+deepseek-r1-think,90.8,84.0,71.5,30.1,,DeepSeek-R1 HF
+deepseek-r1-distill-llama-70b-think,,,65.2,,,R1-Distill HF
+deepseek-r1-distill-qwen-32b-think,,,62.1,,,R1-Distill HF
+qwen-2.5-72b,,71.1,49.0,,,qwenlm.github.io
+qwen-2.5-7b,,56.3,36.4,,,qwenlm.github.io
+qwen3-32b-think,,65.54,,,,Qwen3 paper (base)
+qwen3-30b-a3b-think,,61.49,43.94,,,Qwen3 paper (base)
+qwen3-235b-a22b-think,93.8,84.4,81.1,,18.2,Qwen3-235B-Thinking-2507 HF
+qwen3-next-80b-a3b,90.9,80.6,72.9,,,Qwen3-Next HF
+kimi-k2,89.5,81.1,75.1,31.0,4.7,Kimi-K2 HF

@@ -1,0 +1,187 @@
+{
+  "archival_terminal_fit_crosscheck": {
+    "archival_terminal_scores": "sources/epoch_eci_reproduced_scores_2026-07-18.csv",
+    "archival_terminal_scores_sha256": "0e843cdb9fdef38b0af9bbb9d7a564ece43c316a78e4373c3e2447a3732e45b2",
+    "exact_within_1e_8": true,
+    "maximum_absolute_eci_difference": 2.842170943040401e-14,
+    "models": 211,
+    "timestamp": "20260716153134"
+  },
+  "current_live_successor_reference": {
+    "byte_equality_or_fit_assertion_against_archival_terminal": false,
+    "role": "newer live source; not compared to the frozen archive terminal",
+    "scores": "sources/epoch_eci_reproduced_scores_2026-07-31.csv",
+    "scores_sha256": "1c2ad9d6b62deccfb1cd32f200c616d76a3efc8f5acb01ad3fa182c1b4da6c5e"
+  },
+  "generated_on": "2026-07-18",
+  "inventory": [
+    {
+      "applied_schema_shims": 1,
+      "benchmarks": 34,
+      "input_rows": 999,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 118,
+      "snapshot_date": "2025-11-13",
+      "snapshot_timestamp": "20251113094011"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 35,
+      "input_rows": 1053,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 124,
+      "snapshot_date": "2025-11-25",
+      "snapshot_timestamp": "20251125180202"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 36,
+      "input_rows": 1147,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 136,
+      "snapshot_date": "2025-12-14",
+      "snapshot_timestamp": "20251214160510"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 36,
+      "input_rows": 1182,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 142,
+      "snapshot_date": "2026-01-01",
+      "snapshot_timestamp": "20260101232245"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 38,
+      "input_rows": 1248,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 144,
+      "snapshot_date": "2026-02-04",
+      "snapshot_timestamp": "20260204115444"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 38,
+      "input_rows": 1253,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 146,
+      "snapshot_date": "2026-02-04",
+      "snapshot_timestamp": "20260204224101"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 38,
+      "input_rows": 1258,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 147,
+      "snapshot_date": "2026-02-05",
+      "snapshot_timestamp": "20260205070603"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 38,
+      "input_rows": 1315,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 146,
+      "snapshot_date": "2026-03-20",
+      "snapshot_timestamp": "20260320171809"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 38,
+      "input_rows": 1354,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 150,
+      "snapshot_date": "2026-04-27",
+      "snapshot_timestamp": "20260427185318"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 37,
+      "input_rows": 1404,
+      "kind": "benchmark_zip_fixed_code_reconstruction",
+      "models": 159,
+      "snapshot_date": "2026-06-10",
+      "snapshot_timestamp": "20260610165052"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 37,
+      "input_rows": 1266,
+      "kind": "canonical_eci_csv",
+      "models": 148,
+      "snapshot_date": "2026-02-13",
+      "snapshot_timestamp": "20260213005335"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 42,
+      "input_rows": 1514,
+      "kind": "canonical_eci_csv",
+      "models": 167,
+      "snapshot_date": "2026-05-05",
+      "snapshot_timestamp": "20260505224414"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 42,
+      "input_rows": 1568,
+      "kind": "canonical_eci_csv",
+      "models": 172,
+      "snapshot_date": "2026-05-16",
+      "snapshot_timestamp": "20260516072913"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 42,
+      "input_rows": 1779,
+      "kind": "canonical_eci_csv",
+      "models": 198,
+      "snapshot_date": "2026-06-16",
+      "snapshot_timestamp": "20260616024413"
+    },
+    {
+      "applied_schema_shims": 0,
+      "benchmarks": 52,
+      "input_rows": 2010,
+      "kind": "canonical_eci_csv",
+      "models": 211,
+      "snapshot_date": "2026-07-16",
+      "snapshot_timestamp": "20260716153134"
+    }
+  ],
+  "method": "all vintages fit with one pinned current official estimator",
+  "official_code_sha256": {
+    "src/eci/dataloader.py": "dc8eea4a05b55a3c413c5d0d25b9d41ed7340f3d8ca57723d265d7d493d77903",
+    "src/eci/fitting.py": "c6bccffea9f7ca7e6520868f7f88f3b084fa334db81a3ece020005869f48d2ed"
+  },
+  "official_commit": "542567e72a415b72624e5bbd12603cfd3f485179",
+  "official_repository": "https://github.com/epoch-research/eci-public.git",
+  "outputs": {
+    "sources/epoch_eci_historical_benchmark_parameters_2026-07-18.csv": {
+      "bytes": 69346,
+      "sha256": "be50dfe17d23b7d8301699e9e30d5f606ad99ab79194ecf7eb64ebfeb18da60b"
+    },
+    "sources/epoch_eci_historical_model_scores_2026-07-18.csv": {
+      "bytes": 364257,
+      "sha256": "98b18176aeb56d9b5015c80ab50ed7d27c3bac28e7d699c11968b45dc052c3fa"
+    },
+    "sources/epoch_eci_historical_reconstructed_inputs_2026-07-18.csv.gz": {
+      "bytes": 344418,
+      "sha256": "acff420e202c12cccbdb68480cff21734ff08efed8c46b7dd4bad4eab498ab3d"
+    }
+  },
+  "pre_eci_zip_snapshots_preserved_but_not_fit": 5,
+  "schema_compatibility_shims": [
+    {
+      "archived_column": "Average",
+      "current_column": "Accuracy",
+      "file": "weirdml_external.csv",
+      "operation": "column-name compatibility only; values unchanged",
+      "snapshot_timestamp": "20251113094011"
+    }
+  ],
+  "source_archive": "sources/epoch_eci_historical_snapshots_2026-07-18.tar.gz",
+  "source_archive_sha256": "0ce76d6662dd34efe9847e418cb0ade2654b320b8df49c998e2f7df989ba2150"
+}

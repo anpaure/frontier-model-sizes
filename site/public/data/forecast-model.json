@@ -1,0 +1,1506 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-07-31",
+  "title": "Frontier Parameter Lab",
+  "unit": "trillion total base parameters",
+  "defaultWeights": {
+    "aa": 9.5625,
+    "eci": 9.5625,
+    "price": 3.375,
+    "horizon": 25.0,
+    "compute": 2.5,
+    "ikp": 0.0,
+    "crowd": 50.0
+  },
+  "factors": [
+    {
+      "id": "aa",
+      "label": "Artificial Analysis",
+      "shortLabel": "AA",
+      "description": "K3-anchored, family-balanced direct parameter regression."
+    },
+    {
+      "id": "eci",
+      "label": "Epoch ECI",
+      "shortLabel": "ECI",
+      "description": "60/40 blend of no-date and exact-date direct regressions."
+    },
+    {
+      "id": "price",
+      "label": "API price",
+      "shortLabel": "Price",
+      "description": "Correlated size signal; launch-vintage prices beat date alone, but add no robust active-size information beyond AA plus date."
+    },
+    {
+      "id": "horizon",
+      "label": "No-CoT horizon",
+      "shortLabel": "Horizon",
+      "description": "Primary task-horizon branch; all 49 releases use audited day-level dates."
+    },
+    {
+      "id": "compute",
+      "label": "Compute-structured AA",
+      "shortLabel": "Compute",
+      "description": "AA/date is mapped through Epoch compute calibrations; a correlated structural regularizer, not observed target compute."
+    },
+    {
+      "id": "ikp",
+      "label": "Knowledge capacity",
+      "shortLabel": "IKP",
+      "description": "Incompressible Knowledge Probes: a direct Fable factual-capacity sensitivity. Its live weight is 0% because promotion requires every predeclared validation gate to pass."
+    },
+    {
+      "id": "crowd",
+      "label": "Human crowd",
+      "shortLabel": "Crowd",
+      "description": "Equal-weight geometric center of active human forecasts."
+    }
+  ],
+  "presets": [
+    {
+      "id": "current",
+      "label": "Current posterior",
+      "weights": {
+        "aa": 9.5625,
+        "eci": 9.5625,
+        "price": 3.375,
+        "horizon": 25.0,
+        "compute": 2.5,
+        "ikp": 0.0,
+        "crowd": 50.0
+      }
+    },
+    {
+      "id": "regression",
+      "label": "Regression only",
+      "weights": {
+        "aa": 50,
+        "eci": 50,
+        "price": 0,
+        "horizon": 0,
+        "compute": 0,
+        "ikp": 0,
+        "crowd": 0
+      }
+    },
+    {
+      "id": "capability",
+      "label": "Capability heavy",
+      "weights": {
+        "aa": 15,
+        "eci": 15,
+        "price": 0,
+        "horizon": 60,
+        "compute": 10,
+        "ikp": 0,
+        "crowd": 0
+      }
+    },
+    {
+      "id": "crowd",
+      "label": "Crowd heavy",
+      "weights": {
+        "aa": 5,
+        "eci": 5,
+        "price": 0,
+        "horizon": 15,
+        "compute": 5,
+        "ikp": 0,
+        "crowd": 70
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "shortName": "Fable 5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-06-09",
+      "aaScore": 60,
+      "eciScore": 160.44,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 4.731857984602975,
+      "currentFinalT": 4.548292155336898,
+      "factors": {
+        "aa": 4.016370921146617,
+        "eci": 3.0885868628263564,
+        "price": 3.48028632934279,
+        "horizon": 6.59544467651061,
+        "compute": 2.4775210449595826,
+        "ikp": 3.6426590968396315,
+        "crowd": 4.371847506331046
+      },
+      "crowd": {
+        "n": 20,
+        "pooled": true,
+        "contributors": [
+          "Respondent R01",
+          "Respondent R02",
+          "Respondent R03",
+          "Respondent R04",
+          "Respondent R05",
+          "Respondent R06",
+          "Respondent R07",
+          "Respondent R08",
+          "Respondent R10",
+          "Respondent R11",
+          "Respondent R12",
+          "Respondent R13",
+          "Respondent R14",
+          "Respondent R15",
+          "Respondent R16",
+          "Respondent R17",
+          "Respondent R18",
+          "Respondent R19",
+          "Respondent R20",
+          "Respondent R21"
+        ],
+        "forecasts": [
+          "3.0-3.5T",
+          "4.0-6.0T",
+          "0.8-1.2T",
+          "6.0T",
+          "3.0-20.0T",
+          "1.0-2.0T",
+          "3.0T",
+          "6.0T",
+          "4.0T",
+          "6.1T",
+          "10.0T",
+          "2.0-10.0T",
+          "2.5T",
+          "4.5T",
+          "6.4T (range 5.0-7.0T)",
+          "1.8-6.0T",
+          "5.0-10.0T",
+          "3.0-10.0T",
+          "5.0T",
+          "5.0-10.0T"
+        ]
+      },
+      "methodNote": "Date law and Ryan's corrected 8-month pretrain gap pooled geometrically; compute adds a small correlated check."
+    },
+    {
+      "id": "gpt-56-sol",
+      "name": "GPT-5.6 Sol",
+      "shortName": "GPT-5.6 Sol",
+      "provider": "OpenAI",
+      "releaseDate": "2026-07-09",
+      "aaScore": 59,
+      "eciScore": 161.77,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 3.081003239637193,
+      "currentFinalT": 3.145668582841,
+      "factors": {
+        "aa": 3.3972189184817907,
+        "eci": 3.378210011120845,
+        "price": 2.838375200042036,
+        "horizon": 2.9850434724007573,
+        "compute": 2.2851690247440986,
+        "ikp": null,
+        "crowd": 3.2116911484449235
+      },
+      "crowd": {
+        "n": 19,
+        "pooled": true,
+        "contributors": [
+          "Respondent R01",
+          "Respondent R02",
+          "Respondent R03",
+          "Respondent R04",
+          "Respondent R06",
+          "Respondent R07",
+          "Respondent R08",
+          "Respondent R09",
+          "Respondent R10",
+          "Respondent R11",
+          "Respondent R12",
+          "Respondent R13",
+          "Respondent R14",
+          "Respondent R15",
+          "Respondent R16",
+          "Respondent R18",
+          "Respondent R19",
+          "Respondent R20",
+          "Respondent R21"
+        ],
+        "forecasts": [
+          "2.5-2.8T",
+          "1.5-2.5T",
+          "0.6-1.0T",
+          "2.5T",
+          "1.0-2.0T",
+          "3.0T",
+          "6.0T",
+          "2.0-4.0T",
+          "3.0T",
+          "4.7T",
+          "4.0T",
+          "1.5-5.0T",
+          "3.0T",
+          "6.5T",
+          "5.2T (range 4.0-6.0T)",
+          "5.0-10.0T",
+          "3.0-10.0T",
+          "2.0T",
+          "3.0-8.0T"
+        ]
+      },
+      "methodNote": "GPT-5.4/5.5 no-CoT shared-base proxy advanced to Sol's release."
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "shortName": "Kimi K3",
+      "provider": "Moonshot AI",
+      "releaseDate": "2026-07-16",
+      "aaScore": 57.1123394372091,
+      "eciScore": 155.5939255295791,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": true,
+      "disclosedT": 2.78,
+      "currentEvidenceT": 2.78,
+      "currentFinalT": 2.78,
+      "factors": {
+        "aa": 2.7799999999999994,
+        "eci": 1.6394913252498788,
+        "price": null,
+        "horizon": 2.78,
+        "compute": 2.135837940148138,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 0,
+        "pooled": false,
+        "contributors": [],
+        "forecasts": []
+      },
+      "methodNote": "2.8T disclosed; horizon branch cannot move an exact anchor."
+    },
+    {
+      "id": "claude-opus-47-48-shared-base",
+      "name": "Claude Opus 4.7 / 4.8 shared base",
+      "shortName": "Opus 4.7/4.8",
+      "provider": "Anthropic",
+      "releaseDate": "2026-05-28",
+      "aaScore": 55,
+      "eciScore": 156.93,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 2.7165307282992077,
+      "currentFinalT": 2.7165307282992077,
+      "factors": {
+        "aa": 2.501599027726546,
+        "eci": 2.065667853750635,
+        "price": 2.6952034847314126,
+        "horizon": 3.180401274462439,
+        "compute": 2.2176120217905924,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 1,
+        "pooled": false,
+        "contributors": [
+          "Respondent R17"
+        ],
+        "forecasts": [
+          "0.8-2.0T"
+        ]
+      },
+      "methodNote": "Opus 4.5/4.6/4.7 collapsed; 4.7 and 4.8 remain one base. Respondent R17's single forecast is shown as a check, not blended into the final."
+    },
+    {
+      "id": "gpt-55",
+      "name": "GPT-5.5",
+      "shortName": "GPT-5.5",
+      "provider": "OpenAI",
+      "releaseDate": "2026-04-23",
+      "aaScore": 55,
+      "eciScore": 158.33,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 2.290785766269785,
+      "currentFinalT": 2.290785766269785,
+      "factors": {
+        "aa": 2.641916999152285,
+        "eci": 2.469118947768164,
+        "price": 3.3238315545112043,
+        "horizon": 2.0046743725696254,
+        "compute": 2.289414646239948,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 0,
+        "pooled": false,
+        "contributors": [],
+        "forecasts": []
+      },
+      "methodNote": "GPT-5.4 and 5.5 treated as same-base post-training variants."
+    },
+    {
+      "id": "gpt-56-terra",
+      "name": "GPT-5.6 Terra",
+      "shortName": "GPT-5.6 Terra",
+      "provider": "OpenAI",
+      "releaseDate": "2026-07-09",
+      "aaScore": 55,
+      "eciScore": 158.25,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 2.1261839550663577,
+      "currentFinalT": 2.1261839550663577,
+      "factors": {
+        "aa": 2.2550118520127516,
+        "eci": 2.2467896289463845,
+        "price": 2.226203154213069,
+        "horizon": 2.0333299595509313,
+        "compute": 2.019320112047976,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 0,
+        "pooled": false,
+        "contributors": [],
+        "forecasts": []
+      },
+      "methodNote": "Preserves Terra/Sol scale ratio while applying Sol's horizon correction."
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "shortName": "Claude Sonnet 5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-06-30",
+      "aaScore": 53,
+      "eciScore": 153.2,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 1.6440151206205922,
+      "currentFinalT": 1.6440151206205922,
+      "factors": {
+        "aa": 1.946871865674927,
+        "eci": 1.2974259253341616,
+        "price": 1.875952028866749,
+        "horizon": 1.6293400551610284,
+        "compute": 1.9493651699052128,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 0,
+        "pooled": false,
+        "contributors": [],
+        "forecasts": []
+      },
+      "methodNote": "No direct Sonnet 5 no-CoT point; horizon branch left neutral."
+    },
+    {
+      "id": "gpt-56-luna",
+      "name": "GPT-5.6 Luna",
+      "shortName": "GPT-5.6 Luna",
+      "provider": "OpenAI",
+      "releaseDate": "2026-07-09",
+      "aaScore": 51,
+      "eciScore": 155.62,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 1.4756441184859073,
+      "currentFinalT": 1.4756441184859073,
+      "factors": {
+        "aa": 1.5315166889172227,
+        "eci": 1.6030809523637135,
+        "price": 1.3922076796534568,
+        "horizon": 1.3928657916908038,
+        "compute": 1.7967771815517266,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 0,
+        "pooled": false,
+        "contributors": [],
+        "forecasts": []
+      },
+      "methodNote": "Preserves Luna/Sol scale ratio while applying Sol's horizon correction."
+    },
+    {
+      "id": "grok-45",
+      "name": "Grok 4.5",
+      "shortName": "Grok 4.5",
+      "provider": "SpaceXAI",
+      "releaseDate": "2026-07-08",
+      "aaScore": 53.8265951657731,
+      "eciScore": 153.17,
+      "eciCi90": null,
+      "aaConfiguration": null,
+      "aaFallbackModel": null,
+      "lockedAnchor": true,
+      "disclosedT": 1.5,
+      "currentEvidenceT": 1.5,
+      "currentFinalT": 1.5,
+      "factors": {
+        "aa": 2.0099991870584826,
+        "eci": 1.3090579803054672,
+        "price": null,
+        "horizon": 1.5,
+        "compute": 1.952395320644401,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 0,
+        "pooled": false,
+        "contributors": [],
+        "forecasts": []
+      },
+      "methodNote": "1.5T disclosed anchor; horizon branch cannot move an exact anchor."
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "shortName": "Opus 5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-07-24",
+      "aaScore": 60.6918740157091,
+      "eciScore": 159.3778667882398,
+      "eciCi90": [
+        157.24933114170264,
+        162.20640578425878
+      ],
+      "aaConfiguration": "adaptive_reasoning_max_effort",
+      "aaFallbackModel": "Claude Opus 4.8",
+      "lockedAnchor": false,
+      "disclosedT": null,
+      "currentEvidenceT": 3.003794890426257,
+      "currentFinalT": 3.003794890426257,
+      "factors": {
+        "aa": 3.964375492233051,
+        "eci": 2.53440192011516,
+        "price": 2.4110202558207794,
+        "horizon": 3.042296195182693,
+        "compute": 2.3581807647976416,
+        "ikp": null,
+        "crowd": null
+      },
+      "crowd": {
+        "n": 0,
+        "pooled": false,
+        "contributors": [],
+        "forecasts": []
+      },
+      "methodNote": "Distinct newly pretrained base. Exact AA/ECI/date and weak price evidence are observed; METR, no-CoT, IKP, target compute, architecture, and parameter count remain unavailable, so the horizon branch is neutral rather than imputed."
+    }
+  ],
+  "humanForecasts": {
+    "activeRecords": 42,
+    "contributors": 21
+  },
+  "method": {
+    "combination": "Factors are combined in log space. Missing signals are renormalized inside the evidence block, so adding an Fable-only measurement does not silently change Sol's 50% crowd weight.",
+    "anchors": "Disclosed Kimi K3 and Grok 4.5 totals remain fixed under every weighting scenario.",
+    "currentMix": "The default reproduces the audited workbook exactly: 50% crowd for Fable/Sol. IKP receives 0% inside Fable's evidence half under the live audit decision, so the AA/ECI/price/no-CoT/compute block receives the remaining 100%. Sol has no IKP observation.",
+    "ikp": "IKP direct-capacity audit: 93 source configurations collapse to 87 distinct weight bases. On 13 exact models across 11 families, the existing median error is 2.12× versus 1.68× for IKP. A fixed 10% diagnostic blend improves both bootstrap checks, but the later chronological subset has 7 models versus the predeclared minimum of 8; promotion therefore fails and live IKP weight is 0%. The strict pre-Fable, Anthropic-excluded sensitivity is 3.6T. The separate conditional test supports GPQA and MMLU but cannot override the failed primary coverage gate. Sol remains unobserved.",
+    "noCotDates": "No-CoT date audit: all 49 paper checkpoints now have day-level dates, with 4 date-only overrides and 0 parameter identities added. Applying the method-matched exact-date/month-date Pareto slope ratio changes the published time law from 373.0 to 365.9 days and the token law from 437.0 to 438.4 days. The branch weight remains unchanged.",
+    "noCotArchitecture": "No-CoT architecture audit: the paper's 8.1x MoE relationship is exactly reproducible at 8.13x on 5 MoE Pareto models. It remains descriptive rather than a promoted inverse parameter estimator: the separately learned architecture slope worsens strictly chronological developer-held-out error, while the training-fold-only Pareto comparison has a 90% family interval crossing zero. The pooled live mapping and headline forecasts remain unchanged.",
+    "primaryEvidence": "First-party frontier audit: OpenAI reports a 3.6-minute no-CoT horizon for Sol versus 2.3 minutes for GPT-5.5. The fully identified chronological developer-holdout has only 16 predictions across 5 held-out developers, and the developer-balanced interval crosses zero. Plausible mappings of the same point span 1.8T to 11.2T, so its incremental live weight is 0%. Anthropic's system card independently establishes that Fable 5 and Mythos 5 share underlying weights; Opus 4.8 fallback remains a serving-system caveat, not a second base.",
+    "metrPrimary": "METR primary-source audit: all 26 official model rows, 114 scaffold entries, confidence intervals, source versions, and trend-law fields are retained directly from METR's YAML. The earlier copy matches 26/26 rows across every common field with 0 mismatches. This strengthens provenance and losslessness without changing the numerical forecast.",
+    "operational": "Operational cross-check: OpenRouter price remains weakly predictive; all 334 documented endpoint-API requests succeeded and 94.7% of official price rows reconcile exactly to the frontend extraction. The independent AA audit confirms provider-median price on 87 checkpoints and shows 0.83 cross-source price rank correlation, while first-party frontier price, tok/s, and latency add no supported weight.",
+    "operationalTemporal": "OpenRouter temporal cross-check: every refresh is archived byte-for-byte, with default, priority, and flex throughput retained separately. Across 8 immutable snapshots and 60,307 daily rows, default-tier tok/s still fails after price. In a separate 81-checkpoint request-supported audit, no throughput, latency, joint, or tail-spread candidate passes the family-interval plus chronological-direction gate. Tok/s and latency remain at 0%.",
+    "eciReproduction": "ECI reproduction cross-check: the pinned official Epoch implementation reproduces all 213 scores from 2,059 benchmark rows spanning 54 benchmarks. All 196 published nonblank scores agree within two-decimal display rounding. The audit preserves 43 input-date/release-date disagreements and uses the published checkpoint release date for chronological regression.",
+    "eciFit": "ECI fit tournament: 15 hash-pinned vintages yield 27 first-observed tests, including 2 interval-prospective Kimi checkpoints. The flexible ridge form cuts the 25-row selection median error, but fails the inverse-CI prospective veto and spans 1.34x for Fable and 1.38x for Sol across weighting/base-collapse sensitivities. Because both targets are 8.8–10.2 ECI points beyond the open-weight calibration range, the live linear blend is retained.",
+    "activePrice": "Active-price cross-check: 63 labels—45 disclosed active counts plus 18 primary-config dense controls—produce 45 release-ordered developer-held-out tests. The config audit parsed 73 repositories and retains 14 gated repositories as unresolved. Active-to-total MoE transport improves point metrics on 16 high-sparsity models, but its seven-developer interval crosses zero and target prices extrapolate beyond training support. It remains a 0%-weight sensitivity.",
+    "historicalPrice": "Historical-price cross-check: a hash-pinned ledger rebuilt from 1,062 committed official OpenRouter catalog snapshots retains 914 model IDs and 2,566 price changes from 21 Sep 2024. All 93 calibration aliases match exactly; 73 total-size and 55 active-size labels have eligible first-day prices. Launch-vintage price beats date alone in every predeclared 1–90 day window, but no active-size window adds a developer-cluster interval wholly below zero beyond AA score plus date. The first-day K3-anchored sensitivities are 5.4T for Fable and 3.8T for Sol; incremental weight remains 0%.",
+    "components": "ECI component cross-check: no individual benchmark survives familywise correction. A separately nested multivariate model moves the 73-fold median error from 2.32× to 2.10×, but its family interval crosses zero; the narrow-ECI-CI replication also crosses zero. The split is aggregate-score uncertainty, not parameter-disclosure status. Incremental component weight remains 0%.",
+    "posttraining": "Post-training lineage cross-check: 686 Epoch base links narrow to 212 candidate open-language, unchanged-size links and 8 measured edges across 6 bases. Later descendants have a median 1.36× ECI-implied scale ratio despite identical size; ECI collapse is inconclusive and AA has only 3 prediction edges. Opus 4.5–4.8 and GPT-5–5.5 remain user-supplied shared-lineage assumptions, not public disclosures. Incremental correction weight remains 0%.",
+    "aaExpansion": "AA expansion cross-check: 94 unique open-weight checkpoints were tested with strict chronological developer holdout. Broad tail error improves, but the 15 frontier-like tests are neutral, so the expanded-panel AA weight remains 0%.",
+    "aaInference": "AA inference-budget cross-check: the complete 587-record snapshot yields 275 open-weight checkpoints and 100 same-checkpoint reasoning pairs. The measured equal-creator uplift is about six AA points, but token-budget and reasoning-standardized frontier intervals cross zero, so both incremental weights remain 0%.",
+    "activeTransport": "Active-parameter cross-check: K3 discloses exactly 2.78T total and 104.2B active parameters. The held-out transport comparison remains inconclusive; K3-anchored sensitivities are 3.8T for Fable and 3.2T for Sol, so incremental weight remains 0%.",
+    "computeDependency": "K3 has one explicitly speculative Epoch training-compute estimate, while no live target has a primary-source compute disclosure. The branch otherwise predicts compute from AA and date, so it remains correlated regularization rather than independent target evidence."
+  },
+  "operationalSignals": {
+    "snapshotDate": "2026-07-31",
+    "epochCalibrationCheckpoints": 93,
+    "developerFamilies": 19,
+    "priceMedianHeldoutErrorX": 2.182362181313902,
+    "tokSIncrementalWeight": 0.0
+  },
+  "noCotDateSignals": {
+    "models": 49,
+    "exactDates": 49,
+    "remainingMonthOnly": 0,
+    "dateOnlyOverrides": 4,
+    "parameterIdentitiesAdded": 0,
+    "paperTimeDays": 373.0,
+    "adjustedTimeDays": 365.8606542885574,
+    "paperTokenDays": 437.0,
+    "adjustedTokenDays": 438.35702998585356,
+    "weightChanged": false
+  },
+  "noCotArchitectureSignals": {
+    "models": 35,
+    "families": 6,
+    "denseModels": 19,
+    "moeModels": 16,
+    "moeParetoModels": 5,
+    "moeFactor": 8.132252384929469,
+    "directDelta": 0.07748419152516166,
+    "directCi90": [
+      0.020032668382444285,
+      0.137225640714129
+    ],
+    "paretoDelta": -0.09523619969979744,
+    "paretoCi90": [
+      -0.3457861020212702,
+      0.16445230665938412
+    ],
+    "replacePooled": false
+  },
+  "frontierPrimarySignals": {
+    "directSolMinutes": 3.6,
+    "gpt55ComparatorMinutes": 2.3,
+    "currentProjectedSolMinutes": 2.483926857931124,
+    "currentProjectedSolPriorT": 2.9850434724007573,
+    "modelLevelSolT": 1.7564063458680867,
+    "pooledElasticitySolT": 6.436092236469337,
+    "moeElasticitySolT": 9.450928214046595,
+    "rebasedPooledSolT": 11.15659228014613,
+    "methodSpread": 6.3519425936895555,
+    "heldoutPredictions": 16,
+    "heldoutDevelopers": 5,
+    "horizonBetterProbability": 0.6285,
+    "incrementalCi90": [
+      -0.43985088380965787,
+      0.3438060899212527
+    ],
+    "incrementalWeight": 0.0,
+    "fableMythosSharedWeights": true,
+    "opusFallbackIsSharedBase": false
+  },
+  "metrPrimarySignals": {
+    "officialRows": 26,
+    "uniqueSourceIds": 26,
+    "fullScaffoldEntries": 114,
+    "legacyExactRows": 26,
+    "legacyRows": 26,
+    "mismatchCount": 0,
+    "from2023DoublingDays": 128.744,
+    "from2023CiLowDays": 104.428,
+    "from2023CiHighDays": 158.012
+  },
+  "ikpSignals": {
+    "calibrationConfigurations": 93,
+    "calibrationWeightBases": 87,
+    "servingVariantsCollapsed": 6,
+    "strictPredictionRows": 960,
+    "overlapModels": 13,
+    "overlapFamilies": 11,
+    "existingMedianX": 2.122288579348835,
+    "ikpMedianX": 1.6801802620491855,
+    "blendMedianX": 1.7976681525070095,
+    "fullBootstrapCi90": [
+      -0.05380362353237397,
+      -0.01862161520323456
+    ],
+    "chronologicalSubsetModels": 7,
+    "chronologicalSubsetFamilies": 7,
+    "chronologicalBootstrapCi90": [
+      -0.05408690091927382,
+      -0.006985169720860059
+    ],
+    "familiesImproved": 10,
+    "signedErrorCorrelation": 0.011081134481621461,
+    "fableStrictT": 3.6426590968396315,
+    "fablePublishedT": 3.4967012593305506,
+    "fableStrictFormRangeT": [
+      2.2802191661467033,
+      3.9346009261788795
+    ],
+    "fableSourcePi90T": [
+      1.0933607892201798,
+      11.182877434011964
+    ],
+    "fableRefusalRate": 0.12128146453089245,
+    "promoted": false,
+    "evidenceWeight": 0.0,
+    "finalWeight": 0.0,
+    "minimumChronologicalSubsetModels": 8,
+    "solObserved": false,
+    "conditionalGpqaModels": 18,
+    "conditionalGpqaVendors": 9,
+    "conditionalGpqaPassingSpecifications": 4,
+    "conditionalMmluModels": 16,
+    "conditionalMmluPassingSpecifications": 3,
+    "conditionalMmluProPassingSpecifications": 0,
+    "conditionalSignalCorroborated": true,
+    "conditionalWeightChanged": false,
+    "staleUpstreamNarrativeClaims": 6
+  },
+  "openRouterTemporalSignals": {
+    "immutableSnapshots": 8,
+    "currentDailyRows": 8569,
+    "historyDailyRows": 60307,
+    "serviceTierRows": {
+      "default": 7763,
+      "flex": 392,
+      "priority": 414
+    },
+    "multiTierEndpointModels": 78,
+    "unmatchedEndpointModels": 11,
+    "familyPriceMae": 0.397813913217537,
+    "familyPriceTokSMae": 0.4052285180969588,
+    "chronologicalPriceMae": 0.4197990872993067,
+    "chronologicalPriceTokSMae": 0.4174936236861111,
+    "medianModelWithinWeekMaxOverMin": 1.5172413793103448,
+    "p90ModelWithinWeekMaxOverMin": 3.78125,
+    "focalModels": [
+      {
+        "model": "Claude Fable 5",
+        "openrouter_model_id": "anthropic/claude-fable-5",
+        "refresh_max_over_min": 1.0916030534351144,
+        "refresh_median_tps": 32.75,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 5.294117647058823,
+        "within_week_median_tps": 35.75
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "openrouter_model_id": "openai/gpt-5.6-sol",
+        "refresh_max_over_min": 1.0945945945945945,
+        "refresh_median_tps": 38.0,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 1.3783783783783783,
+        "within_week_median_tps": 41.75
+      },
+      {
+        "model": "Kimi K3",
+        "openrouter_model_id": "moonshotai/kimi-k3",
+        "refresh_max_over_min": 1.25,
+        "refresh_median_tps": 24.0,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 1.5238095238095237,
+        "within_week_median_tps": 28.25
+      },
+      {
+        "model": "Claude Opus 4.8",
+        "openrouter_model_id": "anthropic/claude-opus-4.8",
+        "refresh_max_over_min": 1.045045045045045,
+        "refresh_median_tps": 56.0,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 1.0714285714285714,
+        "within_week_median_tps": 58.0
+      }
+    ],
+    "tokSIncrementalWeight": 0.0
+  },
+  "openRouterOfficialSignals": {
+    "modelRequests": 334,
+    "successfulModelRequests": 334,
+    "officialEndpointRows": 1051,
+    "frontendEndpointTierRows": 1172,
+    "officialPriceExactShare": 0.9467174119885823,
+    "comparisonGroupCounts": {
+      "exact": 993,
+      "frontend_only": 140,
+      "official_only": 19,
+      "signature_mismatch": 37
+    },
+    "endpointTierRows": 1172,
+    "endpointTierServiceTierCounts": {
+      "default": 1036,
+      "flex": 60,
+      "priority": 76
+    },
+    "highContextPriceRows": 142,
+    "focalModels": {
+      "anthropic/claude-fable-5": {
+        "official_rows": 6,
+        "frontend_rows": 6,
+        "non_exact_groups": []
+      },
+      "openai/gpt-5.6-sol": {
+        "official_rows": 6,
+        "frontend_rows": 7,
+        "non_exact_groups": [
+          "azure/priority"
+        ]
+      },
+      "moonshotai/kimi-k3": {
+        "official_rows": 8,
+        "frontend_rows": 8,
+        "non_exact_groups": []
+      }
+    },
+    "incrementalForecastWeight": 0.0
+  },
+  "openRouterRequestWeightedSignals": {
+    "completeCheckpoints": 81,
+    "completeFamilies": 16,
+    "minimumRequests": 100,
+    "supportedCandidates": [],
+    "familyPriceMedianX": 2.014230710505449,
+    "familyLatencyMedianX": 2.0784677871757764,
+    "familyLatencyCi90": [
+      -0.006147316024640495,
+      0.03611903719466289
+    ],
+    "incrementalWeight": 0.0
+  },
+  "eciReproductionSignals": {
+    "officialCommit": "542567e72a415b72624e5bbd12603cfd3f485179",
+    "inputRows": 2059,
+    "inputModels": 213,
+    "inputBenchmarks": 54,
+    "epochAllModelRows": 3574,
+    "reproducedModels": 213,
+    "publishedScoreMatches": 196,
+    "maximumPublishedScoreDifference": 0.004936622809793789,
+    "publishedReleaseDatesUsed": 211,
+    "canonicalInputDateFallbacks": 2,
+    "preservedDateDisagreements": 43
+  },
+  "eciFitSignals": {
+    "historicalSnapshots": 15,
+    "historicalScoreRows": 2308,
+    "firstObservedTargets": 27,
+    "selectionTargets": 25,
+    "prospectiveTargets": 2,
+    "selectedCandidate": "ridge_flexible",
+    "baselineSelectionMedianX": 2.69963671573679,
+    "candidateSelectionMedianX": 1.3639789827296207,
+    "selectionCi90": [
+      -0.22093026639275867,
+      0.002374584421597367
+    ],
+    "baselineProspectiveMae": 0.166076539719751,
+    "candidateProspectiveMae": 0.16304484234042205,
+    "fableExtrapolationPoints": 5.134023770774718,
+    "solExtrapolationPoints": 6.127171589134804,
+    "fableSensitivityRatio": 1.3380176846370622,
+    "solSensitivityRatio": 1.380703308400408,
+    "changeLiveForm": false
+  },
+  "componentSignals": {
+    "expandedParameterCheckpoints": 84,
+    "exactEpochAdditions": 26,
+    "activeParameterCheckpoints": 89,
+    "eligibleBenchmarks": 13,
+    "familywiseSupported": 0,
+    "incrementalWeight": 0.0,
+    "bestUncorrectedBenchmark": "OTIS Mock AIME 2024-2025",
+    "bestAdjustedP": 0.5957240427595724,
+    "multivariateOuterPredictions": 73,
+    "multivariateFamilies": 34,
+    "multivariateBaselineMedianX": 2.315786626319492,
+    "multivariateCandidateMedianX": 2.099527327992388,
+    "multivariateCi90": [
+      -0.049602088374417576,
+      0.0034617375425749415
+    ],
+    "narrowCiOnlyPredictions": 28,
+    "narrowCiOnlyFamilies": 11,
+    "narrowCiOnlyBaselineMedianX": 2.073947649114454,
+    "narrowCiOnlyCandidateMedianX": 2.1509150047819094,
+    "narrowCiOnlyCi90": [
+      -0.09929880306139095,
+      0.03909382254719223
+    ],
+    "multivariateIncrementalWeight": 0.0,
+    "targetSensitivities": [
+      {
+        "model": "Claude Fable 5",
+        "release_date": "2026-06-09",
+        "eci_score": 160.72794930035383,
+        "available_component_measurements": 15,
+        "full_training_n": 86,
+        "full_training_families": 40,
+        "full_training_max_date": "2026-04-24",
+        "target_family_excluded": true,
+        "selected_feature_set": "knowledge_only",
+        "selected_alpha": 30.0,
+        "eligible_training_benchmarks": "GPQA diamond|MMLU|OpenBookQA|SimpleQA Verified|TriviaQA",
+        "observed_selected_benchmarks": "SimpleQA Verified",
+        "observed_selected_count": 1,
+        "raw_multivariate_baseline_t": 0.8265813026172499,
+        "raw_multivariate_candidate_t": 0.9945094921297266,
+        "component_adjustment_factor": 1.2031599178214611,
+        "narrow_ci_training_n": 38,
+        "narrow_ci_training_families": 21,
+        "narrow_ci_training_feature_set": "knowledge_only",
+        "narrow_ci_training_alpha": 10.0,
+        "narrow_ci_training_eligible_benchmarks": "GPQA diamond|MMLU",
+        "narrow_ci_training_observed_benchmarks": "",
+        "narrow_ci_training_observed_count": 0,
+        "narrow_ci_training_raw_baseline_t": 7.2723499808954895,
+        "narrow_ci_training_raw_candidate_t": 5.39807122814731,
+        "narrow_ci_training_adjustment_factor": 0.7422733012476129,
+        "full_vs_narrow_ci_adjustment_ratio": 1.620912291738353,
+        "full_vs_narrow_ci_direction_agrees": false,
+        "legacy_57_eci_t": 3.154860839423498,
+        "component_adjusted_eci_t": 3.795802108298922,
+        "narrow_ci_training_adjusted_eci_t": 2.341768970255695,
+        "incremental_live_weight": 0.0,
+        "status": "0%-weight diagnostic; promotion gates failed"
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "release_date": "2026-07-09",
+        "eci_score": 161.7210971187139,
+        "available_component_measurements": 15,
+        "full_training_n": 88,
+        "full_training_families": 40,
+        "full_training_max_date": "2026-06-16",
+        "target_family_excluded": true,
+        "selected_feature_set": "knowledge_only",
+        "selected_alpha": 10.0,
+        "eligible_training_benchmarks": "GPQA diamond|MMLU|OpenBookQA|SimpleQA Verified|TriviaQA",
+        "observed_selected_benchmarks": "GPQA diamond|SimpleQA Verified",
+        "observed_selected_count": 2,
+        "raw_multivariate_baseline_t": 0.8600291121577306,
+        "raw_multivariate_candidate_t": 0.464689452236916,
+        "component_adjustment_factor": 0.5403182818672903,
+        "narrow_ci_training_n": 40,
+        "narrow_ci_training_families": 21,
+        "narrow_ci_training_feature_set": "knowledge_only",
+        "narrow_ci_training_alpha": 3.0,
+        "narrow_ci_training_eligible_benchmarks": "GPQA diamond|MMLU|SimpleQA Verified",
+        "narrow_ci_training_observed_benchmarks": "GPQA diamond|SimpleQA Verified",
+        "narrow_ci_training_observed_count": 2,
+        "narrow_ci_training_raw_baseline_t": 8.243214831846545,
+        "narrow_ci_training_raw_candidate_t": 2.4398766121869584,
+        "narrow_ci_training_adjustment_factor": 0.2959860517962998,
+        "full_vs_narrow_ci_adjustment_ratio": 1.8254856220020195,
+        "full_vs_narrow_ci_direction_agrees": true,
+        "legacy_57_eci_t": 3.452226795865823,
+        "component_adjusted_eci_t": 1.8653012509584421,
+        "narrow_ci_training_adjusted_eci_t": 1.0218109792137156,
+        "incremental_live_weight": 0.0,
+        "status": "0%-weight diagnostic; promotion gates failed"
+      }
+    ]
+  },
+  "posttrainingSignals": {
+    "epochBaseLinks": 686,
+    "sameParameterBothOpenLinks": 240,
+    "candidateOpenLanguageLinks": 212,
+    "measuredEdges": 8,
+    "measuredBases": 6,
+    "measuredDevelopers": 5,
+    "eciPredictionEdges": 7,
+    "aaPredictionEdges": 3,
+    "noCotEdges": 1,
+    "metrEdges": 0,
+    "sameWeightReasoningPairs": 53,
+    "sameWeightReasoningCreators": 12,
+    "sameWeightReasoningMedianUplift": 5.50904364575783,
+    "eciMedianImpliedRatio": 1.363951009877758,
+    "eciCollapseCi90": [
+      -0.07773119205394963,
+      0.06328150101264378
+    ],
+    "aaCollapseCi90": [
+      -0.13679814845398486,
+      -0.015666106525940176
+    ],
+    "knowledgeMedianUplift": 1.4752816799317685,
+    "otherMedianUplift": 4.854616410577847,
+    "incrementalWeight": 0.0,
+    "publiclyVerifiedProprietarySharedBase": false
+  },
+  "aaExpansionSignals": {
+    "currentCheckpoints": 50,
+    "exactEpochCheckpoints": 63,
+    "reconciledOverlaps": 19,
+    "expandedCheckpoints": 94,
+    "eligiblePredictions": 46,
+    "frontierLikePredictions": 15,
+    "incrementalWeight": 0.0
+  },
+  "aaInferenceSignals": {
+    "rawModels": 587,
+    "openWeightConfigurations": 335,
+    "uniqueCheckpoints": 275,
+    "tokenCoveredCheckpoints": 79,
+    "allReasoningPairs": 100,
+    "exactWeightPairs": 53,
+    "pairCreators": 17,
+    "equalCreatorMedianUplift": 6.431953237621849,
+    "exactEpochCrosschecks": 62,
+    "metadataDisagreements": 3,
+    "portableFrontierBaselineMedianX": 2.394097165540797,
+    "portableFrontierCandidateMedianX": 2.1589594556439753,
+    "incrementalTokenWeight": 0.0,
+    "incrementalReasoningWeight": 0.0
+  },
+  "aaOperationalSignals": {
+    "priceCheckpoints": 168,
+    "speedCheckpoints": 125,
+    "providerMedianPriceCheckpoints": 87,
+    "firstPartyPriceCheckpoints": 81,
+    "exactOpenRouterOverlap": 28,
+    "priceSpearman": 0.8147008547008547,
+    "speedSpearman": 0.49195306959236323,
+    "providerMedianFrontierBaselineMedianX": 2.2658312918249135,
+    "providerMedianFrontierCandidateMedianX": 2.3324745319762967,
+    "firstPartyFrontierBaselineMedianX": 2.4457367566497052,
+    "firstPartyFrontierCandidateMedianX": 2.9160503749316895,
+    "incrementalPriceWeight": 0.0,
+    "incrementalSpeedWeight": 0.0,
+    "incrementalLatencyWeight": 0.0
+  },
+  "activeParameterSignals": {
+    "totalParameterCheckpoints": 275,
+    "activeParameterCheckpoints": 127,
+    "developers": 33,
+    "chronologicalPredictions": 96,
+    "frontierLikePredictions": 40,
+    "activeMedianErrorX": 1.943894307714791,
+    "samePanelTotalMedianErrorX": 2.085047252179732,
+    "activeComparisonCi90": [
+      -0.09289014048887713,
+      -0.00010818627814064898
+    ],
+    "highSparsityPredictions": 47,
+    "transportCandidateMedianErrorX": 2.0953179775569155,
+    "transportBaselineMedianErrorX": 1.986495131195065,
+    "transportCi90": [
+      -0.18396603240132736,
+      -0.014679308686815553
+    ],
+    "predictedK3ActiveB": 63.95169218443839,
+    "disclosedK3TotalB": 2780.0,
+    "disclosedK3ActiveB": 104.2,
+    "k3ActivePredictionErrorX": 1.6293548527142083,
+    "k3ImpliedRatio": 26.679462571976966,
+    "k3DisclosedActiveFraction": 0.03748201438848921,
+    "targetSensitivities": [
+      {
+        "model": "Claude Fable 5",
+        "release_date": "2026-06-09",
+        "aa_score": 59.8606463217303,
+        "predicted_active_b": 85.60751801484525,
+        "k3_calibrated_active_b": 139.48502490630713,
+        "k3_anchored_total_t": 3.721385501339096,
+        "k3_sparsity_total_t": 3.721385501339096,
+        "k2_sparsity_total_t": 4.449829015415932,
+        "status": "diagnostic only"
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "release_date": "2026-07-09",
+        "aa_score": 58.889831189723,
+        "predicted_active_b": 73.09824157601906,
+        "k3_calibrated_active_b": 119.10297463676216,
+        "k3_anchored_total_t": 3.177603354032618,
+        "k3_sparsity_total_t": 3.177603354032618,
+        "k2_sparsity_total_t": 3.7996040988414914,
+        "status": "diagnostic only"
+      },
+      {
+        "model": "Kimi K3",
+        "release_date": "2026-07-16",
+        "aa_score": 57.1123394372091,
+        "predicted_active_b": 63.95169218443839,
+        "k3_calibrated_active_b": 104.2,
+        "k3_anchored_total_t": 2.78,
+        "k3_sparsity_total_t": 2.78,
+        "k2_sparsity_total_t": 3.3241717791411043,
+        "status": "disclosed external check"
+      }
+    ],
+    "incrementalWeight": 0.0,
+    "estimatedTargetComputeModels": 1,
+    "disclosedTargetComputeModels": 0,
+    "computeIndependent": false
+  },
+  "activePriceSignals": {
+    "exactActiveMatches": 63,
+    "disclosedActiveMatches": 45,
+    "denseConfigControls": 18,
+    "developers": 15,
+    "chronologicalPredictions": 45,
+    "predictionDevelopers": 11,
+    "highSparsityPredictions": 16,
+    "highSparsityDevelopers": 7,
+    "candidateMedianErrorX": 1.5943066001710364,
+    "baselineMedianErrorX": 2.177244634583412,
+    "transportCi90": [
+      -0.2766745251976948,
+      0.0452544019221345
+    ],
+    "performanceGatePassed": false,
+    "coverageGatePassed": false,
+    "incrementalWeight": 0.0,
+    "prospectivePriceBacktest": false,
+    "targetSensitivities": [
+      {
+        "model": "Claude Fable 5",
+        "release_date": "2026-06-09",
+        "aa_score": 59.8606463217303,
+        "blended_price_usd_per_mtoken": 22.360679775,
+        "price_over_training_max": 6.454972243675451,
+        "predicted_active_date_price_b": 133.94497841443115,
+        "predicted_active_score_date_price_b": 204.45635139959637,
+        "k3_anchored_total_date_price_t": 5.7662493552006655,
+        "k3_anchored_total_score_date_price_t": 5.532831921420005,
+        "k3_anchor_source": "Kimi K3 official technical report Table 1",
+        "status": "0%-weight extrapolative sensitivity"
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "release_date": "2026-07-09",
+        "aa_score": 58.889831189723,
+        "blended_price_usd_per_mtoken": 12.8598211496,
+        "price_over_training_max": 3.712310601223595,
+        "predicted_active_date_price_b": 94.29275673802773,
+        "predicted_active_score_date_price_b": 145.0417059306177,
+        "k3_anchored_total_date_price_t": 4.0592454765901556,
+        "k3_anchored_total_score_date_price_t": 3.925000984399446,
+        "k3_anchor_source": "Kimi K3 official technical report Table 1",
+        "status": "0%-weight extrapolative sensitivity"
+      },
+      {
+        "model": "Kimi K3",
+        "release_date": "2026-07-16",
+        "aa_score": 57.1123394372091,
+        "blended_price_usd_per_mtoken": 6.7082039325,
+        "price_over_training_max": 1.9364916731026354,
+        "predicted_active_date_price_b": 64.57699226209759,
+        "predicted_active_score_date_price_b": 102.73015066486975,
+        "k3_anchored_total_date_price_t": 2.78,
+        "k3_anchored_total_score_date_price_t": 2.7799999999999994,
+        "k3_anchor_source": "Kimi K3 official technical report Table 1",
+        "status": "disclosed total anchor"
+      }
+    ]
+  },
+  "historicalPriceSignals": {
+    "ledgerModels": 914,
+    "changePoints": 2566,
+    "calibrationCheckpoints": 93,
+    "missingCalibrationAliases": 0,
+    "oneDayTotalRows": 73,
+    "oneDayActiveRows": 55,
+    "oneDayTotalPredictions": 50,
+    "oneDayTotalMedianErrorX": 2.5290499741932866,
+    "oneDayDateOnlyMedianErrorX": 3.3288988432124627,
+    "totalRobustAcrossWindows": true,
+    "activeIncrementalRobust": false,
+    "incrementalWeight": 0.0,
+    "targetSensitivities": [
+      {
+        "aa_score": 59.8606463217303,
+        "first_day_blended_price_usd_per_mtoken": 22.360679774997898,
+        "first_day_completion_price_usd_per_mtoken": 50.0,
+        "first_day_prompt_price_usd_per_mtoken": 10.0,
+        "k3_anchored_total_date_historical_price_t": 5.713316113374278,
+        "k3_anchored_total_score_date_historical_price_t": 5.397726380788262,
+        "model": "Claude Fable 5",
+        "openrouter_first_seen": "2026-06-10",
+        "predicted_active_date_historical_price_b": 155.5706599854739,
+        "predicted_active_score_date_historical_price_b": 230.00188203327644,
+        "release_date": "2026-06-09",
+        "status": "zero-weight historical-price sensitivity"
+      },
+      {
+        "aa_score": 58.889831189723,
+        "first_day_blended_price_usd_per_mtoken": 12.24744871391589,
+        "first_day_completion_price_usd_per_mtoken": 30.0,
+        "first_day_prompt_price_usd_per_mtoken": 5.0,
+        "k3_anchored_total_date_historical_price_t": 3.9462483591938207,
+        "k3_anchored_total_score_date_historical_price_t": 3.8106883969800736,
+        "model": "GPT-5.6 Sol",
+        "openrouter_first_seen": "2026-07-10",
+        "predicted_active_date_historical_price_b": 107.45431366369738,
+        "predicted_active_score_date_historical_price_b": 162.3767937306579,
+        "release_date": "2026-07-09",
+        "status": "zero-weight historical-price sensitivity"
+      },
+      {
+        "aa_score": 57.1123394372091,
+        "first_day_blended_price_usd_per_mtoken": 6.708203932499369,
+        "first_day_completion_price_usd_per_mtoken": 15.0,
+        "first_day_prompt_price_usd_per_mtoken": 3.0,
+        "k3_anchored_total_date_historical_price_t": 2.78,
+        "k3_anchored_total_score_date_historical_price_t": 2.78,
+        "model": "Kimi K3",
+        "openrouter_first_seen": "2026-07-17",
+        "predicted_active_date_historical_price_b": 75.69797052664593,
+        "predicted_active_score_date_historical_price_b": 118.45825203891354,
+        "release_date": "2026-07-16",
+        "status": "disclosed total anchor"
+      }
+    ]
+  },
+  "sources": {
+    "forecastLedger": {
+      "name": "human_parameter_forecasts_2026-07-17.csv",
+      "sha256": "2056de44e4249943bbfbee5eaa57d98e9dc8de3b6fd9c62e2073983df4da0c22"
+    },
+    "finalWorkbook": {
+      "name": "frontier_parameter_model_crowd_50pct_2026-07-17.xlsx",
+      "sha256": "317b57384f40c1b8ae9af635bcbba220ac98b72ac636a27b0dfd5ab431bc0cc1"
+    },
+    "branchWorkbook": {
+      "name": "k3_calibrated_frontier_parameter_crosscheck_2026-07-17.xlsx",
+      "sha256": "8a1eaded1a325a0cb79e532c9775801e5520bf603135566f687dad53a8565273"
+    },
+    "openRouterModels": {
+      "name": "openrouter_model_signals_2026-07-18.csv",
+      "sha256": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd"
+    },
+    "openRouterTiers": {
+      "name": "openrouter_endpoint_tier_signals_2026-07-18.csv",
+      "sha256": "fbaf4171bf502ae4893b9af41ea819a93f133f44bc25897757b1d8f7cdad3670"
+    },
+    "openRouterCollectionAudit": {
+      "name": "openrouter_collection_audit_2026-07-18.json",
+      "sha256": "1140ee51638d0c717e1fd38e9820d93a2cbab5bbcaad34bfb5f3157409ffef95"
+    },
+    "openRouterAudit": {
+      "name": "openrouter_parameter_signal_backtest_2026-07-18.json",
+      "sha256": "081100f3746ac558bb88115c352adfeacc3c514950a23ac3ab78970328d542a0"
+    },
+    "openRouterDaily": {
+      "name": "openrouter_throughput_daily_2026-07-18.csv",
+      "sha256": "f401000a2b60dc1d20ebf13e4d04ab5c7933982087aa48cb6b70297ab21d35f8"
+    },
+    "openRouterHistoryManifest": {
+      "name": "openrouter_snapshot_history_manifest_2026-07-18.csv",
+      "sha256": "a9c933541ef71b822e271ef5229cddc2645313189ac4fcb02de731d696cb524c"
+    },
+    "openRouterTemporalAudit": {
+      "name": "openrouter_temporal_stability_audit_2026-07-18.json",
+      "sha256": "aa341646aeaf52d1654d811cc4d4d15579831784ace2ff4b5afa4de67813ecc7"
+    },
+    "openRouterRequestWeightedAudit": {
+      "name": "openrouter_request_weighted_operational_audit_2026-07-18.json",
+      "sha256": "52c4aa64853f4c88c9b2b973d6387c24b583e90d5794fbf2f46aa98afdeaea0d"
+    },
+    "openRouterOfficialPrices": {
+      "name": "openrouter_official_endpoint_prices_2026-07-18.csv",
+      "sha256": "9369418b3c279b956e7c63ae955e707c1f9fd732cc48443018de1212df0f1fce"
+    },
+    "openRouterOfficialAudit": {
+      "name": "openrouter_official_endpoint_audit_2026-07-18.json",
+      "sha256": "4dfa2b0547aa946a891014f784eace93e92db4c7c792f0265302a899cf87d99d"
+    },
+    "eciReproducedScores": {
+      "name": "epoch_eci_reproduced_scores_2026-07-31.csv",
+      "sha256": "1c2ad9d6b62deccfb1cd32f200c616d76a3efc8f5acb01ad3fa182c1b4da6c5e"
+    },
+    "eciReproductionCrosscheck": {
+      "name": "epoch_eci_reproduction_crosscheck_2026-07-31.csv",
+      "sha256": "72959e4a9b32a19de5cfc62b070fb74f11340498982147e512a1ed550c0176bf"
+    },
+    "eciReproductionAudit": {
+      "name": "epoch_eci_reproduction_audit_2026-07-31.json",
+      "sha256": "b8f4909150ce38c705cd31cc18674c355611305377aab8ba6cd87fe7ddbd36c8"
+    },
+    "eciComponentAudit": {
+      "name": "eci_component_extended_audit_2026-07-18.json",
+      "sha256": "706e16f972ee62716582edb636b25dc9f02af09c7d68bec42d5a2ea8c60a0184"
+    },
+    "eciComponentComparison": {
+      "name": "eci_component_active_incremental_comparison_2026-07-18.csv",
+      "sha256": "5b1dd8db11d13ff050a46b54c49ef695ada4481883a963ca01d438858b56428b"
+    },
+    "eciFitTournament": {
+      "name": "eci_fit_tournament_2026-07-18.json",
+      "sha256": "f766993cb86397c5efce6e127eee1281f0ff8ba125a04a1bd4139dea3c6b31b5"
+    },
+    "eciFitPredictions": {
+      "name": "eci_fit_tournament_predictions_2026-07-18.csv",
+      "sha256": "a60f852b1d4304d5d0334dd7335f86501e997f5f2a60632e66754fb1b42623fe"
+    },
+    "eciFitTargets": {
+      "name": "eci_fit_tournament_frontier_sensitivity_2026-07-18.csv",
+      "sha256": "862f06d3d6d73bde8d726b5efe7ca2accf654ff1b60519c19aaab69dbe7e7437"
+    },
+    "eciHistoricalScores": {
+      "name": "epoch_eci_historical_model_scores_2026-07-18.csv",
+      "sha256": "98b18176aeb56d9b5015c80ab50ed7d27c3bac28e7d699c11968b45dc052c3fa"
+    },
+    "eciHistoricalMetadata": {
+      "name": "epoch_eci_historical_fit_metadata_2026-07-18.json",
+      "sha256": "3547e7e9477dde263c69a83be2325782daec49050f0a8211af0e6e9e5b5e81ce"
+    },
+    "eciMultivariateAudit": {
+      "name": "eci_multivariate_component_audit_2026-07-18.json",
+      "sha256": "9850d8433084132689e04ed2d71c1015e2acaf692cf1eceb45440cc7fecb087f"
+    },
+    "eciMultivariatePredictions": {
+      "name": "eci_multivariate_component_predictions_2026-07-18.csv",
+      "sha256": "a237708cf5a13d0099214d1f1bb1e1206ae86d7104d078d7ece8f9187e262c90"
+    },
+    "eciMultivariateNarrowCiPredictions": {
+      "name": "eci_multivariate_component_narrow_eci_ci_predictions_2026-07-18.csv",
+      "sha256": "d4374cbcb642a5fe3d385db6276c3f6f39181e16ea14ad1515cee368bc154024"
+    },
+    "eciMultivariateTargets": {
+      "name": "eci_multivariate_component_targets_2026-07-18.csv",
+      "sha256": "fc2beac4ceceb7e917cf38df89fd4b8b6c064d1a31a5e1fe5926cedabf7c6142"
+    },
+    "eciMultivariateCoverage": {
+      "name": "eci_multivariate_component_coverage_2026-07-18.csv",
+      "sha256": "fca69174fcd0b00518deca1634f66fbd96c8cb115c9b748ba1eafdc41967708d"
+    },
+    "posttrainingLineageAudit": {
+      "name": "posttraining_lineage_audit_2026-07-18.json",
+      "sha256": "6126e17ff2fa16aef4ad029e7796a5760facac98ef03b61afb467e7abbe4f222"
+    },
+    "posttrainingLineageEdges": {
+      "name": "posttraining_lineage_edges_2026-07-18.csv",
+      "sha256": "28fb683acca32ac4bf227d551037ec7bb683fc8df5663e4f75ec32704bf58c13"
+    },
+    "posttrainingLineageMeasurements": {
+      "name": "posttraining_lineage_measurements_2026-07-18.csv",
+      "sha256": "a3cde13c54414b6ae1487e1e7f451acd5f5a59063a6f058414526117cbe2721b"
+    },
+    "posttrainingLineagePredictions": {
+      "name": "posttraining_lineage_predictions_2026-07-18.csv",
+      "sha256": "465fa35ff190c95b10eafe4d60068b8cdb0cb4df53a91574a24ead60db0dd13b"
+    },
+    "frontierSharedBaseSensitivity": {
+      "name": "frontier_shared_base_sensitivity_2026-07-18.csv",
+      "sha256": "6c9af314d78336d118def53a719129ebfe16d3a301509586192a0d89e450e25c"
+    },
+    "frontierLineageEvidence": {
+      "name": "frontier_lineage_evidence_2026-07-18.csv",
+      "sha256": "6c278efb824d28aa9ed140829637b7b35b6fcf3faac74e9ac61751c8d15b1e68"
+    },
+    "aaExpandedAudit": {
+      "name": "aa_expanded_parameter_audit_2026-07-18.json",
+      "sha256": "172b4dce48d2bf705d1f9824ddb0f4105be7b114d8b106a7e8a128a664d2308a"
+    },
+    "aaExpandedPanel": {
+      "name": "aa_expanded_parameter_panel_2026-07-18.csv",
+      "sha256": "e90578d9330126d2c2eabef50d3712bdac1d5c66ae2964c4bbb079345b9b01d4"
+    },
+    "aaExpandedPredictions": {
+      "name": "aa_expanded_parameter_predictions_2026-07-18.csv",
+      "sha256": "1da91efc8e14e693b62a7fef7b4aff54406aff0db1ee19b00ae2a8d92fd9086f"
+    },
+    "aaExpandedOverlaps": {
+      "name": "aa_expanded_parameter_overlap_audit_2026-07-18.csv",
+      "sha256": "c0fec3f64aa3965495cb6553c37cfaba07d72a9a8fb958a346e448b4af4dc364"
+    },
+    "aaDetailedRaw": {
+      "name": "aa_detailed_snapshot_2026-07-31.html.gz",
+      "sha256": "e767200f33263fdea9cadb5f61e347ab0d9bed85ca8d9dc0a066e679067375b6"
+    },
+    "aaDetailedModels": {
+      "name": "aa_detailed_model_signals_2026-07-31.csv",
+      "sha256": "c00553aa052e8e5fd40bf84637bc17663e407b5f6d348ddb1140c2df48b39404"
+    },
+    "aaInferenceAudit": {
+      "name": "aa_inference_budget_audit_2026-07-18.json",
+      "sha256": "cb7b11524d1cf2375649bfa65e0685a3b51697a5eef6f632957643a433a58bf3"
+    },
+    "aaDetailedPanel": {
+      "name": "aa_detailed_parameter_panel_2026-07-18.csv",
+      "sha256": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b"
+    },
+    "aaReasoningPairs": {
+      "name": "aa_reasoning_pair_audit_2026-07-18.csv",
+      "sha256": "53f3a4db5921b295c65b174eac9066908335ccaa34ed8045db2417ee8ea7b3ba"
+    },
+    "aaDetailedCrosscheck": {
+      "name": "aa_detailed_epoch_crosscheck_2026-07-18.csv",
+      "sha256": "c0e1b9a29c806276fb074d3deb2349b69c971e295b4c211dc8b95b55b231302e"
+    },
+    "aaInferencePredictions": {
+      "name": "aa_inference_budget_predictions_2026-07-18.csv",
+      "sha256": "9977d95f8e6cff24df226d198f4c359b0f32022672f01213bbe1b947576391b2"
+    },
+    "aaOperationalAudit": {
+      "name": "aa_operational_signal_audit_2026-07-18.json",
+      "sha256": "9471e8b7d10eae328b4e39f416d67fcb396d685b41198998c786b05718be72e1"
+    },
+    "aaOperationalPanel": {
+      "name": "aa_operational_parameter_panel_2026-07-18.csv",
+      "sha256": "fa9905325de395104624ea82dddcdb8775b7b79cc31fdffc81b26ad0fb65e9f2"
+    },
+    "aaOperationalPredictions": {
+      "name": "aa_operational_backtest_predictions_2026-07-18.csv",
+      "sha256": "b9d79760ad56dce487fda4456d3031878b421a2d53f74843c455058834b5f055"
+    },
+    "aaOpenRouterCrosscheck": {
+      "name": "aa_openrouter_operational_crosscheck_2026-07-18.csv",
+      "sha256": "69fd65412dc6c0a84132e31b74ad02a546bb531cada3fc5d7f1432b5f83bd41e"
+    },
+    "activeTransportAudit": {
+      "name": "active_parameter_transport_audit_2026-07-18.json",
+      "sha256": "36cb8a21e93f6847399f0aa943e3604688b9c7d9b06bc583d938d8b8770d38a0"
+    },
+    "activeTransportPredictions": {
+      "name": "active_parameter_transport_predictions_2026-07-18.csv",
+      "sha256": "bc14a7641f3149419fc202ef7b12a68c4d398d70dafe372ea5d0e43876b40edf"
+    },
+    "activeTransportTargets": {
+      "name": "active_parameter_transport_targets_2026-07-18.csv",
+      "sha256": "2f8c16670279db1aaf397216abc3c8b7e7f0cfcd5c58af8c8263f8bcc6fecc6b"
+    },
+    "k3ArchitectureFacts": {
+      "name": "kimi_k3_release_evidence_2026-07-31.json",
+      "sha256": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600"
+    },
+    "epochSnapshotManifest": {
+      "name": "epoch_snapshot_manifest_2026-07-31.json",
+      "sha256": "dcd11ed05aa8aee9931b7136c5603604a1dee07dc3e9cef9f90126bd05d01e44"
+    },
+    "aaDetailedMetadata": {
+      "name": "aa_detailed_collection_metadata_2026-07-31.json",
+      "sha256": "ffabf480cde516300c0a480dd1fbddd01db0ba9af34c7cc59e78fc0e8e9a5f79"
+    },
+    "openRouterActivePriceAudit": {
+      "name": "openrouter_active_price_audit_2026-07-18.json",
+      "sha256": "0b29d72c1dd35cce9faee077c17e4c9b8465a02f66fad6da5797bfa431011ae3"
+    },
+    "openRouterActivePriceMatches": {
+      "name": "openrouter_active_parameter_match_audit_2026-07-18.csv",
+      "sha256": "e070880fbcbc3169dd928762a41c672d38ee32ee6d3ef385c0bc89e044676520"
+    },
+    "openRouterActivePricePredictions": {
+      "name": "openrouter_active_price_predictions_2026-07-18.csv",
+      "sha256": "7f3c030a8deea6aface8a85658e00330ea816d0ad29481eb2871a9a0b96760bf"
+    },
+    "openRouterActivePriceTargets": {
+      "name": "openrouter_active_price_targets_2026-07-18.csv",
+      "sha256": "6d0cb22d66152229454ec34b6b5218b17c5ed18e1a69f7d6d1325df8447f16d4"
+    },
+    "openRouterHistoricalPriceRaw": {
+      "name": "openrouter_historical_price_ledger_2026-07-18.json.gz",
+      "sha256": "046a540d27cecfd3de741e46ce13c3a7eba8c570b42dd363a27144fd75e7926d"
+    },
+    "openRouterHistoricalPricePoints": {
+      "name": "openrouter_historical_price_change_points_2026-07-18.csv",
+      "sha256": "0107a6abde7b2eed1ab268c0c696ff21a7c235c83775ccfb315d0d3747502575"
+    },
+    "openRouterHistoricalPriceMetadata": {
+      "name": "openrouter_historical_price_collection_metadata_2026-07-18.json",
+      "sha256": "24ddb6574d941d5d0043f9e94bb6a77cad548ca94cbf71efdf2ae9e9db20735c"
+    },
+    "openRouterHistoricalPriceAudit": {
+      "name": "openrouter_historical_price_audit_2026-07-18.json",
+      "sha256": "401125b60f6dbef6573eca08fa66785d95977db9375e89f80255c884a1f0ffdf"
+    },
+    "openRouterHistoricalPriceMatches": {
+      "name": "openrouter_historical_price_match_audit_2026-07-18.csv",
+      "sha256": "e57d979c49401083ec4972bdc44e24001fffd00a5da039b60eaa3b542d225872"
+    },
+    "openRouterHistoricalPricePredictions": {
+      "name": "openrouter_historical_price_backtest_predictions_2026-07-18.csv",
+      "sha256": "4540968d1e4146d94a3b8b3bec90eb31ed073966151661ac32bcbf6b37ab77f8"
+    },
+    "openRouterHistoricalPriceTargets": {
+      "name": "openrouter_historical_price_frontier_targets_2026-07-18.csv",
+      "sha256": "41c47d5488a69e0028011e89292ea35cd368a5db849795e71b5e74754702cb8b"
+    },
+    "hfArchitectureRaw": {
+      "name": "huggingface_architecture_config_snapshot_2026-07-18.json.gz",
+      "sha256": "412d80e27a36477636599eeb9fcaade8924f1d7cd97fd8db16305677f3f00c06"
+    },
+    "hfArchitectureSignals": {
+      "name": "huggingface_architecture_config_signals_2026-07-18.csv",
+      "sha256": "db1757382798a069ed9833aa144c96b0c7c9d939e793581a611ed6487be99142"
+    },
+    "hfArchitectureAudit": {
+      "name": "huggingface_architecture_config_collection_audit_2026-07-18.json",
+      "sha256": "03fea30d78c4f90625afee9ada9746deedadf7981a2205bdc36b1da8c3f89f89"
+    },
+    "noCotExactDateAudit": {
+      "name": "no_cot_exact_date_audit_2026-07-18.json",
+      "sha256": "c0b005e9d990c664a761ae3b86696cf4b1606b04f51a0f7775650c31e99b70f8"
+    },
+    "noCotExactDateModels": {
+      "name": "no_cot_exact_date_model_audit_2026-07-18.csv",
+      "sha256": "9c7dd8e708dfd56f7cd493209bef7133b78e8302f2acc2a1d11d025e4c5509bd"
+    },
+    "noCotArchitectureAudit": {
+      "name": "no_cot_architecture_elasticity_audit_2026-07-18.json",
+      "sha256": "d2544f3249286df1a33976eac519499d9e125278d40b503807cbd5fa9ebf3c40"
+    },
+    "noCotArchitecturePredictions": {
+      "name": "no_cot_architecture_elasticity_predictions_2026-07-18.csv",
+      "sha256": "6fda75da4587fcafb72e6a80fe9d0610b28c912012f8996194da5febe8b4c371"
+    },
+    "frontierPrimaryEvidence": {
+      "name": "frontier_primary_evidence_2026-07-18.csv",
+      "sha256": "5ab835b72b154124c0516384ec6f2d8d0b8c3a60d7fd2a0377f2eb22d5f1173e"
+    },
+    "frontierPrimaryMetadata": {
+      "name": "frontier_primary_evidence_collection_metadata_2026-07-18.json",
+      "sha256": "8d5cce1b07e6e1ee0774d7d5803c1469e9ddb38139e90617317ac5c5db321b38"
+    },
+    "frontierPrimaryAudit": {
+      "name": "frontier_primary_evidence_audit_2026-07-18.json",
+      "sha256": "291cc9ab8b0da6859f97b51c75429511eeac3797f923b9eb217e0b4c58254aaa"
+    },
+    "frontierPrimaryControls": {
+      "name": "frontier_primary_evidence_controls_2026-07-18.csv",
+      "sha256": "69029075bed393580261f51d90839125456523b82e66df12c5ab4645190eabe2"
+    },
+    "metrPrimarySignals": {
+      "name": "metr_horizon_official_signals_2026-07-18.csv",
+      "sha256": "05b055467ab579b2c46100ce65bed05108863e64beb4f36d83d0c0b82f0ee85c"
+    },
+    "metrPrimaryRaw": {
+      "name": "metr_benchmark_results_1_1_2026-07-18.yaml",
+      "sha256": "aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9"
+    },
+    "metrPrimaryMetadata": {
+      "name": "metr_horizon_official_metadata_2026-07-18.json",
+      "sha256": "0cc6b5a92f2b1a1928c35751ddd344b1d8c4868f2f3bde203bfc49d3fc8a4d3e"
+    },
+    "metrPrimaryAudit": {
+      "name": "metr_primary_source_audit_2026-07-18.json",
+      "sha256": "e55f22301bdb4e1b90fa3aee7c7ee362b1f2b5e5a1529f5e29083258b5f84404"
+    },
+    "ikpAudit": {
+      "name": "ikp_parameter_signal_audit_2026-07-18.json",
+      "sha256": "75bbf6a3d44a29af0853f9b554d9744260d34e192b96ae73ed2317e7b95eaa7d"
+    },
+    "ikpConditionalAudit": {
+      "name": "ikp_conditional_benchmark_signal_audit_2026-07-18.json",
+      "sha256": "e30e80bfd32fca3f68ed0b88cdd1b69898a145966cdcba49a35e8f71a5f115a7"
+    },
+    "claudeOpus5Evidence": {
+      "name": "claude_opus_5_evidence_2026-07-31.json",
+      "sha256": "f2277d6b2608ba418257eda09b83a198600d466c2d1a1d6c5a56e28f30317ae5"
+    }
+  }
+}

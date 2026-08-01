@@ -1,0 +1,176 @@
+{
+  "anthropic_system_card": {
+    "aeci": {
+      "ci_high": 167.3,
+      "ci_low": 158.0,
+      "n_benchmarks": 40,
+      "point_estimate": 162.1
+    },
+    "aeci_pdf_page": 29,
+    "knowledge_cutoff": "2026-05",
+    "pretraining_statement": "After the pretraining process, Opus 5 underwent rigorous post-training and fine-tuning",
+    "training_pdf_page": 10
+  },
+  "api": {
+    "api_model_id": "claude-opus-5",
+    "context_window_tokens": 1000000,
+    "fast_input_usd_per_mtok": 10,
+    "fast_output_usd_per_mtok": 50,
+    "input_usd_per_mtok": 5,
+    "knowledge_cutoff": "2026-05",
+    "max_output_tokens": 128000,
+    "output_usd_per_mtok": 25,
+    "training_data_cutoff": "2026-05"
+  },
+  "artificial_analysis": {
+    "effort_rows": [
+      {
+        "answer_tokens_total": 4222045,
+        "configuration": "adaptive_reasoning_low_effort",
+        "effort": "low",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+        "output_tokens_per_task": 6066.910553764232,
+        "output_tokens_total": 12077028,
+        "reasoning_tokens_total": 7854983,
+        "score": 50.6136789545909,
+        "slug": "claude-opus-5-low"
+      },
+      {
+        "answer_tokens_total": 7016208,
+        "configuration": "adaptive_reasoning_medium_effort",
+        "effort": "medium",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)",
+        "output_tokens_per_task": 11563.57089954799,
+        "output_tokens_total": 28828062,
+        "reasoning_tokens_total": 21811854,
+        "score": 56.2806227158121,
+        "slug": "claude-opus-5-medium"
+      },
+      {
+        "answer_tokens_total": 10766033,
+        "configuration": "adaptive_reasoning_high_effort",
+        "effort": "high",
+        "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)",
+        "output_tokens_per_task": 19692.05966361633,
+        "output_tokens_total": 52068635,
+        "reasoning_tokens_total": 41302602,
+        "score": 58.8641803200348,
+        "slug": "claude-opus-5-high"
+      },
+      {
+        "answer_tokens_total": 14130784,
+        "configuration": "adaptive_reasoning_xhigh_effort",
+        "effort": "xhigh",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+        "output_tokens_per_task": 28703.16093237427,
+        "output_tokens_total": 76400151,
+        "reasoning_tokens_total": 62269367,
+        "score": 60.0681611916281,
+        "slug": "claude-opus-5-xhigh"
+      },
+      {
+        "answer_tokens_total": 16970956,
+        "configuration": "adaptive_reasoning_max_effort",
+        "effort": "max",
+        "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+        "output_tokens_per_task": 36978.4942537646,
+        "output_tokens_total": 101161732,
+        "reasoning_tokens_total": 84190776,
+        "score": 60.6918740157091,
+        "slug": "claude-opus-5"
+      }
+    ],
+    "selected": {
+      "configuration": "adaptive_reasoning_max_effort",
+      "fallback_model": "Claude Opus 4.8",
+      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+      "output_tokens_total": 101161732,
+      "score": 60.6918740157091,
+      "slug": "claude-opus-5"
+    }
+  },
+  "availability": {
+    "ikp": false,
+    "ikp_basis": "absent from the frozen IKP replication model inventory",
+    "metr": false,
+    "metr_basis": "zero Opus 5 aliases in the frozen official METR-Horizon-v1.1 YAML",
+    "no_cot": false,
+    "no_cot_basis": "released after the frozen No-CoT paper model panel"
+  },
+  "coverage_source_files": {
+    "ikp_model_inventory": "sources/ikp_upstream_models_2026-07-18.json",
+    "no_cot_model_panel": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_measurements_long_compute_enriched_2026-07-17.csv"
+  },
+  "coverage_source_hashes": {
+    "ikp_model_inventory": "73f998fbbd6c2fd3e1fe3b68b6e30a33c5c785d70313b81d473d25bff3653799",
+    "no_cot_model_panel": "7aa31b03e4ba3b9dbef9cfb2a3a0774e437390fa59345a8475a0f50fbdca0868"
+  },
+  "epoch": {
+    "canonical_component_benchmarks": 12,
+    "displayed_eci": 159.38,
+    "eci_ci_high": 162.20640578425878,
+    "eci_ci_low": 157.24933114170264,
+    "eci_exact": 159.3778667882398,
+    "eci_reproduction_method": "official Epoch ECI fit on the frozen canonical component rows",
+    "model_id": "m25",
+    "parameters": null,
+    "published_configuration_rows": 7,
+    "training_compute_flop": null
+  },
+  "identity": {
+    "api_model_id": "claude-opus-5",
+    "base_identity_policy": "unique_base",
+    "canonical_name": "Claude Opus 5",
+    "parameter_disclosed": false,
+    "parameter_status": "unknown; no first-party count and AA/Epoch parameter fields are blank",
+    "release_date": "2026-07-24",
+    "same_weight_identity_disclosed": false,
+    "same_weight_identity_status": "no first-party same-weight identity claim; unique_base is a modeling policy"
+  },
+  "openrouter": {
+    "tiers": {
+      "fast": {
+        "context_window_tokens": 1000000,
+        "id": "anthropic/claude-opus-5-fast",
+        "input_usd_per_mtok": 10,
+        "max_output_tokens": 128000,
+        "name": "Claude Opus 5 (Fast)",
+        "output_usd_per_mtok": 50
+      },
+      "standard": {
+        "context_window_tokens": 1000000,
+        "id": "anthropic/claude-opus-5",
+        "input_usd_per_mtok": 5,
+        "max_output_tokens": 128000,
+        "name": "Claude Opus 5",
+        "output_usd_per_mtok": 25
+      }
+    }
+  },
+  "source_files": {
+    "anthropic_model_overview": "sources/claude_opus_5_anthropic_model_overview_2026-07-31.html.gz",
+    "anthropic_news": "sources/claude_opus_5_anthropic_news_2026-07-31.html.gz",
+    "anthropic_system_card": "sources/claude_opus_5_system_card_2026-07-31.pdf",
+    "anthropic_whats_new": "sources/claude_opus_5_anthropic_whats_new_2026-07-31.html.gz",
+    "artificial_analysis_launch_article": "sources/claude_opus_5_artificial_analysis_article_2026-07-31.html.gz",
+    "artificial_analysis_model_page": "sources/claude_opus_5_artificial_analysis_2026-07-31.html.gz",
+    "epoch_all_ai_models": "sources/epoch_all_ai_models_2026-07-31.csv",
+    "epoch_benchmark_data": "sources/epoch_benchmark_data_2026-07-31.zip",
+    "epoch_eci_benchmarks": "sources/epoch_eci_benchmarks_2026-07-31.csv",
+    "metr_horizon": "sources/metr_benchmark_results_1_1_2026-07-31.yaml",
+    "openrouter_catalog": "sources/claude_opus_5_openrouter_catalog_2026-07-31.json.gz"
+  },
+  "source_hashes": {
+    "anthropic_model_overview": "27d045cd02ff58b131087db93d3b04940cfa5b573de8c9fd9cddbadca96ac2ad",
+    "anthropic_news": "ebec0339c1111b0a08bf206d3947a13763523aeff1e662e218893bf3f8a983ad",
+    "anthropic_system_card": "897768f0f6f1724f3109279ab3f6458c9fbf496b56d5d2be14cab3a4f91ca472",
+    "anthropic_whats_new": "5ded904d8ea2acbfd209b413ab33bf347de049bdb8f3a7988293708bc807d3d6",
+    "artificial_analysis_launch_article": "f7f4be299c0569d8ca27be8cb882738c4628c8c9753002df808e151c43366e28",
+    "artificial_analysis_model_page": "ebda24a4d59535f3499f5cce56bbd038f2293118fa97678fbaa31d0411183983",
+    "epoch_all_ai_models": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579",
+    "epoch_benchmark_data": "cc844ca094e4372ff81eb636f3503317d1d495d4f4c493bd6b7a37dd5f83049c",
+    "epoch_eci_benchmarks": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+    "metr_horizon": "aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9",
+    "openrouter_catalog": "f3083683f2af01788379db7e349d01ef805b2d13b0d020b7f945f691f1f7dfbd"
+  }
+}

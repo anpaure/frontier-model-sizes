@@ -1,0 +1,14 @@
+{
+  "active_record_count": 42,
+  "name_to_id_mapping_retained": false,
+  "numerical_projection_sha256": "c3379b3a09b52e690a3192d9132e6fa395414d37b3b3c24de83225723ed34e21",
+  "prior_artifact_sha256": "0ed93f398ad2f80f8c7b76ce7d7add4b017ab45b53a0f14303d47613ae9ac785",
+  "prior_canonical_payload_sha256": "1d5cbe253bf441578a6f6a504ef52c10a4c6b18834201c8fb3e374637cf6ddc9",
+  "redacted_artifact_path": "forecast_freezes/2026-07-31-frontier-parameters-v1/forecast_freeze.json",
+  "redacted_artifact_sha256": "e859c32aa80a0b6bb0f0afec6654135c5a75f21163d3ea75032f8754a537912d",
+  "redacted_at_utc": "2026-08-01T00:00:00Z",
+  "redacted_canonical_payload_sha256": "5cc0af21e5bbbc333e10e08ba7e92401e7357d539f493bb0697dfbffbfe697d6",
+  "respondent_count": 21,
+  "schema": "poll-respondent-privacy-chain/v1",
+  "transformation": "Replaced respondent labels, name-bearing forecast IDs, personal provenance, and personal notes only; preserved all numerical and scoring fields."
+}

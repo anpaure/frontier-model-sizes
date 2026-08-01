@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "status": "zero-live-weight retrospective challenger",
+    "target": "log10 disclosed total parameters in billions",
+    "baseline": "60% aggregate ECI score-only + 40% aggregate ECI score/date, mixed in log10 parameter space",
+    "challenger": "60% aggregate ECI score-only + 40% aggregate ECI score/date/MoE/reasoning, mixed in log10 parameter space",
+    "outer_split": "strict earlier parameter-label eligibility; whole target developer excluded; equal aggregate weight per training developer",
+    "information_date_policy": "ECI target release date is the information-date proxy because there is no historical aggregate-score publication ledger.",
+    "benchmark_vintage_caveat": "Pseudo-chronological: the current pinned aggregate ECI snapshot is used, not benchmark scores frozen at each historical date.",
+    "selection_caveat": "The fixed 60/40 architecture specification was motivated after examining existing retrospective results; nested selection reduces but does not erase research-selection bias."
+  },
+  "inventory": {
+    "source_eci_rows": 89,
+    "source_lineage_families": 40,
+    "source_developers": 19,
+    "outer_paired_rows": 69,
+    "outer_paired_developers": 13,
+    "source_inventory": {
+      "rows": 89,
+      "families": 40,
+      "min_date": "2023-02-24",
+      "max_date": "2026-07-16"
+    }
+  },
+  "fixed_evaluation": {
+    "all": {
+      "baseline": {
+        "n": 69,
+        "developers": 13,
+        "median_multiplicative_error": 2.535978127194861,
+        "geomean_multiplicative_error": 2.9142081658909094,
+        "mean_absolute_log10_error": 0.4645205707931952,
+        "rmse_log10": 0.5426241943802242,
+        "p80_multiplicative_error": 5.871822876755978,
+        "p90_multiplicative_error": 7.721185172154579,
+        "within_2x": 0.36231884057971014,
+        "signed_bias_factor": 0.8319293411719355
+      },
+      "challenger": {
+        "n": 69,
+        "developers": 13,
+        "median_multiplicative_error": 2.35589748245316,
+        "geomean_multiplicative_error": 2.6899821122859335,
+        "mean_absolute_log10_error": 0.4297493920613885,
+        "rmse_log10": 0.500198036855433,
+        "p80_multiplicative_error": 4.975355000067462,
+        "p90_multiplicative_error": 6.5020258753532865,
+        "within_2x": 0.3333333333333333,
+        "signed_bias_factor": 0.8372233644876188
+      },
+      "baseline_equal_developer_mae": 0.3857854113604579,
+      "challenger_equal_developer_mae": 0.3607269481137756,
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+        "observed_delta": -0.025058463246682258,
+        "ci_90": [
+          -0.04483886536946446,
+          -0.005301234135357137
+        ],
+        "probability_challenger_better": 0.98225,
+        "developers": 13,
+        "samples": 20000,
+        "random_seed": 20260731
+      }
+    },
+    "frontier_like": {
+      "baseline": {
+        "n": 46,
+        "developers": 11,
+        "median_multiplicative_error": 2.547466641322649,
+        "geomean_multiplicative_error": 3.0006763572669306,
+        "mean_absolute_log10_error": 0.4772191564269296,
+        "rmse_log10": 0.5559912478037291,
+        "p80_multiplicative_error": 5.4977388738715325,
+        "p90_multiplicative_error": 7.946632337881523,
+        "within_2x": 0.3695652173913043,
+        "signed_bias_factor": 0.5472195666197017
+      },
+      "challenger": {
+        "n": 46,
+        "developers": 11,
+        "median_multiplicative_error": 2.500716655396755,
+        "geomean_multiplicative_error": 2.766365373490769,
+        "mean_absolute_log10_error": 0.4419095399133631,
+        "rmse_log10": 0.5114326700680905,
+        "p80_multiplicative_error": 4.917327499802022,
+        "p90_multiplicative_error": 5.9729078484496805,
+        "within_2x": 0.30434782608695654,
+        "signed_bias_factor": 0.5792978407873336
+      },
+      "baseline_equal_developer_mae": 0.40518269797286455,
+      "challenger_equal_developer_mae": 0.38165854417835443,
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+        "observed_delta": -0.023524153794510227,
+        "ci_90": [
+          -0.0485611762440828,
+          -0.00015393582421383253
+        ],
+        "probability_challenger_better": 0.9511,
+        "developers": 11,
+        "samples": 20000,
+        "random_seed": 20260732
+      }
+    }
+  },
+  "nested_evaluation": {
+    "selection_counts": {
+      "baseline": 5,
+      "challenger": 52
+    },
+    "selection_rule": "At each outer target, choose the fixed specification with lower equal-developer MAE among eligible earlier outer-fold residuals; exclude the target developer again and break ties toward baseline.",
+    "all": {
+      "baseline": {
+        "n": 57,
+        "developers": 12,
+        "median_multiplicative_error": 2.611863530111947,
+        "geomean_multiplicative_error": 3.073427457129476,
+        "mean_absolute_log10_error": 0.48762296681748246,
+        "rmse_log10": 0.56244502331278,
+        "p80_multiplicative_error": 6.113885239433031,
+        "p90_multiplicative_error": 7.744484773095876,
+        "within_2x": 0.3157894736842105,
+        "signed_bias_factor": 0.7904881270428148
+      },
+      "challenger": {
+        "n": 57,
+        "developers": 12,
+        "median_multiplicative_error": 2.5887674001110343,
+        "geomean_multiplicative_error": 2.8056470788646397,
+        "mean_absolute_log10_error": 0.44803304041250486,
+        "rmse_log10": 0.516347322678342,
+        "p80_multiplicative_error": 5.04237592162172,
+        "p90_multiplicative_error": 6.565306448895915,
+        "within_2x": 0.2807017543859649,
+        "signed_bias_factor": 0.8040812806289729
+      },
+      "baseline_equal_developer_mae": 0.4073528391814906,
+      "challenger_equal_developer_mae": 0.37774387978952023,
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+        "observed_delta": -0.029608959391970422,
+        "ci_90": [
+          -0.05327090522123623,
+          -0.0072149049295086405
+        ],
+        "probability_challenger_better": 0.9854,
+        "developers": 12,
+        "samples": 20000,
+        "random_seed": 20260733
+      }
+    },
+    "frontier_like": {
+      "baseline": {
+        "n": 42,
+        "developers": 10,
+        "median_multiplicative_error": 2.6379827476990187,
+        "geomean_multiplicative_error": 3.1255930538203374,
+        "mean_absolute_log10_error": 0.494932433060966,
+        "rmse_log10": 0.5703087360871495,
+        "p80_multiplicative_error": 5.674267045121668,
+        "p90_multiplicative_error": 8.088842888481388,
+        "within_2x": 0.3333333333333333,
+        "signed_bias_factor": 0.49828367865840384
+      },
+      "challenger": {
+        "n": 42,
+        "developers": 10,
+        "median_multiplicative_error": 2.5955414013231586,
+        "geomean_multiplicative_error": 2.8748635155953233,
+        "mean_absolute_log10_error": 0.4586172313453627,
+        "rmse_log10": 0.5250100058929033,
+        "p80_multiplicative_error": 5.04237592162172,
+        "p90_multiplicative_error": 6.382446443884707,
+        "within_2x": 0.2619047619047619,
+        "signed_bias_factor": 0.5332494395613645
+      },
+      "baseline_equal_developer_mae": 0.4366142366052522,
+      "challenger_equal_developer_mae": 0.41333057736810697,
+      "paired_developer_bootstrap": {
+        "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+        "observed_delta": -0.023283659237145343,
+        "ci_90": [
+          -0.0503509211298583,
+          0.00272746308210915
+        ],
+        "probability_challenger_better": 0.92855,
+        "developers": 10,
+        "samples": 20000,
+        "random_seed": 20260734
+      }
+    }
+  },
+  "anchor_checks": {
+    "kimi_k3": {
+      "model": "Kimi K3",
+      "release_date": "2026-07-16",
+      "disclosed_total_b": 2780.0,
+      "disclosed_active_b": 104.2,
+      "actual_parameter_source": "Kimi K3 official technical report Table 1",
+      "moe_observed": true,
+      "reasoning_flag_used": 1,
+      "target_developer_excluded": true,
+      "train_max_eligibility_date": "2026-06-16",
+      "baseline_predicted_b": 443.03370752404993,
+      "baseline_multiplicative_error": 6.274917580281605,
+      "challenger_predicted_b": 416.0912378970517,
+      "challenger_multiplicative_error": 6.681226968513624,
+      "error_relative_to_baseline": 1.0647513506008128,
+      "status": "retrospective current-score anchor; parameter truth is hidden from fitting, but this is not a frozen prospective forecast"
+    },
+    "grok_4_5": {
+      "model": "Grok 4.5",
+      "release_date": "2026-07-08",
+      "eci_score": 153.60935822710232,
+      "disclosed_total_b": 1500.0,
+      "actual_parameter_source": "pure; disclosed 1.5T total",
+      "target_developer": "xAI",
+      "target_developer_excluded": true,
+      "train_n": 88,
+      "train_developers": 19,
+      "train_max_eligibility_date": "2026-06-16",
+      "score_only_coefficients": [
+        -2.0097118687373468,
+        0.03091175959948611
+      ],
+      "score_date_coefficients": [
+        -2.5089060682376476,
+        0.036813089436743,
+        -0.12854354846012545
+      ],
+      "baseline_predicted_b": 525.7665879612321,
+      "baseline_multiplicative_error": 2.8529770326725363,
+      "target_architecture_observed": false,
+      "target_architecture_note": "No independently observed MoE/reasoning classification is available; the challenger is reported as a four-scenario sensitivity.",
+      "scenario_predictions": [
+        {
+          "moe": 0,
+          "reasoning": 0,
+          "architecture_observed": false,
+          "predicted_b": 243.51485366340728,
+          "multiplicative_error": 6.1597885198138265,
+          "error_relative_to_baseline": 2.1590739950835225,
+          "architecture_coefficients": [
+            -1.9187170459396508,
+            0.03220980201500173,
+            -0.33300100087394013,
+            0.8939751784993311,
+            -0.1355623214863781
+          ]
+        },
+        {
+          "moe": 0,
+          "reasoning": 1,
+          "architecture_observed": false,
+          "predicted_b": 214.93172704763532,
+          "multiplicative_error": 6.978960345242817,
+          "error_relative_to_baseline": 2.4462027788233724,
+          "architecture_coefficients": [
+            -1.9187170459396508,
+            0.03220980201500173,
+            -0.33300100087394013,
+            0.8939751784993311,
+            -0.1355623214863781
+          ]
+        },
+        {
+          "moe": 1,
+          "reasoning": 0,
+          "architecture_observed": false,
+          "predicted_b": 554.7732707684183,
+          "multiplicative_error": 2.703807265123543,
+          "error_relative_to_baseline": 0.9477143468591971,
+          "architecture_coefficients": [
+            -1.9187170459396508,
+            0.03220980201500173,
+            -0.33300100087394013,
+            0.8939751784993311,
+            -0.1355623214863781
+          ]
+        },
+        {
+          "moe": 1,
+          "reasoning": 1,
+          "architecture_observed": false,
+          "predicted_b": 489.6554580236656,
+          "multiplicative_error": 3.063378494858937,
+          "error_relative_to_baseline": 1.073748039250532,
+          "architecture_coefficients": [
+            -1.9187170459396508,
+            0.03220980201500173,
+            -0.33300100087394013,
+            0.8939751784993311,
+            -0.1355623214863781
+          ]
+        }
+      ],
+      "working_assumption": {
+        "moe": 1,
+        "reasoning": 1,
+        "not_an_observation": true,
+        "predicted_b": 489.6554580236656,
+        "multiplicative_error": 3.063378494858937,
+        "error_relative_to_baseline": 1.073748039250532
+      }
+    }
+  },
+  "live_target_applicability": [
+    {
+      "model": "Claude Opus 5",
+      "release_date": "2026-07-24",
+      "moe": null,
+      "reasoning": null,
+      "architecture_observed": false,
+      "status": "target architecture unobserved"
+    },
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "moe": null,
+      "reasoning": null,
+      "architecture_observed": false,
+      "status": "target architecture unobserved"
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "moe": null,
+      "reasoning": null,
+      "architecture_observed": false,
+      "status": "target architecture unobserved"
+    }
+  ],
+  "promotion_gates": {
+    "policy": {
+      "fixed_all_minimum": {
+        "rows": 60,
+        "developers": 12
+      },
+      "fixed_frontier_minimum": {
+        "rows": 30,
+        "developers": 8
+      },
+      "nested_all_minimum": {
+        "rows": 50,
+        "developers": 10
+      },
+      "nested_frontier_minimum": {
+        "rows": 30,
+        "developers": 8
+      },
+      "statistical": "Developer-cluster 90% CI upper bound must be below zero for fixed and nested evaluations, both all-model and frontier-like.",
+      "metric_bundle": "Median multiplicative error, MAE, RMSE, and p80 must be no higher, and within-2x accuracy no lower, in every cohort.",
+      "anchor_tolerance": 1.1,
+      "applicability": "MoE and reasoning status must be independently observed for every live target before architecture coefficients may be used.",
+      "prospective_minimum": {
+        "new_developer_disclosures": 3,
+        "frontier_like_disclosures": 2
+      }
+    },
+    "results": {
+      "fixed_all_coverage": true,
+      "fixed_frontier_coverage": true,
+      "nested_all_coverage": true,
+      "nested_frontier_coverage": true,
+      "fixed_all_ci_wholly_favorable": true,
+      "fixed_frontier_ci_wholly_favorable": true,
+      "nested_all_ci_wholly_favorable": true,
+      "nested_frontier_ci_wholly_favorable": false,
+      "fixed_all_metrics_non_worse": false,
+      "fixed_frontier_metrics_non_worse": false,
+      "nested_all_metrics_non_worse": false,
+      "nested_frontier_metrics_non_worse": false,
+      "k3_anchor_within_10pct_of_baseline_error": true,
+      "grok_working_assumption_within_10pct_of_baseline_error": true,
+      "live_target_architectures_observed": false,
+      "prospective_disclosures_at_least_3": false,
+      "prospective_frontier_disclosures_at_least_2": false
+    },
+    "failed_gates": [
+      "fixed_all_metrics_non_worse",
+      "fixed_frontier_metrics_non_worse",
+      "live_target_architectures_observed",
+      "nested_all_metrics_non_worse",
+      "nested_frontier_ci_wholly_favorable",
+      "nested_frontier_metrics_non_worse",
+      "prospective_disclosures_at_least_3",
+      "prospective_frontier_disclosures_at_least_2"
+    ],
+    "all_pass": false
+  },
+  "decision": {
+    "promote_to_live_eci": false,
+    "incremental_live_weight": 0.0,
+    "change_live_weights": false,
+    "change_central_forecasts": false,
+    "preserve_as_challenger": true,
+    "reason": "The overall retrospective error reduction is real enough to preserve, but frontier uncertainty crosses zero, within-2x accuracy deteriorates, target architecture is unobserved, and no prospective disclosures exist."
+  },
+  "source_files": {
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "sources/aa_parameter_label_availability_2026-07-31.json": "ddcb74ba7234af648d6712be4c24ac23cb185f388d61844f39aabecdc9a7d845",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "run_parameter_backtest.py": "679d0bdb5b97322a5558613896d9d0927632bfa210dd6b2eb4816207977ff996",
+    "analyze_parameter_vintage_sensitivity.py": "5156d8a17d69d291d8463b9b2a584b62537e4c6268f739e373ecb283bad756a2",
+    "aa_calibration_overrides.py": "51476775f34149195dc13a4a2e3472bfbe37607e87a7f3473c7368aa6871d786",
+    "aa_parameter_label_availability.py": "b2787dab4953c6585c1cfead7a316c18e1b37cf6ccb93cf446713ef44f0e5794",
+    "k3_primary_evidence.py": "f1101faba0786e83161c354f884d8593da16c4f2a5d7b1b18dd27c852477ff1a"
+  }
+}

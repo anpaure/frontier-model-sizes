@@ -1,0 +1,585 @@
+{
+  "generated_on": "2026-07-31",
+  "question": "Does the Epoch employee's eight-row calibration critique justify replacing the live aggregate benchmark branch with a lean architecture-aware model?",
+  "feedback_reproduction": {
+    "rows": 8,
+    "historical_sheet_scores_preserved": true,
+    "current_aa_scores_within_0_06": true,
+    "current_eci_aggregate_coverage": 7,
+    "current_eci_scores_within_0_06_where_available": false,
+    "all_parameter_labels_match_current_epoch_or_eci": true,
+    "all_displayed_formula_outputs_reproduced": true,
+    "metrics": {
+      "all_rows": {
+        "n": 8,
+        "median_multiplicative_error": 3.227891669081968,
+        "geomean_multiplicative_error": 2.7069309020996086,
+        "mean_absolute_log10_error": 0.4324771699855582,
+        "rmse_log10": 0.49083916006522316,
+        "p80_multiplicative_error": 3.922325292110239,
+        "within_2x": 0.25,
+        "signed_bias_factor": 0.8194426027325946
+      },
+      "by_architecture": {
+        "MoE": {
+          "n": 5,
+          "median_multiplicative_error": 2.050466652692643,
+          "geomean_multiplicative_error": 2.005399424262343,
+          "mean_absolute_log10_error": 0.30220088592216493,
+          "rmse_log10": 0.3572306407950796,
+          "p80_multiplicative_error": 3.181580179299626,
+          "within_2x": 0.4,
+          "signed_bias_factor": 0.4986537783453466
+        },
+        "Dense": {
+          "n": 3,
+          "median_multiplicative_error": 4.09907581951265,
+          "geomean_multiplicative_error": 4.462767997482259,
+          "mean_absolute_log10_error": 0.6496043100912136,
+          "rmse_log10": 0.6555699796904355,
+          "p80_multiplicative_error": 5.103316595536261,
+          "within_2x": 0.0,
+          "signed_bias_factor": 1.8752143346231256
+        }
+      },
+      "independent_base_clusters": 6,
+      "equal_base_mean_absolute_log10_error": 0.5218399457984673,
+      "equal_base_geomean_multiplicative_error": 3.325369780565573,
+      "selection_caveat": "The eight rows were selected after the live formulas were known; three Kimi rows share one lineage. Treat this as a structural model check, not an iid holdout."
+    }
+  },
+  "architecture_panel": {
+    "rows": 89,
+    "families": 40,
+    "moe_rows": 29,
+    "dense_rows": 60,
+    "chronological_predictions": 69
+  },
+  "heldout_metrics": {
+    "active_then_date_sparsity": {
+      "all": {
+        "n": 63,
+        "median_multiplicative_error": 2.314630457238568,
+        "geomean_multiplicative_error": 2.4723237438144494,
+        "mean_absolute_log10_error": 0.3931053397768783,
+        "rmse_log10": 0.48184345830356357,
+        "p80_multiplicative_error": 4.298003757155781,
+        "within_2x": 0.4603174603174603,
+        "signed_bias_factor": 0.9788954010151539
+      },
+      "moe": {
+        "n": 23,
+        "median_multiplicative_error": 2.4173743583417857,
+        "geomean_multiplicative_error": 2.608442903133476,
+        "mean_absolute_log10_error": 0.41638133478066486,
+        "rmse_log10": 0.5089116775895123,
+        "p80_multiplicative_error": 4.3585046840845525,
+        "within_2x": 0.43478260869565216,
+        "signed_bias_factor": 1.4516033516114486
+      },
+      "dense": {
+        "n": 40,
+        "median_multiplicative_error": 2.1174406014144664,
+        "geomean_multiplicative_error": 2.397295900107541,
+        "mean_absolute_log10_error": 0.3797216426497011,
+        "rmse_log10": 0.46556716097212403,
+        "p80_multiplicative_error": 3.707388925940186,
+        "within_2x": 0.475,
+        "signed_bias_factor": 0.7804535771441162
+      },
+      "frontier_like": {
+        "n": 40,
+        "median_multiplicative_error": 2.4679840980036807,
+        "geomean_multiplicative_error": 2.48107415554626,
+        "mean_absolute_log10_error": 0.39463974487005427,
+        "rmse_log10": 0.47504222724714334,
+        "p80_multiplicative_error": 4.270305069849787,
+        "within_2x": 0.425,
+        "signed_bias_factor": 0.9779283199579796
+      }
+    },
+    "architecture_score_date_moe": {
+      "all": {
+        "n": 69,
+        "median_multiplicative_error": 2.2765218965919845,
+        "geomean_multiplicative_error": 2.5032746088049036,
+        "mean_absolute_log10_error": 0.39850849425342966,
+        "rmse_log10": 0.4726155678155859,
+        "p80_multiplicative_error": 3.9013039507752696,
+        "within_2x": 0.43478260869565216,
+        "signed_bias_factor": 0.7379475782095185
+      },
+      "moe": {
+        "n": 29,
+        "median_multiplicative_error": 2.803951058847188,
+        "geomean_multiplicative_error": 2.6448869209180215,
+        "mean_absolute_log10_error": 0.4224071090097227,
+        "rmse_log10": 0.4828220464363545,
+        "p80_multiplicative_error": 3.5239234393353476,
+        "within_2x": 0.3793103448275862,
+        "signed_bias_factor": 0.593018827509038
+      },
+      "dense": {
+        "n": 40,
+        "median_multiplicative_error": 2.160493937849524,
+        "geomean_multiplicative_error": 2.405370600650372,
+        "mean_absolute_log10_error": 0.38118199855511725,
+        "rmse_log10": 0.46507582832665767,
+        "p80_multiplicative_error": 3.989608732055253,
+        "within_2x": 0.475,
+        "signed_bias_factor": 0.8647077643026071
+      },
+      "frontier_like": {
+        "n": 46,
+        "median_multiplicative_error": 2.455294748395888,
+        "geomean_multiplicative_error": 2.556057713276411,
+        "mean_absolute_log10_error": 0.40757065554055233,
+        "rmse_log10": 0.47236416561671507,
+        "p80_multiplicative_error": 3.3225747052939916,
+        "within_2x": 0.3695652173913043,
+        "signed_bias_factor": 0.6189358973670296
+      }
+    },
+    "architecture_score_date_moe_reasoning": {
+      "all": {
+        "n": 69,
+        "median_multiplicative_error": 2.3157866263181512,
+        "geomean_multiplicative_error": 2.530260706916598,
+        "mean_absolute_log10_error": 0.40316527127148705,
+        "rmse_log10": 0.4762296349582585,
+        "p80_multiplicative_error": 3.994620875651571,
+        "within_2x": 0.391304347826087,
+        "signed_bias_factor": 0.7156156111146614
+      },
+      "moe": {
+        "n": 29,
+        "median_multiplicative_error": 2.4751242520170633,
+        "geomean_multiplicative_error": 2.7164588239995995,
+        "mean_absolute_log10_error": 0.4340031263970574,
+        "rmse_log10": 0.4915953832656095,
+        "p80_multiplicative_error": 3.7754887877670487,
+        "within_2x": 0.27586206896551724,
+        "signed_bias_factor": 0.5518626547749322
+      },
+      "dense": {
+        "n": 40,
+        "median_multiplicative_error": 2.1490464136379193,
+        "geomean_multiplicative_error": 2.4032991137576882,
+        "mean_absolute_log10_error": 0.38080782630544857,
+        "rmse_log10": 0.46477191435872794,
+        "p80_multiplicative_error": 3.989608732055253,
+        "within_2x": 0.475,
+        "signed_bias_factor": 0.8639630845433756
+      },
+      "frontier_like": {
+        "n": 46,
+        "median_multiplicative_error": 2.394533534979995,
+        "geomean_multiplicative_error": 2.592091979874864,
+        "mean_absolute_log10_error": 0.41365040832639016,
+        "rmse_log10": 0.4781245195415658,
+        "p80_multiplicative_error": 3.5280181408204685,
+        "within_2x": 0.30434782608695654,
+        "signed_bias_factor": 0.5898229956592522
+      }
+    },
+    "lean_score_only": {
+      "all": {
+        "n": 69,
+        "median_multiplicative_error": 2.7161241168367076,
+        "geomean_multiplicative_error": 2.753607910413112,
+        "mean_absolute_log10_error": 0.4399021006025399,
+        "rmse_log10": 0.5182653636159287,
+        "p80_multiplicative_error": 5.5090145842145,
+        "within_2x": 0.391304347826087,
+        "signed_bias_factor": 1.0722388784190673
+      },
+      "moe": {
+        "n": 29,
+        "median_multiplicative_error": 3.2003650953860436,
+        "geomean_multiplicative_error": 2.857513385352917,
+        "mean_absolute_log10_error": 0.45598827342297815,
+        "rmse_log10": 0.52258364480879,
+        "p80_multiplicative_error": 5.54678010500978,
+        "within_2x": 0.3793103448275862,
+        "signed_bias_factor": 0.44911134599063735
+      },
+      "dense": {
+        "n": 40,
+        "median_multiplicative_error": 2.6353194763485104,
+        "geomean_multiplicative_error": 2.6806469843619585,
+        "mean_absolute_log10_error": 0.4282396253077222,
+        "rmse_log10": 0.5151119733301939,
+        "p80_multiplicative_error": 5.157773704068525,
+        "within_2x": 0.4,
+        "signed_bias_factor": 2.015098384247718
+      },
+      "frontier_like": {
+        "n": 46,
+        "median_multiplicative_error": 2.289025162318089,
+        "geomean_multiplicative_error": 2.601550857030848,
+        "mean_absolute_log10_error": 0.4152323202232052,
+        "rmse_log10": 0.49386318726587136,
+        "p80_multiplicative_error": 5.50109844180981,
+        "within_2x": 0.4782608695652174,
+        "signed_bias_factor": 0.6678366902480056
+      }
+    },
+    "live_eci_60_40": {
+      "all": {
+        "n": 69,
+        "median_multiplicative_error": 2.5962758629332074,
+        "geomean_multiplicative_error": 2.7496145059255612,
+        "mean_absolute_log10_error": 0.43927181030854345,
+        "rmse_log10": 0.5122751098854377,
+        "p80_multiplicative_error": 5.579796226324883,
+        "within_2x": 0.4057971014492754,
+        "signed_bias_factor": 0.892676214319607
+      },
+      "moe": {
+        "n": 29,
+        "median_multiplicative_error": 3.6374306887584593,
+        "geomean_multiplicative_error": 3.1071817712821495,
+        "mean_absolute_log10_error": 0.4923666603858676,
+        "rmse_log10": 0.5595069682848265,
+        "p80_multiplicative_error": 6.200979696252556,
+        "within_2x": 0.3103448275862069,
+        "signed_bias_factor": 0.39790941880313535
+      },
+      "dense": {
+        "n": 40,
+        "median_multiplicative_error": 2.354943025320115,
+        "geomean_multiplicative_error": 2.5163905408845033,
+        "mean_absolute_log10_error": 0.40077804400248346,
+        "rmse_log10": 0.47510488334530954,
+        "p80_multiplicative_error": 4.698605778031349,
+        "within_2x": 0.475,
+        "signed_bias_factor": 1.603627617998166
+      },
+      "frontier_like": {
+        "n": 46,
+        "median_multiplicative_error": 2.3899893518704016,
+        "geomean_multiplicative_error": 2.7401857564672985,
+        "mean_absolute_log10_error": 0.4377800045263233,
+        "rmse_log10": 0.5138604353665482,
+        "p80_multiplicative_error": 4.809522764584698,
+        "within_2x": 0.41304347826086957,
+        "signed_bias_factor": 0.5897008437323213
+      }
+    }
+  },
+  "paired_family_bootstraps_vs_live_eci": {
+    "active_then_date_sparsity": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 63,
+      "families": 30,
+      "observed_delta": 0.00793683639684761,
+      "ci_90": [
+        -0.08241936679862073,
+        0.10188677777502014
+      ],
+      "probability_candidate_better": 0.4463,
+      "samples": 20000,
+      "random_seed": 20260721
+    },
+    "architecture_score_date_moe": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 69,
+      "families": 32,
+      "observed_delta": -0.03313762004815207,
+      "ci_90": [
+        -0.10313308947019285,
+        0.03654390866472954
+      ],
+      "probability_candidate_better": 0.78385,
+      "samples": 20000,
+      "random_seed": 20260722
+    },
+    "architecture_score_date_moe_reasoning": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 69,
+      "families": 32,
+      "observed_delta": -0.034424521552404455,
+      "ci_90": [
+        -0.10137275867675291,
+        0.032195154244959875
+      ],
+      "probability_candidate_better": 0.80295,
+      "samples": 20000,
+      "random_seed": 20260723
+    },
+    "lean_score_only": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 69,
+      "families": 32,
+      "observed_delta": 0.01049273480316168,
+      "ci_90": [
+        -0.010018052831033932,
+        0.030477116064050503
+      ],
+      "probability_candidate_better": 0.19785,
+      "samples": 20000,
+      "random_seed": 20260724
+    }
+  },
+  "paired_moe_family_bootstraps_vs_live_eci": {
+    "active_then_date_sparsity": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 23,
+      "families": 9,
+      "observed_delta": 0.09844576038854994,
+      "ci_90": [
+        -0.09747378379477623,
+        0.29535728453491544
+      ],
+      "probability_candidate_better": 0.2075,
+      "samples": 20000,
+      "random_seed": 20260821
+    },
+    "architecture_score_date_moe": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 29,
+      "families": 11,
+      "observed_delta": -0.02909250282718716,
+      "ci_90": [
+        -0.1299302205764784,
+        0.06896534172231097
+      ],
+      "probability_candidate_better": 0.6828,
+      "samples": 20000,
+      "random_seed": 20260822
+    },
+    "architecture_score_date_moe_reasoning": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 29,
+      "families": 11,
+      "observed_delta": -0.03548168409763841,
+      "ci_90": [
+        -0.1306144811573453,
+        0.0499267405370676
+      ],
+      "probability_candidate_better": 0.73295,
+      "samples": 20000,
+      "random_seed": 20260823
+    },
+    "lean_score_only": {
+      "metric": "equal-family mean absolute log10 error; candidate minus live ECI",
+      "paired_rows": 29,
+      "families": 11,
+      "observed_delta": -0.027773732444701302,
+      "ci_90": [
+        -0.05567333874912068,
+        0.002021334017748274
+      ],
+      "probability_candidate_better": 0.9385,
+      "samples": 20000,
+      "random_seed": 20260824
+    }
+  },
+  "target_sensitivity": [
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "specification": "architecture_score_date_moe",
+      "predicted_t": 0.8698476408517399,
+      "train_n": 86,
+      "train_families": 40,
+      "train_max_date": "2026-04-24",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.716735357068591, 0.0404526481571146, -0.4296288893527239, 0.6305134050207946]",
+      "disclosed_total_t": null,
+      "current_live_eci_t": 3.088586862826356
+    },
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "specification": "architecture_score_date_moe_reasoning",
+      "predicted_t": 0.8265813026175913,
+      "train_n": 86,
+      "train_families": 40,
+      "train_max_date": "2026-04-24",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.698384404806257, 0.03992505941425941, -0.3956352552927319, 0.6725321772813238, -0.11453130019158225]",
+      "disclosed_total_t": null,
+      "current_live_eci_t": 3.088586862826356
+    },
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "specification": "active_then_date_sparsity",
+      "predicted_t": 1.2017156616352058,
+      "train_n": 86,
+      "train_families": 40,
+      "train_max_date": "2026-04-24",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.2221416590014043, 0.03755061298394483, -0.6178402849572834, 0.6285220925218981, 0.2214460338277413]",
+      "disclosed_total_t": null,
+      "current_live_eci_t": 3.088586862826356
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "specification": "architecture_score_date_moe",
+      "predicted_t": 0.8985014669584164,
+      "train_n": 88,
+      "train_families": 40,
+      "train_max_date": "2026-06-16",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.6902377587645394, 0.04005585053298624, -0.41520655195033096, 0.6266345118802166]",
+      "disclosed_total_t": null,
+      "current_live_eci_t": 3.378210011120845
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "specification": "architecture_score_date_moe_reasoning",
+      "predicted_t": 0.8600291121597848,
+      "train_n": 88,
+      "train_families": 40,
+      "train_max_date": "2026-06-16",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.672390516583675, 0.039546522199092445, -0.38250852482439046, 0.6666023305940416, -0.10948774230740507]",
+      "disclosed_total_t": null,
+      "current_live_eci_t": 3.378210011120845
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "specification": "active_then_date_sparsity",
+      "predicted_t": 1.2350639967245431,
+      "train_n": 88,
+      "train_families": 40,
+      "train_max_date": "2026-06-16",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.212479854678768, 0.0373682504686067, -0.6093918280687286, 0.6311130621138704, 0.21993066793656027]",
+      "disclosed_total_t": null,
+      "current_live_eci_t": 3.378210011120845
+    },
+    {
+      "model": "Grok 4.5",
+      "release_date": "2026-07-08",
+      "specification": "architecture_score_date_moe",
+      "predicted_t": 0.42631730664231415,
+      "train_n": 88,
+      "train_families": 40,
+      "train_max_date": "2026-06-16",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.6902377587645394, 0.04005585053298624, -0.41520655195033096, 0.6266345118802166]",
+      "disclosed_total_t": 1.5,
+      "current_live_eci_t": 1.3090579803054672,
+      "candidate_anchor_error_x": 3.5185059968924035,
+      "current_eci_anchor_error_x": 1.1458621562736104
+    },
+    {
+      "model": "Grok 4.5",
+      "release_date": "2026-07-08",
+      "specification": "architecture_score_date_moe_reasoning",
+      "predicted_t": 0.4118787078169565,
+      "train_n": 88,
+      "train_families": 40,
+      "train_max_date": "2026-06-16",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.672390516583675, 0.039546522199092445, -0.38250852482439046, 0.6666023305940416, -0.10948774230740507]",
+      "disclosed_total_t": 1.5,
+      "current_live_eci_t": 1.3090579803054672,
+      "candidate_anchor_error_x": 3.6418488538781584,
+      "current_eci_anchor_error_x": 1.1458621562736104
+    },
+    {
+      "model": "Grok 4.5",
+      "release_date": "2026-07-08",
+      "specification": "active_then_date_sparsity",
+      "predicted_t": 0.6160759532861961,
+      "train_n": 88,
+      "train_families": 40,
+      "train_max_date": "2026-06-16",
+      "target_family_excluded": true,
+      "coefficients_json": "[-2.212479854678768, 0.0373682504686067, -0.6093918280687286, 0.6311130621138704, 0.21993066793656027]",
+      "disclosed_total_t": 1.5,
+      "current_live_eci_t": 1.3090579803054672,
+      "candidate_anchor_error_x": 2.4347647266524293,
+      "current_eci_anchor_error_x": 1.1458621562736104
+    }
+  ],
+  "promotion_gates": {
+    "minimum_paired_rows": 60,
+    "minimum_paired_families": 25,
+    "minimum_moe_paired_rows": 20,
+    "minimum_moe_paired_families": 8,
+    "maximum_ci90_upper": 0.0,
+    "maximum_grok_error_relative_to_current": 1.1,
+    "architecture_candidate": {
+      "coverage_pass": true,
+      "all_family_interval_pass": false,
+      "moe_coverage_pass": true,
+      "moe_family_interval_pass": false,
+      "grok_anchor_pass": false,
+      "all_gates_pass": false
+    },
+    "active_sparsity_candidate": {
+      "coverage_pass": true,
+      "all_family_interval_pass": false,
+      "moe_coverage_pass": true,
+      "moe_family_interval_pass": false,
+      "grok_anchor_pass": false,
+      "all_gates_pass": false
+    }
+  },
+  "less_is_more_component_evidence": {
+    "all_total_baseline_median_error_x": 2.315786626319492,
+    "all_total_candidate_median_error_x": 2.099527327992388,
+    "all_total_family_ci90": [
+      -0.049602088374417576,
+      0.0034617375425749415
+    ],
+    "frontier_total_baseline_median_error_x": 3.528018140820862,
+    "frontier_total_candidate_median_error_x": 2.3999136001789423,
+    "frontier_total_family_ci90": [
+      -0.0961723487322598,
+      -0.023087510588051474
+    ],
+    "selected_target_feature_sets": {
+      "Claude Fable 5": "knowledge_only",
+      "GPT-5.6 Sol": "knowledge_only"
+    },
+    "promotion_decision": {
+      "promote_multivariate_component_branch": false,
+      "incremental_live_weight": 0.0,
+      "change_headline_forecasts": false,
+      "reason": "The nested component model is retained as a zero-weight diagnostic because at least one predeclared narrow-ECI-CI, interval, coverage, or frontier gate fails."
+    }
+  },
+  "presentation_layer_separation": {
+    "final_site_consumed": false,
+    "reason": "This upstream architecture audit intentionally excludes the final site/workbook. Price-removal display sensitivity belongs to a downstream presentation audit and cannot be an input to a workbook that hashes this result."
+  },
+  "decision": {
+    "change_live_model": false,
+    "promote_architecture_candidate": false,
+    "promote_active_sparsity_candidate": false,
+    "incremental_live_weight": 0.0,
+    "reason": "The critique correctly identifies architecture- and efficiency-structured residuals, and MoE-aware candidates improve several point metrics. Neither candidate passes the complete coverage, family-bootstrap, MoE-subset, and disclosed-Grok frontier-anchor gates. The knowledge-only component branch remains promising but lacks stable target coverage.",
+    "next_model": "Prioritize a preregistered active-parameter plus sparsity model and a small knowledge-only benchmark set; collect prospective target coverage before changing central forecasts."
+  },
+  "limitations": [
+    "The employee sheet is a hand-selected structural check, not a random or prospective holdout.",
+    "Three of five MoE rows share the Kimi K2 lineage and must not be counted independently.",
+    "Dense rows include both a very large inefficient model and small efficient models; a binary MoE flag is insufficient.",
+    "Target MoE/reasoning flags are working assumptions rather than public architecture disclosures.",
+    "Current benchmark snapshots are not release-vintage historical measurements."
+  ],
+  "source_files": {
+    "sources/epoch_employee_calibration_feedback_2026-07-21.csv": "9dbebf5288d2e9cda3734caa4e3a4d0e60eb80459d7b5c766331a6a774849d17",
+    "sources/epoch_employee_calibration_feedback_exact_inputs_2026-07-21.csv": "ba2eaaf40404091b8c2cdb6dbdb1341ac8c8a36041ecb0f4e29d6fa1fabea376",
+    "sources/epoch_all_ai_models_2026-07-31.csv": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b",
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_chronological_backtest_2026-07-17.json": "7ae67d3d92cfe72771cf460a8ef254cd73f3be775e618124e7ddbca7f170088c",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_audit_2026-07-18.json": "9850d8433084132689e04ed2d71c1015e2acaf692cf1eceb45440cc7fecb087f",
+    "sources/open_model_parameter_truth_reconciliation_2026-07-31.json": "cbfc667c884f88d7a4456efde5a47f24ca6ca481f0e30a67cbfcc419c7c0ad89"
+  },
+  "outputs": {
+    "critique_panel": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_feedback_critique_panel_2026-07-21.csv",
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/lean_architecture_predictions_2026-07-21.csv",
+    "target_sensitivity": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/lean_architecture_target_sensitivity_2026-07-21.csv"
+  }
+}

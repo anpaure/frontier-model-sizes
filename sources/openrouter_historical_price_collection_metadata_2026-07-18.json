@@ -1,0 +1,51 @@
+{
+  "collection_mode": "frozen offline rebuild",
+  "compatibility_filename_date": "2026-07-18",
+  "files": {
+    "sources/openrouter_historical_price_change_points_2026-07-18.csv": {
+      "sha256": "0107a6abde7b2eed1ab268c0c696ff21a7c235c83775ccfb315d0d3747502575"
+    },
+    "sources/openrouter_historical_price_ledger_2026-07-18.json.gz": {
+      "sha256": "046a540d27cecfd3de741e46ce13c3a7eba8c570b42dd363a27144fd75e7926d",
+      "uncompressed_sha256": "d572cdb4b64b0b4ed878e570490b937666a09b49f5cef1199dc8869825473acc"
+    }
+  },
+  "generated_on": "2026-07-31",
+  "integrity_policy": {
+    "all_change_points_preserved": true,
+    "all_models_preserved": true,
+    "free_and_unavailable_prices_retained_but_not_log_modeled": true,
+    "full_upstream_git_history_rebuild_matches_frozen_ledger": true,
+    "negative_prices_allowed": false,
+    "network_in_frozen_pipeline": false,
+    "raw_payload_preserved_losslessly": true,
+    "same_day_changes_preserved_in_order": true
+  },
+  "inventory": {
+    "as_of": "2026-07-31",
+    "first_snapshot_date": "2024-09-21",
+    "models": 914,
+    "present_now_models": 363,
+    "price_change_points": 2566,
+    "price_status_counts": {
+      "free_or_partly_free": 226,
+      "priced": 2335,
+      "unavailable": 5
+    },
+    "same_day_additional_change_points": 80
+  },
+  "source": {
+    "full_git_history_rebuild_sha256": "d572cdb4b64b0b4ed878e570490b937666a09b49f5cef1199dc8869825473acc",
+    "full_git_history_rebuild_snapshot_count": 1062,
+    "full_git_history_rebuild_verified_on": "2026-07-31",
+    "license": "MIT",
+    "pinned_commit": "1cd0e2ec5fccb271df9d1140abc91aaf20b3e878",
+    "raw_endpoint_used_by_upstream": "https://openrouter.ai/api/v1/models",
+    "raw_ledger_sha256": "d572cdb4b64b0b4ed878e570490b937666a09b49f5cef1199dc8869825473acc",
+    "raw_ledger_url": "https://raw.githubusercontent.com/jvrck/openrouterlist/1cd0e2ec5fccb271df9d1140abc91aaf20b3e878/data/history/prices.json",
+    "repository": "https://github.com/jvrck/openrouterlist",
+    "upstream_collection_schedule": "official public endpoint fetched at approximately 00:00 and 12:00 UTC",
+    "upstream_git_blob": "2e00573a582c7c669f6d7e8d98dc8555397cf4ea",
+    "upstream_output_snapshot_commits": 1062
+  }
+}

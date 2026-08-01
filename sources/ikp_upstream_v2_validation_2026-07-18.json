@@ -1,0 +1,28 @@
+{
+  "calibration": {
+    "lambda": 0.0,
+    "slope": 0.1492220805913925,
+    "intercept": 0.21805265070118698
+  },
+  "check1_max_accuracy_diff": 0.0,
+  "check2_calibration": {
+    "n": 93,
+    "refit_slope": 0.15878383971801147,
+    "refit_intercept": 0.2422558751472918,
+    "refit_r2": 0.9104703503493745,
+    "repo_slope": 0.1492220805913925,
+    "repo_intercept": 0.21805265070118698,
+    "median_fold": 1.4656515544620412,
+    "within_2x": 0.7419354838709677,
+    "within_3x": 0.8817204301075269
+  },
+  "check3_intervals": {
+    "tiers": {
+      "Reliable": 62,
+      "Caution": 95,
+      "Low confidence": 44
+    },
+    "median_width_low_refusal": 1.3475384028254656,
+    "median_width_high_refusal": 5.640965245443128
+  }
+}

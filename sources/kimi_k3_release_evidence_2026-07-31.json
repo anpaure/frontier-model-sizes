@@ -1,0 +1,135 @@
+{
+  "derived_quantities": {
+    "activated_parameter_fraction": 0.03748201438848921,
+    "k2_total_to_activated_parameter_ratio": 31.901840490797543,
+    "k3_over_k2_activated_parameter_ratio": 3.1963190184049077,
+    "k3_over_k2_total_parameter_ratio": 2.673076923076923,
+    "selected_routed_expert_fraction": 0.017857142857142856,
+    "total_to_activated_parameter_ratio": 26.679462571976966
+  },
+  "interpretation_limits": [
+    "Activated parameters include attention, shared experts, routers, embeddings, and other non-routed components; 16/896 is not the active-parameter fraction.",
+    "The reported 2.5x scaling-efficiency improvement combines architecture, data, and training-recipe changes and is not a parameter-count multiplier.",
+    "The report plots scaling against FLOPs but does not disclose K3's exact pretraining or post-training FLOP total.",
+    "The report describes data domains and context curricula but does not disclose an exact pretraining-token total."
+  ],
+  "kimi_k2_comparator": {
+    "activated_parameters_b_exact": 32.6,
+    "layers": 61,
+    "routed_experts": 384,
+    "selected_routed_experts_per_token": 8,
+    "shared_experts": 1,
+    "total_parameters_b_exact": 1040.0,
+    "training_context_tokens": 131072
+  },
+  "kimi_k3": {
+    "activated_parameter_count_disclosed": true,
+    "activated_parameters_b_exact": 104.2,
+    "architecture": "Mixture-of-Experts (MoE)",
+    "attention_heads": 96,
+    "attention_hidden_dimension": 7168,
+    "attention_layer_composition": {
+      "gated_mla": 24,
+      "kda": 69
+    },
+    "dense_layers": 1,
+    "initial_model_release_date": "2026-07-16",
+    "latent_moe_dimension": 3584,
+    "layers": 93,
+    "maximum_context_tokens": 1048576,
+    "moe_hidden_dimension_per_expert": 3072,
+    "parameter_count_disclosed": true,
+    "quantization": "MXFP4 expert weights / MXFP8 activations from SFT onward",
+    "released_config_next_token_prediction_layers": 0,
+    "routed_experts": 896,
+    "selected_routed_experts_per_token": 16,
+    "shared_experts": 2,
+    "total_parameters_b_exact": 2780.0,
+    "total_parameters_t_display": 2.8,
+    "vision_encoder": "MoonViT-V2",
+    "vision_encoder_layers": 27,
+    "vision_encoder_parameters_b": 0.401,
+    "vocabulary_size": 160000,
+    "weights_release_date": "2026-07-27",
+    "weights_released": true
+  },
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-31",
+  "source_files": {
+    "official_huggingface_commit_history": {
+      "bytes": 2358,
+      "initial_weights_commit": "c5d1dd4c428bd1ce8b88c5044f3b6ccde9e3b721",
+      "path": "sources/kimi_k3_hf_commit_history_2026-07-31.json",
+      "sha256": "cd2a494864da174f2a753c877158f1a73be29ed2c884de1e15b66b46e3dc7a95",
+      "url": "https://huggingface.co/api/models/moonshotai/Kimi-K3/commits/main?limit=100"
+    },
+    "official_huggingface_config": {
+      "bytes": 7006,
+      "path": "sources/kimi_k3_hf_config_2026-07-31.json",
+      "revision": "9f62e4e9fffbd0a83ddd60e1c209d828994b3569",
+      "sha256": "9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3/raw/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/config.json"
+    },
+    "official_launch_page": {
+      "bytes": 302653,
+      "path": "sources/kimi_k3_official_launch_2026-07-31.html",
+      "sha256": "44662afd655cf7956896934b49cda3af342c4addd59dff489c9f6f4613daae17",
+      "url": "https://www.kimi.com/blog/kimi-k3"
+    },
+    "official_model_card": {
+      "bytes": 44999,
+      "path": "sources/kimi_k3_official_model_card_2026-07-31.md",
+      "sha256": "46bb1354d6d5352b3e791e120667d386dbfb12b3f78b7916b4f31d49a0400443",
+      "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/7c5be9599120d7993748de66a76128614f15f210/README.md"
+    },
+    "official_technical_report": {
+      "arxiv_url": "https://arxiv.org/abs/2607.24653",
+      "bytes": 1795077,
+      "path": "sources/kimi_k3_technical_report_2026-07-31.pdf",
+      "sha256": "1f2978d89a9d7f138f6d6ae5f17fd6890dc673abeaea7fca96c1eca432c75ce8",
+      "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/7c5be9599120d7993748de66a76128614f15f210/k3_tech_report.pdf"
+    }
+  },
+  "source_policy": {
+    "network_refresh_is_explicit": true,
+    "ordinary_build_is_offline": true,
+    "pinned_commit": "7c5be9599120d7993748de66a76128614f15f210",
+    "repository": "https://github.com/MoonshotAI/Kimi-K3"
+  },
+  "training_disclosures": {
+    "cooldown_context_curriculum": [
+      262144,
+      1048576
+    ],
+    "exact_posttraining_flops_disclosed": false,
+    "exact_pretraining_flops_disclosed": false,
+    "exact_pretraining_tokens_disclosed": false,
+    "posttraining_stages": [
+      "supervised fine-tuning",
+      "reinforcement learning",
+      "multi-teacher on-policy distillation"
+    ],
+    "pretraining_context_curriculum": [
+      8192,
+      65536
+    ],
+    "pretraining_domains": [
+      "Web Text",
+      "Code",
+      "Mathematics",
+      "Knowledge",
+      "Vision"
+    ],
+    "reported_scaling_efficiency_vs_k2": 2.5,
+    "rl_domain_experts": 3,
+    "rl_reasoning_effort_levels": 3,
+    "rl_teacher_experts": 9
+  },
+  "validation": {
+    "hf_config_architecture_fields_verified": 11,
+    "hf_config_revision": "9f62e4e9fffbd0a83ddd60e1c209d828994b3569",
+    "hf_initial_weights_commit": "c5d1dd4c428bd1ce8b88c5044f3b6ccde9e3b721",
+    "hf_initial_weights_commit_utc": "2026-07-27T13:31:26.000Z",
+    "technical_report_pages": 47
+  }
+}

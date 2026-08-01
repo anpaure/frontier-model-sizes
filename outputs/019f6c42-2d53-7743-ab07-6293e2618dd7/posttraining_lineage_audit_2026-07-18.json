@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "objective": "measure parameter-inference distortion from post-training, inference budget, and asserted shared-base lineages",
+    "admitted_lineage_evidence": "Epoch structured Base model field, unique exact normalized parent match, both open weights, total parameters within 1%, language-domain child, nonnegative date order, and at least one matched measurement",
+    "outer_rule": "calibration rows strictly earlier than the parent; endpoint family/developer excluded",
+    "candidate_rule": "replace descendant score with arithmetic parent/child mean at descendant date",
+    "duplicate_rule": "highest AA score per exact/mode-stripped checkpoint, matching the user-specified AA duplicate policy",
+    "causal_caveat": "Epoch Base model links identify lineage and unchanged parameter count, not a randomized estimate of RL compute; descendants may also include continued pretraining, data changes, or architecture-preserving training."
+  },
+  "inventory": {
+    "epoch_rows": 3574,
+    "base_model_links": 686,
+    "unique_exact_parent_matches": 630,
+    "same_parameter_links_1pct": 342,
+    "same_parameter_both_open_links": 240,
+    "candidate_open_language_same_parameter_links": 212,
+    "admitted_measured_lineage_edges": 8,
+    "admitted_measured_lineage_bases": 6,
+    "admitted_developers": 5,
+    "edges_with_finetune_compute": 3,
+    "matched_measurements": 47,
+    "matched_component_measurements": 37,
+    "eci_prediction_edges": 7,
+    "aa_prediction_edges": 3,
+    "nocot_lineage_edges": 1,
+    "metr_lineage_edges": 0
+  },
+  "hard_same_checkpoint_control": {
+    "open_weight_reasoning_pairs": {
+      "pairs": 53,
+      "creators": 12,
+      "checkpoint_median_aa_uplift": 4.464872963716605,
+      "equal_creator_median_aa_uplift": 5.50904364575783,
+      "equal_creator_median_bootstrap_90_ci": [
+        3.7845350595867,
+        7.475796025047298
+      ],
+      "creator_medians": {
+        "alibaba": 2.9117240289943602,
+        "deepseek": 8.204276219326298,
+        "google": 4.44946434038731,
+        "kimi": 7.807121454072698,
+        "lg": 4.58613405389381,
+        "mistral": 7.184798632361801,
+        "nous-research": 1.6361442287312649,
+        "nvidia": 3.7845350595867,
+        "openbmb": 0.2201426378482001,
+        "tencent": 7.475796025047298,
+        "xiaomi": 8.549097643093596,
+        "zai": 6.431953237621849
+      }
+    },
+    "interpretation": "Changing reasoning configuration on the same public weights shifts AA by a creator-balanced median of about 5.5 points. This is an inference-compute control, not an RL-compute estimate."
+  },
+  "lineage_backtests": {
+    "eci": {
+      "rows": 7,
+      "bases": 5,
+      "baseline": {
+        "n": 7,
+        "median_multiplicative_error": 4.745484775571855,
+        "mean_absolute_log10_error": 0.5070539202373342,
+        "geomean_multiplicative_error": 3.2140595584381146,
+        "p80_multiplicative_error": 5.603587481887379,
+        "signed_bias_factor": 0.5411637358017236,
+        "within_2x": 0.42857142857142855
+      },
+      "collapsed": {
+        "n": 7,
+        "median_multiplicative_error": 3.5142147606299785,
+        "mean_absolute_log10_error": 0.5378331770086519,
+        "geomean_multiplicative_error": 3.450111867561595,
+        "p80_multiplicative_error": 7.875508075409877,
+        "signed_bias_factor": 0.44265250534101014,
+        "within_2x": 0.42857142857142855
+      },
+      "parent_only": {
+        "n": 7,
+        "median_multiplicative_error": 2.602411759363708,
+        "mean_absolute_log10_error": 0.5686124337799695,
+        "geomean_multiplicative_error": 3.7035007230773913,
+        "p80_multiplicative_error": 11.145503639001422,
+        "signed_bias_factor": 0.36207385588095625,
+        "within_2x": 0.42857142857142855
+      },
+      "collapsed_vs_baseline": {
+        "metric": "equal-base mean absolute log10 error; candidate minus baseline",
+        "observed_delta": -0.0071634964743592985,
+        "ci_90": [
+          -0.07773119205394963,
+          0.06328150101264378
+        ],
+        "bootstrap_probability_candidate_better": 0.571,
+        "bases": 5,
+        "samples": 20000
+      },
+      "parent_only_vs_baseline": {
+        "metric": "equal-base mean absolute log10 error; candidate minus baseline",
+        "observed_delta": -0.014326992948718208,
+        "ci_90": [
+          -0.15546238410789842,
+          0.12656300202528778
+        ],
+        "bootstrap_probability_candidate_better": 0.5786,
+        "bases": 5,
+        "samples": 20000
+      },
+      "median_implied_child_over_parent_parameter_ratio": 1.363951009877758
+    },
+    "aa": {
+      "rows": 3,
+      "bases": 3,
+      "baseline": {
+        "n": 3,
+        "median_multiplicative_error": 1.3298662576154006,
+        "mean_absolute_log10_error": 0.2589611375138228,
+        "geomean_multiplicative_error": 1.8153532101089076,
+        "p80_multiplicative_error": 2.3719038271569635,
+        "signed_bias_factor": 1.5322381550888373,
+        "within_2x": 0.6666666666666666
+      },
+      "collapsed": {
+        "n": 3,
+        "median_multiplicative_error": 1.3542074889737399,
+        "mean_absolute_log10_error": 0.18272901002386033,
+        "geomean_multiplicative_error": 1.5231020758331542,
+        "p80_multiplicative_error": 1.8791241861945918,
+        "signed_bias_factor": 1.1564828848121276,
+        "within_2x": 0.6666666666666666
+      },
+      "parent_only": {
+        "n": 3,
+        "median_multiplicative_error": 1.5666843718935914,
+        "mean_absolute_log10_error": 0.19907107320362813,
+        "geomean_multiplicative_error": 1.5815068350069978,
+        "p80_multiplicative_error": 2.043147111760863,
+        "signed_bias_factor": 0.8728751848539086,
+        "within_2x": 0.6666666666666666
+      },
+      "collapsed_vs_baseline": {
+        "metric": "equal-base mean absolute log10 error; candidate minus baseline",
+        "observed_delta": -0.07623212748996251,
+        "ci_90": [
+          -0.13679814845398486,
+          -0.015666106525940176
+        ],
+        "bootstrap_probability_candidate_better": 0.9661,
+        "bases": 3,
+        "samples": 20000
+      },
+      "parent_only_vs_baseline": {
+        "metric": "equal-base mean absolute log10 error; candidate minus baseline",
+        "observed_delta": -0.059890064310194724,
+        "ci_90": [
+          -0.263560750842756,
+          0.14378062222236654
+        ],
+        "bootstrap_probability_candidate_better": 0.629,
+        "bases": 3,
+        "samples": 20000
+      },
+      "median_implied_child_over_parent_parameter_ratio": 1.7034423422176823
+    }
+  },
+  "component_posttraining_sensitivity": {
+    "categories": {
+      "knowledge": {
+        "measurements": 8,
+        "bases": 5,
+        "benchmarks": 3,
+        "median_component_implied_eci_delta": 1.4752816799317685,
+        "mean_component_implied_eci_delta": 2.4990048950396613,
+        "fraction_positive": 0.75
+      },
+      "pretraining_like_nonknowledge": {
+        "measurements": 6,
+        "bases": 1,
+        "benchmarks": 6,
+        "median_component_implied_eci_delta": 1.0046668945254211,
+        "mean_component_implied_eci_delta": -1.8519384934883238,
+        "fraction_positive": 0.5
+      },
+      "other": {
+        "measurements": 23,
+        "bases": 4,
+        "benchmarks": 13,
+        "median_component_implied_eci_delta": 4.854616410577847,
+        "mean_component_implied_eci_delta": 6.2528175672012045,
+        "fraction_positive": 0.782608695652174
+      }
+    },
+    "interpretation": "Knowledge components show smaller median within-lineage uplift than other components, but only a handful of bases contribute and the pretraining-like non-knowledge group is dominated by one Llama lineage.",
+    "incremental_live_weight": 0.0
+  },
+  "frontier_asserted_same_base_sensitivity": {
+    "rows": 18,
+    "chains": 2,
+    "evidence_grade": "user_asserted_not_publicly_disclosed",
+    "interpretation": "Large counterfactual ratios show that treating successive proprietary capability scores as independent size observations would be untenable if the same-base claims are true. The live model therefore preserves the user-requested lineage collapse but does not treat the identity as publicly disclosed fact.",
+    "incremental_live_weight": 0.0
+  },
+  "promotion_gates": {
+    "verified_open_lineage_bases_at_least_8": false,
+    "eci_signal_bases_at_least_6": false,
+    "aa_signal_bases_at_least_6": false,
+    "eci_collapse_ci_wholly_favorable": false,
+    "aa_collapse_ci_wholly_favorable": true,
+    "proprietary_shared_base_claims_publicly_verified": false
+  },
+  "decision": {
+    "promote_posttraining_correction": false,
+    "incremental_live_weight": 0.0,
+    "change_headline_forecasts": false,
+    "reason": "The audit establishes a real distortion floor, but has only 6 measured open bases, only 3 AA prediction edges, no METR edges, one No-CoT edge, no decisive ECI collapse result, and no public verification of the proprietary same-base claims."
+  },
+  "source_files": {
+    "sources/epoch_all_ai_models_2026-07-31.csv": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579",
+    "sources/epoch_eci_benchmarks_2026-07-31.csv": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+    "sources/epoch_benchmark_data_2026-07-31.zip": "cc844ca094e4372ff81eb636f3503317d1d495d4f4c493bd6b7a37dd5f83049c",
+    "sources/aa_detailed_model_signals_2026-07-31.csv": "c00553aa052e8e5fd40bf84637bc17663e407b5f6d348ddb1140c2df48b39404",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_expanded_parameter_panel_2026-07-18.csv": "b53335b58130d3d7ab163da2725100899bee75221525a103481cd796ecdffd92",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_inference_budget_audit_2026-07-18.json": "cb7b11524d1cf2375649bfa65e0685a3b51697a5eef6f632957643a433a58bf3"
+  }
+}

@@ -1,0 +1,6 @@
+source,path,size_bytes,sha256,records_parsed,structure,notes
+Epoch,./sources/epoch_all_ai_models_2026-07-17.csv,6712040,a72dc6d9711835d8b1078aa6e6ef89d51a53de7b26092bf5a5aec18d51909437,3555,57 source columns,Five duplicated labels retained: Gemini 3.1 Pro | GLM-5 | SAM 3 | Eurus-2-7B-PRIME | Tulu 3 (Tülu 3) 70B
+ECI,~/Downloads/eci_parameter_regression_workbook.xlsx,132428,e085ec57793c1bed7231df03035f880000e41581700eb868152d41fe6406a3dc,211,ECI Graph Data + exact-name Regression Data enrichment,All 211 ECI Graph Data rows retained
+Artificial Analysis,~/.codex/attachments/238ade1d-cc43-4361-b8c1-9d9660b798ea/pasted-text.txt,23598,56da88142181cfe20e053a8b614010c7a25519d9f79cb4a755ba4961669cd478,274,11-line leaderboard records,All raw rows retained; model-level measurement table selects highest score for identical display names
+No-CoT,~/Downloads/arXiv-2606.07157v3.tar.gz,4852484,c1c38d4ac51dda5061a3da8d0322b984409bf77e6c91e114d03b4d534b2f5bb8,50,14 frontier + 35 open-weight model rows + 1 scaling-law row,Parsed directly from arxiv_version.tex
+METR,./sources/metr_horizon_user_snapshot_2026-07-17.csv,6055,a9719b3ea8e1c7fd32bf44414578c8e800ad2505d4153d55b05f884c65b3f944,27,26 model rows + 1 trend-law row,Model snapshot written from user-supplied YAML; top-level law stored in unified observation

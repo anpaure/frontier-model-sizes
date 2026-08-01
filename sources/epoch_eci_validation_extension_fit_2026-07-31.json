@@ -1,0 +1,21 @@
+{
+  "generated_on": "2026-07-31",
+  "k3_classification": {
+    "project_prospective": false,
+    "score_vintage_holdout": true
+  },
+  "k3_eci": 155.61602792683064,
+  "method": "official ECI fit with bootstrap_samples=0; central estimate only",
+  "models": 212,
+  "official_code_sha256": {
+    "src/eci/dataloader.py": "dc8eea4a05b55a3c413c5d0d25b9d41ed7340f3d8ca57723d265d7d493d77903",
+    "src/eci/fitting.py": "c6bccffea9f7ca7e6520868f7f88f3b084fa334db81a3ece020005869f48d2ed"
+  },
+  "official_commit": "542567e72a415b72624e5bbd12603cfd3f485179",
+  "official_repository": "https://github.com/epoch-research/eci-public.git",
+  "output": "sources/epoch_eci_validation_extension_scores_2026-07-31.csv",
+  "output_sha256": "c40e0a55ea1073be9384c36ffa9a22183d4e8f084676d7330753bda5aad921d9",
+  "role": "score-vintage validation extension; excluded from live weights and historical model selection",
+  "source": "sources/epoch_eci_benchmarks_2026-07-22.csv",
+  "source_sha256": "85eb265713ebd29068b5cc5430c33596d5896c7b98a03b5f18f8d0e1e66615f8"
+}

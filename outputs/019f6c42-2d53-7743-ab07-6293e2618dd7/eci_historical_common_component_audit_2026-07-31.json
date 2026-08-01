@@ -1,0 +1,375 @@
+{
+  "caveats": [
+    "All four checks are retrospective and were not preregistered before parameter truth was public.",
+    "The two Llama targets share one developer, release date, and training fold and are not independent.",
+    "Target benchmark measurements arrive after release and therefore test archive ordering, not a real-time forecast.",
+    "Maverick uses Epoch's scored FP8 model-version as the measurement identity while parameter truth is the canonical 400B base."
+  ],
+  "decision": {
+    "gates": {
+      "median_error": {
+        "observed": 3.0818530540228397,
+        "passes": false,
+        "required_maximum": 2.0
+      },
+      "project_preregistration": {
+        "observed": false,
+        "passes": false,
+        "required": true
+      },
+      "target_count": {
+        "observed": 4,
+        "passes": false,
+        "required": 8
+      },
+      "target_developer_count": {
+        "observed": 3,
+        "passes": false,
+        "required": 4
+      },
+      "weight_sensitivity": {
+        "observed_max_over_min_median_error": 1.1402246465353785,
+        "passes": true,
+        "required_maximum": 1.25
+      },
+      "within_2x": {
+        "observed": 0.25,
+        "passes": false,
+        "required": 0.75
+      }
+    },
+    "live_weight": 0.0,
+    "promote_to_live_model": false,
+    "reason": "At least one fixed gate fails; retain as a zero-weight historical diagnostic."
+  },
+  "generated_on": "2026-07-31",
+  "inventory": {
+    "distinct_snapshots": 3,
+    "prediction_rows": 8,
+    "target_count": 4,
+    "target_developers": 3,
+    "targets": [
+      "Gemma 3 27B",
+      "Llama 4 Maverick",
+      "Llama 4 Scout",
+      "Mistral Small 3.1"
+    ],
+    "training_rows": 49
+  },
+  "method": {
+    "component_index": "equal mean of prior-snapshot z-scores",
+    "identity_rule": "exclude target developer token and target base-family token, then retain latest complete scored version per canonical Model",
+    "locked_benchmarks": [
+      "GPQA diamond",
+      "MATH level 5",
+      "OTIS Mock AIME 2024-2025"
+    ],
+    "parameter_rule": "training and target truths are read from ml_models.csv inside their declared snapshot ZIPs",
+    "prediction_law": "60% component-only plus 40% component-and-exact-date direct log10(total parameters) regression",
+    "primary_weight_mode": "equal_developer",
+    "project_preregistered": false,
+    "promotion_thresholds": {
+      "maximum_median_multiplicative_error": 2.0,
+      "maximum_primary_to_sensitivity_median_error_ratio": 1.25,
+      "minimum_target_developers": 4,
+      "minimum_targets": 8,
+      "minimum_within_2x": 0.75,
+      "require_project_preregistered_targets": true
+    },
+    "target_score_rule": "target component scores are read from the declared first later snapshot only",
+    "training_time_rule": "training version release date strictly earlier than target release date",
+    "weight_sensitivity": "equal_checkpoint"
+  },
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_historical_common_component_predictions_2026-07-31.csv",
+    "predictions_sha256": "b6e19930ccca3c2939f6a44bc332122353880085eaf0b45f0399f3a9061594ea",
+    "training_panel": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_historical_common_component_training_panel_2026-07-31.csv",
+    "training_panel_sha256": "d0e5358c22b118cccdc67717f1853ba756554769ca807ed0dacb54d35df3ded9"
+  },
+  "predictions": [
+    {
+      "actual_b": 27.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": 0.5181467509600242,
+      "multiplicative_error": 3.2972110828538406,
+      "parameter_confidence": "Confident",
+      "parameter_source": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "predicted_b": 89.02469923705371,
+      "project_preregistered": false,
+      "score_date_predicted_b": 70.67144226241635,
+      "score_only_predicted_b": 103.83765909419323,
+      "target_component_index": 0.7792019541123884,
+      "target_gpqa_diamond": 0.4886363636363636,
+      "target_math_level_5": 0.740370090634441,
+      "target_model": "Gemma 3 27B",
+      "target_model_version": "gemma-3-27b-it",
+      "target_organization": "Google DeepMind",
+      "target_otis_mock_aime": 0.1972222222222222,
+      "target_release_date": "2025-03-12",
+      "target_score_snapshot_timestamp": "20250403051524",
+      "train_developers": 5,
+      "train_rows": 14,
+      "training_snapshot_timestamp": "20250305190317",
+      "weight_mode": "equal_developer",
+      "within_2x": false
+    },
+    {
+      "actual_b": 27.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": 0.6538317666741857,
+      "multiplicative_error": 4.506421047963535,
+      "parameter_confidence": "Confident",
+      "parameter_source": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "predicted_b": 121.67336829501546,
+      "project_preregistered": false,
+      "score_date_predicted_b": 90.80945487296918,
+      "score_only_predicted_b": 147.87854618307807,
+      "target_component_index": 0.7792019541123884,
+      "target_gpqa_diamond": 0.4886363636363636,
+      "target_math_level_5": 0.740370090634441,
+      "target_model": "Gemma 3 27B",
+      "target_model_version": "gemma-3-27b-it",
+      "target_organization": "Google DeepMind",
+      "target_otis_mock_aime": 0.1972222222222222,
+      "target_release_date": "2025-03-12",
+      "target_score_snapshot_timestamp": "20250403051524",
+      "train_developers": 5,
+      "train_rows": 14,
+      "training_snapshot_timestamp": "20250305190317",
+      "weight_mode": "equal_checkpoint",
+      "within_2x": false
+    },
+    {
+      "actual_b": 24.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": 0.07372395476620941,
+      "multiplicative_error": 1.1850152921138333,
+      "parameter_confidence": "Confident",
+      "parameter_source": "https://mistral.ai/news/mistral-small-3-1",
+      "predicted_b": 28.44036701073199,
+      "project_preregistered": false,
+      "score_date_predicted_b": 14.173240011980546,
+      "score_only_predicted_b": 45.245900181620804,
+      "target_component_index": 0.017469693369846644,
+      "target_gpqa_diamond": 0.4747474747474747,
+      "target_math_level_5": 0.4677114803625378,
+      "target_model": "Mistral Small 3.1",
+      "target_model_version": "mistral-small-2503",
+      "target_organization": "Mistral AI",
+      "target_otis_mock_aime": 0.0583333333333333,
+      "target_release_date": "2025-03-17",
+      "target_score_snapshot_timestamp": "20250403051524",
+      "train_developers": 4,
+      "train_rows": 13,
+      "training_snapshot_timestamp": "20250305190317",
+      "weight_mode": "equal_developer",
+      "within_2x": true
+    },
+    {
+      "actual_b": 24.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": 0.300549670077741,
+      "multiplicative_error": 1.9977892416949121,
+      "parameter_confidence": "Confident",
+      "parameter_source": "https://mistral.ai/news/mistral-small-3-1",
+      "predicted_b": 47.946941800677884,
+      "project_preregistered": false,
+      "score_date_predicted_b": 27.024310067487942,
+      "score_only_predicted_b": 70.26921622896145,
+      "target_component_index": 0.017469693369846644,
+      "target_gpqa_diamond": 0.4747474747474747,
+      "target_math_level_5": 0.4677114803625378,
+      "target_model": "Mistral Small 3.1",
+      "target_model_version": "mistral-small-2503",
+      "target_organization": "Mistral AI",
+      "target_otis_mock_aime": 0.0583333333333333,
+      "target_release_date": "2025-03-17",
+      "target_score_snapshot_timestamp": "20250403051524",
+      "train_developers": 4,
+      "train_rows": 13,
+      "training_snapshot_timestamp": "20250305190317",
+      "weight_mode": "equal_checkpoint",
+      "within_2x": true
+    },
+    {
+      "actual_b": 109.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": -0.4594771035617886,
+      "multiplicative_error": 2.880561179713505,
+      "parameter_confidence": "Likely",
+      "parameter_source": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "predicted_b": 37.83984897374788,
+      "project_preregistered": false,
+      "score_date_predicted_b": 30.16131128171503,
+      "score_only_predicted_b": 44.01650050909891,
+      "target_component_index": 0.014465341737144014,
+      "target_gpqa_diamond": 0.5183080808080808,
+      "target_math_level_5": 0.6227341389728097,
+      "target_model": "Llama 4 Scout",
+      "target_model_version": "Llama-4-Scout-17B-16E-Instruct",
+      "target_organization": "Meta AI",
+      "target_otis_mock_aime": 0.0777777777777777,
+      "target_release_date": "2025-04-05",
+      "target_score_snapshot_timestamp": "20250510183121",
+      "train_developers": 5,
+      "train_rows": 11,
+      "training_snapshot_timestamp": "20250403051524",
+      "weight_mode": "equal_developer",
+      "within_2x": false
+    },
+    {
+      "actual_b": 109.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": -0.3876371732995969,
+      "multiplicative_error": 2.4413900671267847,
+      "parameter_confidence": "Likely",
+      "parameter_source": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "predicted_b": 44.64669594084145,
+      "project_preregistered": false,
+      "score_date_predicted_b": 35.01648811427601,
+      "score_only_predicted_b": 52.49691903376873,
+      "target_component_index": 0.014465341737144014,
+      "target_gpqa_diamond": 0.5183080808080808,
+      "target_math_level_5": 0.6227341389728097,
+      "target_model": "Llama 4 Scout",
+      "target_model_version": "Llama-4-Scout-17B-16E-Instruct",
+      "target_organization": "Meta AI",
+      "target_otis_mock_aime": 0.0777777777777777,
+      "target_release_date": "2025-04-05",
+      "target_score_snapshot_timestamp": "20250510183121",
+      "train_developers": 5,
+      "train_rows": 11,
+      "training_snapshot_timestamp": "20250403051524",
+      "weight_mode": "equal_checkpoint",
+      "within_2x": false
+    },
+    {
+      "actual_b": 400.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": -0.5462324158277245,
+      "multiplicative_error": 3.517486309876669,
+      "parameter_confidence": "Likely",
+      "parameter_source": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "predicted_b": 113.71757123172002,
+      "project_preregistered": false,
+      "score_date_predicted_b": 99.35918525015096,
+      "score_only_predicted_b": 124.42489361602544,
+      "target_component_index": 0.8865561150929789,
+      "target_gpqa_diamond": 0.6698232323232324,
+      "target_math_level_5": 0.7301737160120846,
+      "target_model": "Llama 4 Maverick",
+      "target_model_version": "Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "target_organization": "Meta AI",
+      "target_otis_mock_aime": 0.2055555555555555,
+      "target_release_date": "2025-04-05",
+      "target_score_snapshot_timestamp": "20250510183121",
+      "train_developers": 5,
+      "train_rows": 11,
+      "training_snapshot_timestamp": "20250403051524",
+      "weight_mode": "equal_developer",
+      "within_2x": false
+    },
+    {
+      "actual_b": 400.0,
+      "locked_benchmarks": "GPQA diamond|MATH level 5|OTIS Mock AIME 2024-2025",
+      "log10_error": -0.47600583269106345,
+      "multiplicative_error": 2.9923048237925354,
+      "parameter_confidence": "Likely",
+      "parameter_source": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "predicted_b": 133.6762206909884,
+      "project_preregistered": false,
+      "score_date_predicted_b": 116.81927788643625,
+      "score_only_predicted_b": 146.24485161267322,
+      "target_component_index": 0.8865561150929789,
+      "target_gpqa_diamond": 0.6698232323232324,
+      "target_math_level_5": 0.7301737160120846,
+      "target_model": "Llama 4 Maverick",
+      "target_model_version": "Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "target_organization": "Meta AI",
+      "target_otis_mock_aime": 0.2055555555555555,
+      "target_release_date": "2025-04-05",
+      "target_score_snapshot_timestamp": "20250510183121",
+      "train_developers": 5,
+      "train_rows": 11,
+      "training_snapshot_timestamp": "20250403051524",
+      "weight_mode": "equal_checkpoint",
+      "within_2x": false
+    }
+  ],
+  "role": "zero-weight historical common-component validation",
+  "sources": {
+    "fold_ledger": "sources/eci_historical_common_component_folds_2026-07-31.csv",
+    "fold_ledger_sha256": "2a9ff70d72d57390a04926e7dbba70015df5ec78c637b30907c0b31a0580b116",
+    "historical_archive": "sources/epoch_eci_historical_snapshots_2026-07-18.tar.gz",
+    "historical_archive_metadata": "sources/epoch_eci_historical_collection_metadata_2026-07-18.json",
+    "historical_archive_metadata_sha256": "8123f9fbaa0d33ad92d56d3c7ca6608c74a5ecc1fa014fab461d9accfbd0b178",
+    "historical_archive_sha256": "0ce76d6662dd34efe9847e418cb0ade2654b320b8df49c998e2f7df989ba2150",
+    "snapshot_inventory": {
+      "20250305190317": {
+        "archive_member": "benchmark_zip/benchmark_data_20250305190317.zip",
+        "bytes": 1635773,
+        "required_member_rows": {
+          "benchmarks_runs.csv": 185,
+          "ml_models.csv": 2444,
+          "model_versions.csv": 169
+        },
+        "required_member_sha256": {
+          "benchmarks_runs.csv": "21dc24c963259c2ef3467a205a2030d0db1e2f7484816509047364b0f3e531cd",
+          "ml_models.csv": "eb46f738c84fc533c6ac5dbc0e417cb94b1f0b540df9394acd8d5904b2b5cfa8",
+          "model_versions.csv": "ffd1b93f5dcbfd24cb48bdad0255abac270aece67d7b0dd4926c68ce9d61ff5a"
+        },
+        "sha256": "b1b89260bd87fc0f84561046d88b035526f2d8f66b849c4613ec75ebe9a565cf"
+      },
+      "20250403051524": {
+        "archive_member": "benchmark_zip/benchmark_data_20250403051524.zip",
+        "bytes": 1668737,
+        "required_member_rows": {
+          "benchmarks_runs.csv": 264,
+          "ml_models.csv": 2481,
+          "model_versions.csv": 179
+        },
+        "required_member_sha256": {
+          "benchmarks_runs.csv": "0e30e49af0fc623dbd925561d2f58d0863aa28b288af665b8bf079f4d1e32c33",
+          "ml_models.csv": "224851f3e0d6e3125f8dafaaa5e4b5f3c18412d45ca7d2d59fc4932f12629b1a",
+          "model_versions.csv": "947d153489e36e3a53774f068e7b59d03c8b3c26f1ff03a72a8ba1cd65f105dc"
+        },
+        "sha256": "d74d26b56e0201ebbbd990b67c45f0eafe234d9a9d32a556e36ead1e14c416be"
+      },
+      "20250510183121": {
+        "archive_member": "benchmark_zip/benchmark_data_20250510183121.zip",
+        "bytes": 1847522,
+        "required_member_rows": {
+          "benchmarks_runs.csv": 350,
+          "ml_models.csv": 2692,
+          "model_versions.csv": 269
+        },
+        "required_member_sha256": {
+          "benchmarks_runs.csv": "e3ff5cc560f56d842ea1a6f7f0c34b8ed472ff3e75366d3c3a79d27d9df0379e",
+          "ml_models.csv": "3cbedb590aff2d400494d6ff2e921627328c96e9b72865f8c3045c909a206a89",
+          "model_versions.csv": "49c1ad76e18301a2684f1e279ea561380007144198ed112f47306d9abc6f03bc"
+        },
+        "sha256": "ad0e0a70b60b6e1ec7b8df60ec52903a029fe58ed21c2c31e385fef53f720f45"
+      }
+    }
+  },
+  "summary": {
+    "equal_checkpoint": {
+      "maximum_multiplicative_error": 4.506421047963535,
+      "mean_absolute_log10_error": 0.4545061106856468,
+      "median_multiplicative_error": 2.702847253290992,
+      "n": 4,
+      "rmse_log10": 0.47293504156906696,
+      "target_developers": 3,
+      "within_2x": 0.25
+    },
+    "equal_developer": {
+      "maximum_multiplicative_error": 3.517486309876669,
+      "mean_absolute_log10_error": 0.3993950562789367,
+      "median_multiplicative_error": 3.0818530540228397,
+      "n": 4,
+      "rmse_log10": 0.44254952769021294,
+      "target_developers": 3,
+      "within_2x": 0.25
+    }
+  }
+}

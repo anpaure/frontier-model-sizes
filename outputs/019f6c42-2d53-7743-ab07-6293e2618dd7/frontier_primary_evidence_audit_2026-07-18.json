@@ -1,0 +1,132 @@
+{
+  "current_mapping": {
+    "effective_date_to_sol_days": 101.5,
+    "exact_date_adjusted_doubling_days": 365.8606542885574,
+    "gpt_5_4_5_5_geometric_horizon_minutes": 2.0493901531919194,
+    "projected_sol_horizon_minutes": 2.483926857931124,
+    "projected_sol_horizon_prior_t": 2.9850434724007573
+  },
+  "decision": {
+    "apply_fable_mythos_shared_weight_identity": true,
+    "change_headline_forecasts": false,
+    "incremental_live_weight": 0.0,
+    "preserve_primary_measurement_in_pipeline": true,
+    "promote_direct_sol_horizon_increment": false,
+    "reason": "The direct measurement is real, but the fully identified horizon specification has only 16 chronological developer-held-out predictions from five held-out developers, its 90% developer-balanced bootstrap interval crosses zero, the source reports no interval, and plausible parameter mappings span more than 2x. It is retained as a zero-weight diagnostic until the mapping is validated.",
+    "treat_opus_fallback_as_shared_base": false
+  },
+  "heldout_backtest": {
+    "baseline_all_rows": {
+      "geomean_multiplicative_error": 3.1781208684267925,
+      "mean_absolute_ln_error": 1.1562901002505737,
+      "median_multiplicative_error": 2.6997943926920587,
+      "n": 16,
+      "p80_multiplicative_error": 6.154642417032916,
+      "within_2x": 0.375
+    },
+    "baseline_equal_developer_mean_absolute_ln_error": 1.1692077855784515,
+    "baseline_per_developer_mean_absolute_ln_error": {
+      "Alibaba": 1.3315473350698734,
+      "DeepSeek": 0.7689895971990857,
+      "Google DeepMind": 1.7005698498073376,
+      "Mistral AI": 0.5186214309985954,
+      "Moonshot": 1.5263107148173642
+    },
+    "baseline_specification": "ln(total parameters) ~ exact date + MoE + reasoning",
+    "horizon_all_rows": {
+      "geomean_multiplicative_error": 3.021085885156987,
+      "mean_absolute_ln_error": 1.1056163313804301,
+      "median_multiplicative_error": 3.190732832521709,
+      "n": 16,
+      "p80_multiplicative_error": 5.346269614597854,
+      "within_2x": 0.375
+    },
+    "horizon_equal_developer_mean_absolute_ln_error": 1.0974794507080234,
+    "horizon_per_developer_mean_absolute_ln_error": {
+      "Alibaba": 1.194689058652394,
+      "DeepSeek": 0.3709795272358005,
+      "Google DeepMind": 1.1617085758382588,
+      "Mistral AI": 1.3405868809819348,
+      "Moonshot": 1.4194332108317294
+    },
+    "horizon_specification": "ln(total parameters) ~ exact date + MoE + reasoning + ln(no-CoT horizon)",
+    "incremental_bootstrap": {
+      "bootstrap_probability_horizon_better": 0.6285,
+      "ci_90": [
+        -0.43985088380965787,
+        0.3438060899212527
+      ],
+      "developers": 5,
+      "metric": "equal-developer mean absolute ln error; horizon model minus date/architecture/reasoning baseline",
+      "observed_delta": -0.07172833487042807,
+      "samples": 20000,
+      "seed": 20260718
+    }
+  },
+  "inventory": {
+    "chronological_developer_holdout_predictions": 16,
+    "control_rows": 33,
+    "heldout_developers": 5,
+    "open_weight_developers": 6,
+    "open_weight_no_cot_ground_truth_models": 35,
+    "primary_evidence_rows": 5
+  },
+  "k3_anchor": {
+    "source": "Kimi K3 official technical report Table 1",
+    "total_parameters_t": 2.78
+  },
+  "limitations": [
+    "The official system-card statement reports point estimates but no confidence interval or task-level observations.",
+    "The official GPT-5.5 comparator and paper GPT-5.5 estimate are not numerically identical, so cross-suite rebasing is a sensitivity rather than a merge.",
+    "The model-level ground-truth panel has six developers and only 35 models; developer-held-out coverage is too small for a stable frontier extrapolation.",
+    "MoE-specific paper elasticity is based on a small, unstable Pareto frontier and is shown only as a sensitivity.",
+    "Release date, reasoning label, and MoE status do not measure RL compute, data quality, or inference budget directly."
+  ],
+  "metadata": {
+    "generated_on": "2026-07-18",
+    "heldout_rule": "For each open model, train only on strictly earlier rows and exclude the entire test developer; require at least 10 rows and 3 other developers.",
+    "question": "Does the official GPT-5.6 Sol no-CoT result justify changing the live parameter forecast?",
+    "target_parameter_identity": "Claude Fable 5 and Claude Mythos 5 are one shared underlying-weight target; Opus fallback is serving behavior, not another base."
+  },
+  "official_measurements": {
+    "gpt_5_5_comparator_minutes": 2.3,
+    "gpt_5_6_sol_nocot_minutes": 3.6,
+    "official_ratio_sol_over_gpt_5_5": 1.565217391304348,
+    "paper_gpt_5_5_minutes": 3.0,
+    "suite_rebased_sol_minutes": 4.695652173913044
+  },
+  "outputs": {
+    "controls": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_primary_evidence_controls_2026-07-18.csv"
+  },
+  "promotion_gates": {
+    "chronological_developer_holdout_predictions_at_least_30": false,
+    "heldout_developers_at_least_8": false,
+    "horizon_increment_bootstrap_ci_wholly_favorable": false,
+    "official_direct_measurement_present": true,
+    "parameter_mapping_method_spread_below_2x": false,
+    "same_suite_uncertainty_interval_reported": false
+  },
+  "same_size_controls": {
+    "exact_open_lineage": "Kimi K2.5 \u2192 Kimi K2.6 keeps 1.0T in the no-CoT table and 1.04T in Epoch while horizon falls from 1.102 to 0.508 minutes.",
+    "proprietary_shared_base_status": "GPT-5 and Opus controls remain user-asserted, not publicly disclosed; they are sensitivity rows only.",
+    "stable_size_families": "Kimi K2 and DeepSeek V3 sequences have unchanged reported total parameters but materially moving horizons."
+  },
+  "sol_mapping_sensitivity": {
+    "date_architecture_reasoning_baseline_t": 0.2571925708238808,
+    "direct_model_level_horizon_regression_t": 1.7564063458680867,
+    "direct_moe_paper_elasticity_t": 9.450928214046595,
+    "direct_pooled_paper_elasticity_t": 6.436092236469337,
+    "gpt_5_5_suite_rebased_pooled_elasticity_t": 11.15659228014613,
+    "interpretation": "The same official 3.6-minute point maps to radically different parameter counts under individually defensible model forms; mapping uncertainty dominates measurement precision.",
+    "nonbaseline_method_max_over_min": 6.3519425936895555
+  },
+  "source_hashes": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_primary_evidence_controls_2026-07-18.csv": "69029075bed393580261f51d90839125456523b82e66df12c5ab4645190eabe2",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_exact_date_audit_2026-07-18.json": "c0b005e9d990c664a761ae3b86696cf4b1606b04f51a0f7775650c31e99b70f8",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/posttraining_lineage_edges_2026-07-18.csv": "28fb683acca32ac4bf227d551037ec7bb683fc8df5663e4f75ec32704bf58c13",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "sources/frontier_primary_evidence_2026-07-18.csv": "5ab835b72b154124c0516384ec6f2d8d0b8c3a60d7fd2a0377f2eb22d5f1173e",
+    "sources/frontier_primary_evidence_collection_metadata_2026-07-18.json": "8d5cce1b07e6e1ee0774d7d5803c1469e9ddb38139e90617317ac5c5db321b38",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600"
+  }
+}

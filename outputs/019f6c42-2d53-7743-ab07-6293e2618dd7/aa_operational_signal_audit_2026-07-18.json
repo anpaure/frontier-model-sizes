@@ -1,0 +1,796 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "target": "log10 disclosed total parameters in billions",
+    "outer_split": "strictly earlier parameter-training eligibility date; entire test developer removed",
+    "training_weights": "equal total weight per developer; estimated AA scores receive 0.5 weight",
+    "duplicate_policy": "highest Intelligence Index configuration per exact parameter/date/weight checkpoint",
+    "price_definition": "AA 7:2:1 cache-hit/input/output blended USD per million native tokens",
+    "speed_definition": "AA median output speed after first token, standardized to OpenAI-token units",
+    "performance_representation": "first-party API when available; otherwise median across providers",
+    "methodology_urls": [
+      "https://artificialanalysis.ai/methodology",
+      "https://artificialanalysis.ai/methodology/performance-benchmarking",
+      "https://artificialanalysis.ai/models/"
+    ],
+    "benchmark_vintage_caveat": "Current serving measurements and current AA benchmark snapshot, not historical vintages."
+  },
+  "data_audit": {
+    "raw_model_configurations": 587,
+    "deduplicated_open_parameter_checkpoints": 275,
+    "coverage": {
+      "blended_price": {
+        "checkpoints": 168,
+        "developers": 34
+      },
+      "output_speed": {
+        "checkpoints": 125,
+        "developers": 26
+      },
+      "latency_ttfc": {
+        "checkpoints": 125,
+        "developers": 26
+      },
+      "cost_per_task": {
+        "checkpoints": 61,
+        "developers": 21
+      },
+      "time_per_task": {
+        "checkpoints": 59,
+        "developers": 21
+      }
+    },
+    "performance_source_type_counts": {
+      "firstParty": 81,
+      "median": 194,
+      "": 0
+    }
+  },
+  "backtests": {
+    "price_global": {
+      "status": "primary validation",
+      "eligible_checkpoints": 168,
+      "minimum_train_rows": 30,
+      "minimum_train_developers": 8,
+      "scopes": {
+        "all": {
+          "n": 136,
+          "developers": 31,
+          "baseline": {
+            "n": 136,
+            "median_multiplicative_error": 2.9157050929054447,
+            "mean_absolute_log10_error": 0.5040858175294572,
+            "geomean_multiplicative_error": 3.192168572201043,
+            "rmse_log10": 0.6115857404405022,
+            "p80_multiplicative_error": 6.29986363881601,
+            "within_2x": 0.3602941176470588,
+            "signed_bias_factor": 1.836486855000537
+          },
+          "candidate": {
+            "n": 136,
+            "median_multiplicative_error": 2.679879712217231,
+            "mean_absolute_log10_error": 0.5048045208071551,
+            "geomean_multiplicative_error": 3.1974555870836396,
+            "rmse_log10": 0.604315690154447,
+            "p80_multiplicative_error": 5.584408111990515,
+            "within_2x": 0.3235294117647059,
+            "signed_bias_factor": 1.9732945404060827
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.09318148477560904,
+            "ci_90": [
+              -0.15786819855879103,
+              -0.03595959521343722
+            ],
+            "bootstrap_probability_candidate_better": 0.99855,
+            "samples": 20000,
+            "clusters": 31
+          }
+        },
+        "frontier_like": {
+          "n": 52,
+          "developers": 16,
+          "baseline": {
+            "n": 52,
+            "median_multiplicative_error": 2.090161244796433,
+            "mean_absolute_log10_error": 0.44870977604115225,
+            "geomean_multiplicative_error": 2.8100223622021723,
+            "rmse_log10": 0.5851449065766716,
+            "p80_multiplicative_error": 6.038718354387781,
+            "within_2x": 0.4807692307692308,
+            "signed_bias_factor": 1.8368182212011432
+          },
+          "candidate": {
+            "n": 52,
+            "median_multiplicative_error": 2.458769936786085,
+            "mean_absolute_log10_error": 0.5026747417334462,
+            "geomean_multiplicative_error": 3.1818136580682856,
+            "rmse_log10": 0.6163987025726925,
+            "p80_multiplicative_error": 5.405614741027427,
+            "within_2x": 0.36538461538461536,
+            "signed_bias_factor": 2.0526513854565276
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.05224156097576092,
+            "ci_90": [
+              -0.15388491132092708,
+              0.04517497372532801
+            ],
+            "bootstrap_probability_candidate_better": 0.80075,
+            "samples": 20000,
+            "clusters": 16
+          }
+        }
+      }
+    },
+    "price_source_adjusted": {
+      "status": "primary validation",
+      "eligible_checkpoints": 168,
+      "minimum_train_rows": 30,
+      "minimum_train_developers": 8,
+      "scopes": {
+        "all": {
+          "n": 136,
+          "developers": 31,
+          "baseline": {
+            "n": 136,
+            "median_multiplicative_error": 2.9157050929054447,
+            "mean_absolute_log10_error": 0.5040858175294572,
+            "geomean_multiplicative_error": 3.192168572201043,
+            "rmse_log10": 0.6115857404405022,
+            "p80_multiplicative_error": 6.29986363881601,
+            "within_2x": 0.3602941176470588,
+            "signed_bias_factor": 1.836486855000537
+          },
+          "candidate": {
+            "n": 136,
+            "median_multiplicative_error": 2.5056586331227146,
+            "mean_absolute_log10_error": 0.4638387680661426,
+            "geomean_multiplicative_error": 2.9096367141788835,
+            "rmse_log10": 0.5699973031107615,
+            "p80_multiplicative_error": 5.7039110389091885,
+            "within_2x": 0.36764705882352944,
+            "signed_bias_factor": 1.7455928383388766
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.07907713445287082,
+            "ci_90": [
+              -0.12338541569614965,
+              -0.03674818456645855
+            ],
+            "bootstrap_probability_candidate_better": 0.99905,
+            "samples": 20000,
+            "clusters": 31
+          }
+        },
+        "frontier_like": {
+          "n": 52,
+          "developers": 16,
+          "baseline": {
+            "n": 52,
+            "median_multiplicative_error": 2.090161244796433,
+            "mean_absolute_log10_error": 0.44870977604115225,
+            "geomean_multiplicative_error": 2.8100223622021723,
+            "rmse_log10": 0.5851449065766716,
+            "p80_multiplicative_error": 6.038718354387781,
+            "within_2x": 0.4807692307692308,
+            "signed_bias_factor": 1.8368182212011432
+          },
+          "candidate": {
+            "n": 52,
+            "median_multiplicative_error": 2.285238024215451,
+            "mean_absolute_log10_error": 0.469764017178053,
+            "geomean_multiplicative_error": 2.9496060621462217,
+            "rmse_log10": 0.5901986188508811,
+            "p80_multiplicative_error": 5.777469776538149,
+            "within_2x": 0.36538461538461536,
+            "signed_bias_factor": 1.8044929605182138
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.05012107767338613,
+            "ci_90": [
+              -0.16457554807805924,
+              0.05926607932695198
+            ],
+            "bootstrap_probability_candidate_better": 0.76485,
+            "samples": 20000,
+            "clusters": 16
+          }
+        }
+      }
+    },
+    "price_provider_median": {
+      "status": "primary serving-regime check",
+      "eligible_checkpoints": 87,
+      "minimum_train_rows": 30,
+      "minimum_train_developers": 8,
+      "scopes": {
+        "all": {
+          "n": 57,
+          "developers": 23,
+          "baseline": {
+            "n": 57,
+            "median_multiplicative_error": 2.7575426938196053,
+            "mean_absolute_log10_error": 0.505566623747631,
+            "geomean_multiplicative_error": 3.2030714300333876,
+            "rmse_log10": 0.6091745878823803,
+            "p80_multiplicative_error": 6.642158294195871,
+            "within_2x": 0.3333333333333333,
+            "signed_bias_factor": 1.3911253725106656
+          },
+          "candidate": {
+            "n": 57,
+            "median_multiplicative_error": 2.756207798635628,
+            "mean_absolute_log10_error": 0.47199837959678964,
+            "geomean_multiplicative_error": 2.964820327414324,
+            "rmse_log10": 0.5535936910034084,
+            "p80_multiplicative_error": 4.974919229546661,
+            "within_2x": 0.2982456140350877,
+            "signed_bias_factor": 1.5499811272294275
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.03925796788009873,
+            "ci_90": [
+              -0.08196085028001504,
+              0.00228456216063596
+            ],
+            "bootstrap_probability_candidate_better": 0.93855,
+            "samples": 20000,
+            "clusters": 23
+          }
+        },
+        "frontier_like": {
+          "n": 22,
+          "developers": 11,
+          "baseline": {
+            "n": 22,
+            "median_multiplicative_error": 2.2658312918249135,
+            "mean_absolute_log10_error": 0.45386448967467563,
+            "geomean_multiplicative_error": 2.8435737056113295,
+            "rmse_log10": 0.5647582926876831,
+            "p80_multiplicative_error": 4.820893409617863,
+            "within_2x": 0.4090909090909091,
+            "signed_bias_factor": 1.2279962678720213
+          },
+          "candidate": {
+            "n": 22,
+            "median_multiplicative_error": 2.3324745319762967,
+            "mean_absolute_log10_error": 0.41775161607298217,
+            "geomean_multiplicative_error": 2.616686031687744,
+            "rmse_log10": 0.48868639455589014,
+            "p80_multiplicative_error": 4.262305734410795,
+            "within_2x": 0.36363636363636365,
+            "signed_bias_factor": 1.3811806218011424
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.07762830047033484,
+            "ci_90": [
+              -0.15416318244149912,
+              -0.0009763892855885276
+            ],
+            "bootstrap_probability_candidate_better": 0.95235,
+            "samples": 20000,
+            "clusters": 11
+          }
+        }
+      }
+    },
+    "price_first_party": {
+      "status": "primary serving-regime check",
+      "eligible_checkpoints": 81,
+      "minimum_train_rows": 30,
+      "minimum_train_developers": 8,
+      "scopes": {
+        "all": {
+          "n": 39,
+          "developers": 10,
+          "baseline": {
+            "n": 39,
+            "median_multiplicative_error": 2.6522097716539474,
+            "mean_absolute_log10_error": 0.5499798881935158,
+            "geomean_multiplicative_error": 3.547969585090497,
+            "rmse_log10": 0.6841676726252746,
+            "p80_multiplicative_error": 8.35091120043235,
+            "within_2x": 0.358974358974359,
+            "signed_bias_factor": 2.296322396335778
+          },
+          "candidate": {
+            "n": 39,
+            "median_multiplicative_error": 3.0849434685740635,
+            "mean_absolute_log10_error": 0.5839623120341512,
+            "geomean_multiplicative_error": 3.8367394891883038,
+            "rmse_log10": 0.7228756942926148,
+            "p80_multiplicative_error": 6.837650260744041,
+            "within_2x": 0.23076923076923078,
+            "signed_bias_factor": 2.1869928027623473
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 5.037818661379201e-05,
+            "ci_90": [
+              -0.10455493420506601,
+              0.10238903673996039
+            ],
+            "bootstrap_probability_candidate_better": 0.5027,
+            "samples": 20000,
+            "clusters": 10
+          }
+        },
+        "frontier_like": {
+          "n": 22,
+          "developers": 7,
+          "baseline": {
+            "n": 22,
+            "median_multiplicative_error": 2.4457367566497052,
+            "mean_absolute_log10_error": 0.4301961801006953,
+            "geomean_multiplicative_error": 2.6927509023786445,
+            "rmse_log10": 0.5690033557579331,
+            "p80_multiplicative_error": 4.3137579189843995,
+            "within_2x": 0.45454545454545453,
+            "signed_bias_factor": 1.8455831703703443
+          },
+          "candidate": {
+            "n": 22,
+            "median_multiplicative_error": 2.9160503749316895,
+            "mean_absolute_log10_error": 0.5773987152074928,
+            "geomean_multiplicative_error": 3.7791898994582063,
+            "rmse_log10": 0.7562588203752677,
+            "p80_multiplicative_error": 5.4643951188729645,
+            "within_2x": 0.2727272727272727,
+            "signed_bias_factor": 2.1732873213416717
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.09623960358230411,
+            "ci_90": [
+              -0.016848796527872346,
+              0.20664197917119947
+            ],
+            "bootstrap_probability_candidate_better": 0.07995,
+            "samples": 20000,
+            "clusters": 7
+          }
+        }
+      }
+    },
+    "output_speed": {
+      "status": "primary validation",
+      "eligible_checkpoints": 125,
+      "minimum_train_rows": 30,
+      "minimum_train_developers": 8,
+      "scopes": {
+        "all": {
+          "n": 89,
+          "developers": 23,
+          "baseline": {
+            "n": 89,
+            "median_multiplicative_error": 2.654877099364092,
+            "mean_absolute_log10_error": 0.48546837904126144,
+            "geomean_multiplicative_error": 3.0582175697412164,
+            "rmse_log10": 0.6021130379901873,
+            "p80_multiplicative_error": 6.65431424329805,
+            "within_2x": 0.38202247191011235,
+            "signed_bias_factor": 1.9200748330071795
+          },
+          "candidate": {
+            "n": 89,
+            "median_multiplicative_error": 2.5460026992768263,
+            "mean_absolute_log10_error": 0.48953661060557774,
+            "geomean_multiplicative_error": 3.086999865824202,
+            "rmse_log10": 0.6157458129717281,
+            "p80_multiplicative_error": 6.430779739556562,
+            "within_2x": 0.39325842696629215,
+            "signed_bias_factor": 1.955070774258627
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.007060553902236561,
+            "ci_90": [
+              -0.01828985647698866,
+              0.03459591672718774
+            ],
+            "bootstrap_probability_candidate_better": 0.34635,
+            "samples": 20000,
+            "clusters": 23
+          }
+        },
+        "frontier_like": {
+          "n": 34,
+          "developers": 13,
+          "baseline": {
+            "n": 34,
+            "median_multiplicative_error": 1.8990511037371096,
+            "mean_absolute_log10_error": 0.37245483567451876,
+            "geomean_multiplicative_error": 2.3575170139319486,
+            "rmse_log10": 0.5016202077745014,
+            "p80_multiplicative_error": 3.9369612438559796,
+            "within_2x": 0.5294117647058824,
+            "signed_bias_factor": 1.7025846648742016
+          },
+          "candidate": {
+            "n": 34,
+            "median_multiplicative_error": 1.8851124406357163,
+            "mean_absolute_log10_error": 0.38325472538263444,
+            "geomean_multiplicative_error": 2.416877982682157,
+            "rmse_log10": 0.5115908115782505,
+            "p80_multiplicative_error": 3.896184973908879,
+            "within_2x": 0.5,
+            "signed_bias_factor": 1.765363836737381
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.016255720237903868,
+            "ci_90": [
+              -0.020959520538617545,
+              0.0568265872074563
+            ],
+            "bootstrap_probability_candidate_better": 0.24985,
+            "samples": 20000,
+            "clusters": 13
+          }
+        }
+      }
+    },
+    "latency_ttfc": {
+      "status": "primary validation",
+      "eligible_checkpoints": 125,
+      "minimum_train_rows": 30,
+      "minimum_train_developers": 8,
+      "scopes": {
+        "all": {
+          "n": 89,
+          "developers": 23,
+          "baseline": {
+            "n": 89,
+            "median_multiplicative_error": 2.654877099364092,
+            "mean_absolute_log10_error": 0.48546837904126144,
+            "geomean_multiplicative_error": 3.0582175697412164,
+            "rmse_log10": 0.6021130379901873,
+            "p80_multiplicative_error": 6.65431424329805,
+            "within_2x": 0.38202247191011235,
+            "signed_bias_factor": 1.9200748330071795
+          },
+          "candidate": {
+            "n": 89,
+            "median_multiplicative_error": 2.569731032394379,
+            "mean_absolute_log10_error": 0.4936064474142331,
+            "geomean_multiplicative_error": 3.1160645629837775,
+            "rmse_log10": 0.6114497594222736,
+            "p80_multiplicative_error": 6.794532283805044,
+            "within_2x": 0.3707865168539326,
+            "signed_bias_factor": 1.9613478625088268
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.0065696143382284414,
+            "ci_90": [
+              -0.0024746675149952668,
+              0.017505009000656133
+            ],
+            "bootstrap_probability_candidate_better": 0.13815,
+            "samples": 20000,
+            "clusters": 23
+          }
+        },
+        "frontier_like": {
+          "n": 34,
+          "developers": 13,
+          "baseline": {
+            "n": 34,
+            "median_multiplicative_error": 1.8990511037371096,
+            "mean_absolute_log10_error": 0.37245483567451876,
+            "geomean_multiplicative_error": 2.3575170139319486,
+            "rmse_log10": 0.5016202077745014,
+            "p80_multiplicative_error": 3.9369612438559796,
+            "within_2x": 0.5294117647058824,
+            "signed_bias_factor": 1.7025846648742016
+          },
+          "candidate": {
+            "n": 34,
+            "median_multiplicative_error": 1.8328767512539597,
+            "mean_absolute_log10_error": 0.3775293131162489,
+            "geomean_multiplicative_error": 2.3852247830316253,
+            "rmse_log10": 0.510572166605041,
+            "p80_multiplicative_error": 4.002309372846115,
+            "within_2x": 0.5294117647058824,
+            "signed_bias_factor": 1.7177323489732697
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.0010603887442978,
+            "ci_90": [
+              -0.004904777345298665,
+              0.007361701005320182
+            ],
+            "bootstrap_probability_candidate_better": 0.393,
+            "samples": 20000,
+            "clusters": 13
+          }
+        }
+      }
+    },
+    "speed_and_latency": {
+      "status": "primary validation",
+      "eligible_checkpoints": 125,
+      "minimum_train_rows": 30,
+      "minimum_train_developers": 8,
+      "scopes": {
+        "all": {
+          "n": 89,
+          "developers": 23,
+          "baseline": {
+            "n": 89,
+            "median_multiplicative_error": 2.654877099364092,
+            "mean_absolute_log10_error": 0.48546837904126144,
+            "geomean_multiplicative_error": 3.0582175697412164,
+            "rmse_log10": 0.6021130379901873,
+            "p80_multiplicative_error": 6.65431424329805,
+            "within_2x": 0.38202247191011235,
+            "signed_bias_factor": 1.9200748330071795
+          },
+          "candidate": {
+            "n": 89,
+            "median_multiplicative_error": 2.5372196545476036,
+            "mean_absolute_log10_error": 0.49557696015338115,
+            "geomean_multiplicative_error": 3.130235122938623,
+            "rmse_log10": 0.6242022663687496,
+            "p80_multiplicative_error": 6.75052927011054,
+            "within_2x": 0.38202247191011235,
+            "signed_bias_factor": 1.987837752944086
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.012357302970577348,
+            "ci_90": [
+              -0.015872418757838184,
+              0.04428213908120921
+            ],
+            "bootstrap_probability_candidate_better": 0.26465,
+            "samples": 20000,
+            "clusters": 23
+          }
+        },
+        "frontier_like": {
+          "n": 34,
+          "developers": 13,
+          "baseline": {
+            "n": 34,
+            "median_multiplicative_error": 1.8990511037371096,
+            "mean_absolute_log10_error": 0.37245483567451876,
+            "geomean_multiplicative_error": 2.3575170139319486,
+            "rmse_log10": 0.5016202077745014,
+            "p80_multiplicative_error": 3.9369612438559796,
+            "within_2x": 0.5294117647058824,
+            "signed_bias_factor": 1.7025846648742016
+          },
+          "candidate": {
+            "n": 34,
+            "median_multiplicative_error": 1.9102353156924703,
+            "mean_absolute_log10_error": 0.39513483401259314,
+            "geomean_multiplicative_error": 2.483904155340043,
+            "rmse_log10": 0.5297242679820827,
+            "p80_multiplicative_error": 3.9788260877996953,
+            "within_2x": 0.5,
+            "signed_bias_factor": 1.812065334195817
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.031619221979162004,
+            "ci_90": [
+              -0.010230457691096189,
+              0.0800094506286896
+            ],
+            "bootstrap_probability_candidate_better": 0.11975,
+            "samples": 20000,
+            "clusters": 13
+          }
+        }
+      }
+    },
+    "cost_per_task": {
+      "status": "exploratory low coverage",
+      "eligible_checkpoints": 61,
+      "minimum_train_rows": 20,
+      "minimum_train_developers": 6,
+      "scopes": {
+        "all": {
+          "n": 37,
+          "developers": 18,
+          "baseline": {
+            "n": 37,
+            "median_multiplicative_error": 2.2397494275285283,
+            "mean_absolute_log10_error": 0.5137197192340348,
+            "geomean_multiplicative_error": 3.263771300784318,
+            "rmse_log10": 0.65344405211613,
+            "p80_multiplicative_error": 7.929691943576038,
+            "within_2x": 0.40540540540540543,
+            "signed_bias_factor": 2.281710498995398
+          },
+          "candidate": {
+            "n": 37,
+            "median_multiplicative_error": 2.310498421389572,
+            "mean_absolute_log10_error": 0.5386250361962797,
+            "geomean_multiplicative_error": 3.4564082748866727,
+            "rmse_log10": 0.6756430065157246,
+            "p80_multiplicative_error": 9.162976389925149,
+            "within_2x": 0.35135135135135137,
+            "signed_bias_factor": 2.2685467211031924
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.009386101466117435,
+            "ci_90": [
+              -0.05062036964165607,
+              0.03287694136313168
+            ],
+            "bootstrap_probability_candidate_better": 0.63975,
+            "samples": 20000,
+            "clusters": 18
+          }
+        },
+        "frontier_like": {
+          "n": 16,
+          "developers": 7,
+          "baseline": {
+            "n": 16,
+            "median_multiplicative_error": 2.2155167471596484,
+            "mean_absolute_log10_error": 0.49036467818678686,
+            "geomean_multiplicative_error": 3.0928914512782906,
+            "rmse_log10": 0.6452597886008009,
+            "p80_multiplicative_error": 10.635729885881428,
+            "within_2x": 0.4375,
+            "signed_bias_factor": 2.688651407747465
+          },
+          "candidate": {
+            "n": 16,
+            "median_multiplicative_error": 2.2887230942390815,
+            "mean_absolute_log10_error": 0.5473771409372494,
+            "geomean_multiplicative_error": 3.526770024926904,
+            "rmse_log10": 0.6959518960895706,
+            "p80_multiplicative_error": 11.366675577180999,
+            "within_2x": 0.3125,
+            "signed_bias_factor": 2.693755464089572
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.05248244293610536,
+            "ci_90": [
+              -0.0021144873024886235,
+              0.1031136164122408
+            ],
+            "bootstrap_probability_candidate_better": 0.0581,
+            "samples": 20000,
+            "clusters": 7
+          }
+        }
+      }
+    },
+    "time_per_task": {
+      "status": "exploratory low coverage",
+      "eligible_checkpoints": 59,
+      "minimum_train_rows": 20,
+      "minimum_train_developers": 6,
+      "scopes": {
+        "all": {
+          "n": 33,
+          "developers": 18,
+          "baseline": {
+            "n": 33,
+            "median_multiplicative_error": 1.9670701446632528,
+            "mean_absolute_log10_error": 0.4254622126842324,
+            "geomean_multiplicative_error": 2.663558334442535,
+            "rmse_log10": 0.5395092423271558,
+            "p80_multiplicative_error": 4.489423809649626,
+            "within_2x": 0.5151515151515151,
+            "signed_bias_factor": 1.510317543730469
+          },
+          "candidate": {
+            "n": 33,
+            "median_multiplicative_error": 1.9436812015348497,
+            "mean_absolute_log10_error": 0.4305442168510731,
+            "geomean_multiplicative_error": 2.6949096953916447,
+            "rmse_log10": 0.5352311378442514,
+            "p80_multiplicative_error": 4.643290115375284,
+            "within_2x": 0.5454545454545454,
+            "signed_bias_factor": 1.3104585377315765
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.029645495511505034,
+            "ci_90": [
+              -0.023759577525658,
+              0.08687800548571444
+            ],
+            "bootstrap_probability_candidate_better": 0.1851,
+            "samples": 20000,
+            "clusters": 18
+          }
+        },
+        "frontier_like": {
+          "n": 11,
+          "developers": 5,
+          "baseline": {
+            "n": 11,
+            "median_multiplicative_error": 1.7592863082652097,
+            "mean_absolute_log10_error": 0.27248523026562615,
+            "geomean_multiplicative_error": 1.872773391589177,
+            "rmse_log10": 0.3137014511631111,
+            "p80_multiplicative_error": 2.130219415151602,
+            "within_2x": 0.6363636363636364,
+            "signed_bias_factor": 1.1860523772235532
+          },
+          "candidate": {
+            "n": 11,
+            "median_multiplicative_error": 1.9943249894643464,
+            "mean_absolute_log10_error": 0.32590990196700004,
+            "geomean_multiplicative_error": 2.117921709045732,
+            "rmse_log10": 0.3603436556384265,
+            "p80_multiplicative_error": 2.6047667301235533,
+            "within_2x": 0.5454545454545454,
+            "signed_bias_factor": 1.1553845057880663
+          },
+          "paired_developer_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": 0.034257899261925864,
+            "ci_90": [
+              -0.006578273537011059,
+              0.07282137037030993
+            ],
+            "bootstrap_probability_candidate_better": 0.0686,
+            "samples": 20000,
+            "clusters": 5
+          }
+        }
+      }
+    }
+  },
+  "aa_openrouter_exact_crosscheck": {
+    "exact_epoch_checkpoint_intersection": 28,
+    "price": {
+      "n_positive_pairs": 26,
+      "log10_pearson": 0.824369054475064,
+      "spearman": 0.8147008547008547,
+      "median_left_over_right": 0.6814401572446034
+    },
+    "raw_speed": {
+      "n_positive_pairs": 24,
+      "log10_pearson": 0.5493293248476512,
+      "spearman": 0.49195306959236323,
+      "median_left_over_right": 2.832388541065993
+    },
+    "provider_normalized_speed": {
+      "n_positive_pairs": 24,
+      "log10_pearson": 0.5117932262088712,
+      "spearman": 0.5147826086956522,
+      "median_left_over_right": 106.63498736387145
+    }
+  },
+  "decision": {
+    "validates_existing_price_direction": true,
+    "change_live_price_weight": false,
+    "incremental_aa_operational_price_weight": 0.0,
+    "incremental_aa_speed_weight": 0.0,
+    "incremental_aa_latency_weight": 0.0,
+    "reason": "AA provider-median price improves broad and frontier-like held-out recovery and agrees strongly with OpenRouter prices, validating the existing small price branch. But first-party price worsens frontier-like recovery, Fable/Sol are first-party targets, and AA/OpenRouter price is highly correlated rather than independent. Speed and latency do not improve held-out mean error. Keep the current conservative price weight and add no operational weight."
+  },
+  "source_manifest": {
+    "sources/aa_detailed_model_signals_2026-07-31.csv": "c00553aa052e8e5fd40bf84637bc17663e407b5f6d348ddb1140c2df48b39404",
+    "sources/aa_detailed_snapshot_2026-07-31.html.gz": "e767200f33263fdea9cadb5f61e347ab0d9bed85ca8d9dc0a066e679067375b6",
+    "sources/aa_calibration_primary_overrides_2026-07-31.json": "339b8de4365de2dca8b85243f479dfd3768d6dd81f178d38a303a7f0feff0c79",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_epoch_crosscheck_2026-07-18.csv": "c0e1b9a29c806276fb074d3deb2349b69c971e295b4c211dc8b95b55b231302e",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_calibration_2026-07-18.csv": "072ff900db917ce7d641d0af6bd548c8d472438d48d4c0acc0d14504265a86cd",
+    "sources/open_model_parameter_truth_reconciliation_2026-07-31.json": "cbfc667c884f88d7a4456efde5a47f24ca6ca481f0e30a67cbfcc419c7c0ad89"
+  },
+  "outputs": {
+    "operational_panel": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_operational_parameter_panel_2026-07-18.csv",
+    "backtest_predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_operational_backtest_predictions_2026-07-18.csv",
+    "openrouter_crosscheck": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_openrouter_operational_crosscheck_2026-07-18.csv"
+  }
+}

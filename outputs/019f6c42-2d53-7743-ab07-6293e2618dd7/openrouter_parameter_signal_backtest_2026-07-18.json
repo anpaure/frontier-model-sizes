@@ -1,0 +1,401 @@
+{
+  "compatibility_filename_date": "2026-07-18",
+  "conclusion": {
+    "current_live_final_price_weight": 0.034,
+    "openrouter_price_is_family_heldout_predictive": true,
+    "operational_prediction_status": "diagnostic; not automatically blended into the live frontier forecast",
+    "policy": "No positive live weight unless family-held-out paired bootstrap is >=90% favorable, its 90% CI excludes zero, and chronological-family direction agrees.",
+    "price_weight_recommendation": "retain the existing low weight; do not increase until price is tested incrementally against AA/ECI/no-CoT on the same held-out checkpoints",
+    "recommended_incremental_tok_s_weight_in_live_ensemble": 0.0,
+    "tok_s_adds_robust_incremental_information_beyond_price": false
+  },
+  "data_audit": {
+    "calibration_families": 19,
+    "date_policy": "Epoch release date is authoritative for matched calibration rows. OpenRouter created_date is a catalog/onboarding timestamp and large deltas are retained as explicit audit flags.",
+    "duplicate_calibration_checkpoints": 0,
+    "manual_epoch_model_matches": 95,
+    "match_status_counts": {
+      "disclosed_anchor": 2,
+      "frontier_target": 9,
+      "matched_epoch_manual": 95,
+      "same_base_control": 6,
+      "unmatched": 222
+    },
+    "matched_rows_with_catalog_date_over_60_days_from_epoch": 6,
+    "matching_policy": "Explicit whitelist only; unmatched records remain in raw source files and are never fuzzy-matched.",
+    "openrouter_catalog_models": 334,
+    "parameter_policy": "Epoch Parameters only for regression; Kimi K3 and Grok 4.5 disclosed totals are external validation anchors.",
+    "unique_epoch_calibration_checkpoints": 93
+  },
+  "external_anchor_checks": [
+    {
+      "actual_over_prediction": 0.6352042587970359,
+      "anchor_calibrated_central_b": 2612.5638112965694,
+      "anchor_calibrated_heldout_error_80_high_b": 11067.96379921814,
+      "anchor_calibrated_heldout_error_80_low_b": 616.6888320124991,
+      "calibration_price_max_usd_per_mtoken": 5.0,
+      "calibration_price_min_usd_per_mtoken": 0.0436348484585,
+      "coefficient_bootstrap_p05_b": 2045.7584929028667,
+      "coefficient_bootstrap_p50_b": 4879.170050230798,
+      "coefficient_bootstrap_p95_b": 15890.10319770288,
+      "completion_price_usd_per_mtoken": "15",
+      "disclosed_parameter_source": "Kimi K3 official technical report Table 1",
+      "disclosed_total_parameters_b": 2780.0,
+      "heldout_error_80_high_b": 18540.96004033769,
+      "heldout_error_80_low_b": 1033.0719542535896,
+      "model": "MoonshotAI: Kimi K3",
+      "openrouter_model_id": "moonshotai/kimi-k3",
+      "operational_model_central_b": 4376.54496407947,
+      "price_over_calibration_max": 1.3416407865,
+      "prompt_price_usd_per_mtoken": "3",
+      "provider_normalized_throughput_ratio": 0.7612223456122788,
+      "raw_throughput_tps_1w": "30",
+      "release_date": "2026-07-16",
+      "status": "external disclosed check",
+      "two_anchor_calibration_factor": 0.5969466400412218
+    },
+    {
+      "actual_over_prediction": 0.5609932334700632,
+      "anchor_calibrated_central_b": 1596.1332626476603,
+      "anchor_calibrated_heldout_error_80_high_b": 6761.919113066541,
+      "anchor_calibrated_heldout_error_80_low_b": 376.7630682253023,
+      "calibration_price_max_usd_per_mtoken": 5.0,
+      "calibration_price_min_usd_per_mtoken": 0.0436348484585,
+      "coefficient_bootstrap_p05_b": 1202.932865186073,
+      "coefficient_bootstrap_p50_b": 2436.096206823868,
+      "coefficient_bootstrap_p95_b": 6178.556178899164,
+      "completion_price_usd_per_mtoken": "6",
+      "disclosed_parameter_source": "user-provided disclosure",
+      "disclosed_total_parameters_b": 1500.0,
+      "heldout_error_80_high_b": 11327.51013155816,
+      "heldout_error_80_low_b": 631.1503289461268,
+      "model": "xAI: Grok 4.5",
+      "openrouter_model_id": "x-ai/grok-4.5",
+      "operational_model_central_b": 2673.829041968375,
+      "price_over_calibration_max": 0.692820323028,
+      "prompt_price_usd_per_mtoken": "2",
+      "provider_normalized_throughput_ratio": 0.49183730432675327,
+      "raw_throughput_tps_1w": "52.75",
+      "release_date": "2026-07-08",
+      "status": "external disclosed check",
+      "two_anchor_calibration_factor": 0.5969466400412218
+    }
+  ],
+  "feature_definitions": {
+    "fit": "family-balanced Huber robust ridge (alpha=1) with standardized features",
+    "price": "median provider geometric mean of prompt and completion USD per million tokens",
+    "provider_normalized_throughput": "default-tier median endpoint log-speed residual after provider+quantization, provider, quantization, or global control hierarchy; exponentiated",
+    "raw_throughput": "median across provider one-week median output tokens/second; default service tier only",
+    "target": "log10 Epoch total parameters in billions"
+  },
+  "frontier_operational_estimate_method": {
+    "calibration_price_range_usd_per_mtoken": [
+      0.0436348484585,
+      5.0
+    ],
+    "coefficient_bootstrap_samples": 1000,
+    "family_exclusion": "target developer excluded from calibration when present",
+    "heldout_predictive_error_factor_p80": 4.236437690578476,
+    "specification": "date_price",
+    "two_anchor_calibration_note": "Geometric residual correction from disclosed Kimi K3 and Grok 4.5; reported separately from uncalibrated external checks.",
+    "two_anchor_frontier_calibration_factor": 0.5969466400412218
+  },
+  "heldout_metrics": {
+    "chronological_family": {
+      "date_only": {
+        "mean_absolute_log10_error": 0.6397388481552407,
+        "median_multiplicative_error": 3.8758677544308764,
+        "n": 70,
+        "p80_multiplicative_error": 8.61074338294764,
+        "rmse_log10": 0.7552752845821382,
+        "signed_bias_factor": 1.222956401356489,
+        "within_2x": 0.22857142857142856
+      },
+      "date_price": {
+        "mean_absolute_log10_error": 0.4197990872993067,
+        "median_multiplicative_error": 2.1770313412490214,
+        "n": 70,
+        "p80_multiplicative_error": 4.670666485500503,
+        "rmse_log10": 0.5185604363716932,
+        "signed_bias_factor": 1.3528550226816676,
+        "within_2x": 0.4142857142857143
+      },
+      "date_price_provider_normalized_throughput": {
+        "mean_absolute_log10_error": 0.4174936236861111,
+        "median_multiplicative_error": 2.244351754599221,
+        "n": 70,
+        "p80_multiplicative_error": 4.645363262470584,
+        "rmse_log10": 0.522633983794303,
+        "signed_bias_factor": 1.3442132967114937,
+        "within_2x": 0.42857142857142855
+      },
+      "date_provider_normalized_throughput": {
+        "mean_absolute_log10_error": 0.623125551036913,
+        "median_multiplicative_error": 3.308162419688102,
+        "n": 70,
+        "p80_multiplicative_error": 10.315431788539767,
+        "rmse_log10": 0.7743236395164986,
+        "signed_bias_factor": 1.3301325067249363,
+        "within_2x": 0.2714285714285714
+      },
+      "date_raw_throughput": {
+        "mean_absolute_log10_error": 0.6296937320674169,
+        "median_multiplicative_error": 3.7496840841002888,
+        "n": 70,
+        "p80_multiplicative_error": 9.023972775106325,
+        "rmse_log10": 0.7827345262872375,
+        "signed_bias_factor": 1.4555659700749317,
+        "within_2x": 0.2714285714285714
+      }
+    },
+    "family": {
+      "date_only": {
+        "mean_absolute_log10_error": 0.6163852994103133,
+        "median_multiplicative_error": 4.10588038248113,
+        "n": 93,
+        "p80_multiplicative_error": 7.610847626929305,
+        "rmse_log10": 0.7330855969768145,
+        "signed_bias_factor": 1.1524170504511706,
+        "within_2x": 0.27956989247311825
+      },
+      "date_price": {
+        "mean_absolute_log10_error": 0.397813913217537,
+        "median_multiplicative_error": 2.182362181313902,
+        "n": 93,
+        "p80_multiplicative_error": 4.236437690578476,
+        "rmse_log10": 0.5039219252647751,
+        "signed_bias_factor": 1.288189884554783,
+        "within_2x": 0.45161290322580644
+      },
+      "date_price_provider_normalized_throughput": {
+        "mean_absolute_log10_error": 0.4052285180969588,
+        "median_multiplicative_error": 2.2296172944678045,
+        "n": 93,
+        "p80_multiplicative_error": 4.251823226276448,
+        "rmse_log10": 0.5147126392231275,
+        "signed_bias_factor": 1.3059973859987943,
+        "within_2x": 0.45161290322580644
+      },
+      "date_provider_normalized_throughput": {
+        "mean_absolute_log10_error": 0.6257082326245458,
+        "median_multiplicative_error": 4.157652164590545,
+        "n": 93,
+        "p80_multiplicative_error": 8.553268816849222,
+        "rmse_log10": 0.7528148324249133,
+        "signed_bias_factor": 1.2043313111148413,
+        "within_2x": 0.24731182795698925
+      },
+      "date_raw_throughput": {
+        "mean_absolute_log10_error": 0.6248616761168992,
+        "median_multiplicative_error": 4.238964133338826,
+        "n": 93,
+        "p80_multiplicative_error": 8.101483710584926,
+        "rmse_log10": 0.7493180221392799,
+        "signed_bias_factor": 1.2127293005569482,
+        "within_2x": 0.25806451612903225
+      }
+    }
+  },
+  "limitations": [
+    "OpenRouter throughput measures serving stacks, hardware, batching, quantization, traffic, and routing as well as model compute.",
+    "Current snapshot prices are not historical launch prices; older models may have been repriced.",
+    "Epoch total parameters do not reveal active MoE parameters, which are closer to per-token inference cost.",
+    "No disclosed Anthropic frontier parameter checkpoints exist in this calibration, so developer-family transfer is a real extrapolation.",
+    "Provider-normalization reduces observed infrastructure confounding but cannot identify undisclosed batching or speculative decoding."
+  ],
+  "outputs": {
+    "calibration": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_calibration_2026-07-18.csv",
+    "frontier_operational_estimates": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_frontier_operational_estimates_2026-07-18.csv",
+    "heldout_predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_backtest_predictions_2026-07-18.csv",
+    "match_audit": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_epoch_match_audit_2026-07-18.csv"
+  },
+  "paired_family_bootstraps": [
+    {
+      "baseline": "date_only",
+      "bootstrap_probability_candidate_better": 1.0,
+      "candidate": "date_price",
+      "ci_90": [
+        -0.29718904831649356,
+        -0.15748327906882717
+      ],
+      "family_clusters": 19,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": -0.21857138619277622,
+      "paired_checkpoints": 93,
+      "samples": 10000
+    },
+    {
+      "baseline": "date_only",
+      "bootstrap_probability_candidate_better": 0.2881,
+      "candidate": "date_provider_normalized_throughput",
+      "ci_90": [
+        -0.012996590460879792,
+        0.03913133894783471
+      ],
+      "family_clusters": 19,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.009322933214232387,
+      "paired_checkpoints": 93,
+      "samples": 10000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.0654,
+      "candidate": "date_price_provider_normalized_throughput",
+      "ci_90": [
+        -0.00037168358432928807,
+        0.019791617056391254
+      ],
+      "family_clusters": 19,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "family",
+      "observed_delta": 0.007414604879421638,
+      "paired_checkpoints": 93,
+      "samples": 10000
+    },
+    {
+      "baseline": "date_only",
+      "bootstrap_probability_candidate_better": 0.9996,
+      "candidate": "date_price",
+      "ci_90": [
+        -0.32781634142745225,
+        -0.13132765526082332
+      ],
+      "family_clusters": 17,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": -0.21993976085593392,
+      "paired_checkpoints": 70,
+      "samples": 10000
+    },
+    {
+      "baseline": "date_only",
+      "bootstrap_probability_candidate_better": 0.7584,
+      "candidate": "date_provider_normalized_throughput",
+      "ci_90": [
+        -0.05142117155478025,
+        0.02593454108312175
+      ],
+      "family_clusters": 17,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": -0.016613297118327708,
+      "paired_checkpoints": 70,
+      "samples": 10000
+    },
+    {
+      "baseline": "date_price",
+      "bootstrap_probability_candidate_better": 0.5599,
+      "candidate": "date_price_provider_normalized_throughput",
+      "ci_90": [
+        -0.021537366631895635,
+        0.021833600679568424
+      ],
+      "family_clusters": 17,
+      "metric": "mean absolute log10 error; candidate minus baseline",
+      "mode": "chronological_family",
+      "observed_delta": -0.002305463613195724,
+      "paired_checkpoints": 70,
+      "samples": 10000
+    }
+  ],
+  "same_base_operational_noise_controls": {
+    "Claude Opus 4.5\u20134.8 shared-base control": {
+      "interpretation": "Variation within an asserted shared base is an empirical operational-noise floor, not a size change.",
+      "models": [
+        {
+          "blended_price_usd_per_mtoken": 11.1803398875,
+          "created_date": "2025-11-24",
+          "model_id": "anthropic/claude-opus-4.5",
+          "provider_normalized_throughput_ratio": 0.6875000000000001,
+          "raw_throughput_tps_1w": 35.0
+        },
+        {
+          "blended_price_usd_per_mtoken": 11.1803398875,
+          "created_date": "2026-02-04",
+          "model_id": "anthropic/claude-opus-4.6",
+          "provider_normalized_throughput_ratio": 0.6518444490603192,
+          "raw_throughput_tps_1w": 36.0
+        },
+        {
+          "blended_price_usd_per_mtoken": 11.1803398875,
+          "created_date": "2026-04-16",
+          "model_id": "anthropic/claude-opus-4.7",
+          "provider_normalized_throughput_ratio": 1.1010806695136823,
+          "raw_throughput_tps_1w": 53.25
+        },
+        {
+          "blended_price_usd_per_mtoken": 11.1803398875,
+          "created_date": "2026-05-27",
+          "model_id": "anthropic/claude-opus-4.8",
+          "provider_normalized_throughput_ratio": 1.1291589790636214,
+          "raw_throughput_tps_1w": 58.0
+        }
+      ],
+      "price_max_over_min": 1.0,
+      "provider_normalized_throughput_max_over_min": 1.7322521971175568,
+      "raw_throughput_max_over_min": 1.6571428571428573
+    },
+    "GPT-5\u20135.5 same-base control (standard endpoints only)": {
+      "interpretation": "Variation within an asserted shared base is an empirical operational-noise floor, not a size change.",
+      "models": [
+        {
+          "blended_price_usd_per_mtoken": 3.53553390593,
+          "created_date": "2025-08-07",
+          "model_id": "openai/gpt-5",
+          "provider_normalized_throughput_ratio": 0.7940666671767441,
+          "raw_throughput_tps_1w": 49.0
+        },
+        {
+          "blended_price_usd_per_mtoken": 3.53553390593,
+          "created_date": "2025-11-13",
+          "model_id": "openai/gpt-5.1",
+          "provider_normalized_throughput_ratio": 0.9532653713930895,
+          "raw_throughput_tps_1w": 49.375
+        },
+        {
+          "blended_price_usd_per_mtoken": 4.94974746831,
+          "created_date": "2025-12-10",
+          "model_id": "openai/gpt-5.2",
+          "provider_normalized_throughput_ratio": 0.8305391541874373,
+          "raw_throughput_tps_1w": 41.5
+        },
+        {
+          "blended_price_usd_per_mtoken": 4.94974746831,
+          "created_date": "2026-03-03",
+          "model_id": "openai/gpt-5.3-chat",
+          "provider_normalized_throughput_ratio": 0.8282828282828282,
+          "raw_throughput_tps_1w": 41.0
+        },
+        {
+          "blended_price_usd_per_mtoken": 6.42991057481,
+          "created_date": "2026-03-05",
+          "model_id": "openai/gpt-5.4",
+          "provider_normalized_throughput_ratio": 1.0795965846973103,
+          "raw_throughput_tps_1w": 57.5
+        },
+        {
+          "blended_price_usd_per_mtoken": 12.8598211496,
+          "created_date": "2026-04-24",
+          "model_id": "openai/gpt-5.5",
+          "provider_normalized_throughput_ratio": 0.9062106717124457,
+          "raw_throughput_tps_1w": 47.875
+        }
+      ],
+      "price_max_over_min": 3.637306695894154,
+      "provider_normalized_throughput_max_over_min": 1.3595792763040293,
+      "raw_throughput_max_over_min": 1.4024390243902438
+    }
+  },
+  "snapshot_date": "2026-07-31",
+  "source_manifest": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "sources/openrouter_model_signals_2026-07-18.csv": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd",
+    "sources/openrouter_operational_snapshot_2026-07-18.json.gz": "28c2db8c6036b22dd6075d900f4b5d186f5116e87fc6c04987f4ae267b6d0bdf",
+    "sources/openrouter_provider_signals_2026-07-18.csv": "a939726b7d2c58a8698c0839530d8c646a08229942c9f62da84f40a3c42c2263",
+    "sources/openrouter_throughput_daily_2026-07-18.csv": "f401000a2b60dc1d20ebf13e4d04ab5c7933982087aa48cb6b70297ab21d35f8"
+  }
+}

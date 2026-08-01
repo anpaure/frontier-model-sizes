@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "reproduction": {
+    "official_repository": "https://github.com/epoch-research/eci-public",
+    "official_commit": "542567e72a415b72624e5bbd12603cfd3f485179",
+    "bootstrap_samples": 500,
+    "bootstrap_seed": 12345,
+    "input_rows": 2010,
+    "input_models": 211,
+    "input_benchmarks": 52,
+    "reproduced_models": 211,
+    "anchors": {
+      "GPT-5": 150.0,
+      "Claude 3.5 Sonnet": 130.0
+    },
+    "all_models_exactly_covered": true
+  },
+  "published_score_crosscheck": {
+    "published_nonblank_scores": 194,
+    "published_blank_scores": 17,
+    "maximum_absolute_score_difference": 0.00891361050467765,
+    "tolerance": 0.01,
+    "all_nonblank_scores_match_within_display_rounding": true
+  },
+  "release_date_crosscheck": {
+    "published_release_dates_used": 209,
+    "canonical_input_date_fallbacks": 2,
+    "published_vs_input_date_disagreements": 44,
+    "policy": "Use the published checkpoint-level Release date for chronological regression; preserve and use the canonical ECI-input date only when the published date is blank.",
+    "known_fallback_models": [
+      "Claude Instant",
+      "Gemma 2 9B"
+    ]
+  },
+  "upstream_test_context": {
+    "passed": 43,
+    "failed": 2,
+    "total": 45,
+    "failed_tests": [
+      "tests/test_dataloader.py::TestDataLoaderAccuracy::test_benchmark_coverage",
+      "tests/test_dataloader.py::TestDataLoaderAccuracy::test_row_count"
+    ],
+    "reason": "The general benchmark_data.zip loader reconstructs 1,499 rows across 37 benchmark names, while the canonical eci_benchmarks.csv contains 2,010 rows across 52 benchmark names. This does not affect reproduction from the canonical ECI input, but it means the general archive is not a complete substitute for eci_benchmarks.csv."
+  },
+  "files": {
+    "eci_input": "sources/epoch_eci_benchmarks_2026-07-17.csv",
+    "published_archive": "sources/epoch_benchmark_data_2026-07-17.zip",
+    "reproduced_scores": "sources/epoch_eci_reproduced_scores_2026-07-18.csv",
+    "reproduction_metadata": "sources/epoch_eci_reproduction_metadata_2026-07-18.json",
+    "crosscheck": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_eci_reproduction_crosscheck_2026-07-18.csv"
+  },
+  "source_hashes": {
+    "sources/epoch_eci_benchmarks_2026-07-17.csv": "6208a2ec91e7496fdc5a2fe243c1a74f46b1efed86bd0fc8ff3d2475161fab4d",
+    "sources/epoch_benchmark_data_2026-07-17.zip": "462d0de1710deb381da3649918eaaf04f83818811ca2c37c84c3bd8c026e9c8d",
+    "sources/epoch_eci_reproduced_scores_2026-07-18.csv": "0e843cdb9fdef38b0af9bbb9d7a564ece43c316a78e4373c3e2447a3732e45b2",
+    "sources/epoch_eci_reproduction_metadata_2026-07-18.json": "9da6a88c71ae2656d5597008a89ea7efb92ddb38bfc2085585e3db2edf1a77d0",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_eci_reproduction_crosscheck_2026-07-18.csv": "baec74e22004d69befc91ac53e74cbfbd990bc98771afe3182257f350bae56a3"
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-31",
+  "purpose": "Separate checkpoint release from public parameter-label and weight availability in chronological parameter regressions.",
+  "policy": "Training eligibility is max(checkpoint release date, public parameter-label date). Weight-release dates are preserved separately and are not substituted when an earlier first-party model card or technical report states the count.",
+  "records": [
+    {
+      "record_id": "aa-label-longcat-flash-lite-2026-01-29",
+      "identity": {
+        "canonical_model_name": "LongCat Flash Lite",
+        "aliases": [
+          "LongCat-Flash-Lite"
+        ],
+        "aa_slug": "longcat-flash-lite",
+        "aa_release_date": "2026-01-28",
+        "total_parameters_b": 68.5,
+        "accepted_total_parameters_b": [
+          68.5
+        ],
+        "model_weights_source_url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite"
+      },
+      "timing": {
+        "parameter_label_available_date": "2026-01-29",
+        "parameter_label_basis": "first_party_technical_report",
+        "parameter_label_source_url": "https://arxiv.org/abs/2601.21204",
+        "repository_created_at_utc": "2026-01-27T08:03:21.000Z",
+        "weights_available_date": "2026-01-30",
+        "weights_available_at_utc": "2026-01-30T07:20:40.000Z",
+        "weights_commit": "ef1bd778242f0abcf6d8536bace504c658c37c99",
+        "config_commit": "ef1bd778242f0abcf6d8536bace504c658c37c99",
+        "model_card_commit": "ef1bd778242f0abcf6d8536bace504c658c37c99",
+        "hugging_face_safetensors_total_parameters": 69073335552,
+        "parameter_label_match_tokens": [
+          "68.5B",
+          "parameter"
+        ],
+        "parameter_value_basis": "publisher_disclosed_rounded_total"
+      },
+      "local_evidence": [
+        {
+          "kind": "hugging_face_model_api",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_model_api.json",
+          "sha256": "89e2abe5443efe5fa26b952a7138c2f05d483232b9ffd9044227817e2c893b90",
+          "url": "https://huggingface.co/api/models/meituan-longcat/LongCat-Flash-Lite"
+        },
+        {
+          "kind": "hugging_face_commit_history",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_commit_history.json",
+          "sha256": "b5986d40bf9558ce48afb431abc7ff802b0bd6f543bc72fda917ee0ec2ca5ee7",
+          "url": "https://huggingface.co/api/models/meituan-longcat/LongCat-Flash-Lite/commits/main?limit=1000"
+        },
+        {
+          "kind": "commit_pinned_config",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_config.json",
+          "sha256": "c5719c2df9c931b11b0336a0fa8bfdceae617c5303d1bad7197436a7daea33a0",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite/raw/ef1bd778242f0abcf6d8536bace504c658c37c99/config.json"
+        },
+        {
+          "kind": "commit_pinned_model_card",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_model_card.md",
+          "sha256": "b23e647f56fd30a03523be4ab94f5022a5327cfcb83eb5b69320c8b26cbee714",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite/raw/ef1bd778242f0abcf6d8536bace504c658c37c99/README.md"
+        },
+        {
+          "kind": "first_party_label_source",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__first_party_label_source.html",
+          "sha256": "3323609924fe41785bdb00edfc2f655cfa18e5dea8b1e992a0f44209b4cab5d3",
+          "url": "https://arxiv.org/abs/2601.21204"
+        }
+      ]
+    },
+    {
+      "record_id": "aa-label-minimax-m2-7-2026-04-09",
+      "identity": {
+        "canonical_model_name": "MiniMax-M2.7",
+        "aliases": [
+          "MiniMax M2.7"
+        ],
+        "aa_slug": "minimax-m2-7",
+        "aa_release_date": "2026-03-18",
+        "total_parameters_b": 230.0,
+        "accepted_total_parameters_b": [
+          229.0,
+          230.0
+        ],
+        "model_weights_source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+      },
+      "timing": {
+        "parameter_label_available_date": "2026-04-09",
+        "parameter_label_basis": "official_hugging_face_config_and_weights",
+        "parameter_label_source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+        "repository_created_at_utc": "2026-04-09T03:37:12.000Z",
+        "weights_available_date": "2026-04-09",
+        "weights_available_at_utc": "2026-04-09T11:34:39.000Z",
+        "weights_commit": "a0ca8c65a93219ea256d47fd0851c49d13fca5fc",
+        "config_commit": "a0ca8c65a93219ea256d47fd0851c49d13fca5fc",
+        "model_card_commit": "1eece56934dda5c770bdb7fec67021222b705629",
+        "hugging_face_safetensors_total_parameters": 228703644928,
+        "parameter_label_match_tokens": [],
+        "parameter_value_basis": "official_safetensors_total_rounded_to_aa_value"
+      },
+      "local_evidence": [
+        {
+          "kind": "hugging_face_model_api",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_model_api.json",
+          "sha256": "102169550714100c8fd01a3d922e1e1313b5e71b827d706b65f4f894b36748f9",
+          "url": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M2.7"
+        },
+        {
+          "kind": "hugging_face_commit_history",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_commit_history.json",
+          "sha256": "6880c6d3837f120da6641bee8d97a876b284c845a5e482035158914d225f9140",
+          "url": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M2.7/commits/main?limit=1000"
+        },
+        {
+          "kind": "commit_pinned_config",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_config.json",
+          "sha256": "3372a31ecbdba614b309cfa5b3dfec33ceea3c580cb9612ff35345d92ced8618",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7/raw/a0ca8c65a93219ea256d47fd0851c49d13fca5fc/config.json"
+        },
+        {
+          "kind": "commit_pinned_model_card",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_model_card.md",
+          "sha256": "d0a0743fd312760e619049cdecb347344cd3beea48a867f2b277481d79ea06ba",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7/raw/1eece56934dda5c770bdb7fec67021222b705629/README.md"
+        },
+        {
+          "kind": "first_party_launch_page",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__first_party_launch_page.html",
+          "sha256": "2a42caede98841a19ce51e74859278029ebd493903a8d23432266fd1743a14d4",
+          "url": "https://www.minimax.io/news/minimax-m27-en"
+        }
+      ]
+    },
+    {
+      "record_id": "aa-label-mimo-v2-5-2026-04-22",
+      "identity": {
+        "canonical_model_name": "MiMo-V2.5",
+        "aliases": [
+          "MiMo V2.5"
+        ],
+        "aa_slug": "mimo-v2-5-0424",
+        "aa_release_date": "2026-04-22",
+        "total_parameters_b": 310.0,
+        "accepted_total_parameters_b": [
+          310.0
+        ],
+        "model_weights_source_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5"
+      },
+      "timing": {
+        "parameter_label_available_date": "2026-04-22",
+        "parameter_label_basis": "first_party_launch_model_card",
+        "parameter_label_source_url": "https://mimo.xiaomi.com/mimo-v2-5/",
+        "repository_created_at_utc": "2026-04-27T13:37:38.000Z",
+        "weights_available_date": "2026-04-27",
+        "weights_available_at_utc": "2026-04-27T15:10:09.000Z",
+        "weights_commit": "c8dea8ddc91add71ed7624bef73391aaf671c419",
+        "config_commit": "4f78a4d18f532779ecc6cf3d33ce398a20f78328",
+        "model_card_commit": "4f78a4d18f532779ecc6cf3d33ce398a20f78328",
+        "hugging_face_safetensors_total_parameters": 310775040000,
+        "parameter_label_match_tokens": [
+          "April 22nd, 2026",
+          "310B-parameter",
+          "15B active"
+        ],
+        "parameter_value_basis": "publisher_disclosed_rounded_total"
+      },
+      "local_evidence": [
+        {
+          "kind": "hugging_face_model_api",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_model_api.json",
+          "sha256": "c4b713c73a7cea22f2502abc610c50894713fa50bd4e8dee948e1be7b9511de8",
+          "url": "https://huggingface.co/api/models/XiaomiMiMo/MiMo-V2.5"
+        },
+        {
+          "kind": "hugging_face_commit_history",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_commit_history.json",
+          "sha256": "139415d50cc77ce0b96cd6bea40b1eb77cc2a1309e553a01eb9f05b403739a7f",
+          "url": "https://huggingface.co/api/models/XiaomiMiMo/MiMo-V2.5/commits/main?limit=1000"
+        },
+        {
+          "kind": "commit_pinned_config",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_config.json",
+          "sha256": "48f5c3616813a76d80d1895f3b6cc1d8df9b0b2a34d732fd825cab670ebfc8a5",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/raw/4f78a4d18f532779ecc6cf3d33ce398a20f78328/config.json"
+        },
+        {
+          "kind": "commit_pinned_model_card",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_model_card.md",
+          "sha256": "31bfe317627714a8cbc9f4102b826d8370b202fce93b582074ef0cdc3b2c099a",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/raw/4f78a4d18f532779ecc6cf3d33ce398a20f78328/README.md"
+        },
+        {
+          "kind": "first_party_label_source",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__first_party_label_source.html",
+          "sha256": "b470a6bf40358a35bd927c87361597e22c51a5ff7fb677660e166e6a45961f06",
+          "url": "https://mimo.xiaomi.com/mimo-v2-5/"
+        }
+      ]
+    },
+    {
+      "record_id": "aa-label-minimax-m3-2026-06-12",
+      "identity": {
+        "canonical_model_name": "MiniMax-M3",
+        "aliases": [
+          "MiniMax M3"
+        ],
+        "aa_slug": "minimax-m3",
+        "aa_release_date": "2026-06-01",
+        "total_parameters_b": 428.0,
+        "accepted_total_parameters_b": [
+          428.0
+        ],
+        "model_weights_source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3"
+      },
+      "timing": {
+        "parameter_label_available_date": "2026-06-12",
+        "parameter_label_basis": "official_hugging_face_config_and_weights",
+        "parameter_label_source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "repository_created_at_utc": "2026-06-02T07:49:31.000Z",
+        "weights_available_date": "2026-06-12",
+        "weights_available_at_utc": "2026-06-12T12:52:11.000Z",
+        "weights_commit": "3a41b311ffa5719cef48fed3974ccf2cc03733ea",
+        "config_commit": "3a41b311ffa5719cef48fed3974ccf2cc03733ea",
+        "model_card_commit": "3a41b311ffa5719cef48fed3974ccf2cc03733ea",
+        "hugging_face_safetensors_total_parameters": 427040140160,
+        "parameter_label_match_tokens": [
+          "428B parameters",
+          "23B activated"
+        ],
+        "parameter_value_basis": "official_safetensors_total_rounded_to_aa_value"
+      },
+      "local_evidence": [
+        {
+          "kind": "hugging_face_model_api",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_model_api.json",
+          "sha256": "2ea4de95a54b646abf7d354123d2fef559e33bb184857c177f0ab32860c2c336",
+          "url": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M3"
+        },
+        {
+          "kind": "hugging_face_commit_history",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_commit_history.json",
+          "sha256": "bd802a0bd90ebd397028dd78730da48f6e3fad52d7c53933e94965d804ae293f",
+          "url": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M3/commits/main?limit=1000"
+        },
+        {
+          "kind": "commit_pinned_config",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_config.json",
+          "sha256": "c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/raw/3a41b311ffa5719cef48fed3974ccf2cc03733ea/config.json"
+        },
+        {
+          "kind": "commit_pinned_model_card",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_model_card.md",
+          "sha256": "03dc56061db0f91e054c9194b74541a6d0616c6892f01fae6612bdd352d7a16f",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/raw/3a41b311ffa5719cef48fed3974ccf2cc03733ea/README.md"
+        },
+        {
+          "kind": "first_party_launch_page",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__first_party_launch_page.html",
+          "sha256": "b6c35e9ca6f5d69c4eada19cf97c68491e1e90b5eaffee3b0f5190001eafb732",
+          "url": "https://www.minimax.io/blog/minimax-m3"
+        }
+      ]
+    },
+    {
+      "record_id": "aa-label-nex-n2-pro-2026-06-03",
+      "identity": {
+        "canonical_model_name": "Nex-N2-Pro",
+        "aliases": [
+          "Nex N2 Pro"
+        ],
+        "aa_slug": "nex-n2-pro",
+        "aa_release_date": "2026-06-02",
+        "total_parameters_b": 397.0,
+        "accepted_total_parameters_b": [
+          397.0
+        ],
+        "model_weights_source_url": "https://huggingface.co/nex-agi/Nex-N2-Pro"
+      },
+      "timing": {
+        "parameter_label_available_date": "2026-06-03",
+        "parameter_label_basis": "official_hugging_face_config_and_weights",
+        "parameter_label_source_url": "https://huggingface.co/nex-agi/Nex-N2-Pro",
+        "repository_created_at_utc": "2026-06-03T03:15:13.000Z",
+        "weights_available_date": "2026-06-03",
+        "weights_available_at_utc": "2026-06-03T17:24:18.000Z",
+        "weights_commit": "a85b319a367e85c544a79e882638964be8238941",
+        "config_commit": "a85b319a367e85c544a79e882638964be8238941",
+        "model_card_commit": "a85b319a367e85c544a79e882638964be8238941",
+        "hugging_face_safetensors_total_parameters": 396802360816,
+        "parameter_label_match_tokens": [
+          "397B",
+          "17B"
+        ],
+        "parameter_value_basis": "official_safetensors_total_rounded_to_aa_value"
+      },
+      "local_evidence": [
+        {
+          "kind": "hugging_face_model_api",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_model_api.json",
+          "sha256": "b84e4de07c881d3fce7cd5fd38941de3a052cd70a65a09b160b2746bdf8c649d",
+          "url": "https://huggingface.co/api/models/nex-agi/Nex-N2-Pro"
+        },
+        {
+          "kind": "hugging_face_commit_history",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_commit_history.json",
+          "sha256": "35392481ebd28c116931133b1a34ed397a5895337c022327e4235495daad4604",
+          "url": "https://huggingface.co/api/models/nex-agi/Nex-N2-Pro/commits/main?limit=1000"
+        },
+        {
+          "kind": "commit_pinned_config",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_config.json",
+          "sha256": "117cf53ddda3bd6778477e4cfa3371c4f8d6a7adae10a322a4545358e61f56d0",
+          "url": "https://huggingface.co/nex-agi/Nex-N2-Pro/raw/a85b319a367e85c544a79e882638964be8238941/config.json"
+        },
+        {
+          "kind": "commit_pinned_model_card",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_model_card.md",
+          "sha256": "5b9de04586801239f13892018630434b81889cd687476361b0d02d56ed769c8d",
+          "url": "https://huggingface.co/nex-agi/Nex-N2-Pro/raw/a85b319a367e85c544a79e882638964be8238941/README.md"
+        }
+      ]
+    },
+    {
+      "record_id": "aa-label-longcat-2-0-2026-06-30",
+      "identity": {
+        "canonical_model_name": "LongCat 2.0",
+        "aliases": [
+          "LongCat-2.0"
+        ],
+        "aa_slug": "longcat-2-0",
+        "aa_release_date": "2026-06-29",
+        "total_parameters_b": 1600.0,
+        "accepted_total_parameters_b": [
+          1600.0
+        ],
+        "model_weights_source_url": "https://huggingface.co/meituan-longcat/LongCat-2.0"
+      },
+      "timing": {
+        "parameter_label_available_date": "2026-06-30",
+        "parameter_label_basis": "first_party_release_article",
+        "parameter_label_source_url": "https://www.meituan.com/news/NN260630164005904",
+        "repository_created_at_utc": "2026-07-05T00:07:44.000Z",
+        "weights_available_date": "2026-07-05",
+        "weights_available_at_utc": "2026-07-05T01:48:21.000Z",
+        "weights_commit": "373726b7bb09d29076e85c87384ba718ba153d07",
+        "config_commit": "373726b7bb09d29076e85c87384ba718ba153d07",
+        "model_card_commit": "373726b7bb09d29076e85c87384ba718ba153d07",
+        "hugging_face_safetensors_total_parameters": 1775560491136,
+        "parameter_label_match_tokens": [
+          "2026-06-30",
+          "1.6 T",
+          "48 B"
+        ],
+        "parameter_value_basis": "publisher_disclosed_rounded_total"
+      },
+      "local_evidence": [
+        {
+          "kind": "hugging_face_model_api",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_model_api.json",
+          "sha256": "46e4abcd862ceb44a594adb1fea2e10afed27eba50cb74fcc839f6c797e58976",
+          "url": "https://huggingface.co/api/models/meituan-longcat/LongCat-2.0"
+        },
+        {
+          "kind": "hugging_face_commit_history",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_commit_history.json",
+          "sha256": "2dc06efd1f0ba08059aac6c6bd9bdce7166883bcc1bc1cd85e6271922f972caa",
+          "url": "https://huggingface.co/api/models/meituan-longcat/LongCat-2.0/commits/main?limit=1000"
+        },
+        {
+          "kind": "commit_pinned_config",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_config.json",
+          "sha256": "c77120ade725b51d4911469fcefccdb46bf31c14465531533a68b74d54df16a5",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-2.0/raw/373726b7bb09d29076e85c87384ba718ba153d07/config.json"
+        },
+        {
+          "kind": "commit_pinned_model_card",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_model_card.md",
+          "sha256": "3e0e15fa0c5cc81675bd69af8eb469d128a725c1a7bfc71f03b7877b7b650567",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-2.0/raw/373726b7bb09d29076e85c87384ba718ba153d07/README.md"
+        },
+        {
+          "kind": "first_party_label_source",
+          "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__first_party_label_source.html",
+          "sha256": "b4f3da932292f5da49185b53923e6b2751f032e0f36e2983528fae3caaec8972",
+          "url": "https://www.meituan.com/news/NN260630164005904"
+        }
+      ]
+    }
+  ]
+}

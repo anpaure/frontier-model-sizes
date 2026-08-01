@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-18",
+  "fetched_at_utc": "2026-07-18T02:06:16+00:00",
+  "catalog_model_count": 344,
+  "eligible_text_model_count": 308,
+  "provider_endpoint_row_count": 900,
+  "models_with_price": 308,
+  "models_with_throughput_30m": 299,
+  "models_with_throughput_1w": 301,
+  "unique_model_ids": true,
+  "unique_provider_observation_keys": true,
+  "reused_endpoint_id_count": 1,
+  "reused_endpoint_ids": [
+    "23a86833-b536-4529-94c4-a18746e95c60"
+  ],
+  "failure_count": 0,
+  "failures": [],
+  "files": {
+    "raw_snapshot": "sources/openrouter_operational_snapshot_2026-07-18.json.gz",
+    "provider_signals": "sources/openrouter_provider_signals_2026-07-18.csv",
+    "model_signals": "sources/openrouter_model_signals_2026-07-18.csv"
+  },
+  "method_notes": [
+    "List prices are recorded per provider endpoint and converted from USD/token to USD/million tokens.",
+    "The 30-minute p50 throughput includes request counts and is retained as a volatile audit signal.",
+    "The preferred speed summary is each provider endpoint's median across the one-week daily series.",
+    "Endpoint UUIDs may be reused by OpenRouter model variants; uniqueness is enforced on model ID + endpoint ID + variant.",
+    "Throughput is not a parameter-count label; provider, quantization, batching, and service-tier effects remain confounders."
+  ]
+}

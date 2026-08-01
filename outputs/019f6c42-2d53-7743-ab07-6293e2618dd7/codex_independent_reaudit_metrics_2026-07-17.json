@@ -1,0 +1,3817 @@
+{
+  "audit_scope_limits": [
+    "Structural reconciliation and formulas were independently recomputed.",
+    "No-CoT dense/MoE Pareto factors and paired held-out point deltas were independently recomputed from the unified panel and prediction ledger.",
+    "IKP source hashes, published fit, duplicate serving-base collapse, strict target fit, overlap deltas, family bootstraps, and workbook blend were independently recomputed.",
+    "IKP conditional benchmark predictions were refit from source rows; exact-date vendor holdouts, all sensitivity bootstraps, stale narrative claims, and workbook integration were independently reconciled.",
+    "Semantic correctness of every one of the 274 AA-to-Epoch adjudications cannot be proven mechanically.",
+    "Source truth can still contain upstream errors or estimates; exact preservation is not equivalent to factual correctness."
+  ],
+  "compute_recomputation": {
+    "calibration_factor": 6.484297156035119,
+    "compute_existing_log_correlation": 0.9139761508408709,
+    "compute_priors_t": {
+      "Claude Fable 5": 2.486005155366301,
+      "Claude Opus 4.7 / 4.8 shared base": 2.2370236214205166,
+      "Claude Opus 5": 2.35591993537972,
+      "Claude Sonnet 5": 1.9262003590954184,
+      "GPT-5.5": 2.29891851523729,
+      "GPT-5.6 Luna": 1.781799205072016,
+      "GPT-5.6 Sol": 2.2908931024007213,
+      "GPT-5.6 Terra": 2.0203741011908134,
+      "Grok 4.5": 1.9611779399862637,
+      "Kimi K3": 2.126273151955404
+    },
+    "joint_calibration_factor": 11.893668401568355,
+    "joint_compute_priors_t": {
+      "Claude Fable 5": 4.872832179416273,
+      "Claude Opus 4.7 / 4.8 shared base": 3.221136006373059,
+      "Claude Opus 5": 3.604953552776632,
+      "Claude Sonnet 5": 1.6394236674189995,
+      "GPT-5.5": 3.8354750246536606,
+      "GPT-5.6 Luna": 1.1700433279764757,
+      "GPT-5.6 Sol": 3.2984630585398125,
+      "GPT-5.6 Terra": 1.9645214924305152,
+      "Grok 4.5": 1.7408710844944537,
+      "Kimi K3": 2.395352554902686
+    },
+    "joint_vs_workbook_prior_ratio": {
+      "Claude Fable 5": 1.9601054200944663,
+      "Claude Opus 4.7 / 4.8 shared base": 1.4399204261989993,
+      "Claude Opus 5": 1.5301681091278667,
+      "Claude Sonnet 5": 0.8511179326064009,
+      "GPT-5.5": 1.6683823281390946,
+      "GPT-5.6 Luna": 0.656663963394902,
+      "GPT-5.6 Sol": 1.439815351961738,
+      "GPT-5.6 Terra": 0.9723553134405264,
+      "Grok 4.5": 0.8876660546705145,
+      "Kimi K3": 1.1265497815743126
+    },
+    "k3_anchor_source": "Kimi K3 official technical report Table 1",
+    "k3_anchor_total_b": 2780.0,
+    "stage1_date_residual_intercept": 0.8286707296961304,
+    "stage1_date_residual_slope": -0.49144448217438014,
+    "stage1_joint_coefficients_intercept_score_date": [
+      25.008025756627557,
+      0.06085436557372788,
+      -1.1547213927945863
+    ],
+    "stage1_joint_r2": 0.48097067903178564,
+    "stage1_joint_rmse_factor": 3.9478353174835368,
+    "stage1_loocv_rmse_factor_joint": 4.4645578394592675,
+    "stage1_model_names": [
+      "Llama 3.1 405B",
+      "Llama 3.2 11B (Vision)",
+      "Llama 3.3 70B",
+      "Phi-4",
+      "Phi-4 Mini",
+      "Phi-4 Multimodal",
+      "Llama Nemotron Ultra",
+      "Llama 4 Maverick",
+      "Llama 4 Scout",
+      "ERNIE 4.5 300B A47B",
+      "EXAONE 4.0 32B",
+      "Exaone 4.0 1.2B",
+      "gpt-oss-120b (high)",
+      "gpt-oss-20b (high)",
+      "Gemma 3 270M",
+      "NVIDIA Nemotron Nano 9B V2",
+      "Qwen3 Next 80B A3B",
+      "Qwen3 Omni 30B A3B",
+      "Granite 4.0 H 1B",
+      "Granite 4.0 H Small",
+      "Granite 4.0 Micro",
+      "Ring-flash-2.0",
+      "Kimi Linear 48B A3B Instruct",
+      "MiMo-V2-Flash",
+      "K-EXAONE",
+      "Solar Open 100B",
+      "Trinity Large Thinking",
+      "EXAONE 4.5 33B",
+      "MiMo-V2.5-Pro",
+      "DeepSeek V4 Flash (max)",
+      "DeepSeek V4 Pro (max)",
+      "Nemotron 3 Ultra",
+      "Inkling",
+      "Kimi K3"
+    ],
+    "stage1_r2": 0.4718247898901423,
+    "stage1_rmse_factor": 4.587090090373197,
+    "stage1_rows": 34,
+    "stage1_score_intercept": 23.575851627249087,
+    "stage1_score_slope": 0.03019421729617933,
+    "stage2_compute_intercept": -8.57328090578579,
+    "stage2_compute_slope": 0.4518500293808552,
+    "stage2_date_residual_intercept": -0.04052597820715369,
+    "stage2_date_residual_slope": -0.04401254417263368,
+    "stage2_joint_coefficients_intercept_compute_date": [
+      -20.526410314914745,
+      0.924563249973455,
+      -0.31067154708334216
+    ],
+    "stage2_joint_r2": 0.6789245292271568,
+    "stage2_joint_rmse_factor": 1.9715581087071183,
+    "stage2_loocv_rmse_factor_joint": 2.300367755421549,
+    "stage2_model_names": [
+      "GPT-3 175B (davinci)",
+      "mT5-XXL",
+      "Jurassic-1-Jumbo",
+      "FLAN 137B",
+      "Megatron-Turing NLG 530B",
+      "ERNIE 3.0 Titan",
+      "Minerva (540B)",
+      "Flan-PaLM 540B",
+      "U-PaLM (540B)",
+      "GPT-4 (Mar 2023)",
+      "PaLM 2",
+      "GPT-4 (Jun 2023)",
+      "Falcon-180B",
+      "Amazon Titan",
+      "Nemotron-4 340B",
+      "Llama 3.1-405B",
+      "Llama Nemotron Ultra 253B",
+      "Llama 4 Behemoth (preview)",
+      "Grok 3"
+    ],
+    "stage2_r2": 0.6070849449448296,
+    "stage2_rmse_factor": 2.1539679601979818,
+    "stage2_rows": 19
+  },
+  "crowd_and_final_recomputation": {
+    "absolute_final_difference": {
+      "Fable": 0.0,
+      "Sol": 0.0
+    },
+    "centers_from_displayed_one_decimal_points": {
+      "Fable": 4.375063261570673,
+      "Sol": 3.2065970766643623
+    },
+    "contributor_count": 21,
+    "contributors": [
+      "Respondent R01",
+      "Respondent R02",
+      "Respondent R03",
+      "Respondent R04",
+      "Respondent R05",
+      "Respondent R06",
+      "Respondent R07",
+      "Respondent R08",
+      "Respondent R09",
+      "Respondent R10",
+      "Respondent R11",
+      "Respondent R12",
+      "Respondent R13",
+      "Respondent R14",
+      "Respondent R15",
+      "Respondent R16",
+      "Respondent R17",
+      "Respondent R18",
+      "Respondent R19",
+      "Respondent R20",
+      "Respondent R21"
+    ],
+    "exact_centers_from_stated_forecasts": {
+      "Fable": 4.371847506331046,
+      "Sol": 3.2116911484449235
+    },
+    "fable_n": 20,
+    "model_posterior": {
+      "Fable": 4.731857984602975,
+      "Sol": 3.081003239637193
+    },
+    "recomputed_final_50pct_log_weight": {
+      "Fable": 4.548292155336898,
+      "Sol": 3.145668582841
+    },
+    "sol_n": 19,
+    "workbook_final": {
+      "Fable": 4.548292155336898,
+      "Sol": 3.145668582841
+    }
+  },
+  "date_audit": {
+    "AA": {
+      "canonical_date_missing": 100,
+      "date_conflicts_over_31_days": [],
+      "rows": 274,
+      "source_date_precision": {
+        "not supplied by AA": 274
+      }
+    },
+    "ECI": {
+      "canonical_date_missing": 0,
+      "date_conflicts_over_31_days": [],
+      "rows": 213,
+      "source_date_precision": {
+        "day": 213
+      }
+    },
+    "ECI Component": {
+      "canonical_date_missing": 0,
+      "date_conflicts_over_31_days": [
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2024-12-12",
+          "canonical_source": "ECI exact date (Grok-2 (Dec 2024))",
+          "delta_days": "121",
+          "model": "Grok-2 (Dec 2024)",
+          "source_date": "2024-08-13"
+        },
+        {
+          "canonical_date": "2024-12-12",
+          "canonical_source": "ECI exact date (Grok-2 (Dec 2024))",
+          "delta_days": "121",
+          "model": "Grok-2 (Dec 2024)",
+          "source_date": "2024-08-13"
+        },
+        {
+          "canonical_date": "2024-12-12",
+          "canonical_source": "ECI exact date (Grok-2 (Dec 2024))",
+          "delta_days": "121",
+          "model": "Grok-2 (Dec 2024)",
+          "source_date": "2024-08-13"
+        },
+        {
+          "canonical_date": "2024-12-12",
+          "canonical_source": "ECI exact date (Grok-2 (Dec 2024))",
+          "delta_days": "121",
+          "model": "Grok-2 (Dec 2024)",
+          "source_date": "2024-08-13"
+        },
+        {
+          "canonical_date": "2024-12-12",
+          "canonical_source": "ECI exact date (Grok-2 (Dec 2024))",
+          "delta_days": "121",
+          "model": "Grok-2 (Dec 2024)",
+          "source_date": "2024-08-13"
+        },
+        {
+          "canonical_date": "2024-12-12",
+          "canonical_source": "ECI exact date (Grok-2 (Dec 2024))",
+          "delta_days": "121",
+          "model": "Grok-2 (Dec 2024)",
+          "source_date": "2024-08-13"
+        },
+        {
+          "canonical_date": "2024-12-12",
+          "canonical_source": "ECI exact date (Grok-2 (Dec 2024))",
+          "delta_days": "121",
+          "model": "Grok-2 (Dec 2024)",
+          "source_date": "2024-08-13"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2024-11-18",
+          "canonical_source": "ECI exact date (Mistral Large 2 (Nov 2024))",
+          "delta_days": "117",
+          "model": "Mistral Large 2 (Nov 2024)",
+          "source_date": "2024-07-24"
+        },
+        {
+          "canonical_date": "2024-11-18",
+          "canonical_source": "ECI exact date (Mistral Large 2 (Nov 2024))",
+          "delta_days": "117",
+          "model": "Mistral Large 2 (Nov 2024)",
+          "source_date": "2024-07-24"
+        },
+        {
+          "canonical_date": "2024-11-18",
+          "canonical_source": "ECI exact date (Mistral Large 2 (Nov 2024))",
+          "delta_days": "117",
+          "model": "Mistral Large 2 (Nov 2024)",
+          "source_date": "2024-07-24"
+        },
+        {
+          "canonical_date": "2024-11-18",
+          "canonical_source": "ECI exact date (Mistral Large 2 (Nov 2024))",
+          "delta_days": "117",
+          "model": "Mistral Large 2 (Nov 2024)",
+          "source_date": "2024-07-24"
+        },
+        {
+          "canonical_date": "2023-06-27",
+          "canonical_source": "ECI exact date (XGen-7B)",
+          "delta_days": "-72",
+          "model": "XGen-7B",
+          "source_date": "2023-09-07"
+        },
+        {
+          "canonical_date": "2023-06-27",
+          "canonical_source": "ECI exact date (XGen-7B)",
+          "delta_days": "-72",
+          "model": "XGen-7B",
+          "source_date": "2023-09-07"
+        },
+        {
+          "canonical_date": "2023-06-27",
+          "canonical_source": "ECI exact date (XGen-7B)",
+          "delta_days": "-72",
+          "model": "XGen-7B",
+          "source_date": "2023-09-07"
+        },
+        {
+          "canonical_date": "2023-06-27",
+          "canonical_source": "ECI exact date (XGen-7B)",
+          "delta_days": "-72",
+          "model": "XGen-7B",
+          "source_date": "2023-09-07"
+        },
+        {
+          "canonical_date": "2023-06-27",
+          "canonical_source": "ECI exact date (XGen-7B)",
+          "delta_days": "-72",
+          "model": "XGen-7B",
+          "source_date": "2023-09-07"
+        },
+        {
+          "canonical_date": "2023-06-27",
+          "canonical_source": "ECI exact date (XGen-7B)",
+          "delta_days": "-72",
+          "model": "XGen-7B",
+          "source_date": "2023-09-07"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 1.3B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 1.3B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 1.3B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 1.3B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 1.3B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 1.3B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 1.3B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 1.3B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 33B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 33B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 33B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 33B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 33B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 33B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 33B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 33B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 6.7B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 6.7B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 6.7B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 6.7B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 6.7B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 6.7B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 6.7B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 6.7B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2024-01-25",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Jan 2024))",
+          "delta_days": "226",
+          "model": "GPT-3.5 Turbo (Jan 2024)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2024-01-25",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Jan 2024))",
+          "delta_days": "226",
+          "model": "GPT-3.5 Turbo (Jan 2024)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2024-01-25",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Jan 2024))",
+          "delta_days": "226",
+          "model": "GPT-3.5 Turbo (Jan 2024)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2024-01-25",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Jan 2024))",
+          "delta_days": "226",
+          "model": "GPT-3.5 Turbo (Jan 2024)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2023-11-06",
+          "canonical_source": "ECI exact date (GPT-3.5 Turbo (Nov 2023))",
+          "delta_days": "146",
+          "model": "GPT-3.5 Turbo (Nov 2023)",
+          "source_date": "2023-06-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-08-06",
+          "canonical_source": "ECI exact date (GPT-4o (Aug 2024))",
+          "delta_days": "85",
+          "model": "GPT-4o (Aug 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-11-20",
+          "canonical_source": "ECI exact date (GPT-4o (Nov 2024))",
+          "delta_days": "191",
+          "model": "GPT-4o (Nov 2024)",
+          "source_date": "2024-05-13"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2024-09-24",
+          "canonical_source": "ECI exact date (Gemini 1.5 Flash (Sep 2024))",
+          "delta_days": "137",
+          "model": "Gemini 1.5 Flash (Sep 2024)",
+          "source_date": "2024-05-10"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Flash (Feb 2025))",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Flash (Feb 2025)",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Pro)",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Pro",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Pro)",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Pro",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Pro)",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Pro",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Pro)",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Pro",
+          "source_date": "2024-12-11"
+        }
+      ],
+      "rows": 2059,
+      "source_date_precision": {
+        "day": 2059
+      }
+    },
+    "Epoch": {
+      "canonical_date_missing": 24,
+      "date_conflicts_over_31_days": [
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok-3 mini)",
+          "delta_days": "49",
+          "model": "Grok-3 mini",
+          "source_date": "2025-02-19"
+        },
+        {
+          "canonical_date": "2025-04-09",
+          "canonical_source": "ECI exact date (Grok 3)",
+          "delta_days": "51",
+          "model": "Grok 3",
+          "source_date": "2025-02-17"
+        },
+        {
+          "canonical_date": "2025-04-16",
+          "canonical_source": "ECI exact date (o3)",
+          "delta_days": "117",
+          "model": "o3",
+          "source_date": "2024-12-20"
+        },
+        {
+          "canonical_date": "2025-02-05",
+          "canonical_source": "ECI exact date (Gemini 2.0 Pro)",
+          "delta_days": "56",
+          "model": "Gemini 2.0 Pro",
+          "source_date": "2024-12-11"
+        },
+        {
+          "canonical_date": "2024-09-18",
+          "canonical_source": "ECI exact date (Qwen2.5-Coder-32B)",
+          "delta_days": "-55",
+          "model": "Qwen2.5-Coder (32B)",
+          "source_date": "2024-11-12"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 33B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 33B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 1.3B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 1.3B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-11-02",
+          "canonical_source": "ECI exact date (DeepSeek Coder 6.7B)",
+          "delta_days": "-84",
+          "model": "DeepSeek Coder 6.7B",
+          "source_date": "2024-01-25"
+        },
+        {
+          "canonical_date": "2023-06-27",
+          "canonical_source": "ECI exact date (XGen-7B)",
+          "delta_days": "-72",
+          "model": "XGen-7B",
+          "source_date": "2023-09-07"
+        },
+        {
+          "canonical_date": "2023-05-04",
+          "canonical_source": "ECI exact date (RedPajama-INCITE-7B-Base)",
+          "delta_days": "-33",
+          "model": "RedPajama-INCITE-7B-Base",
+          "source_date": "2023-06-06"
+        }
+      ],
+      "rows": 3574,
+      "source_date_precision": {
+        "day": 3574
+      }
+    },
+    "METR": {
+      "canonical_date_missing": 1,
+      "date_conflicts_over_31_days": [
+        {
+          "canonical_date": "2023-09-28",
+          "canonical_source": "Epoch exact date (GPT-3.5 Turbo Instruct)",
+          "delta_days": "562",
+          "model": "gpt_3_5_turbo_instruct",
+          "source_date": "2022-03-15"
+        }
+      ],
+      "rows": 27,
+      "source_date_precision": {
+        "": 1,
+        "day": 26
+      }
+    },
+    "No-CoT": {
+      "canonical_date_missing": 1,
+      "date_conflicts_over_31_days": [
+        {
+          "canonical_date": "2025-12-01",
+          "canonical_source": "ECI exact date (DeepSeek-V3.2)",
+          "delta_days": "91",
+          "model": "DeepSeek V3.2",
+          "source_date": "2025-09-01"
+        }
+      ],
+      "rows": 50,
+      "source_date_precision": {
+        "": 1,
+        "month (paper source)": 49
+      }
+    }
+  },
+  "epoch_archive_reconciliation": {
+    "all_ai_byte_identical": false,
+    "all_ai_sha256": "a72dc6d9711835d8b1078aa6e6ef89d51a53de7b26092bf5a5aec18d51909437",
+    "frontier_ai_models.csv": {
+      "ambiguous_exact_keys": 0,
+      "matched": 137,
+      "max_selected_shared_field_disagreements": 1,
+      "records": 137,
+      "unmatched": [],
+      "zero_shared_field_disagreement": 136
+    },
+    "large_scale_ai_models.csv": {
+      "ambiguous_exact_keys": 4,
+      "matched": 516,
+      "max_selected_shared_field_disagreements": 3,
+      "records": 518,
+      "unmatched": [
+        "MiMo-V2.5",
+        "Hunyuan T1"
+      ],
+      "zero_shared_field_disagreement": 511
+    },
+    "notable_ai_models.csv": {
+      "ambiguous_exact_keys": 1,
+      "matched": 1035,
+      "max_selected_shared_field_disagreements": 3,
+      "records": 1035,
+      "unmatched": [],
+      "zero_shared_field_disagreement": 1031
+    }
+  },
+  "ikp_conditional_benchmark_reaudit": {
+    "all_pass": true,
+    "issues": [],
+    "policy_propagation": {
+      "conditional_retained_final_fable_ikp_weight": 0.0,
+      "primary_final_fable_ikp_weight": 0.0,
+      "primary_parameter_signal_promoted": false
+    },
+    "prediction_integrity": {
+      "all_strictly_chronological": true,
+      "all_test_vendors_excluded": true,
+      "maximum_primary_baseline_difference_b": 0.0,
+      "maximum_primary_candidate_difference_b": 0.0,
+      "primary_refits": 49,
+      "rows": 196
+    },
+    "sensitivity_recomputations": [
+      {
+        "baseline_median_x": 2.663334840957525,
+        "benchmark": "mmlu",
+        "bootstrap": {
+          "ci_90": [
+            -0.38390388682672094,
+            -0.13861057492811732
+          ],
+          "observed_delta": -0.2615061662325204,
+          "probability_candidate_better": 0.9999,
+          "vendors": 11
+        },
+        "candidate_median_x": 1.700712250066151,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.5207040766379366,
+            "families": 11,
+            "mean_absolute_log10_error": 0.4983450238413814,
+            "median_multiplicative_error": 2.663334840957525,
+            "n": 16,
+            "p80_multiplicative_error": 6.033739698247343,
+            "rmse_log10": 0.5691441981461052,
+            "signed_bias_factor": 0.9159010437755217,
+            "vendors": 11,
+            "within_2x": 0.3125
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.25919791040541623,
+            "families": 11,
+            "mean_absolute_log10_error": 0.2550047270491792,
+            "median_multiplicative_error": 1.700712250066151,
+            "n": 16,
+            "p80_multiplicative_error": 2.4014711097355814,
+            "rmse_log10": 0.32387197437211096,
+            "signed_bias_factor": 0.8957597847998175,
+            "vendors": 11,
+            "within_2x": 0.625
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.38390388682672094,
+              -0.13861057492811732
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.2615061662325204,
+            "probability_candidate_better": 0.9999,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": true
+        },
+        "rows": 16,
+        "specification": "score_date",
+        "vendors": 11,
+        "weighting": "row_equal"
+      },
+      {
+        "baseline_median_x": 1.9979187091680137,
+        "benchmark": "mmlu",
+        "bootstrap": {
+          "ci_90": [
+            -0.18320001199589195,
+            -0.029236655562980194
+          ],
+          "observed_delta": -0.10475346570621823,
+          "probability_candidate_better": 0.99035,
+          "vendors": 11
+        },
+        "candidate_median_x": 1.4326322900062465,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.36750871214593417,
+            "families": 11,
+            "mean_absolute_log10_error": 0.3762623404401508,
+            "median_multiplicative_error": 1.9979187091680137,
+            "n": 16,
+            "p80_multiplicative_error": 3.356360761737142,
+            "rmse_log10": 0.46501809787047466,
+            "signed_bias_factor": 1.0193484414602099,
+            "vendors": 11,
+            "within_2x": 0.5
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.262755246439716,
+            "families": 11,
+            "mean_absolute_log10_error": 0.25211498253784204,
+            "median_multiplicative_error": 1.4326322900062465,
+            "n": 16,
+            "p80_multiplicative_error": 3.18782687361285,
+            "rmse_log10": 0.344496595104772,
+            "signed_bias_factor": 0.9358435711311702,
+            "vendors": 11,
+            "within_2x": 0.6875
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.18320001199589195,
+              -0.029236655562980194
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.10475346570621823,
+            "probability_candidate_better": 0.99035,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": true
+        },
+        "rows": 16,
+        "specification": "score_date_arch",
+        "vendors": 11,
+        "weighting": "row_equal"
+      },
+      {
+        "baseline_median_x": 3.2363905111231683,
+        "benchmark": "mmlu",
+        "bootstrap": {
+          "ci_90": [
+            -0.41916375259653355,
+            -0.15754465214084107
+          ],
+          "observed_delta": -0.288739898288268,
+          "probability_candidate_better": 1.0,
+          "vendors": 11
+        },
+        "candidate_median_x": 1.7109002479259052,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.5832063190072259,
+            "families": 11,
+            "mean_absolute_log10_error": 0.5514590193112453,
+            "median_multiplicative_error": 3.2363905111231683,
+            "n": 16,
+            "p80_multiplicative_error": 6.965046169377063,
+            "rmse_log10": 0.604648794971287,
+            "signed_bias_factor": 1.1562520971231423,
+            "vendors": 11,
+            "within_2x": 0.1875
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.29446642071895784,
+            "families": 11,
+            "mean_absolute_log10_error": 0.26951418706064056,
+            "median_multiplicative_error": 1.7109002479259052,
+            "n": 16,
+            "p80_multiplicative_error": 2.781248162006824,
+            "rmse_log10": 0.33859914147688397,
+            "signed_bias_factor": 0.889503414417476,
+            "vendors": 11,
+            "within_2x": 0.5625
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.41916375259653355,
+              -0.15754465214084107
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.288739898288268,
+            "probability_candidate_better": 1.0,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": true
+        },
+        "rows": 16,
+        "specification": "score_date",
+        "vendors": 11,
+        "weighting": "vendor_equal"
+      },
+      {
+        "baseline_median_x": 1.9492990151144445,
+        "benchmark": "mmlu",
+        "bootstrap": {
+          "ci_90": [
+            -0.13328420404533647,
+            0.10450872583877673
+          ],
+          "observed_delta": -0.01194736111990381,
+          "probability_candidate_better": 0.5564,
+          "vendors": 11
+        },
+        "candidate_median_x": 1.8215072273228223,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.3873776592982528,
+            "families": 11,
+            "mean_absolute_log10_error": 0.38749989793641615,
+            "median_multiplicative_error": 1.9492990151144445,
+            "n": 16,
+            "p80_multiplicative_error": 4.396697010861663,
+            "rmse_log10": 0.47985667914203206,
+            "signed_bias_factor": 0.9343389124009392,
+            "vendors": 11,
+            "within_2x": 0.5
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.37543029817834894,
+            "families": 11,
+            "mean_absolute_log10_error": 0.3365519126422199,
+            "median_multiplicative_error": 1.8215072273228223,
+            "n": 16,
+            "p80_multiplicative_error": 3.383245724749747,
+            "rmse_log10": 0.4192422700746767,
+            "signed_bias_factor": 0.8838009608018019,
+            "vendors": 11,
+            "within_2x": 0.625
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.13328420404533647,
+              0.10450872583877673
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.01194736111990381,
+            "probability_candidate_better": 0.5564,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": false
+        },
+        "rows": 16,
+        "specification": "score_date_arch",
+        "vendors": 11,
+        "weighting": "vendor_equal"
+      },
+      {
+        "baseline_median_x": 2.6847070324881184,
+        "benchmark": "mmlu_pro",
+        "bootstrap": {
+          "ci_90": [
+            -0.3270424988616606,
+            0.015639574664357704
+          ],
+          "observed_delta": -0.11552246925262503,
+          "probability_candidate_better": 0.86475,
+          "vendors": 7
+        },
+        "candidate_median_x": 2.248882896415589,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.4351861125012683,
+            "families": 8,
+            "mean_absolute_log10_error": 0.3742430871721119,
+            "median_multiplicative_error": 2.6847070324881184,
+            "n": 15,
+            "p80_multiplicative_error": 3.384720266087009,
+            "rmse_log10": 0.43849792139203003,
+            "signed_bias_factor": 0.897870793365192,
+            "vendors": 7,
+            "within_2x": 0.4
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.3196636432486434,
+            "families": 8,
+            "mean_absolute_log10_error": 0.33952311550607556,
+            "median_multiplicative_error": 2.248882896415589,
+            "n": 15,
+            "p80_multiplicative_error": 3.0878091917381894,
+            "rmse_log10": 0.39104516760038177,
+            "signed_bias_factor": 0.5850495645061375,
+            "vendors": 7,
+            "within_2x": 0.4
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.3270424988616606,
+              0.015639574664357704
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.11552246925262503,
+            "probability_candidate_better": 0.86475,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        },
+        "rows": 15,
+        "specification": "score_date",
+        "vendors": 7,
+        "weighting": "row_equal"
+      },
+      {
+        "baseline_median_x": 2.0709581454394512,
+        "benchmark": "mmlu_pro",
+        "bootstrap": {
+          "ci_90": [
+            -0.35216468492316483,
+            0.03059161888487331
+          ],
+          "observed_delta": -0.15978308710978265,
+          "probability_candidate_better": 0.91135,
+          "vendors": 7
+        },
+        "candidate_median_x": 1.9167429922091468,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.4211300044470142,
+            "families": 8,
+            "mean_absolute_log10_error": 0.42948374941499473,
+            "median_multiplicative_error": 2.0709581454394512,
+            "n": 15,
+            "p80_multiplicative_error": 4.652061571447848,
+            "rmse_log10": 0.5108629816964861,
+            "signed_bias_factor": 0.8682978045675841,
+            "vendors": 7,
+            "within_2x": 0.4
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.26134691733723153,
+            "families": 8,
+            "mean_absolute_log10_error": 0.3057555876490108,
+            "median_multiplicative_error": 1.9167429922091468,
+            "n": 15,
+            "p80_multiplicative_error": 2.5970257913665806,
+            "rmse_log10": 0.3873112702589671,
+            "signed_bias_factor": 0.6689555389397828,
+            "vendors": 7,
+            "within_2x": 0.5333333333333333
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.35216468492316483,
+              0.03059161888487331
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.15978308710978265,
+            "probability_candidate_better": 0.91135,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        },
+        "rows": 15,
+        "specification": "score_date_arch",
+        "vendors": 7,
+        "weighting": "row_equal"
+      },
+      {
+        "baseline_median_x": 2.284431757599048,
+        "benchmark": "mmlu_pro",
+        "bootstrap": {
+          "ci_90": [
+            -0.3692795927652997,
+            0.07506627674928826
+          ],
+          "observed_delta": -0.12745669041066027,
+          "probability_candidate_better": 0.8172,
+          "vendors": 7
+        },
+        "candidate_median_x": 2.7323061064528846,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.5052574797486046,
+            "families": 8,
+            "mean_absolute_log10_error": 0.3995081792973925,
+            "median_multiplicative_error": 2.284431757599048,
+            "n": 15,
+            "p80_multiplicative_error": 2.93539950717968,
+            "rmse_log10": 0.466053986212549,
+            "signed_bias_factor": 0.5748011264125554,
+            "vendors": 7,
+            "within_2x": 0.26666666666666666
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.3778007893379444,
+            "families": 8,
+            "mean_absolute_log10_error": 0.40020549351120177,
+            "median_multiplicative_error": 2.7323061064528846,
+            "n": 15,
+            "p80_multiplicative_error": 3.454565914841731,
+            "rmse_log10": 0.44771238407609254,
+            "signed_bias_factor": 0.4916637076451873,
+            "vendors": 7,
+            "within_2x": 0.3333333333333333
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.3692795927652997,
+              0.07506627674928826
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.12745669041066027,
+            "probability_candidate_better": 0.8172,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        },
+        "rows": 15,
+        "specification": "score_date",
+        "vendors": 7,
+        "weighting": "vendor_equal"
+      },
+      {
+        "baseline_median_x": 2.7357031077445337,
+        "benchmark": "mmlu_pro",
+        "bootstrap": {
+          "ci_90": [
+            -0.3636044925002787,
+            0.051828147776413994
+          ],
+          "observed_delta": -0.15601607024693848,
+          "probability_candidate_better": 0.8817,
+          "vendors": 7
+        },
+        "candidate_median_x": 2.0213229261365764,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.4384209477583711,
+            "families": 8,
+            "mean_absolute_log10_error": 0.48610829673256045,
+            "median_multiplicative_error": 2.7357031077445337,
+            "n": 15,
+            "p80_multiplicative_error": 6.366815656778418,
+            "rmse_log10": 0.5689529155535231,
+            "signed_bias_factor": 0.959358999935336,
+            "vendors": 7,
+            "within_2x": 0.3333333333333333
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.2824048775114326,
+            "families": 8,
+            "mean_absolute_log10_error": 0.33147440234404973,
+            "median_multiplicative_error": 2.0213229261365764,
+            "n": 15,
+            "p80_multiplicative_error": 2.8918793626270163,
+            "rmse_log10": 0.41148718009633656,
+            "signed_bias_factor": 0.6679361105243997,
+            "vendors": 7,
+            "within_2x": 0.4666666666666667
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.3636044925002787,
+              0.051828147776413994
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.15601607024693848,
+            "probability_candidate_better": 0.8817,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        },
+        "rows": 15,
+        "specification": "score_date_arch",
+        "vendors": 7,
+        "weighting": "vendor_equal"
+      },
+      {
+        "baseline_median_x": 4.59771454356453,
+        "benchmark": "gpqa_diamond",
+        "bootstrap": {
+          "ci_90": [
+            -0.7740843388538974,
+            -0.15355966920743624
+          ],
+          "observed_delta": -0.4334858511044114,
+          "probability_candidate_better": 0.9986,
+          "vendors": 9
+        },
+        "candidate_median_x": 2.187753333641501,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.7240923885445293,
+            "families": 10,
+            "mean_absolute_log10_error": 0.9460650861560738,
+            "median_multiplicative_error": 4.59771454356453,
+            "n": 18,
+            "p80_multiplicative_error": 34.111814232319794,
+            "rmse_log10": 1.2350152177378537,
+            "signed_bias_factor": 0.2937764157257633,
+            "vendors": 9,
+            "within_2x": 0.1111111111111111
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.2906065374401178,
+            "families": 10,
+            "mean_absolute_log10_error": 0.3349036192697193,
+            "median_multiplicative_error": 2.187753333641501,
+            "n": 18,
+            "p80_multiplicative_error": 2.609532378722981,
+            "rmse_log10": 0.3810784713421403,
+            "signed_bias_factor": 0.631483610733311,
+            "vendors": 9,
+            "within_2x": 0.4444444444444444
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.7740843388538974,
+              -0.15355966920743624
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.4334858511044114,
+            "probability_candidate_better": 0.9986,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        },
+        "rows": 18,
+        "specification": "score_date",
+        "vendors": 9,
+        "weighting": "row_equal"
+      },
+      {
+        "baseline_median_x": 3.4040606766666075,
+        "benchmark": "gpqa_diamond",
+        "bootstrap": {
+          "ci_90": [
+            -0.5105474880408376,
+            -0.26223518936315815
+          ],
+          "observed_delta": -0.37979920640369325,
+          "probability_candidate_better": 1.0,
+          "vendors": 9
+        },
+        "candidate_median_x": 1.7002508318984102,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.6243315820107482,
+            "families": 10,
+            "mean_absolute_log10_error": 0.7521133862993207,
+            "median_multiplicative_error": 3.4040606766666075,
+            "n": 18,
+            "p80_multiplicative_error": 19.704544856655218,
+            "rmse_log10": 0.8833863441940786,
+            "signed_bias_factor": 0.5361663245487814,
+            "vendors": 9,
+            "within_2x": 0.1111111111111111
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.244532375607055,
+            "families": 10,
+            "mean_absolute_log10_error": 0.3162547317308498,
+            "median_multiplicative_error": 1.7002508318984102,
+            "n": 18,
+            "p80_multiplicative_error": 3.8730746093199064,
+            "rmse_log10": 0.4186824089697873,
+            "signed_bias_factor": 0.6281075960541636,
+            "vendors": 9,
+            "within_2x": 0.6111111111111112
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.5105474880408376,
+              -0.26223518936315815
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.37979920640369325,
+            "probability_candidate_better": 1.0,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        },
+        "rows": 18,
+        "specification": "score_date_arch",
+        "vendors": 9,
+        "weighting": "row_equal"
+      },
+      {
+        "baseline_median_x": 6.008878078808029,
+        "benchmark": "gpqa_diamond",
+        "bootstrap": {
+          "ci_90": [
+            -1.060039180778083,
+            -0.1841244161635237
+          ],
+          "observed_delta": -0.5621404254909362,
+          "probability_candidate_better": 0.9999,
+          "vendors": 9
+        },
+        "candidate_median_x": 2.1841015768653658,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.9130704851079362,
+            "families": 10,
+            "mean_absolute_log10_error": 1.1718331469945704,
+            "median_multiplicative_error": 6.008878078808029,
+            "n": 18,
+            "p80_multiplicative_error": 104.71756268167648,
+            "rmse_log10": 1.6139585344757623,
+            "signed_bias_factor": 0.12977353088707558,
+            "vendors": 9,
+            "within_2x": 0.1111111111111111
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.3509300596170001,
+            "families": 10,
+            "mean_absolute_log10_error": 0.3757796963396754,
+            "median_multiplicative_error": 2.1841015768653658,
+            "n": 18,
+            "p80_multiplicative_error": 3.697331282368114,
+            "rmse_log10": 0.41912536831817576,
+            "signed_bias_factor": 0.5462104375853398,
+            "vendors": 9,
+            "within_2x": 0.3888888888888889
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -1.060039180778083,
+              -0.1841244161635237
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.5621404254909362,
+            "probability_candidate_better": 0.9999,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        },
+        "rows": 18,
+        "specification": "score_date",
+        "vendors": 9,
+        "weighting": "vendor_equal"
+      },
+      {
+        "baseline_median_x": 5.613159765029762,
+        "benchmark": "gpqa_diamond",
+        "bootstrap": {
+          "ci_90": [
+            -0.5937833314751207,
+            -0.28126428657889857
+          ],
+          "observed_delta": -0.43271781773035184,
+          "probability_candidate_better": 1.0,
+          "vendors": 9
+        },
+        "candidate_median_x": 1.8469192790440137,
+        "published": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.7157931095919875,
+            "families": 10,
+            "mean_absolute_log10_error": 0.8771792780854436,
+            "median_multiplicative_error": 5.613159765029762,
+            "n": 18,
+            "p80_multiplicative_error": 26.416817740925993,
+            "rmse_log10": 1.0244013204886004,
+            "signed_bias_factor": 0.5110920218410424,
+            "vendors": 9,
+            "within_2x": 0.05555555555555555
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.2830752918616357,
+            "families": 10,
+            "mean_absolute_log10_error": 0.36544291695641024,
+            "median_multiplicative_error": 1.8469192790440137,
+            "n": 18,
+            "p80_multiplicative_error": 4.776460069154004,
+            "rmse_log10": 0.4730338788652374,
+            "signed_bias_factor": 0.6076739367606564,
+            "vendors": 9,
+            "within_2x": 0.5
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.5937833314751207,
+              -0.28126428657889857
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.43271781773035184,
+            "probability_candidate_better": 1.0,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        },
+        "rows": 18,
+        "specification": "score_date_arch",
+        "vendors": 9,
+        "weighting": "vendor_equal"
+      }
+    ],
+    "source_inventory": {
+      "base_collapse_issues": [],
+      "benchmark_rows": 81,
+      "raw_configurations": 100,
+      "weight_bases": 87
+    },
+    "workbook_integration": {
+      "conditional_rows": 4,
+      "narrative_rows": 6,
+      "stale_rows": 6
+    }
+  },
+  "ikp_parameter_signal_reaudit": {
+    "all_pass": true,
+    "incremental_overlap_recomputation": {
+      "blend_10pct": {
+        "families": 11,
+        "mean_absolute_log10_error": 0.36407075975310943,
+        "median_multiplicative_error": 1.7976681525070095,
+        "n": 13,
+        "rmse_log10": 0.4319452508540062,
+        "within_2x": 0.6153846153846154
+      },
+      "chronological_families": 7,
+      "chronological_family_bootstrap": {
+        "ci_90": [
+          -0.05408690091927382,
+          -0.006985169720860059
+        ],
+        "families": 7,
+        "observed_delta": -0.032236241508135484,
+        "probability_blend_better": 0.981,
+        "samples": 20000
+      },
+      "chronological_minimum_prior_families": 5,
+      "chronological_minimum_prior_rows": 5,
+      "chronological_models": 7,
+      "declared_evidence_gates": {
+        "maximum_bootstrap_ci90_upper": 0.0,
+        "minimum_bootstrap_probability_better": 0.9,
+        "minimum_chronological_subset_families": 7,
+        "minimum_chronological_subset_models": 8,
+        "minimum_overlap_families": 10,
+        "minimum_overlap_models": 12
+      },
+      "existing": {
+        "families": 11,
+        "mean_absolute_log10_error": 0.40373658774002413,
+        "median_multiplicative_error": 2.122288579348835,
+        "n": 13,
+        "rmse_log10": 0.47751984547861615,
+        "within_2x": 0.38461538461538464
+      },
+      "families": 11,
+      "family_bootstrap": {
+        "ci_90": [
+          -0.05380362353237397,
+          -0.01862161520323456
+        ],
+        "families": 11,
+        "observed_delta": -0.03718790158249496,
+        "probability_blend_better": 0.9993,
+        "samples": 20000
+      },
+      "ikp": {
+        "families": 11,
+        "mean_absolute_log10_error": 0.28002920686593363,
+        "median_multiplicative_error": 1.6801802620491855,
+        "n": 13,
+        "rmse_log10": 0.35762888682720617,
+        "within_2x": 0.6153846153846154
+      },
+      "models": 13,
+      "published_promotion": false,
+      "recomputed_promotion": false
+    },
+    "issues": [],
+    "published_fit_recomputation": {
+      "configurations": 93,
+      "intercept": 0.24225587514729174,
+      "r_squared": 0.9104703503493747,
+      "slope": 0.15878383971801155
+    },
+    "serving_base_collapse": {
+      "distinct_weight_bases": 87,
+      "issues": [],
+      "variants_collapsed": 6
+    },
+    "source_hash_checks": [
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_calibration_contract",
+        "path": "sources/ikp_upstream_calibration_2026-07-18.json",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_evaluation_summary",
+        "path": "sources/ikp_upstream_evaluation_summary_2026-07-18.json",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_model_config",
+        "path": "sources/ikp_upstream_models_2026-07-18.json",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_method_note",
+        "path": "sources/ikp_upstream_method_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_sensitivity",
+        "path": "sources/ikp_upstream_sensitivity_2026-07-18.json",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_v2_validation",
+        "path": "sources/ikp_upstream_v2_validation_2026-07-18.json",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_densing_analysis_panel",
+        "path": "sources/ikp_upstream_densing_analysis_2026-07-18.csv",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_comparison_script",
+        "path": "sources/ikp_upstream_benchmark_comparison_script_2026-07-18.py",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_scores",
+        "path": "sources/ikp_upstream_benchmark_scores_2026-07-18.csv",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_joined_panel",
+        "path": "sources/ikp_upstream_benchmark_joined_2026-07-18.csv",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_regression_summary",
+        "path": "sources/ikp_upstream_benchmark_regression_summary_2026-07-18.csv",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_time_coefficients",
+        "path": "sources/ikp_upstream_benchmark_time_coefficients_2026-07-18.csv",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_narrative_summary",
+        "path": "sources/ikp_upstream_benchmark_summary_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_raw_anthropic",
+        "path": "sources/ikp_upstream_benchmark_raw_anthropic_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_raw_deepseek_qwen_kimi_glm",
+        "path": "sources/ikp_upstream_benchmark_raw_deepseek_qwen_kimi_glm_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_raw_google_meta",
+        "path": "sources/ikp_upstream_benchmark_raw_google_meta_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_raw_openai",
+        "path": "sources/ikp_upstream_benchmark_raw_openai_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "upstream_benchmark_raw_others",
+        "path": "sources/ikp_upstream_benchmark_raw_others_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "replication_readme",
+        "path": "sources/ikp_replication_readme_2026-07-18.md",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "replication_calibration_errors",
+        "path": "sources/ikp_replication_calibration_errors_2026-07-18.csv",
+        "sha256_match": true
+      },
+      {
+        "bytes_match": true,
+        "exists": true,
+        "label": "replication_wikidata_dominance",
+        "path": "sources/ikp_replication_wikidata_dominance_2026-07-18.json",
+        "sha256_match": true
+      }
+    ],
+    "strict_fable_recomputation": {
+      "anthropic_excluded": true,
+      "estimated_b": 3642.6590968396317,
+      "train_families": 31,
+      "train_max_date": "2026-06-04",
+      "train_rows": 86,
+      "train_vendors": 19
+    },
+    "workbook_integration": {
+      "branch_values_t": {
+        "compute": 2.4775210449595826,
+        "existing": 3.5157625909341204,
+        "horizon": 6.59544467651061
+      },
+      "expected_policy_branch_weights": {
+        "compute": 0.05,
+        "existing": 0.45,
+        "horizon": 0.5
+      },
+      "expected_policy_weighted_blend_t": 4.731857984602975,
+      "formula_absolute_difference": 0.0,
+      "ikp_evidence_weight": 0.0,
+      "policy_absolute_difference": 0.0,
+      "recomputed_workbook_posterior_t": 4.731857984602975,
+      "strict_ikp_fable_t": 3.6426590968396315,
+      "workbook_branch_weights": {
+        "compute": 0.05,
+        "existing": 0.45,
+        "horizon": 0.5
+      },
+      "workbook_implied_ikp_weight": 0.0,
+      "workbook_posterior_t": 4.731857984602975
+    }
+  },
+  "inputs": {
+    "aa_source_sha256": "56da88142181cfe20e053a8b614010c7a25519d9f79cb4a755ba4961669cd478",
+    "archive_sha256": "835d88548f1db982983d2f919131bfceae8ecb5f232eb82572372b05547b3b8a",
+    "eci_component_sha256": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+    "epoch_sha256": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579",
+    "ikp_audit_sha256": "75bbf6a3d44a29af0853f9b554d9744260d34e192b96ae73ed2317e7b95eaa7d",
+    "ikp_conditional_audit_sha256": "e30e80bfd32fca3f68ed0b88cdd1b69898a145966cdcba49a35e8f71a5f115a7",
+    "ikp_conditional_predictions_sha256": "71de9109afa85869fcafba0b2315287fd0a5bb1e79a77d015fbf742c4a9a14b9",
+    "ikp_overlap_sha256": "8bffda7910ade69cdc89265159693808d0ca703a3189a620054e7987add0360c",
+    "ikp_predictions_sha256": "894db115b43efad781855222b040d49c80b6522e637e302e65b8b8e1de2e4801",
+    "k3_primary_evidence_sha256": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "measurements_sha256": "7aa31b03e4ba3b9dbef9cfb2a3a0774e437390fa59345a8475a0f50fbdca0868",
+    "metr_audit_sha256": "e55f22301bdb4e1b90fa3aee7c7ee362b1f2b5e5a1529f5e29083258b5f84404",
+    "metr_legacy_crosscheck_sha256": "a9719b3ea8e1c7fd32bf44414578c8e800ad2505d4153d55b05f884c65b3f944",
+    "metr_metadata_sha256": "0cc6b5a92f2b1a1928c35751ddd344b1d8c4868f2f3bde203bfc49d3fc8a4d3e",
+    "metr_raw_sha256": "aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9",
+    "metr_source_sha256": "05b055467ab579b2c46100ce65bed05108863e64beb4f36d83d0c0b82f0ee85c",
+    "observations_sha256": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "registry_sha256": "5772e396c7123f3ca12682acdef99dcf7ff48d397f42c01ae36f8967b476ce26",
+    "workbook_sha256": "317b57384f40c1b8ae9af635bcbba220ac98b72ac636a27b0dfd5ab431bc0cc1"
+  },
+  "manifest_all_pass": true,
+  "megafile_integrity": {
+    "aa_checkpoint_link_errors": [],
+    "aa_display_names": 241,
+    "aa_selection_violations": [],
+    "correlated_view_rows_included": 0,
+    "duplicate_measurement_ids": 0,
+    "duplicate_observation_ids": 0,
+    "measurements": 31155,
+    "observations": 8476,
+    "orphan_measurements": 0,
+    "source_counts": {
+      "AA": 274,
+      "AA Detailed View": 587,
+      "ECI": 213,
+      "ECI Component": 2059,
+      "ECI Legacy View": 2,
+      "Epoch": 3574,
+      "Epoch Frontier View": 137,
+      "Epoch Large-Scale View": 518,
+      "Epoch Notable View": 1035,
+      "METR": 27,
+      "No-CoT": 50
+    },
+    "source_record_json_errors": 0
+  },
+  "no_cot_architecture_reaudit": {
+    "all_pass": true,
+    "architecture_counts": {
+      "Dense": 19,
+      "MoE": 16
+    },
+    "independent_canonical_parameter_pareto_factors": {
+      "dense": {
+        "factor_per_horizon_doubling": 2.1764887884891353,
+        "pareto_models": [
+          "Gemma 3 27B",
+          "Gemma 3 4B",
+          "Gemma 4 31B IT",
+          "Llama 3.2 1B",
+          "Llama 3.2 3B",
+          "Ministral 3 14B",
+          "Ministral 3 8B",
+          "Qwen3.5-9B"
+        ],
+        "pareto_n": 8
+      },
+      "moe": {
+        "factor_per_horizon_doubling": 8.319917432714163,
+        "pareto_models": [
+          "Gemma 4 26B A4B",
+          "Kimi K2.5",
+          "Qwen 3.5 Plus (hosted 397B-A17B)",
+          "Qwen3-235B-A22B-Instruct (Jul 2025)",
+          "Qwen3-Next-80B-A3B"
+        ],
+        "pareto_n": 5
+      },
+      "pooled": {
+        "factor_per_horizon_doubling": 3.9593949504293513,
+        "pareto_models": [
+          "Gemma 3 27B",
+          "Gemma 3 4B",
+          "Gemma 4 26B A4B",
+          "Gemma 4 31B IT",
+          "Kimi K2.5",
+          "Llama 3.2 1B",
+          "Llama 3.2 3B",
+          "Ministral 3 14B",
+          "Ministral 3 8B",
+          "Qwen 3.5 Plus (hosted 397B-A17B)",
+          "Qwen3.5-9B"
+        ],
+        "pareto_n": 11
+      }
+    },
+    "independent_direct_delta": {
+      "families": 5,
+      "n": 16,
+      "observed_delta": 0.07748419152516166
+    },
+    "independent_pareto_factors": {
+      "dense": {
+        "factor_per_horizon_doubling": 2.1764887884891353,
+        "pareto_models": [
+          "Gemma 3 27B",
+          "Gemma 3 4B",
+          "Gemma 4 31B IT",
+          "Llama 3.2 1B",
+          "Llama 3.2 3B",
+          "Ministral 3 14B",
+          "Ministral 3 8B",
+          "Qwen3.5-9B"
+        ],
+        "pareto_n": 8
+      },
+      "moe": {
+        "factor_per_horizon_doubling": 8.132252384929451,
+        "pareto_models": [
+          "Gemma 4 26B A4B",
+          "Kimi K2.5",
+          "Qwen 3.5 Plus (hosted 397B-A17B)",
+          "Qwen3-235B-A22B-Instruct (Jul 2025)",
+          "Qwen3-Next-80B-A3B"
+        ],
+        "pareto_n": 5
+      },
+      "pooled": {
+        "factor_per_horizon_doubling": 3.9327430471099287,
+        "pareto_models": [
+          "Gemma 3 27B",
+          "Gemma 3 4B",
+          "Gemma 4 26B A4B",
+          "Gemma 4 31B IT",
+          "Kimi K2.5",
+          "Llama 3.2 1B",
+          "Llama 3.2 3B",
+          "Ministral 3 14B",
+          "Ministral 3 8B",
+          "Qwen 3.5 Plus (hosted 397B-A17B)",
+          "Qwen3.5-9B"
+        ],
+        "pareto_n": 11
+      }
+    },
+    "independent_training_pareto_delta": {
+      "families": 5,
+      "n": 15,
+      "observed_delta": -0.09523619969979744
+    },
+    "issues": [],
+    "panel_models": 35,
+    "strict_prediction_rows": 63
+  },
+  "no_cot_exact_date_reaudit": {
+    "all_pass": true,
+    "exact_date_rows": 49,
+    "explicit_date_only_overrides": 4,
+    "issues": [],
+    "metadata_hash_checks": {
+      "sources/epoch_all_ai_models_2026-07-31.csv": true,
+      "sources/no_cot_exact_date_overrides_2026-07-18.csv": true,
+      "sources/qwen3_30b_a3b_instruct_2507_hf_commits_2026-07-18.json.gz": true
+    },
+    "paper_models": 49,
+    "parameter_join_policies_for_overrides": [
+      "date_only_no_epoch_parameter_join"
+    ],
+    "remaining_month_only_models": 0,
+    "unique_exact_date_models": 49
+  },
+  "source_record_preservation": {
+    "aa_raw_mismatches": [],
+    "aa_rows_checked": 274,
+    "eci_component_raw_mismatches": [],
+    "eci_component_rows_checked": 2059,
+    "eci_current_raw_mismatches": [],
+    "eci_current_rows_checked": 213,
+    "eci_legacy_source_view_rows": 2,
+    "eci_raw_mismatches": [],
+    "eci_rows_checked": 211,
+    "epoch_primary_raw_mismatches": [],
+    "epoch_primary_rows_checked": 3574,
+    "epoch_view_raw_mismatches": {
+      "frontier_ai_models.csv": [],
+      "large_scale_ai_models.csv": [],
+      "notable_ai_models.csv": []
+    },
+    "epoch_view_rows_checked": 1690,
+    "metr_raw_mismatches": [],
+    "metr_rows_checked": 27,
+    "nocot_raw_mismatches": [],
+    "nocot_rows_checked": 50
+  },
+  "source_record_preservation_all_pass": true,
+  "workbook_formula_error_tokens": [],
+  "workbook_manifest_checks": [
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_evidence_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 normalized evidence bundle"
+    },
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_anthropic_model_overview_2026-07-31.html.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 anthropic_model_overview"
+    },
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_anthropic_news_2026-07-31.html.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 anthropic_news"
+    },
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_system_card_2026-07-31.pdf",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 anthropic_system_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_anthropic_whats_new_2026-07-31.html.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 anthropic_whats_new"
+    },
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_artificial_analysis_article_2026-07-31.html.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 artificial_analysis_launch_article"
+    },
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_artificial_analysis_2026-07-31.html.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 artificial_analysis_model_page"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_all_ai_models_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 epoch_all_ai_models"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_benchmark_data_2026-07-31.zip",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 epoch_benchmark_data"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_eci_benchmarks_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 epoch_eci_benchmarks"
+    },
+    {
+      "exists": true,
+      "path": "sources/metr_benchmark_results_1_1_2026-07-31.yaml",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 metr_horizon"
+    },
+    {
+      "exists": true,
+      "path": "sources/claude_opus_5_openrouter_catalog_2026-07-31.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Claude Opus 5 raw source \u2014 openrouter_catalog"
+    },
+    {
+      "exists": true,
+      "path": "sources/input_eci_parameter_regression_workbook_2026-07-17.xlsx",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI workbook"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_all_ai_models_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch AI all-models CSV"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_snapshot_manifest_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch Jul-31 atomic snapshot manifest"
+    },
+    {
+      "exists": true,
+      "path": "sources/input_epoch_ai_models_archive_2026-07-17.zip",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch AI models archive"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Compute-enriched unified observations"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_data_summary_compute_enriched_2026-07-17.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Compute-enriched unified summary"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA expanded parameter audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_panel_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA expanded parameter panel"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA expanded held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_overlap_audit_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA current/exact overlap audit"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_detailed_snapshot_2026-07-31.html.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA detailed raw React-Flight snapshot"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_detailed_model_signals_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA detailed 587-model ledger"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_detailed_collection_metadata_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA detailed collection metadata"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_calibration_primary_overrides_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA primary-source calibration overrides"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_calibration_evidence/motif_3_beta_readme_eee2817.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA override raw evidence \u2014 aa-motif-3-beta-open-weights-2026-07-31 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_calibration_evidence/motif_3_beta_hf_api_eee2817.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA override raw evidence \u2014 aa-motif-3-beta-open-weights-2026-07-31 \u2014 commit_pinned_hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_readme_02d0608.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA override raw evidence \u2014 aa-motif-2-12-7b-reasoning-open-weights-2026-07-31 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_config_02d0608.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA override raw evidence \u2014 aa-motif-2-12-7b-reasoning-open-weights-2026-07-31 \u2014 commit_pinned_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_hf_api_02d0608.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA override raw evidence \u2014 aa-motif-2-12-7b-reasoning-open-weights-2026-07-31 \u2014 commit_pinned_hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_hf_commits_2026-03-10.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA override raw evidence \u2014 aa-motif-2-12-7b-reasoning-open-weights-2026-07-31 \u2014 hugging_face_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA parameter-label availability ledger"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-flash-lite-2026-01-29 \u2014 hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_commit_history.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-flash-lite-2026-01-29 \u2014 hugging_face_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_config.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-flash-lite-2026-01-29 \u2014 commit_pinned_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_model_card.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-flash-lite-2026-01-29 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__first_party_label_source.html",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-flash-lite-2026-01-29 \u2014 first_party_label_source"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m2-7-2026-04-09 \u2014 hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_commit_history.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m2-7-2026-04-09 \u2014 hugging_face_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_config.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m2-7-2026-04-09 \u2014 commit_pinned_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_model_card.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m2-7-2026-04-09 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__first_party_launch_page.html",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m2-7-2026-04-09 \u2014 first_party_launch_page"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-mimo-v2-5-2026-04-22 \u2014 hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_commit_history.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-mimo-v2-5-2026-04-22 \u2014 hugging_face_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_config.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-mimo-v2-5-2026-04-22 \u2014 commit_pinned_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_model_card.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-mimo-v2-5-2026-04-22 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__first_party_label_source.html",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-mimo-v2-5-2026-04-22 \u2014 first_party_label_source"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m3-2026-06-12 \u2014 hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_commit_history.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m3-2026-06-12 \u2014 hugging_face_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_config.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m3-2026-06-12 \u2014 commit_pinned_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_model_card.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m3-2026-06-12 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__first_party_launch_page.html",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-minimax-m3-2026-06-12 \u2014 first_party_launch_page"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-nex-n2-pro-2026-06-03 \u2014 hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_commit_history.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-nex-n2-pro-2026-06-03 \u2014 hugging_face_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_config.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-nex-n2-pro-2026-06-03 \u2014 commit_pinned_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_model_card.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-nex-n2-pro-2026-06-03 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-2-0-2026-06-30 \u2014 hugging_face_model_api"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_commit_history.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-2-0-2026-06-30 \u2014 hugging_face_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_config.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-2-0-2026-06-30 \u2014 commit_pinned_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_model_card.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-2-0-2026-06-30 \u2014 commit_pinned_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__first_party_label_source.html",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA label-timing raw evidence \u2014 aa-label-longcat-2-0-2026-06-30 \u2014 first_party_label_source"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_score_availability_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA score-publication availability ledger"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_changelog_2026-07-31.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA changelog raw API snapshot"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_score_availability_timing_audit_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA score-publication timing audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_score_availability_timing_changes_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA score-publication changed-prediction ledger"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_inference_budget_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA inference-budget audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA detailed 275-checkpoint panel"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_reasoning_pair_audit_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA reasoning configuration pairs"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_epoch_crosscheck_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA detailed Epoch crosscheck"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_inference_budget_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA inference-budget held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_operational_signal_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA operational-signal audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_operational_parameter_panel_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA operational 275-checkpoint panel"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_operational_backtest_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA operational held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_openrouter_operational_crosscheck_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "AA\u2194OpenRouter exact operational crosscheck"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Active-parameter transport audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Active-parameter chronological predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_targets_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Active-parameter frontier sensitivities"
+    },
+    {
+      "exists": true,
+      "path": "sources/kimi_k3_release_evidence_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Official Kimi K3 normalized release evidence"
+    },
+    {
+      "exists": true,
+      "path": "sources/kimi_k3_hf_commit_history_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Kimi K3 raw source \u2014 official_huggingface_commit_history"
+    },
+    {
+      "exists": true,
+      "path": "sources/kimi_k3_hf_config_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Kimi K3 raw source \u2014 official_huggingface_config"
+    },
+    {
+      "exists": true,
+      "path": "sources/kimi_k3_official_launch_2026-07-31.html",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Kimi K3 raw source \u2014 official_launch_page"
+    },
+    {
+      "exists": true,
+      "path": "sources/kimi_k3_official_model_card_2026-07-31.md",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Kimi K3 raw source \u2014 official_model_card"
+    },
+    {
+      "exists": true,
+      "path": "sources/kimi_k3_technical_report_2026-07-31.pdf",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Kimi K3 raw source \u2014 official_technical_report"
+    },
+    {
+      "exists": true,
+      "path": "sources/open_model_parameter_truth_reconciliation_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Open-model parameter truth reconciliation"
+    },
+    {
+      "exists": true,
+      "path": "sources/kimi_k3_release_evidence_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Open-model parameter truth evidence \u2014 Moonshot K3 report extraction containing K2 Table 1"
+    },
+    {
+      "exists": true,
+      "path": "sources/huggingface_architecture_config_snapshot_2026-07-18.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Open-model parameter truth evidence \u2014 frozen official Hugging Face config snapshot"
+    },
+    {
+      "exists": true,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_config.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Open-model parameter truth evidence \u2014 commit-pinned official MiniMax M2.7 config"
+    },
+    {
+      "exists": true,
+      "path": "sources/open_model_parameter_truth_evidence_2026-07-31/minimax-m2-5__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Open-model parameter truth evidence \u2014 official MiniMax M2.5 Hugging Face model API"
+    },
+    {
+      "exists": true,
+      "path": "sources/open_model_parameter_truth_evidence_2026-07-31/minimax-m2-7__hugging_face_model_api.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Open-model parameter truth evidence \u2014 official MiniMax M2.7 Hugging Face model API"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_architecture_blend_challenger_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI architecture-blend challenger"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_architecture_blend_challenger_predictions_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI architecture-blend held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_eci_benchmarks_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI component benchmark snapshot"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_benchmark_data_2026-07-31.zip",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch benchmark data archive"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_eci_reproduced_scores_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Official ECI reproduced scores"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_eci_reproduction_metadata_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Official ECI reproduction metadata"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_eci_reproduction_crosscheck_2026-07-31.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI score/date reproduction crosscheck"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_eci_reproduction_audit_2026-07-31.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI reproduction audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_extended_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI component extended audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_expanded_parameter_panel_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI component expanded parameter panel"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_active_incremental_comparison_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI component active comparison"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI multivariate component audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI multivariate held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_narrow_eci_ci_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI multivariate narrow-ECI-CI predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_targets_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI multivariate frontier sensitivities"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_coverage_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "ECI multivariate benchmark coverage"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/posttraining_lineage_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Post-training lineage audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/posttraining_lineage_edges_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Post-training exact lineage edges"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/posttraining_lineage_measurements_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Post-training matched measurements"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/posttraining_lineage_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Post-training held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_shared_base_sensitivity_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Frontier asserted shared-base sensitivities"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_lineage_evidence_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Frontier lineage primary-source evidence"
+    },
+    {
+      "exists": true,
+      "path": "sources/input_no_cot_arxiv_2606.07157v3_source.tar.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "arXiv LaTeX source archive"
+    },
+    {
+      "exists": true,
+      "path": "sources/no_cot_exact_date_overrides_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "No-CoT exact-date overrides"
+    },
+    {
+      "exists": true,
+      "path": "sources/no_cot_exact_date_collection_metadata_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "No-CoT exact-date collection metadata"
+    },
+    {
+      "exists": true,
+      "path": "sources/qwen3_30b_a3b_instruct_2507_hf_commits_2026-07-18.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Qwen first-party Hugging Face commit history"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_exact_date_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "No-CoT exact-date statistical audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_exact_date_model_audit_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "No-CoT exact-date model ledger"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_architecture_elasticity_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "No-CoT architecture-elasticity audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_architecture_elasticity_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "No-CoT architecture-elasticity predictions"
+    },
+    {
+      "exists": true,
+      "path": "sources/frontier_primary_evidence_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Frontier primary evidence ledger"
+    },
+    {
+      "exists": true,
+      "path": "sources/frontier_primary_evidence_collection_metadata_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Frontier primary evidence metadata"
+    },
+    {
+      "exists": true,
+      "path": "sources/openai_gpt_5_6_system_card_2026-07-18.html.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenAI GPT-5.6 first-party system-card capture"
+    },
+    {
+      "exists": true,
+      "path": "sources/anthropic_fable_mythos_primary_claims_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Anthropic Fable/Mythos verified primary claims"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_primary_evidence_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Frontier primary evidence statistical audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_primary_evidence_controls_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Frontier primary evidence controls"
+    },
+    {
+      "exists": true,
+      "path": "sources/metr_horizon_official_signals_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "METR official normalized signals"
+    },
+    {
+      "exists": true,
+      "path": "sources/metr_benchmark_results_1_1_2026-07-18.yaml",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "METR official raw YAML"
+    },
+    {
+      "exists": true,
+      "path": "sources/metr_horizon_official_metadata_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "METR official metadata"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/metr_primary_source_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "METR official/legacy reconciliation audit"
+    },
+    {
+      "exists": true,
+      "path": "sources/metr_horizon_user_snapshot_2026-07-17.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "METR legacy exact crosscheck"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_parameter_signal_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "IKP direct-capacity signal audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_parameter_chronological_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "IKP chronological held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_parameter_incremental_overlap_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "IKP exact ensemble overlap"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_conditional_benchmark_signal_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "IKP conditional benchmark audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_conditional_benchmark_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "IKP conditional benchmark predictions"
+    },
+    {
+      "exists": true,
+      "path": "sources/ikp_source_metadata_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "IKP immutable source metadata"
+    },
+    {
+      "exists": true,
+      "path": "sources/epoch_employee_calibration_feedback_2026-07-21.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch employee calibration feedback"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_feedback_lean_architecture_audit_2026-07-21.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch feedback architecture audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_feedback_critique_panel_2026-07-21.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch feedback reproduced challenge panel"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/lean_architecture_predictions_2026-07-21.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch feedback lean architecture predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/lean_architecture_target_sensitivity_2026-07-21.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Epoch feedback frontier sensitivities"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/price_informed_frontier_parameter_crosscheck_2026-07-17.xlsx",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Price-informed input workbook"
+    },
+    {
+      "exists": true,
+      "path": "sources/human_parameter_forecasts_2026-07-17.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Human forecast ledger"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_prediction_registry_v2.1_2026-07-17.docx",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Human prediction registry"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_operational_snapshot_2026-07-18.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter raw operational snapshot"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_model_signals_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter model aggregates"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_provider_signals_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter provider observations"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_endpoint_tier_signals_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter endpoint service-tier observations"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_throughput_daily_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter lossless daily endpoint throughput"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_model_snapshot_history_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter model snapshot history"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_provider_snapshot_history_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter provider snapshot history"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_endpoint_tier_snapshot_history_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter endpoint-tier snapshot history"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_throughput_daily_history_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter daily throughput history"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_snapshot_history_manifest_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter immutable snapshot manifest"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_epoch_match_audit_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter manual Epoch match audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_signal_backtest_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter parameter-signal backtest"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_temporal_stability_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter temporal-stability audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_request_weighted_operational_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter request-weighted operational audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_request_weighted_operational_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter request-weighted held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_endpoint_temporal_stability_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter endpoint temporal stability"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_model_temporal_stability_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter model temporal stability"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_refresh_stability_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter refresh temporal stability"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_tier_counterfactual_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter service-tier counterfactual predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_collection_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter collection audit"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_official_endpoint_snapshot_2026-07-18.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter official endpoint snapshot"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_official_endpoint_prices_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter official endpoint prices"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_official_endpoint_crosscheck_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter official/frontend comparison"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_official_endpoint_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter official endpoint audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_active_price_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter active-price audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_active_parameter_match_audit_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter active-price identity ledger"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_active_price_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter active-price held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_active_price_targets_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter active-price frontier sensitivities"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_historical_price_ledger_2026-07-18.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter historical raw price ledger"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_historical_price_change_points_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter historical price change points"
+    },
+    {
+      "exists": true,
+      "path": "sources/openrouter_historical_price_collection_metadata_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter historical collection metadata"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_historical_price_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter historical prospective audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_historical_price_match_audit_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter historical exact-match audit"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_historical_price_backtest_predictions_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter historical held-out predictions"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_historical_price_frontier_targets_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "OpenRouter historical frontier sensitivities"
+    },
+    {
+      "exists": true,
+      "path": "sources/huggingface_architecture_config_snapshot_2026-07-18.json.gz",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Primary Hugging Face architecture config snapshot"
+    },
+    {
+      "exists": true,
+      "path": "sources/huggingface_architecture_config_signals_2026-07-18.csv",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Hugging Face architecture config signals"
+    },
+    {
+      "exists": true,
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/huggingface_architecture_config_collection_audit_2026-07-18.json",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "Hugging Face architecture config collection audit"
+    },
+    {
+      "exists": true,
+      "path": "sources/input_lesswrong_no_cot_article_2026-07-17.txt",
+      "sha_matches": true,
+      "size_matches": true,
+      "source": "LessWrong attachment"
+    }
+  ]
+}

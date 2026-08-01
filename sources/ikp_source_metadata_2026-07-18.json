@@ -1,0 +1,227 @@
+{
+  "collected_on": "2026-07-18",
+  "collection_policy": "immutable Git commit URLs plus exact expected SHA-256",
+  "upstream": {
+    "repository": "https://github.com/19PINE-AI/ikp",
+    "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+    "role": "primary benchmark data and current v2 methodology"
+  },
+  "replication": {
+    "repository": "https://github.com/BenSturgeon/ikp-replication",
+    "commit": "c44e4dc82132e268dc9a2c86350863f59282fddb",
+    "role": "independent methodological and data-quality audit"
+  },
+  "files": [
+    {
+      "label": "upstream_calibration_contract",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "website/public/data/calibration.json",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/website/public/data/calibration.json",
+      "local_path": "sources/ikp_upstream_calibration_2026-07-18.json",
+      "sha256": "87745c4cb8d704edccd7be98b3605591dcc12e9305c7fb96bd40da1c899b37c8",
+      "bytes": 103023
+    },
+    {
+      "label": "upstream_evaluation_summary",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/results/evaluation_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/results/evaluation_summary.json",
+      "local_path": "sources/ikp_upstream_evaluation_summary_2026-07-18.json",
+      "sha256": "ae420ee241dd401142b115c2068484b98e4a7355f06ef9c3ce7aef8cec9a31da",
+      "bytes": 290294
+    },
+    {
+      "label": "upstream_model_config",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "configs/all_models.json",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/configs/all_models.json",
+      "local_path": "sources/ikp_upstream_models_2026-07-18.json",
+      "sha256": "73f998fbbd6c2fd3e1fe3b68b6e30a33c5c785d70313b81d473d25bff3653799",
+      "bytes": 55436
+    },
+    {
+      "label": "upstream_method_note",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "IKP_V2.md",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/IKP_V2.md",
+      "local_path": "sources/ikp_upstream_method_2026-07-18.md",
+      "sha256": "0a007d46747db4e101f23d77c6260bd056c382bc2a1c611e75ec7ca634b24364",
+      "bytes": 6201
+    },
+    {
+      "label": "upstream_sensitivity",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "website/public/data/sensitivity.json",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/website/public/data/sensitivity.json",
+      "local_path": "sources/ikp_upstream_sensitivity_2026-07-18.json",
+      "sha256": "8a190f8f117c58203d9704d2698f3238c458c8cb0dd627a881cf6fe0d57e06c6",
+      "bytes": 2336
+    },
+    {
+      "label": "upstream_v2_validation",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/results/ikp_v2_validation.json",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/results/ikp_v2_validation.json",
+      "local_path": "sources/ikp_upstream_v2_validation_2026-07-18.json",
+      "sha256": "cfa8d60048634765dd002305df1ef202201e0fe96c50dde8710e4a1f80bccb43",
+      "bytes": 730
+    },
+    {
+      "label": "upstream_densing_analysis_panel",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/densing_analysis_data.csv",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/densing_analysis_data.csv",
+      "local_path": "sources/ikp_upstream_densing_analysis_2026-07-18.csv",
+      "sha256": "2f51325f47f4f51708666ff3912efa691fe0b14f5d3bf4a5739d87c3239521a3",
+      "bytes": 18753
+    },
+    {
+      "label": "upstream_benchmark_comparison_script",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "scripts/16_benchmark_comparison.py",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/scripts/16_benchmark_comparison.py",
+      "local_path": "sources/ikp_upstream_benchmark_comparison_script_2026-07-18.py",
+      "sha256": "ef30ab480f7946f852941af8f6d708ca9806c6963b3e2abf383b8f5d27582386",
+      "bytes": 7557
+    },
+    {
+      "label": "upstream_benchmark_scores",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/benchmark_scores.csv",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/benchmark_scores.csv",
+      "local_path": "sources/ikp_upstream_benchmark_scores_2026-07-18.csv",
+      "sha256": "163d8a72fd7cc0fa0dc387f1590c10a4703407ae8198c67d165629e4fd6a2b29",
+      "bytes": 3853
+    },
+    {
+      "label": "upstream_benchmark_joined_panel",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/joined_per_model.csv",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/joined_per_model.csv",
+      "local_path": "sources/ikp_upstream_benchmark_joined_2026-07-18.csv",
+      "sha256": "707273dacdbb76e43825bc491016f93798159b50ba510dc87eea722bd863cb5b",
+      "bytes": 7265
+    },
+    {
+      "label": "upstream_benchmark_regression_summary",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/regression_summary.csv",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/regression_summary.csv",
+      "local_path": "sources/ikp_upstream_benchmark_regression_summary_2026-07-18.csv",
+      "sha256": "c8c615e3dfb23f9b62b10245884564403bcd418a4466cbbcb30897bd7a25fe04",
+      "bytes": 787
+    },
+    {
+      "label": "upstream_benchmark_time_coefficients",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/time_coefficients.csv",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/time_coefficients.csv",
+      "local_path": "sources/ikp_upstream_benchmark_time_coefficients_2026-07-18.csv",
+      "sha256": "4cf721af4def0b6d123d7ecde1c776310c492eb0581846acead9628c4d390be2",
+      "bytes": 485
+    },
+    {
+      "label": "upstream_benchmark_narrative_summary",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/SUMMARY.md",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/SUMMARY.md",
+      "local_path": "sources/ikp_upstream_benchmark_summary_2026-07-18.md",
+      "sha256": "79bc705a437e12d8474ac33377068c2ec9600091a19de59e5e7775f27acc6b7b",
+      "bytes": 2758
+    },
+    {
+      "label": "upstream_benchmark_raw_anthropic",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/raw_anthropic.md",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/raw_anthropic.md",
+      "local_path": "sources/ikp_upstream_benchmark_raw_anthropic_2026-07-18.md",
+      "sha256": "182594023dcaba8cb59f77160cbb6787b90d3097e47b558e93c605934b3fa367",
+      "bytes": 1577
+    },
+    {
+      "label": "upstream_benchmark_raw_deepseek_qwen_kimi_glm",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/raw_deepseek_qwen_kimi_glm.md",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/raw_deepseek_qwen_kimi_glm.md",
+      "local_path": "sources/ikp_upstream_benchmark_raw_deepseek_qwen_kimi_glm_2026-07-18.md",
+      "sha256": "fdd8fa7ee60d5f7ba581a0c920c92c42fb5e4decfaf93ce7271d5551adb878a6",
+      "bytes": 2392
+    },
+    {
+      "label": "upstream_benchmark_raw_google_meta",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/raw_google_meta.md",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/raw_google_meta.md",
+      "local_path": "sources/ikp_upstream_benchmark_raw_google_meta_2026-07-18.md",
+      "sha256": "fe2359ba6d141610db2dd179c1c85b954b4aa7a75b0fe58456700f247d6d39cf",
+      "bytes": 2222
+    },
+    {
+      "label": "upstream_benchmark_raw_openai",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/raw_openai.md",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/raw_openai.md",
+      "local_path": "sources/ikp_upstream_benchmark_raw_openai_2026-07-18.md",
+      "sha256": "65761bb7e5c0b0e58b7bdc82ce347b25c7f776c8e8e61a44ff6ac78b60799cab",
+      "bytes": 1923
+    },
+    {
+      "label": "upstream_benchmark_raw_others",
+      "repository": "https://github.com/19PINE-AI/ikp",
+      "commit": "e5c4231985048bb2db5dc2611b6eb659b891791d",
+      "source_path": "data/benchmarks/raw_others.md",
+      "raw_url": "https://raw.githubusercontent.com/19PINE-AI/ikp/e5c4231985048bb2db5dc2611b6eb659b891791d/data/benchmarks/raw_others.md",
+      "local_path": "sources/ikp_upstream_benchmark_raw_others_2026-07-18.md",
+      "sha256": "cd26b9f931cd1eb375e6d1e961900d935fe92173c756d2df2b1d6680c28010a8",
+      "bytes": 3033
+    },
+    {
+      "label": "replication_readme",
+      "repository": "https://github.com/BenSturgeon/ikp-replication",
+      "commit": "c44e4dc82132e268dc9a2c86350863f59282fddb",
+      "source_path": "README.md",
+      "raw_url": "https://raw.githubusercontent.com/BenSturgeon/ikp-replication/c44e4dc82132e268dc9a2c86350863f59282fddb/README.md",
+      "local_path": "sources/ikp_replication_readme_2026-07-18.md",
+      "sha256": "db9417c3b169578544a16998d37be2fa8ddac455ae6d9d98e604817729a21d2b",
+      "bytes": 4199
+    },
+    {
+      "label": "replication_calibration_errors",
+      "repository": "https://github.com/BenSturgeon/ikp-replication",
+      "commit": "c44e4dc82132e268dc9a2c86350863f59282fddb",
+      "source_path": "runs/calibration_error_per_model.csv",
+      "raw_url": "https://raw.githubusercontent.com/BenSturgeon/ikp-replication/c44e4dc82132e268dc9a2c86350863f59282fddb/runs/calibration_error_per_model.csv",
+      "local_path": "sources/ikp_replication_calibration_errors_2026-07-18.csv",
+      "sha256": "1b88c2d9f218dffb06ad4f03091eb43d64aeaa1035b16a56afcd8e85fa6b1501",
+      "bytes": 4692
+    },
+    {
+      "label": "replication_wikidata_dominance",
+      "repository": "https://github.com/BenSturgeon/ikp-replication",
+      "commit": "c44e4dc82132e268dc9a2c86350863f59282fddb",
+      "source_path": "data/wikidata_dominance_check.json",
+      "raw_url": "https://raw.githubusercontent.com/BenSturgeon/ikp-replication/c44e4dc82132e268dc9a2c86350863f59282fddb/data/wikidata_dominance_check.json",
+      "local_path": "sources/ikp_replication_wikidata_dominance_2026-07-18.json",
+      "sha256": "13273f555e7e3dc6f4505c6f0acfbb3a12996dfe10e8faa56c86b86b5f43ba12",
+      "bytes": 60334
+    }
+  ],
+  "scope_note": "The snapshots preserve the published aggregate model measurements and validation contracts, not all raw per-probe API responses. Claims about raw-response reproduction therefore remain upstream validation claims."
+}

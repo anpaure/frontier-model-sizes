@@ -1,0 +1,34 @@
+{
+  "claims": {
+    "client_fallback_to_opus_4_8": {
+      "page": 14,
+      "verified": true
+    },
+    "gpqa_saturated": {
+      "page": 258,
+      "verified": true
+    },
+    "messages_api_no_default_fallback": {
+      "page": 14,
+      "verified": true
+    },
+    "no_fallback_means_underlying_mythos": {
+      "page": 131,
+      "verified": true
+    },
+    "shared_underlying_weights": {
+      "page": 12,
+      "verified": true
+    }
+  },
+  "page_count": 317,
+  "page_text_sha256": {
+    "12": "b3e6e484c26eb2e4eeca1546472b84f1248c164f57b096c2ab7d3ee3ca257465",
+    "131": "214c32f4d8c2fc6e64562a6f63f607a92b00e25e4c5d2b504576437d3f3d1969",
+    "14": "759a433b1a77c6f4d56f274c1d85cd3110db86a3baa875305d5630edc93b03df",
+    "258": "2494b81d25fd41b5a1f5055fc80848c0cac316cb4342feab3dc1bcea66796f9a"
+  },
+  "pdf_bytes": 26957495,
+  "pdf_sha256": "c29ffa55ecefab591916dfdefc5ba3fd4e07c27cbef96ca3c05f7601aaebd033",
+  "source_url": "https://www-cdn.anthropic.com/2f9323abbcc4abe219577539efe19a623c9ca2bd/Claude%20Fable%205%20%26%20Claude%20Mythos%205%20System%20Card.pdf"
+}

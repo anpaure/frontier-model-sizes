@@ -1,0 +1,53 @@
+{
+  "generated_at_utc": "2026-07-18T08:25:03Z",
+  "source": "Epoch AI official ECI implementation",
+  "source_repository": "https://github.com/epoch-research/eci-public",
+  "source_commit": "542567e72a415b72624e5bbd12603cfd3f485179",
+  "source_commit_date": "2026-07-15T00:28:52+01:00",
+  "source_commit_subject": "Merge pull request #10 from epoch-research/per-draw-eci-scaling",
+  "input_url": "https://epoch.ai/data/eci_benchmarks.csv",
+  "input_file": "sources/epoch_eci_benchmarks_2026-07-17.csv",
+  "input_sha256": "6208a2ec91e7496fdc5a2fe243c1a74f46b1efed86bd0fc8ff3d2475161fab4d",
+  "output_file": "sources/epoch_eci_reproduced_scores_2026-07-18.csv",
+  "output_sha256": "0e843cdb9fdef38b0af9bbb9d7a564ece43c316a78e4373c3e2447a3732e45b2",
+  "bootstrap_samples": 500,
+  "bootstrap_seed": 12345,
+  "anchor_models": {
+    "Claude 3.5 Sonnet": 130,
+    "GPT-5": 150
+  },
+  "runtime": {
+    "python": "3.14",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "tqdm": "4.69.0",
+    "pytest": "9.1.1"
+  },
+  "command": "PYTHONPATH=<eci-public>/src python <eci-public>/scripts/fit_eci.py --input sources/epoch_eci_benchmarks_2026-07-17.csv --bootstrap-samples 500 --output-dir <output-dir>",
+  "input_inventory": {
+    "performance_records": 2010,
+    "models": 211,
+    "benchmarks": 52
+  },
+  "upstream_test_result": {
+    "passed": 43,
+    "failed": 2,
+    "total": 45,
+    "failed_tests": [
+      "tests/test_dataloader.py::TestDataLoaderAccuracy::test_benchmark_coverage",
+      "tests/test_dataloader.py::TestDataLoaderAccuracy::test_row_count"
+    ],
+    "reason": "The general benchmark_data.zip loader reconstructs 1,499 rows across 37 benchmark names, while the canonical eci_benchmarks.csv contains 2,010 rows across 52 benchmark names. This does not affect reproduction from the canonical ECI input, but it means the general archive is not a complete substitute for eci_benchmarks.csv."
+  },
+  "published_score_crosscheck": {
+    "published_archive": "sources/epoch_benchmark_data_2026-07-17.zip",
+    "reproduced_models": 211,
+    "published_nonblank_exact_version_matches": 194,
+    "published_blank_score_versions": 17,
+    "missing_version_matches": 0,
+    "maximum_absolute_score_difference": 0.00891361050467765,
+    "tolerance": 0.01,
+    "interpretation": "All 194 published nonblank scores match the official reproduction within the archive's two-decimal display rounding."
+  }
+}

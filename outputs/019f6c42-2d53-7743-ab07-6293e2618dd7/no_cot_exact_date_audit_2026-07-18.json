@@ -1,0 +1,328 @@
+{
+  "decision": {
+    "change_live_no_cot_weight": false,
+    "reason": "Exact dates change the time-law point by about two percent and add Opus 4.7 to the exact-date Pareto frontier. This is a source-fidelity correction, not new independent evidence, so the no-CoT weight stays fixed.",
+    "use_exact_date_adjusted_time_law": true,
+    "use_exact_date_adjusted_token_law": true,
+    "use_exact_dates_in_no_cot_evidence": true
+  },
+  "inventory": {
+    "explicit_date_only_overrides": 4,
+    "frontier_models": 14,
+    "models_remaining_month_only": 0,
+    "models_with_day_level_dates": 49,
+    "no_cot_models": 49,
+    "parameter_identities_added_by_overrides": 0
+  },
+  "limitations": [
+    "The paper's per-bootstrap model horizons and iteration-level trend fits are not present in the submitted LaTeX archive.",
+    "The exact-date adjustment transfers a deterministic slope ratio onto the published bootstrap median and interval; it does not recreate the original bootstrap.",
+    "Release date is a public-availability proxy, not a training-completion date."
+  ],
+  "metadata": {
+    "generated_on": "2026-07-18",
+    "method": "Deterministic OLS on log2 horizon along the release-date Pareto frontier, matching the paper's documented approximation. Apply the exact/month slope ratio to the paper's bootstrap-median point and interval because bootstrap samples are not in the LaTeX archive.",
+    "question": "Does replacing paper month-first dates with audited day-level dates materially change the no-CoT frontier laws?",
+    "trend_exclusions": [
+      "GPT-2",
+      "GPT-3"
+    ]
+  },
+  "outputs": {
+    "model_audit": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_exact_date_model_audit_2026-07-18.csv"
+  },
+  "source_hashes": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_exact_date_model_audit_2026-07-18.csv": "9c7dd8e708dfd56f7cd493209bef7133b78e8302f2acc2a1d11d025e4c5509bd",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "sources/no_cot_exact_date_collection_metadata_2026-07-18.json": "e53d3b6177b446a292637d1e6ba0697ca37e33c91776e268261790184e51fd74",
+    "sources/no_cot_exact_date_overrides_2026-07-18.csv": "97ac63a7ce7e81d664e73eecf944f8255ac49b4236857b1fec10bbb1ca406bc6"
+  },
+  "time_horizon": {
+    "adjusted_reported_law": {
+      "adjusted_ci_95_days": [
+        163.80356371632462,
+        677.7740271136546
+      ],
+      "adjusted_point_days": 365.8606542885574,
+      "exact_date_adjustment_ratio": 0.9808596629720038,
+      "paper_reported_ci_95_days": [
+        167.0,
+        691.0
+      ],
+      "paper_reported_point_days": 373.0
+    },
+    "exact_date_approximation": {
+      "date_field": "exact_date",
+      "doubling_time_days": 525.4217715158459,
+      "frontier_models": [
+        "GPT-3.5",
+        "GPT-4",
+        "Sonnet 3.7",
+        "Opus 4",
+        "Opus 4.1",
+        "Opus 4.5",
+        "Opus 4.6",
+        "Opus 4.7",
+        "GPT-5.5"
+      ],
+      "frontier_rows": [
+        {
+          "date": "2022-03-15",
+          "model": "GPT-3.5",
+          "value": 0.29
+        },
+        {
+          "date": "2023-03-14",
+          "model": "GPT-4",
+          "value": 0.89
+        },
+        {
+          "date": "2025-02-24",
+          "model": "Sonnet 3.7",
+          "value": 1.1
+        },
+        {
+          "date": "2025-05-22",
+          "model": "Opus 4",
+          "value": 1.2
+        },
+        {
+          "date": "2025-08-05",
+          "model": "Opus 4.1",
+          "value": 1.4
+        },
+        {
+          "date": "2025-11-24",
+          "model": "Opus 4.5",
+          "value": 2.4
+        },
+        {
+          "date": "2026-02-05",
+          "model": "Opus 4.6",
+          "value": 2.5
+        },
+        {
+          "date": "2026-04-16",
+          "model": "Opus 4.7",
+          "value": 2.8
+        },
+        {
+          "date": "2026-04-23",
+          "model": "GPT-5.5",
+          "value": 3.0
+        }
+      ],
+      "metric": "time_horizon_minutes",
+      "n": 9,
+      "r_squared": 0.8787689162663006,
+      "slope_log2_per_day": 0.0019032328963358184
+    },
+    "month_date_approximation": {
+      "date_field": "paper_month",
+      "doubling_time_days": 535.6747670954461,
+      "frontier_models": [
+        "GPT-3.5",
+        "GPT-4",
+        "Sonnet 3.7",
+        "Opus 4",
+        "Opus 4.1",
+        "Opus 4.5",
+        "Opus 4.6",
+        "GPT-5.5"
+      ],
+      "frontier_rows": [
+        {
+          "date": "2022-03-01",
+          "model": "GPT-3.5",
+          "value": 0.29
+        },
+        {
+          "date": "2023-03-01",
+          "model": "GPT-4",
+          "value": 0.89
+        },
+        {
+          "date": "2025-02-01",
+          "model": "Sonnet 3.7",
+          "value": 1.1
+        },
+        {
+          "date": "2025-05-01",
+          "model": "Opus 4",
+          "value": 1.2
+        },
+        {
+          "date": "2025-08-01",
+          "model": "Opus 4.1",
+          "value": 1.4
+        },
+        {
+          "date": "2025-11-01",
+          "model": "Opus 4.5",
+          "value": 2.4
+        },
+        {
+          "date": "2026-02-01",
+          "model": "Opus 4.6",
+          "value": 2.5
+        },
+        {
+          "date": "2026-04-01",
+          "model": "GPT-5.5",
+          "value": 3.0
+        }
+      ],
+      "metric": "time_horizon_minutes",
+      "n": 8,
+      "r_squared": 0.8672341997730139,
+      "slope_log2_per_day": 0.0018668043772571813
+    }
+  },
+  "token_horizon": {
+    "adjusted_reported_law": {
+      "adjusted_ci_95_days": [
+        342.05891813541433,
+        572.7731444437583
+      ],
+      "adjusted_point_days": 438.35702998585356,
+      "exact_date_adjustment_ratio": 1.0031053317754086,
+      "paper_reported_ci_95_days": [
+        341.0,
+        571.0
+      ],
+      "paper_reported_point_days": 437.0
+    },
+    "exact_date_approximation": {
+      "date_field": "exact_date",
+      "doubling_time_days": 445.8719046313448,
+      "frontier_models": [
+        "GPT-3.5",
+        "GPT-4",
+        "GPT-4 Turbo",
+        "GPT-4o",
+        "Sonnet 3.7",
+        "Opus 4",
+        "Opus 4.1",
+        "Opus 4.5",
+        "Opus 4.7"
+      ],
+      "frontier_rows": [
+        {
+          "date": "2022-03-15",
+          "model": "GPT-3.5",
+          "value": 123.0
+        },
+        {
+          "date": "2023-03-14",
+          "model": "GPT-4",
+          "value": 290.0
+        },
+        {
+          "date": "2024-04-09",
+          "model": "GPT-4 Turbo",
+          "value": 401.0
+        },
+        {
+          "date": "2024-05-13",
+          "model": "GPT-4o",
+          "value": 455.0
+        },
+        {
+          "date": "2025-02-24",
+          "model": "Sonnet 3.7",
+          "value": 584.0
+        },
+        {
+          "date": "2025-05-22",
+          "model": "Opus 4",
+          "value": 612.0
+        },
+        {
+          "date": "2025-08-05",
+          "model": "Opus 4.1",
+          "value": 825.0
+        },
+        {
+          "date": "2025-11-24",
+          "model": "Opus 4.5",
+          "value": 1400.0
+        },
+        {
+          "date": "2026-04-16",
+          "model": "Opus 4.7",
+          "value": 1500.0
+        }
+      ],
+      "metric": "token_horizon_tokens",
+      "n": 9,
+      "r_squared": 0.9467549583015742,
+      "slope_log2_per_day": 0.0022427966185194345
+    },
+    "month_date_approximation": {
+      "date_field": "paper_month",
+      "doubling_time_days": 444.4916107087085,
+      "frontier_models": [
+        "GPT-3.5",
+        "GPT-4",
+        "GPT-4 Turbo",
+        "GPT-4o",
+        "Sonnet 3.7",
+        "Opus 4",
+        "Opus 4.1",
+        "Opus 4.5",
+        "Opus 4.7"
+      ],
+      "frontier_rows": [
+        {
+          "date": "2022-03-01",
+          "model": "GPT-3.5",
+          "value": 123.0
+        },
+        {
+          "date": "2023-03-01",
+          "model": "GPT-4",
+          "value": 290.0
+        },
+        {
+          "date": "2024-04-01",
+          "model": "GPT-4 Turbo",
+          "value": 401.0
+        },
+        {
+          "date": "2024-05-01",
+          "model": "GPT-4o",
+          "value": 455.0
+        },
+        {
+          "date": "2025-02-01",
+          "model": "Sonnet 3.7",
+          "value": 584.0
+        },
+        {
+          "date": "2025-05-01",
+          "model": "Opus 4",
+          "value": 612.0
+        },
+        {
+          "date": "2025-08-01",
+          "model": "Opus 4.1",
+          "value": 825.0
+        },
+        {
+          "date": "2025-11-01",
+          "model": "Opus 4.5",
+          "value": 1400.0
+        },
+        {
+          "date": "2026-04-01",
+          "model": "Opus 4.7",
+          "value": 1500.0
+        }
+      ],
+      "metric": "token_horizon_tokens",
+      "n": 9,
+      "r_squared": 0.9465849410377799,
+      "slope_log2_per_day": 0.002249761246124702
+    }
+  }
+}

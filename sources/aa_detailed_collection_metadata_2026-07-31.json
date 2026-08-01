@@ -1,0 +1,28 @@
+{
+  "content_type": "text/html; charset=utf-8",
+  "creators_in_parameter_panel": 47,
+  "delta_json_sha256": "365bb2388c11504c3dc552058c0f8de4ffbf03c18bcde55c848cdc303ff48423",
+  "fetched_at_utc": "2026-07-31T01:13:53.053887+00:00",
+  "model_csv_sha256": "c00553aa052e8e5fd40bf84637bc17663e407b5f6d348ddb1140c2df48b39404",
+  "models": 587,
+  "models_with_active_parameters": 167,
+  "models_with_total_parameters": 347,
+  "open_weight_models": 335,
+  "open_weight_parameter_score_date_rows": 333,
+  "open_weight_rows_with_inference_token_measurement": 88,
+  "outputs": {
+    "delta": "sources/aa_detailed_snapshot_delta_2026-07-18_to_2026-07-31.json",
+    "manifest": "sources/aa_detailed_snapshot_manifest_2026-07-31.json",
+    "models": "sources/aa_detailed_model_signals_2026-07-31.csv",
+    "raw": "sources/aa_detailed_snapshot_2026-07-31.html.gz"
+  },
+  "parse_method": "Next.js React Flight model objects; most-complete duplicate retained after core-field agreement",
+  "raw_gzip_sha256": "e767200f33263fdea9cadb5f61e347ab0d9bed85ca8d9dc0a066e679067375b6",
+  "raw_html_uncompressed_bytes": 3148504,
+  "raw_html_uncompressed_sha256": "37d210b4cf66ea23cdc0f144352b123b4699833cbb9915ba23d68f30f142bb5b",
+  "schema_version": "2.0",
+  "snapshot_date": "2026-07-31",
+  "source_url": "https://artificialanalysis.ai/models/claude-opus-5",
+  "unique_model_ids": 587,
+  "unique_slugs": 587
+}

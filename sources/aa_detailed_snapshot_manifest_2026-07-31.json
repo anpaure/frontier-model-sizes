@@ -1,0 +1,60 @@
+{
+  "content_type": "text/html; charset=utf-8",
+  "counts": {
+    "creators_in_parameter_panel": 47,
+    "models": 587,
+    "models_with_active_parameters": 167,
+    "models_with_total_parameters": 347,
+    "open_weight_models": 335,
+    "open_weight_parameter_score_date_rows": 333,
+    "open_weight_rows_with_inference_token_measurement": 88,
+    "unique_model_ids": 587,
+    "unique_slugs": 587
+  },
+  "delta_summary": {
+    "added_models": 11,
+    "removed_models": 0,
+    "shared_models_with_architecture_changes": 15,
+    "shared_models_with_identity_changes": 0,
+    "shared_models_with_intelligence_index_changes": 12,
+    "shared_models_with_score_changes": 170
+  },
+  "fetched_at_utc": "2026-07-31T01:13:53.053887+00:00",
+  "files": {
+    "delta_from_prior": {
+      "bytes": 70340,
+      "path": "sources/aa_detailed_snapshot_delta_2026-07-18_to_2026-07-31.json",
+      "sha256": "365bb2388c11504c3dc552058c0f8de4ffbf03c18bcde55c848cdc303ff48423"
+    },
+    "metadata": {
+      "bytes": 1386,
+      "path": "sources/aa_detailed_collection_metadata_2026-07-31.json",
+      "sha256": "ffabf480cde516300c0a480dd1fbddd01db0ba9af34c7cc59e78fc0e8e9a5f79"
+    },
+    "models": {
+      "bytes": 2387946,
+      "path": "sources/aa_detailed_model_signals_2026-07-31.csv",
+      "sha256": "c00553aa052e8e5fd40bf84637bc17663e407b5f6d348ddb1140c2df48b39404"
+    },
+    "prior_raw": {
+      "bytes": 440174,
+      "path": "sources/aa_detailed_snapshot_2026-07-18.html.gz",
+      "sha256": "889c19d858d59bbbd8ef98baf1471fc185e9596009a1797ec830db0198259978",
+      "uncompressed_bytes": 3161619,
+      "uncompressed_sha256": "74a6410bb1571098fc50a22717b254d8b2c58ee2c6c14b9782c5873db5db749d",
+      "wire_format": "gzip"
+    },
+    "raw": {
+      "bytes": 421664,
+      "path": "sources/aa_detailed_snapshot_2026-07-31.html.gz",
+      "sha256": "e767200f33263fdea9cadb5f61e347ab0d9bed85ca8d9dc0a066e679067375b6",
+      "uncompressed_bytes": 3148504,
+      "uncompressed_sha256": "37d210b4cf66ea23cdc0f144352b123b4699833cbb9915ba23d68f30f142bb5b",
+      "wire_format": "gzip"
+    }
+  },
+  "parse_method": "Next.js React Flight model objects; most-complete duplicate retained after core-field agreement",
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-31",
+  "source_url": "https://artificialanalysis.ai/models/claude-opus-5"
+}

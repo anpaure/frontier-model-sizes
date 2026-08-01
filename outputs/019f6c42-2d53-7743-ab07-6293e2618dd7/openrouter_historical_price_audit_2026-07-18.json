@@ -1,0 +1,1292 @@
+{
+  "decision": {
+    "change_existing_live_price_weight": false,
+    "headline_forecasts_changed": false,
+    "incremental_live_weight_from_this_audit": 0.0,
+    "launch_vintage_price_adds_robust_information_beyond_score_date_for_active_parameters": false,
+    "launch_vintage_price_predicts_total_beyond_date_robustly_across_all_windows": true,
+    "reason": "Launch-vintage price robustly beats date alone for total parameters, removing the old temporal-leakage objection. But on the exact active-parameter/AA-score common panel, no tested window has a developer-bootstrap interval wholly below zero beyond score plus date. This validates price as a correlated mechanism, not a new independent evidence branch."
+  },
+  "frontier_first_day_price_sensitivity": [
+    {
+      "aa_score": 59.8606463217303,
+      "first_day_blended_price_usd_per_mtoken": 22.360679774997898,
+      "first_day_completion_price_usd_per_mtoken": 50.0,
+      "first_day_prompt_price_usd_per_mtoken": 10.0,
+      "k3_anchored_total_date_historical_price_t": 5.713316113374278,
+      "k3_anchored_total_score_date_historical_price_t": 5.397726380788262,
+      "model": "Claude Fable 5",
+      "openrouter_first_seen": "2026-06-10",
+      "predicted_active_date_historical_price_b": 155.5706599854739,
+      "predicted_active_score_date_historical_price_b": 230.00188203327644,
+      "release_date": "2026-06-09",
+      "status": "zero-weight historical-price sensitivity"
+    },
+    {
+      "aa_score": 58.889831189723,
+      "first_day_blended_price_usd_per_mtoken": 12.24744871391589,
+      "first_day_completion_price_usd_per_mtoken": 30.0,
+      "first_day_prompt_price_usd_per_mtoken": 5.0,
+      "k3_anchored_total_date_historical_price_t": 3.9462483591938207,
+      "k3_anchored_total_score_date_historical_price_t": 3.8106883969800736,
+      "model": "GPT-5.6 Sol",
+      "openrouter_first_seen": "2026-07-10",
+      "predicted_active_date_historical_price_b": 107.45431366369738,
+      "predicted_active_score_date_historical_price_b": 162.3767937306579,
+      "release_date": "2026-07-09",
+      "status": "zero-weight historical-price sensitivity"
+    },
+    {
+      "aa_score": 57.1123394372091,
+      "first_day_blended_price_usd_per_mtoken": 6.708203932499369,
+      "first_day_completion_price_usd_per_mtoken": 15.0,
+      "first_day_prompt_price_usd_per_mtoken": 3.0,
+      "k3_anchored_total_date_historical_price_t": 2.78,
+      "k3_anchored_total_score_date_historical_price_t": 2.78,
+      "model": "Kimi K3",
+      "openrouter_first_seen": "2026-07-17",
+      "predicted_active_date_historical_price_b": 75.69797052664593,
+      "predicted_active_score_date_historical_price_b": 118.45825203891354,
+      "release_date": "2026-07-16",
+      "status": "disclosed total anchor"
+    }
+  ],
+  "frontier_sensitivity_method": {
+    "coefficients": {
+      "date_historical_price": [
+        1.8873835377335293,
+        -0.13600355577244125,
+        0.571960966711996
+      ],
+      "score_date_historical_price": [
+        2.335440093731314,
+        0.02206941137906407,
+        -0.5089943690107608,
+        0.3365047493284588
+      ]
+    },
+    "common_training_cutoff": "2026-06-09",
+    "excluded_target_developers": [
+      "anthropic",
+      "openai",
+      "kimi"
+    ],
+    "interpretation": "K3-anchored zero-weight sensitivity; not an independent forecast branch",
+    "price_window_days": 1,
+    "training_developers": 10,
+    "training_rows": 47
+  },
+  "headline_crosscheck": {
+    "fable_k3_anchored_score_date_first_day_price_t": 5.397726380788262,
+    "k3_disclosed_t": 2.78,
+    "k3_parameter_source": "Kimi K3 official technical report Table 1",
+    "sol_k3_anchored_score_date_first_day_price_t": 3.8106883969800736,
+    "status": "zero-weight crosscheck"
+  },
+  "heldout_metrics": {
+    "1": {
+      "active_common_panel": {
+        "active_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.3253702744686085,
+            "median_multiplicative_error": 1.87601096879825,
+            "n": 38,
+            "p80_multiplicative_error": 3.207712065231643,
+            "rmse_log10": 0.4107929435586891,
+            "signed_bias_factor": 0.8318078820123419,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.37946594477880174,
+            "median_multiplicative_error": 1.9744836742416263,
+            "n": 38,
+            "p80_multiplicative_error": 3.362252456478471,
+            "rmse_log10": 0.474313808010389,
+            "signed_bias_factor": 0.7439415959414104,
+            "within_2x": 0.5263157894736842
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3772812719665004,
+            "median_multiplicative_error": 2.0174201218007752,
+            "n": 38,
+            "p80_multiplicative_error": 4.527847137913545,
+            "rmse_log10": 0.46539747008833565,
+            "signed_bias_factor": 0.7554118968456052,
+            "within_2x": 0.47368421052631576
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.3815244536201036,
+            "median_multiplicative_error": 1.8883730421818274,
+            "n": 38,
+            "p80_multiplicative_error": 4.419998616048488,
+            "rmse_log10": 0.4769579383756511,
+            "signed_bias_factor": 0.8000161048124843,
+            "within_2x": 0.5263157894736842
+          }
+        },
+        "total_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.44379902035476865,
+            "median_multiplicative_error": 2.378569994152316,
+            "n": 38,
+            "p80_multiplicative_error": 6.197768698767609,
+            "rmse_log10": 0.5712163150870961,
+            "signed_bias_factor": 1.4511722357900696,
+            "within_2x": 0.42105263157894735
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.4196516482785347,
+            "median_multiplicative_error": 2.045766204366188,
+            "n": 38,
+            "p80_multiplicative_error": 4.430228600467035,
+            "rmse_log10": 0.5512826672527551,
+            "signed_bias_factor": 1.4048963151605245,
+            "within_2x": 0.5
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3721658648267331,
+            "median_multiplicative_error": 1.9661504385677449,
+            "n": 38,
+            "p80_multiplicative_error": 3.570516805578755,
+            "rmse_log10": 0.47193784711953646,
+            "signed_bias_factor": 1.4245061289486411,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.39771326782745103,
+            "median_multiplicative_error": 2.2816789551320578,
+            "n": 38,
+            "p80_multiplicative_error": 3.9818684391455745,
+            "rmse_log10": 0.4868711265240276,
+            "signed_bias_factor": 1.544105377666603,
+            "within_2x": 0.3684210526315789
+          }
+        }
+      },
+      "active_panel_rows": 55,
+      "total": {
+        "date_current_price_nonprospective": {
+          "mean_absolute_log10_error": 0.41267693235106795,
+          "median_multiplicative_error": 2.379104270601447,
+          "n": 50,
+          "p80_multiplicative_error": 4.124804229092438,
+          "rmse_log10": 0.5186934163684503,
+          "signed_bias_factor": 1.4500503116761259,
+          "within_2x": 0.4
+        },
+        "date_historical_price": {
+          "mean_absolute_log10_error": 0.4297039064141143,
+          "median_multiplicative_error": 2.5290499741932866,
+          "n": 50,
+          "p80_multiplicative_error": 4.2817896413876,
+          "rmse_log10": 0.5353758212575505,
+          "signed_bias_factor": 1.455523147114945,
+          "within_2x": 0.38
+        },
+        "date_only": {
+          "mean_absolute_log10_error": 0.6387085501652802,
+          "median_multiplicative_error": 3.3288988432124627,
+          "n": 50,
+          "p80_multiplicative_error": 10.683554442810268,
+          "rmse_log10": 0.7734328012290159,
+          "signed_bias_factor": 1.249588510582596,
+          "within_2x": 0.28
+        }
+      },
+      "total_panel_rows": 73
+    },
+    "14": {
+      "active_common_panel": {
+        "active_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.3152679463914713,
+            "median_multiplicative_error": 1.9216383666393384,
+            "n": 38,
+            "p80_multiplicative_error": 3.1528412657626914,
+            "rmse_log10": 0.39117685472464886,
+            "signed_bias_factor": 0.8542363922265835,
+            "within_2x": 0.5789473684210527
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.37946594477880174,
+            "median_multiplicative_error": 1.9744836742416263,
+            "n": 38,
+            "p80_multiplicative_error": 3.362252456478471,
+            "rmse_log10": 0.474313808010389,
+            "signed_bias_factor": 0.7439415959414104,
+            "within_2x": 0.5263157894736842
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3772812719665004,
+            "median_multiplicative_error": 2.0174201218007752,
+            "n": 38,
+            "p80_multiplicative_error": 4.527847137913545,
+            "rmse_log10": 0.46539747008833565,
+            "signed_bias_factor": 0.7554118968456052,
+            "within_2x": 0.47368421052631576
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.3685744527954143,
+            "median_multiplicative_error": 1.9485129140969824,
+            "n": 38,
+            "p80_multiplicative_error": 3.519840928619928,
+            "rmse_log10": 0.46499045700802594,
+            "signed_bias_factor": 0.8652271164143747,
+            "within_2x": 0.5263157894736842
+          }
+        },
+        "total_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.4457788351381325,
+            "median_multiplicative_error": 2.0703942472295305,
+            "n": 38,
+            "p80_multiplicative_error": 7.991192932527832,
+            "rmse_log10": 0.5930776047712887,
+            "signed_bias_factor": 1.6061262170616009,
+            "within_2x": 0.5
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.4196516482785347,
+            "median_multiplicative_error": 2.045766204366188,
+            "n": 38,
+            "p80_multiplicative_error": 4.430228600467035,
+            "rmse_log10": 0.5512826672527551,
+            "signed_bias_factor": 1.4048963151605245,
+            "within_2x": 0.5
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3721658648267331,
+            "median_multiplicative_error": 1.9661504385677449,
+            "n": 38,
+            "p80_multiplicative_error": 3.570516805578755,
+            "rmse_log10": 0.47193784711953646,
+            "signed_bias_factor": 1.4245061289486411,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.4330165545340033,
+            "median_multiplicative_error": 2.5644052125050854,
+            "n": 38,
+            "p80_multiplicative_error": 4.368457359497055,
+            "rmse_log10": 0.5129092216706407,
+            "signed_bias_factor": 1.7945533806447693,
+            "within_2x": 0.2894736842105263
+          }
+        }
+      },
+      "active_panel_rows": 55,
+      "total": {
+        "date_current_price_nonprospective": {
+          "mean_absolute_log10_error": 0.41267693235106795,
+          "median_multiplicative_error": 2.379104270601447,
+          "n": 50,
+          "p80_multiplicative_error": 4.124804229092438,
+          "rmse_log10": 0.5186934163684503,
+          "signed_bias_factor": 1.4500503116761259,
+          "within_2x": 0.4
+        },
+        "date_historical_price": {
+          "mean_absolute_log10_error": 0.4221317222080932,
+          "median_multiplicative_error": 2.2653676679921046,
+          "n": 50,
+          "p80_multiplicative_error": 5.256303988727665,
+          "rmse_log10": 0.5483491717041445,
+          "signed_bias_factor": 1.354364524325603,
+          "within_2x": 0.46
+        },
+        "date_only": {
+          "mean_absolute_log10_error": 0.6387085501652802,
+          "median_multiplicative_error": 3.3288988432124627,
+          "n": 50,
+          "p80_multiplicative_error": 10.683554442810268,
+          "rmse_log10": 0.7734328012290159,
+          "signed_bias_factor": 1.249588510582596,
+          "within_2x": 0.28
+        }
+      },
+      "total_panel_rows": 73
+    },
+    "3": {
+      "active_common_panel": {
+        "active_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.3032528994815822,
+            "median_multiplicative_error": 1.816338938095606,
+            "n": 38,
+            "p80_multiplicative_error": 2.9149466076181914,
+            "rmse_log10": 0.3831325186785698,
+            "signed_bias_factor": 0.866945278575384,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.37946594477880174,
+            "median_multiplicative_error": 1.9744836742416263,
+            "n": 38,
+            "p80_multiplicative_error": 3.362252456478471,
+            "rmse_log10": 0.474313808010389,
+            "signed_bias_factor": 0.7439415959414104,
+            "within_2x": 0.5263157894736842
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3772812719665004,
+            "median_multiplicative_error": 2.0174201218007752,
+            "n": 38,
+            "p80_multiplicative_error": 4.527847137913545,
+            "rmse_log10": 0.46539747008833565,
+            "signed_bias_factor": 0.7554118968456052,
+            "within_2x": 0.47368421052631576
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.35219455433768543,
+            "median_multiplicative_error": 1.9488218119174443,
+            "n": 38,
+            "p80_multiplicative_error": 3.681339163641787,
+            "rmse_log10": 0.4496351378339863,
+            "signed_bias_factor": 0.8555124264900721,
+            "within_2x": 0.5526315789473685
+          }
+        },
+        "total_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.43989001423984114,
+            "median_multiplicative_error": 2.140065403884017,
+            "n": 38,
+            "p80_multiplicative_error": 5.84122564923854,
+            "rmse_log10": 0.5771066213974781,
+            "signed_bias_factor": 1.6500193006006671,
+            "within_2x": 0.42105263157894735
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.4196516482785347,
+            "median_multiplicative_error": 2.045766204366188,
+            "n": 38,
+            "p80_multiplicative_error": 4.430228600467035,
+            "rmse_log10": 0.5512826672527551,
+            "signed_bias_factor": 1.4048963151605245,
+            "within_2x": 0.5
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3721658648267331,
+            "median_multiplicative_error": 1.9661504385677449,
+            "n": 38,
+            "p80_multiplicative_error": 3.570516805578755,
+            "rmse_log10": 0.47193784711953646,
+            "signed_bias_factor": 1.4245061289486411,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.4176873454509406,
+            "median_multiplicative_error": 2.443954818234187,
+            "n": 38,
+            "p80_multiplicative_error": 4.006249130983823,
+            "rmse_log10": 0.502524322703296,
+            "signed_bias_factor": 1.761904702878268,
+            "within_2x": 0.34210526315789475
+          }
+        }
+      },
+      "active_panel_rows": 55,
+      "total": {
+        "date_current_price_nonprospective": {
+          "mean_absolute_log10_error": 0.41267693235106795,
+          "median_multiplicative_error": 2.379104270601447,
+          "n": 50,
+          "p80_multiplicative_error": 4.124804229092438,
+          "rmse_log10": 0.5186934163684503,
+          "signed_bias_factor": 1.4500503116761259,
+          "within_2x": 0.4
+        },
+        "date_historical_price": {
+          "mean_absolute_log10_error": 0.4181364632118864,
+          "median_multiplicative_error": 2.0380016044598337,
+          "n": 50,
+          "p80_multiplicative_error": 4.818896613245452,
+          "rmse_log10": 0.5391772343235454,
+          "signed_bias_factor": 1.4587444923042625,
+          "within_2x": 0.5
+        },
+        "date_only": {
+          "mean_absolute_log10_error": 0.6387085501652802,
+          "median_multiplicative_error": 3.3288988432124627,
+          "n": 50,
+          "p80_multiplicative_error": 10.683554442810268,
+          "rmse_log10": 0.7734328012290159,
+          "signed_bias_factor": 1.249588510582596,
+          "within_2x": 0.28
+        }
+      },
+      "total_panel_rows": 73
+    },
+    "30": {
+      "active_common_panel": {
+        "active_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.3389415282650118,
+            "median_multiplicative_error": 2.062754484918482,
+            "n": 38,
+            "p80_multiplicative_error": 3.1956903586432484,
+            "rmse_log10": 0.4308212305224984,
+            "signed_bias_factor": 0.8068702236299768,
+            "within_2x": 0.47368421052631576
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.37946594477880174,
+            "median_multiplicative_error": 1.9744836742416263,
+            "n": 38,
+            "p80_multiplicative_error": 3.362252456478471,
+            "rmse_log10": 0.474313808010389,
+            "signed_bias_factor": 0.7439415959414104,
+            "within_2x": 0.5263157894736842
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3772812719665004,
+            "median_multiplicative_error": 2.0174201218007752,
+            "n": 38,
+            "p80_multiplicative_error": 4.527847137913545,
+            "rmse_log10": 0.46539747008833565,
+            "signed_bias_factor": 0.7554118968456052,
+            "within_2x": 0.47368421052631576
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.3893165819771692,
+            "median_multiplicative_error": 2.1536542971649446,
+            "n": 38,
+            "p80_multiplicative_error": 3.515235042015069,
+            "rmse_log10": 0.5029826452058456,
+            "signed_bias_factor": 0.8542145821530249,
+            "within_2x": 0.4473684210526316
+          }
+        },
+        "total_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.43075571179425715,
+            "median_multiplicative_error": 1.9079636988453685,
+            "n": 38,
+            "p80_multiplicative_error": 7.687638210047884,
+            "rmse_log10": 0.5651240572857346,
+            "signed_bias_factor": 1.524198136967476,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.4196516482785347,
+            "median_multiplicative_error": 2.045766204366188,
+            "n": 38,
+            "p80_multiplicative_error": 4.430228600467035,
+            "rmse_log10": 0.5512826672527551,
+            "signed_bias_factor": 1.4048963151605245,
+            "within_2x": 0.5
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3721658648267331,
+            "median_multiplicative_error": 1.9661504385677449,
+            "n": 38,
+            "p80_multiplicative_error": 3.570516805578755,
+            "rmse_log10": 0.47193784711953646,
+            "signed_bias_factor": 1.4245061289486411,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.43486553217221646,
+            "median_multiplicative_error": 2.7082663869691785,
+            "n": 38,
+            "p80_multiplicative_error": 4.186290277344709,
+            "rmse_log10": 0.5185105364803914,
+            "signed_bias_factor": 1.7297548962456757,
+            "within_2x": 0.42105263157894735
+          }
+        }
+      },
+      "active_panel_rows": 55,
+      "total": {
+        "date_current_price_nonprospective": {
+          "mean_absolute_log10_error": 0.41267693235106795,
+          "median_multiplicative_error": 2.379104270601447,
+          "n": 50,
+          "p80_multiplicative_error": 4.124804229092438,
+          "rmse_log10": 0.5186934163684503,
+          "signed_bias_factor": 1.4500503116761259,
+          "within_2x": 0.4
+        },
+        "date_historical_price": {
+          "mean_absolute_log10_error": 0.412577044127781,
+          "median_multiplicative_error": 2.332795654148894,
+          "n": 50,
+          "p80_multiplicative_error": 4.923428365678073,
+          "rmse_log10": 0.5405758613765803,
+          "signed_bias_factor": 1.3347184582805953,
+          "within_2x": 0.42
+        },
+        "date_only": {
+          "mean_absolute_log10_error": 0.6387085501652802,
+          "median_multiplicative_error": 3.3288988432124627,
+          "n": 50,
+          "p80_multiplicative_error": 10.683554442810268,
+          "rmse_log10": 0.7734328012290159,
+          "signed_bias_factor": 1.249588510582596,
+          "within_2x": 0.28
+        }
+      },
+      "total_panel_rows": 73
+    },
+    "60": {
+      "active_common_panel": {
+        "active_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.35773761705907914,
+            "median_multiplicative_error": 2.10671243635254,
+            "n": 35,
+            "p80_multiplicative_error": 3.2290702053711278,
+            "rmse_log10": 0.44869766629801455,
+            "signed_bias_factor": 0.795351649417047,
+            "within_2x": 0.42857142857142855
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.39255598988563795,
+            "median_multiplicative_error": 1.975249162686262,
+            "n": 35,
+            "p80_multiplicative_error": 3.4589728541468316,
+            "rmse_log10": 0.4864349272903897,
+            "signed_bias_factor": 0.7503382947135664,
+            "within_2x": 0.5142857142857142
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3944966139887082,
+            "median_multiplicative_error": 2.0307371818537896,
+            "n": 35,
+            "p80_multiplicative_error": 4.673982023617052,
+            "rmse_log10": 0.481079621695342,
+            "signed_bias_factor": 0.7441546035882536,
+            "within_2x": 0.45714285714285713
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.4098364410380135,
+            "median_multiplicative_error": 2.173116947614544,
+            "n": 35,
+            "p80_multiplicative_error": 3.6410620463492016,
+            "rmse_log10": 0.5233472037446792,
+            "signed_bias_factor": 0.8410673935296866,
+            "within_2x": 0.42857142857142855
+          }
+        },
+        "total_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.4572089766594364,
+            "median_multiplicative_error": 1.941826344530098,
+            "n": 35,
+            "p80_multiplicative_error": 7.9054956499320035,
+            "rmse_log10": 0.5979827471048704,
+            "signed_bias_factor": 1.5063538249626398,
+            "within_2x": 0.5428571428571428
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.41943656904027565,
+            "median_multiplicative_error": 1.9959003472557004,
+            "n": 35,
+            "p80_multiplicative_error": 4.52275846248503,
+            "rmse_log10": 0.5591705749610254,
+            "signed_bias_factor": 1.4458052819575742,
+            "within_2x": 0.5142857142857142
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.38344933710363804,
+            "median_multiplicative_error": 1.9745552810967244,
+            "n": 35,
+            "p80_multiplicative_error": 3.539993806301728,
+            "rmse_log10": 0.4787869358537671,
+            "signed_bias_factor": 1.4113407947793972,
+            "within_2x": 0.5428571428571428
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.45122100734872495,
+            "median_multiplicative_error": 2.549747526442432,
+            "n": 35,
+            "p80_multiplicative_error": 4.39223011023205,
+            "rmse_log10": 0.5313111367344084,
+            "signed_bias_factor": 1.7032969441860404,
+            "within_2x": 0.34285714285714286
+          }
+        }
+      },
+      "active_panel_rows": 52,
+      "total": {
+        "date_current_price_nonprospective": {
+          "mean_absolute_log10_error": 0.4284551566449743,
+          "median_multiplicative_error": 2.4179065060731197,
+          "n": 47,
+          "p80_multiplicative_error": 4.278192979165404,
+          "rmse_log10": 0.532740138967124,
+          "signed_bias_factor": 1.453037865008689,
+          "within_2x": 0.3617021276595745
+        },
+        "date_historical_price": {
+          "mean_absolute_log10_error": 0.4337865585635476,
+          "median_multiplicative_error": 2.4359924440908807,
+          "n": 47,
+          "p80_multiplicative_error": 5.103863332509855,
+          "rmse_log10": 0.560892002721712,
+          "signed_bias_factor": 1.330219033923923,
+          "within_2x": 0.3829787234042553
+        },
+        "date_only": {
+          "mean_absolute_log10_error": 0.6473823925120118,
+          "median_multiplicative_error": 3.456384876089454,
+          "n": 47,
+          "p80_multiplicative_error": 10.704871542315649,
+          "rmse_log10": 0.7863695751528011,
+          "signed_bias_factor": 1.3647038930010058,
+          "within_2x": 0.2978723404255319
+        }
+      },
+      "total_panel_rows": 70
+    },
+    "7": {
+      "active_common_panel": {
+        "active_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.3173156112905463,
+            "median_multiplicative_error": 1.8985330169302712,
+            "n": 38,
+            "p80_multiplicative_error": 3.130232786303023,
+            "rmse_log10": 0.39326240763565345,
+            "signed_bias_factor": 0.8338222057672723,
+            "within_2x": 0.5263157894736842
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.37946594477880174,
+            "median_multiplicative_error": 1.9744836742416263,
+            "n": 38,
+            "p80_multiplicative_error": 3.362252456478471,
+            "rmse_log10": 0.474313808010389,
+            "signed_bias_factor": 0.7439415959414104,
+            "within_2x": 0.5263157894736842
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3772812719665004,
+            "median_multiplicative_error": 2.0174201218007752,
+            "n": 38,
+            "p80_multiplicative_error": 4.527847137913545,
+            "rmse_log10": 0.46539747008833565,
+            "signed_bias_factor": 0.7554118968456052,
+            "within_2x": 0.47368421052631576
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.370761112102595,
+            "median_multiplicative_error": 1.9607436768977033,
+            "n": 38,
+            "p80_multiplicative_error": 3.4120649127536526,
+            "rmse_log10": 0.46756382296013765,
+            "signed_bias_factor": 0.8428772531558415,
+            "within_2x": 0.5263157894736842
+          }
+        },
+        "total_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.45083072163000754,
+            "median_multiplicative_error": 2.0887175281507586,
+            "n": 38,
+            "p80_multiplicative_error": 7.953182019926353,
+            "rmse_log10": 0.6036480862240526,
+            "signed_bias_factor": 1.5525699342003894,
+            "within_2x": 0.47368421052631576
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.4196516482785347,
+            "median_multiplicative_error": 2.045766204366188,
+            "n": 38,
+            "p80_multiplicative_error": 4.430228600467035,
+            "rmse_log10": 0.5512826672527551,
+            "signed_bias_factor": 1.4048963151605245,
+            "within_2x": 0.5
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.3721658648267331,
+            "median_multiplicative_error": 1.9661504385677449,
+            "n": 38,
+            "p80_multiplicative_error": 3.570516805578755,
+            "rmse_log10": 0.47193784711953646,
+            "signed_bias_factor": 1.4245061289486411,
+            "within_2x": 0.5526315789473685
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.4366445284914304,
+            "median_multiplicative_error": 2.449361044295348,
+            "n": 38,
+            "p80_multiplicative_error": 4.298668394168513,
+            "rmse_log10": 0.5358802356663867,
+            "signed_bias_factor": 1.7271316187006658,
+            "within_2x": 0.3684210526315789
+          }
+        }
+      },
+      "active_panel_rows": 55,
+      "total": {
+        "date_current_price_nonprospective": {
+          "mean_absolute_log10_error": 0.41267693235106795,
+          "median_multiplicative_error": 2.379104270601447,
+          "n": 50,
+          "p80_multiplicative_error": 4.124804229092438,
+          "rmse_log10": 0.5186934163684503,
+          "signed_bias_factor": 1.4500503116761259,
+          "within_2x": 0.4
+        },
+        "date_historical_price": {
+          "mean_absolute_log10_error": 0.4337622866737432,
+          "median_multiplicative_error": 2.2941513211495006,
+          "n": 50,
+          "p80_multiplicative_error": 4.976346333777644,
+          "rmse_log10": 0.5538399002475134,
+          "signed_bias_factor": 1.3460283012134224,
+          "within_2x": 0.46
+        },
+        "date_only": {
+          "mean_absolute_log10_error": 0.6387085501652802,
+          "median_multiplicative_error": 3.3288988432124627,
+          "n": 50,
+          "p80_multiplicative_error": 10.683554442810268,
+          "rmse_log10": 0.7734328012290159,
+          "signed_bias_factor": 1.249588510582596,
+          "within_2x": 0.28
+        }
+      },
+      "total_panel_rows": 73
+    },
+    "90": {
+      "active_common_panel": {
+        "active_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.3400860880136097,
+            "median_multiplicative_error": 2.211409214955743,
+            "n": 34,
+            "p80_multiplicative_error": 3.119576589122646,
+            "rmse_log10": 0.43448061728676934,
+            "signed_bias_factor": 0.8530004434665268,
+            "within_2x": 0.47058823529411764
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.39830683283456403,
+            "median_multiplicative_error": 2.017831101368825,
+            "n": 34,
+            "p80_multiplicative_error": 3.489266372615504,
+            "rmse_log10": 0.4923784734645099,
+            "signed_bias_factor": 0.7540204504572666,
+            "within_2x": 0.5
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.38652312160058805,
+            "median_multiplicative_error": 2.0174201218007752,
+            "n": 34,
+            "p80_multiplicative_error": 4.562714788171188,
+            "rmse_log10": 0.4745678810778686,
+            "signed_bias_factor": 0.7717291310429982,
+            "within_2x": 0.47058823529411764
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.3950451286495567,
+            "median_multiplicative_error": 2.204714435927454,
+            "n": 34,
+            "p80_multiplicative_error": 3.6106374741799256,
+            "rmse_log10": 0.5092192121730105,
+            "signed_bias_factor": 0.8709966584568597,
+            "within_2x": 0.47058823529411764
+          }
+        },
+        "total_b": {
+          "date_historical_price": {
+            "mean_absolute_log10_error": 0.46505262131737685,
+            "median_multiplicative_error": 2.1612017211729655,
+            "n": 34,
+            "p80_multiplicative_error": 5.519648054859026,
+            "rmse_log10": 0.5926978583038887,
+            "signed_bias_factor": 1.7348139571622436,
+            "within_2x": 0.4411764705882353
+          },
+          "score_date": {
+            "mean_absolute_log10_error": 0.4245528137658415,
+            "median_multiplicative_error": 2.045766204366188,
+            "n": 34,
+            "p80_multiplicative_error": 4.5478260997797975,
+            "rmse_log10": 0.5657698581261861,
+            "signed_bias_factor": 1.486069236884411,
+            "within_2x": 0.5
+          },
+          "score_date_current_price_nonprospective": {
+            "mean_absolute_log10_error": 0.36619487787084026,
+            "median_multiplicative_error": 1.9661504385677449,
+            "n": 34,
+            "p80_multiplicative_error": 3.395266904378891,
+            "rmse_log10": 0.4563988417292382,
+            "signed_bias_factor": 1.522527739635963,
+            "within_2x": 0.5588235294117647
+          },
+          "score_date_historical_price": {
+            "mean_absolute_log10_error": 0.44790894705741596,
+            "median_multiplicative_error": 2.8812742728393372,
+            "n": 34,
+            "p80_multiplicative_error": 4.062393649709959,
+            "rmse_log10": 0.520824476383021,
+            "signed_bias_factor": 1.8847891375350552,
+            "within_2x": 0.29411764705882354
+          }
+        }
+      },
+      "active_panel_rows": 51,
+      "total": {
+        "date_current_price_nonprospective": {
+          "mean_absolute_log10_error": 0.40368444214845745,
+          "median_multiplicative_error": 2.39177855160812,
+          "n": 45,
+          "p80_multiplicative_error": 3.8666492299535844,
+          "rmse_log10": 0.5023630280490248,
+          "signed_bias_factor": 1.456410008411615,
+          "within_2x": 0.37777777777777777
+        },
+        "date_historical_price": {
+          "mean_absolute_log10_error": 0.4148636031521269,
+          "median_multiplicative_error": 2.2994134706121896,
+          "n": 45,
+          "p80_multiplicative_error": 4.809581106860998,
+          "rmse_log10": 0.5414827610785663,
+          "signed_bias_factor": 1.3520628011574607,
+          "within_2x": 0.4222222222222222
+        },
+        "date_only": {
+          "mean_absolute_log10_error": 0.6666814965981727,
+          "median_multiplicative_error": 3.70705186640036,
+          "n": 45,
+          "p80_multiplicative_error": 10.72909475117374,
+          "rmse_log10": 0.8023892941448305,
+          "signed_bias_factor": 1.3860869025011382,
+          "within_2x": 0.26666666666666666
+        }
+      },
+      "total_panel_rows": 68
+    }
+  },
+  "inventory": {
+    "calibration_aliases_missing_from_history": 0,
+    "calibration_checkpoints_audited": 93,
+    "duplicate_calibration_checkpoints": 0,
+    "eligible_active_rows_by_window": {
+      "1": 55,
+      "14": 55,
+      "3": 55,
+      "30": 55,
+      "60": 52,
+      "7": 55,
+      "90": 51
+    },
+    "eligible_total_rows_by_window": {
+      "1": 73,
+      "14": 73,
+      "3": 73,
+      "30": 73,
+      "60": 70,
+      "7": 73,
+      "90": 68
+    },
+    "historical_change_points": 2566,
+    "historical_ledger_models": 914,
+    "prediction_rows": 3098
+  },
+  "limitations": [
+    "The upstream ledger begins 2024-09-21, so earlier releases are explicitly excluded rather than assigned later prices.",
+    "OpenRouter model-level price is a market/provider routing price, not a direct inference-cost measurement.",
+    "Thirty-day onboarding eligibility limits identity drift but cannot prove an unversioned alias was never repointed.",
+    "Hosted availability and active-parameter disclosure remain non-random.",
+    "Historical throughput is unavailable from this source; current tokens/second remains a separate zero-weight operational audit."
+  ],
+  "metadata": {
+    "compatibility_filename_date": "2026-07-18",
+    "current_price_comparator": "2026-07-31 price, explicitly labeled non-prospective",
+    "evaluation_split": "strict price-availability-ordered developer-held-out folds",
+    "generated_on": "2026-07-31",
+    "history_floor": "2024-09-21",
+    "identity_eligibility": "exact audited OpenRouter alias, release on/after history floor, absolute onboarding lag <= 30 days",
+    "price_window_definition": "equal calendar-day median of positive geometric-mean prompt/completion price; complete window required; aliases receive equal weight",
+    "price_windows_days": [
+      1,
+      3,
+      7,
+      14,
+      30,
+      60,
+      90
+    ],
+    "question": "Do launch-vintage OpenRouter prices prospectively recover model size, and do they add information beyond score plus date?"
+  },
+  "outputs": {
+    "frontier_targets": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_historical_price_frontier_targets_2026-07-18.csv",
+    "match_audit": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_historical_price_match_audit_2026-07-18.csv",
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_historical_price_backtest_predictions_2026-07-18.csv"
+  },
+  "paired_developer_bootstraps": [
+    {
+      "baseline": "date_only",
+      "candidate": "date_historical_price",
+      "ci_90": [
+        -0.42721637177693145,
+        -0.06591487217324157
+      ],
+      "developers": 11,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.24722069646582742,
+      "paired_checkpoints": 50,
+      "panel": "total_calibration",
+      "probability_candidate_better": 0.9883,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 1
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.10196879620397314,
+        0.0980685962348918
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.0038775975022895203,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.5325,
+      "samples": 20000,
+      "target": "active_b",
+      "window_days": 1
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.160223956300514,
+        0.1359617473578055
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.02074421975874584,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.6102,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 1
+    },
+    {
+      "baseline": "date_only",
+      "candidate": "date_historical_price",
+      "ci_90": [
+        -0.3964813935804924,
+        -0.07580242225942016
+      ],
+      "developers": 11,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.23806817843680286,
+      "paired_checkpoints": 50,
+      "panel": "total_calibration",
+      "probability_candidate_better": 0.9904,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 3
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.07769192701665888,
+        0.08883678201111306
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.0008077823426897946,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.52675,
+      "samples": 20000,
+      "target": "active_b",
+      "window_days": 3
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.12558959079738846,
+        0.1425749328600545
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.0016773023943572162,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.5373,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 3
+    },
+    {
+      "baseline": "date_only",
+      "candidate": "date_historical_price",
+      "ci_90": [
+        -0.3696122118301894,
+        -0.062177167509981056
+      ],
+      "developers": 11,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.21963903148951563,
+      "paired_checkpoints": 50,
+      "panel": "total_calibration",
+      "probability_candidate_better": 0.9876,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 7
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.06903701653102436,
+        0.0942057069068308
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.010004317274696667,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.43055,
+      "samples": 20000,
+      "target": "active_b",
+      "window_days": 7
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.09534897828889274,
+        0.14293667667370633
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.014162406258050297,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.4514,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 7
+    },
+    {
+      "baseline": "date_only",
+      "candidate": "date_historical_price",
+      "ci_90": [
+        -0.37285477197697975,
+        -0.07126686086922293
+      ],
+      "developers": 11,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.22675255481634882,
+      "paired_checkpoints": 50,
+      "panel": "total_calibration",
+      "probability_candidate_better": 0.9917,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 14
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.06850120743411106,
+        0.09405004034364134
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.00928790188237925,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.4415,
+      "samples": 20000,
+      "target": "active_b",
+      "window_days": 14
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.09509497146765049,
+        0.1359967792045888
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.01071841877192028,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.4704,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 14
+    },
+    {
+      "baseline": "date_only",
+      "candidate": "date_historical_price",
+      "ci_90": [
+        -0.3917308850831262,
+        -0.08920092593263648
+      ],
+      "developers": 11,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.2441999908542341,
+      "paired_checkpoints": 50,
+      "panel": "total_calibration",
+      "probability_candidate_better": 0.99345,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 30
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.03591306356144052,
+        0.08509900401710813
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.022258133836914988,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.27565,
+      "samples": 20000,
+      "target": "active_b",
+      "window_days": 30
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.08803808362117513,
+        0.1352215576572355
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.015533974623670793,
+      "paired_checkpoints": 38,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.4297,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 30
+    },
+    {
+      "baseline": "date_only",
+      "candidate": "date_historical_price",
+      "ci_90": [
+        -0.39207978488488765,
+        -0.08179256429847112
+      ],
+      "developers": 11,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.24109957627565837,
+      "paired_checkpoints": 47,
+      "panel": "total_calibration",
+      "probability_candidate_better": 0.9913,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 60
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.03675853370930575,
+        0.0881918806903345
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.022424601161499663,
+      "paired_checkpoints": 35,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.29085,
+      "samples": 20000,
+      "target": "active_b",
+      "window_days": 60
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.07428014595494668,
+        0.1690813906770327
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": 0.04340743522111374,
+      "paired_checkpoints": 35,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.27815,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 60
+    },
+    {
+      "baseline": "date_only",
+      "candidate": "date_historical_price",
+      "ci_90": [
+        -0.4542152058779538,
+        -0.22379197291030523
+      ],
+      "developers": 10,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.33520002435674967,
+      "paired_checkpoints": 45,
+      "panel": "total_calibration",
+      "probability_candidate_better": 1.0,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 90
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.07470357942336434,
+        0.01852893361364955
+      ],
+      "developers": 9,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.029141110798562003,
+      "paired_checkpoints": 34,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.8488,
+      "samples": 20000,
+      "target": "active_b",
+      "window_days": 90
+    },
+    {
+      "baseline": "score_date",
+      "candidate": "score_date_historical_price",
+      "ci_90": [
+        -0.10434192680568055,
+        0.08394800342279655
+      ],
+      "developers": 9,
+      "metric": "equal-developer absolute log10 error; candidate minus baseline",
+      "observed_delta": -0.00688177560999252,
+      "paired_checkpoints": 34,
+      "panel": "active_label_common_panel",
+      "probability_candidate_better": 0.53715,
+      "samples": 20000,
+      "target": "total_b",
+      "window_days": 90
+    }
+  ],
+  "source_files": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_epoch_crosscheck_2026-07-18.csv": "c0e1b9a29c806276fb074d3deb2349b69c971e295b4c211dc8b95b55b231302e",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_calibration_2026-07-18.csv": "072ff900db917ce7d641d0af6bd548c8d472438d48d4c0acc0d14504265a86cd",
+    "sources/huggingface_architecture_config_signals_2026-07-18.csv": "db1757382798a069ed9833aa144c96b0c7c9d939e793581a611ed6487be99142",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "sources/openrouter_historical_price_change_points_2026-07-18.csv": "0107a6abde7b2eed1ab268c0c696ff21a7c235c83775ccfb315d0d3747502575",
+    "sources/openrouter_historical_price_collection_metadata_2026-07-18.json": "24ddb6574d941d5d0043f9e94bb6a77cad548ca94cbf71efdf2ae9e9db20735c",
+    "sources/openrouter_historical_price_ledger_2026-07-18.json.gz": "046a540d27cecfd3de741e46ce13c3a7eba8c570b42dd363a27144fd75e7926d",
+    "sources/openrouter_model_signals_2026-07-18.csv": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd"
+  }
+}

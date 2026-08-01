@@ -1,0 +1,351 @@
+{
+  "coverage": {
+    "developer_families": 6,
+    "explicit_crosswalk_entries": 17,
+    "strictly_chronological_paired_models": 10,
+    "unavailable_entries": [
+      {
+        "canonical_checkpoint_id": "checkpoint:google:gemma-2-27b",
+        "normalized_model": "gemma227b",
+        "reason": "no strictly chronological prediction from one or both branches"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:epoch:kimi-k2",
+        "normalized_model": "kimik2",
+        "reason": "no strictly chronological prediction from one or both branches"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:meta:llama-3-1-70b",
+        "normalized_model": "llama3170b",
+        "reason": "no strictly chronological prediction from one or both branches"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:meta:llama-3-1-8b",
+        "normalized_model": "llama318b",
+        "reason": "no strictly chronological prediction from one or both branches"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:meta:llama-3-3-70b",
+        "normalized_model": "llama3370b",
+        "reason": "no strictly chronological prediction from one or both branches"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:mistral:mixtral-8x22b",
+        "normalized_model": "mixtral8x22b",
+        "reason": "no strictly chronological prediction from one or both branches"
+      },
+      {
+        "canonical_checkpoint_id": "checkpoint:microsoft-research:phi-4",
+        "normalized_model": "phi4",
+        "reason": "no strictly chronological prediction from one or both branches"
+      }
+    ]
+  },
+  "decision": {
+    "bootstrap_promotion_probability": 0.9,
+    "change_live_weight": false,
+    "current_evidence_level_price_weight": 0.0675,
+    "current_final_weight_for_fable_sol": 0.03375,
+    "current_weight_has_favorable_paired_bootstrap": true,
+    "reason": "The current small price branch improves the clean overlap, but only 10 models/6 developers qualify and current frontier prices exceed calibration support. This validates the sign and conservative scale, not a larger optimized weight."
+  },
+  "external_disclosed_checks": [
+    {
+      "actual_b": 2780.0,
+      "actual_parameter_source": "Kimi K3 official technical report Table 1",
+      "blended_b": 2346.4026482991117,
+      "blended_error_factor": 1.1847923893263586,
+      "current_evidence_level_price_weight": 0.0675,
+      "evidence_b": 2242.8774539771252,
+      "evidence_error_factor": 1.2394792212434236,
+      "model_id": "moonshotai/kimi-k3",
+      "price_b": 4376.54496407947
+    },
+    {
+      "actual_b": 1500.0,
+      "actual_parameter_source": "Grok 4.5 first-party 1.5T disclosure",
+      "blended_b": 863.459437069574,
+      "blended_error_factor": 1.7371979917096396,
+      "current_evidence_level_price_weight": 0.0675,
+      "evidence_b": 795.6246412929038,
+      "evidence_error_factor": 1.8853111406435001,
+      "model_id": "x-ai/grok-4.5",
+      "price_b": 2673.829041968375
+    }
+  ],
+  "fixed_weight_metrics": {
+    "0": {
+      "mean_absolute_log10_error": 0.37952852465348724,
+      "median_multiplicative_error": 1.90978095424341,
+      "n": 10,
+      "p80_multiplicative_error": 5.188334079729455,
+      "price_weight": 0.0,
+      "rmse_log10": 0.47220471617104065,
+      "signed_bias_factor": 0.8458354244640379,
+      "within_2x": 0.5
+    },
+    "0.03375": {
+      "mean_absolute_log10_error": 0.37009341934269796,
+      "median_multiplicative_error": 1.8766764876479856,
+      "n": 10,
+      "p80_multiplicative_error": 4.970236490144928,
+      "price_weight": 0.03375,
+      "rmse_log10": 0.46103231703931097,
+      "signed_bias_factor": 0.8472287251008591,
+      "within_2x": 0.5
+    },
+    "0.0675": {
+      "mean_absolute_log10_error": 0.36065831403190884,
+      "median_multiplicative_error": 1.8441458594847302,
+      "n": 10,
+      "p80_multiplicative_error": 4.7613068835490955,
+      "price_weight": 0.0675,
+      "rmse_log10": 0.45008957109687864,
+      "signed_bias_factor": 0.8486243208492447,
+      "within_2x": 0.5
+    },
+    "0.1": {
+      "mean_absolute_log10_error": 0.35157265706596375,
+      "median_multiplicative_error": 1.8133531348456946,
+      "n": 10,
+      "p80_multiplicative_error": 4.56842046406347,
+      "price_weight": 0.1,
+      "rmse_log10": 0.4397851697020797,
+      "signed_bias_factor": 0.849970400574735,
+      "within_2x": 0.5
+    },
+    "0.2": {
+      "mean_absolute_log10_error": 0.3258432435954467,
+      "median_multiplicative_error": 1.7217941064646338,
+      "n": 10,
+      "p80_multiplicative_error": 3.957349083212276,
+      "price_weight": 0.2,
+      "rmse_log10": 0.40969599669581697,
+      "signed_bias_factor": 0.8541255910521303,
+      "within_2x": 0.6
+    },
+    "0.3": {
+      "mean_absolute_log10_error": 0.30654887631526134,
+      "median_multiplicative_error": 1.6348580362470964,
+      "n": 10,
+      "p80_multiplicative_error": 3.409766829499835,
+      "price_weight": 0.3,
+      "rmse_log10": 0.38248756402038564,
+      "signed_bias_factor": 0.8583010947167743,
+      "within_2x": 0.6
+    },
+    "0.5": {
+      "mean_absolute_log10_error": 0.26796014175489014,
+      "median_multiplicative_error": 1.7593899030214624,
+      "n": 10,
+      "p80_multiplicative_error": 2.531426495837872,
+      "price_weight": 0.5,
+      "rmse_log10": 0.33942146158208886,
+      "signed_bias_factor": 0.8667134393078665,
+      "within_2x": 0.7
+    },
+    "1": {
+      "mean_absolute_log10_error": 0.2608732891723159,
+      "median_multiplicative_error": 1.780093276856429,
+      "n": 10,
+      "p80_multiplicative_error": 2.3644244872049756,
+      "price_weight": 1.0,
+      "rmse_log10": 0.328008202283594,
+      "signed_bias_factor": 0.8881067925865864,
+      "within_2x": 0.6
+    }
+  },
+  "generated_on": "2026-07-18",
+  "limitations": [
+    "Only checkpoints with two independently chronological, family-held-out predictions enter the paired test.",
+    "The OpenRouter snapshot contains current prices, not historical launch-vintage prices.",
+    "The clean overlap is selected by hosted-model and benchmark availability and is not a random sample.",
+    "Frontier Anthropic/OpenAI prices are partially outside the open-model calibration range."
+  ],
+  "nested_chronological_weight_learning": {
+    "metrics": {
+      "mean_absolute_log10_error": 0.21229464054584857,
+      "median_learned_price_weight": 0.9500000000000001,
+      "median_multiplicative_error": 1.4536579373338385,
+      "n": 5,
+      "rmse_log10": 0.24910260033133136,
+      "status": "small-sample diagnostic only"
+    },
+    "predictions": [
+      {
+        "actual_b": 31.600000000000005,
+        "family": "nvidia",
+        "learned_price_weight": 1.0,
+        "log10_error": -0.07051782939946372,
+        "model": "Nemotron 3 Nano 30B A3B Reasoning",
+        "predicted_b": 26.86391181885463,
+        "release_date": "2025-12-15",
+        "test_family_excluded": true,
+        "training_families": 4,
+        "training_max_date": "2025-09-30",
+        "training_rows": 5
+      },
+      {
+        "actual_b": 743.9999999999998,
+        "family": "z-ai",
+        "learned_price_weight": 1.0,
+        "log10_error": 0.16246222398830135,
+        "model": "GLM-5 Reasoning",
+        "predicted_b": 1081.5215053763754,
+        "release_date": "2026-02-11",
+        "test_family_excluded": true,
+        "training_families": 4,
+        "training_max_date": "2025-12-15",
+        "training_rows": 5
+      },
+      {
+        "actual_b": 283.9999999999999,
+        "family": "deepseek",
+        "learned_price_weight": 0.9,
+        "log10_error": -0.3958334287485785,
+        "model": "DeepSeek-V4-Flash",
+        "predicted_b": 114.15236439519582,
+        "release_date": "2026-04-24",
+        "test_family_excluded": true,
+        "training_families": 5,
+        "training_max_date": "2026-02-11",
+        "training_rows": 7
+      },
+      {
+        "actual_b": 1599.9999999999993,
+        "family": "deepseek",
+        "learned_price_weight": 0.9,
+        "log10_error": -0.0967211884826984,
+        "model": "DeepSeek-V4-Pro (max)",
+        "predicted_b": 1280.556645209315,
+        "release_date": "2026-04-24",
+        "test_family_excluded": true,
+        "training_families": 5,
+        "training_max_date": "2026-02-11",
+        "training_rows": 7
+      },
+      {
+        "actual_b": 743.9999999999998,
+        "family": "z-ai",
+        "learned_price_weight": 0.9500000000000001,
+        "log10_error": 0.33593853211020086,
+        "model": "GLM-5.2 (max)",
+        "predicted_b": 1612.543606399,
+        "release_date": "2026-06-16",
+        "test_family_excluded": true,
+        "training_families": 5,
+        "training_max_date": "2026-04-24",
+        "training_rows": 7
+      }
+    ],
+    "rule": "For each test checkpoint, choose price weight on only earlier paired rows and exclude the test developer family."
+  },
+  "paired_developer_family_bootstraps": {
+    "0.03375": {
+      "bootstrap_probability_blend_better": 0.9988,
+      "ci_90": [
+        -0.014866332077917464,
+        -0.0037818894954311675
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.00943510531078926,
+      "paired_models": 10,
+      "price_weight": 0.03375,
+      "random_seed": 20260718,
+      "samples": 20000
+    },
+    "0.0675": {
+      "bootstrap_probability_blend_better": 0.9988,
+      "ci_90": [
+        -0.029732664155834865,
+        -0.007563778990862158
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.018870210621578343,
+      "paired_models": 10,
+      "price_weight": 0.0675,
+      "random_seed": 20260718,
+      "samples": 20000
+    },
+    "0.1": {
+      "bootstrap_probability_blend_better": 0.9988,
+      "ci_90": [
+        -0.044048391341977765,
+        -0.011205598504980952
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.02795586758752342,
+      "paired_models": 10,
+      "price_weight": 0.1,
+      "random_seed": 20260718,
+      "samples": 20000
+    },
+    "0.2": {
+      "bootstrap_probability_blend_better": 0.9988,
+      "ci_90": [
+        -0.08495936510611893,
+        -0.022084773311068975
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.05368528105804045,
+      "paired_models": 10,
+      "price_weight": 0.2,
+      "random_seed": 20260718,
+      "samples": 20000
+    },
+    "0.3": {
+      "bootstrap_probability_blend_better": 0.9988,
+      "ci_90": [
+        -0.11762666104764077,
+        -0.03291452730901612
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.0729796483382259,
+      "paired_models": 10,
+      "price_weight": 0.3,
+      "random_seed": 20260718,
+      "samples": 20000
+    },
+    "0.5": {
+      "bootstrap_probability_blend_better": 0.9988,
+      "ci_90": [
+        -0.187078487596747,
+        -0.04978738814556535
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.1115683828985971,
+      "paired_models": 10,
+      "price_weight": 0.5,
+      "random_seed": 20260718,
+      "samples": 20000
+    },
+    "1": {
+      "bootstrap_probability_blend_better": 0.968,
+      "ci_90": [
+        -0.29548234739592366,
+        -0.013876124827082824
+      ],
+      "developer_families": 6,
+      "metric": "mean absolute log10 error; blended minus evidence-only",
+      "observed_delta": -0.1186552354811713,
+      "paired_models": 10,
+      "price_weight": 1.0,
+      "random_seed": 20260718,
+      "samples": 20000
+    }
+  },
+  "prediction_csv": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_incremental_price_backtest_predictions_2026-07-18.csv",
+  "question": "Does a chronological family-held-out OpenRouter price prediction improve the existing chronological family-held-out AA/ECI/no-CoT/compute ensemble on the same checkpoints?",
+  "source_manifest": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_chronological_backtest_2026-07-17.json": "7ae67d3d92cfe72771cf460a8ef254cd73f3be775e618124e7ddbca7f170088c",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_frontier_operational_estimates_2026-07-18.csv": "066f82530e158fa70869ea1a7a1d154b59e182a4c0b46bbed6ea771466c80131",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_backtest_predictions_2026-07-18.csv": "24103570178c8920d700d9d20ac329fe951e136bc03889264df852dcbe043151",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600"
+  }
+}

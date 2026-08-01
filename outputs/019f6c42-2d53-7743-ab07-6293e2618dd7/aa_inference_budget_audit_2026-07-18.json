@@ -1,0 +1,758 @@
+{
+  "generated_on": "2026-07-31",
+  "question": "Do AA's detailed open-weight panel and measured inference-token budgets improve frontier parameter inference?",
+  "data_audit": {
+    "raw_models": 587,
+    "open_weight_parameter_score_date_configurations": 335,
+    "unique_checkpoint_groups": 275,
+    "lower_score_configurations_removed": 60,
+    "creators": 48,
+    "token_covered_checkpoint_groups": 79,
+    "primary_metadata_overrides": [
+      {
+        "override_id": "aa-motif-2-12-7b-reasoning-open-weights-2026-07-31",
+        "slug": "motif-2-12-7b",
+        "model": "Motif-2-12.7B-Reasoning",
+        "changed_fields": [
+          "commercial_allowed",
+          "is_open_weights",
+          "license_name",
+          "license_url",
+          "model_weights_source_url",
+          "open_source_categorization",
+          "parameters_b"
+        ],
+        "source_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning/blob/02d060835415f43d57dc6bee72b1e2779d8e57e5/README.md",
+        "source_record_sha256": "fb233c90e3edcd0ea352f27ce6ee542a2344b75883ac3a7f38fbe00ceac321ea",
+        "parameter_label_available_date": "2025-12-01",
+        "parameter_training_eligibility_date": "2025-12-04",
+        "architecture_class": "dense",
+        "exact_tensor_parameters": 12703860896,
+        "lineage_class": "same_base_posttrain",
+        "base_model_id": "Motif-Technologies/Motif-2-12.7B-Base",
+        "lineage_family_id": "Motif-Technologies/Motif-2-12.7B-Base"
+      },
+      {
+        "override_id": "aa-motif-3-beta-open-weights-2026-07-31",
+        "slug": "motif-0714",
+        "model": "Motif 3 (Beta)",
+        "changed_fields": [
+          "commercial_allowed",
+          "is_open_weights",
+          "license_name",
+          "license_url",
+          "model_weights_source_url",
+          "open_source_categorization"
+        ],
+        "source_url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta/blob/eee28175b11eada7e98142fef20afd5136ae92de/README.md",
+        "source_record_sha256": "11af8675e91c780a761a58bcce134fde86c360d73076bfc2c9510c40dd9f0df8",
+        "parameter_label_available_date": "2026-07-20",
+        "parameter_training_eligibility_date": "2026-07-20",
+        "architecture_class": "sparse_moe",
+        "exact_tensor_parameters": 314841775750,
+        "lineage_class": "independent_pretrain",
+        "base_model_id": null,
+        "lineage_family_id": "Motif-Technologies/Motif-3-Beta"
+      }
+    ],
+    "parameter_label_timing_records": 6,
+    "parameter_label_timing_lags": [
+      {
+        "model": "LongCat Flash Lite",
+        "release_date": "2026-01-28",
+        "parameter_label_available_date": "2026-01-29",
+        "weights_available_date": "2026-01-30",
+        "basis": "first_party_technical_report"
+      },
+      {
+        "model": "MiniMax-M2.7",
+        "release_date": "2026-03-18",
+        "parameter_label_available_date": "2026-04-09",
+        "weights_available_date": "2026-04-09",
+        "basis": "official_hugging_face_config_and_weights"
+      },
+      {
+        "model": "MiMo-V2.5",
+        "release_date": "2026-04-22",
+        "parameter_label_available_date": "2026-04-22",
+        "weights_available_date": "2026-04-27",
+        "basis": "first_party_launch_model_card"
+      },
+      {
+        "model": "MiniMax-M3",
+        "release_date": "2026-06-01",
+        "parameter_label_available_date": "2026-06-12",
+        "weights_available_date": "2026-06-12",
+        "basis": "official_hugging_face_config_and_weights"
+      },
+      {
+        "model": "Nex-N2-Pro",
+        "release_date": "2026-06-02",
+        "parameter_label_available_date": "2026-06-03",
+        "weights_available_date": "2026-06-03",
+        "basis": "official_hugging_face_config_and_weights"
+      },
+      {
+        "model": "LongCat 2.0",
+        "release_date": "2026-06-29",
+        "parameter_label_available_date": "2026-06-30",
+        "weights_available_date": "2026-07-05",
+        "basis": "first_party_release_article"
+      }
+    ],
+    "epoch_exact_crosschecks": 62,
+    "epoch_exact_unmatched": [
+      "Inkling"
+    ],
+    "epoch_crosschecks_with_metadata_disagreement": 3,
+    "epoch_metadata_disagreements": [
+      {
+        "epoch_checkpoint_id": "checkpoint:epoch:phi-4-mini",
+        "aa_detailed_model": "Phi-4 Mini Instruct",
+        "creator_agreement": true,
+        "date_within_45_days": false,
+        "parameters_within_20_percent": true,
+        "match_method": "manual explicit identity crosswalk: exact model identity; AA release year is inconsistent with the 2025 public release"
+      },
+      {
+        "epoch_checkpoint_id": "checkpoint:epoch:granite-4-0-h-tiny",
+        "aa_detailed_model": "Granite 4.0 H 1B",
+        "creator_agreement": true,
+        "date_within_45_days": true,
+        "parameters_within_20_percent": false,
+        "match_method": "manual explicit identity crosswalk: manual active-parameter alias; AA reports 1.5B while Epoch documents 7B total / 1B active"
+      },
+      {
+        "epoch_checkpoint_id": "checkpoint:epoch:ring-flash-linear-2-0",
+        "aa_detailed_model": "Ring-flash-2.0",
+        "creator_agreement": false,
+        "date_within_45_days": true,
+        "parameters_within_20_percent": true,
+        "match_method": "manual explicit identity crosswalk: manual architecture-token alias; AA creator/date metadata differ from Epoch"
+      }
+    ],
+    "epoch_parameter_ratio_median": 1.0,
+    "epoch_parameter_ratio_p05_p95": [
+      0.9927754629629629,
+      1.0719444444444444
+    ],
+    "deduplication_policy": "Same normalized weight URL, total/active parameter counts, and release date; otherwise creator + normalized name + counts + date. Highest AA score retained.",
+    "chronological_parameter_label_policy": "A row can train a fold only when max(checkpoint release date, parameter-label availability date) is strictly earlier than the test checkpoint date.",
+    "source_preservation": "All 587 raw records and every configuration remain unchanged in the source CSV and compressed HTML. A separate hash-pinned primary-source overlay corrects stale Motif 3 Beta and Motif-2-12.7B-Reasoning openness metadata only in the calibration view.",
+    "family_balance_policy": "Regression weights are allocated within creator/developer and every held-out fold removes the entire creator. Motif-2-12.7B-Reasoning is additionally tagged same-base-posttrain to Motif-2-12.7B-Base, so it is not treated as a new independent developer or pretraining family."
+  },
+  "same_weight_reasoning_pairs": {
+    "pairs": 53,
+    "creators": 12,
+    "checkpoint_median_aa_uplift": 4.464872963716605,
+    "equal_creator_median_aa_uplift": 5.50904364575783,
+    "equal_creator_median_bootstrap_90_ci": [
+      3.7845350595867,
+      7.475796025047298
+    ],
+    "creator_medians": {
+      "alibaba": 2.9117240289943602,
+      "deepseek": 8.204276219326298,
+      "google": 4.44946434038731,
+      "kimi": 7.807121454072698,
+      "lg": 4.58613405389381,
+      "mistral": 7.184798632361801,
+      "nous-research": 1.6361442287312649,
+      "nvidia": 3.7845350595867,
+      "openbmb": 0.2201426378482001,
+      "tencent": 7.475796025047298,
+      "xiaomi": 8.549097643093596,
+      "zai": 6.431953237621849
+    }
+  },
+  "reasoning_configuration_pairs": {
+    "all": {
+      "pairs": 100,
+      "creators": 17,
+      "checkpoint_median_aa_uplift": 5.874615242878948,
+      "equal_creator_median_aa_uplift": 6.431953237621849,
+      "equal_creator_median_bootstrap_90_ci": [
+        4.58613405389381,
+        7.409745006774701
+      ],
+      "creator_medians": {
+        "alibaba": 3.2654030737354254,
+        "anthropic": 5.923790025771204,
+        "aws": 7.409745006774701,
+        "deepseek": 8.204276219326298,
+        "google": 5.8872069166243985,
+        "kimi": 7.807121454072698,
+        "lg": 4.58613405389381,
+        "mistral": 7.184798632361801,
+        "nous-research": 1.6361442287312649,
+        "nvidia": 3.7845350595867,
+        "openai": 18.5706380313859,
+        "openbmb": 0.2201426378482001,
+        "tencent": 7.475796025047298,
+        "upstage": 1.8938898292863908,
+        "xai": 13.7435902772766,
+        "xiaomi": 6.525142834327799,
+        "zai": 6.431953237621849
+      }
+    },
+    "open_weights": {
+      "pairs": 61,
+      "creators": 12,
+      "checkpoint_median_aa_uplift": 4.464872963716605,
+      "equal_creator_median_aa_uplift": 6.015156216628875,
+      "equal_creator_median_bootstrap_90_ci": [
+        3.7845350595867,
+        7.184798632361801
+      ],
+      "creator_medians": {
+        "alibaba": 3.2654030737354254,
+        "deepseek": 8.204276219326298,
+        "google": 5.598359195635901,
+        "kimi": 7.807121454072698,
+        "lg": 4.58613405389381,
+        "mistral": 7.184798632361801,
+        "nous-research": 1.6361442287312649,
+        "nvidia": 3.7845350595867,
+        "openbmb": 0.2201426378482001,
+        "tencent": 7.475796025047298,
+        "xiaomi": 6.525142834327799,
+        "zai": 6.431953237621849
+      }
+    },
+    "proprietary": {
+      "pairs": 39,
+      "creators": 6,
+      "checkpoint_median_aa_uplift": 10.9027259583616,
+      "equal_creator_median_aa_uplift": 6.6667675162729525,
+      "equal_creator_median_bootstrap_90_ci": [
+        4.651817418030546,
+        13.7435902772766
+      ],
+      "creator_medians": {
+        "anthropic": 5.923790025771204,
+        "aws": 7.409745006774701,
+        "google": 5.900730167881499,
+        "openai": 18.5706380313859,
+        "upstage": 1.8938898292863908,
+        "xai": 13.7435902772766
+      }
+    },
+    "pairing_policy": "All model configurations are preserved. Reasoning and non-reasoning variants are paired only when creator, exact release date, reported parameter fields, and mode-stripped name agree; highest score per mode is retained.",
+    "interpretation": "The equal-creator median validates the existing global six-point reasoning correction, while large creator variation argues against a universal lab-specific adjustment without chronological validation."
+  },
+  "detailed_panel_backtest": {
+    "target": "log10 total parameters in billions",
+    "baseline": "current 50-model AA panel: AA score + exact date",
+    "candidate": "275-checkpoint detailed AA panel: AA score + exact date",
+    "outer_split": "strictly earlier parameter-training eligibility date; entire test developer removed",
+    "training_weights": "equal total weight per developer; estimated AA scores receive 0.5 weight",
+    "identical_test_rows": 34,
+    "scopes": {
+      "all": {
+        "n": 34,
+        "developers": 13,
+        "baseline": {
+          "n": 34,
+          "median_multiplicative_error": 2.147762733356634,
+          "mean_absolute_log10_error": 0.5796642268040627,
+          "geomean_multiplicative_error": 3.798955678751935,
+          "rmse_log10": 0.7593869490942217,
+          "p80_multiplicative_error": 12.695934942860697,
+          "within_2x": 0.38235294117647056,
+          "signed_bias_factor": 2.8005303657349576
+        },
+        "candidate": {
+          "n": 34,
+          "median_multiplicative_error": 2.0249140216835118,
+          "mean_absolute_log10_error": 0.4513066850977585,
+          "geomean_multiplicative_error": 2.8268755207802077,
+          "rmse_log10": 0.5930105578183545,
+          "p80_multiplicative_error": 6.9129791365212725,
+          "within_2x": 0.5,
+          "signed_bias_factor": 2.209995123282528
+        },
+        "paired_cluster_bootstrap": {
+          "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.060975143008207215,
+          "ci_90": [
+            -0.14186259527701708,
+            0.023078227107428205
+          ],
+          "bootstrap_probability_candidate_better": 0.8831,
+          "samples": 20000,
+          "clusters": 13
+        }
+      },
+      "frontier_like": {
+        "n": 11,
+        "developers": 5,
+        "baseline": {
+          "n": 11,
+          "median_multiplicative_error": 1.9676601801222846,
+          "mean_absolute_log10_error": 0.37469063103986405,
+          "geomean_multiplicative_error": 2.369685063023646,
+          "rmse_log10": 0.5108533150073926,
+          "p80_multiplicative_error": 2.208782428236165,
+          "within_2x": 0.5454545454545454,
+          "signed_bias_factor": 1.6548951126151898
+        },
+        "candidate": {
+          "n": 11,
+          "median_multiplicative_error": 1.570390690545126,
+          "mean_absolute_log10_error": 0.3590607089847019,
+          "geomean_multiplicative_error": 2.285918324085994,
+          "rmse_log10": 0.5020933741264981,
+          "p80_multiplicative_error": 3.8207209376748437,
+          "within_2x": 0.6363636363636364,
+          "signed_bias_factor": 1.970937780804501
+        },
+        "paired_cluster_bootstrap": {
+          "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.0640233819746966,
+          "ci_90": [
+            -0.16735163991162988,
+            0.039304875962236654
+          ],
+          "bootstrap_probability_candidate_better": 0.8508,
+          "samples": 20000,
+          "clusters": 5
+        }
+      }
+    }
+  },
+  "inference_budget_backtest": {
+    "target": "log10 total parameters in billions",
+    "baseline": "AA score + exact date",
+    "candidate": "AA score + exact date + log10(1 + answer tokens/task) + log10(1 + reasoning tokens/task)",
+    "outer_split": "strictly earlier parameter-training eligibility date; entire test developer removed",
+    "training_weights": "equal total weight per developer; estimated AA scores receive 0.5 weight",
+    "identical_test_rows": 54,
+    "scopes": {
+      "all": {
+        "n": 54,
+        "developers": 24,
+        "baseline": {
+          "n": 54,
+          "median_multiplicative_error": 2.5089427428851465,
+          "mean_absolute_log10_error": 0.48159333579381325,
+          "geomean_multiplicative_error": 3.031051642037326,
+          "rmse_log10": 0.5962024060430732,
+          "p80_multiplicative_error": 6.435924138983937,
+          "within_2x": 0.3888888888888889,
+          "signed_bias_factor": 2.1677787104542965
+        },
+        "candidate": {
+          "n": 54,
+          "median_multiplicative_error": 2.128434748848364,
+          "mean_absolute_log10_error": 0.4668988161953737,
+          "geomean_multiplicative_error": 2.9302104726207885,
+          "rmse_log10": 0.5931314541248692,
+          "p80_multiplicative_error": 6.132895535142172,
+          "within_2x": 0.4074074074074074,
+          "signed_bias_factor": 1.7856115255344724
+        },
+        "paired_cluster_bootstrap": {
+          "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+          "observed_delta": 0.024943132359769322,
+          "ci_90": [
+            -0.021904242283007375,
+            0.07362943697483863
+          ],
+          "bootstrap_probability_candidate_better": 0.19345,
+          "samples": 20000,
+          "clusters": 24
+        }
+      },
+      "frontier_like": {
+        "n": 19,
+        "developers": 9,
+        "baseline": {
+          "n": 19,
+          "median_multiplicative_error": 2.5030203928567616,
+          "mean_absolute_log10_error": 0.4413841441335937,
+          "geomean_multiplicative_error": 2.763020735355765,
+          "rmse_log10": 0.5513770653720251,
+          "p80_multiplicative_error": 5.115594223083999,
+          "within_2x": 0.3684210526315789,
+          "signed_bias_factor": 2.6176884928260167
+        },
+        "candidate": {
+          "n": 19,
+          "median_multiplicative_error": 2.157333619057229,
+          "mean_absolute_log10_error": 0.4186865311332788,
+          "geomean_multiplicative_error": 2.6223250954064175,
+          "rmse_log10": 0.5047899039286968,
+          "p80_multiplicative_error": 4.06443122934086,
+          "within_2x": 0.3157894736842105,
+          "signed_bias_factor": 2.5048402023929035
+        },
+        "paired_cluster_bootstrap": {
+          "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.023294806492423447,
+          "ci_90": [
+            -0.06954980242191933,
+            0.022508606733554416
+          ],
+          "bootstrap_probability_candidate_better": 0.79005,
+          "samples": 20000,
+          "clusters": 9
+        }
+      }
+    }
+  },
+  "reasoning_standardization_backtest": {
+    "target": "log10 total parameters in billions",
+    "baseline": "raw highest-configuration AA score + exact date",
+    "candidate": "no-reasoning-equivalent AA score + exact date",
+    "standardization_priority": "direct same-checkpoint non-reasoning score; otherwise strictly earlier pair history only",
+    "outer_split": "strictly earlier parameter-training eligibility date; entire test developer removed",
+    "portable": {
+      "history_rule": "equal-creator median of strictly earlier pairs from other creators",
+      "identical_test_rows": 229,
+      "scopes": {
+        "all": {
+          "n": 229,
+          "developers": 43,
+          "baseline": {
+            "n": 229,
+            "median_multiplicative_error": 2.8616986080757916,
+            "mean_absolute_log10_error": 0.5176860018331007,
+            "geomean_multiplicative_error": 3.29371488013337,
+            "rmse_log10": 0.6312636976167488,
+            "p80_multiplicative_error": 6.827598425826514,
+            "within_2x": 0.3406113537117904,
+            "signed_bias_factor": 1.6730691859516984
+          },
+          "candidate": {
+            "n": 229,
+            "median_multiplicative_error": 2.6706392041822933,
+            "mean_absolute_log10_error": 0.5097522672928677,
+            "geomean_multiplicative_error": 3.234091234475813,
+            "rmse_log10": 0.6252645546438167,
+            "p80_multiplicative_error": 6.541613294886396,
+            "within_2x": 0.37117903930131,
+            "signed_bias_factor": 1.6147205523176265
+          },
+          "paired_cluster_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.011787533457260253,
+            "ci_90": [
+              -0.03705128880217669,
+              0.014271726442767209
+            ],
+            "bootstrap_probability_candidate_better": 0.7721,
+            "samples": 20000,
+            "clusters": 43
+          }
+        },
+        "frontier_like": {
+          "n": 87,
+          "developers": 22,
+          "baseline": {
+            "n": 87,
+            "median_multiplicative_error": 2.394097165540797,
+            "mean_absolute_log10_error": 0.45389780496377063,
+            "geomean_multiplicative_error": 2.843791848179812,
+            "rmse_log10": 0.5587425849972272,
+            "p80_multiplicative_error": 5.440860763959797,
+            "within_2x": 0.3793103448275862,
+            "signed_bias_factor": 1.5670572975679906
+          },
+          "candidate": {
+            "n": 87,
+            "median_multiplicative_error": 2.1589594556439753,
+            "mean_absolute_log10_error": 0.42536822920669465,
+            "geomean_multiplicative_error": 2.662981989586909,
+            "rmse_log10": 0.528235896052261,
+            "p80_multiplicative_error": 4.935132327877978,
+            "within_2x": 0.45977011494252873,
+            "signed_bias_factor": 1.473535992836876
+          },
+          "paired_cluster_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.025710491932316722,
+            "ci_90": [
+              -0.05048483432229037,
+              -0.0019764391430151414
+            ],
+            "bootstrap_probability_candidate_better": 0.96155,
+            "samples": 20000,
+            "clusters": 22
+          }
+        }
+      }
+    },
+    "creator_aware": {
+      "history_rule": "median of at least two strictly earlier same-creator pairs, otherwise portable fallback",
+      "identical_test_rows": 229,
+      "scopes": {
+        "all": {
+          "n": 229,
+          "developers": 43,
+          "baseline": {
+            "n": 229,
+            "median_multiplicative_error": 2.8616986080757916,
+            "mean_absolute_log10_error": 0.5176860018331007,
+            "geomean_multiplicative_error": 3.29371488013337,
+            "rmse_log10": 0.6312636976167488,
+            "p80_multiplicative_error": 6.827598425826514,
+            "within_2x": 0.3406113537117904,
+            "signed_bias_factor": 1.6730691859516984
+          },
+          "candidate": {
+            "n": 229,
+            "median_multiplicative_error": 2.6160705001960896,
+            "mean_absolute_log10_error": 0.5110496377561947,
+            "geomean_multiplicative_error": 3.243766899155529,
+            "rmse_log10": 0.6251493703206845,
+            "p80_multiplicative_error": 6.4835765787753665,
+            "within_2x": 0.37117903930131,
+            "signed_bias_factor": 1.62449271914103
+          },
+          "paired_cluster_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.017554122835095817,
+            "ci_90": [
+              -0.042139725754469275,
+              0.007826978697669587
+            ],
+            "bootstrap_probability_candidate_better": 0.87545,
+            "samples": 20000,
+            "clusters": 43
+          }
+        },
+        "frontier_like": {
+          "n": 87,
+          "developers": 22,
+          "baseline": {
+            "n": 87,
+            "median_multiplicative_error": 2.394097165540797,
+            "mean_absolute_log10_error": 0.45389780496377063,
+            "geomean_multiplicative_error": 2.843791848179812,
+            "rmse_log10": 0.5587425849972272,
+            "p80_multiplicative_error": 5.440860763959797,
+            "within_2x": 0.3793103448275862,
+            "signed_bias_factor": 1.5670572975679906
+          },
+          "candidate": {
+            "n": 87,
+            "median_multiplicative_error": 2.1873237751919725,
+            "mean_absolute_log10_error": 0.4304058691079858,
+            "geomean_multiplicative_error": 2.6940513485523723,
+            "rmse_log10": 0.5305015721530932,
+            "p80_multiplicative_error": 4.9521699600766445,
+            "within_2x": 0.45977011494252873,
+            "signed_bias_factor": 1.480223903797717
+          },
+          "paired_cluster_bootstrap": {
+            "metric": "equal-cluster mean absolute log10 error; candidate minus baseline",
+            "observed_delta": -0.022336762215012452,
+            "ci_90": [
+              -0.04749920193791535,
+              0.0019135281294833024
+            ],
+            "bootstrap_probability_candidate_better": 0.9346,
+            "samples": 20000,
+            "clusters": 22
+          }
+        }
+      }
+    }
+  },
+  "frontier_inference_budget_diagnostic": [
+    {
+      "slug": "claude-fable-5",
+      "model": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+      "release_date": "2026-06-09",
+      "aa_score": 59.8606463217303,
+      "answer_tokens_per_task": 7695.759824298257,
+      "reasoning_tokens_per_task": 25431.28744275464,
+      "current_live_aa_t": 4.016370921146617,
+      "detailed_token_subset_baseline_t": 4.160530460186494,
+      "inference_budget_adjusted_t": 3.6319480980155694,
+      "candidate_over_baseline": 0.8729531324841614,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "gpt-5-6-sol",
+      "model": "GPT-5.6 Sol (max)",
+      "release_date": "2026-07-09",
+      "aa_score": 58.889831189723,
+      "answer_tokens_per_task": 5270.172762964999,
+      "reasoning_tokens_per_task": 10076.179484086164,
+      "current_live_aa_t": 3.3972189184817907,
+      "detailed_token_subset_baseline_t": 3.5141925768752493,
+      "inference_budget_adjusted_t": 3.6660960961447477,
+      "candidate_over_baseline": 1.043225724244335,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "kimi-k3",
+      "model": "Kimi K3",
+      "release_date": "2026-07-16",
+      "aa_score": 57.1123394372091,
+      "answer_tokens_per_task": 5795.532109721274,
+      "reasoning_tokens_per_task": 17836.732269725606,
+      "current_live_aa_t": 2.78,
+      "detailed_token_subset_baseline_t": 2.7799999999999994,
+      "inference_budget_adjusted_t": 2.7799999999999994,
+      "candidate_over_baseline": 1.0,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "claude-opus-4-8",
+      "model": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+      "release_date": "2026-05-28",
+      "aa_score": 55.6920406995495,
+      "answer_tokens_per_task": 8445.422269991586,
+      "reasoning_tokens_per_task": 32464.825118024688,
+      "current_live_aa_t": 2.501599027726546,
+      "detailed_token_subset_baseline_t": 2.510159631272209,
+      "inference_budget_adjusted_t": 2.110196383406191,
+      "candidate_over_baseline": 0.8406622260659546,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "gpt-5-5",
+      "model": "GPT-5.5 (xhigh)",
+      "release_date": "2026-04-23",
+      "aa_score": 54.8375984166433,
+      "answer_tokens_per_task": 3572.4913337894545,
+      "reasoning_tokens_per_task": 12491.98468033656,
+      "current_live_aa_t": 2.641916999152285,
+      "detailed_token_subset_baseline_t": 2.381033074156896,
+      "inference_budget_adjusted_t": 3.129255000943872,
+      "candidate_over_baseline": 1.314242559210109,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "gpt-5-6-terra",
+      "model": "GPT-5.6 Terra (max)",
+      "release_date": "2026-07-09",
+      "aa_score": 54.9528567569231,
+      "answer_tokens_per_task": 5185.870097771384,
+      "reasoning_tokens_per_task": 14183.925094482469,
+      "current_live_aa_t": 2.2550118520127516,
+      "detailed_token_subset_baseline_t": 2.1423689506949115,
+      "inference_budget_adjusted_t": 2.272973495689601,
+      "candidate_over_baseline": 1.060962676364557,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "claude-sonnet-5",
+      "model": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
+      "release_date": "2026-06-30",
+      "aa_score": 53.3500026989169,
+      "answer_tokens_per_task": 12791.565257023669,
+      "reasoning_tokens_per_task": 55944.142229203004,
+      "current_live_aa_t": 1.946871865674927,
+      "detailed_token_subset_baseline_t": 1.7761787222711,
+      "inference_budget_adjusted_t": 1.2028805538616998,
+      "candidate_over_baseline": 0.6772294582628734,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "gpt-5-6-luna",
+      "model": "GPT-5.6 Luna (max)",
+      "release_date": "2026-07-09",
+      "aa_score": 51.2359331798034,
+      "answer_tokens_per_task": 5006.489148101688,
+      "reasoning_tokens_per_task": 13905.516109347798,
+      "current_live_aa_t": 1.5315166889172227,
+      "detailed_token_subset_baseline_t": 1.3426914174697264,
+      "inference_budget_adjusted_t": 1.4561464059531166,
+      "candidate_over_baseline": 1.084498185515473,
+      "live_use": "No \u2014 diagnostic only"
+    },
+    {
+      "slug": "grok-4-5",
+      "model": "Grok 4.5 (high)",
+      "release_date": "2026-07-08",
+      "aa_score": 53.8265951657731,
+      "answer_tokens_per_task": 6304.181358061369,
+      "reasoning_tokens_per_task": 7525.677248412871,
+      "current_live_aa_t": 2.0099991870584826,
+      "detailed_token_subset_baseline_t": 1.8624546246936626,
+      "inference_budget_adjusted_t": 1.7728726154807997,
+      "candidate_over_baseline": 0.9519011051194886,
+      "live_use": "No \u2014 diagnostic only"
+    }
+  ],
+  "k3_anchor": {
+    "total_parameters_b": 2780.0,
+    "source": "Kimi K3 official technical report Table 1"
+  },
+  "decision": {
+    "change_live_aa_branch": false,
+    "incremental_detailed_panel_weight": 0.0,
+    "incremental_inference_budget_weight": 0.0,
+    "incremental_reasoning_standardization_weight": 0.0,
+    "reason": "The detailed panel improves broad and mid-frontier recovery, but its frontier-like interval is not decisive. Measured token budgets and chronological reasoning standardization improve some mean/tail metrics while failing to improve all primary median/error criteria with a decisive cluster interval. Preserve all three as prospective diagnostics until new high-score parameter disclosures validate the direction."
+  },
+  "limitations": [
+    "AA's current benchmark snapshot is not a historical benchmark vintage.",
+    "AA parameter counts are public metadata and can be rounded; Epoch remains the higher-priority exact source on matched checkpoints.",
+    "Motif 3 Beta is admitted through an explicit official-repository override because the frozen AA row predates its public weight release; the original AA row is retained unchanged.",
+    "Motif's AA checkpoint date remains 2026-07-14, but its parameter label cannot train a chronological fold until after the official weights appeared on 2026-07-20.",
+    "Motif-2-12.7B-Reasoning is admitted through an exact checkpoint match to the official Apache-2.0 repository. Its weights appeared on 2025-12-01, before AA's 2025-12-04 checkpoint date, so chronology uses the later AA date.",
+    "Motif-2-12.7B-Reasoning shares Motif-2-12.7B-Base lineage and the Motif Technologies developer allocation; it is not counted as an independent family-level observation.",
+    "Six recent AA checkpoints have a separate, primary-source parameter-label timing ledger. MiMo-V2.5 and LongCat 2.0 retain launch-article label dates earlier than their weight drops; the other rows use the first public technical report or official repository evidence.",
+    "Output tokens are an inference-budget proxy, not FLOPs: model architecture, speculative decoding, tool calls, and cascades are not fully observed.",
+    "Only token-covered rows can enter the incremental comparison, creating non-random availability.",
+    "K3 has no non-reasoning AA configuration, so the inference-budget branch is anchored to its observed max-thinking configuration rather than a measured base-only score."
+  ],
+  "source_manifest": {
+    "sources/aa_detailed_model_signals_2026-07-31.csv": "c00553aa052e8e5fd40bf84637bc17663e407b5f6d348ddb1140c2df48b39404",
+    "sources/aa_detailed_snapshot_2026-07-31.html.gz": "e767200f33263fdea9cadb5f61e347ab0d9bed85ca8d9dc0a066e679067375b6",
+    "sources/aa_detailed_collection_metadata_2026-07-31.json": "ffabf480cde516300c0a480dd1fbddd01db0ba9af34c7cc59e78fc0e8e9a5f79",
+    "sources/aa_calibration_primary_overrides_2026-07-31.json": "339b8de4365de2dca8b85243f479dfd3768d6dd81f178d38a303a7f0feff0c79",
+    "sources/aa_parameter_label_availability_2026-07-31.json": "ddcb74ba7234af648d6712be4c24ac23cb185f388d61844f39aabecdc9a7d845",
+    "sources/aa_score_availability_2026-07-31.json": "5d61f803e6cc8de6082400218a9a3c941f93eec7301e6b4aded55d9ec227c9b9",
+    "sources/aa_changelog_2026-07-31.json.gz": "f0eb36386c6e22de238687e533b5d9a29deddc39039b175edb88739a32b01e5a",
+    "sources/open_model_parameter_truth_reconciliation_2026-07-31.json": "cbfc667c884f88d7a4456efde5a47f24ca6ca481f0e30a67cbfcc419c7c0ad89",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_panel_2026-07-18.csv": "e90578d9330126d2c2eabef50d3712bdac1d5c66ae2964c4bbb079345b9b01d4",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_calibrated_frontier_parameter_crosscheck_2026-07-17.xlsx": "8a1eaded1a325a0cb79e532c9775801e5520bf603135566f687dad53a8565273",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "sources/aa_calibration_evidence/motif_3_beta_readme_eee2817.md": "99b3f5c9c3607ca945fbcd81444d8dd70c7853ca36cb12c347feba8928dde240",
+    "sources/aa_calibration_evidence/motif_3_beta_hf_api_eee2817.json": "469bc665426ec0500d39e5ffc1fea43c0d4b37445f76c4022011034b94090f97",
+    "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_readme_02d0608.md": "012a563e2fccc4636132d5290fefe37c6a564bcbadea4d4e0ce9b8744e6be2be",
+    "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_config_02d0608.json": "96cf9dceebd739abd0e09501605d72757d53485f5f2ee9a552bf5dab82398814",
+    "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_hf_api_02d0608.json": "31653c8ab94cc873a3fa0997c6f73996c26a17d72af3a07b3ef9fb3abe427479",
+    "sources/aa_calibration_evidence/motif_2_12_7b_reasoning_hf_commits_2026-03-10.json": "b2a33c294aeb5408e7353773d7b492c14ff68bcc2dba632807f19f8cf2ebb14e",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_model_api.json": "89e2abe5443efe5fa26b952a7138c2f05d483232b9ffd9044227817e2c893b90",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_commit_history.json": "b5986d40bf9558ce48afb431abc7ff802b0bd6f543bc72fda917ee0ec2ca5ee7",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_config.json": "c5719c2df9c931b11b0336a0fa8bfdceae617c5303d1bad7197436a7daea33a0",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_model_card.md": "b23e647f56fd30a03523be4ab94f5022a5327cfcb83eb5b69320c8b26cbee714",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__first_party_label_source.html": "3323609924fe41785bdb00edfc2f655cfa18e5dea8b1e992a0f44209b4cab5d3",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_model_api.json": "102169550714100c8fd01a3d922e1e1313b5e71b827d706b65f4f894b36748f9",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_commit_history.json": "6880c6d3837f120da6641bee8d97a876b284c845a5e482035158914d225f9140",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_config.json": "3372a31ecbdba614b309cfa5b3dfec33ceea3c580cb9612ff35345d92ced8618",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_model_card.md": "d0a0743fd312760e619049cdecb347344cd3beea48a867f2b277481d79ea06ba",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__first_party_launch_page.html": "2a42caede98841a19ce51e74859278029ebd493903a8d23432266fd1743a14d4",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_model_api.json": "c4b713c73a7cea22f2502abc610c50894713fa50bd4e8dee948e1be7b9511de8",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_commit_history.json": "139415d50cc77ce0b96cd6bea40b1eb77cc2a1309e553a01eb9f05b403739a7f",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_config.json": "48f5c3616813a76d80d1895f3b6cc1d8df9b0b2a34d732fd825cab670ebfc8a5",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_model_card.md": "31bfe317627714a8cbc9f4102b826d8370b202fce93b582074ef0cdc3b2c099a",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__first_party_label_source.html": "b470a6bf40358a35bd927c87361597e22c51a5ff7fb677660e166e6a45961f06",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_model_api.json": "2ea4de95a54b646abf7d354123d2fef559e33bb184857c177f0ab32860c2c336",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_commit_history.json": "bd802a0bd90ebd397028dd78730da48f6e3fad52d7c53933e94965d804ae293f",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_config.json": "c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_model_card.md": "03dc56061db0f91e054c9194b74541a6d0616c6892f01fae6612bdd352d7a16f",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__first_party_launch_page.html": "b6c35e9ca6f5d69c4eada19cf97c68491e1e90b5eaffee3b0f5190001eafb732",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_model_api.json": "b84e4de07c881d3fce7cd5fd38941de3a052cd70a65a09b160b2746bdf8c649d",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_commit_history.json": "35392481ebd28c116931133b1a34ed397a5895337c022327e4235495daad4604",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_config.json": "117cf53ddda3bd6778477e4cfa3371c4f8d6a7adae10a322a4545358e61f56d0",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_model_card.md": "5b9de04586801239f13892018630434b81889cd687476361b0d02d56ed769c8d",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_model_api.json": "46e4abcd862ceb44a594adb1fea2e10afed27eba50cb74fcc839f6c797e58976",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_commit_history.json": "2dc06efd1f0ba08059aac6c6bd9bdce7166883bcc1bc1cd85e6271922f972caa",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_config.json": "c77120ade725b51d4911469fcefccdb46bf31c14465531533a68b74d54df16a5",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_model_card.md": "3e0e15fa0c5cc81675bd69af8eb469d128a725c1a7bfc71f03b7877b7b650567",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__first_party_label_source.html": "b4f3da932292f5da49185b53923e6b2751f032e0f36e2983528fae3caaec8972"
+  },
+  "outputs": {
+    "panel": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv",
+    "reasoning_pairs": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_reasoning_pair_audit_2026-07-18.csv",
+    "epoch_crosscheck": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_epoch_crosscheck_2026-07-18.csv",
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_inference_budget_predictions_2026-07-18.csv"
+  }
+}

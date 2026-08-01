@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "compatibility_filename_date": "2026-07-18",
+    "question": "Does current API price predict active parameters better than total parameters, and does active-to-total transport improve total-size recovery?",
+    "evaluation_split": "release-ordered developer-family holdout",
+    "critical_nonprospective_caveat": "All prices come from the 2026-07-31 snapshot. Older test rows may have been repriced after release, so this is not a genuinely historical prospective backtest.",
+    "features": {
+      "date_price": [
+        "date",
+        "price"
+      ],
+      "score_date": [
+        "score",
+        "date"
+      ],
+      "score_date_price": [
+        "score",
+        "date",
+        "price"
+      ]
+    },
+    "training_weights": "equal total weight per developer; estimated AA scores receive half weight",
+    "minimum_train_rows": 12,
+    "minimum_train_developers": 5,
+    "promotion_minimum_tests": 20,
+    "promotion_minimum_developers": 8
+  },
+  "inventory": {
+    "calibration_rows_audited": 93,
+    "active_parameter_matches": 63,
+    "aa_disclosed_active_parameter_matches": 45,
+    "dense_config_active_equals_total_controls": 18,
+    "developers": 15,
+    "match_method_counts": {
+      "primary_hf_config_dense_active_equals_total": 18,
+      "exact_hf_repo": 28,
+      "exact_hf_repo_and_audited_crosswalk": 14,
+      "audited_aa_epoch_crosswalk": 2,
+      "audited_crosswalk_resolves_multiple_exact_hf_configs": 1
+    },
+    "max_total_parameter_ratio": 1.0687898089171977,
+    "max_dense_control_total_parameter_ratio": 1.0722222222222222,
+    "identity_conflicts": 0,
+    "ambiguous_hf_repositories": 2,
+    "unresolved_active_hf_ambiguities": 0,
+    "release_ordered_predictions": 45,
+    "prediction_developers": 11,
+    "high_sparsity_transport_predictions": 16,
+    "high_sparsity_transport_developers": 7
+  },
+  "active_vs_total_predictability": {
+    "date_price": {
+      "active": {
+        "n": 45,
+        "median_multiplicative_error": 1.7429481039640926,
+        "mean_absolute_log10_error": 0.298996176713631,
+        "rmse_log10": 0.36947410406393727,
+        "p80_multiplicative_error": 3.107851751319751,
+        "within_2x": 0.5777777777777777,
+        "signed_bias_factor": 0.749902676978458
+      },
+      "total": {
+        "n": 45,
+        "median_multiplicative_error": 2.24558840574276,
+        "mean_absolute_log10_error": 0.4023798800805601,
+        "rmse_log10": 0.5013318302053706,
+        "p80_multiplicative_error": 4.627041551631601,
+        "within_2x": 0.4444444444444444,
+        "signed_bias_factor": 1.6790881018196344
+      },
+      "paired_active_vs_total": {
+        "metric": "equal-developer absolute log10 error; active_date_price_log10_error minus total_date_price_log10_error",
+        "observed_delta": -0.0721146888456805,
+        "ci_90": [
+          -0.15026284482966998,
+          0.01625360735421729
+        ],
+        "probability_left_better": 0.91605,
+        "samples": 20000,
+        "developers": 11
+      }
+    },
+    "score_date": {
+      "active": {
+        "n": 45,
+        "median_multiplicative_error": 2.043569623167387,
+        "mean_absolute_log10_error": 0.3548904519181608,
+        "rmse_log10": 0.44684724370236817,
+        "p80_multiplicative_error": 3.1452858437105644,
+        "within_2x": 0.4666666666666667,
+        "signed_bias_factor": 0.698164548792871
+      },
+      "total": {
+        "n": 45,
+        "median_multiplicative_error": 2.3047795672307627,
+        "mean_absolute_log10_error": 0.4317670094606061,
+        "rmse_log10": 0.5731318976146249,
+        "p80_multiplicative_error": 5.373701588637622,
+        "within_2x": 0.4222222222222222,
+        "signed_bias_factor": 1.5502552808364076
+      },
+      "paired_active_vs_total": {
+        "metric": "equal-developer absolute log10 error; active_score_date_log10_error minus total_score_date_log10_error",
+        "observed_delta": -0.09856585053737174,
+        "ci_90": [
+          -0.2490934595532879,
+          0.050914220348850285
+        ],
+        "probability_left_better": 0.8593,
+        "samples": 20000,
+        "developers": 11
+      }
+    },
+    "score_date_price": {
+      "active": {
+        "n": 45,
+        "median_multiplicative_error": 1.78977905817607,
+        "mean_absolute_log10_error": 0.3184630134120163,
+        "rmse_log10": 0.3985242080399203,
+        "p80_multiplicative_error": 3.571750257621073,
+        "within_2x": 0.5777777777777777,
+        "signed_bias_factor": 0.7634155056331261
+      },
+      "total": {
+        "n": 45,
+        "median_multiplicative_error": 2.446146926946612,
+        "mean_absolute_log10_error": 0.41418329925512815,
+        "rmse_log10": 0.4947444003396129,
+        "p80_multiplicative_error": 4.081069352531698,
+        "within_2x": 0.37777777777777777,
+        "signed_bias_factor": 1.8126784860274259
+      },
+      "paired_active_vs_total": {
+        "metric": "equal-developer absolute log10 error; active_score_date_price_log10_error minus total_score_date_price_log10_error",
+        "observed_delta": -0.11941729310339538,
+        "ci_90": [
+          -0.22344275539420122,
+          -0.021812301406190324
+        ],
+        "probability_left_better": 0.9798,
+        "samples": 20000,
+        "developers": 11
+      }
+    },
+    "price_incremental_to_score_date": {
+      "active": {
+        "metric": "equal-developer absolute log10 error; active_score_date_price_log10_error minus active_score_date_log10_error",
+        "observed_delta": -0.02602090882974302,
+        "ci_90": [
+          -0.1273906700574168,
+          0.0884330509976747
+        ],
+        "probability_left_better": 0.67955,
+        "samples": 20000,
+        "developers": 11
+      },
+      "total": {
+        "metric": "equal-developer absolute log10 error; total_score_date_price_log10_error minus total_score_date_log10_error",
+        "observed_delta": -0.005169466263719371,
+        "ci_90": [
+          -0.14662539630229288,
+          0.15759107477739498
+        ],
+        "probability_left_better": 0.5616,
+        "samples": 20000,
+        "developers": 11
+      }
+    }
+  },
+  "high_sparsity_total_transport": {
+    "scope": "actual total/active ratio >= 15x",
+    "candidate": {
+      "n": 16,
+      "median_multiplicative_error": 1.5943066001710364,
+      "mean_absolute_log10_error": 0.25936058273739093,
+      "rmse_log10": 0.30629020930141937,
+      "p80_multiplicative_error": 2.9230897422549695,
+      "within_2x": 0.625,
+      "signed_bias_factor": 0.8406160699941837
+    },
+    "direct_total_baseline": {
+      "n": 16,
+      "median_multiplicative_error": 2.177244634583412,
+      "mean_absolute_log10_error": 0.3204191686844686,
+      "rmse_log10": 0.3800983319048586,
+      "p80_multiplicative_error": 3.2012475118976162,
+      "within_2x": 0.5,
+      "signed_bias_factor": 1.4200783314280787
+    },
+    "date_price_candidate": {
+      "n": 16,
+      "median_multiplicative_error": 1.764053424573173,
+      "mean_absolute_log10_error": 0.2505132936699713,
+      "rmse_log10": 0.29626931697803344,
+      "p80_multiplicative_error": 2.6817098384611757,
+      "within_2x": 0.625,
+      "signed_bias_factor": 0.8238937072989535
+    },
+    "date_price_direct_total_baseline": {
+      "n": 16,
+      "median_multiplicative_error": 1.889880269357869,
+      "mean_absolute_log10_error": 0.24890825365991273,
+      "rmse_log10": 0.2936949467797691,
+      "p80_multiplicative_error": 2.3901900072353426,
+      "within_2x": 0.5,
+      "signed_bias_factor": 1.255373916300214
+    },
+    "paired_cluster_bootstrap": {
+      "metric": "equal-developer absolute log10 error; converted_total_score_date_price_log10_error minus total_score_date_price_log10_error",
+      "observed_delta": -0.11592755952473247,
+      "ci_90": [
+        -0.2766745251976948,
+        0.0452544019221345
+      ],
+      "probability_left_better": 0.88825,
+      "samples": 20000,
+      "developers": 7
+    }
+  },
+  "target_sensitivity": [
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "aa_score": 59.8606463217303,
+      "blended_price_usd_per_mtoken": 22.360679775,
+      "price_over_training_max": 6.454972243675451,
+      "predicted_active_date_price_b": 133.94497841443115,
+      "predicted_active_score_date_price_b": 204.45635139959637,
+      "k3_anchored_total_date_price_t": 5.7662493552006655,
+      "k3_anchored_total_score_date_price_t": 5.532831921420005,
+      "k3_anchor_source": "Kimi K3 official technical report Table 1",
+      "status": "0%-weight extrapolative sensitivity"
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "aa_score": 58.889831189723,
+      "blended_price_usd_per_mtoken": 12.8598211496,
+      "price_over_training_max": 3.712310601223595,
+      "predicted_active_date_price_b": 94.29275673802773,
+      "predicted_active_score_date_price_b": 145.0417059306177,
+      "k3_anchored_total_date_price_t": 4.0592454765901556,
+      "k3_anchored_total_score_date_price_t": 3.925000984399446,
+      "k3_anchor_source": "Kimi K3 official technical report Table 1",
+      "status": "0%-weight extrapolative sensitivity"
+    },
+    {
+      "model": "Kimi K3",
+      "release_date": "2026-07-16",
+      "aa_score": 57.1123394372091,
+      "blended_price_usd_per_mtoken": 6.7082039325,
+      "price_over_training_max": 1.9364916731026354,
+      "predicted_active_date_price_b": 64.57699226209759,
+      "predicted_active_score_date_price_b": 102.73015066486975,
+      "k3_anchored_total_date_price_t": 2.78,
+      "k3_anchored_total_score_date_price_t": 2.7799999999999994,
+      "k3_anchor_source": "Kimi K3 official technical report Table 1",
+      "status": "disclosed total anchor"
+    }
+  ],
+  "target_fit": {
+    "common_training_cutoff": "2026-06-09",
+    "excluded_target_families": [
+      "anthropic",
+      "kimi",
+      "moonshot",
+      "openai"
+    ],
+    "training_rows": 55,
+    "training_developers": 13,
+    "coefficients": {
+      "date_price": [
+        2.0222582647690817,
+        -0.19285706474356837,
+        0.5686062261218581
+      ],
+      "score_date_price": [
+        2.3720567009023004,
+        0.017374129908201096,
+        -0.47321250793678166,
+        0.3886495454991854
+      ]
+    },
+    "price_support_min": 0.0632455532034,
+    "price_support_max": 3.46410161514
+  },
+  "promotion_gates": {
+    "performance_gate_passed": false,
+    "coverage_gate_passed": false,
+    "required_tests": 20,
+    "observed_tests": 16,
+    "required_developers": 8,
+    "observed_developers": 7
+  },
+  "decision": {
+    "promote_active_price_transport": false,
+    "incremental_live_weight": 0.0,
+    "replace_existing_price_branch": false,
+    "change_headline_forecasts": false,
+    "reason": "Active-price transport is a credible mechanism and beats direct total-price prediction on the sparse subset, but only 16 tests from 7 developers qualify versus the 20/8 promotion gate. Target prices are also far outside the common training support and the feature overlaps existing AA/date and price branches. Retain as a zero-weight diagnostic."
+  },
+  "limitations": [
+    "Current OpenRouter prices are not launch-vintage historical prices.",
+    "Hosted-model availability and active-parameter disclosure are non-random.",
+    "The high-sparsity transport comparison has only seven developer clusters.",
+    "Fable and Sol prices strongly extrapolate beyond the common target-fit training range.",
+    "The proposed feature is correlated with the existing AA/date and API-price branches and must not be added as independent evidence."
+  ],
+  "source_files": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_calibration_2026-07-18.csv": "072ff900db917ce7d641d0af6bd548c8d472438d48d4c0acc0d14504265a86cd",
+    "sources/openrouter_model_signals_2026-07-18.csv": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_epoch_crosscheck_2026-07-18.csv": "c0e1b9a29c806276fb074d3deb2349b69c971e295b4c211dc8b95b55b231302e",
+    "sources/huggingface_architecture_config_signals_2026-07-18.csv": "db1757382798a069ed9833aa144c96b0c7c9d939e793581a611ed6487be99142",
+    "sources/huggingface_architecture_config_snapshot_2026-07-18.json.gz": "412d80e27a36477636599eeb9fcaade8924f1d7cd97fd8db16305677f3f00c06",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/huggingface_architecture_config_collection_audit_2026-07-18.json": "03fea30d78c4f90625afee9ada9746deedadf7981a2205bdc36b1da8c3f89f89",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600"
+  },
+  "outputs": {
+    "match_audit": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_active_parameter_match_audit_2026-07-18.csv",
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_active_price_predictions_2026-07-18.csv",
+    "targets": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_active_price_targets_2026-07-18.csv"
+  }
+}

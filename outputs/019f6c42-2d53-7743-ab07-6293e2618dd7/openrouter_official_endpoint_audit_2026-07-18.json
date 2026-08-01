@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "fetched_at_utc": "2026-07-31T01:24:28+00:00",
+  "network_refresh": false,
+  "documented_endpoint_pattern": "https://openrouter.ai/api/v1/models/{model_id}/endpoints",
+  "model_count_requested": 334,
+  "model_count_succeeded": 334,
+  "failure_count": 0,
+  "failures": [],
+  "official_endpoint_rows": 1051,
+  "frontend_endpoint_tier_rows": 1172,
+  "comparison_group_counts": {
+    "exact": 993,
+    "frontend_only": 140,
+    "official_only": 19,
+    "signature_mismatch": 37
+  },
+  "official_rows_in_exact_groups": 995,
+  "official_price_row_exact_share": 0.9467174119885823,
+  "official_rows_with_30m_uptime": 788,
+  "official_30m_uptime_median": 99.80005060130455,
+  "focal_models": {
+    "anthropic/claude-fable-5": {
+      "official_rows": 6,
+      "frontend_rows": 6,
+      "non_exact_groups": []
+    },
+    "openai/gpt-5.6-sol": {
+      "official_rows": 6,
+      "frontend_rows": 7,
+      "non_exact_groups": [
+        "azure/priority"
+      ]
+    },
+    "moonshotai/kimi-k3": {
+      "official_rows": 8,
+      "frontend_rows": 8,
+      "non_exact_groups": []
+    }
+  },
+  "method_notes": [
+    "Official provider tags are matched to frontend provider slugs; flex and priority are kept as separate service-tier suffixes.",
+    "A group is exact only when the full multiset of quantization, context limits, base prices, and first high-context prices matches.",
+    "Throughput values remain sourced from the public model-page statistics payload because the documented endpoint API currently returns null throughput fields.",
+    "This is a near-contemporaneous crosscheck, not a guarantee that two independently fetched live endpoints cannot change between requests."
+  ],
+  "files": {
+    "raw_official_snapshot": "sources/openrouter_official_endpoint_snapshot_2026-07-18.json.gz",
+    "official_endpoint_prices": "sources/openrouter_official_endpoint_prices_2026-07-18.csv",
+    "comparison": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_official_endpoint_crosscheck_2026-07-18.csv"
+  },
+  "source_hashes": {
+    "sources/openrouter_model_signals_2026-07-18.csv": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd",
+    "sources/openrouter_endpoint_tier_signals_2026-07-18.csv": "fbaf4171bf502ae4893b9af41ea819a93f133f44bc25897757b1d8f7cdad3670",
+    "sources/openrouter_official_endpoint_snapshot_2026-07-18.json.gz": "f942e5d9d37104d0c478eba0f5e007f1e2267d7eafc54a92d9c74d5a6c4f41be",
+    "sources/openrouter_official_endpoint_prices_2026-07-18.csv": "9369418b3c279b956e7c63ae955e707c1f9fd732cc48443018de1212df0f1fce",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_official_endpoint_crosscheck_2026-07-18.csv": "7175107da41d26c88349eb16e1f4ba8b461cdf024aab4419b54564c3031b88f1"
+  }
+}

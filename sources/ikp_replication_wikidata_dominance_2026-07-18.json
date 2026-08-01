@@ -1,0 +1,2964 @@
+{
+  "IKP_T7_1301": {
+    "id": "IKP_T7_1301",
+    "tier": "T7",
+    "qid": "Q7589504",
+    "probe_sitelinks": 2,
+    "flag_lang": "en",
+    "flag_label": "St. Lawrence University",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q1411093",
+        "sitelinks": 9
+      },
+      {
+        "qid": "Q7589505",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 9,
+    "dominance_ratio": 0.2222222222222222,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1306": {
+    "id": "IKP_T7_1306",
+    "tier": "T7",
+    "qid": "Q20861269",
+    "probe_sitelinks": 7,
+    "flag_lang": "en",
+    "flag_label": "Montalvo",
+    "max_collision_count": 12,
+    "top_competitors": [
+      {
+        "qid": "Q10567153",
+        "sitelinks": 12
+      },
+      {
+        "qid": "Q432497",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q110449409",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q20599364",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q20599372",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 12,
+    "dominance_ratio": 0.5833333333333334,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1329": {
+    "id": "IKP_T7_1329",
+    "tier": "T7",
+    "qid": "Q799042",
+    "probe_sitelinks": 7,
+    "flag_lang": "en",
+    "flag_label": "Badis",
+    "max_collision_count": 7,
+    "top_competitors": [
+      {
+        "qid": "Q2878699",
+        "sitelinks": 14
+      },
+      {
+        "qid": "Q2878688",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q2878693",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q32304207",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q93150789",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 14,
+    "dominance_ratio": 0.5,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1332": {
+    "id": "IKP_T7_1332",
+    "tier": "T7",
+    "qid": "Q1303191",
+    "probe_sitelinks": 18,
+    "flag_lang": "en",
+    "flag_label": "Guilford",
+    "max_collision_count": 22,
+    "top_competitors": [
+      {
+        "qid": "Q753857",
+        "sitelinks": 38
+      },
+      {
+        "qid": "Q948176",
+        "sitelinks": 26
+      },
+      {
+        "qid": "Q1187253",
+        "sitelinks": 21
+      },
+      {
+        "qid": "Q2887275",
+        "sitelinks": 21
+      },
+      {
+        "qid": "Q3453173",
+        "sitelinks": 19
+      }
+    ],
+    "max_competitor_sitelinks": 38,
+    "dominance_ratio": 0.47368421052631576,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1364": {
+    "id": "IKP_T7_1364",
+    "tier": "T7",
+    "qid": "Q17297395",
+    "probe_sitelinks": 7,
+    "flag_lang": "en",
+    "flag_label": "Brinkmann",
+    "max_collision_count": 6,
+    "top_competitors": [
+      {
+        "qid": "Q917502",
+        "sitelinks": 7
+      },
+      {
+        "qid": "Q9179376",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q38281267",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q101342652",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q27827680",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 7,
+    "dominance_ratio": 1.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1367": {
+    "id": "IKP_T7_1367",
+    "tier": "T7",
+    "qid": "Q6475694",
+    "probe_sitelinks": 1,
+    "flag_lang": "en",
+    "flag_label": "Lake Effect",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q25136861",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q27787217",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q101361836",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 1,
+    "dominance_ratio": 1.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1383": {
+    "id": "IKP_T7_1383",
+    "tier": "T7",
+    "qid": "Q1510465",
+    "probe_sitelinks": 24,
+    "flag_lang": "en",
+    "flag_label": "Norwich",
+    "max_collision_count": 25,
+    "top_competitors": [
+      {
+        "qid": "Q130191",
+        "sitelinks": 101
+      },
+      {
+        "qid": "Q631402",
+        "sitelinks": 56
+      },
+      {
+        "qid": "Q1380484",
+        "sitelinks": 43
+      },
+      {
+        "qid": "Q230513",
+        "sitelinks": 35
+      },
+      {
+        "qid": "Q2606846",
+        "sitelinks": 32
+      }
+    ],
+    "max_competitor_sitelinks": 101,
+    "dominance_ratio": 0.2376237623762376,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1387": {
+    "id": "IKP_T7_1387",
+    "tier": "T7",
+    "qid": "Q2446241",
+    "probe_sitelinks": 27,
+    "flag_lang": "en",
+    "flag_label": "Wells",
+    "max_collision_count": 48,
+    "top_competitors": [
+      {
+        "qid": "Q212283",
+        "sitelinks": 59
+      },
+      {
+        "qid": "Q2076290",
+        "sitelinks": 44
+      },
+      {
+        "qid": "Q2227553",
+        "sitelinks": 36
+      },
+      {
+        "qid": "Q229350",
+        "sitelinks": 33
+      },
+      {
+        "qid": "Q978123",
+        "sitelinks": 27
+      }
+    ],
+    "max_competitor_sitelinks": 59,
+    "dominance_ratio": 0.4576271186440678,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1388": {
+    "id": "IKP_T7_1388",
+    "tier": "T7",
+    "qid": "Q538683",
+    "probe_sitelinks": 19,
+    "flag_lang": "en",
+    "flag_label": "Angewandte Chemie",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q538631",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q99554928",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 1,
+    "dominance_ratio": 19.0,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T7_1399": {
+    "id": "IKP_T7_1399",
+    "tier": "T7",
+    "qid": "Q15261134",
+    "probe_sitelinks": 2,
+    "flag_lang": "en",
+    "flag_label": "National Motor Museum",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q568785",
+        "sitelinks": 9
+      },
+      {
+        "qid": "Q15946916",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 9,
+    "dominance_ratio": 0.2222222222222222,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1507": {
+    "id": "IKP_T7_1507",
+    "tier": "T7",
+    "qid": "Q66829064",
+    "probe_sitelinks": 5,
+    "flag_lang": "fr",
+    "flag_label": "Inséparables",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q3152972",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q125806414",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 2,
+    "dominance_ratio": 2.5,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1512": {
+    "id": "IKP_T7_1512",
+    "tier": "T7",
+    "qid": "Q2253757",
+    "probe_sitelinks": 5,
+    "flag_lang": "en",
+    "flag_label": "Schwarze Wand",
+    "max_collision_count": 13,
+    "top_competitors": [
+      {
+        "qid": "Q2253761",
+        "sitelinks": 9
+      },
+      {
+        "qid": "Q1230777",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q21865649",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q21878375",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q21878721",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 9,
+    "dominance_ratio": 0.5555555555555556,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1513": {
+    "id": "IKP_T7_1513",
+    "tier": "T7",
+    "qid": "Q16516448",
+    "probe_sitelinks": 4,
+    "flag_lang": "fr",
+    "flag_label": "Colombe de la paix",
+    "max_collision_count": 5,
+    "top_competitors": [
+      {
+        "qid": "Q87758078",
+        "sitelinks": 16
+      },
+      {
+        "qid": "Q4142423",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q20671135",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q124048253",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 16,
+    "dominance_ratio": 0.25,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1516": {
+    "id": "IKP_T7_1516",
+    "tier": "T7",
+    "qid": "Q3842606",
+    "probe_sitelinks": 6,
+    "flag_lang": "it",
+    "flag_label": "Madonna del Carmelo",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q18429888",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q121598677",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 4,
+    "dominance_ratio": 1.5,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1525": {
+    "id": "IKP_T7_1525",
+    "tier": "T7",
+    "qid": "Q12776486",
+    "probe_sitelinks": 6,
+    "flag_lang": "en",
+    "flag_label": "South Island",
+    "max_collision_count": 45,
+    "top_competitors": [
+      {
+        "qid": "Q120755",
+        "sitelinks": 98
+      },
+      {
+        "qid": "Q9339823",
+        "sitelinks": 10
+      },
+      {
+        "qid": "Q7567550",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q22658283",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q2304509",
+        "sitelinks": 4
+      }
+    ],
+    "max_competitor_sitelinks": 98,
+    "dominance_ratio": 0.061224489795918366,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1527": {
+    "id": "IKP_T7_1527",
+    "tier": "T7",
+    "qid": "Q21822512",
+    "probe_sitelinks": 5,
+    "flag_lang": "en",
+    "flag_label": "Cape Simpson",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q2227198",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q21822521",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q22429636",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 6,
+    "dominance_ratio": 0.8333333333333334,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1530": {
+    "id": "IKP_T7_1530",
+    "tier": "T7",
+    "qid": "Q3545573",
+    "probe_sitelinks": 5,
+    "flag_lang": "it",
+    "flag_label": "Uomini coraggiosi",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q4006127",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q4006123",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 11,
+    "dominance_ratio": 0.45454545454545453,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1538": {
+    "id": "IKP_T7_1538",
+    "tier": "T7",
+    "qid": "Q5433794",
+    "probe_sitelinks": 5,
+    "flag_lang": "en",
+    "flag_label": "Fang Peak",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q22943289",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q21485548",
+        "sitelinks": 3
+      }
+    ],
+    "max_competitor_sitelinks": 4,
+    "dominance_ratio": 1.25,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T7_1540": {
+    "id": "IKP_T7_1540",
+    "tier": "T7",
+    "qid": "Q4081475",
+    "probe_sitelinks": 7,
+    "flag_lang": "cs",
+    "flag_label": "Bělá",
+    "max_collision_count": 42,
+    "top_competitors": [
+      {
+        "qid": "Q248144",
+        "sitelinks": 33
+      },
+      {
+        "qid": "Q1022065",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q2468165",
+        "sitelinks": 25
+      },
+      {
+        "qid": "Q331473",
+        "sitelinks": 23
+      },
+      {
+        "qid": "Q1881938",
+        "sitelinks": 22
+      }
+    ],
+    "max_competitor_sitelinks": 33,
+    "dominance_ratio": 0.21212121212121213,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1059": {
+    "id": "IKP_T6_1059",
+    "tier": "T6",
+    "qid": "Q1484880",
+    "probe_sitelinks": 30,
+    "flag_lang": "ru",
+    "flag_label": "Патнам",
+    "max_collision_count": 15,
+    "top_competitors": [
+      {
+        "qid": "Q115266",
+        "sitelinks": 53
+      },
+      {
+        "qid": "Q503059",
+        "sitelinks": 50
+      },
+      {
+        "qid": "Q498341",
+        "sitelinks": 49
+      },
+      {
+        "qid": "Q278589",
+        "sitelinks": 48
+      },
+      {
+        "qid": "Q494579",
+        "sitelinks": 48
+      }
+    ],
+    "max_competitor_sitelinks": 53,
+    "dominance_ratio": 0.5660377358490566,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1060": {
+    "id": "IKP_T6_1060",
+    "tier": "T6",
+    "qid": "Q5994200",
+    "probe_sitelinks": 4,
+    "flag_lang": "pt",
+    "flag_label": "Igreja de Santo António",
+    "max_collision_count": 21,
+    "top_competitors": [
+      {
+        "qid": "Q533099",
+        "sitelinks": 14
+      },
+      {
+        "qid": "Q6730196",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q592923",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q10300693",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q124034719",
+        "sitelinks": 3
+      }
+    ],
+    "max_competitor_sitelinks": 14,
+    "dominance_ratio": 0.2857142857142857,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1077": {
+    "id": "IKP_T6_1077",
+    "tier": "T6",
+    "qid": "Q2323139",
+    "probe_sitelinks": 30,
+    "flag_lang": "en",
+    "flag_label": "Enfield",
+    "max_collision_count": 33,
+    "top_competitors": [
+      {
+        "qid": "Q2276245",
+        "sitelinks": 32
+      },
+      {
+        "qid": "Q1341696",
+        "sitelinks": 30
+      },
+      {
+        "qid": "Q518535",
+        "sitelinks": 28
+      },
+      {
+        "qid": "Q2672405",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q3450313",
+        "sitelinks": 24
+      }
+    ],
+    "max_competitor_sitelinks": 32,
+    "dominance_ratio": 0.9375,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1079": {
+    "id": "IKP_T6_1079",
+    "tier": "T6",
+    "qid": "Q2430576",
+    "probe_sitelinks": 22,
+    "flag_lang": "en",
+    "flag_label": "Stoddard",
+    "max_collision_count": 10,
+    "top_competitors": [
+      {
+        "qid": "Q2431681",
+        "sitelinks": 25
+      },
+      {
+        "qid": "Q414007",
+        "sitelinks": 13
+      },
+      {
+        "qid": "Q16883862",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q18385646",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q28089534",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 25,
+    "dominance_ratio": 0.88,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1080": {
+    "id": "IKP_T6_1080",
+    "tier": "T6",
+    "qid": "Q13189481",
+    "probe_sitelinks": 5,
+    "flag_lang": "fr",
+    "flag_label": "Flavio Alfaro",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q931546",
+        "sitelinks": 14
+      },
+      {
+        "qid": "Q5458082",
+        "sitelinks": 7
+      },
+      {
+        "qid": "Q5862479",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 14,
+    "dominance_ratio": 0.35714285714285715,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1082": {
+    "id": "IKP_T6_1082",
+    "tier": "T6",
+    "qid": "Q2041341",
+    "probe_sitelinks": 12,
+    "flag_lang": "de",
+    "flag_label": "Steinbrücke",
+    "max_collision_count": 42,
+    "top_competitors": [
+      {
+        "qid": "Q12367079",
+        "sitelinks": 24
+      },
+      {
+        "qid": "Q3397526",
+        "sitelinks": 7
+      },
+      {
+        "qid": "Q29566697",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q14541532",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q29567481",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 24,
+    "dominance_ratio": 0.5,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1097": {
+    "id": "IKP_T6_1097",
+    "tier": "T6",
+    "qid": "Q558195",
+    "probe_sitelinks": 9,
+    "flag_lang": "en",
+    "flag_label": "Lahn",
+    "max_collision_count": 9,
+    "top_competitors": [
+      {
+        "qid": "Q103148",
+        "sitelinks": 68
+      },
+      {
+        "qid": "Q671829",
+        "sitelinks": 32
+      },
+      {
+        "qid": "Q572698",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q106383026",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q30150166",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 68,
+    "dominance_ratio": 0.1323529411764706,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1101": {
+    "id": "IKP_T6_1101",
+    "tier": "T6",
+    "qid": "Q15755003",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Bone",
+    "max_collision_count": 107,
+    "top_competitors": [
+      {
+        "qid": "Q162235",
+        "sitelinks": 17
+      },
+      {
+        "qid": "Q14595",
+        "sitelinks": 16
+      },
+      {
+        "qid": "Q411577",
+        "sitelinks": 14
+      },
+      {
+        "qid": "Q4941469",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q12476917",
+        "sitelinks": 6
+      }
+    ],
+    "max_competitor_sitelinks": 17,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1118": {
+    "id": "IKP_T6_1118",
+    "tier": "T6",
+    "qid": "Q24360",
+    "probe_sitelinks": 17,
+    "flag_lang": "ru",
+    "flag_label": "Алма-Ата",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q35493",
+        "sitelinks": 154
+      },
+      {
+        "qid": "Q18765171",
+        "sitelinks": 3
+      }
+    ],
+    "max_competitor_sitelinks": 154,
+    "dominance_ratio": 0.11038961038961038,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1119": {
+    "id": "IKP_T6_1119",
+    "tier": "T6",
+    "qid": "Q16587384",
+    "probe_sitelinks": 5,
+    "flag_lang": "es",
+    "flag_label": "La Concordia",
+    "max_collision_count": 30,
+    "top_competitors": [
+      {
+        "qid": "Q2395382",
+        "sitelinks": 14
+      },
+      {
+        "qid": "Q353185",
+        "sitelinks": 13
+      },
+      {
+        "qid": "Q2007922",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q20207661",
+        "sitelinks": 7
+      },
+      {
+        "qid": "Q20226081",
+        "sitelinks": 6
+      }
+    ],
+    "max_competitor_sitelinks": 14,
+    "dominance_ratio": 0.35714285714285715,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1136": {
+    "id": "IKP_T6_1136",
+    "tier": "T6",
+    "qid": "Q20870966",
+    "probe_sitelinks": 4,
+    "flag_lang": "fr",
+    "flag_label": "Quinsaloma",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q1990377",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q29410133",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 11,
+    "dominance_ratio": 0.36363636363636365,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1150": {
+    "id": "IKP_T6_1150",
+    "tier": "T6",
+    "qid": "Q1023631",
+    "probe_sitelinks": 9,
+    "flag_lang": "en",
+    "flag_label": "Sanare",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q7415510",
+        "sitelinks": 7
+      },
+      {
+        "qid": "Q7415508",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q27192089",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 7,
+    "dominance_ratio": 1.2857142857142858,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1158": {
+    "id": "IKP_T6_1158",
+    "tier": "T6",
+    "qid": "Q2178552",
+    "probe_sitelinks": 3,
+    "flag_lang": "de",
+    "flag_label": "Rätisches Museum",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q3867635",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q112971456",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 3,
+    "dominance_ratio": 1.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1163": {
+    "id": "IKP_T6_1163",
+    "tier": "T6",
+    "qid": "Q7958632",
+    "probe_sitelinks": 2,
+    "flag_lang": "en",
+    "flag_label": "Wabash Bridge",
+    "max_collision_count": 5,
+    "top_competitors": [
+      {
+        "qid": "Q7958633",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q7958634",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q7958631",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q25238376",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 3,
+    "dominance_ratio": 0.6666666666666666,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1169": {
+    "id": "IKP_T6_1169",
+    "tier": "T6",
+    "qid": "Q16842214",
+    "probe_sitelinks": 2,
+    "flag_lang": "en",
+    "flag_label": "Jarrow F.C.",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q137756901",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q137785155",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 1,
+    "dominance_ratio": 2.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1501": {
+    "id": "IKP_T6_1501",
+    "tier": "T6",
+    "qid": "Q1807936",
+    "probe_sitelinks": 5,
+    "flag_lang": "en",
+    "flag_label": "Hit Man",
+    "max_collision_count": 7,
+    "top_competitors": [
+      {
+        "qid": "Q114437078",
+        "sitelinks": 24
+      },
+      {
+        "qid": "Q5871374",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q5871383",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q5871369",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q130597931",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 24,
+    "dominance_ratio": 0.20833333333333334,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T6_1505": {
+    "id": "IKP_T6_1505",
+    "tier": "T6",
+    "qid": "Q22341167",
+    "probe_sitelinks": 5,
+    "flag_lang": "es",
+    "flag_label": "Un drama nuevo",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q42189115",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q44754521",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 0,
+    "dominance_ratio": 5.0,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T5_0908": {
+    "id": "IKP_T5_0908",
+    "tier": "T5",
+    "qid": "Q2533865",
+    "probe_sitelinks": 21,
+    "flag_lang": "pl",
+    "flag_label": "Elliott",
+    "max_collision_count": 11,
+    "top_competitors": [
+      {
+        "qid": "Q1933199",
+        "sitelinks": 37
+      },
+      {
+        "qid": "Q432658",
+        "sitelinks": 28
+      },
+      {
+        "qid": "Q771127",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q2671743",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q3613115",
+        "sitelinks": 15
+      }
+    ],
+    "max_competitor_sitelinks": 37,
+    "dominance_ratio": 0.5675675675675675,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0917": {
+    "id": "IKP_T5_0917",
+    "tier": "T5",
+    "qid": "Q15762724",
+    "probe_sitelinks": 3,
+    "flag_lang": "en",
+    "flag_label": "Planta",
+    "max_collision_count": 16,
+    "top_competitors": [
+      {
+        "qid": "Q366764",
+        "sitelinks": 20
+      },
+      {
+        "qid": "Q5741689",
+        "sitelinks": 10
+      },
+      {
+        "qid": "Q5619109",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q16537914",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q2098343",
+        "sitelinks": 3
+      }
+    ],
+    "max_competitor_sitelinks": 20,
+    "dominance_ratio": 0.15,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0919": {
+    "id": "IKP_T5_0919",
+    "tier": "T5",
+    "qid": "Q697206",
+    "probe_sitelinks": 12,
+    "flag_lang": "en",
+    "flag_label": "Communio",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q1120347",
+        "sitelinks": 7
+      },
+      {
+        "qid": "Q123595769",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 7,
+    "dominance_ratio": 1.7142857142857142,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0938": {
+    "id": "IKP_T5_0938",
+    "tier": "T5",
+    "qid": "Q2572436",
+    "probe_sitelinks": 22,
+    "flag_lang": "en",
+    "flag_label": "Pomfret",
+    "max_collision_count": 6,
+    "top_competitors": [
+      {
+        "qid": "Q3475877",
+        "sitelinks": 17
+      },
+      {
+        "qid": "Q3708561",
+        "sitelinks": 15
+      },
+      {
+        "qid": "Q3885635",
+        "sitelinks": 15
+      },
+      {
+        "qid": "Q415620",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q37023334",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 17,
+    "dominance_ratio": 1.2941176470588236,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0941": {
+    "id": "IKP_T5_0941",
+    "tier": "T5",
+    "qid": "Q2416718",
+    "probe_sitelinks": 22,
+    "flag_lang": "en",
+    "flag_label": "New Durham",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q1982511",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q20657416",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q115225940",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 3,
+    "dominance_ratio": 7.333333333333333,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T5_0942": {
+    "id": "IKP_T5_0942",
+    "tier": "T5",
+    "qid": "Q2572348",
+    "probe_sitelinks": 21,
+    "flag_lang": "en",
+    "flag_label": "Hartland",
+    "max_collision_count": 25,
+    "top_competitors": [
+      {
+        "qid": "Q2212395",
+        "sitelinks": 36
+      },
+      {
+        "qid": "Q2671500",
+        "sitelinks": 23
+      },
+      {
+        "qid": "Q1587245",
+        "sitelinks": 22
+      },
+      {
+        "qid": "Q3470776",
+        "sitelinks": 22
+      },
+      {
+        "qid": "Q5674687",
+        "sitelinks": 20
+      }
+    ],
+    "max_competitor_sitelinks": 36,
+    "dominance_ratio": 0.5833333333333334,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0949": {
+    "id": "IKP_T5_0949",
+    "tier": "T5",
+    "qid": "Q2723796",
+    "probe_sitelinks": 24,
+    "flag_lang": "en",
+    "flag_label": "Middlefield",
+    "max_collision_count": 8,
+    "top_competitors": [
+      {
+        "qid": "Q601269",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q2536964",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q3708268",
+        "sitelinks": 17
+      },
+      {
+        "qid": "Q413832",
+        "sitelinks": 13
+      },
+      {
+        "qid": "Q14683352",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 27,
+    "dominance_ratio": 0.8888888888888888,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0956": {
+    "id": "IKP_T5_0956",
+    "tier": "T5",
+    "qid": "Q24317",
+    "probe_sitelinks": 13,
+    "flag_lang": "ru",
+    "flag_label": "Тарвас",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q4451941",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q16704692",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 2,
+    "dominance_ratio": 6.5,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T5_0968": {
+    "id": "IKP_T5_0968",
+    "tier": "T5",
+    "qid": "Q7233716",
+    "probe_sitelinks": 1,
+    "flag_lang": "en",
+    "flag_label": "Post Road",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q16861157",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q117040461",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q112250416",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 1,
+    "dominance_ratio": 1.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0977": {
+    "id": "IKP_T5_0977",
+    "tier": "T5",
+    "qid": "Q742128",
+    "probe_sitelinks": 10,
+    "flag_lang": "pt",
+    "flag_label": "Achaguas",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q1394162",
+        "sitelinks": 10
+      },
+      {
+        "qid": "Q2822977",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 10,
+    "dominance_ratio": 1.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0987": {
+    "id": "IKP_T5_0987",
+    "tier": "T5",
+    "qid": "Q4897887",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Bethel University",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q3445045",
+        "sitelinks": 10
+      },
+      {
+        "qid": "Q4897955",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q4897957",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 10,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0990": {
+    "id": "IKP_T5_0990",
+    "tier": "T5",
+    "qid": "Q286325",
+    "probe_sitelinks": 4,
+    "flag_lang": "es",
+    "flag_label": "Conservatorio Nacional de Música",
+    "max_collision_count": 8,
+    "top_competitors": [
+      {
+        "qid": "Q5163117",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q2994533",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q5784190",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q5784188",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q8350062",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 6,
+    "dominance_ratio": 0.6666666666666666,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T5_0994": {
+    "id": "IKP_T5_0994",
+    "tier": "T5",
+    "qid": "Q723644",
+    "probe_sitelinks": 39,
+    "flag_lang": "ru",
+    "flag_label": "Интер",
+    "max_collision_count": 8,
+    "top_competitors": [
+      {
+        "qid": "Q222877",
+        "sitelinks": 40
+      },
+      {
+        "qid": "Q677570",
+        "sitelinks": 31
+      },
+      {
+        "qid": "Q729512",
+        "sitelinks": 29
+      },
+      {
+        "qid": "Q236203",
+        "sitelinks": 24
+      },
+      {
+        "qid": "Q762006",
+        "sitelinks": 20
+      }
+    ],
+    "max_competitor_sitelinks": 40,
+    "dominance_ratio": 0.975,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T1_0001": {
+    "id": "IKP_T1_0001",
+    "tier": "T1",
+    "qid": "Q16",
+    "probe_sitelinks": 283,
+    "flag_lang": "en",
+    "flag_label": "Canada",
+    "max_collision_count": 39,
+    "top_competitors": [
+      {
+        "qid": "Q257304",
+        "sitelinks": 20
+      },
+      {
+        "qid": "Q5029265",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q1031917",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q2684010",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q13265795",
+        "sitelinks": 4
+      }
+    ],
+    "max_competitor_sitelinks": 20,
+    "dominance_ratio": 14.15,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T1_0068": {
+    "id": "IKP_T1_0068",
+    "tier": "T1",
+    "qid": "Q20",
+    "probe_sitelinks": 258,
+    "flag_lang": "en",
+    "flag_label": "Norway",
+    "max_collision_count": 29,
+    "top_competitors": [
+      {
+        "qid": "Q1913264",
+        "sitelinks": 36
+      },
+      {
+        "qid": "Q2480177",
+        "sitelinks": 35
+      },
+      {
+        "qid": "Q3243583",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q2734330",
+        "sitelinks": 24
+      },
+      {
+        "qid": "Q231864",
+        "sitelinks": 23
+      }
+    ],
+    "max_competitor_sitelinks": 36,
+    "dominance_ratio": 7.166666666666667,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T1_0092": {
+    "id": "IKP_T1_0092",
+    "tier": "T1",
+    "qid": "Q29",
+    "probe_sitelinks": 296,
+    "flag_lang": "en",
+    "flag_label": "Spain",
+    "max_collision_count": 43,
+    "top_competitors": [
+      {
+        "qid": "Q438633",
+        "sitelinks": 15
+      },
+      {
+        "qid": "Q2306509",
+        "sitelinks": 9
+      },
+      {
+        "qid": "Q20820613",
+        "sitelinks": 7
+      },
+      {
+        "qid": "Q16254367",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q2905661",
+        "sitelinks": 4
+      }
+    ],
+    "max_competitor_sitelinks": 15,
+    "dominance_ratio": 19.733333333333334,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T1_0117": {
+    "id": "IKP_T1_0117",
+    "tier": "T1",
+    "qid": "Q34",
+    "probe_sitelinks": 259,
+    "flag_lang": "en",
+    "flag_label": "Sweden",
+    "max_collision_count": 19,
+    "top_competitors": [
+      {
+        "qid": "Q3450805",
+        "sitelinks": 25
+      },
+      {
+        "qid": "Q3709888",
+        "sitelinks": 15
+      },
+      {
+        "qid": "Q424644",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q7654287",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q7654280",
+        "sitelinks": 3
+      }
+    ],
+    "max_competitor_sitelinks": 25,
+    "dominance_ratio": 10.36,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T1_0140": {
+    "id": "IKP_T1_0140",
+    "tier": "T1",
+    "qid": "Q36",
+    "probe_sitelinks": 273,
+    "flag_lang": "en",
+    "flag_label": "Poland",
+    "max_collision_count": 23,
+    "top_competitors": [
+      {
+        "qid": "Q2300093",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q1572109",
+        "sitelinks": 25
+      },
+      {
+        "qid": "Q299135",
+        "sitelinks": 24
+      },
+      {
+        "qid": "Q7208883",
+        "sitelinks": 14
+      },
+      {
+        "qid": "Q5763870",
+        "sitelinks": 13
+      }
+    ],
+    "max_competitor_sitelinks": 27,
+    "dominance_ratio": 10.11111111111111,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T1_0150": {
+    "id": "IKP_T1_0150",
+    "tier": "T1",
+    "qid": "Q41",
+    "probe_sitelinks": 265,
+    "flag_lang": "en",
+    "flag_label": "Greece",
+    "max_collision_count": 15,
+    "top_competitors": [
+      {
+        "qid": "Q2610369",
+        "sitelinks": 26
+      },
+      {
+        "qid": "Q1544516",
+        "sitelinks": 12
+      },
+      {
+        "qid": "Q5601590",
+        "sitelinks": 10
+      },
+      {
+        "qid": "Q17077105",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q97586030",
+        "sitelinks": 3
+      }
+    ],
+    "max_competitor_sitelinks": 26,
+    "dominance_ratio": 10.192307692307692,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T2_0213": {
+    "id": "IKP_T2_0213",
+    "tier": "T2",
+    "qid": "Q739",
+    "probe_sitelinks": 191,
+    "flag_lang": "ru",
+    "flag_label": "Колумбия",
+    "max_collision_count": 27,
+    "top_competitors": [
+      {
+        "qid": "Q38453",
+        "sitelinks": 126
+      },
+      {
+        "qid": "Q2251",
+        "sitelinks": 89
+      },
+      {
+        "qid": "Q59670",
+        "sitelinks": 68
+      },
+      {
+        "qid": "Q54383",
+        "sitelinks": 57
+      },
+      {
+        "qid": "Q115307",
+        "sitelinks": 52
+      }
+    ],
+    "max_competitor_sitelinks": 126,
+    "dominance_ratio": 1.5158730158730158,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T2_0315": {
+    "id": "IKP_T2_0315",
+    "tier": "T2",
+    "qid": "Q833",
+    "probe_sitelinks": 221,
+    "flag_lang": "en",
+    "flag_label": "Malaysia",
+    "max_collision_count": 7,
+    "top_competitors": [
+      {
+        "qid": "Q2493993",
+        "sitelinks": 18
+      },
+      {
+        "qid": "Q29406719",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q103954764",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q107057790",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q117021389",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 18,
+    "dominance_ratio": 12.277777777777779,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T2_0354": {
+    "id": "IKP_T2_0354",
+    "tier": "T2",
+    "qid": "Q298",
+    "probe_sitelinks": 224,
+    "flag_lang": "en",
+    "flag_label": "Chile",
+    "max_collision_count": 11,
+    "top_competitors": [
+      {
+        "qid": "Q4515930",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q20585142",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q23650252",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q18418541",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q37446942",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 11,
+    "dominance_ratio": 20.363636363636363,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T2_0363": {
+    "id": "IKP_T2_0363",
+    "tier": "T2",
+    "qid": "Q881",
+    "probe_sitelinks": 214,
+    "flag_lang": "en",
+    "flag_label": "Vietnam",
+    "max_collision_count": 15,
+    "top_competitors": [
+      {
+        "qid": "Q2523822",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q1323430",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q7928481",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q7928482",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q20814306",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 11,
+    "dominance_ratio": 19.454545454545453,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T2_0368": {
+    "id": "IKP_T2_0368",
+    "tier": "T2",
+    "qid": "Q419",
+    "probe_sitelinks": 213,
+    "flag_lang": "en",
+    "flag_label": "Peru",
+    "max_collision_count": 49,
+    "top_competitors": [
+      {
+        "qid": "Q386657",
+        "sitelinks": 44
+      },
+      {
+        "qid": "Q576648",
+        "sitelinks": 39
+      },
+      {
+        "qid": "Q965135",
+        "sitelinks": 37
+      },
+      {
+        "qid": "Q941045",
+        "sitelinks": 35
+      },
+      {
+        "qid": "Q228355",
+        "sitelinks": 34
+      }
+    ],
+    "max_competitor_sitelinks": 44,
+    "dominance_ratio": 4.840909090909091,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0500": {
+    "id": "IKP_T3_0500",
+    "tier": "T3",
+    "qid": "Q804",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Panama",
+    "max_collision_count": 42,
+    "top_competitors": [
+      {
+        "qid": "Q232178",
+        "sitelinks": 49
+      },
+      {
+        "qid": "Q1927777",
+        "sitelinks": 36
+      },
+      {
+        "qid": "Q2204538",
+        "sitelinks": 30
+      },
+      {
+        "qid": "Q3287934",
+        "sitelinks": 29
+      },
+      {
+        "qid": "Q2669067",
+        "sitelinks": 26
+      }
+    ],
+    "max_competitor_sitelinks": 49,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0502": {
+    "id": "IKP_T3_0502",
+    "tier": "T3",
+    "qid": "Q655814",
+    "probe_sitelinks": 20,
+    "flag_lang": "en",
+    "flag_label": "Cell",
+    "max_collision_count": 26,
+    "top_competitors": [
+      {
+        "qid": "Q2349697",
+        "sitelinks": 30
+      },
+      {
+        "qid": "Q469889",
+        "sitelinks": 29
+      },
+      {
+        "qid": "Q863823",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q859351",
+        "sitelinks": 22
+      },
+      {
+        "qid": "Q17050502",
+        "sitelinks": 19
+      }
+    ],
+    "max_competitor_sitelinks": 30,
+    "dominance_ratio": 0.6666666666666666,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0504": {
+    "id": "IKP_T3_0504",
+    "tier": "T3",
+    "qid": "Q26988",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Cook Islands",
+    "max_collision_count": 5,
+    "top_competitors": [
+      {
+        "qid": "Q23005987",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q81264578",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q103898927",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q123373551",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 1,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0514": {
+    "id": "IKP_T3_0514",
+    "tier": "T3",
+    "qid": "Q18510",
+    "probe_sitelinks": 17,
+    "flag_lang": "ru",
+    "flag_label": "Дартфорд",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q858775",
+        "sitelinks": 43
+      },
+      {
+        "qid": "Q894082",
+        "sitelinks": 19
+      },
+      {
+        "qid": "Q5225609",
+        "sitelinks": 6
+      }
+    ],
+    "max_competitor_sitelinks": 43,
+    "dominance_ratio": 0.3953488372093023,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0519": {
+    "id": "IKP_T3_0519",
+    "tier": "T3",
+    "qid": "Q5163940",
+    "probe_sitelinks": 2,
+    "flag_lang": "en",
+    "flag_label": "Constellations",
+    "max_collision_count": 29,
+    "top_competitors": [
+      {
+        "qid": "Q1782933",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q2777813",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q5163941",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q2995057",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q5163938",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 8,
+    "dominance_ratio": 0.25,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0520": {
+    "id": "IKP_T3_0520",
+    "tier": "T3",
+    "qid": "Q224",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Croatia",
+    "max_collision_count": 8,
+    "top_competitors": [
+      {
+        "qid": "Q1140669",
+        "sitelinks": 10
+      },
+      {
+        "qid": "Q16952783",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q27779875",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q99294876",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q103899716",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 10,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0523": {
+    "id": "IKP_T3_0523",
+    "tier": "T3",
+    "qid": "Q1042",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Seychelles",
+    "max_collision_count": 5,
+    "top_competitors": [
+      {
+        "qid": "Q115907758",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q28554146",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q60872983",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q65113643",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 6,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0526": {
+    "id": "IKP_T3_0526",
+    "tier": "T3",
+    "qid": "Q223037",
+    "probe_sitelinks": 9,
+    "flag_lang": "es",
+    "flag_label": "Universidad del Este",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q5330550",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q117788390",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 4,
+    "dominance_ratio": 2.25,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0528": {
+    "id": "IKP_T3_0528",
+    "tier": "T3",
+    "qid": "Q485155",
+    "probe_sitelinks": 11,
+    "flag_lang": "ja",
+    "flag_label": "分析",
+    "max_collision_count": 8,
+    "top_competitors": [
+      {
+        "qid": "Q217602",
+        "sitelinks": 59
+      },
+      {
+        "qid": "Q341854",
+        "sitelinks": 30
+      },
+      {
+        "qid": "Q4751091",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q15751184",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q15756185",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 59,
+    "dominance_ratio": 0.1864406779661017,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0530": {
+    "id": "IKP_T3_0530",
+    "tier": "T3",
+    "qid": "Q15767146",
+    "probe_sitelinks": 2,
+    "flag_lang": "en",
+    "flag_label": "Journal of Insect Science",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q6295361",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q20999359",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 2,
+    "dominance_ratio": 1.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0532": {
+    "id": "IKP_T3_0532",
+    "tier": "T3",
+    "qid": "Q407875",
+    "probe_sitelinks": 12,
+    "flag_lang": "en",
+    "flag_label": "Air University",
+    "max_collision_count": 5,
+    "top_competitors": [
+      {
+        "qid": "Q4698242",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q4698241",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q4698243",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q4698238",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 3,
+    "dominance_ratio": 4.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0533": {
+    "id": "IKP_T3_0533",
+    "tier": "T3",
+    "qid": "Q165763",
+    "probe_sitelinks": 0,
+    "flag_lang": "de",
+    "flag_label": "Waldeck",
+    "max_collision_count": 35,
+    "top_competitors": [
+      {
+        "qid": "Q540107",
+        "sitelinks": 41
+      },
+      {
+        "qid": "Q684744",
+        "sitelinks": 30
+      },
+      {
+        "qid": "Q350411",
+        "sitelinks": 23
+      },
+      {
+        "qid": "Q27531630",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q1771686",
+        "sitelinks": 2
+      }
+    ],
+    "max_competitor_sitelinks": 41,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0538": {
+    "id": "IKP_T3_0538",
+    "tier": "T3",
+    "qid": "Q6723676",
+    "probe_sitelinks": 5,
+    "flag_lang": "en",
+    "flag_label": "Machine Learning",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q66498419",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q108371168",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q131472484",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 0,
+    "dominance_ratio": 5.0,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T3_0548": {
+    "id": "IKP_T3_0548",
+    "tier": "T3",
+    "qid": "Q902828",
+    "probe_sitelinks": 13,
+    "flag_lang": "en",
+    "flag_label": "Inorganic Chemistry",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q122967916",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q123264855",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 0,
+    "dominance_ratio": 13.0,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T3_0556": {
+    "id": "IKP_T3_0556",
+    "tier": "T3",
+    "qid": "Q219060",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Palestine",
+    "max_collision_count": 30,
+    "top_competitors": [
+      {
+        "qid": "Q23792",
+        "sitelinks": 150
+      },
+      {
+        "qid": "Q1176995",
+        "sitelinks": 51
+      },
+      {
+        "qid": "Q617602",
+        "sitelinks": 48
+      },
+      {
+        "qid": "Q79491",
+        "sitelinks": 35
+      },
+      {
+        "qid": "Q2666867",
+        "sitelinks": 33
+      }
+    ],
+    "max_competitor_sitelinks": 150,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0558": {
+    "id": "IKP_T3_0558",
+    "tier": "T3",
+    "qid": "Q1029",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Mozambique",
+    "max_collision_count": 8,
+    "top_competitors": [
+      {
+        "qid": "Q443360",
+        "sitelinks": 12
+      },
+      {
+        "qid": "Q12126300",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q2720293",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q5793520",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q83609705",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 12,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0565": {
+    "id": "IKP_T3_0565",
+    "tier": "T3",
+    "qid": "Q37",
+    "probe_sitelinks": 0,
+    "flag_lang": "pl",
+    "flag_label": "Litwa",
+    "max_collision_count": 13,
+    "top_competitors": [
+      {
+        "qid": "Q4263550",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q6509451",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q13029820",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q16459238",
+        "sitelinks": 5
+      },
+      {
+        "qid": "Q6648248",
+        "sitelinks": 3
+      }
+    ],
+    "max_competitor_sitelinks": 8,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0568": {
+    "id": "IKP_T3_0568",
+    "tier": "T3",
+    "qid": "Q4823962",
+    "probe_sitelinks": 6,
+    "flag_lang": "en",
+    "flag_label": "ACMI",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q15073288",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q47294054",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 4,
+    "dominance_ratio": 1.5,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0570": {
+    "id": "IKP_T3_0570",
+    "tier": "T3",
+    "qid": "Q389852",
+    "probe_sitelinks": 18,
+    "flag_lang": "en",
+    "flag_label": "Vilnius Gediminas Technical University",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q73912499",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q74544931",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 0,
+    "dominance_ratio": 18.0,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T3_0572": {
+    "id": "IKP_T3_0572",
+    "tier": "T3",
+    "qid": "Q1246",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Kosovo",
+    "max_collision_count": 12,
+    "top_competitors": [
+      {
+        "qid": "Q940704",
+        "sitelinks": 27
+      },
+      {
+        "qid": "Q1231",
+        "sitelinks": 17
+      },
+      {
+        "qid": "Q2459618",
+        "sitelinks": 14
+      },
+      {
+        "qid": "Q2016079",
+        "sitelinks": 13
+      },
+      {
+        "qid": "Q2459500",
+        "sitelinks": 13
+      }
+    ],
+    "max_competitor_sitelinks": 27,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0577": {
+    "id": "IKP_T3_0577",
+    "tier": "T3",
+    "qid": "Q236",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Montenegro",
+    "max_collision_count": 23,
+    "top_competitors": [
+      {
+        "qid": "Q1001470",
+        "sitelinks": 29
+      },
+      {
+        "qid": "Q357350",
+        "sitelinks": 28
+      },
+      {
+        "qid": "Q1256403",
+        "sitelinks": 20
+      },
+      {
+        "qid": "Q1808078",
+        "sitelinks": 13
+      },
+      {
+        "qid": "Q2408071",
+        "sitelinks": 8
+      }
+    ],
+    "max_competitor_sitelinks": 29,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0579": {
+    "id": "IKP_T3_0579",
+    "tier": "T3",
+    "qid": "Q18528",
+    "probe_sitelinks": 27,
+    "flag_lang": "ru",
+    "flag_label": "Уокинг",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q646225",
+        "sitelinks": 48
+      },
+      {
+        "qid": "Q2277849",
+        "sitelinks": 14
+      }
+    ],
+    "max_competitor_sitelinks": 48,
+    "dominance_ratio": 0.5625,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T3_0583": {
+    "id": "IKP_T3_0583",
+    "tier": "T3",
+    "qid": "Q1134929",
+    "probe_sitelinks": 12,
+    "flag_lang": "en",
+    "flag_label": "Nuclear Physics",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q7067982",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q87347209",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q126947662",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 4,
+    "dominance_ratio": 3.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0690": {
+    "id": "IKP_T4_0690",
+    "tier": "T4",
+    "qid": "Q3118081",
+    "probe_sitelinks": 3,
+    "flag_lang": "fr",
+    "flag_label": "Mouloudia Club d'Alger",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q1044640",
+        "sitelinks": 33
+      },
+      {
+        "qid": "Q16009339",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 33,
+    "dominance_ratio": 0.09090909090909091,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0695": {
+    "id": "IKP_T4_0695",
+    "tier": "T4",
+    "qid": "Q2473859",
+    "probe_sitelinks": 0,
+    "flag_lang": "en",
+    "flag_label": "Uganda Christian University",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q22910434",
+        "sitelinks": 0
+      },
+      {
+        "qid": "Q22969465",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 0,
+    "dominance_ratio": 0.0,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0698": {
+    "id": "IKP_T4_0698",
+    "tier": "T4",
+    "qid": "Q8643",
+    "probe_sitelinks": 5,
+    "flag_lang": "ru",
+    "flag_label": "Виченца",
+    "max_collision_count": 5,
+    "top_competitors": [
+      {
+        "qid": "Q6537",
+        "sitelinks": 112
+      },
+      {
+        "qid": "Q16316",
+        "sitelinks": 83
+      },
+      {
+        "qid": "Q1091431",
+        "sitelinks": 8
+      },
+      {
+        "qid": "Q3394897",
+        "sitelinks": 4
+      }
+    ],
+    "max_competitor_sitelinks": 112,
+    "dominance_ratio": 0.044642857142857144,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0704": {
+    "id": "IKP_T4_0704",
+    "tier": "T4",
+    "qid": "Q26363",
+    "probe_sitelinks": 27,
+    "flag_lang": "ru",
+    "flag_label": "Радник",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q5426356",
+        "sitelinks": 21
+      },
+      {
+        "qid": "Q11194764",
+        "sitelinks": 6
+      }
+    ],
+    "max_competitor_sitelinks": 21,
+    "dominance_ratio": 1.2857142857142858,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0714": {
+    "id": "IKP_T4_0714",
+    "tier": "T4",
+    "qid": "Q190561",
+    "probe_sitelinks": 64,
+    "flag_lang": "fr",
+    "flag_label": "Standard de Liège",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q127717",
+        "sitelinks": 11
+      },
+      {
+        "qid": "Q16677863",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 11,
+    "dominance_ratio": 5.818181818181818,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T4_0721": {
+    "id": "IKP_T4_0721",
+    "tier": "T4",
+    "qid": "Q18527",
+    "probe_sitelinks": 27,
+    "flag_lang": "ru",
+    "flag_label": "Тамуорт",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q414812",
+        "sitelinks": 18
+      },
+      {
+        "qid": "Q7170938",
+        "sitelinks": 10
+      }
+    ],
+    "max_competitor_sitelinks": 18,
+    "dominance_ratio": 1.5,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0725": {
+    "id": "IKP_T4_0725",
+    "tier": "T4",
+    "qid": "Q20809754",
+    "probe_sitelinks": 8,
+    "flag_lang": "fr",
+    "flag_label": "Chandragiri",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q3430006",
+        "sitelinks": 18
+      },
+      {
+        "qid": "Q5071336",
+        "sitelinks": 6
+      },
+      {
+        "qid": "Q63369923",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 18,
+    "dominance_ratio": 0.4444444444444444,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0729": {
+    "id": "IKP_T4_0729",
+    "tier": "T4",
+    "qid": "Q339694",
+    "probe_sitelinks": 14,
+    "flag_lang": "de",
+    "flag_label": "Sun-Yat-sen-Universität",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q178972",
+        "sitelinks": 26
+      },
+      {
+        "qid": "Q1211467",
+        "sitelinks": 6
+      }
+    ],
+    "max_competitor_sitelinks": 26,
+    "dominance_ratio": 0.5384615384615384,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0740": {
+    "id": "IKP_T4_0740",
+    "tier": "T4",
+    "qid": "Q2069687",
+    "probe_sitelinks": 23,
+    "flag_lang": "en",
+    "flag_label": "Fairlee",
+    "max_collision_count": 6,
+    "top_competitors": [
+      {
+        "qid": "Q3887055",
+        "sitelinks": 17
+      },
+      {
+        "qid": "Q1393287",
+        "sitelinks": 4
+      },
+      {
+        "qid": "Q5430524",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q5855369",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q37458672",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 17,
+    "dominance_ratio": 1.3529411764705883,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0743": {
+    "id": "IKP_T4_0743",
+    "tier": "T4",
+    "qid": "Q843097",
+    "probe_sitelinks": 27,
+    "flag_lang": "ru",
+    "flag_label": "Видовре",
+    "max_collision_count": 4,
+    "top_competitors": [
+      {
+        "qid": "Q512562",
+        "sitelinks": 42
+      },
+      {
+        "qid": "Q3590079",
+        "sitelinks": 18
+      },
+      {
+        "qid": "Q16286090",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 42,
+    "dominance_ratio": 0.6428571428571429,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0766": {
+    "id": "IKP_T4_0766",
+    "tier": "T4",
+    "qid": "Q326041",
+    "probe_sitelinks": 6,
+    "flag_lang": "en",
+    "flag_label": "Cancer",
+    "max_collision_count": 29,
+    "top_competitors": [
+      {
+        "qid": "Q8849",
+        "sitelinks": 103
+      },
+      {
+        "qid": "Q161701",
+        "sitelinks": 81
+      },
+      {
+        "qid": "Q188218",
+        "sitelinks": 48
+      },
+      {
+        "qid": "Q428243",
+        "sitelinks": 26
+      },
+      {
+        "qid": "Q1032888",
+        "sitelinks": 9
+      }
+    ],
+    "max_competitor_sitelinks": 103,
+    "dominance_ratio": 0.05825242718446602,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0782": {
+    "id": "IKP_T4_0782",
+    "tier": "T4",
+    "qid": "Q1572846",
+    "probe_sitelinks": 3,
+    "flag_lang": "en",
+    "flag_label": "Traffic",
+    "max_collision_count": 42,
+    "top_competitors": [
+      {
+        "qid": "Q142292",
+        "sitelinks": 48
+      },
+      {
+        "qid": "Q1048439",
+        "sitelinks": 33
+      },
+      {
+        "qid": "Q2633475",
+        "sitelinks": 19
+      },
+      {
+        "qid": "Q4462260",
+        "sitelinks": 15
+      },
+      {
+        "qid": "Q858200",
+        "sitelinks": 9
+      }
+    ],
+    "max_competitor_sitelinks": 48,
+    "dominance_ratio": 0.0625,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0790": {
+    "id": "IKP_T4_0790",
+    "tier": "T4",
+    "qid": "Q191189",
+    "probe_sitelinks": 15,
+    "flag_lang": "en",
+    "flag_label": "Zentrum Paul Klee",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q97767917",
+        "sitelinks": 1
+      },
+      {
+        "qid": "Q69310203",
+        "sitelinks": 0
+      }
+    ],
+    "max_competitor_sitelinks": 1,
+    "dominance_ratio": 15.0,
+    "is_dominant": true,
+    "real_ambiguity": false
+  },
+  "IKP_T4_0792": {
+    "id": "IKP_T4_0792",
+    "tier": "T4",
+    "qid": "Q2723791",
+    "probe_sitelinks": 23,
+    "flag_lang": "en",
+    "flag_label": "Haddam",
+    "max_collision_count": 3,
+    "top_competitors": [
+      {
+        "qid": "Q596187",
+        "sitelinks": 33
+      },
+      {
+        "qid": "Q366197",
+        "sitelinks": 9
+      }
+    ],
+    "max_competitor_sitelinks": 33,
+    "dominance_ratio": 0.696969696969697,
+    "is_dominant": false,
+    "real_ambiguity": true
+  },
+  "IKP_T4_0795": {
+    "id": "IKP_T4_0795",
+    "tier": "T4",
+    "qid": "Q2348930",
+    "probe_sitelinks": 17,
+    "flag_lang": "en",
+    "flag_label": "Tunbridge",
+    "max_collision_count": 6,
+    "top_competitors": [
+      {
+        "qid": "Q7852822",
+        "sitelinks": 9
+      },
+      {
+        "qid": "Q7852823",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q7852824",
+        "sitelinks": 3
+      },
+      {
+        "qid": "Q7852826",
+        "sitelinks": 2
+      },
+      {
+        "qid": "Q28146519",
+        "sitelinks": 1
+      }
+    ],
+    "max_competitor_sitelinks": 9,
+    "dominance_ratio": 1.8888888888888888,
+    "is_dominant": false,
+    "real_ambiguity": true
+  }
+}

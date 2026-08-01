@@ -1,0 +1,1147 @@
+{
+  "schema": "frontier-parameter-prospective-freeze/v1",
+  "freeze_id": "frontier-parameters-2026-07-31-v1",
+  "status": "LOCKED_PRE_DISCLOSURE",
+  "locked_at_utc": "2026-07-31T03:22:39Z",
+  "forecast_snapshot_date": "2026-07-31",
+  "repository_state": {
+    "git_head": "abc33edca3ba1c0e1662cebe7f6c43bae0119ddf",
+    "branch": "agent/publish-frontier-parameter-model",
+    "worktree_dirty_at_lock": true,
+    "note": "File-level hashes, not the Git head alone, identify the exact dirty-worktree forecast state."
+  },
+  "targets": [
+    {
+      "identity": {
+        "model_id": "claude-fable-5",
+        "canonical_name": "Claude Fable 5",
+        "provider": "Anthropic",
+        "release_date": "2026-06-09",
+        "checkpoint_scope": "the named base checkpoint only",
+        "serving_fallback_excluded": "Claude Opus 4.8",
+        "identity_note": "Score the named Fable 5 base checkpoint, not its fallback-enabled serving cascade or Mythos 5.",
+        "parameter_status_at_freeze": "undisclosed",
+        "outcome_at_freeze": null
+      },
+      "forecast": {
+        "unit": "trillion total parameters",
+        "evidence_center_t": 4.731857984602975,
+        "final_center_t": 4.548292155336898,
+        "one_decimal_display_t": 4.5,
+        "factor_values_t": {
+          "aa": 4.016370921146617,
+          "eci": 3.0885868628263564,
+          "price": 3.48028632934279,
+          "horizon": 6.59544467651061,
+          "compute": 2.4775210449595826,
+          "ikp": 3.6426590968396315,
+          "crowd": 4.371847506331046
+        },
+        "weights": {
+          "requested_default_weights_percent": {
+            "aa": 9.5625,
+            "eci": 9.5625,
+            "price": 3.375,
+            "horizon": 25.0,
+            "compute": 2.5,
+            "ikp": 0.0,
+            "crowd": 50.0
+          },
+          "model_raw_weights_after_missing_signal_reallocation": {
+            "aa": 9.5625,
+            "eci": 9.5625,
+            "price": 3.375,
+            "horizon": 25.0,
+            "compute": 2.5,
+            "crowd": 50.0
+          },
+          "final_effective_weights_fraction": {
+            "aa": 0.095625,
+            "eci": 0.095625,
+            "price": 0.03375,
+            "horizon": 0.25,
+            "compute": 0.025,
+            "crowd": 0.5
+          },
+          "evidence_only_effective_weights_fraction": {
+            "aa": 0.19125,
+            "eci": 0.19125,
+            "price": 0.0675,
+            "horizon": 0.5,
+            "compute": 0.05
+          }
+        },
+        "empirical_intervals": {
+          "50": {
+            "coverage": 0.5,
+            "group_field": "developer",
+            "calibration_groups": 10,
+            "calibration_families": 10,
+            "calibration_developers": 10,
+            "order_statistic_rank": 6,
+            "raw_order_statistic_rank": 6,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 2.005713868884617,
+            "calibration_scope": "target_pre_release_developers",
+            "conservative_max_of_current_and_target_chronological": false,
+            "low_t": 2.3591889441510294,
+            "high_t": 9.490753185310599,
+            "center_basis": "evidence_center_t"
+          },
+          "80": {
+            "coverage": 0.8,
+            "group_field": "developer",
+            "calibration_groups": 11,
+            "calibration_families": 11,
+            "calibration_developers": 11,
+            "order_statistic_rank": 10,
+            "raw_order_statistic_rank": 10,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 6.1864280178083515,
+            "calibration_scope": "current_frontier_developers",
+            "conservative_max_of_current_and_target_chronological": true,
+            "low_t": 0.7648772394961636,
+            "high_t": 29.273298812238004,
+            "center_basis": "evidence_center_t"
+          },
+          "90": {
+            "coverage": 0.9,
+            "group_field": "developer",
+            "calibration_groups": 11,
+            "calibration_families": 11,
+            "calibration_developers": 11,
+            "order_statistic_rank": 11,
+            "raw_order_statistic_rank": 11,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 7.228806124548564,
+            "calibration_scope": "current_frontier_developers",
+            "conservative_max_of_current_and_target_chronological": true,
+            "low_t": 0.654583606625427,
+            "high_t": 34.20568397959201,
+            "center_basis": "evidence_center_t"
+          }
+        },
+        "interval_calibration": {
+          "cohort": "frontier_like",
+          "calibration_rows": 24,
+          "calibration_families": 11,
+          "calibration_developers": 11,
+          "target_chronological_calibration_rows": 22,
+          "target_chronological_calibration_developers": 10
+        }
+      },
+      "crowd_pool": {
+        "pooled_into_final": true,
+        "records": [
+          {
+            "forecast_id": "r01-fable-20260717",
+            "contributor": "Respondent R01",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0-3.5T",
+            "low_t": 3.0,
+            "high_t": 3.5,
+            "stated_central_t": null,
+            "pool_point_t": 3.24037034920393,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Direct statement from Respondent R01 in this Codex task.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r02-fable-20260717",
+            "contributor": "Respondent R02",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "4.0-6.0T",
+            "low_t": 4.0,
+            "high_t": 6.0,
+            "stated_central_t": null,
+            "pool_point_t": 4.898979485566356,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r03-fable-20260717",
+            "contributor": "Respondent R03",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "0.8-1.2T",
+            "low_t": 0.8,
+            "high_t": 1.2,
+            "stated_central_t": null,
+            "pool_point_t": 0.9797958971132712,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r04-fable-20260717",
+            "contributor": "Respondent R04",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "6.0T",
+            "low_t": 6.0,
+            "high_t": 6.0,
+            "stated_central_t": 6.0,
+            "pool_point_t": 6.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r05-fable-20260717",
+            "contributor": "Respondent R05",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0-20.0T",
+            "low_t": 3.0,
+            "high_t": 20.0,
+            "stated_central_t": null,
+            "pool_point_t": 7.745966692414834,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r06-fable-20260717",
+            "contributor": "Respondent R06",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "1.0-2.0T",
+            "low_t": 1.0,
+            "high_t": 2.0,
+            "stated_central_t": null,
+            "pool_point_t": 1.4142135623730951,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r07-fable-20260717",
+            "contributor": "Respondent R07",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0T",
+            "low_t": 3.0,
+            "high_t": 3.0,
+            "stated_central_t": 3.0,
+            "pool_point_t": 3.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r08-fable-20260717",
+            "contributor": "Respondent R08",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "6.0T",
+            "low_t": 6.0,
+            "high_t": 6.0,
+            "stated_central_t": 6.0,
+            "pool_point_t": 6.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r10-fable-20260717",
+            "contributor": "Respondent R10",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "4.0T",
+            "low_t": 4.0,
+            "high_t": 4.0,
+            "stated_central_t": 4.0,
+            "pool_point_t": 4.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r11-fable-20260717",
+            "contributor": "Respondent R11",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "6.1T",
+            "low_t": 6.1,
+            "high_t": 6.1,
+            "stated_central_t": 6.1,
+            "pool_point_t": 6.1,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r12-fable-20260717",
+            "contributor": "Respondent R12",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "10.0T",
+            "low_t": 10.0,
+            "high_t": 10.0,
+            "stated_central_t": 10.0,
+            "pool_point_t": 10.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r13-fable-20260717",
+            "contributor": "Respondent R13",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "2.0-10.0T",
+            "low_t": 2.0,
+            "high_t": 10.0,
+            "stated_central_t": null,
+            "pool_point_t": 4.47213595499958,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "95% CI",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r14-fable-20260717",
+            "contributor": "Respondent R14",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "2.5T",
+            "low_t": 2.5,
+            "high_t": 2.5,
+            "stated_central_t": 2.5,
+            "pool_point_t": 2.5,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r15-fable-20260717",
+            "contributor": "Respondent R15",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "4.5T",
+            "low_t": 4.5,
+            "high_t": 4.5,
+            "stated_central_t": 4.5,
+            "pool_point_t": 4.5,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r16-fable-20260717",
+            "contributor": "Respondent R16",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "6.4T (range 5.0-7.0T)",
+            "low_t": 5.0,
+            "high_t": 7.0,
+            "stated_central_t": 6.4,
+            "pool_point_t": 6.4,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": "Stated central forecast retained separately from the range."
+          },
+          {
+            "forecast_id": "r17-fable-20260717",
+            "contributor": "Respondent R17",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "1.8-6.0T",
+            "low_t": 1.8,
+            "high_t": 6.0,
+            "stated_central_t": null,
+            "pool_point_t": 3.286335345030997,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r18-fable-20260717",
+            "contributor": "Respondent R18",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "5.0-10.0T",
+            "low_t": 5.0,
+            "high_t": 10.0,
+            "stated_central_t": null,
+            "pool_point_t": 7.0710678118654755,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r19-fable-20260717",
+            "contributor": "Respondent R19",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0-10.0T",
+            "low_t": 3.0,
+            "high_t": 10.0,
+            "stated_central_t": null,
+            "pool_point_t": 5.477225575051661,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r20-fable-20260718",
+            "contributor": "Respondent R20",
+            "forecast_date": "2026-07-18",
+            "forecast_text": "5.0T",
+            "low_t": 5.0,
+            "high_t": 5.0,
+            "stated_central_t": 5.0,
+            "pool_point_t": 5.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r21-fable-20260718",
+            "contributor": "Respondent R21",
+            "forecast_date": "2026-07-18",
+            "forecast_text": "5.0-10.0T",
+            "low_t": 5.0,
+            "high_t": 10.0,
+            "stated_central_t": null,
+            "pool_point_t": 7.0710678118654755,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          }
+        ],
+        "n": 20,
+        "geometric_center_t": 4.371847506331046,
+        "policy": "equal weight per active contributor record in log space"
+      }
+    },
+    {
+      "identity": {
+        "model_id": "gpt-56-sol",
+        "canonical_name": "GPT-5.6 Sol",
+        "provider": "OpenAI",
+        "release_date": "2026-07-09",
+        "checkpoint_scope": "the named base checkpoint only",
+        "serving_fallback_excluded": null,
+        "identity_note": "Score the named GPT-5.6 Sol base checkpoint; do not substitute Terra, Luna, GPT-5.5, or a later Sol revision.",
+        "parameter_status_at_freeze": "undisclosed",
+        "outcome_at_freeze": null
+      },
+      "forecast": {
+        "unit": "trillion total parameters",
+        "evidence_center_t": 3.081003239637193,
+        "final_center_t": 3.145668582841,
+        "one_decimal_display_t": 3.1,
+        "factor_values_t": {
+          "aa": 3.3972189184817907,
+          "eci": 3.378210011120845,
+          "price": 2.838375200042036,
+          "horizon": 2.9850434724007573,
+          "compute": 2.2851690247440986,
+          "ikp": null,
+          "crowd": 3.2116911484449235
+        },
+        "weights": {
+          "requested_default_weights_percent": {
+            "aa": 9.5625,
+            "eci": 9.5625,
+            "price": 3.375,
+            "horizon": 25.0,
+            "compute": 2.5,
+            "ikp": 0.0,
+            "crowd": 50.0
+          },
+          "model_raw_weights_after_missing_signal_reallocation": {
+            "aa": 9.5625,
+            "eci": 9.5625,
+            "price": 3.375,
+            "horizon": 25.0,
+            "compute": 2.5,
+            "crowd": 50.0
+          },
+          "final_effective_weights_fraction": {
+            "aa": 0.095625,
+            "eci": 0.095625,
+            "price": 0.03375,
+            "horizon": 0.25,
+            "compute": 0.025,
+            "crowd": 0.5
+          },
+          "evidence_only_effective_weights_fraction": {
+            "aa": 0.19125,
+            "eci": 0.19125,
+            "price": 0.0675,
+            "horizon": 0.5,
+            "compute": 0.05
+          }
+        },
+        "empirical_intervals": {
+          "50": {
+            "coverage": 0.5,
+            "group_field": "developer",
+            "calibration_groups": 9,
+            "calibration_families": 9,
+            "calibration_developers": 9,
+            "order_statistic_rank": 5,
+            "raw_order_statistic_rank": 5,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 2.005713868884617,
+            "calibration_scope": "target_pre_release_developers",
+            "conservative_max_of_current_and_target_chronological": false,
+            "low_t": 1.5361130455514813,
+            "high_t": 6.179610927818753,
+            "center_basis": "evidence_center_t"
+          },
+          "80": {
+            "coverage": 0.8,
+            "group_field": "developer",
+            "calibration_groups": 10,
+            "calibration_families": 10,
+            "calibration_developers": 10,
+            "order_statistic_rank": 9,
+            "raw_order_statistic_rank": 9,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 6.1864280178083515,
+            "calibration_scope": "current_frontier_developers",
+            "conservative_max_of_current_and_target_chronological": true,
+            "low_t": 0.4980262003806021,
+            "high_t": 19.06040476464983,
+            "center_basis": "evidence_center_t"
+          },
+          "90": {
+            "coverage": 0.9,
+            "group_field": "developer",
+            "calibration_groups": 10,
+            "calibration_families": 10,
+            "calibration_developers": 10,
+            "order_statistic_rank": 10,
+            "raw_order_statistic_rank": 10,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 7.228806124548564,
+            "calibration_scope": "current_frontier_developers",
+            "conservative_max_of_current_and_target_chronological": true,
+            "low_t": 0.42621190644113455,
+            "high_t": 22.27197508844331,
+            "center_basis": "evidence_center_t"
+          }
+        },
+        "interval_calibration": {
+          "cohort": "frontier_like",
+          "calibration_rows": 23,
+          "calibration_families": 10,
+          "calibration_developers": 10,
+          "target_chronological_calibration_rows": 22,
+          "target_chronological_calibration_developers": 9
+        }
+      },
+      "crowd_pool": {
+        "pooled_into_final": true,
+        "records": [
+          {
+            "forecast_id": "r01-sol-20260717",
+            "contributor": "Respondent R01",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "2.5-2.8T",
+            "low_t": 2.5,
+            "high_t": 2.8,
+            "stated_central_t": null,
+            "pool_point_t": 2.6457513110645907,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Direct statement from Respondent R01 in this Codex task.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r02-sol-20260717",
+            "contributor": "Respondent R02",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "1.5-2.5T",
+            "low_t": 1.5,
+            "high_t": 2.5,
+            "stated_central_t": null,
+            "pool_point_t": 1.9364916731037085,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r03-sol-20260717",
+            "contributor": "Respondent R03",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "0.6-1.0T",
+            "low_t": 0.6,
+            "high_t": 1.0,
+            "stated_central_t": null,
+            "pool_point_t": 0.7745966692414834,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r04-sol-20260717",
+            "contributor": "Respondent R04",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "2.5T",
+            "low_t": 2.5,
+            "high_t": 2.5,
+            "stated_central_t": 2.5,
+            "pool_point_t": 2.5,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r06-sol-20260717",
+            "contributor": "Respondent R06",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "1.0-2.0T",
+            "low_t": 1.0,
+            "high_t": 2.0,
+            "stated_central_t": null,
+            "pool_point_t": 1.4142135623730951,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r07-sol-20260717",
+            "contributor": "Respondent R07",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0T",
+            "low_t": 3.0,
+            "high_t": 3.0,
+            "stated_central_t": 3.0,
+            "pool_point_t": 3.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r08-sol-20260717",
+            "contributor": "Respondent R08",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "6.0T",
+            "low_t": 6.0,
+            "high_t": 6.0,
+            "stated_central_t": 6.0,
+            "pool_point_t": 6.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r09-sol-20260717",
+            "contributor": "Respondent R09",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "2.0-4.0T",
+            "low_t": 2.0,
+            "high_t": 4.0,
+            "stated_central_t": null,
+            "pool_point_t": 2.8284271247461903,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r10-sol-20260717",
+            "contributor": "Respondent R10",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0T",
+            "low_t": 3.0,
+            "high_t": 3.0,
+            "stated_central_t": 3.0,
+            "pool_point_t": 3.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r11-sol-20260717",
+            "contributor": "Respondent R11",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "4.7T",
+            "low_t": 4.7,
+            "high_t": 4.7,
+            "stated_central_t": 4.7,
+            "pool_point_t": 4.7,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r12-sol-20260717",
+            "contributor": "Respondent R12",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "4.0T",
+            "low_t": 4.0,
+            "high_t": 4.0,
+            "stated_central_t": 4.0,
+            "pool_point_t": 4.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r13-sol-20260717",
+            "contributor": "Respondent R13",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "1.5-5.0T",
+            "low_t": 1.5,
+            "high_t": 5.0,
+            "stated_central_t": null,
+            "pool_point_t": 2.7386127875258306,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "95% CI",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r14-sol-20260717",
+            "contributor": "Respondent R14",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0T",
+            "low_t": 3.0,
+            "high_t": 3.0,
+            "stated_central_t": 3.0,
+            "pool_point_t": 3.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r15-sol-20260717",
+            "contributor": "Respondent R15",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "6.5T",
+            "low_t": 6.5,
+            "high_t": 6.5,
+            "stated_central_t": 6.5,
+            "pool_point_t": 6.5,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r16-sol-20260717",
+            "contributor": "Respondent R16",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "5.2T (range 4.0-6.0T)",
+            "low_t": 4.0,
+            "high_t": 6.0,
+            "stated_central_t": 5.2,
+            "pool_point_t": 5.2,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": "Stated central forecast retained separately from the range."
+          },
+          {
+            "forecast_id": "r18-sol-20260717",
+            "contributor": "Respondent R18",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "5.0-10.0T",
+            "low_t": 5.0,
+            "high_t": 10.0,
+            "stated_central_t": null,
+            "pool_point_t": 7.0710678118654755,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r19-sol-20260717",
+            "contributor": "Respondent R19",
+            "forecast_date": "2026-07-17",
+            "forecast_text": "3.0-10.0T",
+            "low_t": 3.0,
+            "high_t": 10.0,
+            "stated_central_t": null,
+            "pool_point_t": 5.477225575051661,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r20-sol-20260718",
+            "contributor": "Respondent R20",
+            "forecast_date": "2026-07-18",
+            "forecast_text": "2.0T",
+            "low_t": 2.0,
+            "high_t": 2.0,
+            "stated_central_t": 2.0,
+            "pool_point_t": 2.0,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          },
+          {
+            "forecast_id": "r21-sol-20260718",
+            "contributor": "Respondent R21",
+            "forecast_date": "2026-07-18",
+            "forecast_text": "3.0-8.0T",
+            "low_t": 3.0,
+            "high_t": 8.0,
+            "stated_central_t": null,
+            "pool_point_t": 4.898979485566356,
+            "pool_point_rule": "stated central if supplied; otherwise geometric midpoint of bounds",
+            "confidence": "not specified",
+            "provenance": "Relayed by project owner; source not attached.",
+            "notes": ""
+          }
+        ],
+        "n": 19,
+        "geometric_center_t": 3.2116911484449235,
+        "policy": "equal weight per active contributor record in log space"
+      }
+    },
+    {
+      "identity": {
+        "model_id": "claude-opus-5",
+        "canonical_name": "Claude Opus 5",
+        "provider": "Anthropic",
+        "release_date": "2026-07-24",
+        "checkpoint_scope": "the named base checkpoint only",
+        "serving_fallback_excluded": "Claude Opus 4.8",
+        "identity_note": "Score the distinct Opus 5 base checkpoint, not the Opus 4.8 fallback or another Claude 5 checkpoint.",
+        "parameter_status_at_freeze": "undisclosed",
+        "outcome_at_freeze": null
+      },
+      "forecast": {
+        "unit": "trillion total parameters",
+        "evidence_center_t": 3.003794890426257,
+        "final_center_t": 3.003794890426257,
+        "one_decimal_display_t": 3.0,
+        "factor_values_t": {
+          "aa": 3.964375492233051,
+          "eci": 2.53440192011516,
+          "price": 2.4110202558207794,
+          "horizon": 3.042296195182693,
+          "compute": 2.3581807647976416,
+          "ikp": null,
+          "crowd": null
+        },
+        "weights": {
+          "requested_default_weights_percent": {
+            "aa": 9.5625,
+            "eci": 9.5625,
+            "price": 3.375,
+            "horizon": 25.0,
+            "compute": 2.5,
+            "ikp": 0.0,
+            "crowd": 50.0
+          },
+          "model_raw_weights_after_missing_signal_reallocation": {
+            "aa": 9.5625,
+            "eci": 9.5625,
+            "price": 3.375,
+            "horizon": 25.0,
+            "compute": 2.5
+          },
+          "final_effective_weights_fraction": {
+            "aa": 0.19125,
+            "eci": 0.19125,
+            "price": 0.0675,
+            "horizon": 0.5,
+            "compute": 0.05
+          },
+          "evidence_only_effective_weights_fraction": {
+            "aa": 0.19125,
+            "eci": 0.19125,
+            "price": 0.0675,
+            "horizon": 0.5,
+            "compute": 0.05
+          }
+        },
+        "empirical_intervals": {
+          "50": {
+            "coverage": 0.5,
+            "group_field": "developer",
+            "calibration_groups": 11,
+            "calibration_families": 11,
+            "calibration_developers": 11,
+            "order_statistic_rank": 6,
+            "raw_order_statistic_rank": 6,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 2.005713868884617,
+            "calibration_scope": "target_pre_release_developers",
+            "conservative_max_of_current_and_target_chronological": false,
+            "low_t": 1.4976188463495423,
+            "high_t": 6.024753071012691,
+            "center_basis": "evidence_center_t"
+          },
+          "80": {
+            "coverage": 0.8,
+            "group_field": "developer",
+            "calibration_groups": 11,
+            "calibration_families": 11,
+            "calibration_developers": 11,
+            "order_statistic_rank": 10,
+            "raw_order_statistic_rank": 10,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 6.1864280178083515,
+            "calibration_scope": "target_pre_release_developers",
+            "conservative_max_of_current_and_target_chronological": true,
+            "low_t": 0.4855459211324345,
+            "high_t": 18.582760869882563,
+            "center_basis": "evidence_center_t"
+          },
+          "90": {
+            "coverage": 0.9,
+            "group_field": "developer",
+            "calibration_groups": 11,
+            "calibration_families": 11,
+            "calibration_developers": 11,
+            "order_statistic_rank": 11,
+            "raw_order_statistic_rank": 11,
+            "upper_rank_clipped": false,
+            "multiplicative_factor": 7.228806124548564,
+            "calibration_scope": "target_pre_release_developers",
+            "conservative_max_of_current_and_target_chronological": true,
+            "low_t": 0.4155312562921782,
+            "high_t": 21.713850900801006,
+            "center_basis": "evidence_center_t"
+          }
+        },
+        "interval_calibration": {
+          "cohort": "frontier_like",
+          "calibration_rows": 24,
+          "calibration_families": 11,
+          "calibration_developers": 11,
+          "target_chronological_calibration_rows": 24,
+          "target_chronological_calibration_developers": 11
+        }
+      },
+      "crowd_pool": {
+        "pooled_into_final": false,
+        "records": [],
+        "n": 0,
+        "geometric_center_t": null,
+        "policy": "equal weight per active contributor record in log space"
+      }
+    }
+  ],
+  "live_policy": {
+    "combination": "Factors are combined in log space. Missing signals are renormalized inside the evidence block, so adding an Fable-only measurement does not silently change Sol's 50% crowd weight.",
+    "anchors": "Disclosed Kimi K3 and Grok 4.5 totals remain fixed under every weighting scenario.",
+    "crowd_calibration": "crowd forecasts affect the displayed center but are not treated as independent calibration data and do not narrow intervals",
+    "interval_method": {
+      "primary_cohort": "frontier_like",
+      "error_source": "strictly-earlier chronological model-lineage-held-out ensemble predictions, clustered to one latest residual per canonical developer",
+      "family_policy": "latest eligible residual per canonical developer; model-series lineage factors are retained as a comparison only",
+      "interval_policy": "symmetric multiplicative split-conformal order statistic",
+      "tail_policy": "50% remains target-chronological and descriptive; published 80%/90% factors take the conservative maximum of target-chronological and all currently observed eligible developer factors",
+      "levels": [
+        0.5,
+        0.8,
+        0.9
+      ],
+      "crowd_policy": "crowd forecasts affect the displayed center but are not treated as independent calibration data and do not narrow intervals"
+    },
+    "zero_weight_diagnostic": {
+      "name": "archive-vintage knowledge-residual challenger",
+      "incremental_live_weight": 0.0,
+      "reason": "predeclared archive-vintage coverage and target-coverage gates failed"
+    }
+  },
+  "evaluation_policy": {
+    "post_outcome_refitting": "FORBIDDEN",
+    "locked_fields": [
+      "target identities",
+      "evidence and final centers",
+      "factor values and weights",
+      "crowd membership and pool points",
+      "empirical interval factors and bounds",
+      "scoring and disclosure-resolution rules"
+    ],
+    "primary_outcome": "officially disclosed unique trainable total parameter count of the named base checkpoint, expressed in trillions",
+    "moe_rule": "Use total parameters, not per-token active parameters, for the primary score. Record active parameters only as a secondary fact.",
+    "fallback_and_cascade_rule": "Exclude serving fallbacks, routers, tool models, and cascade components. If the provider discloses only a multi-model system total and does not identify the named base checkpoint, leave the target unresolved.",
+    "source_priority": [
+      "provider technical report or model/system card",
+      "provider model repository or architecture configuration",
+      "provider-authored announcement with an explicit exact count"
+    ],
+    "unacceptable_outcome_sources": [
+      "rumor or anonymous claim",
+      "third-party estimate",
+      "benchmark-implied estimate",
+      "API price or throughput inference"
+    ],
+    "rounded_or_range_disclosure": "Do not assign an exact point score from an approximate or bounded disclosure. Report range compatibility separately and wait for an exact first-party total before point scoring.",
+    "primary_point_forecast": "final_center_t",
+    "secondary_point_forecast": "evidence_center_t",
+    "point_metrics": {
+      "absolute_log10_error": "abs(log10(forecast_t / actual_t))",
+      "multiplicative_error": "max(forecast_t / actual_t, actual_t / forecast_t)"
+    },
+    "interval_metrics": "For each frozen 50%, 80%, and 90% interval, report whether the exact actual total lies inside the inclusive [low_t, high_t] bounds.",
+    "multi_target_summary": {
+      "mean_absolute_log10_error": "arithmetic mean across resolved targets",
+      "geometric_mean_multiplicative_error": "10 ** mean_absolute_log10_error",
+      "no_target_weighting": "each resolved target receives equal weight"
+    },
+    "amendment_rule": "Before any qualifying outcome is known, a factual-transcription correction may be recorded only in a new append-only amendment that cites this freeze digest and preserves the original. After any qualifying outcome is known, no forecast, identity, weight, crowd record, interval, or scoring change is permitted.",
+    "evaluation_record_rule": "Evaluation must be a new append-only artifact that cites the frozen payload digest and hashes the qualifying first-party disclosure. Never regenerate or replace this freeze with outcomes included."
+  },
+  "path_hashes": {
+    "source_files": [
+      {
+        "path": "sources/human_parameter_forecasts_2026-07-17.csv",
+        "sha256": "dbabb22c2028796dfed5daf919a211d1db10c8f293f42b72490d7be502617975",
+        "role": "source"
+      },
+      {
+        "path": "sources/frontier_primary_evidence_2026-07-18.csv",
+        "sha256": "5ab835b72b154124c0516384ec6f2d8d0b8c3a60d7fd2a0377f2eb22d5f1173e",
+        "role": "source"
+      },
+      {
+        "path": "sources/claude_opus_5_evidence_2026-07-31.json",
+        "sha256": "f2277d6b2608ba418257eda09b83a198600d466c2d1a1d6c5a56e28f30317ae5",
+        "role": "source"
+      },
+      {
+        "path": "sources/kimi_k3_release_evidence_2026-07-31.json",
+        "sha256": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+        "role": "source"
+      },
+      {
+        "path": "sources/epoch_eci_benchmarks_2026-07-31.csv",
+        "sha256": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+        "role": "source"
+      }
+    ],
+    "generated_outputs": [
+      {
+        "path": "site/public/data/forecast-model.json",
+        "sha256": "55a4d26b2ee03a2838f1420bc09f781a9afc9ea7005dbfe5b38d0bf9dcaad9b0",
+        "role": "generated output"
+      },
+      {
+        "path": "site/public/data/predictive-uncertainty.json",
+        "sha256": "d5fef8efe70d4998ad1805434e7c4e130e26f79c866c1b1ecc6c695b56e3e6dc",
+        "role": "generated output"
+      },
+      {
+        "path": "regression_results.json",
+        "sha256": "65b30dac220a13c524e4fd9026354a48d68e2e63c888ea8baa4c48337efd75c6",
+        "role": "generated output"
+      },
+      {
+        "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_model_crowd_50pct_2026-07-17.xlsx",
+        "sha256": "5c1b48716838691ef210a1190338ca952b968bf8b886c107e2458ee94518dabc",
+        "role": "generated output"
+      },
+      {
+        "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_predictive_uncertainty_2026-07-18.json",
+        "sha256": "d5fef8efe70d4998ad1805434e7c4e130e26f79c866c1b1ecc6c695b56e3e6dc",
+        "role": "generated output"
+      },
+      {
+        "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_chronological_backtest_2026-07-17.json",
+        "sha256": "9ee71f3dcaa9a75d73c243ea9ce3b6a5d88271bc81378ecadd716d13fc02bce5",
+        "role": "generated output"
+      },
+      {
+        "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/parameter_developer_vintage_sensitivity_2026-07-31.json",
+        "sha256": "6c6df2d935992e51c3ec19933ec8cb0acb554d1b12b28a3ab0e2bc9191b26449",
+        "role": "generated output"
+      },
+      {
+        "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_vintage_knowledge_residual_audit_2026-07-31.json",
+        "sha256": "f84bb9e201a0433ad7a766598699a84a7a284ff22c01e7c6117e5314001bff98",
+        "role": "generated output"
+      }
+    ],
+    "forecast_code": [
+      {
+        "path": "build_horizon_informed_model.mjs",
+        "sha256": "248bc54e42ca114e51dbbd96a4b195d40c12e8b9667a996850b5d3be5dcfb07f",
+        "role": "code"
+      },
+      {
+        "path": "generate_forecast_site_data.py",
+        "sha256": "a629b65213c813fd77d1dc00c8290074671216ac0b6f486ab76a7be38d7f6f4c",
+        "role": "code"
+      },
+      {
+        "path": "analyze_parameter_predictive_uncertainty.py",
+        "sha256": "ed5e14c44018ae70452de5f56416fc515c2b00fb5c78bc07166ee295ccf6c3c1",
+        "role": "code"
+      },
+      {
+        "path": "run_parameter_backtest.py",
+        "sha256": "d8b6f9f1706ea23ef91b747055f12f31aa2357d3003cad93137b9a68a27b30b2",
+        "role": "code"
+      },
+      {
+        "path": "frontier_target_signals.py",
+        "sha256": "33c69f5836fee87e373b6b2ba89cc9fbbfc4babaf9321f698e0c77b8ecf3bf94",
+        "role": "code"
+      },
+      {
+        "path": "site/app/page.tsx",
+        "sha256": "9badc3103475d67b3c696e3bd0596e38d41027b57e6baf292a4bc288934a983a",
+        "role": "code"
+      },
+      {
+        "path": "build_prospective_forecast_freeze.py",
+        "sha256": "8f544a9949b604249219165712a8b3e9650dcbd3f11cce556c4ed397607a8fd3",
+        "role": "code"
+      },
+      {
+        "path": "verify_prospective_forecast_freeze.py",
+        "sha256": "051e29ff32259bc3e47b5d46d3bd36f9e2b6882c62e9a8437a5e1cd87c0ef5c8",
+        "role": "code"
+      },
+      {
+        "path": "tests/test_prospective_forecast_freeze.py",
+        "sha256": "cb9ca47edbb76ea5f08da6bd0ef108f17d8b42ec0db332a79436a0b5560fe188",
+        "role": "code"
+      }
+    ]
+  },
+  "commitment_note": "SHA-256 detects mutation but is not an external timestamp by itself. Commit and push this freeze and detached digest before any qualifying disclosure.",
+  "privacy_redaction": {
+    "schema": "poll-respondent-privacy-redaction/v1",
+    "redacted_at_utc": "2026-08-01T00:00:00Z",
+    "reason": "User-requested removal of poll respondent identities",
+    "prior_artifact_sha256": "0ed93f398ad2f80f8c7b76ce7d7add4b017ab45b53a0f14303d47613ae9ac785",
+    "prior_canonical_payload_sha256": "1d5cbe253bf441578a6f6a504ef52c10a4c6b18834201c8fb3e374637cf6ddc9",
+    "redacted_fields": [
+      "forecast_id",
+      "contributor",
+      "provenance",
+      "notes"
+    ],
+    "stable_anonymous_ids_preserve_cross_target_pairing": true,
+    "name_to_id_mapping_retained": false,
+    "numerical_values_changed": false,
+    "numerical_projection_sha256": "c3379b3a09b52e690a3192d9132e6fa395414d37b3b3c24de83225723ed34e21",
+    "original_name_bearing_bytes_retained_in_current_tree": false
+  },
+  "artifact_integrity": {
+    "algorithm": "sha256",
+    "canonicalization": "UTF-8 JSON of the artifact excluding artifact_integrity; keys sorted; separators ',' and ':'; ensure_ascii=false; allow_nan=false",
+    "canonical_payload_sha256": "5cc0af21e5bbbc333e10e08ba7e92401e7357d539f493bb0697dfbffbfe697d6"
+  }
+}

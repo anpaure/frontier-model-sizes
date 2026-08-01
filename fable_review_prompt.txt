@@ -1,0 +1,48 @@
+Act as an independent senior research reviewer. Inspect this entire working directory yourself and decide whether the frontier-model parameter estimates are defensible. Run loose: use Read and Bash freely to inspect files, parse JSON, inspect scripts, and check calculations. This is an audit only: do not modify, delete, or create project files.
+
+Current date: 2026-07-17.
+
+Start by locating and reading all relevant material. At minimum inspect:
+- regression_results.json (full open-weight calibration data, fits, validation, frontier inputs)
+- fable_review_workbook_dump.txt (plaintext inspection of the user-supplied ECI workbook and the final cross-check workbook)
+- build_k3_calibrated_crosscheck.mjs (K3 calibration, AA/ECI blending, date-effect and family-leakage audit)
+- build_price_informed_crosscheck.mjs (official API-pricing cross-fit and final estimates)
+- the xlsx workbooks under outputs/019f6c42-2d53-7743-ab07-6293e2618dd7 if useful
+- the visualization fragment frontier-parameters-clean.html under the thread-scoped visualization path if useful
+
+Facts/decisions imposed by the user:
+- Kimi K3 is a disclosed 2.8T-total model with exact Artificial Analysis Intelligence Index 57.1123394372091.
+- Grok 4.5 is pegged at a founder-disclosed 1.5T foundation scale; active parameters are unknown.
+- Claude Opus 4.7 and 4.8 are one shared base, not independent parameter observations.
+- Claude Fable 5 must be treated as a regular model in the displayed comparison.
+- Gemini and uncertainty whiskers have been removed from the current graphic as presentation choices; do not treat that as evidence that uncertainty is small.
+
+The current displayed central totals are:
+- Claude Fable 5: 3.420619T
+- GPT-5.6 Sol: 3.337143T
+- Kimi K3: 2.800000T disclosed
+- GPT-5.5: 2.672015T
+- Claude Opus 4.7/4.8 shared base: 2.331833T
+- GPT-5.6 Terra: 2.263004T
+- Claude Sonnet 5: 1.561645T
+- GPT-5.6 Luna: 1.548997T
+- Grok 4.5: 1.500000T disclosed/founder-claimed
+
+The final method keeps the K3-anchored benchmark/date estimate as primary, directly pegs Grok, and gives a leave-one-base-out API-price prediction only 15% weight in log space. Price uses z = sqrt(input price * output price), an Anthropic provider effect, and a 1.3 same-text tokenizer factor. The earlier audit found unstable date effects and family leakage; conservative leave-family-out error was about x/divide 3.03, though the current graphic does not display it.
+
+Your task:
+1. Reconstruct the method from the files rather than trusting the summary above.
+2. Identify any mathematical, statistical, data-quality, or conceptual errors. Pay particular attention to date adjustment, family/checkpoint leakage, MoE total versus active parameters, reasoning/test-time compute, mixed benchmark scales, anchoring, and API pricing endogeneity.
+3. State whether you agree with each central estimate. Give your own preferred central estimate or range where you disagree.
+4. Judge whether the relative ordering is defensible.
+5. Say whether the 15% API-price blend improves the analysis, is harmless, or should be removed.
+6. Give a blunt overall verdict: agree, directionally agree with material reservations, or disagree.
+
+Return a concise but rigorous report with:
+- Overall verdict
+- What is sound
+- What is not sound
+- A model-by-model table: current total, your preferred total/range, agree?, reason
+- The single most important correction
+
+Do not claim privileged knowledge of any Anthropic or competitor architecture. Base the review only on the supplied data, calculations, and publicly supportable reasoning. Be candid even if that means strongly disagreeing with the Fable estimate.

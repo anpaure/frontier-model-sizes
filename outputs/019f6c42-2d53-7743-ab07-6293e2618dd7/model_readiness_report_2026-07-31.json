@@ -1,0 +1,3124 @@
+{
+  "crowd_robustness": {
+    "cross_target_dependence": {
+      "interpretation": "The same forecasters tend to move both targets together, so the two crowd pools are not independent replications.",
+      "paired_contributors": 18,
+      "pearson_correlation_of_log_points": 0.7665718527163681
+    },
+    "decision": {
+      "center_is_single_forecaster_robust": true,
+      "change_user_selected_crowd_weight": false,
+      "crowd_is_independent_calibration_evidence": false,
+      "narrow_predictive_intervals": false,
+      "reason": "Jackknife and robust centers show that no single contributor controls the final center. The forecasts remain relayed, unscored, mutually correlated judgments and therefore cannot supply a calibrated likelihood or narrower interval."
+    },
+    "targets": [
+      {
+        "crowd_geometric_center_t": 4.371847506331046,
+        "crowd_median_t": 4.949489742783178,
+        "crowd_ten_percent_each_tail_log_trimmed_mean_t": 4.7196616592725915,
+        "displayed_final_t": 4.548292155336898,
+        "evidence_center_t": 4.731857984602975,
+        "individual_point_max_t": 10.0,
+        "individual_point_min_t": 0.9797958971132712,
+        "individual_point_span_x": 10.206207261596576,
+        "leave_one_contributor_out": {
+          "crowd_center_max_t": 4.729886967181996,
+          "crowd_center_min_t": 4.185550987987843,
+          "final_max_t": 4.730872373244672,
+          "final_min_t": 4.450329522908741,
+          "maximum_absolute_final_shift_fraction": 0.04014258795876535
+        },
+        "maximum_robust_center_final_shift_fraction": 0.06401490518540176,
+        "model": "Claude Fable 5",
+        "n": 20,
+        "provenance_counts": {
+          "Direct statement from Respondent R01 in this Codex task.": 1,
+          "Relayed by project owner; source not attached.": 19
+        },
+        "robust_final_sensitivity_t": {
+          "geometric_mean": 4.548292155336898,
+          "median": 4.839450646416296,
+          "ten_percent_each_tail_log_trimmed_mean": 4.725755887374372
+        }
+      },
+      {
+        "crowd_geometric_center_t": 3.2116911484449235,
+        "crowd_median_t": 3.0,
+        "crowd_ten_percent_each_tail_log_trimmed_mean_t": 3.3335330880174703,
+        "displayed_final_t": 3.145668582841,
+        "evidence_center_t": 3.081003239637193,
+        "individual_point_max_t": 7.0710678118654755,
+        "individual_point_min_t": 0.7745966692414834,
+        "individual_point_span_x": 9.128709291752768,
+        "leave_one_contributor_out": {
+          "crowd_center_max_t": 3.4757466786144797,
+          "crowd_center_min_t": 3.0739163145508326,
+          "final_max_t": 3.2724282691862667,
+          "final_min_t": 3.0774577370785674,
+          "maximum_absolute_final_shift_fraction": 0.04029658020451232
+        },
+        "maximum_robust_center_final_shift_fraction": 0.03351806690458459,
+        "model": "GPT-5.6 Sol",
+        "n": 19,
+        "provenance_counts": {
+          "Direct statement from Respondent R01 in this Codex task.": 1,
+          "Relayed by project owner; source not attached.": 18
+        },
+        "robust_final_sensitivity_t": {
+          "geometric_mean": 3.145668582841,
+          "median": 3.0402318528216856,
+          "ten_percent_each_tail_log_trimmed_mean": 3.20478177784691
+        }
+      }
+    ]
+  },
+  "data_inventory": {
+    "aa_calibration_checkpoints": 275,
+    "aa_calibration_configurations": 335,
+    "aa_calibration_creators": 48,
+    "aa_parameter_label_timing_records": 6,
+    "aa_post_release_parameter_label_records": 5,
+    "aa_primary_metadata_overrides": [
+      {
+        "architecture_class": "dense",
+        "base_model_id": "Motif-Technologies/Motif-2-12.7B-Base",
+        "changed_fields": [
+          "commercial_allowed",
+          "is_open_weights",
+          "license_name",
+          "license_url",
+          "model_weights_source_url",
+          "open_source_categorization",
+          "parameters_b"
+        ],
+        "exact_tensor_parameters": 12703860896,
+        "lineage_class": "same_base_posttrain",
+        "lineage_family_id": "Motif-Technologies/Motif-2-12.7B-Base",
+        "model": "Motif-2-12.7B-Reasoning",
+        "override_id": "aa-motif-2-12-7b-reasoning-open-weights-2026-07-31",
+        "parameter_label_available_date": "2025-12-01",
+        "parameter_training_eligibility_date": "2025-12-04",
+        "slug": "motif-2-12-7b",
+        "source_record_sha256": "fb233c90e3edcd0ea352f27ce6ee542a2344b75883ac3a7f38fbe00ceac321ea",
+        "source_url": "https://huggingface.co/Motif-Technologies/Motif-2-12.7B-Reasoning/blob/02d060835415f43d57dc6bee72b1e2779d8e57e5/README.md"
+      },
+      {
+        "architecture_class": "sparse_moe",
+        "base_model_id": null,
+        "changed_fields": [
+          "commercial_allowed",
+          "is_open_weights",
+          "license_name",
+          "license_url",
+          "model_weights_source_url",
+          "open_source_categorization"
+        ],
+        "exact_tensor_parameters": 314841775750,
+        "lineage_class": "independent_pretrain",
+        "lineage_family_id": "Motif-Technologies/Motif-3-Beta",
+        "model": "Motif 3 (Beta)",
+        "override_id": "aa-motif-3-beta-open-weights-2026-07-31",
+        "parameter_label_available_date": "2026-07-20",
+        "parameter_training_eligibility_date": "2026-07-20",
+        "slug": "motif-0714",
+        "source_record_sha256": "11af8675e91c780a761a58bcce134fde86c360d73076bfc2c9510c40dd9f0df8",
+        "source_url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta/blob/eee28175b11eada7e98142fef20afd5136ae92de/README.md"
+      }
+    ],
+    "aa_raw_configurations": 587,
+    "aa_score_timing": {
+      "api_total_reconciles": false,
+      "ensemble_median_after": 2.1364127981098613,
+      "ensemble_median_before": 2.15063101613072,
+      "ensemble_rows_after": 44,
+      "ensemble_rows_before": 43,
+      "frontier_median_after": 2.0237034416634527,
+      "frontier_median_before": 2.086202144829668,
+      "live_fallback": 22,
+      "live_rows": 50,
+      "live_verified": 28,
+      "live_verified_after_release": 16,
+      "verified_slugs": 136
+    },
+    "open_model_parameter_truth": {
+      "aliases": 18,
+      "checkpoints_deduplicated": false,
+      "raw_values_preserved": true,
+      "records": 3,
+      "truth_ids": [
+        "moonshot-kimi-k2-family-report-table-1",
+        "minimax-m2-5-official-safetensors",
+        "minimax-m2-7-official-safetensors"
+      ]
+    }
+  },
+  "diagnostic_decisions": {
+    "active_parameter_shrinkage": {
+      "fixed_all": {
+        "baseline": {
+          "developers": 15,
+          "mean_absolute_log10_error": 0.40312080574778386,
+          "median_multiplicative_error": 1.986495131195065,
+          "n": 47,
+          "p80_multiplicative_error": 4.598523634730482,
+          "rmse_log10": 0.523861346171142,
+          "signed_bias_factor": 0.8169124783356844,
+          "within_2x": 0.5106382978723404
+        },
+        "candidate": {
+          "developers": 15,
+          "mean_absolute_log10_error": 0.32945691912396413,
+          "median_multiplicative_error": 1.7744109546574234,
+          "n": 47,
+          "p80_multiplicative_error": 3.365655843177589,
+          "rmse_log10": 0.4264500498746093,
+          "signed_bias_factor": 0.8628957699298044,
+          "within_2x": 0.5957446808510638
+        },
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.12776642574423472,
+            -0.03711101303568301
+          ],
+          "developers": 15,
+          "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+          "observed_delta": -0.08180548041010692,
+          "probability_candidate_better": 0.9987,
+          "random_seed": 20260731,
+          "samples": 20000
+        }
+      },
+      "fixed_frontier": {
+        "baseline": {
+          "developers": 10,
+          "mean_absolute_log10_error": 0.312346439536518,
+          "median_multiplicative_error": 1.8859312137299837,
+          "n": 28,
+          "p80_multiplicative_error": 3.2543620752038986,
+          "rmse_log10": 0.3965689506758041,
+          "signed_bias_factor": 1.570299170512291,
+          "within_2x": 0.6071428571428571
+        },
+        "candidate": {
+          "developers": 10,
+          "mean_absolute_log10_error": 0.26341910751001574,
+          "median_multiplicative_error": 1.727453932666269,
+          "n": 28,
+          "p80_multiplicative_error": 2.425207378020931,
+          "rmse_log10": 0.3333269321483636,
+          "signed_bias_factor": 1.2433258989207359,
+          "within_2x": 0.6785714285714286
+        },
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.08954378559891722,
+            -0.036670355961736664
+          ],
+          "developers": 10,
+          "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+          "observed_delta": -0.0626114742265769,
+          "probability_candidate_better": 1.0,
+          "random_seed": 20260831,
+          "samples": 20000
+        }
+      },
+      "inventory": {
+        "frontier_like_developers": 10,
+        "frontier_like_rows": 28,
+        "high_sparsity_developers": 15,
+        "high_sparsity_rows": 47,
+        "nested_eligible_developers": 14,
+        "nested_eligible_rows": 31,
+        "nested_frontier_developers": 9,
+        "nested_frontier_rows": 21
+      },
+      "k3_external_check": {
+        "active_transport_error_factor": 1.9629563674791555,
+        "active_transport_predicted_b": 1416.2311735793182,
+        "developer": "kimi",
+        "direct_total_error_factor": 2.0604176097291664,
+        "direct_total_predicted_b": 5727.960955047083,
+        "disclosed_active_b": 104.2,
+        "disclosed_total_b": 2780.0,
+        "disclosed_total_to_active_ratio": 26.679462571976966,
+        "fixed_50_50_error_factor": 1.0245243938675055,
+        "fixed_50_50_predicted_b": 2848.1778149516654,
+        "fixed_50_50_signed_log10_error": 0.010522303387214965,
+        "model": "Kimi K3",
+        "nested_error_factor": 1.9629563674791555,
+        "nested_selected_active_weight": 1.0,
+        "release_date": "2026-07-16",
+        "source_component_developer_excluded": true,
+        "source_train_max_date": "2026-07-15",
+        "status": "retrospective external scale check: K3 was excluded from every component training fold, but this challenger was examined after K3's parameter disclosure"
+      },
+      "live_weight": 0.0,
+      "nested_all": {
+        "baseline": {
+          "developers": 14,
+          "mean_absolute_log10_error": 0.34502413202758586,
+          "median_multiplicative_error": 1.9167392761708337,
+          "n": 31,
+          "p80_multiplicative_error": 3.8207209376748454,
+          "rmse_log10": 0.43973452484792436,
+          "signed_bias_factor": 1.035764707799783,
+          "within_2x": 0.5483870967741935
+        },
+        "candidate": {
+          "developers": 14,
+          "mean_absolute_log10_error": 0.30263679252159814,
+          "median_multiplicative_error": 1.8144079554680312,
+          "n": 31,
+          "p80_multiplicative_error": 2.5609870632087697,
+          "rmse_log10": 0.36544560573402735,
+          "signed_bias_factor": 0.9050483675756553,
+          "within_2x": 0.6129032258064516
+        },
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.109547337329786,
+            -0.01567538430368952
+          ],
+          "developers": 14,
+          "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+          "observed_delta": -0.06245683112487143,
+          "probability_candidate_better": 0.9872,
+          "random_seed": 20260732,
+          "samples": 20000
+        }
+      },
+      "nested_frontier": {
+        "baseline": {
+          "developers": 9,
+          "mean_absolute_log10_error": 0.28779384478633635,
+          "median_multiplicative_error": 1.9167392761708337,
+          "n": 21,
+          "p80_multiplicative_error": 3.1557511219657917,
+          "rmse_log10": 0.3413105374910709,
+          "signed_bias_factor": 1.7250373216823234,
+          "within_2x": 0.5714285714285714
+        },
+        "candidate": {
+          "developers": 9,
+          "mean_absolute_log10_error": 0.24262745228889154,
+          "median_multiplicative_error": 1.724483713423857,
+          "n": 21,
+          "p80_multiplicative_error": 2.1123886985950695,
+          "rmse_log10": 0.267199264792547,
+          "signed_bias_factor": 1.1842624692765193,
+          "within_2x": 0.6666666666666666
+        },
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.10463056008486776,
+            -0.01096057256406911
+          ],
+          "developers": 9,
+          "metric": "equal-developer mean absolute log10 error; candidate minus direct-total baseline",
+          "observed_delta": -0.05795473785854602,
+          "probability_candidate_better": 0.9783,
+          "random_seed": 20260832,
+          "samples": 20000
+        }
+      },
+      "promotion_gates": {
+        "all_gates_pass": false,
+        "applicability_and_prospective": {
+          "challenger_preregistered_before_evaluated_outcomes": false,
+          "target_active_fraction_or_equivalent_architecture_observed_pre_outcome": false,
+          "target_high_sparsity_status_independently_observed_pre_outcome": false
+        },
+        "empirical": {
+          "at_least_12_high_sparsity_developers": true,
+          "at_least_20_frontier_rows": true,
+          "at_least_40_high_sparsity_rows": true,
+          "at_least_8_frontier_developers": true,
+          "fixed_all_ci90_wholly_favorable": true,
+          "fixed_all_median_improves": true,
+          "fixed_frontier_ci90_wholly_favorable": true,
+          "fixed_frontier_median_improves": true,
+          "nested_all_ci90_wholly_favorable": true,
+          "nested_frontier_ci90_wholly_favorable": true
+        }
+      }
+    },
+    "active_parameters": {
+      "active_vs_total_ci90": [
+        -0.09289014048887713,
+        -0.00010818627814064898
+      ],
+      "checkpoints": 127,
+      "developers": 33,
+      "live_weight": 0.0,
+      "target_sparsity_observed": false,
+      "transport_baseline_median_error_x": 1.986495131195065,
+      "transport_candidate_median_error_x": 2.0953179775569155
+    },
+    "direct_weight_optimization": {
+      "ci90": [
+        -0.04380484274045228,
+        0.0798115889942811
+      ],
+      "current_median_error_x": 2.136412798109862,
+      "optimized_median_error_x": 2.3210575971670804,
+      "outer_predictions": 32,
+      "update_live_weights": false
+    },
+    "eci_architecture_blend": {
+      "anchor_checks": {
+        "grok_4_5": {
+          "actual_parameter_source": "pure; disclosed 1.5T total",
+          "baseline_multiplicative_error": 2.8529770326725363,
+          "baseline_predicted_b": 525.7665879612321,
+          "disclosed_total_b": 1500.0,
+          "eci_score": 153.60935822710232,
+          "model": "Grok 4.5",
+          "release_date": "2026-07-08",
+          "scenario_predictions": [
+            {
+              "architecture_coefficients": [
+                -1.9187170459396508,
+                0.03220980201500173,
+                -0.33300100087394013,
+                0.8939751784993311,
+                -0.1355623214863781
+              ],
+              "architecture_observed": false,
+              "error_relative_to_baseline": 2.1590739950835225,
+              "moe": 0,
+              "multiplicative_error": 6.1597885198138265,
+              "predicted_b": 243.51485366340728,
+              "reasoning": 0
+            },
+            {
+              "architecture_coefficients": [
+                -1.9187170459396508,
+                0.03220980201500173,
+                -0.33300100087394013,
+                0.8939751784993311,
+                -0.1355623214863781
+              ],
+              "architecture_observed": false,
+              "error_relative_to_baseline": 2.4462027788233724,
+              "moe": 0,
+              "multiplicative_error": 6.978960345242817,
+              "predicted_b": 214.93172704763532,
+              "reasoning": 1
+            },
+            {
+              "architecture_coefficients": [
+                -1.9187170459396508,
+                0.03220980201500173,
+                -0.33300100087394013,
+                0.8939751784993311,
+                -0.1355623214863781
+              ],
+              "architecture_observed": false,
+              "error_relative_to_baseline": 0.9477143468591971,
+              "moe": 1,
+              "multiplicative_error": 2.703807265123543,
+              "predicted_b": 554.7732707684183,
+              "reasoning": 0
+            },
+            {
+              "architecture_coefficients": [
+                -1.9187170459396508,
+                0.03220980201500173,
+                -0.33300100087394013,
+                0.8939751784993311,
+                -0.1355623214863781
+              ],
+              "architecture_observed": false,
+              "error_relative_to_baseline": 1.073748039250532,
+              "moe": 1,
+              "multiplicative_error": 3.063378494858937,
+              "predicted_b": 489.6554580236656,
+              "reasoning": 1
+            }
+          ],
+          "score_date_coefficients": [
+            -2.5089060682376476,
+            0.036813089436743,
+            -0.12854354846012545
+          ],
+          "score_only_coefficients": [
+            -2.0097118687373468,
+            0.03091175959948611
+          ],
+          "target_architecture_note": "No independently observed MoE/reasoning classification is available; the challenger is reported as a four-scenario sensitivity.",
+          "target_architecture_observed": false,
+          "target_developer": "xAI",
+          "target_developer_excluded": true,
+          "train_developers": 19,
+          "train_max_eligibility_date": "2026-06-16",
+          "train_n": 88,
+          "working_assumption": {
+            "error_relative_to_baseline": 1.073748039250532,
+            "moe": 1,
+            "multiplicative_error": 3.063378494858937,
+            "not_an_observation": true,
+            "predicted_b": 489.6554580236656,
+            "reasoning": 1
+          }
+        },
+        "kimi_k3": {
+          "actual_parameter_source": "Kimi K3 official technical report Table 1",
+          "baseline_multiplicative_error": 6.274917580281605,
+          "baseline_predicted_b": 443.03370752404993,
+          "challenger_multiplicative_error": 6.681226968513624,
+          "challenger_predicted_b": 416.0912378970517,
+          "disclosed_active_b": 104.2,
+          "disclosed_total_b": 2780.0,
+          "error_relative_to_baseline": 1.0647513506008128,
+          "model": "Kimi K3",
+          "moe_observed": true,
+          "reasoning_flag_used": 1,
+          "release_date": "2026-07-16",
+          "status": "retrospective current-score anchor; parameter truth is hidden from fitting, but this is not a frozen prospective forecast",
+          "target_developer_excluded": true,
+          "train_max_eligibility_date": "2026-06-16"
+        }
+      },
+      "fixed_all": {
+        "baseline": {
+          "developers": 13,
+          "geomean_multiplicative_error": 2.9142081658909094,
+          "mean_absolute_log10_error": 0.4645205707931952,
+          "median_multiplicative_error": 2.535978127194861,
+          "n": 69,
+          "p80_multiplicative_error": 5.871822876755978,
+          "p90_multiplicative_error": 7.721185172154579,
+          "rmse_log10": 0.5426241943802242,
+          "signed_bias_factor": 0.8319293411719355,
+          "within_2x": 0.36231884057971014
+        },
+        "baseline_equal_developer_mae": 0.3857854113604579,
+        "challenger": {
+          "developers": 13,
+          "geomean_multiplicative_error": 2.6899821122859335,
+          "mean_absolute_log10_error": 0.4297493920613885,
+          "median_multiplicative_error": 2.35589748245316,
+          "n": 69,
+          "p80_multiplicative_error": 4.975355000067462,
+          "p90_multiplicative_error": 6.5020258753532865,
+          "rmse_log10": 0.500198036855433,
+          "signed_bias_factor": 0.8372233644876188,
+          "within_2x": 0.3333333333333333
+        },
+        "challenger_equal_developer_mae": 0.3607269481137756,
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.04483886536946446,
+            -0.005301234135357137
+          ],
+          "developers": 13,
+          "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+          "observed_delta": -0.025058463246682258,
+          "probability_challenger_better": 0.98225,
+          "random_seed": 20260731,
+          "samples": 20000
+        }
+      },
+      "fixed_frontier": {
+        "baseline": {
+          "developers": 11,
+          "geomean_multiplicative_error": 3.0006763572669306,
+          "mean_absolute_log10_error": 0.4772191564269296,
+          "median_multiplicative_error": 2.547466641322649,
+          "n": 46,
+          "p80_multiplicative_error": 5.4977388738715325,
+          "p90_multiplicative_error": 7.946632337881523,
+          "rmse_log10": 0.5559912478037291,
+          "signed_bias_factor": 0.5472195666197017,
+          "within_2x": 0.3695652173913043
+        },
+        "baseline_equal_developer_mae": 0.40518269797286455,
+        "challenger": {
+          "developers": 11,
+          "geomean_multiplicative_error": 2.766365373490769,
+          "mean_absolute_log10_error": 0.4419095399133631,
+          "median_multiplicative_error": 2.500716655396755,
+          "n": 46,
+          "p80_multiplicative_error": 4.917327499802022,
+          "p90_multiplicative_error": 5.9729078484496805,
+          "rmse_log10": 0.5114326700680905,
+          "signed_bias_factor": 0.5792978407873336,
+          "within_2x": 0.30434782608695654
+        },
+        "challenger_equal_developer_mae": 0.38165854417835443,
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.0485611762440828,
+            -0.00015393582421383253
+          ],
+          "developers": 11,
+          "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+          "observed_delta": -0.023524153794510227,
+          "probability_challenger_better": 0.9511,
+          "random_seed": 20260732,
+          "samples": 20000
+        }
+      },
+      "inventory": {
+        "outer_paired_developers": 13,
+        "outer_paired_rows": 69,
+        "source_developers": 19,
+        "source_eci_rows": 89,
+        "source_inventory": {
+          "families": 40,
+          "max_date": "2026-07-16",
+          "min_date": "2023-02-24",
+          "rows": 89
+        },
+        "source_lineage_families": 40
+      },
+      "live_target_applicability": [
+        {
+          "architecture_observed": false,
+          "model": "Claude Opus 5",
+          "moe": null,
+          "reasoning": null,
+          "release_date": "2026-07-24",
+          "status": "target architecture unobserved"
+        },
+        {
+          "architecture_observed": false,
+          "model": "Claude Fable 5",
+          "moe": null,
+          "reasoning": null,
+          "release_date": "2026-06-09",
+          "status": "target architecture unobserved"
+        },
+        {
+          "architecture_observed": false,
+          "model": "GPT-5.6 Sol",
+          "moe": null,
+          "reasoning": null,
+          "release_date": "2026-07-09",
+          "status": "target architecture unobserved"
+        }
+      ],
+      "live_weight": 0.0,
+      "nested_all": {
+        "baseline": {
+          "developers": 12,
+          "geomean_multiplicative_error": 3.073427457129476,
+          "mean_absolute_log10_error": 0.48762296681748246,
+          "median_multiplicative_error": 2.611863530111947,
+          "n": 57,
+          "p80_multiplicative_error": 6.113885239433031,
+          "p90_multiplicative_error": 7.744484773095876,
+          "rmse_log10": 0.56244502331278,
+          "signed_bias_factor": 0.7904881270428148,
+          "within_2x": 0.3157894736842105
+        },
+        "baseline_equal_developer_mae": 0.4073528391814906,
+        "challenger": {
+          "developers": 12,
+          "geomean_multiplicative_error": 2.8056470788646397,
+          "mean_absolute_log10_error": 0.44803304041250486,
+          "median_multiplicative_error": 2.5887674001110343,
+          "n": 57,
+          "p80_multiplicative_error": 5.04237592162172,
+          "p90_multiplicative_error": 6.565306448895915,
+          "rmse_log10": 0.516347322678342,
+          "signed_bias_factor": 0.8040812806289729,
+          "within_2x": 0.2807017543859649
+        },
+        "challenger_equal_developer_mae": 0.37774387978952023,
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.05327090522123623,
+            -0.0072149049295086405
+          ],
+          "developers": 12,
+          "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+          "observed_delta": -0.029608959391970422,
+          "probability_challenger_better": 0.9854,
+          "random_seed": 20260733,
+          "samples": 20000
+        }
+      },
+      "nested_frontier": {
+        "baseline": {
+          "developers": 10,
+          "geomean_multiplicative_error": 3.1255930538203374,
+          "mean_absolute_log10_error": 0.494932433060966,
+          "median_multiplicative_error": 2.6379827476990187,
+          "n": 42,
+          "p80_multiplicative_error": 5.674267045121668,
+          "p90_multiplicative_error": 8.088842888481388,
+          "rmse_log10": 0.5703087360871495,
+          "signed_bias_factor": 0.49828367865840384,
+          "within_2x": 0.3333333333333333
+        },
+        "baseline_equal_developer_mae": 0.4366142366052522,
+        "challenger": {
+          "developers": 10,
+          "geomean_multiplicative_error": 2.8748635155953233,
+          "mean_absolute_log10_error": 0.4586172313453627,
+          "median_multiplicative_error": 2.5955414013231586,
+          "n": 42,
+          "p80_multiplicative_error": 5.04237592162172,
+          "p90_multiplicative_error": 6.382446443884707,
+          "rmse_log10": 0.5250100058929033,
+          "signed_bias_factor": 0.5332494395613645,
+          "within_2x": 0.2619047619047619
+        },
+        "challenger_equal_developer_mae": 0.41333057736810697,
+        "paired_developer_bootstrap": {
+          "ci_90": [
+            -0.0503509211298583,
+            0.00272746308210915
+          ],
+          "developers": 10,
+          "metric": "equal-developer mean absolute log10 error; challenger minus current direct aggregate-ECI baseline",
+          "observed_delta": -0.023283659237145343,
+          "probability_challenger_better": 0.92855,
+          "random_seed": 20260734,
+          "samples": 20000
+        }
+      },
+      "promotion_gates": {
+        "all_pass": false,
+        "failed_gates": [
+          "fixed_all_metrics_non_worse",
+          "fixed_frontier_metrics_non_worse",
+          "live_target_architectures_observed",
+          "nested_all_metrics_non_worse",
+          "nested_frontier_ci_wholly_favorable",
+          "nested_frontier_metrics_non_worse",
+          "prospective_disclosures_at_least_3",
+          "prospective_frontier_disclosures_at_least_2"
+        ],
+        "policy": {
+          "anchor_tolerance": 1.1,
+          "applicability": "MoE and reasoning status must be independently observed for every live target before architecture coefficients may be used.",
+          "fixed_all_minimum": {
+            "developers": 12,
+            "rows": 60
+          },
+          "fixed_frontier_minimum": {
+            "developers": 8,
+            "rows": 30
+          },
+          "metric_bundle": "Median multiplicative error, MAE, RMSE, and p80 must be no higher, and within-2x accuracy no lower, in every cohort.",
+          "nested_all_minimum": {
+            "developers": 10,
+            "rows": 50
+          },
+          "nested_frontier_minimum": {
+            "developers": 8,
+            "rows": 30
+          },
+          "prospective_minimum": {
+            "frontier_like_disclosures": 2,
+            "new_developer_disclosures": 3
+          },
+          "statistical": "Developer-cluster 90% CI upper bound must be below zero for fixed and nested evaluations, both all-model and frontier-like."
+        },
+        "results": {
+          "fixed_all_ci_wholly_favorable": true,
+          "fixed_all_coverage": true,
+          "fixed_all_metrics_non_worse": false,
+          "fixed_frontier_ci_wholly_favorable": true,
+          "fixed_frontier_coverage": true,
+          "fixed_frontier_metrics_non_worse": false,
+          "grok_working_assumption_within_10pct_of_baseline_error": true,
+          "k3_anchor_within_10pct_of_baseline_error": true,
+          "live_target_architectures_observed": false,
+          "nested_all_ci_wholly_favorable": true,
+          "nested_all_coverage": true,
+          "nested_all_metrics_non_worse": false,
+          "nested_frontier_ci_wholly_favorable": false,
+          "nested_frontier_coverage": true,
+          "nested_frontier_metrics_non_worse": false,
+          "prospective_disclosures_at_least_3": false,
+          "prospective_frontier_disclosures_at_least_2": false
+        }
+      }
+    },
+    "longcat_parameter_definition": {
+      "canonical_total_b": 1600.0,
+      "change_live_forecast": false,
+      "ensemble_all_invariant": true,
+      "hf_serialized_total_b": 1775.560491136,
+      "live_weight": 0.0,
+      "maximum_legacy_target_change_percent": 0.8277096460366451,
+      "serialized_excluding_mtp_b": 1638.616807424
+    },
+    "vintage_knowledge": {
+      "baseline_median_error_x": 3.648218557292669,
+      "candidate_median_error_x": 3.494406408539451,
+      "ci90": [
+        -0.046628330788445464,
+        -0.006039729555842266
+      ],
+      "developers": 5,
+      "live_weight": 0.0,
+      "promotion_gates": {
+        "all_pass": false,
+        "results": {
+          "all_clustered_interval_wholly_favorable": true,
+          "all_median_improves": true,
+          "current_target_component_coverage": false,
+          "frontier_clustered_interval_wholly_favorable": true,
+          "frontier_coverage": true,
+          "outer_coverage": false,
+          "prospective_coverage": false,
+          "prospective_median_non_degradation": true,
+          "source_format_stability": true
+        },
+        "thresholds": {
+          "maximum_clustered_ci90_upper": 0.0,
+          "minimum_current_target_knowledge_benchmarks": 3,
+          "minimum_developers_per_source_format": 3,
+          "minimum_frontier_developers": 4,
+          "minimum_frontier_rows": 8,
+          "minimum_outer_developers": 6,
+          "minimum_outer_rows": 20,
+          "minimum_prospective_developers": 3,
+          "minimum_prospective_rows": 5,
+          "minimum_rows_per_source_format": 6
+        }
+      },
+      "rows": 18
+    }
+  },
+  "external_validation": {
+    "change_live_weights": false,
+    "common_component_panel": {
+      "gates": {
+        "median_error": {
+          "observed": 3.0818530540228397,
+          "passes": false,
+          "required_maximum": 2.0
+        },
+        "project_preregistration": {
+          "observed": false,
+          "passes": false,
+          "required": true
+        },
+        "target_count": {
+          "observed": 4,
+          "passes": false,
+          "required": 8
+        },
+        "target_developer_count": {
+          "observed": 3,
+          "passes": false,
+          "required": 4
+        },
+        "weight_sensitivity": {
+          "observed_max_over_min_median_error": 1.1402246465353785,
+          "passes": true,
+          "required_maximum": 1.25
+        },
+        "within_2x": {
+          "observed": 0.25,
+          "passes": false,
+          "required": 0.75
+        }
+      },
+      "live_weight": 0.0,
+      "summary": {
+        "maximum_multiplicative_error": 3.517486309876669,
+        "mean_absolute_log10_error": 0.3993950562789367,
+        "median_multiplicative_error": 3.0818530540228397,
+        "n": 4,
+        "rmse_log10": 0.44254952769021294,
+        "target_developers": 3,
+        "within_2x": 0.25
+      }
+    },
+    "eci_four_target_retrospective": {
+      "families": 3,
+      "mean_absolute_log10_error": 0.14783913867771037,
+      "median_multiplicative_error": 1.4647072605420588,
+      "n": 4,
+      "p80_multiplicative_error": 1.6500499454927982,
+      "rmse_log10": 0.16544229263365848,
+      "signed_bias_factor": 0.9136484551587591,
+      "within_2x": 1.0
+    },
+    "k3_score_vintage_only": {
+      "families": 1,
+      "mean_absolute_log10_error": 0.3128409167668549,
+      "median_multiplicative_error": 2.0551376556570586,
+      "n": 1,
+      "p80_multiplicative_error": 2.0551376556570586,
+      "rmse_log10": 0.3128409167668549,
+      "signed_bias_factor": 0.48658541059152793,
+      "within_2x": 0.0
+    },
+    "project_prospective_targets": []
+  },
+  "generated_on": "2026-07-31",
+  "headline_forecasts": [
+    {
+      "crowd_center_t": 4.371847506331046,
+      "crowd_forecasters": 20,
+      "empirical_50_factor": 2.3842939202671825,
+      "empirical_50_high_t": 11.282140224256596,
+      "empirical_50_low_t": 1.9845950804893744,
+      "empirical_80_factor": 5.276399681855711,
+      "empirical_80_high_t": 24.967173964545545,
+      "empirical_80_low_t": 0.8967967307091451,
+      "evidence_center_t": 4.731857984602975,
+      "final_center_t": 4.548292155336898,
+      "model": "Claude Fable 5",
+      "parameter_count_disclosed": false,
+      "release_date": "2026-06-09"
+    },
+    {
+      "crowd_center_t": 3.2116911484449235,
+      "crowd_forecasters": 19,
+      "empirical_50_factor": 3.219961435737763,
+      "empirical_50_high_t": 9.920711615014875,
+      "empirical_50_low_t": 0.9568447638663314,
+      "empirical_80_factor": 5.276399681855711,
+      "empirical_80_high_t": 16.2566045134181,
+      "empirical_80_low_t": 0.5839215043227362,
+      "evidence_center_t": 3.081003239637193,
+      "final_center_t": 3.145668582841,
+      "model": "GPT-5.6 Sol",
+      "parameter_count_disclosed": false,
+      "release_date": "2026-07-09"
+    },
+    {
+      "crowd_center_t": null,
+      "crowd_forecasters": 0,
+      "empirical_50_factor": 3.0156279830601624,
+      "empirical_50_high_t": 9.058327926942555,
+      "empirical_50_low_t": 0.9960760767905139,
+      "empirical_80_factor": 5.276399681855711,
+      "empirical_80_high_t": 15.849222404204912,
+      "empirical_80_low_t": 0.5692887331404397,
+      "evidence_center_t": 3.003794890426257,
+      "final_center_t": 3.003794890426257,
+      "model": "Claude Opus 5",
+      "parameter_count_disclosed": false,
+      "release_date": "2026-07-24"
+    }
+  ],
+  "heldout_precision": {
+    "formal_coverage_guarantee": false,
+    "frontier_lineage_holdout": {
+      "geomean_multiplicative_error": 2.17689691299237,
+      "median_multiplicative_error": 2.0237034416634527,
+      "n": 27,
+      "p80_multiplicative_error": 3.2955364599948673,
+      "p90_multiplicative_error": 5.170516361233215,
+      "rmse_log10": 0.41088364070770705,
+      "signed_bias_factor": 0.7781936773185579,
+      "within_1_5x": 0.3333333333333333,
+      "within_2x": 0.48148148148148145,
+      "within_3x": 0.7407407407407407
+    },
+    "frontier_whole_developer_holdout": {
+      "geomean_multiplicative_error": 2.1716033035590305,
+      "median_multiplicative_error": 1.8947642325889293,
+      "n": 27,
+      "p80_multiplicative_error": 3.2274597598158055,
+      "p90_multiplicative_error": 4.5602172768788805,
+      "rmse_log10": 0.400063589184883,
+      "signed_bias_factor": 0.7997557926578844,
+      "within_1_5x": 0.25925925925925924,
+      "within_2x": 0.5185185185185185,
+      "within_3x": 0.7407407407407407
+    },
+    "holdout_specification_factors": {
+      "model_lineage_holdout": {
+        "chronological_coverage": {
+          "50": {
+            "candidate_tests": 20,
+            "developer_balanced_coverage": {
+              "developers": 9,
+              "rate": 0.4277777777777778
+            },
+            "eligible_tests": 20,
+            "geometric_mean_interval_factor": 2.168371992520848,
+            "group_field": "developer",
+            "latest_developer_coverage": {
+              "covered": 3,
+              "developers": 9,
+              "rate": 0.3333333333333333,
+              "same_day_policy": "least-covered checkpoint at the latest supported date"
+            },
+            "nominal_coverage": 0.5,
+            "observed_coverage": 0.45,
+            "raw_checkpoint_coverage": {
+              "covered": 9,
+              "rate": 0.45,
+              "tests": 20
+            },
+            "test_developers": 9,
+            "test_families": 12,
+            "tests": [
+              {
+                "actual_error_factor": 1.8665060075901876,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 2.2638783518758383,
+                "family": "gemma2",
+                "model": "Gemma 2 27B",
+                "release_date": "2024-06-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.176474153553165,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Meta AI",
+                "factor": 1.8665060075901876,
+                "family": "llama31",
+                "model": "Llama 3.1-405B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.2629657612330671,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 1.8665060075901876,
+                "family": "llama31",
+                "model": "Llama 3.1-70B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.0211233889416187,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Alibaba",
+                "factor": 2.2638783518758383,
+                "family": "qwen25",
+                "model": "Qwen2.5-72B",
+                "release_date": "2024-09-19",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.0617266095742148,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 1.8665060075901876,
+                "family": "llama33",
+                "model": "Llama 3.3 70B",
+                "release_date": "2024-12-06",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.140944756647607,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Microsoft",
+                "factor": 1.3960257085249757,
+                "family": "phi",
+                "model": "Phi-4",
+                "release_date": "2024-12-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.276399681855711,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Meta AI",
+                "factor": 1.8665060075901876,
+                "family": "llama4",
+                "model": "Llama 4 Maverick",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.5971390069427998,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 1.8665060075901876,
+                "family": "llama4",
+                "model": "Llama 4 Scout",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.423503476197992,
+                "calibration_developers": 6,
+                "calibration_families": 6,
+                "calibration_groups": 6,
+                "covered": true,
+                "developer": "OpenAI",
+                "factor": 5.140944756647607,
+                "family": "gpt_oss",
+                "model": "gpt-oss-120b",
+                "release_date": "2025-08-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.2836229516254583,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": false,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 1.8665060075901876,
+                "family": "glm",
+                "model": "GLM-4.6",
+                "release_date": "2025-09-30",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.1258239852375402,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 1.8665060075901876,
+                "family": "glm",
+                "model": "GLM-4.7 Reasoning",
+                "release_date": "2025-12-22",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.3842939202671825,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": false,
+                "developer": "Moonshot",
+                "factor": 1.8665060075901876,
+                "family": "kimi_k2",
+                "model": "Kimi K2.5 Reasoning",
+                "release_date": "2026-01-27",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.4935300181386864,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 2.3842939202671825,
+                "family": "glm",
+                "model": "GLM-5 Reasoning",
+                "release_date": "2026-02-11",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.15063101613072,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": false,
+                "developer": "MiniMax",
+                "factor": 1.8665060075901876,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.5",
+                "release_date": "2026-02-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.0237034416634527,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": false,
+                "developer": "MiniMax",
+                "factor": 1.8665060075901876,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.7",
+                "release_date": "2026-03-18",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.747964424812721,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": false,
+                "developer": "Google DeepMind",
+                "factor": 2.0237034416634527,
+                "family": "gemma4",
+                "model": "Gemma 4 31B IT",
+                "release_date": "2026-04-02",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.166548309640489,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": false,
+                "developer": "DeepSeek",
+                "factor": 2.3842939202671825,
+                "family": "deepseek_v4",
+                "model": "DeepSeek-V4-Pro (max)",
+                "release_date": "2026-04-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.219961435737763,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": false,
+                "developer": "Moonshot",
+                "factor": 2.747964424812721,
+                "family": "kimi_k2",
+                "model": "Kimi K2.7 Code",
+                "release_date": "2026-06-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.1898240209177104,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 3.219961435737763,
+                "family": "glm",
+                "model": "GLM-5.2 (max)",
+                "release_date": "2026-06-16",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.3147057633327615,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": false,
+                "developer": "Moonshot",
+                "factor": 2.747964424812721,
+                "family": "kimi_k2",
+                "model": "Kimi K3",
+                "release_date": "2026-07-16",
+                "supported": true
+              }
+            ],
+            "unsupported_tests": 0
+          },
+          "80": {
+            "candidate_tests": 20,
+            "developer_balanced_coverage": {
+              "developers": 9,
+              "rate": 1.0
+            },
+            "eligible_tests": 20,
+            "geometric_mean_interval_factor": 5.85132426931459,
+            "group_field": "developer",
+            "latest_developer_coverage": {
+              "covered": 9,
+              "developers": 9,
+              "rate": 1.0,
+              "same_day_policy": "least-covered checkpoint at the latest supported date"
+            },
+            "nominal_coverage": 0.8,
+            "observed_coverage": 1.0,
+            "raw_checkpoint_coverage": {
+              "covered": 20,
+              "rate": 1.0,
+              "tests": 20
+            },
+            "test_developers": 9,
+            "test_families": 12,
+            "tests": [
+              {
+                "actual_error_factor": 1.8665060075901876,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 6.1864280178083515,
+                "family": "gemma2",
+                "model": "Gemma 2 27B",
+                "release_date": "2024-06-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.176474153553165,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 6.1864280178083515,
+                "family": "llama31",
+                "model": "Llama 3.1-405B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.2629657612330671,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 6.1864280178083515,
+                "family": "llama31",
+                "model": "Llama 3.1-70B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.0211233889416187,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Alibaba",
+                "factor": 6.1864280178083515,
+                "family": "qwen25",
+                "model": "Qwen2.5-72B",
+                "release_date": "2024-09-19",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.0617266095742148,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 6.1864280178083515,
+                "family": "llama33",
+                "model": "Llama 3.3 70B",
+                "release_date": "2024-12-06",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.140944756647607,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Microsoft",
+                "factor": 6.1864280178083515,
+                "family": "phi",
+                "model": "Phi-4",
+                "release_date": "2024-12-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.276399681855711,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 6.1864280178083515,
+                "family": "llama4",
+                "model": "Llama 4 Maverick",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.5971390069427998,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 6.1864280178083515,
+                "family": "llama4",
+                "model": "Llama 4 Scout",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.423503476197992,
+                "calibration_developers": 6,
+                "calibration_families": 6,
+                "calibration_groups": 6,
+                "covered": true,
+                "developer": "OpenAI",
+                "factor": 6.1864280178083515,
+                "family": "gpt_oss",
+                "model": "gpt-oss-120b",
+                "release_date": "2025-08-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.2836229516254583,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1864280178083515,
+                "family": "glm",
+                "model": "GLM-4.6",
+                "release_date": "2025-09-30",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.1258239852375402,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1864280178083515,
+                "family": "glm",
+                "model": "GLM-4.7 Reasoning",
+                "release_date": "2025-12-22",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.3842939202671825,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 6.1864280178083515,
+                "family": "kimi_k2",
+                "model": "Kimi K2.5 Reasoning",
+                "release_date": "2026-01-27",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.4935300181386864,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1864280178083515,
+                "family": "glm",
+                "model": "GLM-5 Reasoning",
+                "release_date": "2026-02-11",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.15063101613072,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 5.276399681855711,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.5",
+                "release_date": "2026-02-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.0237034416634527,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 5.276399681855711,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.7",
+                "release_date": "2026-03-18",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.747964424812721,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 5.276399681855711,
+                "family": "gemma4",
+                "model": "Gemma 4 31B IT",
+                "release_date": "2026-04-02",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.166548309640489,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "DeepSeek",
+                "factor": 5.276399681855711,
+                "family": "deepseek_v4",
+                "model": "DeepSeek-V4-Pro (max)",
+                "release_date": "2026-04-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.219961435737763,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 5.276399681855711,
+                "family": "kimi_k2",
+                "model": "Kimi K2.7 Code",
+                "release_date": "2026-06-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.1898240209177104,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 5.276399681855711,
+                "family": "glm",
+                "model": "GLM-5.2 (max)",
+                "release_date": "2026-06-16",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.3147057633327615,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 5.276399681855711,
+                "family": "kimi_k2",
+                "model": "Kimi K3",
+                "release_date": "2026-07-16",
+                "supported": true
+              }
+            ],
+            "unsupported_tests": 0
+          },
+          "90": {
+            "candidate_tests": 20,
+            "developer_balanced_coverage": {
+              "developers": 5,
+              "rate": 1.0
+            },
+            "eligible_tests": 7,
+            "geometric_mean_interval_factor": 6.18642801780835,
+            "group_field": "developer",
+            "latest_developer_coverage": {
+              "covered": 5,
+              "developers": 5,
+              "rate": 1.0,
+              "same_day_policy": "least-covered checkpoint at the latest supported date"
+            },
+            "nominal_coverage": 0.9,
+            "observed_coverage": 1.0,
+            "raw_checkpoint_coverage": {
+              "covered": 7,
+              "rate": 1.0,
+              "tests": 7
+            },
+            "test_developers": 5,
+            "test_families": 5,
+            "tests": [
+              {
+                "actual_error_factor": 1.8665060075901876,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Google DeepMind",
+                "factor": null,
+                "family": "gemma2",
+                "model": "Gemma 2 27B",
+                "release_date": "2024-06-24",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 5.176474153553165,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama31",
+                "model": "Llama 3.1-405B",
+                "release_date": "2024-07-23",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.2629657612330671,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama31",
+                "model": "Llama 3.1-70B",
+                "release_date": "2024-07-23",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.0211233889416187,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Alibaba",
+                "factor": null,
+                "family": "qwen25",
+                "model": "Qwen2.5-72B",
+                "release_date": "2024-09-19",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.0617266095742148,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama33",
+                "model": "Llama 3.3 70B",
+                "release_date": "2024-12-06",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 5.140944756647607,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Microsoft",
+                "factor": null,
+                "family": "phi",
+                "model": "Phi-4",
+                "release_date": "2024-12-12",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 5.276399681855711,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama4",
+                "model": "Llama 4 Maverick",
+                "release_date": "2025-04-05",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.5971390069427998,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama4",
+                "model": "Llama 4 Scout",
+                "release_date": "2025-04-05",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.423503476197992,
+                "calibration_developers": 6,
+                "calibration_families": 6,
+                "calibration_groups": 6,
+                "covered": null,
+                "developer": "OpenAI",
+                "factor": null,
+                "family": "gpt_oss",
+                "model": "gpt-oss-120b",
+                "release_date": "2025-08-05",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 2.2836229516254583,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": null,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": null,
+                "family": "glm",
+                "model": "GLM-4.6",
+                "release_date": "2025-09-30",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.1258239852375402,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": null,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": null,
+                "family": "glm",
+                "model": "GLM-4.7 Reasoning",
+                "release_date": "2025-12-22",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 2.3842939202671825,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": null,
+                "developer": "Moonshot",
+                "factor": null,
+                "family": "kimi_k2",
+                "model": "Kimi K2.5 Reasoning",
+                "release_date": "2026-01-27",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.4935300181386864,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": null,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": null,
+                "family": "glm",
+                "model": "GLM-5 Reasoning",
+                "release_date": "2026-02-11",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 2.15063101613072,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 6.1864280178083515,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.5",
+                "release_date": "2026-02-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.0237034416634527,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 6.1864280178083515,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.7",
+                "release_date": "2026-03-18",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.747964424812721,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 6.1864280178083515,
+                "family": "gemma4",
+                "model": "Gemma 4 31B IT",
+                "release_date": "2026-04-02",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 5.166548309640489,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "DeepSeek",
+                "factor": 6.1864280178083515,
+                "family": "deepseek_v4",
+                "model": "DeepSeek-V4-Pro (max)",
+                "release_date": "2026-04-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.219961435737763,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 6.1864280178083515,
+                "family": "kimi_k2",
+                "model": "Kimi K2.7 Code",
+                "release_date": "2026-06-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.1898240209177104,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1864280178083515,
+                "family": "glm",
+                "model": "GLM-5.2 (max)",
+                "release_date": "2026-06-16",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.3147057633327615,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 6.1864280178083515,
+                "family": "kimi_k2",
+                "model": "Kimi K3",
+                "release_date": "2026-07-16",
+                "supported": true
+              }
+            ],
+            "unsupported_tests": 13
+          }
+        },
+        "developers": 11,
+        "families": 16,
+        "intervals": {
+          "50": {
+            "calibration_developers": 11,
+            "calibration_families": 11,
+            "calibration_groups": 11,
+            "coverage": 0.5,
+            "group_field": "developer",
+            "multiplicative_factor": 2.747964424812721,
+            "order_statistic_rank": 6,
+            "raw_order_statistic_rank": 6,
+            "supported": true,
+            "unsupported_reason": null,
+            "upper_rank_clipped": false
+          },
+          "80": {
+            "calibration_developers": 11,
+            "calibration_families": 11,
+            "calibration_groups": 11,
+            "coverage": 0.8,
+            "group_field": "developer",
+            "multiplicative_factor": 5.276399681855711,
+            "order_statistic_rank": 10,
+            "raw_order_statistic_rank": 10,
+            "supported": true,
+            "unsupported_reason": null,
+            "upper_rank_clipped": false
+          },
+          "90": {
+            "calibration_developers": 11,
+            "calibration_families": 11,
+            "calibration_groups": 11,
+            "coverage": 0.9,
+            "group_field": "developer",
+            "multiplicative_factor": 6.1864280178083515,
+            "order_statistic_rank": 11,
+            "raw_order_statistic_rank": 11,
+            "supported": true,
+            "unsupported_reason": null,
+            "upper_rank_clipped": false
+          }
+        },
+        "rows": 27
+      },
+      "whole_developer_holdout": {
+        "chronological_coverage": {
+          "50": {
+            "candidate_tests": 20,
+            "developer_balanced_coverage": {
+              "developers": 9,
+              "rate": 0.4425925925925926
+            },
+            "eligible_tests": 20,
+            "geometric_mean_interval_factor": 2.0410006876019686,
+            "group_field": "developer",
+            "latest_developer_coverage": {
+              "covered": 3,
+              "developers": 9,
+              "rate": 0.3333333333333333,
+              "same_day_policy": "least-covered checkpoint at the latest supported date"
+            },
+            "nominal_coverage": 0.5,
+            "observed_coverage": 0.45,
+            "raw_checkpoint_coverage": {
+              "covered": 9,
+              "rate": 0.45,
+              "tests": 20
+            },
+            "test_developers": 9,
+            "test_families": 12,
+            "tests": [
+              {
+                "actual_error_factor": 1.6099535718391205,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 2.377784535855209,
+                "family": "gemma2",
+                "model": "Gemma 2 27B",
+                "release_date": "2024-06-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 6.37961187633436,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Meta AI",
+                "factor": 1.6099535718391205,
+                "family": "llama31",
+                "model": "Llama 3.1-405B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.5231174807058885,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 1.6099535718391205,
+                "family": "llama31",
+                "model": "Llama 3.1-70B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.2467971214378604,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Alibaba",
+                "factor": 2.377784535855209,
+                "family": "qwen25",
+                "model": "Qwen2.5-72B",
+                "release_date": "2024-09-19",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.469306713305087,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 1.6099535718391205,
+                "family": "llama33",
+                "model": "Llama 3.3 70B",
+                "release_date": "2024-12-06",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 4.497460998857388,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Microsoft",
+                "factor": 1.469306713305087,
+                "family": "phi",
+                "model": "Phi-4",
+                "release_date": "2024-12-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 6.1031156398525415,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Meta AI",
+                "factor": 1.6099535718391205,
+                "family": "llama4",
+                "model": "Llama 4 Maverick",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.8013198873279685,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Meta AI",
+                "factor": 1.6099535718391205,
+                "family": "llama4",
+                "model": "Llama 4 Scout",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.7756485215824025,
+                "calibration_developers": 6,
+                "calibration_families": 6,
+                "calibration_groups": 6,
+                "covered": true,
+                "developer": "OpenAI",
+                "factor": 4.497460998857388,
+                "family": "gpt_oss",
+                "model": "gpt-oss-120b",
+                "release_date": "2025-08-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.0271481478282465,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": false,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 1.7756485215824025,
+                "family": "glm",
+                "model": "GLM-4.6",
+                "release_date": "2025-09-30",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.194035513591898,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 1.7756485215824025,
+                "family": "glm",
+                "model": "GLM-4.7 Reasoning",
+                "release_date": "2025-12-22",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.8947642325889293,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": false,
+                "developer": "Moonshot",
+                "factor": 1.7756485215824025,
+                "family": "kimi_k2",
+                "model": "Kimi K2.5 Reasoning",
+                "release_date": "2026-01-27",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.4059365268766597,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 1.8947642325889293,
+                "family": "glm",
+                "model": "GLM-5 Reasoning",
+                "release_date": "2026-02-11",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.3424652284263794,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": false,
+                "developer": "MiniMax",
+                "factor": 1.7756485215824025,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.5",
+                "release_date": "2026-02-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.240488531478255,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": false,
+                "developer": "MiniMax",
+                "factor": 1.7756485215824025,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.7",
+                "release_date": "2026-03-18",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.0156279830601624,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": false,
+                "developer": "Google DeepMind",
+                "factor": 1.8947642325889293,
+                "family": "gemma4",
+                "model": "Gemma 4 31B IT",
+                "release_date": "2026-04-02",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.6233698251139295,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": false,
+                "developer": "DeepSeek",
+                "factor": 2.240488531478255,
+                "family": "deepseek_v4",
+                "model": "DeepSeek-V4-Pro (max)",
+                "release_date": "2026-04-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.753839444981537,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 3.0156279830601624,
+                "family": "kimi_k2",
+                "model": "Kimi K2.7 Code",
+                "release_date": "2026-06-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.0115351557967112,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 3.0156279830601624,
+                "family": "glm",
+                "model": "GLM-5.2 (max)",
+                "release_date": "2026-06-16",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.282703090636611,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": false,
+                "developer": "Moonshot",
+                "factor": 3.0156279830601624,
+                "family": "kimi_k2",
+                "model": "Kimi K3",
+                "release_date": "2026-07-16",
+                "supported": true
+              }
+            ],
+            "unsupported_tests": 0
+          },
+          "80": {
+            "candidate_tests": 20,
+            "developer_balanced_coverage": {
+              "developers": 9,
+              "rate": 0.9555555555555555
+            },
+            "eligible_tests": 20,
+            "geometric_mean_interval_factor": 5.0610021727264645,
+            "group_field": "developer",
+            "latest_developer_coverage": {
+              "covered": 8,
+              "developers": 9,
+              "rate": 0.8888888888888888,
+              "same_day_policy": "least-covered checkpoint at the latest supported date"
+            },
+            "nominal_coverage": 0.8,
+            "observed_coverage": 0.9,
+            "raw_checkpoint_coverage": {
+              "covered": 18,
+              "rate": 0.9,
+              "tests": 20
+            },
+            "test_developers": 9,
+            "test_families": 12,
+            "tests": [
+              {
+                "actual_error_factor": 1.6099535718391205,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 4.655997411471875,
+                "family": "gemma2",
+                "model": "Gemma 2 27B",
+                "release_date": "2024-06-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 6.37961187633436,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Meta AI",
+                "factor": 4.655997411471875,
+                "family": "llama31",
+                "model": "Llama 3.1-405B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.5231174807058885,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 4.655997411471875,
+                "family": "llama31",
+                "model": "Llama 3.1-70B",
+                "release_date": "2024-07-23",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.2467971214378604,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Alibaba",
+                "factor": 6.37961187633436,
+                "family": "qwen25",
+                "model": "Qwen2.5-72B",
+                "release_date": "2024-09-19",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.469306713305087,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 4.655997411471875,
+                "family": "llama33",
+                "model": "Llama 3.3 70B",
+                "release_date": "2024-12-06",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 4.497460998857388,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Microsoft",
+                "factor": 4.655997411471875,
+                "family": "phi",
+                "model": "Phi-4",
+                "release_date": "2024-12-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 6.1031156398525415,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": false,
+                "developer": "Meta AI",
+                "factor": 4.655997411471875,
+                "family": "llama4",
+                "model": "Llama 4 Maverick",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.8013198873279685,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": true,
+                "developer": "Meta AI",
+                "factor": 4.655997411471875,
+                "family": "llama4",
+                "model": "Llama 4 Scout",
+                "release_date": "2025-04-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.7756485215824025,
+                "calibration_developers": 6,
+                "calibration_families": 6,
+                "calibration_groups": 6,
+                "covered": true,
+                "developer": "OpenAI",
+                "factor": 6.1031156398525415,
+                "family": "gpt_oss",
+                "model": "gpt-oss-120b",
+                "release_date": "2025-08-05",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.0271481478282465,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1031156398525415,
+                "family": "glm",
+                "model": "GLM-4.6",
+                "release_date": "2025-09-30",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.194035513591898,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1031156398525415,
+                "family": "glm",
+                "model": "GLM-4.7 Reasoning",
+                "release_date": "2025-12-22",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.8947642325889293,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 6.1031156398525415,
+                "family": "kimi_k2",
+                "model": "Kimi K2.5 Reasoning",
+                "release_date": "2026-01-27",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.4059365268766597,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1031156398525415,
+                "family": "glm",
+                "model": "GLM-5 Reasoning",
+                "release_date": "2026-02-11",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.3424652284263794,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 4.655997411471875,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.5",
+                "release_date": "2026-02-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.240488531478255,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 4.655997411471875,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.7",
+                "release_date": "2026-03-18",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.0156279830601624,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 4.655997411471875,
+                "family": "gemma4",
+                "model": "Gemma 4 31B IT",
+                "release_date": "2026-04-02",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.6233698251139295,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "DeepSeek",
+                "factor": 4.655997411471875,
+                "family": "deepseek_v4",
+                "model": "DeepSeek-V4-Pro (max)",
+                "release_date": "2026-04-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.753839444981537,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 4.655997411471875,
+                "family": "kimi_k2",
+                "model": "Kimi K2.7 Code",
+                "release_date": "2026-06-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.0115351557967112,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 4.655997411471875,
+                "family": "glm",
+                "model": "GLM-5.2 (max)",
+                "release_date": "2026-06-16",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.282703090636611,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 4.655997411471875,
+                "family": "kimi_k2",
+                "model": "Kimi K3",
+                "release_date": "2026-07-16",
+                "supported": true
+              }
+            ],
+            "unsupported_tests": 0
+          },
+          "90": {
+            "candidate_tests": 20,
+            "developer_balanced_coverage": {
+              "developers": 5,
+              "rate": 1.0
+            },
+            "eligible_tests": 7,
+            "geometric_mean_interval_factor": 6.103115639852543,
+            "group_field": "developer",
+            "latest_developer_coverage": {
+              "covered": 5,
+              "developers": 5,
+              "rate": 1.0,
+              "same_day_policy": "least-covered checkpoint at the latest supported date"
+            },
+            "nominal_coverage": 0.9,
+            "observed_coverage": 1.0,
+            "raw_checkpoint_coverage": {
+              "covered": 7,
+              "rate": 1.0,
+              "tests": 7
+            },
+            "test_developers": 5,
+            "test_families": 5,
+            "tests": [
+              {
+                "actual_error_factor": 1.6099535718391205,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Google DeepMind",
+                "factor": null,
+                "family": "gemma2",
+                "model": "Gemma 2 27B",
+                "release_date": "2024-06-24",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 6.37961187633436,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama31",
+                "model": "Llama 3.1-405B",
+                "release_date": "2024-07-23",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.5231174807058885,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama31",
+                "model": "Llama 3.1-70B",
+                "release_date": "2024-07-23",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.2467971214378604,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Alibaba",
+                "factor": null,
+                "family": "qwen25",
+                "model": "Qwen2.5-72B",
+                "release_date": "2024-09-19",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.469306713305087,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama33",
+                "model": "Llama 3.3 70B",
+                "release_date": "2024-12-06",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 4.497460998857388,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Microsoft",
+                "factor": null,
+                "family": "phi",
+                "model": "Phi-4",
+                "release_date": "2024-12-12",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 6.1031156398525415,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama4",
+                "model": "Llama 4 Maverick",
+                "release_date": "2025-04-05",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.8013198873279685,
+                "calibration_developers": 5,
+                "calibration_families": 5,
+                "calibration_groups": 5,
+                "covered": null,
+                "developer": "Meta AI",
+                "factor": null,
+                "family": "llama4",
+                "model": "Llama 4 Scout",
+                "release_date": "2025-04-05",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.7756485215824025,
+                "calibration_developers": 6,
+                "calibration_families": 6,
+                "calibration_groups": 6,
+                "covered": null,
+                "developer": "OpenAI",
+                "factor": null,
+                "family": "gpt_oss",
+                "model": "gpt-oss-120b",
+                "release_date": "2025-08-05",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 2.0271481478282465,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": null,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": null,
+                "family": "glm",
+                "model": "GLM-4.6",
+                "release_date": "2025-09-30",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.194035513591898,
+                "calibration_developers": 7,
+                "calibration_families": 7,
+                "calibration_groups": 7,
+                "covered": null,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": null,
+                "family": "glm",
+                "model": "GLM-4.7 Reasoning",
+                "release_date": "2025-12-22",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.8947642325889293,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": null,
+                "developer": "Moonshot",
+                "factor": null,
+                "family": "kimi_k2",
+                "model": "Kimi K2.5 Reasoning",
+                "release_date": "2026-01-27",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 1.4059365268766597,
+                "calibration_developers": 8,
+                "calibration_families": 8,
+                "calibration_groups": 8,
+                "covered": null,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": null,
+                "family": "glm",
+                "model": "GLM-5 Reasoning",
+                "release_date": "2026-02-11",
+                "supported": false
+              },
+              {
+                "actual_error_factor": 2.3424652284263794,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 6.1031156398525415,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.5",
+                "release_date": "2026-02-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.240488531478255,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "MiniMax",
+                "factor": 6.1031156398525415,
+                "family": "minimax_m2",
+                "model": "MiniMax-M2.7",
+                "release_date": "2026-03-18",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.0156279830601624,
+                "calibration_developers": 9,
+                "calibration_families": 9,
+                "calibration_groups": 9,
+                "covered": true,
+                "developer": "Google DeepMind",
+                "factor": 6.1031156398525415,
+                "family": "gemma4",
+                "model": "Gemma 4 31B IT",
+                "release_date": "2026-04-02",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.6233698251139295,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "DeepSeek",
+                "factor": 6.1031156398525415,
+                "family": "deepseek_v4",
+                "model": "DeepSeek-V4-Pro (max)",
+                "release_date": "2026-04-24",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 2.753839444981537,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 6.1031156398525415,
+                "family": "kimi_k2",
+                "model": "Kimi K2.7 Code",
+                "release_date": "2026-06-12",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 1.0115351557967112,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Z.ai (Zhipu AI)",
+                "factor": 6.1031156398525415,
+                "family": "glm",
+                "model": "GLM-5.2 (max)",
+                "release_date": "2026-06-16",
+                "supported": true
+              },
+              {
+                "actual_error_factor": 3.282703090636611,
+                "calibration_developers": 10,
+                "calibration_families": 10,
+                "calibration_groups": 10,
+                "covered": true,
+                "developer": "Moonshot",
+                "factor": 6.1031156398525415,
+                "family": "kimi_k2",
+                "model": "Kimi K3",
+                "release_date": "2026-07-16",
+                "supported": true
+              }
+            ],
+            "unsupported_tests": 13
+          }
+        },
+        "developers": 11,
+        "families": 16,
+        "intervals": {
+          "50": {
+            "calibration_developers": 11,
+            "calibration_families": 11,
+            "calibration_groups": 11,
+            "coverage": 0.5,
+            "group_field": "developer",
+            "multiplicative_factor": 3.0156279830601624,
+            "order_statistic_rank": 6,
+            "raw_order_statistic_rank": 6,
+            "supported": true,
+            "unsupported_reason": null,
+            "upper_rank_clipped": false
+          },
+          "80": {
+            "calibration_developers": 11,
+            "calibration_families": 11,
+            "calibration_groups": 11,
+            "coverage": 0.8,
+            "group_field": "developer",
+            "multiplicative_factor": 4.655997411471875,
+            "order_statistic_rank": 10,
+            "raw_order_statistic_rank": 10,
+            "supported": true,
+            "unsupported_reason": null,
+            "upper_rank_clipped": false
+          },
+          "90": {
+            "calibration_developers": 11,
+            "calibration_families": 11,
+            "calibration_groups": 11,
+            "coverage": 0.9,
+            "group_field": "developer",
+            "multiplicative_factor": 6.1031156398525415,
+            "order_statistic_rank": 11,
+            "raw_order_statistic_rank": 11,
+            "supported": true,
+            "unsupported_reason": null,
+            "upper_rank_clipped": false
+          }
+        },
+        "rows": 27
+      }
+    },
+    "interpretation": "Row-level median error is about 2x, but the conservative latest-developer 50% envelope is about 3x; tails are much wider and neither the empirical bands nor the crowd layer have a formal outcome-calibrated coverage claim.",
+    "k3_external_aa_reconciliation": {
+      "aa_all_kimi_held_out_error_x": 1.2394792212434236,
+      "aa_all_kimi_held_out_predicted_b": 2242.8774539771252,
+      "actual_b": 2780.0,
+      "corrected_available_component_error_x": 3.3147057633327615,
+      "corrected_available_component_predicted_b": 838.686809173933,
+      "policy": "K3 remains outside the AA parameter target panel. Its exact-score, all-Kimi-held-out AA prediction is included in the available-component ensemble so an absent target row cannot masquerade as absent evidence.",
+      "prior_incomplete_eci_compute_error_x": 7.229540050073461,
+      "prior_incomplete_eci_compute_predicted_b": 384.53345313050056
+    },
+    "latest_per_developer": {
+      "cluster_policy": "largest absolute residual among checkpoints on each developer's latest eligible release date",
+      "conformal_factors": {
+        "50": {
+          "coverage": 0.5,
+          "multiplicative_factor": 3.0156279830601624,
+          "rank": 6,
+          "raw_rank": 6,
+          "supported": true
+        },
+        "80": {
+          "coverage": 0.8,
+          "multiplicative_factor": 4.655997411471875,
+          "rank": 10,
+          "raw_rank": 10,
+          "supported": true
+        },
+        "90": {
+          "coverage": 0.9,
+          "multiplicative_factor": 6.1031156398525415,
+          "rank": 11,
+          "raw_rank": 11,
+          "supported": true
+        }
+      },
+      "developers": 11,
+      "latest_models": [
+        "DeepSeek-V4-Pro (max)",
+        "GLM-5.2 (max)",
+        "Gemma 4 31B IT",
+        "Kimi K3",
+        "Llama 4 Maverick",
+        "MiniMax-M2.7",
+        "Mixtral 8x22B",
+        "Phi-4",
+        "Qwen2.5-72B",
+        "Yi-34B",
+        "gpt-oss-120b"
+      ],
+      "metrics": {
+        "geomean_multiplicative_error": 2.5462208172219953,
+        "median_multiplicative_error": 3.0156279830601624,
+        "n": 11,
+        "p80_multiplicative_error": 4.497460998857388,
+        "p90_multiplicative_error": 4.655997411471875,
+        "rmse_log10": 0.4770515012275946,
+        "signed_bias_factor": 0.8110006270921879,
+        "within_1_5x": 0.2727272727272727,
+        "within_2x": 0.36363636363636365,
+        "within_3x": 0.45454545454545453
+      },
+      "order_statistic_factors": {
+        "50": {
+          "coverage": 0.5,
+          "multiplicative_factor": 3.0156279830601624,
+          "rank": 6,
+          "raw_rank": 6,
+          "supported": true
+        },
+        "80": {
+          "coverage": 0.8,
+          "multiplicative_factor": 4.655997411471875,
+          "rank": 10,
+          "raw_rank": 10,
+          "supported": true
+        },
+        "90": {
+          "coverage": 0.9,
+          "multiplicative_factor": 6.1031156398525415,
+          "rank": 11,
+          "raw_rank": 11,
+          "supported": true
+        }
+      }
+    },
+    "post_freeze_diagnostic_correction": {
+      "applied_after_forecast_freeze": true,
+      "central_forecasts_changed": false,
+      "freeze_rewritten": false,
+      "immutable_v1_freeze": "forecast_freezes/2026-07-31-frontier-parameters-v1/forecast_freeze.json",
+      "note": "This later diagnostic correction recomputes whole-developer holdouts, removes same-day lexical tie selection, and relabels the bands; it does not rewrite the immutable v1 forecast or its recorded centers."
+    },
+    "published_prequential_factors": {
+      "50": {
+        "calibration_developers": 11,
+        "calibration_families": 11,
+        "calibration_groups": 11,
+        "candidate_multiplicative_factors": {
+          "model_lineage_holdout": 2.747964424812721,
+          "whole_developer_holdout": 3.0156279830601624
+        },
+        "conservative_envelope_across_holdout_specs": true,
+        "coverage": 0.5,
+        "group_field": "developer",
+        "multiplicative_factor": 3.0156279830601624,
+        "order_statistic_rank": 6,
+        "raw_order_statistic_rank": 6,
+        "selected_holdout_spec": "whole_developer_holdout",
+        "supported": true,
+        "unsupported_reason": null,
+        "upper_rank_clipped": false
+      },
+      "80": {
+        "calibration_developers": 11,
+        "calibration_families": 11,
+        "calibration_groups": 11,
+        "candidate_multiplicative_factors": {
+          "model_lineage_holdout": 5.276399681855711,
+          "whole_developer_holdout": 4.655997411471875
+        },
+        "conservative_envelope_across_holdout_specs": true,
+        "coverage": 0.8,
+        "group_field": "developer",
+        "multiplicative_factor": 5.276399681855711,
+        "order_statistic_rank": 10,
+        "raw_order_statistic_rank": 10,
+        "selected_holdout_spec": "model_lineage_holdout",
+        "supported": true,
+        "unsupported_reason": null,
+        "upper_rank_clipped": false
+      },
+      "90": {
+        "calibration_developers": 11,
+        "calibration_families": 11,
+        "calibration_groups": 11,
+        "candidate_multiplicative_factors": {
+          "model_lineage_holdout": 6.1864280178083515,
+          "whole_developer_holdout": 6.1031156398525415
+        },
+        "conservative_envelope_across_holdout_specs": true,
+        "coverage": 0.9,
+        "group_field": "developer",
+        "multiplicative_factor": 6.1864280178083515,
+        "order_statistic_rank": 11,
+        "raw_order_statistic_rank": 11,
+        "selected_holdout_spec": "model_lineage_holdout",
+        "supported": true,
+        "unsupported_reason": null,
+        "upper_rank_clipped": false
+      }
+    }
+  },
+  "limitations": [
+    "No hidden target has a disclosed parameter count, so the final crowd-plus-model centers are not prospectively calibrated.",
+    "Only 11 independent frontier calibration developers make empirical tail factors coarse.",
+    "The targets extrapolate beyond the observed open-weight capability frontier.",
+    "The central estimates are total-parameter equivalents at observed inference budgets, not physical weight disclosures."
+  ],
+  "live_weights_percent": {
+    "aa": 9.5625,
+    "compute": 2.5,
+    "crowd": 50.0,
+    "eci": 9.5625,
+    "horizon": 25.0,
+    "ikp": 0.0,
+    "price": 3.375
+  },
+  "outputs": {
+    "markdown": "MODEL_READINESS.md"
+  },
+  "prospective_commitment": {
+    "artifact_sha256": "e859c32aa80a0b6bb0f0afec6654135c5a75f21163d3ea75032f8754a537912d",
+    "canonical_payload_sha256": "5cc0af21e5bbbc333e10e08ba7e92401e7357d539f493bb0697dfbffbfe697d6",
+    "current_bands_are_post_freeze_diagnostics": true,
+    "freeze_id": "frontier-parameters-2026-07-31-v1",
+    "freeze_rewritten": false,
+    "frozen_empirical_intervals": {
+      "Claude Fable 5": {
+        "50": {
+          "calibration_developers": 10,
+          "calibration_families": 10,
+          "calibration_groups": 10,
+          "calibration_scope": "target_pre_release_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": false,
+          "coverage": 0.5,
+          "group_field": "developer",
+          "high_t": 9.490753185310599,
+          "low_t": 2.3591889441510294,
+          "multiplicative_factor": 2.005713868884617,
+          "order_statistic_rank": 6,
+          "raw_order_statistic_rank": 6,
+          "upper_rank_clipped": false
+        },
+        "80": {
+          "calibration_developers": 11,
+          "calibration_families": 11,
+          "calibration_groups": 11,
+          "calibration_scope": "current_frontier_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": true,
+          "coverage": 0.8,
+          "group_field": "developer",
+          "high_t": 29.273298812238004,
+          "low_t": 0.7648772394961636,
+          "multiplicative_factor": 6.1864280178083515,
+          "order_statistic_rank": 10,
+          "raw_order_statistic_rank": 10,
+          "upper_rank_clipped": false
+        },
+        "90": {
+          "calibration_developers": 11,
+          "calibration_families": 11,
+          "calibration_groups": 11,
+          "calibration_scope": "current_frontier_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": true,
+          "coverage": 0.9,
+          "group_field": "developer",
+          "high_t": 34.20568397959201,
+          "low_t": 0.654583606625427,
+          "multiplicative_factor": 7.228806124548564,
+          "order_statistic_rank": 11,
+          "raw_order_statistic_rank": 11,
+          "upper_rank_clipped": false
+        }
+      },
+      "Claude Opus 5": {
+        "50": {
+          "calibration_developers": 11,
+          "calibration_families": 11,
+          "calibration_groups": 11,
+          "calibration_scope": "target_pre_release_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": false,
+          "coverage": 0.5,
+          "group_field": "developer",
+          "high_t": 6.024753071012691,
+          "low_t": 1.4976188463495423,
+          "multiplicative_factor": 2.005713868884617,
+          "order_statistic_rank": 6,
+          "raw_order_statistic_rank": 6,
+          "upper_rank_clipped": false
+        },
+        "80": {
+          "calibration_developers": 11,
+          "calibration_families": 11,
+          "calibration_groups": 11,
+          "calibration_scope": "target_pre_release_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": true,
+          "coverage": 0.8,
+          "group_field": "developer",
+          "high_t": 18.582760869882563,
+          "low_t": 0.4855459211324345,
+          "multiplicative_factor": 6.1864280178083515,
+          "order_statistic_rank": 10,
+          "raw_order_statistic_rank": 10,
+          "upper_rank_clipped": false
+        },
+        "90": {
+          "calibration_developers": 11,
+          "calibration_families": 11,
+          "calibration_groups": 11,
+          "calibration_scope": "target_pre_release_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": true,
+          "coverage": 0.9,
+          "group_field": "developer",
+          "high_t": 21.713850900801006,
+          "low_t": 0.4155312562921782,
+          "multiplicative_factor": 7.228806124548564,
+          "order_statistic_rank": 11,
+          "raw_order_statistic_rank": 11,
+          "upper_rank_clipped": false
+        }
+      },
+      "GPT-5.6 Sol": {
+        "50": {
+          "calibration_developers": 9,
+          "calibration_families": 9,
+          "calibration_groups": 9,
+          "calibration_scope": "target_pre_release_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": false,
+          "coverage": 0.5,
+          "group_field": "developer",
+          "high_t": 6.179610927818753,
+          "low_t": 1.5361130455514813,
+          "multiplicative_factor": 2.005713868884617,
+          "order_statistic_rank": 5,
+          "raw_order_statistic_rank": 5,
+          "upper_rank_clipped": false
+        },
+        "80": {
+          "calibration_developers": 10,
+          "calibration_families": 10,
+          "calibration_groups": 10,
+          "calibration_scope": "current_frontier_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": true,
+          "coverage": 0.8,
+          "group_field": "developer",
+          "high_t": 19.06040476464983,
+          "low_t": 0.4980262003806021,
+          "multiplicative_factor": 6.1864280178083515,
+          "order_statistic_rank": 9,
+          "raw_order_statistic_rank": 9,
+          "upper_rank_clipped": false
+        },
+        "90": {
+          "calibration_developers": 10,
+          "calibration_families": 10,
+          "calibration_groups": 10,
+          "calibration_scope": "current_frontier_developers",
+          "center_basis": "evidence_center_t",
+          "conservative_max_of_current_and_target_chronological": true,
+          "coverage": 0.9,
+          "group_field": "developer",
+          "high_t": 22.27197508844331,
+          "low_t": 0.42621190644113455,
+          "multiplicative_factor": 7.228806124548564,
+          "order_statistic_rank": 10,
+          "raw_order_statistic_rank": 10,
+          "upper_rank_clipped": false
+        }
+      }
+    },
+    "frozen_point_centers_match_current": true,
+    "locked_at_utc": "2026-07-31T03:22:39Z",
+    "post_outcome_refitting": "FORBIDDEN",
+    "privacy_prior_artifact_sha256": "0ed93f398ad2f80f8c7b76ce7d7add4b017ab45b53a0f14303d47613ae9ac785",
+    "privacy_redacted": true,
+    "respondent_name_mapping_retained": false,
+    "status": "LOCKED_PRE_DISCLOSURE",
+    "targets": [
+      "Claude Fable 5",
+      "GPT-5.6 Sol",
+      "Claude Opus 5"
+    ]
+  },
+  "role": "descriptive current-state report; never a model input",
+  "source_files": {
+    "forecast_freezes/2026-07-31-frontier-parameters-v1/forecast_freeze.json": "e859c32aa80a0b6bb0f0afec6654135c5a75f21163d3ea75032f8754a537912d",
+    "forecast_freezes/2026-07-31-frontier-parameters-v1/forecast_freeze.sha256": "f228eeb9bf93e0b955afe5029818df9b1bf6eef34e07b8f5f85d450752cd79c1",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_inference_budget_audit_2026-07-18.json": "cb7b11524d1cf2375649bfa65e0685a3b51697a5eef6f632957643a433a58bf3",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_score_availability_timing_audit_2026-07-31.json": "9d0eb54084717d8d85c20cd65de97a8d6801081574310b092c881647dd65056a",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_shrinkage_challenger_2026-07-31.json": "6c3ed3bc5f352df2783093121a37d91ccc899db1be2d146536c24672af3069e7",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_audit_2026-07-18.json": "36cb8a21e93f6847399f0aa943e3604688b9c7d9b06bc583d938d8b8770d38a0",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/crowd_robustness_audit_2026-07-31.json": "e6366b255149b57f0c6cf2c80f4c226922486fa6588541c3c0909955abc8bb4f",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_architecture_blend_challenger_2026-07-31.json": "728c5a81e9dd5a5415fe5d762ddece785f328f77bf5cda4eec852b4291502927",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_historical_common_component_audit_2026-07-31.json": "07f1c99c0c7e4c6ff829bc18173ac923dcf28ee47327836d8738c5c4cde1acf2",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_historical_validation_extension_2026-07-31.json": "cf39c08e1ddbc49576adc4ad0d9e74f940fd7c2065c02233f42d235c6e1fd910",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_vintage_knowledge_residual_audit_2026-07-31.json": "fe640cf85b053c12a3142770786abe251e1aeefa43d15fae40114f41467a3472",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/factor_weight_optimization_2026-07-18.json": "afce53bf62263e17ab46b18e89ec0a989eda0bc1fe739487d5ee0997cee8cfff",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_chronological_backtest_2026-07-17.json": "7ae67d3d92cfe72771cf460a8ef254cd73f3be775e618124e7ddbca7f170088c",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_predictive_uncertainty_2026-07-18.json": "430a8745ee12a63a7c47b52cc321543e62d4b9fce4a990b0654e3a526acef22f",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/longcat_parameter_definition_sensitivity_2026-07-31.json": "018c538f72a492c7003b5663b50363a81db21e9136bab4dc033ae0b5a907033d",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/parameter_developer_vintage_sensitivity_2026-07-31.json": "1588d1d0523a3d746bf60b3fd6172a50102f445796cb841da22120c3702b785c",
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "site/public/data/forecast-model.json": "9d9cc4676a0b3455134adbc0b90d07e9b45bd642cb2339204c77fd6eebfc44c0",
+    "sources/aa_parameter_label_availability_2026-07-31.json": "ddcb74ba7234af648d6712be4c24ac23cb185f388d61844f39aabecdc9a7d845",
+    "sources/aa_score_availability_2026-07-31.json": "5d61f803e6cc8de6082400218a9a3c941f93eec7301e6b4aded55d9ec227c9b9",
+    "sources/human_parameter_forecasts_2026-07-17.csv": "2056de44e4249943bbfbee5eaa57d98e9dc8de3b6fd9c62e2073983df4da0c22",
+    "sources/open_model_parameter_truth_reconciliation_2026-07-31.json": "cbfc667c884f88d7a4456efde5a47f24ca6ca481f0e30a67cbfcc419c7c0ad89"
+  }
+}

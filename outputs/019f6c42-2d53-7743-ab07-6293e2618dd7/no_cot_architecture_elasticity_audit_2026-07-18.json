@@ -1,0 +1,463 @@
+{
+  "canonical_parameter_relationship_sensitivity": {
+    "dense": {
+      "factor_per_horizon_doubling": 2.176488788489136,
+      "log_parameter_per_log_horizon": 1.1220025885463127,
+      "parameter_value_basis": "canonical_parameter_truth_overlay",
+      "pareto_models": [
+        "Llama 3.2 1B",
+        "Llama 3.2 3B",
+        "Gemma 3 4B",
+        "Ministral 3 8B",
+        "Qwen3.5-9B",
+        "Ministral 3 14B",
+        "Gemma 3 27B",
+        "Gemma 4 31B IT"
+      ],
+      "pareto_n": 8
+    },
+    "moe": {
+      "factor_per_horizon_doubling": 8.319917432714167,
+      "log_parameter_per_log_horizon": 3.0565692110580884,
+      "parameter_value_basis": "canonical_parameter_truth_overlay",
+      "pareto_models": [
+        "Gemma 4 26B A4B",
+        "Qwen3-Next-80B-A3B",
+        "Qwen3-235B-A22B-Instruct (Jul 2025)",
+        "Qwen 3.5 Plus (hosted 397B-A17B)",
+        "Kimi K2.5"
+      ],
+      "pareto_n": 5
+    },
+    "pooled": {
+      "factor_per_horizon_doubling": 3.959394950429352,
+      "log_parameter_per_log_horizon": 1.985279983661618,
+      "parameter_value_basis": "canonical_parameter_truth_overlay",
+      "pareto_models": [
+        "Llama 3.2 1B",
+        "Llama 3.2 3B",
+        "Gemma 3 4B",
+        "Ministral 3 8B",
+        "Qwen3.5-9B",
+        "Ministral 3 14B",
+        "Gemma 4 26B A4B",
+        "Gemma 3 27B",
+        "Gemma 4 31B IT",
+        "Qwen 3.5 Plus (hosted 397B-A17B)",
+        "Kimi K2.5"
+      ],
+      "pareto_n": 11
+    }
+  },
+  "decision": {
+    "change_headline_forecasts": false,
+    "change_live_horizon_weight": false,
+    "reason": "The 8.1x MoE Pareto relationship is exactly reproducible as a descriptive scaling result, but a separately learned architecture slope worsens held-out parameter recovery. Training-fold-only Pareto slopes have a favorable chronological point estimate but their family-bootstrap interval crosses zero, so the evidence does not support replacing the pooled live mapping.",
+    "replace_pooled_live_elasticity_with_moe_specific": false,
+    "retain_paper_moe_factor_as_sensitivity": true
+  },
+  "frontier_like_metrics": {
+    "chronological_developer_holdout": {
+      "direct_architecture": {
+        "equal_family_geomean_multiplicative_error": 2.253751733036221,
+        "families": 4,
+        "geomean_multiplicative_error": 2.0848263034249257,
+        "median_multiplicative_error": 1.9304141650553912,
+        "n": 7,
+        "rmse_log": 0.8932442915422673,
+        "within_2x": 0.5714285714285714
+      },
+      "direct_pooled": {
+        "equal_family_geomean_multiplicative_error": 2.062419738430778,
+        "families": 4,
+        "geomean_multiplicative_error": 1.9275888856028822,
+        "median_multiplicative_error": 1.979991043365595,
+        "n": 7,
+        "rmse_log": 0.7922580221705992,
+        "within_2x": 0.5714285714285714
+      },
+      "training_pareto_architecture": {
+        "equal_family_geomean_multiplicative_error": 1.8683247071855238,
+        "families": 4,
+        "geomean_multiplicative_error": 1.8172781323436373,
+        "median_multiplicative_error": 1.8065742376629033,
+        "n": 6,
+        "rmse_log": 0.7501145015830226,
+        "within_2x": 0.5
+      },
+      "training_pareto_pooled": {
+        "equal_family_geomean_multiplicative_error": 2.943577157018078,
+        "families": 4,
+        "geomean_multiplicative_error": 2.3698352773111218,
+        "median_multiplicative_error": 2.671519052952465,
+        "n": 7,
+        "rmse_log": 1.1221791559807612,
+        "within_2x": 0.42857142857142855
+      }
+    },
+    "leave_one_developer_out": {
+      "direct_architecture": {
+        "equal_family_geomean_multiplicative_error": 2.6392903618983663,
+        "families": 4,
+        "geomean_multiplicative_error": 2.537147934888623,
+        "median_multiplicative_error": 2.5561754868301447,
+        "n": 9,
+        "rmse_log": 1.1802366556812427,
+        "within_2x": 0.4444444444444444
+      },
+      "direct_pooled": {
+        "equal_family_geomean_multiplicative_error": 2.3847926045864702,
+        "families": 4,
+        "geomean_multiplicative_error": 2.424338371497593,
+        "median_multiplicative_error": 2.0584059023389814,
+        "n": 9,
+        "rmse_log": 1.1475083874098075,
+        "within_2x": 0.4444444444444444
+      },
+      "training_pareto_architecture": {
+        "equal_family_geomean_multiplicative_error": 4.180484301940937,
+        "families": 4,
+        "geomean_multiplicative_error": 4.5189893250559425,
+        "median_multiplicative_error": 3.4369261050049027,
+        "n": 9,
+        "rmse_log": 1.8655643387498204,
+        "within_2x": 0.2222222222222222
+      },
+      "training_pareto_pooled": {
+        "equal_family_geomean_multiplicative_error": 4.144885594164707,
+        "families": 4,
+        "geomean_multiplicative_error": 3.6231726209242914,
+        "median_multiplicative_error": 2.699865625403859,
+        "n": 9,
+        "rmse_log": 1.6054605994344615,
+        "within_2x": 0.4444444444444444
+      }
+    }
+  },
+  "heldout_metrics": {
+    "chronological_developer_holdout": {
+      "direct_architecture": {
+        "equal_family_geomean_multiplicative_error": 2.822350350230498,
+        "families": 5,
+        "geomean_multiplicative_error": 2.8151192660449325,
+        "median_multiplicative_error": 2.323656315636126,
+        "n": 16,
+        "rmse_log": 1.2598666125096933,
+        "within_2x": 0.4375
+      },
+      "direct_pooled": {
+        "equal_family_geomean_multiplicative_error": 2.6119205765729623,
+        "families": 5,
+        "geomean_multiplicative_error": 2.6225812742163055,
+        "median_multiplicative_error": 2.1606531556102953,
+        "n": 16,
+        "rmse_log": 1.1959206744381805,
+        "within_2x": 0.4375
+      },
+      "training_pareto_architecture": {
+        "equal_family_geomean_multiplicative_error": 2.626455543953047,
+        "families": 5,
+        "geomean_multiplicative_error": 2.674924300394555,
+        "median_multiplicative_error": 2.6400028650516756,
+        "n": 15,
+        "rmse_log": 1.2096633270861092,
+        "within_2x": 0.4
+      },
+      "training_pareto_pooled": {
+        "equal_family_geomean_multiplicative_error": 2.9620118463337386,
+        "families": 5,
+        "geomean_multiplicative_error": 2.8663723124775875,
+        "median_multiplicative_error": 2.3684440736302554,
+        "n": 16,
+        "rmse_log": 1.3329392725479439,
+        "within_2x": 0.4375
+      }
+    },
+    "leave_one_developer_out": {
+      "direct_architecture": {
+        "equal_family_geomean_multiplicative_error": 2.5307210079818208,
+        "families": 6,
+        "geomean_multiplicative_error": 2.7350328188365296,
+        "median_multiplicative_error": 2.5207479347915656,
+        "n": 35,
+        "rmse_log": 1.2638632870632052,
+        "within_2x": 0.45714285714285713
+      },
+      "direct_pooled": {
+        "equal_family_geomean_multiplicative_error": 2.2548979359721013,
+        "families": 6,
+        "geomean_multiplicative_error": 2.40365368284039,
+        "median_multiplicative_error": 1.9919947359571692,
+        "n": 35,
+        "rmse_log": 1.1203090050620295,
+        "within_2x": 0.5142857142857142
+      },
+      "training_pareto_architecture": {
+        "equal_family_geomean_multiplicative_error": 2.919263185513169,
+        "families": 6,
+        "geomean_multiplicative_error": 3.5156103875057867,
+        "median_multiplicative_error": 2.4670328688915513,
+        "n": 35,
+        "rmse_log": 1.702969294215902,
+        "within_2x": 0.3142857142857143
+      },
+      "training_pareto_pooled": {
+        "equal_family_geomean_multiplicative_error": 3.0180579372435656,
+        "families": 6,
+        "geomean_multiplicative_error": 3.2299132075821486,
+        "median_multiplicative_error": 2.699865625403859,
+        "n": 35,
+        "rmse_log": 1.4510924418305253,
+        "within_2x": 0.42857142857142855
+      }
+    }
+  },
+  "inventory": {
+    "day_precision_dates": 35,
+    "dense_models": 19,
+    "families": 6,
+    "models": 35,
+    "moe_models": 16,
+    "same_parameter_control_groups": 4
+  },
+  "limitations": [
+    "The panel has only six developers and the full MoE Pareto frontier has five models.",
+    "Architecture labels do not directly measure sparsity, routing, data quality, post-training compute, or inference budget.",
+    "The secondary leave-one-developer-out split uses future models and is not a real-time forecast simulation.",
+    "Same-parameter controls show that horizon can move materially with unchanged reported total size, so any elasticity is a noisy capability-to-parameter transport rather than an identity.",
+    "The paper-reproduction block intentionally retains the paper's raw rounded labels, while every predictive fit and same-parameter control uses the reconciled canonical total; their small difference is reported as a sensitivity rather than silently changing the published result."
+  ],
+  "metadata": {
+    "generated_on": "2026-07-18",
+    "paper_method": "OLS of log horizon on log parameters along the per-axis Pareto frontier; deterministic reproduction uses reported per-model bootstrap medians and the raw parameter labels present in the no-CoT source",
+    "prediction_question": "Does a separate MoE horizon slope improve held-out recovery of total parameter count?",
+    "predictive_parameter_basis": "canonical parameter-truth overlay; raw source labels remain preserved for paper reproduction",
+    "primary_split": "strictly earlier release date and entire test developer excluded",
+    "training_weighting": "inverse checkpoint count per developer family"
+  },
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_architecture_elasticity_predictions_2026-07-18.csv"
+  },
+  "paired_comparisons": {
+    "chronological_developer_holdout": {
+      "direct_architecture_minus_pooled": {
+        "ci_90": [
+          0.020032668382444285,
+          0.137225640714129
+        ],
+        "families": 5,
+        "metric": "equal-family mean absolute natural-log error; architecture-specific minus pooled",
+        "n": 16,
+        "observed_delta": 0.07748419152516166,
+        "per_family_delta": {
+          "deepseek": -0.015358735437722556,
+          "gemma": 0.12130277539752976,
+          "kimi": 0.14492623937373672,
+          "mistral": 0.09026611256126167,
+          "qwen": 0.0462845657310027
+        },
+        "probability_architecture_specific_better": 0.01075,
+        "samples": 20000,
+        "seed": 20260718
+      },
+      "training_pareto_architecture_minus_pooled": {
+        "ci_90": [
+          -0.3457861020212702,
+          0.16445230665938412
+        ],
+        "families": 5,
+        "metric": "equal-family mean absolute natural-log error; architecture-specific minus pooled",
+        "n": 15,
+        "observed_delta": -0.09523619969979744,
+        "per_family_delta": {
+          "deepseek": 0.11601316595720412,
+          "gemma": -0.5378402268747946,
+          "kimi": -0.03481871473928022,
+          "mistral": -0.21078313181414451,
+          "qwen": 0.19124790897202804
+        },
+        "probability_architecture_specific_better": 0.7358,
+        "samples": 20000,
+        "seed": 20260728
+      }
+    },
+    "leave_one_developer_out": {
+      "direct_architecture_minus_pooled": {
+        "ci_90": [
+          0.023957766937285276,
+          0.25354625931648134
+        ],
+        "families": 6,
+        "metric": "equal-family mean absolute natural-log error; architecture-specific minus pooled",
+        "n": 35,
+        "observed_delta": 0.11539953481078842,
+        "per_family_delta": {
+          "deepseek": -0.002012436973223286,
+          "gemma": 0.1423832244181688,
+          "kimi": 0.03797733802343798,
+          "llama": 0.42576218367635615,
+          "mistral": 0.0963828116585912,
+          "qwen": -0.008095911938600315
+        },
+        "probability_architecture_specific_better": 0.0036,
+        "samples": 20000,
+        "seed": 20260719
+      },
+      "training_pareto_architecture_minus_pooled": {
+        "ci_90": [
+          -0.3775387892308267,
+          0.29838456957619897
+        ],
+        "families": 6,
+        "metric": "equal-family mean absolute natural-log error; architecture-specific minus pooled",
+        "n": 35,
+        "observed_delta": -0.03328230668221573,
+        "per_family_delta": {
+          "deepseek": 0.24043867890141501,
+          "gemma": -0.3018769194928465,
+          "kimi": -0.1463345971254212,
+          "llama": 0.6248468792330308,
+          "mistral": -0.8198331007689709,
+          "qwen": 0.20306521915949835
+        },
+        "probability_architecture_specific_better": 0.5539,
+        "samples": 20000,
+        "seed": 20260729
+      }
+    }
+  },
+  "paper_relationship_reproduction": {
+    "dense": {
+      "deterministic_bootstrap_median_reproduction": 2.176488788489136,
+      "log_parameter_per_log_horizon": 1.1220025885463127,
+      "paper_reported_factor_per_horizon_doubling": 2.2,
+      "parameter_value_basis": "raw_no_cot_source_label",
+      "pareto_models": [
+        "Llama 3.2 1B",
+        "Llama 3.2 3B",
+        "Gemma 3 4B",
+        "Ministral 3 8B",
+        "Qwen3.5-9B",
+        "Ministral 3 14B",
+        "Gemma 3 27B",
+        "Gemma 4 31B IT"
+      ],
+      "pareto_n": 8
+    },
+    "moe": {
+      "deterministic_bootstrap_median_reproduction": 8.132252384929469,
+      "log_parameter_per_log_horizon": 3.0236549900026066,
+      "paper_reported_factor_per_horizon_doubling": 8.1,
+      "parameter_value_basis": "raw_no_cot_source_label",
+      "pareto_models": [
+        "Gemma 4 26B A4B",
+        "Qwen3-Next-80B-A3B",
+        "Qwen3-235B-A22B-Instruct (Jul 2025)",
+        "Qwen 3.5 Plus (hosted 397B-A17B)",
+        "Kimi K2.5"
+      ],
+      "pareto_n": 5
+    },
+    "pooled": {
+      "deterministic_bootstrap_median_reproduction": 3.932743047109931,
+      "log_parameter_per_log_horizon": 1.9755359282665061,
+      "paper_reported_factor_per_horizon_doubling": 4.2,
+      "parameter_value_basis": "raw_no_cot_source_label",
+      "pareto_models": [
+        "Llama 3.2 1B",
+        "Llama 3.2 3B",
+        "Gemma 3 4B",
+        "Ministral 3 8B",
+        "Qwen3.5-9B",
+        "Ministral 3 14B",
+        "Gemma 4 26B A4B",
+        "Gemma 3 27B",
+        "Gemma 4 31B IT",
+        "Qwen 3.5 Plus (hosted 397B-A17B)",
+        "Kimi K2.5"
+      ],
+      "pareto_n": 11
+    }
+  },
+  "parameter_truth_overlays_in_panel": [
+    {
+      "canonical_total_parameters_b": 1040.0,
+      "model": "Kimi K2-0905",
+      "parameter_truth_id": "moonshot-kimi-k2-family-report-table-1",
+      "raw_total_parameters_b": 1000.0
+    },
+    {
+      "canonical_total_parameters_b": 1040.0,
+      "model": "Kimi K2.5",
+      "parameter_truth_id": "moonshot-kimi-k2-family-report-table-1",
+      "raw_total_parameters_b": 1000.0
+    },
+    {
+      "canonical_total_parameters_b": 1040.0,
+      "model": "Kimi K2.6",
+      "parameter_truth_id": "moonshot-kimi-k2-family-report-table-1",
+      "raw_total_parameters_b": 1000.0
+    }
+  ],
+  "promotion_gates": {
+    "chronological_direct_architecture_ci_wholly_favorable": false,
+    "chronological_training_pareto_architecture_ci_wholly_favorable": false,
+    "secondary_direct_architecture_direction_favorable": false
+  },
+  "same_parameter_controls": [
+    {
+      "architecture": "MoE",
+      "family": "deepseek",
+      "horizon_max": 0.954,
+      "horizon_max_over_min": 1.4070796460176989,
+      "horizon_min": 0.678,
+      "models": [
+        "DeepSeek-V3 (Mar 2025)",
+        "DeepSeek-V3.1-Terminus",
+        "DeepSeek-V3.2"
+      ],
+      "total_parameters_b": 671.0
+    },
+    {
+      "architecture": "MoE",
+      "family": "kimi",
+      "horizon_max": 1.102,
+      "horizon_max_over_min": 2.1692913385826773,
+      "horizon_min": 0.508,
+      "models": [
+        "Kimi K2-0905",
+        "Kimi K2.5",
+        "Kimi K2.6"
+      ],
+      "total_parameters_b": 1040.0
+    },
+    {
+      "architecture": "Dense",
+      "family": "llama",
+      "horizon_max": 0.177,
+      "horizon_max_over_min": 1.824742268041237,
+      "horizon_min": 0.097,
+      "models": [
+        "Llama 3-8B",
+        "Llama 3.1-8B"
+      ],
+      "total_parameters_b": 8.0
+    },
+    {
+      "architecture": "Dense",
+      "family": "llama",
+      "horizon_max": 0.513,
+      "horizon_max_over_min": 1.2604422604422605,
+      "horizon_min": 0.407,
+      "models": [
+        "Llama 3.1-70B",
+        "Llama 3.3 70B"
+      ],
+      "total_parameters_b": 70.0
+    }
+  ],
+  "source_hashes": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/no_cot_architecture_elasticity_predictions_2026-07-18.csv": "6fda75da4587fcafb72e6a80fe9d0610b28c912012f8996194da5febe8b4c371",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794"
+  }
+}

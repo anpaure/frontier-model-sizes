@@ -1,0 +1,67 @@
+{
+  "anthropic_source": {
+    "claims": {
+      "client_fallback_to_opus_4_8": {
+        "page": 14,
+        "verified": true
+      },
+      "gpqa_saturated": {
+        "page": 258,
+        "verified": true
+      },
+      "messages_api_no_default_fallback": {
+        "page": 14,
+        "verified": true
+      },
+      "no_fallback_means_underlying_mythos": {
+        "page": 131,
+        "verified": true
+      },
+      "shared_underlying_weights": {
+        "page": 12,
+        "verified": true
+      }
+    },
+    "page_count": 317,
+    "pdf_bytes": 26957495,
+    "pdf_sha256": "c29ffa55ecefab591916dfdefc5ba3fd4e07c27cbef96ca3c05f7601aaebd033",
+    "published_date": "2026-07-14",
+    "url": "https://www-cdn.anthropic.com/2f9323abbcc4abe219577539efe19a623c9ca2bd/Claude%20Fable%205%20%26%20Claude%20Mythos%205%20System%20Card.pdf"
+  },
+  "collection_mode": "frozen offline rebuild",
+  "files": {
+    "sources/anthropic_fable_mythos_primary_claims_2026-07-18.json": {
+      "sha256": "95074daa94df64346be85e0cfb98694c954d774e184b8c17dd75ebd9d6efa816"
+    },
+    "sources/frontier_primary_evidence_2026-07-18.csv": {
+      "sha256": "5ab835b72b154124c0516384ec6f2d8d0b8c3a60d7fd2a0377f2eb22d5f1173e"
+    },
+    "sources/openai_gpt_5_6_system_card_2026-07-18.html.gz": {
+      "sha256": "f973a0872495880073baea26b22b9149f7f377af55985ed7432786dafc57a672"
+    }
+  },
+  "generated_on": "2026-07-18",
+  "integrity_policy": {
+    "direct_horizon_is_not_mapped_to_size_without_backtest": true,
+    "fable_mythos_identity_is_not_a_numeric_size_observation": true,
+    "fable_opus_fallback_is_not_a_parameter_identity": true,
+    "large_anthropic_pdf_reproducible_by_url_and_hash": true,
+    "network_in_frozen_pipeline": false,
+    "official_sources_only": true
+  },
+  "inventory": {
+    "benchmark_caveats": 1,
+    "identity_constraints": 1,
+    "normalized_evidence_rows": 5,
+    "numeric_measurements": 2,
+    "serving_system_caveats": 1
+  },
+  "openai_source": {
+    "gpt_5_5_minutes": 2.3,
+    "normalized_text_sha256": "abc557be10ee26a1d77e190881a08b3995aa18d16d6e09b104bdbb01c7c94874",
+    "published_date": "2026-07-09",
+    "raw_uncompressed_sha256": "23550597f189bfa6e69d1e6afe241ebabbc39f8b7cc3135938055b73c232ecfd",
+    "sol_minutes": 3.6,
+    "url": "https://deploymentsafety.openai.com/gpt-5-6"
+  }
+}

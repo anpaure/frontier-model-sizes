@@ -1,0 +1,38 @@
+# macOS and editor metadata
+.DS_Store
+*.swp
+*.swo
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.codex_tmp/pydeps/
+
+# JavaScript dependencies and generated builds
+node_modules
+node_modules/
+site/node_modules/
+site/dist/
+site/.next/
+site/.vinext/
+site/.wrangler/
+site/coverage/
+
+# Local browser/runtime scratch state
+.playwright-cli/
+.codex_spreadsheet_runtime/node_modules/
+tmp/
+
+# Secrets and local environment overrides
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

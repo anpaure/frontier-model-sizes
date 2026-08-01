@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "source_url": "https://artificialanalysis.ai/models/kimi-k3",
+  "fetched_at_utc": "2026-07-18T01:01:14.949901+00:00",
+  "content_type": "text/html (frozen snapshot)",
+  "parse_method": "Next.js React Flight model objects; most-complete duplicate retained after core-field agreement",
+  "raw_html_uncompressed_bytes": 3161619,
+  "raw_html_uncompressed_sha256": "74a6410bb1571098fc50a22717b254d8b2c58ee2c6c14b9782c5873db5db749d",
+  "raw_gzip_sha256": "889c19d858d59bbbd8ef98baf1471fc185e9596009a1797ec830db0198259978",
+  "model_csv_sha256": "46fd431ab8730a879b48f4b3fe9df644e94663bb9617b6b40d717a9f330f8e61",
+  "models": 576,
+  "unique_model_ids": 576,
+  "unique_slugs": 576,
+  "open_weight_parameter_score_date_rows": 330,
+  "open_weight_rows_with_inference_token_measurement": 74,
+  "creators_in_parameter_panel": 46,
+  "outputs": {
+    "raw": "sources/aa_detailed_snapshot_2026-07-18.html.gz",
+    "models": "sources/aa_detailed_model_signals_2026-07-18.csv"
+  }
+}

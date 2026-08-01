@@ -1,0 +1,619 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "audit_type": "zero-weight parameter-definition sensitivity",
+    "network_reads": 0,
+    "raw_sources_modified": false,
+    "canonical_parameter_registry_modified": false,
+    "live_forecast_weights_modified": false
+  },
+  "definition_evidence": {
+    "schema_version": "1.0",
+    "snapshot_date": "2026-07-31",
+    "model": {
+      "canonical_name": "LongCat 2.0",
+      "repository": "meituan-longcat/LongCat-2.0",
+      "revision": "834bf5ffe3047aa9f6cc7a64a9bc068b146b8274"
+    },
+    "publisher_definition": {
+      "total_parameters": 1600000000000,
+      "average_activated_parameters": 48000000000,
+      "dynamic_activated_parameters_low": 33000000000,
+      "dynamic_activated_parameters_high": 56000000000,
+      "label_precision": "0.1 trillion parameters",
+      "source_url": "https://www.meituan.com/news/NN260630164005904",
+      "source_path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__first_party_label_source.html",
+      "source_sha256": "b4f3da932292f5da49185b53923e6b2751f032e0f36e2983528fae3caaec8972"
+    },
+    "hugging_face_serialized_inventory": {
+      "safetensors_total_elements": 1775560491136,
+      "bf16_elements": 1775271312256,
+      "f32_elements": 289178880,
+      "shards": 194,
+      "tensor_entries": 88780,
+      "repository_api_url": "https://huggingface.co/api/models/meituan-longcat/LongCat-2.0",
+      "repository_api_path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_model_api.json",
+      "repository_api_sha256": "46e4abcd862ceb44a594adb1fea2e10afed27eba50cb74fcc839f6c797e58976",
+      "index_url": "https://huggingface.co/meituan-longcat/LongCat-2.0/resolve/834bf5ffe3047aa9f6cc7a64a9bc068b146b8274/model.safetensors.index.json",
+      "index_sha256": "bd5f7e8cf2f32c42fd25fc16ecef1de31ef2a4714f752dff13374a9075863a53",
+      "inventory_method": "Read only the safetensors JSON headers for every shard at the pinned repository revision; multiply tensor dimensions and group tensor names. No tensor payload was downloaded."
+    },
+    "tensor_name_inventory": {
+      "lm_head": {
+        "elements": 1342177280,
+        "tensor_entries": 1
+      },
+      "input_embedding": {
+        "elements": 1342177280,
+        "tensor_entries": 1
+      },
+      "backbone_layers": {
+        "elements": 1500886464512,
+        "tensor_entries": 88692
+      },
+      "mtp": {
+        "elements": 136943683712,
+        "tensor_entries": 53,
+        "name_prefix": "model.mtp."
+      },
+      "final_norm": {
+        "elements": 8192,
+        "tensor_entries": 1
+      },
+      "other": {
+        "elements": 135045980160,
+        "tensor_entries": 32,
+        "observed_prefix": "model.oe_embed_proj"
+      }
+    },
+    "configuration_crosscheck": {
+      "mtp_num_layers": 3,
+      "mtp_replicate_modules": true,
+      "config_url": "https://huggingface.co/meituan-longcat/LongCat-2.0/raw/373726b7bb09d29076e85c87384ba718ba153d07/config.json",
+      "config_path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_config.json",
+      "config_sha256": "c77120ade725b51d4911469fcefccdb46bf31c14465531533a68b74d54df16a5"
+    },
+    "derived_reconciliation": {
+      "serialized_elements_excluding_mtp": 1638616807424,
+      "serialized_minus_publisher_nominal": 175560491136,
+      "excluding_mtp_minus_publisher_nominal": 38616807424,
+      "mtp_share_of_serialized_minus_publisher_nominal": 0.7800370278408196,
+      "excluding_mtp_rounds_to_publisher_label": true
+    },
+    "definition_caveat": "Hugging Face reports elements stored in safetensors, not a publisher-defined pretraining-model parameter count. Serialized inventories can include auxiliary MTP modules and separately stored tensors; they do not establish how the publisher counted tied, replicated, auxiliary, or inference-only components."
+  },
+  "scenarios": {
+    "publisher_model_total": {
+      "parameter_basis": "Meituan first-party release: publisher-defined rounded model total",
+      "frontier_regression": {
+        "longcat_total_b": 1600.0,
+        "longcat_active_b": 48.0,
+        "selected_spec": [],
+        "kappa": 1.0,
+        "coefficients": [
+          1.177902751998079,
+          2.821984047005693,
+          18.578097110593514,
+          6.0
+        ],
+        "frontier_shift": 4.907565623736141,
+        "lofo_metrics": {
+          "rmse_score": 6.033083522420063,
+          "mae_score": 4.641916903481709,
+          "mae_log2_scale": 1.6400348751352596,
+          "median_abs_log2_scale": 1.2706692829867525,
+          "p80_abs_log2_scale": 2.5448996693302868,
+          "p90_abs_log2_scale": 3.719042247674364,
+          "bias_log2_scale": -0.09406078706046454,
+          "n": 50
+        },
+        "observed_moe_ratio_median": 18.6,
+        "eci_selected_spec_unchanged": [
+          "moe"
+        ],
+        "targets": [
+          {
+            "model": "Claude Opus 5",
+            "aa_total_b": 11970.99231929043,
+            "eci_total_b": 394.8651521801623,
+            "legacy_frontier_equivalence_total_b": 2174.1498807359553
+          },
+          {
+            "model": "GPT-5.6 Sol",
+            "aa_total_b": 9274.44609591771,
+            "eci_total_b": 681.8285390617858,
+            "legacy_frontier_equivalence_total_b": 2514.673345026518
+          },
+          {
+            "model": "Claude Fable 5",
+            "aa_total_b": 17124.694316237295,
+            "eci_total_b": 684.3667138710406,
+            "legacy_frontier_equivalence_total_b": 3423.385864206576
+          },
+          {
+            "model": "Claude Opus 4.8",
+            "aa_total_b": 7145.8583053495295,
+            "eci_total_b": 439.6275014665084,
+            "legacy_frontier_equivalence_total_b": 1772.4321799760103
+          },
+          {
+            "model": "GPT-5.6 Terra",
+            "aa_total_b": 3526.2932201580297,
+            "eci_total_b": 349.4826694908625,
+            "legacy_frontier_equivalence_total_b": 1110.1253839041597
+          },
+          {
+            "model": "GPT-5.5",
+            "aa_total_b": 8970.412147303101,
+            "eci_total_b": 600.4041797700721,
+            "legacy_frontier_equivalence_total_b": 2320.7483593662214
+          },
+          {
+            "model": "Claude Opus 4.7",
+            "aa_total_b": 7100.205900989707,
+            "eci_total_b": 397.0324528757057,
+            "legacy_frontier_equivalence_total_b": 1678.9914129597278
+          },
+          {
+            "model": "Grok 4.5",
+            "aa_total_b": 2707.7112776126523,
+            "eci_total_b": 144.932622546879,
+            "legacy_frontier_equivalence_total_b": 626.4468824762097
+          },
+          {
+            "model": "Claude Sonnet 5",
+            "aa_total_b": 2661.762894081827,
+            "eci_total_b": 148.6807418582029,
+            "legacy_frontier_equivalence_total_b": 629.0889299158929
+          },
+          {
+            "model": "GPT-5.6 Luna",
+            "aa_total_b": 1415.2148797080501,
+            "eci_total_b": 200.99446368215345,
+            "legacy_frontier_equivalence_total_b": 533.3388751459271
+          },
+          {
+            "model": "Gemini 3.5 Flash",
+            "aa_total_b": 2076.85086258368,
+            "eci_total_b": 243.41058823158133,
+            "legacy_frontier_equivalence_total_b": 711.0045640716806
+          },
+          {
+            "model": "Gemini 3.1 Pro Preview",
+            "aa_total_b": 2517.1720332760697,
+            "eci_total_b": 455.83036133254114,
+            "legacy_frontier_equivalence_total_b": 1071.169191801369
+          }
+        ]
+      },
+      "backtest": {
+        "longcat_total_b": 1600.0,
+        "metrics": {
+          "aa_all": {
+            "n": 34,
+            "median_multiplicative_error": 2.70082658858217,
+            "geomean_multiplicative_error": 3.5205146185709055,
+            "rmse_log10": 0.7219346953500286,
+            "signed_bias_factor": 2.2284788227133836,
+            "within_1_5x": 0.2647058823529412,
+            "within_2x": 0.4117647058823529,
+            "within_3x": 0.5882352941176471,
+            "p80_multiplicative_error": 11.609087361061977,
+            "p90_multiplicative_error": 18.705724535511067
+          },
+          "aa_frontier": {
+            "n": 11,
+            "median_multiplicative_error": 1.9823153978544241,
+            "geomean_multiplicative_error": 2.480318160395579,
+            "rmse_log10": 0.5233303109053035,
+            "signed_bias_factor": 1.3431005184160454,
+            "within_1_5x": 0.2727272727272727,
+            "within_2x": 0.5454545454545454,
+            "within_3x": 0.7272727272727273,
+            "p80_multiplicative_error": 3.252107848301578,
+            "p90_multiplicative_error": 3.3135488140496117
+          },
+          "ensemble_all": {
+            "n": 44,
+            "median_multiplicative_error": 2.1364127981098613,
+            "geomean_multiplicative_error": 2.3991935815931953,
+            "rmse_log10": 0.4663332334956287,
+            "signed_bias_factor": 1.0930099913072127,
+            "within_1_5x": 0.29545454545454547,
+            "within_2x": 0.45454545454545453,
+            "within_3x": 0.6363636363636364,
+            "p80_multiplicative_error": 5.170516361233215,
+            "p90_multiplicative_error": 5.768963616946062
+          },
+          "ensemble_frontier": {
+            "n": 27,
+            "median_multiplicative_error": 2.0237034416634527,
+            "geomean_multiplicative_error": 2.2406861875255646,
+            "rmse_log10": 0.4314271341628791,
+            "signed_bias_factor": 0.7560395664935661,
+            "within_1_5x": 0.3333333333333333,
+            "within_2x": 0.48148148148148145,
+            "within_3x": 0.7407407407407407,
+            "p80_multiplicative_error": 4.681709731694618,
+            "p90_multiplicative_error": 5.2162152456031885
+          }
+        },
+        "k3_external_checks": [
+          {
+            "anchor": "Kimi K3",
+            "actual_b": 2780.0,
+            "method": "AA expanding fit",
+            "predicted_b": 2506.9559161671764,
+            "multiplicative_error": 1.108914593221198,
+            "train_n": 50,
+            "coefficients": [
+              2.6254629797129403,
+              0.04717978213778814,
+              -0.5430306357097769
+            ],
+            "note": "Pre-calibration external check; current AA snapshot, exact release date.",
+            "actual_parameter_source": "Kimi K3 official technical report Table 1"
+          },
+          {
+            "anchor": "Kimi K3",
+            "actual_b": 2780.0,
+            "method": "AA expanding fit; all Kimi held out",
+            "predicted_b": 2242.8774539771252,
+            "multiplicative_error": 1.2394792212434236,
+            "train_n": 46,
+            "coefficients": [
+              2.5524384981019606,
+              0.04542834280044423,
+              -0.5077743627578061
+            ],
+            "note": "Pre-calibration external check; current AA snapshot, exact release date.",
+            "actual_parameter_source": "Kimi K3 official technical report Table 1"
+          }
+        ]
+      }
+    },
+    "hf_serialized_tensor_elements": {
+      "parameter_basis": "Hugging Face safetensors element inventory at pinned repository revision",
+      "frontier_regression": {
+        "longcat_total_b": 1775.560491136,
+        "longcat_active_b": 48.0,
+        "selected_spec": [],
+        "kappa": 1.0,
+        "coefficients": [
+          1.2587753361233895,
+          2.809965068604893,
+          18.550487144584697,
+          6.0
+        ],
+        "frontier_shift": 4.9409113525209145,
+        "lofo_metrics": {
+          "rmse_score": 6.070779084886,
+          "mae_score": 4.659638526266364,
+          "mae_log2_scale": 1.652231014626225,
+          "median_abs_log2_scale": 1.2753163270361942,
+          "p80_abs_log2_scale": 2.615437427366021,
+          "p90_abs_log2_scale": 3.7245091924019524,
+          "bias_log2_scale": -0.09702068958818467,
+          "n": 50
+        },
+        "observed_moe_ratio_median": 18.6,
+        "eci_selected_spec_unchanged": [
+          "moe"
+        ],
+        "targets": [
+          {
+            "model": "Claude Opus 5",
+            "aa_total_b": 12161.560029925373,
+            "eci_total_b": 394.8651521801623,
+            "legacy_frontier_equivalence_total_b": 2191.386833027127
+          },
+          {
+            "model": "GPT-5.6 Sol",
+            "aa_total_b": 9409.174942623664,
+            "eci_total_b": 681.8285390617858,
+            "legacy_frontier_equivalence_total_b": 2532.872678384339
+          },
+          {
+            "model": "Claude Fable 5",
+            "aa_total_b": 17409.35302804394,
+            "eci_total_b": 684.3667138710406,
+            "legacy_frontier_equivalence_total_b": 3451.721559225669
+          },
+          {
+            "model": "Claude Opus 4.8",
+            "aa_total_b": 7235.915898074134,
+            "eci_total_b": 439.6275014665084,
+            "legacy_frontier_equivalence_total_b": 1783.5659861894983
+          },
+          {
+            "model": "GPT-5.6 Terra",
+            "aa_total_b": 3562.7525617738197,
+            "eci_total_b": 349.4826694908625,
+            "legacy_frontier_equivalence_total_b": 1115.8495758945844
+          },
+          {
+            "model": "GPT-5.5",
+            "aa_total_b": 9086.371466777413,
+            "eci_total_b": 600.4041797700721,
+            "legacy_frontier_equivalence_total_b": 2335.700196428617
+          },
+          {
+            "model": "Claude Opus 4.7",
+            "aa_total_b": 7183.862749790784,
+            "eci_total_b": 397.0324528757057,
+            "legacy_frontier_equivalence_total_b": 1688.8536492756994
+          },
+          {
+            "model": "Grok 4.5",
+            "aa_total_b": 2732.567023594969,
+            "eci_total_b": 144.932622546879,
+            "legacy_frontier_equivalence_total_b": 629.3155845954701
+          },
+          {
+            "model": "Claude Sonnet 5",
+            "aa_total_b": 2685.5995647402256,
+            "eci_total_b": 148.6807418582029,
+            "legacy_frontier_equivalence_total_b": 631.8994663865792
+          },
+          {
+            "model": "GPT-5.6 Luna",
+            "aa_total_b": 1424.2745188161543,
+            "eci_total_b": 200.99446368215345,
+            "legacy_frontier_equivalence_total_b": 535.0432627793851
+          },
+          {
+            "model": "Gemini 3.5 Flash",
+            "aa_total_b": 2091.588018478785,
+            "eci_total_b": 243.41058823158133,
+            "legacy_frontier_equivalence_total_b": 713.522718570368
+          },
+          {
+            "model": "Gemini 3.1 Pro Preview",
+            "aa_total_b": 2532.9124771946986,
+            "eci_total_b": 455.83036133254114,
+            "legacy_frontier_equivalence_total_b": 1074.5131035512602
+          }
+        ]
+      },
+      "backtest": {
+        "longcat_total_b": 1775.560491136,
+        "metrics": {
+          "aa_all": {
+            "n": 34,
+            "median_multiplicative_error": 2.6884717489220473,
+            "geomean_multiplicative_error": 3.530359144932885,
+            "rmse_log10": 0.7238790932812744,
+            "signed_bias_factor": 2.22226463384005,
+            "within_1_5x": 0.2647058823529412,
+            "within_2x": 0.4117647058823529,
+            "within_3x": 0.5882352941176471,
+            "p80_multiplicative_error": 12.10275593644863,
+            "p90_multiplicative_error": 18.705724535511067
+          },
+          "aa_frontier": {
+            "n": 11,
+            "median_multiplicative_error": 1.9823153978544241,
+            "geomean_multiplicative_error": 2.480318160395579,
+            "rmse_log10": 0.5233303109053035,
+            "signed_bias_factor": 1.3431005184160454,
+            "within_1_5x": 0.2727272727272727,
+            "within_2x": 0.5454545454545454,
+            "within_3x": 0.7272727272727273,
+            "p80_multiplicative_error": 3.252107848301578,
+            "p90_multiplicative_error": 3.3135488140496117
+          },
+          "ensemble_all": {
+            "n": 44,
+            "median_multiplicative_error": 2.1364127981098613,
+            "geomean_multiplicative_error": 2.3991935815931953,
+            "rmse_log10": 0.4663332334956287,
+            "signed_bias_factor": 1.0930099913072127,
+            "within_1_5x": 0.29545454545454547,
+            "within_2x": 0.45454545454545453,
+            "within_3x": 0.6363636363636364,
+            "p80_multiplicative_error": 5.170516361233215,
+            "p90_multiplicative_error": 5.768963616946062
+          },
+          "ensemble_frontier": {
+            "n": 27,
+            "median_multiplicative_error": 2.0237034416634527,
+            "geomean_multiplicative_error": 2.2406861875255646,
+            "rmse_log10": 0.4314271341628791,
+            "signed_bias_factor": 0.7560395664935661,
+            "within_1_5x": 0.3333333333333333,
+            "within_2x": 0.48148148148148145,
+            "within_3x": 0.7407407407407407,
+            "p80_multiplicative_error": 4.681709731694618,
+            "p90_multiplicative_error": 5.2162152456031885
+          }
+        },
+        "k3_external_checks": [
+          {
+            "anchor": "Kimi K3",
+            "actual_b": 2780.0,
+            "method": "AA expanding fit",
+            "predicted_b": 2513.8145508169932,
+            "multiplicative_error": 1.105889055776408,
+            "train_n": 50,
+            "coefficients": [
+              2.6056304803378882,
+              0.04704620413783003,
+              -0.5349318134391474
+            ],
+            "note": "Pre-calibration external check; current AA snapshot, exact release date.",
+            "actual_parameter_source": "Kimi K3 official technical report Table 1"
+          },
+          {
+            "anchor": "Kimi K3",
+            "actual_b": 2780.0,
+            "method": "AA expanding fit; all Kimi held out",
+            "predicted_b": 2250.004055812473,
+            "multiplicative_error": 1.2355533283677334,
+            "train_n": 46,
+            "coefficients": [
+              2.5323663506069174,
+              0.04529892311469635,
+              -0.4996208733901985
+            ],
+            "note": "Pre-calibration external check; current AA snapshot, exact release date.",
+            "actual_parameter_source": "Kimi K3 official technical report Table 1"
+          }
+        ]
+      }
+    }
+  },
+  "changed_aa_predictions": [
+    {
+      "model": "Inkling (xhigh)",
+      "publisher_actual_b": 975.0,
+      "hf_serialized_actual_b": 975.0,
+      "publisher_predicted_b": 363.18243706213843,
+      "hf_serialized_predicted_b": 366.52810799660654,
+      "publisher_error_factor": 2.684601182499317,
+      "hf_serialized_error_factor": 2.6600961255856195
+    },
+    {
+      "model": "LongCat 2.0",
+      "publisher_actual_b": 1600.0,
+      "hf_serialized_actual_b": 1775.560491136,
+      "publisher_predicted_b": 135.571091236498,
+      "hf_serialized_predicted_b": 135.571091236498,
+      "publisher_error_factor": 11.801926099487297,
+      "hf_serialized_error_factor": 13.096896063472784
+    }
+  ],
+  "target_changes": [
+    {
+      "model": "Claude Fable 5",
+      "publisher_total_b": 3423.385864206576,
+      "hf_serialized_total_b": 3451.721559225669,
+      "change_percent": 0.8277096460366451
+    },
+    {
+      "model": "Claude Opus 4.7",
+      "publisher_total_b": 1678.9914129597278,
+      "hf_serialized_total_b": 1688.8536492756994,
+      "change_percent": 0.5873905155111103
+    },
+    {
+      "model": "Claude Opus 4.8",
+      "publisher_total_b": 1772.4321799760103,
+      "hf_serialized_total_b": 1783.5659861894983,
+      "change_percent": 0.6281654293615269
+    },
+    {
+      "model": "Claude Opus 5",
+      "publisher_total_b": 2174.1498807359553,
+      "hf_serialized_total_b": 2191.386833027127,
+      "change_percent": 0.7928134322246816
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "publisher_total_b": 629.0889299158929,
+      "hf_serialized_total_b": 631.8994663865792,
+      "change_percent": 0.44676298326566943
+    },
+    {
+      "model": "GPT-5.5",
+      "publisher_total_b": 2320.7483593662214,
+      "hf_serialized_total_b": 2335.700196428617,
+      "change_percent": 0.6442679147892871
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "publisher_total_b": 533.3388751459271,
+      "hf_serialized_total_b": 535.0432627793851,
+      "change_percent": 0.3195693606605543
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "publisher_total_b": 2514.673345026518,
+      "hf_serialized_total_b": 2532.872678384339,
+      "change_percent": 0.72372554446547
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "publisher_total_b": 1110.1253839041597,
+      "hf_serialized_total_b": 1115.8495758945844,
+      "change_percent": 0.5156347267993855
+    },
+    {
+      "model": "Gemini 3.1 Pro Preview",
+      "publisher_total_b": 1071.169191801369,
+      "hf_serialized_total_b": 1074.5131035512602,
+      "change_percent": 0.31217400346137403
+    },
+    {
+      "model": "Gemini 3.5 Flash",
+      "publisher_total_b": 711.0045640716806,
+      "hf_serialized_total_b": 713.522718570368,
+      "change_percent": 0.35416854207894755
+    },
+    {
+      "model": "Grok 4.5",
+      "publisher_total_b": 626.4468824762097,
+      "hf_serialized_total_b": 629.3155845954701,
+      "change_percent": 0.45793222051342397
+    }
+  ],
+  "live_dependency_audit": {
+    "longcat_parameter_target_consumed_by_live_center": false,
+    "reason": "The K3-calibrated live branch consumes frontier release dates, AA scores, and ECI scores from regression_results, but not its open-panel parameter targets or moe_total_b. The LongCat convention changes only diagnostic regression/backtest quantities.",
+    "frontier_fields_consumed": [
+      "release_date",
+      "model",
+      "aa_score",
+      "eci"
+    ],
+    "excluded_regression_field": "moe_total_b",
+    "downstream_targets": [
+      {
+        "model": "Claude Fable 5",
+        "publisher_current_evidence_t": 4.731857984602975,
+        "hf_serialized_current_evidence_t": 4.731857984602975,
+        "evidence_delta_percent": 0.0,
+        "publisher_current_final_t": 4.548292155336898,
+        "hf_serialized_current_final_t": 4.548292155336898,
+        "final_delta_percent": 0.0
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "publisher_current_evidence_t": 3.081003239637193,
+        "hf_serialized_current_evidence_t": 3.081003239637193,
+        "evidence_delta_percent": 0.0,
+        "publisher_current_final_t": 3.145668582841,
+        "hf_serialized_current_final_t": 3.145668582841,
+        "final_delta_percent": 0.0
+      },
+      {
+        "model": "Claude Opus 5",
+        "publisher_current_evidence_t": 3.003794890426257,
+        "hf_serialized_current_evidence_t": 3.003794890426257,
+        "evidence_delta_percent": 0.0,
+        "publisher_current_final_t": 3.003794890426257,
+        "hf_serialized_current_final_t": 3.003794890426257,
+        "final_delta_percent": 0.0
+      }
+    ],
+    "source_hashes": {
+      "build_k3_calibrated_crosscheck.mjs": "f3e12ca865b9df77125a4235a91e3029e56b72d867cd4a708e6479c1270ce741",
+      "build_price_informed_crosscheck.mjs": "11620bac5c645f9ab655e34bd0f69a1634bac2af8d76593b44e3785314116c2c",
+      "build_horizon_informed_model.mjs": "516951b1f9e5fc86d49bc403bf39e23a16f31c9b7248bd35502dfeb2df28c980",
+      "site/public/data/forecast-model.json": "9d9cc4676a0b3455134adbc0b90d07e9b45bd642cb2339204c77fd6eebfc44c0"
+    }
+  },
+  "decision": {
+    "canonical_total_b": 1600.0,
+    "canonical_active_b": 48.0,
+    "canonical_basis": "publisher_disclosed_model_total",
+    "hf_inventory_role": "zero_weight_serialized_element_sensitivity",
+    "incremental_live_weight": 0.0,
+    "change_live_forecast": false,
+    "reason": "The publisher and HF values answer different parameter-definition questions. The diagnostic target changes headline legacy regression estimates by less than 1%, leaves the matched ensemble unchanged, and has no dependency path into live centers."
+  },
+  "source_hashes": {
+    "sources/longcat_parameter_definition_inventory_2026-07-31.json": "3437a0ce96bd0b3d4eaa19850536a0b73b1cd8cce1f996be13c82d5502524ade",
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_chronological_backtest_2026-07-17.json": "7ae67d3d92cfe72771cf460a8ef254cd73f3be775e618124e7ddbca7f170088c"
+  }
+}

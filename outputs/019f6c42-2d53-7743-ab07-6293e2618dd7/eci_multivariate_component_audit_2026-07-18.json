@@ -1,0 +1,719 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "question": "Does a nested regularized combination of ECI benchmark residuals improve total-parameter inference beyond aggregate ECI?",
+    "outer_split": "strictly earlier release date; entire test family removed",
+    "inner_selection": "leave-one-family-out within outer training data; selects feature class and ridge alpha",
+    "baseline": "log10 parameters ~ aggregate ECI + exact date + reasoning + MoE",
+    "candidate": "baseline plus training-standardized benchmark-implied-ECI residuals with ridge shrinkage",
+    "missing_component_policy": "training-median residual after robust centering, represented as zero",
+    "training_weights": "primary run gives equal total weight per family and half weight to aggregate ECI scores whose CI width exceeds 10 points; the replication uses only narrow-ECI-CI rows",
+    "legacy_flag_definition": "regression_results.eci.open_models[].estimated is exactly int(eci_ci_width > 10); it contains no parameter-disclosure information",
+    "target_fit": "strictly earlier checkpoints only; target developer removed; full and narrow-ECI-CI policies tuned separately",
+    "current_snapshot_caveat": "Benchmark measurements are from the current Epoch snapshot rather than historical vintages."
+  },
+  "inventory": {
+    "parameter_map_checkpoints": 89,
+    "parameter_map_families": 40,
+    "narrow_eci_ci_checkpoints": 41,
+    "broad_eci_ci_checkpoints": 48,
+    "unique_component_measurements": 723,
+    "component_benchmarks": 50,
+    "outer_predictions": 73,
+    "outer_prediction_families": 34,
+    "narrow_eci_ci_only_outer_predictions": 28,
+    "narrow_eci_ci_only_outer_prediction_families": 11
+  },
+  "predeclared_model": {
+    "feature_sets": {
+      "all_eligible": "all training-eligible benchmarks",
+      "pretraining_like": [
+        "ARC AI2",
+        "BBH",
+        "GPQA diamond",
+        "GSM8K",
+        "HellaSwag",
+        "LAMBADA",
+        "MMLU",
+        "OpenBookQA",
+        "PIQA",
+        "ScienceQA",
+        "SimpleQA Verified",
+        "TriviaQA",
+        "Winogrande"
+      ],
+      "knowledge_only": [
+        "GPQA diamond",
+        "MMLU",
+        "OpenBookQA",
+        "ScienceQA",
+        "SimpleQA Verified",
+        "TriviaQA"
+      ]
+    },
+    "minimum_component_rows": 10,
+    "minimum_component_families": 4,
+    "minimum_inner_training_rows": 10,
+    "minimum_inner_training_families": 4,
+    "ridge_alphas": [
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0,
+      30.0,
+      100.0,
+      300.0
+    ],
+    "robust_clip_standard_deviations": 4.0,
+    "tuning_near_tie_tolerance_log10_mae": 0.002
+  },
+  "backtest": {
+    "active": {
+      "all": {
+        "scope": "all",
+        "n": 73,
+        "families": 34,
+        "baseline": {
+          "n": 73,
+          "median_multiplicative_error": 1.9065990570231959,
+          "mean_absolute_log10_error": 0.3370101827620697,
+          "rmse_log10": 0.42444334732547856,
+          "p80_multiplicative_error": 3.57990697579358,
+          "within_2x": 0.547945205479452,
+          "signed_bias_factor": 0.8209974378667079
+        },
+        "candidate": {
+          "n": 73,
+          "median_multiplicative_error": 1.6980191973908048,
+          "mean_absolute_log10_error": 0.3069930804080637,
+          "rmse_log10": 0.40697189339387185,
+          "p80_multiplicative_error": 3.0365454377593246,
+          "within_2x": 0.5616438356164384,
+          "signed_bias_factor": 0.9214994817248384
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.0044514356895078485,
+          "ci_90": [
+            -0.037022787781799384,
+            0.028451680489933868
+          ],
+          "probability_candidate_better": 0.5949,
+          "family_clusters": 34,
+          "samples": 20000
+        }
+      },
+      "narrow_eci_ci": {
+        "scope": "narrow_eci_ci",
+        "n": 41,
+        "families": 21,
+        "baseline": {
+          "n": 41,
+          "median_multiplicative_error": 1.866760291150866,
+          "mean_absolute_log10_error": 0.3123745781621803,
+          "rmse_log10": 0.3922368422848668,
+          "p80_multiplicative_error": 3.2063996848944303,
+          "within_2x": 0.5609756097560976,
+          "signed_bias_factor": 0.7222328361067213
+        },
+        "candidate": {
+          "n": 41,
+          "median_multiplicative_error": 1.8515879434685996,
+          "mean_absolute_log10_error": 0.2852611721174902,
+          "rmse_log10": 0.3732706856799717,
+          "p80_multiplicative_error": 2.5759739163793047,
+          "within_2x": 0.5609756097560976,
+          "signed_bias_factor": 0.8613658283939208
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.005963934401305705,
+          "ci_90": [
+            -0.04624008168753571,
+            0.03552659681807624
+          ],
+          "probability_candidate_better": 0.5956,
+          "family_clusters": 21,
+          "samples": 20000
+        }
+      },
+      "broad_eci_ci": {
+        "scope": "broad_eci_ci",
+        "n": 32,
+        "families": 18,
+        "baseline": {
+          "n": 32,
+          "median_multiplicative_error": 1.9117096278639418,
+          "mean_absolute_log10_error": 0.36857455115567783,
+          "rmse_log10": 0.46244148154174614,
+          "p80_multiplicative_error": 3.9964937522564323,
+          "within_2x": 0.53125,
+          "signed_bias_factor": 0.9675246419382145
+        },
+        "candidate": {
+          "n": 32,
+          "median_multiplicative_error": 1.6381872112754885,
+          "mean_absolute_log10_error": 0.33483708790536093,
+          "rmse_log10": 0.4464490351166721,
+          "p80_multiplicative_error": 4.0901095685949755,
+          "within_2x": 0.5625,
+          "signed_bias_factor": 1.0047205243317725
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": 0.014423323896152399,
+          "ci_90": [
+            -0.0396936866713109,
+            0.06859136361912428
+          ],
+          "probability_candidate_better": 0.3342,
+          "family_clusters": 18,
+          "samples": 20000
+        }
+      },
+      "frontier_like": {
+        "scope": "frontier_like",
+        "n": 9,
+        "families": 5,
+        "baseline": {
+          "n": 9,
+          "median_multiplicative_error": 2.261920170594187,
+          "mean_absolute_log10_error": 0.3952339852235449,
+          "rmse_log10": 0.4189169998886648,
+          "p80_multiplicative_error": 3.1757503730307564,
+          "within_2x": 0.3333333333333333,
+          "signed_bias_factor": 0.4649537165891613
+        },
+        "candidate": {
+          "n": 9,
+          "median_multiplicative_error": 2.1448841471206674,
+          "mean_absolute_log10_error": 0.32976773750757715,
+          "rmse_log10": 0.3682772316762245,
+          "p80_multiplicative_error": 2.8277435813878675,
+          "within_2x": 0.3333333333333333,
+          "signed_bias_factor": 0.5775007960253418
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.04696262873751167,
+          "ci_90": [
+            -0.10942529050301522,
+            0.028985381178161917
+          ],
+          "probability_candidate_better": 0.857,
+          "family_clusters": 5,
+          "samples": 20000
+        }
+      },
+      "recent_narrow_eci_ci": {
+        "scope": "recent_narrow_eci_ci",
+        "n": 41,
+        "families": 21,
+        "baseline": {
+          "n": 41,
+          "median_multiplicative_error": 1.866760291150866,
+          "mean_absolute_log10_error": 0.3123745781621803,
+          "rmse_log10": 0.3922368422848668,
+          "p80_multiplicative_error": 3.2063996848944303,
+          "within_2x": 0.5609756097560976,
+          "signed_bias_factor": 0.7222328361067213
+        },
+        "candidate": {
+          "n": 41,
+          "median_multiplicative_error": 1.8515879434685996,
+          "mean_absolute_log10_error": 0.2852611721174902,
+          "rmse_log10": 0.3732706856799717,
+          "p80_multiplicative_error": 2.5759739163793047,
+          "within_2x": 0.5609756097560976,
+          "signed_bias_factor": 0.8613658283939208
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.005963934401305705,
+          "ci_90": [
+            -0.046863568434731634,
+            0.03592111583025047
+          ],
+          "probability_candidate_better": 0.59745,
+          "family_clusters": 21,
+          "samples": 20000
+        }
+      }
+    },
+    "total": {
+      "all": {
+        "scope": "all",
+        "n": 73,
+        "families": 34,
+        "baseline": {
+          "n": 73,
+          "median_multiplicative_error": 2.315786626319492,
+          "mean_absolute_log10_error": 0.406113640439451,
+          "rmse_log10": 0.4832160329456419,
+          "p80_multiplicative_error": 4.020556870321872,
+          "within_2x": 0.3972602739726027,
+          "signed_bias_factor": 0.7220386538279896
+        },
+        "candidate": {
+          "n": 73,
+          "median_multiplicative_error": 2.099527327992388,
+          "mean_absolute_log10_error": 0.3634619359426127,
+          "rmse_log10": 0.4519240284003559,
+          "p80_multiplicative_error": 3.6163370264559527,
+          "within_2x": 0.4794520547945205,
+          "signed_bias_factor": 0.7903934867367975
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.023255262776734283,
+          "ci_90": [
+            -0.049602088374417576,
+            0.0034617375425749415
+          ],
+          "probability_candidate_better": 0.9236,
+          "family_clusters": 34,
+          "samples": 20000
+        }
+      },
+      "narrow_eci_ci": {
+        "scope": "narrow_eci_ci",
+        "n": 41,
+        "families": 21,
+        "baseline": {
+          "n": 41,
+          "median_multiplicative_error": 2.3165668735484095,
+          "mean_absolute_log10_error": 0.4128607573574398,
+          "rmse_log10": 0.4694737387375115,
+          "p80_multiplicative_error": 3.623732416039151,
+          "within_2x": 0.3170731707317073,
+          "signed_bias_factor": 0.6087702466003043
+        },
+        "candidate": {
+          "n": 41,
+          "median_multiplicative_error": 2.2295091931208324,
+          "mean_absolute_log10_error": 0.37220771193672353,
+          "rmse_log10": 0.4369964140654631,
+          "p80_multiplicative_error": 3.243604699048126,
+          "within_2x": 0.3902439024390244,
+          "signed_bias_factor": 0.7056542080554908
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.03146218415309495,
+          "ci_90": [
+            -0.05982735440342396,
+            -0.002791757889255447
+          ],
+          "probability_candidate_better": 0.9653,
+          "family_clusters": 21,
+          "samples": 20000
+        }
+      },
+      "broad_eci_ci": {
+        "scope": "broad_eci_ci",
+        "n": 32,
+        "families": 18,
+        "baseline": {
+          "n": 32,
+          "median_multiplicative_error": 2.072629675849409,
+          "mean_absolute_log10_error": 0.39746889688827775,
+          "rmse_log10": 0.5002719689159264,
+          "p80_multiplicative_error": 4.311792359762109,
+          "within_2x": 0.5,
+          "signed_bias_factor": 0.898483444979572
+        },
+        "candidate": {
+          "n": 32,
+          "median_multiplicative_error": 1.7142037985237137,
+          "mean_absolute_log10_error": 0.3522564104501582,
+          "rmse_log10": 0.47035818802603097,
+          "p80_multiplicative_error": 4.265931362063423,
+          "within_2x": 0.59375,
+          "signed_bias_factor": 0.9140011262437581
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.004566428236236591,
+          "ci_90": [
+            -0.05287628120579265,
+            0.04385653239513255
+          ],
+          "probability_candidate_better": 0.5592,
+          "family_clusters": 18,
+          "samples": 20000
+        }
+      },
+      "frontier_like": {
+        "scope": "frontier_like",
+        "n": 9,
+        "families": 5,
+        "baseline": {
+          "n": 9,
+          "median_multiplicative_error": 3.528018140820862,
+          "mean_absolute_log10_error": 0.5304295817158281,
+          "rmse_log10": 0.5724304045971506,
+          "p80_multiplicative_error": 5.274376686537496,
+          "within_2x": 0.1111111111111111,
+          "signed_bias_factor": 0.32241942284831737
+        },
+        "candidate": {
+          "n": 9,
+          "median_multiplicative_error": 2.3999136001789423,
+          "mean_absolute_log10_error": 0.46940069253331984,
+          "rmse_log10": 0.519532754505244,
+          "p80_multiplicative_error": 4.454499372765473,
+          "within_2x": 0.2222222222222222,
+          "signed_bias_factor": 0.3698844020539286
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.05813527865050731,
+          "ci_90": [
+            -0.0961723487322598,
+            -0.023087510588051474
+          ],
+          "probability_candidate_better": 1.0,
+          "family_clusters": 5,
+          "samples": 20000
+        }
+      },
+      "recent_narrow_eci_ci": {
+        "scope": "recent_narrow_eci_ci",
+        "n": 41,
+        "families": 21,
+        "baseline": {
+          "n": 41,
+          "median_multiplicative_error": 2.3165668735484095,
+          "mean_absolute_log10_error": 0.4128607573574398,
+          "rmse_log10": 0.4694737387375115,
+          "p80_multiplicative_error": 3.623732416039151,
+          "within_2x": 0.3170731707317073,
+          "signed_bias_factor": 0.6087702466003043
+        },
+        "candidate": {
+          "n": 41,
+          "median_multiplicative_error": 2.2295091931208324,
+          "mean_absolute_log10_error": 0.37220771193672353,
+          "rmse_log10": 0.4369964140654631,
+          "p80_multiplicative_error": 3.243604699048126,
+          "within_2x": 0.3902439024390244,
+          "signed_bias_factor": 0.7056542080554908
+        },
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.03146218415309495,
+          "ci_90": [
+            -0.060454616993862766,
+            -0.0029942342595868318
+          ],
+          "probability_candidate_better": 0.9658,
+          "family_clusters": 21,
+          "samples": 20000
+        }
+      }
+    }
+  },
+  "narrow_eci_ci_only_training_backtest": {
+    "active": {
+      "scope": "all",
+      "n": 28,
+      "families": 11,
+      "baseline": {
+        "n": 28,
+        "median_multiplicative_error": 1.760942623218525,
+        "mean_absolute_log10_error": 0.25892311114262284,
+        "rmse_log10": 0.31759409679487033,
+        "p80_multiplicative_error": 2.7638509930728903,
+        "within_2x": 0.6428571428571429,
+        "signed_bias_factor": 0.8420343055745666
+      },
+      "candidate": {
+        "n": 28,
+        "median_multiplicative_error": 1.6499889347174688,
+        "mean_absolute_log10_error": 0.22127063009591358,
+        "rmse_log10": 0.27769399461599864,
+        "p80_multiplicative_error": 2.371947134452387,
+        "within_2x": 0.6785714285714286,
+        "signed_bias_factor": 0.9251032619936574
+      },
+      "paired_family_bootstrap": {
+        "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+        "observed_delta": 0.008937653398115796,
+        "ci_90": [
+          -0.061957098111037785,
+          0.07766623451816144
+        ],
+        "probability_candidate_better": 0.41475,
+        "family_clusters": 11,
+        "samples": 20000
+      }
+    },
+    "total": {
+      "scope": "all",
+      "n": 28,
+      "families": 11,
+      "baseline": {
+        "n": 28,
+        "median_multiplicative_error": 2.073947649114454,
+        "mean_absolute_log10_error": 0.33288509700256397,
+        "rmse_log10": 0.3703142609832741,
+        "p80_multiplicative_error": 2.8791630460352917,
+        "within_2x": 0.4642857142857143,
+        "signed_bias_factor": 0.7736657033326554
+      },
+      "candidate": {
+        "n": 28,
+        "median_multiplicative_error": 2.1509150047819094,
+        "mean_absolute_log10_error": 0.302180876805973,
+        "rmse_log10": 0.35712005090627674,
+        "p80_multiplicative_error": 2.848519613842627,
+        "within_2x": 0.42857142857142855,
+        "signed_bias_factor": 0.8386443690700329
+      },
+      "paired_family_bootstrap": {
+        "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+        "observed_delta": -0.024864005576355427,
+        "ci_90": [
+          -0.09929880306139095,
+          0.03909382254719223
+        ],
+        "probability_candidate_better": 0.70455,
+        "family_clusters": 11,
+        "samples": 20000
+      }
+    }
+  },
+  "target_sensitivity": [
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "eci_score": 160.72794930035383,
+      "available_component_measurements": 15,
+      "full_training_n": 86,
+      "full_training_families": 40,
+      "full_training_max_date": "2026-04-24",
+      "target_family_excluded": true,
+      "selected_feature_set": "knowledge_only",
+      "selected_alpha": 30.0,
+      "eligible_training_benchmarks": "GPQA diamond|MMLU|OpenBookQA|SimpleQA Verified|TriviaQA",
+      "observed_selected_benchmarks": "SimpleQA Verified",
+      "observed_selected_count": 1,
+      "raw_multivariate_baseline_t": 0.8265813026172499,
+      "raw_multivariate_candidate_t": 0.9945094921297266,
+      "component_adjustment_factor": 1.2031599178214611,
+      "narrow_ci_training_n": 38,
+      "narrow_ci_training_families": 21,
+      "narrow_ci_training_feature_set": "knowledge_only",
+      "narrow_ci_training_alpha": 10.0,
+      "narrow_ci_training_eligible_benchmarks": "GPQA diamond|MMLU",
+      "narrow_ci_training_observed_benchmarks": "",
+      "narrow_ci_training_observed_count": 0,
+      "narrow_ci_training_raw_baseline_t": 7.2723499808954895,
+      "narrow_ci_training_raw_candidate_t": 5.39807122814731,
+      "narrow_ci_training_adjustment_factor": 0.7422733012476129,
+      "full_vs_narrow_ci_adjustment_ratio": 1.620912291738353,
+      "full_vs_narrow_ci_direction_agrees": false,
+      "legacy_57_eci_t": 3.154860839423498,
+      "component_adjusted_eci_t": 3.795802108298922,
+      "narrow_ci_training_adjusted_eci_t": 2.341768970255695,
+      "incremental_live_weight": 0.0,
+      "status": "0%-weight diagnostic; promotion gates failed"
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "eci_score": 161.7210971187139,
+      "available_component_measurements": 15,
+      "full_training_n": 88,
+      "full_training_families": 40,
+      "full_training_max_date": "2026-06-16",
+      "target_family_excluded": true,
+      "selected_feature_set": "knowledge_only",
+      "selected_alpha": 10.0,
+      "eligible_training_benchmarks": "GPQA diamond|MMLU|OpenBookQA|SimpleQA Verified|TriviaQA",
+      "observed_selected_benchmarks": "GPQA diamond|SimpleQA Verified",
+      "observed_selected_count": 2,
+      "raw_multivariate_baseline_t": 0.8600291121577306,
+      "raw_multivariate_candidate_t": 0.464689452236916,
+      "component_adjustment_factor": 0.5403182818672903,
+      "narrow_ci_training_n": 40,
+      "narrow_ci_training_families": 21,
+      "narrow_ci_training_feature_set": "knowledge_only",
+      "narrow_ci_training_alpha": 3.0,
+      "narrow_ci_training_eligible_benchmarks": "GPQA diamond|MMLU|SimpleQA Verified",
+      "narrow_ci_training_observed_benchmarks": "GPQA diamond|SimpleQA Verified",
+      "narrow_ci_training_observed_count": 2,
+      "narrow_ci_training_raw_baseline_t": 8.243214831846545,
+      "narrow_ci_training_raw_candidate_t": 2.4398766121869584,
+      "narrow_ci_training_adjustment_factor": 0.2959860517962998,
+      "full_vs_narrow_ci_adjustment_ratio": 1.8254856220020195,
+      "full_vs_narrow_ci_direction_agrees": true,
+      "legacy_57_eci_t": 3.452226795865823,
+      "component_adjusted_eci_t": 1.8653012509584421,
+      "narrow_ci_training_adjusted_eci_t": 1.0218109792137156,
+      "incremental_live_weight": 0.0,
+      "status": "0%-weight diagnostic; promotion gates failed"
+    }
+  ],
+  "target_fit": {
+    "target_models": [
+      {
+        "model": "Claude Fable 5",
+        "full_panel_policy": {
+          "feature_set": "knowledge_only",
+          "alpha": 30.0,
+          "inner_equal_family_mae": 0.2983197099572107,
+          "inner_predictions": 86,
+          "inner_families": 40,
+          "candidate_policies_evaluated": 24
+        },
+        "full_eligible_benchmarks": [
+          "GPQA diamond",
+          "MMLU",
+          "OpenBookQA",
+          "SimpleQA Verified",
+          "TriviaQA"
+        ],
+        "full_coefficients": [
+          -2.921192144697386,
+          0.04217267611697739,
+          -0.3926895720293402,
+          -0.16113265016597822,
+          0.5529437097411218,
+          0.10441785383481772,
+          -0.03030253878096989,
+          -0.0667809461398311,
+          0.0931674624396357,
+          0.044864731029300664
+        ],
+        "narrow_ci_panel_policy": {
+          "feature_set": "knowledge_only",
+          "alpha": 10.0,
+          "inner_equal_family_mae": 0.27842349762746077,
+          "inner_predictions": 38,
+          "inner_families": 21,
+          "candidate_policies_evaluated": 24
+        },
+        "narrow_ci_eligible_benchmarks": [
+          "GPQA diamond",
+          "MMLU"
+        ],
+        "narrow_ci_coefficients": [
+          -10.364161094467818,
+          0.10995824063657267,
+          -1.0417002443349475,
+          -0.3658344811637164,
+          0.368156551817151,
+          0.08175972225683736,
+          0.03113347755055651
+        ]
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "full_panel_policy": {
+          "feature_set": "knowledge_only",
+          "alpha": 10.0,
+          "inner_equal_family_mae": 0.28338327760138304,
+          "inner_predictions": 88,
+          "inner_families": 40,
+          "candidate_policies_evaluated": 24
+        },
+        "full_eligible_benchmarks": [
+          "GPQA diamond",
+          "MMLU",
+          "OpenBookQA",
+          "SimpleQA Verified",
+          "TriviaQA"
+        ],
+        "full_coefficients": [
+          -2.946452512997496,
+          0.04210501669194766,
+          -0.3616875228296692,
+          -0.18538896288164963,
+          0.5157359051552248,
+          0.12593713136731832,
+          -0.03926982972452997,
+          -0.115644401697302,
+          0.1132851433715536,
+          0.07679571264121687
+        ],
+        "narrow_ci_panel_policy": {
+          "feature_set": "knowledge_only",
+          "alpha": 3.0,
+          "inner_equal_family_mae": 0.2667800130286829,
+          "inner_predictions": 40,
+          "inner_families": 21,
+          "candidate_policies_evaluated": 24
+        },
+        "narrow_ci_eligible_benchmarks": [
+          "GPQA diamond",
+          "MMLU",
+          "SimpleQA Verified"
+        ],
+        "narrow_ci_coefficients": [
+          -9.336758052459118,
+          0.1014100547491168,
+          -1.0038234701504507,
+          -0.30613950672019996,
+          0.3877400055169744,
+          0.09436439663083007,
+          0.037536260183826275,
+          0.10034198731124633
+        ]
+      }
+    ],
+    "coverage_rows": 50
+  },
+  "promotion_gates": {
+    "all_point_metrics_improve": true,
+    "narrow_eci_ci_point_metrics_improve": true,
+    "all_equal_family_ci_wholly_favorable": false,
+    "narrow_eci_ci_equal_family_ci_wholly_favorable": true,
+    "coverage_gate": true,
+    "frontier_median_non_degradation": true,
+    "narrow_eci_ci_only_training_point_metrics_improve": false,
+    "narrow_eci_ci_only_training_ci_wholly_favorable": false,
+    "narrow_eci_ci_only_training_coverage_gate": true,
+    "target_full_vs_narrow_eci_ci_adjustment_stable": false,
+    "target_component_coverage_gate": false,
+    "target_chronology_and_family_holdout_gate": true,
+    "minimum_all_tests": 60,
+    "minimum_all_families": 25,
+    "minimum_narrow_eci_ci_tests": 25,
+    "minimum_narrow_eci_ci_families": 15,
+    "minimum_frontier_tests": 6,
+    "minimum_narrow_eci_ci_only_training_tests": 20,
+    "minimum_narrow_eci_ci_only_training_families": 10,
+    "minimum_target_observed_components_per_branch": 2,
+    "maximum_full_vs_narrow_eci_ci_target_adjustment_ratio": 1.5
+  },
+  "decision": {
+    "promote_multivariate_component_branch": false,
+    "incremental_live_weight": 0.0,
+    "change_headline_forecasts": false,
+    "reason": "The nested component model is retained as a zero-weight diagnostic because at least one predeclared narrow-ECI-CI, interval, coverage, or frontier gate fails."
+  },
+  "limitations": [
+    "The component snapshot is current, not release-vintage historical data.",
+    "Benchmark availability is highly non-random across release date and developer.",
+    "Forty-eight of 89 aggregate ECI scores have confidence intervals wider than 10 points; this is score uncertainty, not parameter-disclosure status.",
+    "The narrow-ECI-CI-only replication has substantially less chronological training coverage than the primary half-weight run.",
+    "No parameter-disclosure classification is available in this panel, so this audit makes no parameter-disclosure claim.",
+    "The benchmark residuals are correlated with aggregate ECI and cannot be counted as an independent likelihood.",
+    "Target architecture flags assume Fable and Sol are reasoning MoEs, consistent with the working model but not public disclosures."
+  ],
+  "source_files": {
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "sources/epoch_eci_benchmarks_2026-07-31.csv": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+    "sources/epoch_benchmark_data_2026-07-31.zip": "cc844ca094e4372ff81eb636f3503317d1d495d4f4c493bd6b7a37dd5f83049c",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_extended_audit_2026-07-18.json": "706e16f972ee62716582edb636b25dc9f02af09c7d68bec42d5a2ea8c60a0184"
+  },
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_predictions_2026-07-18.csv",
+    "narrow_eci_ci_only_predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_narrow_eci_ci_predictions_2026-07-18.csv",
+    "targets": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_targets_2026-07-18.csv",
+    "coverage": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_multivariate_component_coverage_2026-07-18.csv"
+  }
+}

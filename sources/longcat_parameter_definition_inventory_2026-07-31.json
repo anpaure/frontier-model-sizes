@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-31",
+  "model": {
+    "canonical_name": "LongCat 2.0",
+    "repository": "meituan-longcat/LongCat-2.0",
+    "revision": "834bf5ffe3047aa9f6cc7a64a9bc068b146b8274"
+  },
+  "publisher_definition": {
+    "total_parameters": 1600000000000,
+    "average_activated_parameters": 48000000000,
+    "dynamic_activated_parameters_low": 33000000000,
+    "dynamic_activated_parameters_high": 56000000000,
+    "label_precision": "0.1 trillion parameters",
+    "source_url": "https://www.meituan.com/news/NN260630164005904",
+    "source_path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__first_party_label_source.html",
+    "source_sha256": "b4f3da932292f5da49185b53923e6b2751f032e0f36e2983528fae3caaec8972"
+  },
+  "hugging_face_serialized_inventory": {
+    "safetensors_total_elements": 1775560491136,
+    "bf16_elements": 1775271312256,
+    "f32_elements": 289178880,
+    "shards": 194,
+    "tensor_entries": 88780,
+    "repository_api_url": "https://huggingface.co/api/models/meituan-longcat/LongCat-2.0",
+    "repository_api_path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_model_api.json",
+    "repository_api_sha256": "46e4abcd862ceb44a594adb1fea2e10afed27eba50cb74fcc839f6c797e58976",
+    "index_url": "https://huggingface.co/meituan-longcat/LongCat-2.0/resolve/834bf5ffe3047aa9f6cc7a64a9bc068b146b8274/model.safetensors.index.json",
+    "index_sha256": "bd5f7e8cf2f32c42fd25fc16ecef1de31ef2a4714f752dff13374a9075863a53",
+    "inventory_method": "Read only the safetensors JSON headers for every shard at the pinned repository revision; multiply tensor dimensions and group tensor names. No tensor payload was downloaded."
+  },
+  "tensor_name_inventory": {
+    "lm_head": {
+      "elements": 1342177280,
+      "tensor_entries": 1
+    },
+    "input_embedding": {
+      "elements": 1342177280,
+      "tensor_entries": 1
+    },
+    "backbone_layers": {
+      "elements": 1500886464512,
+      "tensor_entries": 88692
+    },
+    "mtp": {
+      "elements": 136943683712,
+      "tensor_entries": 53,
+      "name_prefix": "model.mtp."
+    },
+    "final_norm": {
+      "elements": 8192,
+      "tensor_entries": 1
+    },
+    "other": {
+      "elements": 135045980160,
+      "tensor_entries": 32,
+      "observed_prefix": "model.oe_embed_proj"
+    }
+  },
+  "configuration_crosscheck": {
+    "mtp_num_layers": 3,
+    "mtp_replicate_modules": true,
+    "config_url": "https://huggingface.co/meituan-longcat/LongCat-2.0/raw/373726b7bb09d29076e85c87384ba718ba153d07/config.json",
+    "config_path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_config.json",
+    "config_sha256": "c77120ade725b51d4911469fcefccdb46bf31c14465531533a68b74d54df16a5"
+  },
+  "derived_reconciliation": {
+    "serialized_elements_excluding_mtp": 1638616807424,
+    "serialized_minus_publisher_nominal": 175560491136,
+    "excluding_mtp_minus_publisher_nominal": 38616807424,
+    "mtp_share_of_serialized_minus_publisher_nominal": 0.7800370278408196,
+    "excluding_mtp_rounds_to_publisher_label": true
+  },
+  "definition_caveat": "Hugging Face reports elements stored in safetensors, not a publisher-defined pretraining-model parameter count. Serialized inventories can include auxiliary MTP modules and separately stored tensors; they do not establish how the publisher counted tied, replicated, auxiliary, or inference-only components."
+}

@@ -1,0 +1,91 @@
+{
+  "aggregation_policy": {
+    "active_revision_rule": "exclude every forecast_id named by a later supersedes field",
+    "contributor_weighting": "equal weight per active contributor in log space",
+    "final_rule": "50% evidence and 50% crowd in log space for Fable/Sol",
+    "range_point_rule": "use separately stated central_t; otherwise geometric midpoint sqrt(low*high)"
+  },
+  "cross_target_dependence": {
+    "interpretation": "The same forecasters tend to move both targets together, so the two crowd pools are not independent replications.",
+    "paired_contributors": 18,
+    "pearson_correlation_of_log_points": 0.7665718527163681
+  },
+  "decision": {
+    "center_is_single_forecaster_robust": true,
+    "change_user_selected_crowd_weight": false,
+    "crowd_is_independent_calibration_evidence": false,
+    "narrow_predictive_intervals": false,
+    "reason": "Jackknife and robust centers show that no single contributor controls the final center. The forecasts remain relayed, unscored, mutually correlated judgments and therefore cannot supply a calibrated likelihood or narrower interval."
+  },
+  "generated_on": "2026-07-31",
+  "limitations": [
+    "The ledger records statements relayed in this project, not a randomized or blinded elicitation protocol.",
+    "Forecasters may share public information or may have seen related parameter estimates.",
+    "No hidden target has disclosed its parameter count, so crowd accuracy is not yet outcome-calibrated."
+  ],
+  "role": "robustness/dependence audit; never an outcome-calibrated likelihood",
+  "source_files": {
+    "site/public/data/forecast-model.json": "9d9cc4676a0b3455134adbc0b90d07e9b45bd642cb2339204c77fd6eebfc44c0",
+    "sources/human_parameter_forecasts_2026-07-17.csv": "2056de44e4249943bbfbee5eaa57d98e9dc8de3b6fd9c62e2073983df4da0c22"
+  },
+  "targets": [
+    {
+      "crowd_geometric_center_t": 4.371847506331046,
+      "crowd_median_t": 4.949489742783178,
+      "crowd_ten_percent_each_tail_log_trimmed_mean_t": 4.7196616592725915,
+      "displayed_final_t": 4.548292155336898,
+      "evidence_center_t": 4.731857984602975,
+      "individual_point_max_t": 10.0,
+      "individual_point_min_t": 0.9797958971132712,
+      "individual_point_span_x": 10.206207261596576,
+      "leave_one_contributor_out": {
+        "crowd_center_max_t": 4.729886967181996,
+        "crowd_center_min_t": 4.185550987987843,
+        "final_max_t": 4.730872373244672,
+        "final_min_t": 4.450329522908741,
+        "maximum_absolute_final_shift_fraction": 0.04014258795876535
+      },
+      "maximum_robust_center_final_shift_fraction": 0.06401490518540176,
+      "model": "Claude Fable 5",
+      "n": 20,
+      "provenance_counts": {
+        "Direct statement from Respondent R01 in this Codex task.": 1,
+        "Relayed by project owner; source not attached.": 19
+      },
+      "robust_final_sensitivity_t": {
+        "geometric_mean": 4.548292155336898,
+        "median": 4.839450646416296,
+        "ten_percent_each_tail_log_trimmed_mean": 4.725755887374372
+      }
+    },
+    {
+      "crowd_geometric_center_t": 3.2116911484449235,
+      "crowd_median_t": 3.0,
+      "crowd_ten_percent_each_tail_log_trimmed_mean_t": 3.3335330880174703,
+      "displayed_final_t": 3.145668582841,
+      "evidence_center_t": 3.081003239637193,
+      "individual_point_max_t": 7.0710678118654755,
+      "individual_point_min_t": 0.7745966692414834,
+      "individual_point_span_x": 9.128709291752768,
+      "leave_one_contributor_out": {
+        "crowd_center_max_t": 3.4757466786144797,
+        "crowd_center_min_t": 3.0739163145508326,
+        "final_max_t": 3.2724282691862667,
+        "final_min_t": 3.0774577370785674,
+        "maximum_absolute_final_shift_fraction": 0.04029658020451232
+      },
+      "maximum_robust_center_final_shift_fraction": 0.03351806690458459,
+      "model": "GPT-5.6 Sol",
+      "n": 19,
+      "provenance_counts": {
+        "Direct statement from Respondent R01 in this Codex task.": 1,
+        "Relayed by project owner; source not attached.": 18
+      },
+      "robust_final_sensitivity_t": {
+        "geometric_mean": 3.145668582841,
+        "median": 3.0402318528216856,
+        "ten_percent_each_tail_log_trimmed_mean": 3.20478177784691
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "absolute_position_embedding": false,
+  "architectures": [
+    "MotifForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "attn_rms_norm_eps": 1e-05,
+  "auto_map": {
+    "AutoConfig": "configuration_motif.MotifConfig",
+    "AutoModelForCausalLM": "modeling_motif.MotifForCausalLM"
+  },
+  "bfloat16": true,
+  "bos_token_id": 219396,
+  "dtype": "float32",
+  "eos_token_id": 219395,
+  "expanded": true,
+  "fused_rope": false,
+  "head_dim": 128,
+  "hidden_act": "poly_norm",
+  "hidden_size": 4096,
+  "initializer_range": 2e-05,
+  "intermediate_size": 16384,
+  "k_ratio": 1,
+  "load_pretrained": null,
+  "loss_reduction": "mean",
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "Motif",
+  "num_attention_heads": 40,
+  "num_hidden_layers": 40,
+  "num_key_value_heads": 16,
+  "num_noise_heads": 8,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "factor": 2.0,
+    "original_max_position_embeddings": 65536,
+    "rope_type": "yarn"
+  },
+  "rope_theta": 2000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.57.1",
+  "use_bias": false,
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 219520
+}

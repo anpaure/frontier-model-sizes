@@ -1,0 +1,43 @@
+You are conducting an independent, adversarial audit of a frontier-model parameter-count project. Work directly in this directory and do not rely on the author's summaries. You have permission to read all local files and run non-destructive analysis commands. Do not modify source datasets, workbooks, or builders. Your only intended write is the audit report requested below.
+
+Primary deliverables to audit:
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_model_crowd_50pct_2026-07-17.xlsx
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_prediction_registry_v2.0_2026-07-17.docx
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_measurements_long_compute_enriched_2026-07-17.csv
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_epoch_match_audit_compute_enriched_2026-07-17.csv
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/epoch_archive_view_match_audit_2026-07-17.csv
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_data_summary_compute_enriched_2026-07-17.json
+- outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_data_test_results_compute_enriched_2026-07-17.csv
+
+Builders and audit logic:
+- build_unified_model_data.mjs
+- tests/test_unified_model_data.mjs
+- build_horizon_informed_model.mjs
+- build_prediction_registry.py
+
+Raw or near-raw inputs:
+- sources/input_eci_parameter_regression_workbook_2026-07-17.xlsx
+- sources/input_epoch_ai_models_archive_2026-07-17.zip
+- sources/epoch_all_ai_models_2026-07-31.csv
+- sources/input_no_cot_arxiv_2606.07157v3_source.tar.gz
+- the local attachments and source paths listed in the workbook's Source Manifest/Sources sheets
+
+Audit requirements:
+1. Independently inspect the raw sources and reproduce key counts. Check canonical IDs, exact release dates, model/configuration identity, AA duplicate handling (highest score per model), Epoch joins, No-CoT aliases, base/checkpoint distinction, and explicit unmatched rows. Look for silent dropped data, duplicated evidence, false exact matches, version/configuration conflation, and correlated Epoch source views counted as independent observations.
+2. Verify that the megafile preserves every source observation and measurement as claimed. Check the long/wide files against each other and against manifests. Challenge the claim of 100% correctness; state exactly what is proven and what is not.
+3. Audit the regression methodology and formulas. Reproduce, where feasible, the AA/ECI/price model branch, No-CoT horizon branch, Epoch FLOP branch, disclosed K3/Grok overrides, Opus and GPT same-base collapses, and the 50/50 crowd/model ensemble. Check for leakage, double counting, unjustified independence, bad time treatment, extrapolation, architecture confounding, calibration-on-targets, or formula errors.
+4. Specifically audit the compute branch: 31 AA-to-Epoch calibration rows, 19 compute-to-parameter rows, sequential residual-on-date regressions, anchor calibration to K3/Grok, claimed residual factors, and its 5% pre-crowd weight (2.5% effective final weight for Fable/Sol).
+5. Specifically audit crowd aggregation: all named forecasts, range-to-point geometric midpoint conversion, equal-weight geometric means, n counts, and the final 50% log-space combination. Reproduce the exact and one-decimal Fable/Sol outputs.
+6. Check the final workbook itself, not only the code: sheet values, formulas, chart sources, source hashes, duplicate IDs, stale labels, and whether the displayed result follows the documented method.
+7. Classify findings as FATAL, MAJOR, MODERATE, MINOR, or PASS. Give concrete file/row/cell references and reproducible evidence. Do not soften conclusions to match the author.
+8. End with:
+   - a verdict on data integrity and whether any claim of “100% data correctness” is justified;
+   - a verdict on the statistical defensibility of the current weights;
+   - your own best central forecasts for Fable and Sol, with plausible ranges;
+   - whether you endorse the displayed 4.3T Fable and 2.9T Sol final forecast.
+
+Write the complete Markdown report to:
+outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/fable_independent_data_audit_2026-07-17.md
+
+Also print a concise executive summary to stdout when finished. Be rigorous and use as much of the available local evidence as needed.

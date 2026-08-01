@@ -1,0 +1,26 @@
+{
+  "bytes": 303087,
+  "capture_date": "2026-07-22",
+  "capture_timestamp_utc": "20260722005716",
+  "classification": {
+    "Kimi K3": {
+      "project_prospective": false,
+      "reason": "The project had already used K3's disclosed 2.8T size before this score vintage was incorporated.",
+      "score_vintage_holdout": true
+    }
+  },
+  "generated_on": "2026-07-31",
+  "inventory": {
+    "benchmarks": 53,
+    "coarse_model_families": 184,
+    "k3_component_rows": 8,
+    "k3_model_version": "kimi-k3_max",
+    "models": 212,
+    "rows": 2034
+  },
+  "original_url": "https://epoch.ai/data/eci_benchmarks.csv",
+  "pinned_file": "sources/epoch_eci_benchmarks_2026-07-22.csv",
+  "role": "post-freeze score-vintage holdout; excluded from historical model selection and live forecast weighting",
+  "sha256": "85eb265713ebd29068b5cc5430c33596d5896c7b98a03b5f18f8d0e1e66615f8",
+  "wayback_url": "https://web.archive.org/web/20260722005716id_/https://epoch.ai/data/eci_benchmarks.csv"
+}

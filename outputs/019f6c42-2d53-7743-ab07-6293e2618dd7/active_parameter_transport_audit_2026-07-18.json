@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "generated_on": "2026-07-31",
+    "target": "total pretrained parameters, with active parameters as an architecture-aware intermediate",
+    "outer_split": "strictly earlier parameter-training eligibility date; entire test developer removed",
+    "training_weights": "equal total weight per developer; estimated AA scores receive half weight",
+    "minimum_training_rows": 30,
+    "minimum_training_developers": 8,
+    "high_sparsity_threshold_total_to_active": 15.0
+  },
+  "inventory": {
+    "detailed_total_parameter_checkpoints": 275,
+    "active_parameter_checkpoints": 127,
+    "active_parameter_developers": 33,
+    "chronological_predictions": 96,
+    "frontier_like_predictions": 40,
+    "high_sparsity_conversion_predictions": 47
+  },
+  "active_parameter_predictability": {
+    "active_score_date": {
+      "n": 96,
+      "median_multiplicative_error": 1.943894307714791,
+      "mean_absolute_log10_error": 0.3318599228648198,
+      "rmse_log10": 0.4006721807808543,
+      "p80_multiplicative_error": 3.4903147444276725,
+      "within_2x": 0.5208333333333334,
+      "signed_bias_factor": 1.1987221961547962
+    },
+    "total_score_date_same_active_checkpoint_panel": {
+      "n": 96,
+      "median_multiplicative_error": 2.085047252179732,
+      "mean_absolute_log10_error": 0.37438061221119295,
+      "rmse_log10": 0.4705906754412078,
+      "p80_multiplicative_error": 4.133344877735811,
+      "within_2x": 0.4791666666666667,
+      "signed_bias_factor": 1.3227322109579336
+    },
+    "total_score_date_full_checkpoint_panel": {
+      "n": 96,
+      "median_multiplicative_error": 2.015204863184263,
+      "mean_absolute_log10_error": 0.37832570193609866,
+      "rmse_log10": 0.4813696139441088,
+      "p80_multiplicative_error": 4.233076573127127,
+      "within_2x": 0.5,
+      "signed_bias_factor": 1.0575019907725214
+    },
+    "paired_active_vs_same_panel_total": {
+      "metric": "equal-developer absolute log10 error; active_log10_error minus same_panel_total_log10_error",
+      "observed_delta": -0.043273315949707875,
+      "ci_90": [
+        -0.09289014048887713,
+        -0.00010818627814064898
+      ],
+      "probability_left_better": 0.95055,
+      "samples": 20000,
+      "developers": 26
+    },
+    "frontier_like": {
+      "active_score_date": {
+        "n": 40,
+        "median_multiplicative_error": 1.6382861113107603,
+        "mean_absolute_log10_error": 0.23372993731170216,
+        "rmse_log10": 0.27681780862081395,
+        "p80_multiplicative_error": 2.0717783486245818,
+        "within_2x": 0.75,
+        "signed_bias_factor": 0.9959269583346945
+      },
+      "total_score_date_same_panel": {
+        "n": 40,
+        "median_multiplicative_error": 1.7213158177413368,
+        "mean_absolute_log10_error": 0.27549036970591,
+        "rmse_log10": 0.335480600794912,
+        "p80_multiplicative_error": 2.478966712274716,
+        "within_2x": 0.6,
+        "signed_bias_factor": 1.3586477271075852
+      }
+    },
+    "interpretation": "Active parameters are modestly easier to recover from AA score/date and the refreshed developer-cluster 90% interval is narrowly wholly favorable. This does not identify total parameters without an observed target sparsity ratio; the high-sparsity transport still slightly worsens the primary median."
+  },
+  "high_sparsity_total_transport": {
+    "candidate": {
+      "n": 47,
+      "median_multiplicative_error": 2.0953179775569155,
+      "mean_absolute_log10_error": 0.3487103926317519,
+      "rmse_log10": 0.39580511050755507,
+      "p80_multiplicative_error": 3.2013349709052474,
+      "within_2x": 0.46808510638297873,
+      "signed_bias_factor": 0.9113284135709822
+    },
+    "direct_total_baseline": {
+      "n": 47,
+      "median_multiplicative_error": 1.986495131195065,
+      "mean_absolute_log10_error": 0.4030545666962064,
+      "rmse_log10": 0.5238218437919613,
+      "p80_multiplicative_error": 4.598523634730482,
+      "within_2x": 0.5106382978723404,
+      "signed_bias_factor": 0.8167878914857953
+    },
+    "paired_cluster_bootstrap": {
+      "metric": "equal-developer absolute log10 error; active_converted_total_log10_error minus full_panel_total_log10_error",
+      "observed_delta": -0.09900768435447396,
+      "ci_90": [
+        -0.18396603240132736,
+        -0.014679308686815553
+      ],
+      "probability_left_better": 0.9736,
+      "samples": 20000,
+      "developers": 15
+    },
+    "interpretation": "The active-parameter conversion lowers mean and tail error for the >=15x sparsity scope and its developer-clustered mean interval is favorable, but the primary median is slightly worse and hidden-target sparsity is unobserved."
+  },
+  "kimi_k3_external_architecture_check": {
+    "training_rows": 117,
+    "training_developers": 31,
+    "kimi_developer_removed": true,
+    "coefficients_intercept_score_date": [
+      2.0786412751606402,
+      0.027110201854871927,
+      -0.5148318290656089
+    ],
+    "predicted_k3_active_b": 63.95169218443839,
+    "k3_disclosed_active_b": 104.2,
+    "k3_active_prediction_multiplicative_error": 1.6293548527142083,
+    "k3_active_prediction_calibration_factor": 1.6293548527142083,
+    "k3_disclosed_total_b": 2780.0,
+    "k3_disclosed_total_to_active_ratio": 26.679462571976966,
+    "k3_disclosed_active_fraction": 0.03748201438848921,
+    "k2_disclosed_total_to_active_ratio": 31.901840490797543,
+    "selected_routed_expert_fraction": 0.017857142857142856,
+    "active_fraction_over_selected_expert_fraction": 2.0989928057553957
+  },
+  "target_sensitivity": [
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "aa_score": 59.8606463217303,
+      "predicted_active_b": 85.60751801484525,
+      "k3_calibrated_active_b": 139.48502490630713,
+      "k3_anchored_total_t": 3.721385501339096,
+      "k3_sparsity_total_t": 3.721385501339096,
+      "k2_sparsity_total_t": 4.449829015415932,
+      "status": "diagnostic only"
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "aa_score": 58.889831189723,
+      "predicted_active_b": 73.09824157601906,
+      "k3_calibrated_active_b": 119.10297463676216,
+      "k3_anchored_total_t": 3.177603354032618,
+      "k3_sparsity_total_t": 3.177603354032618,
+      "k2_sparsity_total_t": 3.7996040988414914,
+      "status": "diagnostic only"
+    },
+    {
+      "model": "Kimi K3",
+      "release_date": "2026-07-16",
+      "aa_score": 57.1123394372091,
+      "predicted_active_b": 63.95169218443839,
+      "k3_calibrated_active_b": 104.2,
+      "k3_anchored_total_t": 2.78,
+      "k3_sparsity_total_t": 2.78,
+      "k2_sparsity_total_t": 3.3241717791411043,
+      "status": "disclosed external check"
+    }
+  ],
+  "compute_branch_independence": {
+    "target_models": 9,
+    "target_models_with_epoch_training_compute_estimate": 1,
+    "epoch_compute_estimate_target_names": [
+      "Kimi K3"
+    ],
+    "target_models_with_disclosed_training_compute": 0,
+    "disclosed_training_compute_target_names": [],
+    "epoch_compute_estimate_records": [
+      {
+        "model": "Kimi K3",
+        "training_compute_flop": 2.0001e+25,
+        "epoch_confidence": "Speculative",
+        "epoch_notes": "Based on peer models such as Kimi K2.6 and DeepSeek V4 Pro, plausibly was trained on roughly 30T tokens (likely between 15T and 60T). Using the heuristic that C = 6ND, 30T pretraining tokens would imply ~1.9e25 FLOP. This is a somewhat uncertain estimate (more uncertain than estimates based on disclosed active params and token counts, but comparable to estimates based on disclosed GPU-hours).\n\nK3 was likely pretrained on over 1e25 FLOP. Speculatively, K3's relatively large size compared to other Chinese models may have reduced the training token budget vs smaller models.",
+        "classification": "Epoch estimate; not a primary-source disclosure"
+      }
+    ],
+    "live_target_compute_input": "The live branch predicts compute from AA score and exact release date. K3 now has a speculative Epoch compute estimate, but no target has a primary-source training-compute disclosure.",
+    "algebra": "If logC = a + b*AA + c*date and logP = d + e*logC + f*date, then logP = (d+e*a) + (e*b)*AA + (e*c+f)*date. The target prediction remains in the same intercept/AA/date feature span.",
+    "independent_target_evidence": false,
+    "recommended_classification": "compute-structured AA/date regularizer, not an independent target likelihood",
+    "change_numeric_weight": false,
+    "reason": "The current small weight is correlated regularization. K3's Epoch value is explicitly speculative and cannot be treated as an independent target disclosure; the other hidden targets still use score/date-predicted compute."
+  },
+  "decision": {
+    "promote_active_transport_to_live_factor": false,
+    "independent_target_architecture_observed": false,
+    "incremental_live_weight": 0.0,
+    "change_headline_forecasts": false,
+    "classify_compute_as_independent_evidence": false,
+    "update_compute_description_to_show_dependency": true,
+    "reason": "K3 provides exact 2.78T total and 104.2B activated counts. The refreshed high-sparsity comparison improves clustered mean and tail error, but slightly worsens the primary median and Fable/Sol sparsity is undisclosed. Preserve live centers and expose the K3-sparsity sensitivity at zero weight."
+  },
+  "limitations": [
+    "AA scores are a current snapshot rather than historical benchmark vintages.",
+    "AA active-parameter metadata exists for 127 sparse checkpoints and omits dense rows, so availability is non-random.",
+    "K3's exact 104.2B activated count is disclosed and is 2.10x the naive 2.78T*(16/896) calculation; routed-expert selection fraction must not be used as active-parameter fraction.",
+    "K3's 2.78T total and 104.2B activated counts are paired architecture facts, not independent likelihood terms.",
+    "Assuming Fable and Sol have K3-like sparsity is a user-supplied architecture prior, not a public disclosure from Anthropic or OpenAI."
+  ],
+  "source_files": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_detailed_parameter_panel_2026-07-18.csv": "fa4e0484ca66db128f2c224532404104f2604377cde1183d9fbc1c1f7447c33b",
+    "sources/aa_calibration_primary_overrides_2026-07-31.json": "339b8de4365de2dca8b85243f479dfd3768d6dd81f178d38a303a7f0feff0c79",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794"
+  },
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_predictions_2026-07-18.csv",
+    "targets": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/active_parameter_transport_targets_2026-07-18.csv"
+  }
+}

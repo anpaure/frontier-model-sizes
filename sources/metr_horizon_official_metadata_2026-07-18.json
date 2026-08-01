@@ -1,0 +1,53 @@
+{
+  "files": {
+    "sources/metr_benchmark_results_1_1_2026-07-18.yaml": {
+      "bytes": 16255,
+      "sha256": "aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9"
+    },
+    "sources/metr_horizon_official_signals_2026-07-18.csv": {
+      "rows": 26,
+      "sha256": "05b055467ab579b2c46100ce65bed05108863e64beb4f36d83d0c0b82f0ee85c"
+    },
+    "sources/metr_horizon_user_snapshot_2026-07-17.csv": {
+      "rows": 26,
+      "sha256": "a9719b3ea8e1c7fd32bf44414578c8e800ad2505d4153d55b05f884c65b3f944"
+    }
+  },
+  "integrity_policy": {
+    "all_result_fields_preserved": true,
+    "full_scaffold_arrays_preserved": true,
+    "legacy_snapshot_used_only_as_exact_crosscheck": true,
+    "official_source_is_authoritative": true,
+    "parser": "fail_closed_published_schema"
+  },
+  "inventory": {
+    "full_scaffold_entries": 114,
+    "result_rows": 26,
+    "scaffold_families": [
+      "duet/null",
+      "metr_agents/react",
+      "modular-public/null",
+      "null",
+      "triframe_inspect/triframe_agent"
+    ],
+    "unique_source_ids": 26
+  },
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-18",
+  "source": {
+    "authority": "first_party",
+    "name": "METR-Horizon-v1.1 official benchmark results",
+    "retrieval_mode": "frozen_offline",
+    "url": "https://metr.org/assets/benchmark_results_1_1.yaml"
+  },
+  "trend": {
+    "all_time_stitched_point_estimate_days": "187.778",
+    "benchmark_name": "METR-Horizon-v1.1",
+    "exclusion_rule": "excludes points with central estimate p50 > 16 hrs",
+    "from_2023_on_ci_high_days": "158.012",
+    "from_2023_on_ci_low_days": "104.428",
+    "from_2023_on_point_estimate_days": "128.744",
+    "long_tasks_version": "799cc9c4b4483a93fc3445623a49ea1bd74fdeb2",
+    "swaa_version": "f6cc84052e2a79dd540766c8a1b15ff399696371"
+  }
+}

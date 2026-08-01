@@ -1,0 +1,45 @@
+{
+  "base_measurements": 31155,
+  "base_observations": 8476,
+  "files": {
+    "manifest": {
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_source_manifest_operational_enriched_2026-07-18.csv",
+      "sha256": "d68732683c64aba3e4f7995a674789865c9f8d7d60d9ee642fee0f20001f6106"
+    },
+    "measurements": {
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_measurements_long_operational_enriched_2026-07-18.csv",
+      "sha256": "a9811f7f606e03b67e205197b61a188ba3a394949d893dc879e1c76ccab0870b"
+    },
+    "observations": {
+      "path": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_operational_enriched_2026-07-18.csv",
+      "sha256": "212b57216f2abf880e5f974146771782dc1f8bc2656e9d3d7f2ac129414cf08e"
+    }
+  },
+  "frontier_primary_evidence_measurements": 152,
+  "frontier_primary_evidence_observations": 39,
+  "match_status_counts": {
+    "disclosed_anchor": 2,
+    "frontier_target": 9,
+    "matched_epoch_manual": 95,
+    "same_base_control": 6,
+    "unmatched": 222
+  },
+  "no_cot_exact_date_measurements": 256,
+  "no_cot_exact_date_observations": 50,
+  "openrouter_daily_observations": 8569,
+  "openrouter_historical_price_measurements": 7683,
+  "openrouter_historical_price_observations": 2566,
+  "openrouter_measurements": 58665,
+  "openrouter_model_observations": 334,
+  "openrouter_provider_observations": 1036,
+  "openrouter_tier_observations": 1172,
+  "opus5_evidence_measurements": 58,
+  "opus5_evidence_observations": 7,
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-18",
+  "source_manifest_rows": 63,
+  "total_measurements": 90286,
+  "total_observations": 22249,
+  "unique_measurement_ids": true,
+  "unique_observation_ids": true
+}

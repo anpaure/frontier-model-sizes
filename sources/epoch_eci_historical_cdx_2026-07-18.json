@@ -1,0 +1,173 @@
+{
+  "benchmark_zip": {
+    "query_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fepoch.ai%2Fdata%2Fbenchmark_data.zip&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&collapse=digest&from=2024&to=2026",
+    "records": [
+      {
+        "digest": "OZJCH52KQHV7VID5TTX2HCFNY2KUNDMI",
+        "length": "1637083",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20250305190317"
+      },
+      {
+        "digest": "C77NMWF2V4JV5TYO3YXRKMZNBWOVQ35C",
+        "length": "1670051",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20250403051524"
+      },
+      {
+        "digest": "PIG6CLKPF5RQSW7ZTE3RCOCFTFFZHXDV",
+        "length": "1848620",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20250510183121"
+      },
+      {
+        "digest": "5J2V2D6GFOMBWCR2LAFA3HZ6TFTLYWZH",
+        "length": "1968794",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20250612030853"
+      },
+      {
+        "digest": "DMCIW4D75YJD4Q4JV3JK33FRIE2FLA7B",
+        "length": "2119558",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20250720150710"
+      },
+      {
+        "digest": "XVAPAGDW55SXFSPUNU7RO5EYXVN5KG75",
+        "length": "272403",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20251113094011"
+      },
+      {
+        "digest": "J4H6FEWB7JLREBCRUCPAJPAZAGVKSEKF",
+        "length": "281838",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20251125180202"
+      },
+      {
+        "digest": "56CIDRWOQR7VCKBDFSB3LECRXFRIHLJQ",
+        "length": "285722",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20251214160510"
+      },
+      {
+        "digest": "523NIH66XYNN4LXYDREHG24O7ZZIK5LZ",
+        "length": "283006",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20260101232245"
+      },
+      {
+        "digest": "UJKDNTCGZKHRHKA6RGVIFFGJ5YKYL6I5",
+        "length": "292254",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20260204115444"
+      },
+      {
+        "digest": "27YWKXSYBBDTF6U2F5KYFJ6YWC6KGH4Q",
+        "length": "294111",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20260204224101"
+      },
+      {
+        "digest": "ACJGMBRLOP6PELV7RBIK4YDL54ISP4V4",
+        "length": "292201",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20260205070603"
+      },
+      {
+        "digest": "ZMEKZKGIRXH3KU4OJS3MCF5DFK5RRGLK",
+        "length": "320272",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20260320171809"
+      },
+      {
+        "digest": "E5NAD6JID2YAJM455G7JE6RTQHJEM7QT",
+        "length": "327618",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20260427185318"
+      },
+      {
+        "digest": "NZB6P6QKDLOAAE5GCFLQYTC347YKNSKM",
+        "length": "339546",
+        "mimetype": "application/zip",
+        "original": "https://epoch.ai/data/benchmark_data.zip",
+        "statuscode": "200",
+        "timestamp": "20260610165052"
+      }
+    ]
+  },
+  "canonical_eci_csv": {
+    "query_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fepoch.ai%2Fdata%2Feci_benchmarks.csv&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&collapse=digest&from=2024&to=2026",
+    "records": [
+      {
+        "digest": "VZRSAAZAT46R7LAXVLVHSD4PIC2NOQKP",
+        "length": "21758",
+        "mimetype": "text/csv",
+        "original": "https://epoch.ai/data/eci_benchmarks.csv",
+        "statuscode": "200",
+        "timestamp": "20260213005335"
+      },
+      {
+        "digest": "UO3MWFJTRHKPRKLLXKJDR5UFUCZ4KSKI",
+        "length": "28565",
+        "mimetype": "text/csv",
+        "original": "https://epoch.ai/data/eci_benchmarks.csv",
+        "statuscode": "200",
+        "timestamp": "20260505224414"
+      },
+      {
+        "digest": "AZS6Z7XDRAQ37QWK4PNYV253GYQIDSUH",
+        "length": "27566",
+        "mimetype": "text/csv",
+        "original": "https://epoch.ai/data/eci_benchmarks.csv",
+        "statuscode": "200",
+        "timestamp": "20260516072913"
+      },
+      {
+        "digest": "5YO66AU56SO6G2XHX7GT4MUR27DS47ZQ",
+        "length": "30614",
+        "mimetype": "text/csv",
+        "original": "https://epoch.ai/data/eci_benchmarks.csv",
+        "statuscode": "200",
+        "timestamp": "20260616024413"
+      },
+      {
+        "digest": "RLDBYRK5JKOHFZSNSB677YUIL6VIRIKN",
+        "length": "34556",
+        "mimetype": "text/csv",
+        "original": "https://epoch.ai/data/eci_benchmarks.csv",
+        "statuscode": "200",
+        "timestamp": "20260716153134"
+      }
+    ]
+  },
+  "retrieved_at_utc": "2026-07-18T13:12:45.625556+00:00"
+}

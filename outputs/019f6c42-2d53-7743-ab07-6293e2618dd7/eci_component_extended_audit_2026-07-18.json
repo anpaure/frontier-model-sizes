@@ -1,0 +1,481 @@
+{
+  "generated_on": "2026-07-31",
+  "question": "Do exact additional parameter matches or individual ECI components improve frontier parameter inference?",
+  "expanded_total_parameter_panel": {
+    "models": 84,
+    "families": 37,
+    "source_counts": {
+      "exact_epoch_open_extension": 26,
+      "legacy_workbook_parameter_row": 57,
+      "primary_exact_open_extension": 1
+    },
+    "matching_policy": "Additional rows require a unique, exact alphanumeric, high-confidence Epoch checkpoint match; exact date agreement; open weights; and identical parameter values.",
+    "weighting_policy": "All rows recompute the inverse-uncertainty law from the current ECI intervals: 15.3664 / (ECI CI width)^2; legacy workbook weights are retained only as audit fields.",
+    "aggregate_backtest": {
+      "legacy_57_tests": {
+        "scope": "legacy_57",
+        "n": 45,
+        "families": 26,
+        "legacy_57": {
+          "n": 45,
+          "median_multiplicative_error": 2.019118774607759,
+          "mean_absolute_log10_error": 0.3589218743881902,
+          "rmse_log10": 0.44830969526640624,
+          "p80_multiplicative_error": 3.723404540886963,
+          "within_2x": 0.4888888888888889,
+          "signed_bias_factor": 1.0490904041060523
+        },
+        "expanded_84": {
+          "n": 45,
+          "median_multiplicative_error": 2.0275170138575094,
+          "mean_absolute_log10_error": 0.3492116992012568,
+          "rmse_log10": 0.44967240893053134,
+          "p80_multiplicative_error": 3.698619872859874,
+          "within_2x": 0.4888888888888889,
+          "signed_bias_factor": 0.8940055976673313
+        },
+        "row_weighted_mean_absolute_log10_delta": -0.009710175186933359,
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.019410442050883162,
+          "ci_90": [
+            -0.06057816473191046,
+            0.02087941990550705
+          ],
+          "bootstrap_probability_candidate_better": 0.7843,
+          "samples": 20000,
+          "family_clusters": 26
+        }
+      },
+      "all_84_tests": {
+        "scope": "all_84",
+        "n": 64,
+        "families": 28,
+        "legacy_57": {
+          "n": 64,
+          "median_multiplicative_error": 2.5496144542273487,
+          "mean_absolute_log10_error": 0.44715418785532346,
+          "rmse_log10": 0.5451498386463847,
+          "p80_multiplicative_error": 5.3031242639306315,
+          "within_2x": 0.390625,
+          "signed_bias_factor": 1.5847652414863216
+        },
+        "expanded_84": {
+          "n": 64,
+          "median_multiplicative_error": 2.315322475628994,
+          "mean_absolute_log10_error": 0.40493828948195576,
+          "rmse_log10": 0.5007905156729943,
+          "p80_multiplicative_error": 4.379476240935559,
+          "within_2x": 0.40625,
+          "signed_bias_factor": 1.2296282555324043
+        },
+        "row_weighted_mean_absolute_log10_delta": -0.042215898373367686,
+        "paired_family_bootstrap": {
+          "metric": "equal-family mean absolute log10 error; candidate minus baseline",
+          "observed_delta": -0.040074319590405694,
+          "ci_90": [
+            -0.08237655025378163,
+            0.0022273310245763257
+          ],
+          "bootstrap_probability_candidate_better": 0.93935,
+          "samples": 20000,
+          "family_clusters": 28
+        }
+      }
+    },
+    "frontier_estimate_stability": [
+      {
+        "model": "Claude Fable 5",
+        "release_date": "2026-06-09",
+        "eci_score": 160.72794930035383,
+        "legacy_57_estimate_t": 3.154860839423498,
+        "expanded_84_estimate_t": 3.1799303928143745,
+        "expanded_over_legacy": 1.0079463262143307
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "release_date": "2026-07-09",
+        "eci_score": 161.7210971187139,
+        "legacy_57_estimate_t": 3.452226795865823,
+        "expanded_84_estimate_t": 3.5008847983053792,
+        "expanded_over_legacy": 1.0140946714444792
+      },
+      {
+        "model": "GPT-5.5",
+        "release_date": "2026-04-23",
+        "eci_score": 158.45884239290103,
+        "legacy_57_estimate_t": 2.5166592445084497,
+        "expanded_84_estimate_t": 2.517139683265004,
+        "expanded_over_legacy": 1.0001909033801863
+      },
+      {
+        "model": "Claude Opus 4.8",
+        "release_date": "2026-05-28",
+        "eci_score": 158.01423653838694,
+        "legacy_57_estimate_t": 2.309821110925795,
+        "expanded_84_estimate_t": 2.3361635465667154,
+        "expanded_over_legacy": 1.0114045349729972
+      },
+      {
+        "model": "GPT-5.6 Terra",
+        "release_date": "2026-07-09",
+        "eci_score": 158.23470199211692,
+        "legacy_57_estimate_t": 2.279619580750539,
+        "expanded_84_estimate_t": 2.3322206514378565,
+        "expanded_over_legacy": 1.0230744950304378
+      },
+      {
+        "model": "Claude Sonnet 5",
+        "release_date": "2026-06-30",
+        "eci_score": 153.4725426617507,
+        "legacy_57_estimate_t": 1.304184802086765,
+        "expanded_84_estimate_t": 1.3469660919222897,
+        "expanded_over_legacy": 1.0328030887701438
+      },
+      {
+        "model": "GPT-5.6 Luna",
+        "release_date": "2026-07-09",
+        "eci_score": 155.34898857294382,
+        "legacy_57_estimate_t": 1.6168845580493474,
+        "expanded_84_estimate_t": 1.6663083101528113,
+        "expanded_over_legacy": 1.0305672732523898
+      }
+    ],
+    "decision": {
+      "change_live_eci_center": false,
+      "reason": "The extension is evaluated against the 57 retained legacy parameter rows after the current-snapshot identity migration. It remains a diagnostic comparison and cannot change the live branch without decisive held-out evidence."
+    }
+  },
+  "active_parameter_component_audit": {
+    "parameter_map_models": 89,
+    "parameter_map_families": 40,
+    "component_rows": 723,
+    "component_benchmarks": 50,
+    "eligible_comparisons": 13,
+    "outer_split": "strictly earlier release date; test family entirely removed",
+    "baseline": "log10 parameter count ~ aggregate ECI + exact date + reasoning + MoE",
+    "candidate": "baseline + (component-implied ECI - aggregate ECI)",
+    "training_weights": "equal total weight per family; broad aggregate-ECI confidence intervals receive 0.5 quality weight",
+    "multiple_testing": "Global family-level max-T sign-flip correction across 13 eligible benchmarks using 100000 permutations.",
+    "supported_after_familywise_correction": [],
+    "best_uncorrected_component": {
+      "benchmark": "OTIS Mock AIME 2024-2025",
+      "coverage_models": 35,
+      "heldout_predictions": 23,
+      "heldout_families": 11,
+      "baseline_active_median_error_x": 2.1386314099365498,
+      "augmented_active_median_error_x": 1.7473922450840513,
+      "active_equal_family_mae_delta": -0.038709879306992344,
+      "active_delta_ci_90_low": -0.07494541236078374,
+      "active_delta_ci_90_high": -0.0012683033090316671,
+      "active_unadjusted_probability_better": 0.9553,
+      "active_studentized_statistic": -1.6262345453132399,
+      "baseline_total_median_error_x": 2.4443278614772788,
+      "augmented_total_median_error_x": 2.129406718252324,
+      "total_equal_family_mae_delta": -0.02148829032384144,
+      "total_delta_ci_90_low": -0.05017057484413077,
+      "total_delta_ci_90_high": 0.009002285322095243,
+      "total_unadjusted_probability_better": 0.87865,
+      "total_studentized_statistic": -1.1270471373071118,
+      "active_familywise_one_sided_p": 0.5957240427595724,
+      "total_familywise_one_sided_p": 0.8808811911880882
+    },
+    "decision": {
+      "add_component_branch": false,
+      "incremental_component_weight": 0.0,
+      "reason": "No individual component survives the familywise correction. Apparent OTIS/knowledge gains remain exploratory until an independent benchmark vintage or new disclosed models replicate them."
+    }
+  },
+  "frontier_component_coverage": [
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "OTIS Mock AIME 2024-2025",
+      "performance": 0.9972194416638861,
+      "eligible_component_panel": true,
+      "active_familywise_p": 0.5957240427595724,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "WeirdML",
+      "performance": 0.8785,
+      "eligible_component_panel": true,
+      "active_familywise_p": 1.0,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "SimpleBench",
+      "performance": 0.7828,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "SimpleQA Verified",
+      "performance": 0.683,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "CritPt",
+      "performance": 0.2857142857,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "FrontierMath-Tiers-1-3-v2-Private",
+      "performance": 0.8701754385964913,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "FrontierMath-Tier-4-v2-Private",
+      "performance": 0.8780487804878049,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "Chess Puzzles",
+      "performance": 0.41,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "EBR-bench",
+      "performance": 0.31746,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "FrontierCode",
+      "performance": 0.535,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "APEX-Agents",
+      "performance": 0.45,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "CursorBench",
+      "performance": 0.7290000000000001,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "GBAEval",
+      "performance": 0.7447198828312318,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "Remote Labor Index",
+      "performance": 0.161,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "Claude Fable 5",
+      "benchmark": "Surface Evolver Bench",
+      "performance": 0.95,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "GPQA diamond",
+      "performance": 0.9132996632996635,
+      "eligible_component_panel": true,
+      "active_familywise_p": 0.9821301786982131,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "OTIS Mock AIME 2024-2025",
+      "performance": 1.0,
+      "eligible_component_panel": true,
+      "active_familywise_p": 0.5957240427595724,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "WeirdML",
+      "performance": 0.8876000000000001,
+      "eligible_component_panel": true,
+      "active_familywise_p": 1.0,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "SimpleBench",
+      "performance": 0.6604,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "SimpleQA Verified",
+      "performance": 0.716,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "CritPt",
+      "performance": 0.323,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "ARC-AGI",
+      "performance": 0.975,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "ARC-AGI-2",
+      "performance": 0.925,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "FrontierMath-Tiers-1-3-v2-Private",
+      "performance": 0.8912280701754386,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "FrontierMath-Tier-4-v2-Private",
+      "performance": 0.8292682926829268,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "Chess Puzzles",
+      "performance": 0.64,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "EBR-bench",
+      "performance": 0.396825,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "FrontierCode",
+      "performance": 0.475,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "CursorBench",
+      "performance": 0.672,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "benchmark": "Surface Evolver Bench",
+      "performance": 0.93125,
+      "eligible_component_panel": false,
+      "active_familywise_p": null,
+      "supported_after_familywise_correction": false,
+      "used_in_live_forecast": false
+    }
+  ],
+  "limitations": [
+    "Component performance comes from the current Epoch snapshot, not historical benchmark vintages.",
+    "The 89-model active-parameter map contains some inferred active counts; broad ECI intervals are downweighted but parameter-source uncertainty is not fully quantified.",
+    "Benchmark availability is non-random and varies strongly by release date.",
+    "Familywise correction protects against selecting a lucky component from this snapshot, but future snapshots still require prospective validation."
+  ],
+  "files": {
+    "expanded_panel": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_expanded_parameter_panel_2026-07-18.csv",
+    "aggregate_predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_expanded_aggregate_predictions_2026-07-18.csv",
+    "active_comparison": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_active_incremental_comparison_2026-07-18.csv",
+    "active_predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_component_active_incremental_predictions_2026-07-18.csv"
+  },
+  "source_manifest": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "sources/epoch_all_ai_models_2026-07-31.csv": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579",
+    "sources/epoch_eci_benchmarks_2026-07-31.csv": "d7cad7a8595347a62a2f832205aae579e371f05afe6ab08bc9506631e38c70d1",
+    "sources/epoch_benchmark_data_2026-07-31.zip": "cc844ca094e4372ff81eb636f3503317d1d495d4f4c493bd6b7a37dd5f83049c",
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "sources/open_model_parameter_truth_reconciliation_2026-07-31.json": "cbfc667c884f88d7a4456efde5a47f24ca6ca481f0e30a67cbfcc419c7c0ad89"
+  }
+}

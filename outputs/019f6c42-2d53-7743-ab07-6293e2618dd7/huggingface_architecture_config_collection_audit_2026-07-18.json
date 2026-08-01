@@ -1,0 +1,44 @@
+{
+  "architecture_classification_counts": {
+    "dense_config": 25,
+    "moe_config": 48,
+    "unavailable": 14
+  },
+  "calibration_checkpoints": 93,
+  "fetched_at_utc": "2026-07-18T09:33:13.390541+00:00",
+  "files": {
+    "raw_snapshot": "sources/huggingface_architecture_config_snapshot_2026-07-18.json.gz",
+    "signals": "sources/huggingface_architecture_config_signals_2026-07-18.csv"
+  },
+  "http_status_counts": {
+    "200": 73,
+    "401": 14
+  },
+  "method_notes": [
+    "Repository identity comes from the frozen OpenRouter catalog and exact calibration crosswalk.",
+    "Dense/MoE classification uses nested primary config fields and architecture names; it does not infer active parameter counts.",
+    "HTTP errors and gated repositories are retained explicitly and never converted to dense labels."
+  ],
+  "missing_repo_model_ids": [
+    "bytedance-seed/seed-1.6",
+    "bytedance-seed/seed-1.6-flash",
+    "minimax/minimax-m1",
+    "mistralai/mistral-large-2407",
+    "mistralai/mistral-large-2512",
+    "mistralai/mistral-medium-3-5",
+    "mistralai/mistral-saba",
+    "qwen/qwen3-max"
+  ],
+  "network_refresh": false,
+  "openrouter_models_without_hugging_face_repo": 8,
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-18",
+  "source_hashes": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_calibration_2026-07-18.csv": "072ff900db917ce7d641d0af6bd548c8d472438d48d4c0acc0d14504265a86cd",
+    "sources/huggingface_architecture_config_signals_2026-07-18.csv": "db1757382798a069ed9833aa144c96b0c7c9d939e793581a611ed6487be99142",
+    "sources/huggingface_architecture_config_snapshot_2026-07-18.json.gz": "412d80e27a36477636599eeb9fcaade8924f1d7cd97fd8db16305677f3f00c06",
+    "sources/openrouter_model_signals_2026-07-18.csv": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd"
+  },
+  "successful_json_configs": 73,
+  "unique_repositories": 87
+}

@@ -1,0 +1,3016 @@
+{
+  "architecture_changes": [
+    {
+      "changes": {
+        "size_class": {
+          "after": null,
+          "before": "large"
+        }
+      },
+      "name": "Claude 3.5 Haiku",
+      "slug": "claude-3-5-haiku"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": null,
+          "before": "medium"
+        }
+      },
+      "name": "Gemini 2.0 Flash (Feb '25)",
+      "slug": "gemini-2-0-flash"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": "medium",
+          "before": "large"
+        }
+      },
+      "name": "GPT-5.6 Luna (max)",
+      "slug": "gpt-5-6-luna"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": "medium",
+          "before": "large"
+        }
+      },
+      "name": "GPT-5.6 Luna (high)",
+      "slug": "gpt-5-6-luna-high"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": "medium",
+          "before": "large"
+        }
+      },
+      "name": "GPT-5.6 Luna (low)",
+      "slug": "gpt-5-6-luna-low"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": "medium",
+          "before": "large"
+        }
+      },
+      "name": "GPT-5.6 Luna (medium)",
+      "slug": "gpt-5-6-luna-medium"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": "medium",
+          "before": "large"
+        }
+      },
+      "name": "GPT-5.6 Luna (Non-reasoning)",
+      "slug": "gpt-5-6-luna-non-reasoning"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": "medium",
+          "before": "large"
+        }
+      },
+      "name": "GPT-5.6 Luna (xhigh)",
+      "slug": "gpt-5-6-luna-xhigh"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": null,
+          "before": "large"
+        }
+      },
+      "name": "GPT-5 (ChatGPT)",
+      "slug": "gpt-5-chatgpt"
+    },
+    {
+      "changes": {
+        "active_parameters_b": {
+          "after": 21,
+          "before": null
+        },
+        "parameters_b": {
+          "after": 236,
+          "before": null
+        },
+        "size_class": {
+          "after": "large",
+          "before": null
+        }
+      },
+      "name": "JT-4.1 Flash 236B A21B",
+      "slug": "jt-4-1-flash-236b-a21b"
+    },
+    {
+      "changes": {
+        "license_url": {
+          "after": "https://huggingface.co/moonshotai/Kimi-K2.7-Code/blob/main/LICENSE",
+          "before": null
+        }
+      },
+      "name": "Kimi K2.7 Code",
+      "slug": "kimi-k2-7-code"
+    },
+    {
+      "changes": {
+        "active_parameters_b": {
+          "after": 104,
+          "before": null
+        },
+        "commercial_allowed": {
+          "after": false,
+          "before": null
+        },
+        "is_open_weights": {
+          "after": true,
+          "before": false
+        },
+        "license_name": {
+          "after": "Kimi K3 License",
+          "before": null
+        },
+        "license_url": {
+          "after": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
+          "before": null
+        },
+        "model_weights_source_url": {
+          "after": "https://huggingface.co/moonshotai/Kimi-K3",
+          "before": null
+        },
+        "open_source_categorization": {
+          "after": "commercial-license",
+          "before": "proprietary"
+        }
+      },
+      "name": "Kimi K3",
+      "slug": "kimi-k3"
+    },
+    {
+      "changes": {
+        "commercial_allowed": {
+          "after": true,
+          "before": null
+        },
+        "license_url": {
+          "after": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "before": null
+        }
+      },
+      "name": "MiniCPM5-1B (Reasoning)",
+      "slug": "minicpm5-1b"
+    },
+    {
+      "changes": {
+        "commercial_allowed": {
+          "after": true,
+          "before": null
+        },
+        "license_url": {
+          "after": "https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md",
+          "before": null
+        }
+      },
+      "name": "MiniCPM5-1B (Non-reasoning)",
+      "slug": "minicpm5-1b-non-reasoning"
+    },
+    {
+      "changes": {
+        "size_class": {
+          "after": "medium",
+          "before": "large"
+        }
+      },
+      "name": "Mistral Small (Feb '24)",
+      "slug": "mistral-small-2402"
+    }
+  ],
+  "counts": {
+    "added_models": 11,
+    "removed_models": 0,
+    "shared_models_with_architecture_changes": 15,
+    "shared_models_with_identity_changes": 0,
+    "shared_models_with_intelligence_index_changes": 12,
+    "shared_models_with_score_changes": 170
+  },
+  "current_snapshot": {
+    "path": "sources/aa_detailed_snapshot_2026-07-31.html.gz",
+    "uncompressed_sha256": "37d210b4cf66ea23cdc0f144352b123b4699833cbb9915ba23d68f30f142bb5b"
+  },
+  "fields_audited": {
+    "architecture": [
+      "is_reasoning",
+      "reasoning_tokens_setting",
+      "is_open_weights",
+      "open_source_categorization",
+      "parameters_b",
+      "active_parameters_b",
+      "size_class",
+      "context_window_tokens",
+      "model_weights_source_url",
+      "license_name",
+      "license_url",
+      "commercial_allowed"
+    ],
+    "identity": [
+      "model_id",
+      "slug",
+      "name",
+      "short_name",
+      "creator_id",
+      "creator_slug",
+      "creator_name",
+      "release_date"
+    ],
+    "scores": [
+      "intelligence_index",
+      "intelligence_index_estimated",
+      "coding_index",
+      "agentic_index",
+      "gdpval",
+      "gdpval_normalized",
+      "tau_banking",
+      "terminal_bench_v2_1",
+      "scicode",
+      "hle",
+      "gpqa",
+      "critpt",
+      "omniscience",
+      "omniscience_accuracy",
+      "omniscience_hallucination_rate",
+      "lcr",
+      "ifbench",
+      "apex_agents",
+      "automation_bench_partial_score",
+      "enterprise_ops_gym",
+      "mmmu_pro"
+    ]
+  },
+  "from_snapshot_date": "2026-07-18",
+  "identity_changes": [],
+  "inventory": {
+    "added_models": [
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Sapiens AI",
+        "intelligence_index": 38.78954684695,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Agnes 2.5 Pro Alpha",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-24",
+        "short_name": "Agnes 2.5 Pro Alpha",
+        "size_class": "medium",
+        "slug": "agnes-2-5-pro-alpha"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Anthropic",
+        "intelligence_index": 60.6918740157091,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-24",
+        "short_name": "Claude Opus 5 (max)",
+        "size_class": "large",
+        "slug": "claude-opus-5"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Anthropic",
+        "intelligence_index": 58.8641803200348,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-24",
+        "short_name": "Claude Opus 5 (high)",
+        "size_class": "large",
+        "slug": "claude-opus-5-high"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Anthropic",
+        "intelligence_index": 50.6136789545909,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-24",
+        "short_name": "Claude Opus 5 (low)",
+        "size_class": "large",
+        "slug": "claude-opus-5-low"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Anthropic",
+        "intelligence_index": 56.2806227158121,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-24",
+        "short_name": "Claude Opus 5 (medium)",
+        "size_class": "large",
+        "slug": "claude-opus-5-medium"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Anthropic",
+        "intelligence_index": 60.0681611916281,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-24",
+        "short_name": "Claude Opus 5 (xhigh)",
+        "size_class": "large",
+        "slug": "claude-opus-5-xhigh"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 131072,
+        "creator_name": "AI9Stars",
+        "intelligence_index": 16.0567992128263,
+        "intelligence_index_estimated": false,
+        "is_open_weights": true,
+        "is_reasoning": true,
+        "model_weights_source_url": "https://huggingface.co/ai9stars/G9v3-3B",
+        "name": "G9v3-3B",
+        "open_source_categorization": "permissive",
+        "parameters_b": 3,
+        "release_date": "2026-07-23",
+        "short_name": "G9v3-3B",
+        "size_class": "tiny",
+        "slug": "g9v3-3b"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Google",
+        "intelligence_index": 36.4776366072529,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Gemini 3.5 Flash-Lite",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-21",
+        "short_name": "Gemini 3.5 Flash-Lite",
+        "size_class": "medium",
+        "slug": "gemini-3-5-flash-lite"
+      },
+      {
+        "active_parameters_b": null,
+        "context_window_tokens": 1000000,
+        "creator_name": "Google",
+        "intelligence_index": 50.0675324362393,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Gemini 3.6 Flash (high)",
+        "open_source_categorization": "proprietary",
+        "parameters_b": null,
+        "release_date": "2026-07-21",
+        "short_name": "Gemini 3.6 Flash",
+        "size_class": "large",
+        "slug": "gemini-3-6-flash"
+      },
+      {
+        "active_parameters_b": 12,
+        "context_window_tokens": 262144,
+        "creator_name": "Thinking Machines",
+        "intelligence_index": 40.1676200611155,
+        "intelligence_index_estimated": false,
+        "is_open_weights": true,
+        "is_reasoning": true,
+        "model_weights_source_url": "https://huggingface.co/thinkingmachines/Inkling-Small",
+        "name": "Inkling Small",
+        "open_source_categorization": "permissive",
+        "parameters_b": 266,
+        "release_date": "2026-07-30",
+        "short_name": "Inkling Small",
+        "size_class": "large",
+        "slug": "inkling-small"
+      },
+      {
+        "active_parameters_b": 13,
+        "context_window_tokens": 262144,
+        "creator_name": "Motif Technologies",
+        "intelligence_index": 44.0803810396244,
+        "intelligence_index_estimated": false,
+        "is_open_weights": false,
+        "is_reasoning": true,
+        "model_weights_source_url": null,
+        "name": "Motif 3 (Beta)",
+        "open_source_categorization": "proprietary",
+        "parameters_b": 314,
+        "release_date": "2026-07-14",
+        "short_name": "Motif 3 (Beta)",
+        "size_class": "large",
+        "slug": "motif-0714"
+      }
+    ],
+    "added_slugs": [
+      "agnes-2-5-pro-alpha",
+      "claude-opus-5",
+      "claude-opus-5-high",
+      "claude-opus-5-low",
+      "claude-opus-5-medium",
+      "claude-opus-5-xhigh",
+      "g9v3-3b",
+      "gemini-3-5-flash-lite",
+      "gemini-3-6-flash",
+      "inkling-small",
+      "motif-0714"
+    ],
+    "current_models": 587,
+    "prior_models": 576,
+    "removed_slugs": [],
+    "shared_slugs": 576
+  },
+  "prior_snapshot": {
+    "gzip_bytes": 440174,
+    "gzip_sha256": "889c19d858d59bbbd8ef98baf1471fc185e9596009a1797ec830db0198259978",
+    "path": "sources/aa_detailed_snapshot_2026-07-18.html.gz",
+    "uncompressed_bytes": 3161619,
+    "uncompressed_sha256": "74a6410bb1571098fc50a22717b254d8b2c58ee2c6c14b9782c5873db5db749d"
+  },
+  "schema_version": "1.0",
+  "score_changes": [
+    {
+      "changes": {
+        "gdpval": {
+          "after": 456.15,
+          "before": 444.21
+        }
+      },
+      "name": "Claude 3.5 Haiku",
+      "slug": "claude-3-5-haiku"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 911.05,
+          "before": 906.61
+        },
+        "gdpval_normalized": {
+          "after": 0.20552499999999999,
+          "before": 0.203305
+        }
+      },
+      "name": "Claude 4.5 Haiku (Reasoning)",
+      "slug": "claude-4-5-haiku-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1052.29,
+          "before": 1052.46
+        },
+        "gdpval_normalized": {
+          "after": 0.276145,
+          "before": 0.27623000000000003
+        }
+      },
+      "name": "Claude 4.5 Sonnet (Reasoning)",
+      "slug": "claude-4-5-sonnet-thinking"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 871.24,
+          "before": 860.55
+        },
+        "gdpval_normalized": {
+          "after": 0.18562,
+          "before": 0.180275
+        }
+      },
+      "name": "Claude 4 Sonnet (Reasoning)",
+      "slug": "claude-4-sonnet-thinking"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1746.96,
+          "before": 1759.6
+        },
+        "gdpval_normalized": {
+          "after": 0.62348,
+          "before": 0.6297999999999999
+        }
+      },
+      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+      "slug": "claude-fable-5"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1493.13,
+          "before": 1499.64
+        },
+        "gdpval_normalized": {
+          "after": 0.49656500000000003,
+          "before": 0.49982000000000004
+        }
+      },
+      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-opus-4-7"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1593.07,
+          "before": 1600.12
+        },
+        "gdpval_normalized": {
+          "after": 0.546535,
+          "before": 0.55006
+        }
+      },
+      "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-opus-4-8"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1377.35,
+          "before": 1377.16
+        },
+        "gdpval_normalized": {
+          "after": 0.438675,
+          "before": 0.43858
+        }
+      },
+      "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-sonnet-4-6-adaptive"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1601.22,
+          "before": 1606.72
+        },
+        "gdpval_normalized": {
+          "after": 0.55061,
+          "before": 0.55336
+        }
+      },
+      "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-sonnet-5"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1399.67,
+          "before": 1403.2
+        },
+        "gdpval_normalized": {
+          "after": 0.44983500000000004,
+          "before": 0.4516
+        }
+      },
+      "name": "Claude Sonnet 5 (Adaptive Reasoning, High Effort)",
+      "slug": "claude-sonnet-5-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1214.07,
+          "before": 1217.42
+        },
+        "gdpval_normalized": {
+          "after": 0.357035,
+          "before": 0.35871000000000003
+        }
+      },
+      "name": "Claude Sonnet 5 (Adaptive Reasoning, Low Effort)",
+      "slug": "claude-sonnet-5-low"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1302.06,
+          "before": 1303.82
+        },
+        "gdpval_normalized": {
+          "after": 0.40103,
+          "before": 0.40191
+        }
+      },
+      "name": "Claude Sonnet 5 (Adaptive Reasoning, Medium Effort)",
+      "slug": "claude-sonnet-5-medium"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1368.87,
+          "before": 1371.85
+        },
+        "gdpval_normalized": {
+          "after": 0.43443499999999996,
+          "before": 0.43592499999999995
+        }
+      },
+      "name": "Claude Sonnet 5 (Non-reasoning, High Effort)",
+      "slug": "claude-sonnet-5-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1507.52,
+          "before": 1510.96
+        },
+        "gdpval_normalized": {
+          "after": 0.50376,
+          "before": 0.50548
+        }
+      },
+      "name": "Claude Sonnet 5 (Adaptive Reasoning, Xhigh Effort)",
+      "slug": "claude-sonnet-5-xhigh"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 717.7,
+          "before": 714.2
+        },
+        "gdpval_normalized": {
+          "after": 0.10885000000000002,
+          "before": 0.10710000000000003
+        }
+      },
+      "name": "Command A+",
+      "slug": "command-a-plus"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 533.03,
+          "before": 525.05
+        },
+        "gdpval_normalized": {
+          "after": 0.016514999999999988,
+          "before": 0.012524999999999977
+        }
+      },
+      "name": "DeepSeek R1 (Jan '25)",
+      "slug": "deepseek-r1-0120"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 231.14,
+          "before": 217.09
+        }
+      },
+      "name": "DeepSeek V3 (Dec '24)",
+      "slug": "deepseek-v3"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 326.25,
+          "before": 314.48
+        }
+      },
+      "name": "DeepSeek V3 0324",
+      "slug": "deepseek-v3-0324"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 882.88,
+          "before": 889.28
+        },
+        "gdpval_normalized": {
+          "after": 0.19144,
+          "before": 0.19463999999999998
+        }
+      },
+      "name": "DeepSeek V3.1 Terminus (Reasoning)",
+      "slug": "deepseek-v3-1-terminus-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 870.75,
+          "before": 865.48
+        },
+        "gdpval_normalized": {
+          "after": 0.185375,
+          "before": 0.18274
+        }
+      },
+      "name": "DeepSeek V3.2 (Reasoning)",
+      "slug": "deepseek-v3-2-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1189.09,
+          "before": 1188.54
+        },
+        "gdpval_normalized": {
+          "after": 0.34454499999999993,
+          "before": 0.34426999999999996
+        }
+      },
+      "name": "DeepSeek V4 Flash (Reasoning, Max Effort)",
+      "slug": "deepseek-v4-flash"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 28.1672714776632,
+          "before": null
+        },
+        "coding_index": {
+          "after": 51.9571889305036,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1147.34,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0.32366999999999996,
+          "before": null
+        },
+        "intelligence_index": {
+          "after": 37.4635185646889,
+          "before": 37.3635717440648
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.197938144329897,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.569288389513109,
+          "before": null
+        }
+      },
+      "name": "DeepSeek V4 Flash (Reasoning, High Effort)",
+      "slug": "deepseek-v4-flash-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1305.9,
+          "before": 1307.21
+        },
+        "gdpval_normalized": {
+          "after": 0.40295000000000003,
+          "before": 0.403605
+        }
+      },
+      "name": "DeepSeek V4 Pro (Reasoning, Max Effort)",
+      "slug": "deepseek-v4-pro"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 34.4324467353952,
+          "before": null
+        },
+        "coding_index": {
+          "after": 58.6666840061035,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1299.39,
+          "before": 1295.86
+        },
+        "gdpval_normalized": {
+          "after": 0.399695,
+          "before": 0.39792999999999995
+        },
+        "intelligence_index": {
+          "after": 43.1117111950581,
+          "before": 40.8255694978728
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.237113402061856,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.647940074906367,
+          "before": null
+        }
+      },
+      "name": "DeepSeek V4 Pro (Reasoning, High Effort)",
+      "slug": "deepseek-v4-pro-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 745.06,
+          "before": 739.05
+        },
+        "gdpval_normalized": {
+          "after": 0.12252999999999997,
+          "before": 0.11952499999999998
+        }
+      },
+      "name": "Devstral 2",
+      "slug": "devstral-2"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 733.52,
+          "before": 728.83
+        },
+        "gdpval_normalized": {
+          "after": 0.11675999999999999,
+          "before": 0.11441500000000002
+        }
+      },
+      "name": "Devstral Small 2",
+      "slug": "devstral-small-2"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 554.45,
+          "before": 547.26
+        },
+        "gdpval_normalized": {
+          "after": 0.027225000000000023,
+          "before": 0.023629999999999995
+        }
+      },
+      "name": "DiffusionGemma 26B A4B",
+      "slug": "diffusiongemma-26b-a4b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 9.72634020618557,
+          "before": null
+        },
+        "coding_index": {
+          "after": 23.5686294909142,
+          "before": null
+        },
+        "gdpval": {
+          "after": 680.45,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0.09022500000000003,
+          "before": null
+        },
+        "intelligence_index": {
+          "after": 20.221750309869,
+          "before": 22.9629246520667
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.111340206185567,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.213483146067416,
+          "before": null
+        }
+      },
+      "name": "EXAONE 4.5 33B",
+      "slug": "exaone-4-5-33b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 671.7,
+          "before": 665.39
+        },
+        "gdpval_normalized": {
+          "after": 0.08585000000000002,
+          "before": 0.08269499999999999
+        }
+      },
+      "name": "Gemini 2.5 Pro",
+      "slug": "gemini-2-5-pro"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 647.47,
+          "before": 641.57
+        },
+        "gdpval_normalized": {
+          "after": 0.07373500000000001,
+          "before": 0.07078500000000003
+        }
+      },
+      "name": "Gemini 3.1 Flash-Lite",
+      "slug": "gemini-3-1-flash-lite-preview"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 964.72,
+          "before": 964.51
+        },
+        "gdpval_normalized": {
+          "after": 0.23236,
+          "before": 0.232255
+        }
+      },
+      "name": "Gemini 3.1 Pro Preview",
+      "slug": "gemini-3-1-pro-preview"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1344.27,
+          "before": 1348.84
+        },
+        "gdpval_normalized": {
+          "after": 0.422135,
+          "before": 0.42441999999999996
+        }
+      },
+      "name": "Gemini 3.5 Flash (high)",
+      "slug": "gemini-3-5-flash"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -118.79,
+          "before": -143.64
+        }
+      },
+      "name": "Gemma 3 12B Instruct",
+      "slug": "gemma-3-12b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -118.97,
+          "before": -144.46
+        }
+      },
+      "name": "Gemma 3 27B Instruct",
+      "slug": "gemma-3-27b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 7.93026460481099,
+          "before": null
+        },
+        "coding_index": {
+          "after": 30.9586974615065,
+          "before": null
+        },
+        "gdpval": {
+          "after": 651.09,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0.07554500000000001,
+          "before": null
+        },
+        "intelligence_index": {
+          "after": 21.8120350469213,
+          "before": 22.0029923863585
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.0865979381443299,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.273408239700375,
+          "before": null
+        }
+      },
+      "name": "Gemma 4 12B (Reasoning)",
+      "slug": "gemma-4-12b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 770.25,
+          "before": 761.33
+        },
+        "gdpval_normalized": {
+          "after": 0.135125,
+          "before": 0.13066500000000003
+        }
+      },
+      "name": "Gemma 4 26B A4B (Reasoning)",
+      "slug": "gemma-4-26b-a4b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 810.66,
+          "before": 804.03
+        },
+        "gdpval_normalized": {
+          "after": 0.15533,
+          "before": 0.15201499999999998
+        }
+      },
+      "name": "Gemma 4 31B (Reasoning)",
+      "slug": "gemma-4-31b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 753.55,
+          "before": 744.22
+        },
+        "gdpval_normalized": {
+          "after": 0.12677499999999997,
+          "before": 0.12211000000000001
+        }
+      },
+      "name": "Gemma 4 31B (Non-reasoning)",
+      "slug": "gemma-4-31b-non-reasoning"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 1.51202749140893,
+          "before": null
+        },
+        "coding_index": {
+          "after": 7.23271258149535,
+          "before": null
+        },
+        "gdpval": {
+          "after": 87.4,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0,
+          "before": null
+        },
+        "intelligence_index": {
+          "after": 9.6638013311931,
+          "before": 9.25681921827956
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.045360824742268,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.00374531835205993,
+          "before": null
+        }
+      },
+      "name": "Gemma 4 E2B (Reasoning)",
+      "slug": "gemma-4-e2b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 1.78694158075601,
+          "before": null
+        },
+        "coding_index": {
+          "after": 9.38887154945207,
+          "before": null
+        },
+        "gdpval": {
+          "after": 229.61,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0,
+          "before": null
+        },
+        "intelligence_index": {
+          "after": 12.2105753460896,
+          "before": 12.4961182083238
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.0536082474226804,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.0187265917602996,
+          "before": null
+        }
+      },
+      "name": "Gemma 4 E4B (Reasoning)",
+      "slug": "gemma-4-e4b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 930.48,
+          "before": 933.57
+        },
+        "gdpval_normalized": {
+          "after": 0.21524000000000001,
+          "before": 0.21678500000000003
+        }
+      },
+      "name": "GLM-4.6 (Reasoning)",
+      "slug": "glm-4-6-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1165.69,
+          "before": 1165.3
+        },
+        "gdpval_normalized": {
+          "after": 0.332845,
+          "before": 0.33265
+        }
+      },
+      "name": "GLM-4.7 (Reasoning)",
+      "slug": "glm-4-7"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1256.06,
+          "before": 1256.68
+        },
+        "gdpval_normalized": {
+          "after": 0.37803,
+          "before": 0.37834
+        }
+      },
+      "name": "GLM-5.1 (Reasoning)",
+      "slug": "glm-5-1"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1509.95,
+          "before": 1513.89
+        },
+        "gdpval_normalized": {
+          "after": 0.5049750000000001,
+          "before": 0.5069450000000001
+        }
+      },
+      "name": "GLM-5.2 (max)",
+      "slug": "glm-5-2"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1387.58,
+          "before": 1387.57
+        },
+        "gdpval_normalized": {
+          "after": 0.44378999999999996,
+          "before": 0.443785
+        }
+      },
+      "name": "GLM-5.2 (Non-reasoning)",
+      "slug": "glm-5-2-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 239.74,
+          "before": 221.49
+        }
+      },
+      "name": "GPT-4",
+      "slug": "gpt-4"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 507.78,
+          "before": 502.92
+        },
+        "gdpval_normalized": {
+          "after": 0.0038899999999999864,
+          "before": 0.001460000000000008
+        }
+      },
+      "name": "GPT-4.1 mini",
+      "slug": "gpt-4-1-mini"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 63.19,
+          "before": 41.4
+        }
+      },
+      "name": "GPT-4.1 nano",
+      "slug": "gpt-4-1-nano"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 241.03,
+          "before": 225.67
+        }
+      },
+      "name": "GPT-4o mini",
+      "slug": "gpt-4o-mini"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1078.97,
+          "before": 1074.8
+        },
+        "gdpval_normalized": {
+          "after": 0.289485,
+          "before": 0.2874
+        }
+      },
+      "name": "GPT-5 (high)",
+      "slug": "gpt-5"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 987.86,
+          "before": 987.45
+        },
+        "gdpval_normalized": {
+          "after": 0.24393,
+          "before": 0.24372500000000002
+        }
+      },
+      "name": "GPT-5.1 (high)",
+      "slug": "gpt-5-1"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1392.29,
+          "before": 1394.68
+        },
+        "gdpval_normalized": {
+          "after": 0.44614499999999996,
+          "before": 0.44734
+        }
+      },
+      "name": "GPT-5.4 (xhigh)",
+      "slug": "gpt-5-4"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1169.62,
+          "before": 1170.8
+        },
+        "gdpval_normalized": {
+          "after": 0.33480999999999994,
+          "before": 0.3354
+        }
+      },
+      "name": "GPT-5.4 mini (xhigh)",
+      "slug": "gpt-5-4-mini"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 787.5,
+          "before": 784.31
+        },
+        "gdpval_normalized": {
+          "after": 0.14375,
+          "before": 0.14215499999999998
+        }
+      },
+      "name": "GPT-5.4 mini (Non-Reasoning)",
+      "slug": "gpt-5-4-mini-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1101.03,
+          "before": 1099.89
+        },
+        "gdpval_normalized": {
+          "after": 0.300515,
+          "before": 0.2999450000000001
+        }
+      },
+      "name": "GPT-5.4 nano (xhigh)",
+      "slug": "gpt-5-4-nano"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1491.08,
+          "before": 1493.18
+        },
+        "gdpval_normalized": {
+          "after": 0.49554,
+          "before": 0.49659000000000003
+        }
+      },
+      "name": "GPT-5.5 (xhigh)",
+      "slug": "gpt-5-5"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1467.2,
+          "before": 1471.02
+        },
+        "gdpval_normalized": {
+          "after": 0.48360000000000003,
+          "before": 0.48551
+        }
+      },
+      "name": "GPT-5.5 (high)",
+      "slug": "gpt-5-5-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 721.65,
+          "before": 718.56
+        },
+        "gdpval_normalized": {
+          "after": 0.11082499999999999,
+          "before": 0.10927999999999997
+        }
+      },
+      "name": "GPT-5.5 Instant (June 2026)",
+      "slug": "gpt-5-5-instant-06-26"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1186.91,
+          "before": 1190.84
+        },
+        "gdpval_normalized": {
+          "after": 0.34345500000000007,
+          "before": 0.34541999999999995
+        }
+      },
+      "name": "GPT-5.5 (low)",
+      "slug": "gpt-5-5-low"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1372.92,
+          "before": 1374.63
+        },
+        "gdpval_normalized": {
+          "after": 0.43646,
+          "before": 0.43731500000000006
+        }
+      },
+      "name": "GPT-5.5 (medium)",
+      "slug": "gpt-5-5-medium"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1122.59,
+          "before": 1118.97
+        },
+        "gdpval_normalized": {
+          "after": 0.31129499999999993,
+          "before": 0.309485
+        }
+      },
+      "name": "GPT-5.5 (Non-reasoning)",
+      "slug": "gpt-5-5-non-reasoning"
+    },
+    {
+      "changes": {
+        "apex_agents": {
+          "after": 0.358407079646018,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1581.94,
+          "before": 1591.81
+        },
+        "gdpval_normalized": {
+          "after": 0.5409700000000001,
+          "before": 0.545905
+        }
+      },
+      "name": "GPT-5.6 Luna (max)",
+      "slug": "gpt-5-6-luna"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1467.43,
+          "before": 1472.36
+        },
+        "gdpval_normalized": {
+          "after": 0.483715,
+          "before": 0.48617999999999995
+        }
+      },
+      "name": "GPT-5.6 Luna (high)",
+      "slug": "gpt-5-6-luna-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1154.11,
+          "before": 1145.68
+        },
+        "gdpval_normalized": {
+          "after": 0.32705499999999993,
+          "before": 0.32284
+        }
+      },
+      "name": "GPT-5.6 Luna (low)",
+      "slug": "gpt-5-6-luna-low"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1275.26,
+          "before": 1272.37
+        },
+        "gdpval_normalized": {
+          "after": 0.38763,
+          "before": 0.38618499999999994
+        }
+      },
+      "name": "GPT-5.6 Luna (medium)",
+      "slug": "gpt-5-6-luna-medium"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1072.63,
+          "before": 1068.16
+        },
+        "gdpval_normalized": {
+          "after": 0.28631500000000004,
+          "before": 0.28408000000000005
+        }
+      },
+      "name": "GPT-5.6 Luna (Non-reasoning)",
+      "slug": "gpt-5-6-luna-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1529.73,
+          "before": 1539.11
+        },
+        "gdpval_normalized": {
+          "after": 0.514865,
+          "before": 0.519555
+        }
+      },
+      "name": "GPT-5.6 Luna (xhigh)",
+      "slug": "gpt-5-6-luna-xhigh"
+    },
+    {
+      "changes": {
+        "enterprise_ops_gym": {
+          "after": 0.42912563413906296,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1736.07,
+          "before": 1742.61
+        },
+        "gdpval_normalized": {
+          "after": 0.618035,
+          "before": 0.621305
+        }
+      },
+      "name": "GPT-5.6 Sol (max)",
+      "slug": "gpt-5-6-sol"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1625.91,
+          "before": 1630.29
+        },
+        "gdpval_normalized": {
+          "after": 0.5629550000000001,
+          "before": 0.565145
+        }
+      },
+      "name": "GPT-5.6 Sol (high)",
+      "slug": "gpt-5-6-sol-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1443.2,
+          "before": 1444.68
+        },
+        "gdpval_normalized": {
+          "after": 0.4716,
+          "before": 0.47234000000000004
+        }
+      },
+      "name": "GPT-5.6 Sol (low)",
+      "slug": "gpt-5-6-sol-low"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1555.06,
+          "before": 1561.65
+        },
+        "gdpval_normalized": {
+          "after": 0.5275299999999999,
+          "before": 0.530825
+        }
+      },
+      "name": "GPT-5.6 Sol (medium)",
+      "slug": "gpt-5-6-sol-medium"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1375.59,
+          "before": 1383.93
+        },
+        "gdpval_normalized": {
+          "after": 0.43779499999999993,
+          "before": 0.44196500000000005
+        }
+      },
+      "name": "GPT-5.6 Sol (Non-reasoning)",
+      "slug": "gpt-5-6-sol-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1689.5,
+          "before": 1702.21
+        },
+        "gdpval_normalized": {
+          "after": 0.59475,
+          "before": 0.601105
+        }
+      },
+      "name": "GPT-5.6 Sol (xhigh)",
+      "slug": "gpt-5-6-sol-xhigh"
+    },
+    {
+      "changes": {
+        "apex_agents": {
+          "after": 0.389380530973451,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1582.7,
+          "before": 1592.95
+        },
+        "gdpval_normalized": {
+          "after": 0.54135,
+          "before": 0.546475
+        }
+      },
+      "name": "GPT-5.6 Terra (max)",
+      "slug": "gpt-5-6-terra"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1509.82,
+          "before": 1512.84
+        },
+        "gdpval_normalized": {
+          "after": 0.50491,
+          "before": 0.50642
+        }
+      },
+      "name": "GPT-5.6 Terra (high)",
+      "slug": "gpt-5-6-terra-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1253.23,
+          "before": 1248.54
+        },
+        "gdpval_normalized": {
+          "after": 0.37661500000000003,
+          "before": 0.37427
+        }
+      },
+      "name": "GPT-5.6 Terra (low)",
+      "slug": "gpt-5-6-terra-low"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1402.75,
+          "before": 1404.45
+        },
+        "gdpval_normalized": {
+          "after": 0.451375,
+          "before": 0.45222500000000004
+        }
+      },
+      "name": "GPT-5.6 Terra (medium)",
+      "slug": "gpt-5-6-terra-medium"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1242.59,
+          "before": 1238.72
+        },
+        "gdpval_normalized": {
+          "after": 0.371295,
+          "before": 0.36936
+        }
+      },
+      "name": "GPT-5.6 Terra (Non-reasoning)",
+      "slug": "gpt-5-6-terra-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1573.23,
+          "before": 1571.97
+        },
+        "gdpval_normalized": {
+          "after": 0.5366150000000001,
+          "before": 0.535985
+        }
+      },
+      "name": "GPT-5.6 Terra (xhigh)",
+      "slug": "gpt-5-6-terra-xhigh"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 932.12,
+          "before": 936.71
+        },
+        "gdpval_normalized": {
+          "after": 0.21606,
+          "before": 0.21835500000000002
+        }
+      },
+      "name": "GPT-5 mini (high)",
+      "slug": "gpt-5-mini"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 801.68,
+          "before": 799.33
+        },
+        "gdpval_normalized": {
+          "after": 0.15083999999999997,
+          "before": 0.14966500000000002
+        }
+      },
+      "name": "gpt-oss-120b (high)",
+      "slug": "gpt-oss-120b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 410.01,
+          "before": 396.55
+        }
+      },
+      "name": "gpt-oss-120b (low)",
+      "slug": "gpt-oss-120b-low"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 567.21,
+          "before": 559.03
+        },
+        "gdpval_normalized": {
+          "after": 0.03360500000000002,
+          "before": 0.029514999999999986
+        }
+      },
+      "name": "gpt-oss-20b (high)",
+      "slug": "gpt-oss-20b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 433.02,
+          "before": 422.01
+        }
+      },
+      "name": "Granite 4.1 30B",
+      "slug": "granite-4-1-30b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 126.74,
+          "before": 103.94
+        }
+      },
+      "name": "Granite 4.1 3B",
+      "slug": "granite-4-1-3b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1084.48,
+          "before": 1084.9
+        },
+        "gdpval_normalized": {
+          "after": 0.29224,
+          "before": 0.29245000000000004
+        }
+      },
+      "name": "Grok 4.3 (high)",
+      "slug": "grok-4-3"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1097.65,
+          "before": 1095.96
+        },
+        "gdpval_normalized": {
+          "after": 0.29882500000000006,
+          "before": 0.29798
+        }
+      },
+      "name": "Grok 4.3 (Non-reasoning)",
+      "slug": "grok-4-3-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1527.88,
+          "before": 1534.63
+        },
+        "gdpval_normalized": {
+          "after": 0.5139400000000001,
+          "before": 0.5173150000000001
+        }
+      },
+      "name": "Grok 4.5 (high)",
+      "slug": "grok-4-5"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1213.62,
+          "before": 1211.39
+        },
+        "gdpval_normalized": {
+          "after": 0.35680999999999996,
+          "before": 0.35569500000000004
+        }
+      },
+      "name": "Grok Build 0.1 0616",
+      "slug": "grok-build-0-1-06-16"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1215.3,
+          "before": 1213.87
+        },
+        "gdpval_normalized": {
+          "after": 0.35764999999999997,
+          "before": 0.35693499999999995
+        }
+      },
+      "name": "Hy3",
+      "slug": "hy3"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 661.93,
+          "before": 653.65
+        },
+        "gdpval_normalized": {
+          "after": 0.08096499999999998,
+          "before": 0.07682499999999999
+        }
+      },
+      "name": "HyperNova 60B 2605",
+      "slug": "hypernova-60b"
+    },
+    {
+      "changes": {
+        "enterprise_ops_gym": {
+          "after": 0.38108027454491195,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1236.75,
+          "before": 1238.85
+        },
+        "gdpval_normalized": {
+          "after": 0.368375,
+          "before": 0.36942499999999995
+        }
+      },
+      "name": "Inkling (xhigh)",
+      "slug": "inkling"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1265.61,
+          "before": 1264.54
+        },
+        "gdpval_normalized": {
+          "after": 0.38280499999999995,
+          "before": 0.38227
+        }
+      },
+      "name": "JT-4.1 Flash 236B A21B",
+      "slug": "jt-4-1-flash-236b-a21b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 8.00460137457043,
+          "before": null
+        },
+        "coding_index": {
+          "after": 32.1074351505063,
+          "before": null
+        },
+        "gdpval": {
+          "after": 598.27,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0.04913499999999999,
+          "before": null
+        },
+        "intelligence_index": {
+          "after": 22.1029351957245,
+          "before": 24.6957602344937
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.142268041237113,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.303370786516854,
+          "before": null
+        }
+      },
+      "name": "K-EXAONE (Reasoning)",
+      "slug": "k-exaone"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 380.77,
+          "before": 369.86
+        }
+      },
+      "name": "K2 Think V2",
+      "slug": "k2-think-v2"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 901.26,
+          "before": 898.59
+        },
+        "gdpval_normalized": {
+          "after": 0.20063,
+          "before": 0.19929500000000003
+        }
+      },
+      "name": "KAT-Coder-Pro V1",
+      "slug": "kat-coder-pro-v1"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 905.99,
+          "before": 908.18
+        },
+        "gdpval_normalized": {
+          "after": 0.202995,
+          "before": 0.20408999999999997
+        }
+      },
+      "name": "KAT Coder Pro V2",
+      "slug": "kat-coder-pro-v2"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1002.64,
+          "before": 1008.53
+        },
+        "gdpval_normalized": {
+          "after": 0.25132,
+          "before": 0.25426499999999996
+        }
+      },
+      "name": "Kimi K2.5 (Reasoning)",
+      "slug": "kimi-k2-5"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1188.33,
+          "before": 1189.4
+        },
+        "gdpval_normalized": {
+          "after": 0.34416499999999994,
+          "before": 0.34470000000000006
+        }
+      },
+      "name": "Kimi K2.6",
+      "slug": "kimi-k2-6"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1185.77,
+          "before": 1186.79
+        },
+        "gdpval_normalized": {
+          "after": 0.342885,
+          "before": 0.343395
+        }
+      },
+      "name": "Kimi K2.7 Code",
+      "slug": "kimi-k2-7-code"
+    },
+    {
+      "changes": {
+        "apex_agents": {
+          "after": 0.412979351032448,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1687.43,
+          "before": 1684.56
+        },
+        "gdpval_normalized": {
+          "after": 0.593715,
+          "before": 0.5922799999999999
+        }
+      },
+      "name": "Kimi K3",
+      "slug": "kimi-k3"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 550.45,
+          "before": 544.69
+        },
+        "gdpval_normalized": {
+          "after": 0.02522500000000002,
+          "before": 0.022345000000000028
+        }
+      },
+      "name": "Ling 2.6 Flash",
+      "slug": "ling-2-6-flash"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -99.45,
+          "before": -123.73
+        }
+      },
+      "name": "Llama 3.1 Instruct 8B",
+      "slug": "llama-3-1-instruct-8b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 98.59,
+          "before": 79.94
+        }
+      },
+      "name": "Llama 3.3 Instruct 70B",
+      "slug": "llama-3-3-instruct-70b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 6.64,
+          "before": -16.15
+        }
+      },
+      "name": "Llama 4 Maverick",
+      "slug": "llama-4-maverick"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 110.85,
+          "before": 89.68
+        }
+      },
+      "name": "Llama 4 Scout",
+      "slug": "llama-4-scout"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1026.51,
+          "before": 1021.84
+        },
+        "gdpval_normalized": {
+          "after": 0.263255,
+          "before": 0.26092000000000004
+        }
+      },
+      "name": "LongCat 2.0",
+      "slug": "longcat-2-0"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 414.47,
+          "before": 402.93
+        }
+      },
+      "name": "Magistral Medium 1.2",
+      "slug": "magistral-medium-2509"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 261.97,
+          "before": 248.36
+        }
+      },
+      "name": "Magistral Small 1.2",
+      "slug": "magistral-small-2509"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 9.59530240549828,
+          "before": null
+        },
+        "coding_index": {
+          "after": 31.1130184491608,
+          "before": null
+        },
+        "gdpval": {
+          "after": 697.86,
+          "before": 688.89
+        },
+        "gdpval_normalized": {
+          "after": 0.09893,
+          "before": 0.09444499999999999
+        },
+        "intelligence_index": {
+          "after": 21.4317661144057,
+          "before": 25.3349311948891
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.0989690721649484,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.273408239700375,
+          "before": null
+        }
+      },
+      "name": "Mercury 2",
+      "slug": "mercury-2"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1144.67,
+          "before": 1145.01
+        },
+        "gdpval_normalized": {
+          "after": 0.32233500000000004,
+          "before": 0.322505
+        }
+      },
+      "name": "MiMo-V2.5",
+      "slug": "mimo-v2-5-0424"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1265.06,
+          "before": 1265.4
+        },
+        "gdpval_normalized": {
+          "after": 0.38253,
+          "before": 0.38270000000000004
+        }
+      },
+      "name": "MiMo-V2.5-Pro",
+      "slug": "mimo-v2-5-pro"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 838.16,
+          "before": 833.05
+        },
+        "gdpval_normalized": {
+          "after": 0.16907999999999998,
+          "before": 0.16652499999999998
+        }
+      },
+      "name": "MiMo-V2-Flash (Non-reasoning)",
+      "slug": "mimo-v2-flash"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -83.19,
+          "before": -108.35
+        }
+      },
+      "name": "MiniCPM-V 4.6 1.3B",
+      "slug": "minicpm-v4-6-1-3b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1158.46,
+          "before": 1157.91
+        },
+        "gdpval_normalized": {
+          "after": 0.32923,
+          "before": 0.32895500000000005
+        }
+      },
+      "name": "MiniMax-M2.7",
+      "slug": "minimax-m2-7"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1390.84,
+          "before": 1394.83
+        },
+        "gdpval_normalized": {
+          "after": 0.44542,
+          "before": 0.44741499999999995
+        }
+      },
+      "name": "MiniMax-M3",
+      "slug": "minimax-m3"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 486.95,
+          "before": 475.86
+        }
+      },
+      "name": "Ministral 3 14B",
+      "slug": "ministral-3-14b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 285,
+          "before": 272.8
+        }
+      },
+      "name": "Ministral 3 3B",
+      "slug": "ministral-3-3b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 456.19,
+          "before": 448.72
+        }
+      },
+      "name": "Ministral 3 8B",
+      "slug": "ministral-3-8b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 639.98,
+          "before": 632.51
+        },
+        "gdpval_normalized": {
+          "after": 0.06999000000000001,
+          "before": 0.066255
+        }
+      },
+      "name": "Mistral Large 3",
+      "slug": "mistral-large-3"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 609.06,
+          "before": 599.25
+        },
+        "gdpval_normalized": {
+          "after": 0.054529999999999974,
+          "before": 0.049625
+        }
+      },
+      "name": "Mistral Medium 3.1",
+      "slug": "mistral-medium-3-1"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 931.97,
+          "before": 928.95
+        },
+        "gdpval_normalized": {
+          "after": 0.215985,
+          "before": 0.21447500000000003
+        }
+      },
+      "name": "Mistral Medium 3.5",
+      "slug": "mistral-medium-3-5"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 602.12,
+          "before": 590.15
+        },
+        "gdpval_normalized": {
+          "after": 0.05106,
+          "before": 0.04507499999999999
+        }
+      },
+      "name": "Mistral Small 3.1",
+      "slug": "mistral-small-3-1"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 79.1,
+          "before": 57.17
+        }
+      },
+      "name": "Mistral Small 3.2",
+      "slug": "mistral-small-3-2"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 591.44,
+          "before": 587.99
+        },
+        "gdpval_normalized": {
+          "after": 0.045720000000000025,
+          "before": 0.043995000000000006
+        }
+      },
+      "name": "Mistral Small 4 (Reasoning)",
+      "slug": "mistral-small-4"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1143.48,
+          "before": 1143.69
+        },
+        "gdpval_normalized": {
+          "after": 0.32174,
+          "before": 0.32184500000000005
+        }
+      },
+      "name": "Muse Spark",
+      "slug": "muse-spark"
+    },
+    {
+      "changes": {
+        "enterprise_ops_gym": {
+          "after": 0.4723962996120561,
+          "before": null
+        },
+        "gdpval": {
+          "after": 1375.06,
+          "before": 1374.33
+        },
+        "gdpval_normalized": {
+          "after": 0.43753,
+          "before": 0.43716499999999997
+        }
+      },
+      "name": "Muse Spark 1.1 (xhigh)",
+      "slug": "muse-spark-1-1"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -113.92,
+          "before": -141.11
+        }
+      },
+      "name": "Nanbeige4.1-3B",
+      "slug": "nanbeige4-1-3b"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": 13.7536412817312,
+          "before": null
+        },
+        "gdpval": {
+          "after": 464.98,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.0674157303370786,
+          "before": null
+        }
+      },
+      "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+      "slug": "nemotron-3-nano-omni-30b-a3b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 3.66903092783507,
+          "before": null
+        },
+        "coding_index": {
+          "after": 25.3454882785407,
+          "before": null
+        },
+        "gdpval": {
+          "after": 507.52,
+          "before": null
+        },
+        "gdpval_normalized": {
+          "after": 0.0037599999999999908,
+          "before": null
+        },
+        "intelligence_index": {
+          "after": 17.5765685050907,
+          "before": 21.2524365404356
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.101030927835052,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.205992509363296,
+          "before": null
+        }
+      },
+      "name": "Nemotron Cascade 2 30B A3B",
+      "slug": "nemotron-cascade-2-30b-a3b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1250.29,
+          "before": 1256.87
+        },
+        "gdpval_normalized": {
+          "after": 0.375145,
+          "before": 0.37843499999999997
+        }
+      },
+      "name": "Nex-N2-Pro",
+      "slug": "nex-n2-pro"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 540.14,
+          "before": 533.97
+        },
+        "gdpval_normalized": {
+          "after": 0.020069999999999994,
+          "before": 0.016985000000000014
+        }
+      },
+      "name": "North Mini Code",
+      "slug": "north-mini-code"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 592.16,
+          "before": 585.55
+        },
+        "gdpval_normalized": {
+          "after": 0.04607999999999998,
+          "before": 0.04277499999999998
+        }
+      },
+      "name": "Nova 2.0 Lite (high)",
+      "slug": "nova-2-0-lite-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 562.18,
+          "before": 554.73
+        },
+        "gdpval_normalized": {
+          "after": 0.031089999999999975,
+          "before": 0.027365000000000007
+        }
+      },
+      "name": "Nova 2.0 Pro Preview (Non-reasoning)",
+      "slug": "nova-2-0-pro"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 655.53,
+          "before": 645.19
+        },
+        "gdpval_normalized": {
+          "after": 0.07776499999999999,
+          "before": 0.07259500000000002
+        }
+      },
+      "name": "Nova 2.0 Pro Preview (low)",
+      "slug": "nova-2-0-pro-reasoning-low"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 681.23,
+          "before": 676.22
+        },
+        "gdpval_normalized": {
+          "after": 0.09061500000000001,
+          "before": 0.08811000000000001
+        }
+      },
+      "name": "Nova 2.0 Pro Preview (medium)",
+      "slug": "nova-2-0-pro-reasoning-medium"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -69.58,
+          "before": -94.34
+        }
+      },
+      "name": "NVIDIA Nemotron 3 Nano 30B A3B (Non-reasoning)",
+      "slug": "nvidia-nemotron-3-nano-30b-a3b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 491.64,
+          "before": 483.84
+        }
+      },
+      "name": "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
+      "slug": "nvidia-nemotron-3-nano-30b-a3b-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 204.03,
+          "before": 192.39
+        }
+      },
+      "name": "NVIDIA Nemotron 3 Nano 4B",
+      "slug": "nvidia-nemotron-3-nano-4b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 698.62,
+          "before": 693.25
+        },
+        "gdpval_normalized": {
+          "after": 0.09931,
+          "before": 0.096625
+        }
+      },
+      "name": "NVIDIA Nemotron 3 Super 120B A12B (Reasoning)",
+      "slug": "nvidia-nemotron-3-super-120b-a12b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1161.96,
+          "before": 1163.8
+        },
+        "gdpval_normalized": {
+          "after": 0.33098,
+          "before": 0.3319
+        }
+      },
+      "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+      "slug": "nvidia-nemotron-3-ultra-550b-a55b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 473.88,
+          "before": 468.11
+        }
+      },
+      "name": "o3-mini (high)",
+      "slug": "o3-mini-high"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -119.74,
+          "before": -145.05
+        }
+      },
+      "name": "Phi-4 Mini Instruct",
+      "slug": "phi-4-mini"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 235.19,
+          "before": 222.45
+        }
+      },
+      "name": "Qwen3 14B (Reasoning)",
+      "slug": "qwen3-14b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 546.12,
+          "before": 540.61
+        },
+        "gdpval_normalized": {
+          "after": 0.02306,
+          "before": 0.020305000000000007
+        }
+      },
+      "name": "Qwen3 235B A22B 2507 (Reasoning)",
+      "slug": "qwen3-235b-a22b-instruct-2507-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 321.3,
+          "before": 307.72
+        }
+      },
+      "name": "Qwen3 30B A3B 2507 (Reasoning)",
+      "slug": "qwen3-30b-a3b-2507-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 289.8,
+          "before": 274.98
+        }
+      },
+      "name": "Qwen3 32B (Reasoning)",
+      "slug": "qwen3-32b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -100.94,
+          "before": -124.62
+        }
+      },
+      "name": "Qwen3.5 0.8B (Reasoning)",
+      "slug": "qwen3-5-0-8b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 0.41237113402062,
+          "before": null
+        },
+        "gdpval": {
+          "after": -81.62,
+          "before": -105.66
+        },
+        "intelligence_index": {
+          "after": 3.30936692514316,
+          "before": 4.41842506486652
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.0123711340206186,
+          "before": null
+        }
+      },
+      "name": "Qwen3.5 0.8B (Non-reasoning)",
+      "slug": "qwen3-5-0-8b-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 982.35,
+          "before": 978.02
+        },
+        "gdpval_normalized": {
+          "after": 0.241175,
+          "before": 0.23901
+        }
+      },
+      "name": "Qwen3.5 122B A10B (Reasoning)",
+      "slug": "qwen3-5-122b-a10b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 885.85,
+          "before": 879.91
+        },
+        "gdpval_normalized": {
+          "after": 0.192925,
+          "before": 0.18995499999999998
+        }
+      },
+      "name": "Qwen3.5 122B A10B (Non-reasoning)",
+      "slug": "qwen3-5-122b-a10b-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 218.73,
+          "before": 198.86
+        }
+      },
+      "name": "Qwen3.5 2B (Reasoning)",
+      "slug": "qwen3-5-2b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": -78.45,
+          "before": -103.62
+        }
+      },
+      "name": "Qwen3.5 2B (Non-reasoning)",
+      "slug": "qwen3-5-2b-non-reasoning"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 11.8228178694158,
+          "before": null
+        },
+        "coding_index": {
+          "after": 36.9767824941046,
+          "before": null
+        },
+        "gdpval": {
+          "after": 795.4,
+          "before": 805.2
+        },
+        "gdpval_normalized": {
+          "after": 0.1477,
+          "before": 0.1526
+        },
+        "intelligence_index": {
+          "after": 23.9929418023314,
+          "before": 23.3826624569784
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.0494845360824742,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.408239700374532,
+          "before": null
+        }
+      },
+      "name": "Qwen3.5 35B A3B (Non-reasoning)",
+      "slug": "qwen3-5-35b-a3b-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 962,
+          "before": 961.91
+        },
+        "gdpval_normalized": {
+          "after": 0.231,
+          "before": 0.230955
+        }
+      },
+      "name": "Qwen3.5 397B A17B (Reasoning)",
+      "slug": "qwen3-5-397b-a17b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 649.12,
+          "before": 635.58
+        },
+        "gdpval_normalized": {
+          "after": 0.07456,
+          "before": 0.06779000000000002
+        }
+      },
+      "name": "Qwen3.5 9B (Reasoning)",
+      "slug": "qwen3-5-9b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1137.57,
+          "before": 1139.72
+        },
+        "gdpval_normalized": {
+          "after": 0.318785,
+          "before": 0.31986000000000003
+        }
+      },
+      "name": "Qwen3.6 27B (Reasoning)",
+      "slug": "qwen3-6-27b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1109.84,
+          "before": 1112.72
+        },
+        "gdpval_normalized": {
+          "after": 0.30491999999999997,
+          "before": 0.30636
+        }
+      },
+      "name": "Qwen3.6 27B (Non-reasoning)",
+      "slug": "qwen3-6-27b-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1052.44,
+          "before": 1048.67
+        },
+        "gdpval_normalized": {
+          "after": 0.27622,
+          "before": 0.27433500000000005
+        }
+      },
+      "name": "Qwen3.6 35B A3B (Reasoning)",
+      "slug": "qwen3-6-35b-a3b"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1022.16,
+          "before": 1020.43
+        },
+        "gdpval_normalized": {
+          "after": 0.26108,
+          "before": 0.260215
+        }
+      },
+      "name": "Qwen3.6 35B A3B (Non-reasoning)",
+      "slug": "qwen3-6-35b-a3b-non-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1138.52,
+          "before": 1135.39
+        },
+        "gdpval_normalized": {
+          "after": 0.31926,
+          "before": 0.31769500000000006
+        }
+      },
+      "name": "Qwen3.6 Plus",
+      "slug": "qwen3-6-plus"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1271.82,
+          "before": 1273.15
+        },
+        "gdpval_normalized": {
+          "after": 0.38591,
+          "before": 0.38657500000000006
+        }
+      },
+      "name": "Qwen3.7 Max",
+      "slug": "qwen3-7-max"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 943.05,
+          "before": 936.26
+        },
+        "gdpval_normalized": {
+          "after": 0.22152499999999997,
+          "before": 0.21813
+        }
+      },
+      "name": "Qwen3.7 Plus",
+      "slug": "qwen3-7-plus"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 214.73,
+          "before": 200.34
+        }
+      },
+      "name": "Qwen3 8B (Reasoning)",
+      "slug": "qwen3-8b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 717.9,
+          "before": 711.26
+        },
+        "gdpval_normalized": {
+          "after": 0.10894999999999999,
+          "before": 0.10563
+        }
+      },
+      "name": "Qwen3 Coder Next",
+      "slug": "qwen3-coder-next"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 375.39,
+          "before": 367.35
+        }
+      },
+      "name": "Qwen3 Next 80B A3B (Reasoning)",
+      "slug": "qwen3-next-80b-a3b-reasoning"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 920.04,
+          "before": 918.78
+        },
+        "gdpval_normalized": {
+          "after": 0.21001999999999998,
+          "before": 0.20939
+        }
+      },
+      "name": "Ring-2.6-1T",
+      "slug": "ring-2-6-1t"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 500.7,
+          "before": 492.55
+        },
+        "gdpval_normalized": {
+          "after": 0.0003499999999999943,
+          "before": 0
+        }
+      },
+      "name": "Solar Pro 3",
+      "slug": "solar-pro-3"
+    },
+    {
+      "changes": {
+        "gdpval": {
+          "after": 1016.79,
+          "before": 1017.04
+        },
+        "gdpval_normalized": {
+          "after": 0.258395,
+          "before": 0.25851999999999997
+        }
+      },
+      "name": "Step 3.7 Flash",
+      "slug": "step-3-7-flash"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 3.65033676975945,
+          "before": null
+        },
+        "coding_index": {
+          "after": 25.7698709945901,
+          "before": null
+        },
+        "gdpval": {
+          "after": 563.66,
+          "before": 553.84
+        },
+        "gdpval_normalized": {
+          "after": 0.03182999999999998,
+          "before": 0.026920000000000017
+        },
+        "intelligence_index": {
+          "after": 18.1600095755902,
+          "before": 24.4651372124901
+        },
+        "intelligence_index_estimated": {
+          "after": false,
+          "before": true
+        },
+        "tau_banking": {
+          "after": 0.0556701030927835,
+          "before": null
+        },
+        "terminal_bench_v2_1": {
+          "after": 0.205992509363296,
+          "before": null
+        }
+      },
+      "name": "Trinity Large Thinking",
+      "slug": "trinity-large-thinking"
+    }
+  ],
+  "to_snapshot_date": "2026-07-31"
+}

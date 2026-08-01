@@ -1,0 +1,51 @@
+benchmark,models,families,knowledge_predeclared,pretraining_like_predeclared,eligible_on_full_panel,optimized_true_rows,optimized_false_rows
+MMLU,58,28,True,True,True,58,0
+ARC AI2,44,22,False,True,True,44,0
+GPQA diamond,42,22,True,True,True,42,0
+Winogrande,41,21,False,True,True,41,0
+GSM8K,37,17,False,True,True,37,0
+HellaSwag,35,19,False,True,True,35,0
+OTIS Mock AIME 2024-2025,35,18,False,False,True,35,0
+PIQA,31,18,False,True,True,31,0
+BBH,30,14,False,True,True,30,0
+MATH level 5,29,18,False,False,True,29,0
+WeirdML,27,15,False,False,True,0,27
+OpenBookQA,24,12,True,True,True,24,0
+TriviaQA,24,13,True,True,True,24,0
+CritPt,17,12,False,False,True,0,17
+LAMBADA,16,6,False,True,True,16,0
+SimpleBench,16,10,False,False,True,0,16
+Fiction.LiveBench,14,7,False,False,True,0,14
+SimpleQA Verified,13,7,True,True,True,0,13
+Aider polyglot,12,6,False,False,True,12,0
+Chess Puzzles,12,6,False,False,True,0,12
+ARC-AGI,11,7,False,False,True,11,0
+ARC-AGI-2,11,7,False,False,True,0,11
+FrontierMath-2025-02-28-Private,11,6,False,False,True,11,0
+Lech Mazur Writing,11,8,False,False,True,0,11
+Terminal Bench,11,6,False,False,True,11,0
+APEX-Agents,10,5,False,False,True,0,10
+ANLI,8,5,False,False,False,8,0
+Balrog,8,7,False,False,False,0,8
+CL-bench,7,4,False,False,False,0,7
+FrontierMath-Tier-4-2025-07-01-Private,7,4,False,False,False,0,7
+Surface Evolver Bench,7,6,False,False,False,0,7
+CL-bench Life,6,5,False,False,False,0,6
+PostTrainBench,6,3,False,False,False,0,6
+FrontierMath-Tier-4-v2-Private,5,3,False,False,False,0,5
+FrontierMath-Tiers-1-3-v2-Private,5,3,False,False,False,0,5
+SWE-Bench verified,5,3,False,False,False,5,0
+The Agent Company,5,4,False,False,False,0,5
+GBAEval,4,3,False,False,False,0,4
+GeoBench,4,4,False,False,False,0,4
+ScienceQA,4,2,True,True,False,4,0
+CursorBench,3,2,False,False,False,0,3
+Cybench,3,3,False,False,False,3,0
+FrontierCode,3,3,False,False,False,0,3
+EBR-bench,2,2,False,False,False,0,2
+ExploitBench,2,2,False,False,False,0,2
+HLE,2,2,False,False,False,0,2
+OSWorld,2,2,False,False,False,2,0
+DeepResearch Bench,1,1,False,False,False,0,1
+GSO-Bench,1,1,False,False,False,0,1
+OSWorld 2.0,1,1,False,False,False,0,1

@@ -1,0 +1,459 @@
+{
+  "corrected_default_tier_backtest": {
+    "chronological_family": {
+      "date_only": {
+        "mean_absolute_log10_error": 0.6397388481552407,
+        "median_multiplicative_error": 3.8758677544308764,
+        "n": 70,
+        "p80_multiplicative_error": 8.61074338294764,
+        "rmse_log10": 0.7552752845821382,
+        "signed_bias_factor": 1.222956401356489,
+        "within_2x": 0.22857142857142856
+      },
+      "date_price": {
+        "mean_absolute_log10_error": 0.4197990872993067,
+        "median_multiplicative_error": 2.1770313412490214,
+        "n": 70,
+        "p80_multiplicative_error": 4.670666485500503,
+        "rmse_log10": 0.5185604363716932,
+        "signed_bias_factor": 1.3528550226816676,
+        "within_2x": 0.4142857142857143
+      },
+      "date_price_plus_normalized_tok_s": {
+        "mean_absolute_log10_error": 0.4174936236861111,
+        "median_multiplicative_error": 2.244351754599221,
+        "n": 70,
+        "p80_multiplicative_error": 4.645363262470584,
+        "rmse_log10": 0.522633983794303,
+        "signed_bias_factor": 1.3442132967114937,
+        "within_2x": 0.42857142857142855
+      }
+    },
+    "family": {
+      "date_only": {
+        "mean_absolute_log10_error": 0.6163852994103133,
+        "median_multiplicative_error": 4.10588038248113,
+        "n": 93,
+        "p80_multiplicative_error": 7.610847626929305,
+        "rmse_log10": 0.7330855969768145,
+        "signed_bias_factor": 1.1524170504511706,
+        "within_2x": 0.27956989247311825
+      },
+      "date_price": {
+        "mean_absolute_log10_error": 0.397813913217537,
+        "median_multiplicative_error": 2.182362181313902,
+        "n": 93,
+        "p80_multiplicative_error": 4.236437690578476,
+        "rmse_log10": 0.5039219252647751,
+        "signed_bias_factor": 1.288189884554783,
+        "within_2x": 0.45161290322580644
+      },
+      "date_price_plus_normalized_tok_s": {
+        "mean_absolute_log10_error": 0.4052285180969588,
+        "median_multiplicative_error": 2.2296172944678045,
+        "n": 93,
+        "p80_multiplicative_error": 4.251823226276448,
+        "rmse_log10": 0.5147126392231275,
+        "signed_bias_factor": 1.3059973859987943,
+        "within_2x": 0.45161290322580644
+      }
+    },
+    "promotion_gate_from_main_audit": {
+      "current_live_final_price_weight": 0.034,
+      "openrouter_price_is_family_heldout_predictive": true,
+      "operational_prediction_status": "diagnostic; not automatically blended into the live frontier forecast",
+      "policy": "No positive live weight unless family-held-out paired bootstrap is >=90% favorable, its 90% CI excludes zero, and chronological-family direction agrees.",
+      "price_weight_recommendation": "retain the existing low weight; do not increase until price is tested incrementally against AA/ECI/no-CoT on the same held-out checkpoints",
+      "recommended_incremental_tok_s_weight_in_live_ensemble": 0.0,
+      "tok_s_adds_robust_incremental_information_beyond_price": false
+    }
+  },
+  "decision": {
+    "change_live_forecast": false,
+    "reason": "Separating service tiers fixes a real data defect and preserves the complete time series, but corrected default-tier tok/s still fails the predeclared family-bootstrap and chronological-direction promotion gate after price. Temporal and refresh volatility provide an additional operational-noise floor.",
+    "recommended_incremental_tok_s_weight": 0.0
+  },
+  "inventory": {
+    "calibration_checkpoints": 93,
+    "calibration_families": 19,
+    "current_daily_rows": 8569,
+    "current_daily_rows_without_endpoint_metadata": 86,
+    "current_daily_unmatched_endpoint_models": 11,
+    "current_models": 334,
+    "current_provider_endpoints": 1036,
+    "endpoint_models_with_multiple_service_tiers": 78,
+    "history_daily_rows": 60307,
+    "immutable_snapshots": 8,
+    "service_tier_row_counts": {
+      "default": 7763,
+      "flex": 392,
+      "priority": 414
+    }
+  },
+  "limitations": [
+    "The 8 refreshes span 313.6 hours and contain heavily overlapping rolling one-week windows.",
+    "OpenRouter throughput remains a serving-stack measurement affected by batching, hardware, quantization, speculative decoding, traffic, and provider policy.",
+    "11 endpoint/model pairs appear in throughput history without public endpoint metadata; their measurements are retained with an explicit unmatched flag.",
+    "Current prices are not launch-vintage historical prices and remain correlated with product strategy and active inference cost."
+  ],
+  "metadata": {
+    "compatibility_filename_date": "2026-07-18",
+    "history_policy": "Every committed refresh plus the current worktree is archived by fetched_at timestamp. Repeated rolling windows are correlated, not independent samples.",
+    "question": "Does lossless daily and service-tier-separated OpenRouter throughput add a stable parameter-count signal beyond current price?",
+    "snapshot_date": "2026-07-31",
+    "tier_policy": "All tiers preserved; only default service feeds model aggregates and regression."
+  },
+  "outputs": {
+    "endpoint_stability": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_endpoint_temporal_stability_2026-07-18.csv",
+    "model_stability": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_model_temporal_stability_2026-07-18.csv",
+    "refresh_stability": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_refresh_stability_2026-07-18.csv",
+    "tier_counterfactual_predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_tier_counterfactual_predictions_2026-07-18.csv"
+  },
+  "service_tier_counterfactual": {
+    "calibration_checkpoints_changed_by_tier_separation": 0,
+    "current_default_normalization_models": 328,
+    "endpoint_models_with_multiple_service_tiers": 78,
+    "heldout_metrics": {
+      "default_only": {
+        "chronological_family": {
+          "date_only": {
+            "mean_absolute_log10_error": 0.6397388481552407,
+            "median_multiplicative_error": 3.8758677544308764,
+            "n": 70,
+            "p80_multiplicative_error": 8.61074338294764,
+            "rmse_log10": 0.7552752845821382,
+            "signed_bias_factor": 1.222956401356489,
+            "within_2x": 0.22857142857142856
+          },
+          "date_price": {
+            "mean_absolute_log10_error": 0.4197990872993067,
+            "median_multiplicative_error": 2.1770313412490214,
+            "n": 70,
+            "p80_multiplicative_error": 4.670666485500503,
+            "rmse_log10": 0.5185604363716932,
+            "signed_bias_factor": 1.3528550226816676,
+            "within_2x": 0.4142857142857143
+          },
+          "date_price_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.4174936236861111,
+            "median_multiplicative_error": 2.244351754599221,
+            "n": 70,
+            "p80_multiplicative_error": 4.645363262470584,
+            "rmse_log10": 0.522633983794303,
+            "signed_bias_factor": 1.3442132967114937,
+            "within_2x": 0.42857142857142855
+          },
+          "date_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.623125551036913,
+            "median_multiplicative_error": 3.308162419688102,
+            "n": 70,
+            "p80_multiplicative_error": 10.315431788539767,
+            "rmse_log10": 0.7743236395164986,
+            "signed_bias_factor": 1.3301325067249363,
+            "within_2x": 0.2714285714285714
+          },
+          "date_raw_throughput": {
+            "mean_absolute_log10_error": 0.6296937320674169,
+            "median_multiplicative_error": 3.7496840841002888,
+            "n": 70,
+            "p80_multiplicative_error": 9.023972775106325,
+            "rmse_log10": 0.7827345262872375,
+            "signed_bias_factor": 1.4555659700749317,
+            "within_2x": 0.2714285714285714
+          }
+        },
+        "family": {
+          "date_only": {
+            "mean_absolute_log10_error": 0.6163852994103133,
+            "median_multiplicative_error": 4.10588038248113,
+            "n": 93,
+            "p80_multiplicative_error": 7.610847626929305,
+            "rmse_log10": 0.7330855969768145,
+            "signed_bias_factor": 1.1524170504511706,
+            "within_2x": 0.27956989247311825
+          },
+          "date_price": {
+            "mean_absolute_log10_error": 0.397813913217537,
+            "median_multiplicative_error": 2.182362181313902,
+            "n": 93,
+            "p80_multiplicative_error": 4.236437690578476,
+            "rmse_log10": 0.5039219252647751,
+            "signed_bias_factor": 1.288189884554783,
+            "within_2x": 0.45161290322580644
+          },
+          "date_price_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.4052285180969588,
+            "median_multiplicative_error": 2.2296172944678045,
+            "n": 93,
+            "p80_multiplicative_error": 4.251823226276448,
+            "rmse_log10": 0.5147126392231275,
+            "signed_bias_factor": 1.3059973859987943,
+            "within_2x": 0.45161290322580644
+          },
+          "date_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.6257082326245458,
+            "median_multiplicative_error": 4.157652164590545,
+            "n": 93,
+            "p80_multiplicative_error": 8.553268816849222,
+            "rmse_log10": 0.7528148324249133,
+            "signed_bias_factor": 1.2043313111148413,
+            "within_2x": 0.24731182795698925
+          },
+          "date_raw_throughput": {
+            "mean_absolute_log10_error": 0.6248616761168992,
+            "median_multiplicative_error": 4.238964133338826,
+            "n": 93,
+            "p80_multiplicative_error": 8.101483710584926,
+            "rmse_log10": 0.7493180221392799,
+            "signed_bias_factor": 1.2127293005569482,
+            "within_2x": 0.25806451612903225
+          }
+        }
+      },
+      "mixed_default_priority_flex_counterfactual": {
+        "chronological_family": {
+          "date_only": {
+            "mean_absolute_log10_error": 0.6397388481552407,
+            "median_multiplicative_error": 3.8758677544308764,
+            "n": 70,
+            "p80_multiplicative_error": 8.61074338294764,
+            "rmse_log10": 0.7552752845821382,
+            "signed_bias_factor": 1.222956401356489,
+            "within_2x": 0.22857142857142856
+          },
+          "date_price": {
+            "mean_absolute_log10_error": 0.4197990872993067,
+            "median_multiplicative_error": 2.1770313412490214,
+            "n": 70,
+            "p80_multiplicative_error": 4.670666485500503,
+            "rmse_log10": 0.5185604363716932,
+            "signed_bias_factor": 1.3528550226816676,
+            "within_2x": 0.4142857142857143
+          },
+          "date_price_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.41778865619786376,
+            "median_multiplicative_error": 2.254521562316515,
+            "n": 70,
+            "p80_multiplicative_error": 4.643510389781005,
+            "rmse_log10": 0.5227861618119918,
+            "signed_bias_factor": 1.3442150911448205,
+            "within_2x": 0.42857142857142855
+          },
+          "date_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.6233585284414508,
+            "median_multiplicative_error": 3.3114296352270363,
+            "n": 70,
+            "p80_multiplicative_error": 10.32003025630698,
+            "rmse_log10": 0.774466912367624,
+            "signed_bias_factor": 1.330222519682153,
+            "within_2x": 0.2714285714285714
+          },
+          "date_raw_throughput": {
+            "mean_absolute_log10_error": 0.6296937320674169,
+            "median_multiplicative_error": 3.7496840841002888,
+            "n": 70,
+            "p80_multiplicative_error": 9.023972775106325,
+            "rmse_log10": 0.7827345262872375,
+            "signed_bias_factor": 1.4555659700749317,
+            "within_2x": 0.2714285714285714
+          }
+        },
+        "family": {
+          "date_only": {
+            "mean_absolute_log10_error": 0.6163852994103133,
+            "median_multiplicative_error": 4.10588038248113,
+            "n": 93,
+            "p80_multiplicative_error": 7.610847626929305,
+            "rmse_log10": 0.7330855969768145,
+            "signed_bias_factor": 1.1524170504511706,
+            "within_2x": 0.27956989247311825
+          },
+          "date_price": {
+            "mean_absolute_log10_error": 0.397813913217537,
+            "median_multiplicative_error": 2.182362181313902,
+            "n": 93,
+            "p80_multiplicative_error": 4.236437690578476,
+            "rmse_log10": 0.5039219252647751,
+            "signed_bias_factor": 1.288189884554783,
+            "within_2x": 0.45161290322580644
+          },
+          "date_price_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.4053605689150388,
+            "median_multiplicative_error": 2.2300849161694427,
+            "n": 93,
+            "p80_multiplicative_error": 4.250098288013212,
+            "rmse_log10": 0.5147850906467141,
+            "signed_bias_factor": 1.3056450764890386,
+            "within_2x": 0.46236559139784944
+          },
+          "date_provider_normalized_throughput": {
+            "mean_absolute_log10_error": 0.6258861995767278,
+            "median_multiplicative_error": 4.162293084743681,
+            "n": 93,
+            "p80_multiplicative_error": 8.554402671585807,
+            "rmse_log10": 0.7529355696957187,
+            "signed_bias_factor": 1.2039972929954035,
+            "within_2x": 0.24731182795698925
+          },
+          "date_raw_throughput": {
+            "mean_absolute_log10_error": 0.6248616761168992,
+            "median_multiplicative_error": 4.238964133338826,
+            "n": 93,
+            "p80_multiplicative_error": 8.101483710584926,
+            "rmse_log10": 0.7493180221392799,
+            "signed_bias_factor": 1.2127293005569482,
+            "within_2x": 0.25806451612903225
+          }
+        }
+      }
+    },
+    "mixed_over_default_model_throughput_ratio": {
+      "mean": 1.0,
+      "median": 1.0,
+      "n": 93,
+      "p10": 1.0,
+      "p90": 1.0
+    },
+    "mixed_tier_normalization_models": 328,
+    "paired_bootstraps": {
+      "default_only": [
+        {
+          "baseline": "date_price",
+          "bootstrap_probability_candidate_better": 0.0654,
+          "candidate": "date_price_provider_normalized_throughput",
+          "ci_90": [
+            -0.00037168358432928807,
+            0.019791617056391254
+          ],
+          "family_clusters": 19,
+          "metric": "mean absolute log10 error; candidate minus baseline",
+          "mode": "family",
+          "observed_delta": 0.007414604879421638,
+          "paired_checkpoints": 93,
+          "samples": 10000
+        },
+        {
+          "baseline": "date_price",
+          "bootstrap_probability_candidate_better": 0.5599,
+          "candidate": "date_price_provider_normalized_throughput",
+          "ci_90": [
+            -0.021537366631895635,
+            0.021833600679568424
+          ],
+          "family_clusters": 17,
+          "metric": "mean absolute log10 error; candidate minus baseline",
+          "mode": "chronological_family",
+          "observed_delta": -0.002305463613195724,
+          "paired_checkpoints": 70,
+          "samples": 10000
+        }
+      ],
+      "mixed_default_priority_flex_counterfactual": [
+        {
+          "baseline": "date_price",
+          "bootstrap_probability_candidate_better": 0.0574,
+          "candidate": "date_price_provider_normalized_throughput",
+          "ci_90": [
+            -0.00018510456815458426,
+            0.019859533950805235
+          ],
+          "family_clusters": 19,
+          "metric": "mean absolute log10 error; candidate minus baseline",
+          "mode": "family",
+          "observed_delta": 0.007546655697501625,
+          "paired_checkpoints": 93,
+          "samples": 10000
+        },
+        {
+          "baseline": "date_price",
+          "bootstrap_probability_candidate_better": 0.553,
+          "candidate": "date_price_provider_normalized_throughput",
+          "ci_90": [
+            -0.021096944098719043,
+            0.02206857347330862
+          ],
+          "family_clusters": 17,
+          "metric": "mean absolute log10 error; candidate minus baseline",
+          "mode": "chronological_family",
+          "observed_delta": -0.0020104311014430554,
+          "paired_checkpoints": 70,
+          "samples": 10000
+        }
+      ]
+    }
+  },
+  "source_manifest": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_calibration_2026-07-18.csv": "072ff900db917ce7d641d0af6bd548c8d472438d48d4c0acc0d14504265a86cd",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_parameter_signal_backtest_2026-07-18.json": "081100f3746ac558bb88115c352adfeacc3c514950a23ac3ab78970328d542a0",
+    "sources/openrouter_model_signals_2026-07-18.csv": "89890b5ced9466e666d5341db49a66a10d5881216e13604f3270a101c5337acd",
+    "sources/openrouter_provider_signals_2026-07-18.csv": "a939726b7d2c58a8698c0839530d8c646a08229942c9f62da84f40a3c42c2263",
+    "sources/openrouter_snapshot_history_manifest_2026-07-18.csv": "a9c933541ef71b822e271ef5229cddc2645313189ac4fcb02de731d696cb524c",
+    "sources/openrouter_throughput_daily_2026-07-18.csv": "f401000a2b60dc1d20ebf13e4d04ab5c7933982087aa48cb6b70297ab21d35f8",
+    "sources/openrouter_throughput_daily_history_2026-07-18.csv": "cc897bea3676f714fa68c952a4517c75eb36eafd4c6eb42db17baf4bf51314fa"
+  },
+  "temporal_stability": {
+    "endpoint_default_tier_with_at_least_four_days_max_over_min": {
+      "mean": 2.747940327431394,
+      "median": 1.5833333333333333,
+      "n": 991,
+      "p10": 1.1666666666666667,
+      "p90": 4.571428571428571
+    },
+    "focal_models": [
+      {
+        "model": "Claude Fable 5",
+        "openrouter_model_id": "anthropic/claude-fable-5",
+        "refresh_max_over_min": 1.0916030534351144,
+        "refresh_median_tps": 32.75,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 5.294117647058823,
+        "within_week_median_tps": 35.75
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "openrouter_model_id": "openai/gpt-5.6-sol",
+        "refresh_max_over_min": 1.0945945945945945,
+        "refresh_median_tps": 38.0,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 1.3783783783783783,
+        "within_week_median_tps": 41.75
+      },
+      {
+        "model": "Kimi K3",
+        "openrouter_model_id": "moonshotai/kimi-k3",
+        "refresh_max_over_min": 1.25,
+        "refresh_median_tps": 24.0,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 1.5238095238095237,
+        "within_week_median_tps": 28.25
+      },
+      {
+        "model": "Claude Opus 4.8",
+        "openrouter_model_id": "anthropic/claude-opus-4.8",
+        "refresh_max_over_min": 1.045045045045045,
+        "refresh_median_tps": 56.0,
+        "refreshes": 8,
+        "within_week_dates": 8,
+        "within_week_max_over_min": 1.0714285714285714,
+        "within_week_median_tps": 58.0
+      }
+    ],
+    "model_daily_provider_median_with_at_least_four_days_max_over_min": {
+      "mean": 2.2746381862275453,
+      "median": 1.5172413793103448,
+      "n": 327,
+      "p10": 1.1494505494505494,
+      "p90": 3.78125
+    },
+    "model_default_tier_median_across_all_refreshes_max_over_min": {
+      "mean": 1.3503243125210123,
+      "median": 1.1418439716312057,
+      "n": 293,
+      "p10": 1.0323619680430312,
+      "p90": 1.7221236951397467
+    }
+  }
+}

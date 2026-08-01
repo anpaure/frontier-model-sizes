@@ -1,0 +1,3171 @@
+Models
+Coding Agents
+Speech, Image, Video
+Hardware
+Leaderboards
+About
+AI Trends
+Arenas
+Premium
+Log in
+
+
+LLM Leaderboard - Comparison of AI models from OpenAI, Anthropic, Google, SpaceXAI & others
+Comparison and ranking the performance of over 250 AI models (LLMs) across key metrics including intelligence, price, performance and speed (output speed - tokens per second & latency - TTFT), context window & others.
+
+For more details including relating to our methodology, see our FAQs.
+
+LLM API Providers Leaderboard
+Intelligence
+Updated
+Claude Fable 5 (with fallback) and GPT-5.6 Sol (max) are the highest intelligence models, followed by GPT-5.6 Sol (xhigh) and Kimi K3.
+
+
+Output Speed
+Mercury 2 and Granite 4.0 H Small are the fastest models, followed by LFM2.5-VL-1.6B and Step 3.7 Flash.
+
+
+Latency
+North Mini Code and Gemini 2.5 Flash-Lite are the lowest latency models, followed by Command A+ and Gemini 2.5 Flash.
+
+
+Price
+Gemma 3n E4B and Nova Micro are the cheapest models, followed by Sarvam 30B (high) and Qwen3.5 4B.
+
+
+Context Window
+Llama 4 Scout and Grok 4.20 0309 support the largest context windows, followed by Gemini 1.5 Pro (May) and Grok 4.1 Fast.
+
+
+Filter, e.g. GPT, Meta
+
+Expand columns
+
+Weights:
+All
+
+Size:
+All
+
+Price:
+All
+
+Reasoning:
+All
+
+Status:
+Current
+Reasoning model
+Features
+Intelligence
+Price
+Speed
+Latency
+End-to-End Response Time
+
+Model
+
+Context Window
+
+Creator
+
+Artificial Analysis Intelligence Index
+
+Blended
+USD/1M Tokens
+
+Median
+Tokens/s
+
+Latency
+First Chunk (s)
+
+Total
+Response (s)
+Further Analysis
+Claude Fable 5 (with fallback)
+1M
+Anthropic
+Anthropic
+60
+$7.70
+66
+149.81
+157.37
+Model
+Providers
+GPT-5.6 Sol (max)
+1M
+OpenAI
+OpenAI
+59
+$4.35
+54
+145.61
+154.85
+Model
+Providers
+GPT-5.6 Sol (xhigh)
+1M
+OpenAI
+OpenAI
+58
+$4.35
+55
+51.31
+60.48
+Model
+Providers
+Kimi K3
+1.05M
+Kimi
+Kimi
+57
+$2.31
+62
+1.99
+42.30
+Model
+Providers
+GPT-5.6 Sol (high)
+1M
+OpenAI
+OpenAI
+56
+$4.35
+48
+12.05
+22.57
+Model
+Providers
+Claude Opus 4.8 (max)
+1M
+Anthropic
+Anthropic
+56
+$3.85
+57
+40.97
+49.70
+Model
+Providers
+GPT-5.6 Terra (max)
+1M
+OpenAI
+OpenAI
+55
+$2.17
+145
+141.09
+144.54
+Model
+Providers
+GPT-5.5 (xhigh)
+922k
+OpenAI
+OpenAI
+55
+$4.35
+69
+91.24
+98.46
+Model
+Providers
+Grok 4.5 (high)
+500k
+SpaceXAI
+SpaceXAI
+54
+$1.35
+97
+12.46
+17.60
+Model
+Providers
+GPT-5.6 Sol (medium)
+1M
+OpenAI
+OpenAI
+54
+$4.35
+53
+4.82
+14.30
+Model
+Providers
+Claude Opus 4.7 (max)
+1M
+Anthropic
+Anthropic
+54
+$3.85
+50
+19.68
+29.66
+Model
+Providers
+Claude Sonnet 5 (max)
+1M
+Anthropic
+Anthropic
+53
+$1.54
+84
+200.40
+206.38
+Model
+Providers
+GPT-5.5 (high)
+922k
+OpenAI
+OpenAI
+53
+$4.35
+71
+20.69
+27.72
+Model
+Providers
+GPT-5.6 Terra (xhigh)
+1M
+OpenAI
+OpenAI
+52
+$2.17
+131
+18.40
+22.20
+Model
+Providers
+GPT-5.6 Luna (max)
+1M
+OpenAI
+OpenAI
+51
+$0.87
+199
+111.29
+113.81
+Model
+Providers
+GLM-5.2 (max)
+1M
+Z AI
+Z AI
+51
+$0.90
+167
+1.55
+16.50
+Model
+Providers
+Muse Spark 1.1 (xhigh)
+1.05M
+Meta
+Meta
+51
+$0.78
+120
+1.31
+22.14
+Model
+Providers
+GPT-5.5 (medium)
+922k
+OpenAI
+OpenAI
+50
+$4.35
+64
+13.30
+21.09
+Model
+Providers
+Gemini 3.5 Flash
+1M
+Google
+Google
+50
+$1.31
+159
+30.23
+33.36
+Model
+Providers
+GPT-5.6 Sol (low)
+1M
+OpenAI
+OpenAI
+49
+$4.35
+52
+3.77
+13.45
+Model
+Providers
+GPT-5.6 Luna (xhigh)
+1M
+OpenAI
+OpenAI
+49
+$0.87
+179
+30.65
+33.44
+Model
+Providers
+GPT-5.6 Terra (high)
+1M
+OpenAI
+OpenAI
+49
+$2.17
+128
+2.52
+6.42
+Model
+Providers
+Gemini 3.1 Pro Preview
+1M
+Google
+Google
+46
+$1.74
+117
+42.53
+46.79
+Model
+Providers
+GPT-5.6 Luna (high)
+1M
+OpenAI
+OpenAI
+46
+$0.87
+172
+9.50
+12.41
+Model
+Providers
+Qwen3.7 Max
+1M
+Alibaba
+Alibaba
+46
+$1.43
+205
+2.49
+16.69
+Model
+Providers
+GPT-5.6 Terra (medium)
+1M
+OpenAI
+OpenAI
+46
+$2.17
+122
+1.54
+5.65
+Model
+Providers
+Gemini 3.5 Flash (medium)
+1M
+Google
+Google
+45*
+$1.31
+167
+26.06
+29.06
+Model
+Providers
+MiniMax-M3
+1M
+MiniMax
+MiniMax
+44
+$0.22
+84
+1.78
+31.56
+Model
+Providers
+DeepSeek V4 Pro (max)
+1M
+DeepSeek
+DeepSeek
+44
+$0.18
+62
+1.66
+79.87
+Model
+Providers
+GPT-5.3 Codex (xhigh)
+400k
+OpenAI
+OpenAI
+44*
+$1.87
+89
+110.66
+116.29
+Model
+Providers
+Kimi K2.6
+256k
+Kimi
+Kimi
+44
+$0.70
+46
+2.47
+110.09
+Model
+Providers
+GPT-5.5 (low)
+922k
+OpenAI
+OpenAI
+43
+$4.35
+68
+1.87
+9.26
+Model
+Providers
+Muse Spark
+262k
+Meta
+Meta
+43
+--
+--
+--
+--
+Model
+Providers
+Claude Opus 4.7 (Non-reasoning, high)
+1M
+Anthropic
+Anthropic
+43*
+$3.85
+46
+2.09
+12.99
+Model
+Providers
+MiMo-V2.5-Pro
+1M
+Xiaomi
+Xiaomi
+42
+$0.18
+60
+2.74
+44.21
+Model
+Providers
+Kimi K2.7 Code
+256k
+Kimi
+Kimi
+42
+$0.70
+48
+2.85
+59.54
+Model
+Providers
+Claude Sonnet 5 (Non-reasoning)
+1M
+Anthropic
+Anthropic
+42
+$1.54
+63
+1.40
+9.30
+Model
+Providers
+Hy3
+256k
+Tencent
+Tencent
+41
+$0.00
+46
+2.37
+57.26
+Model
+Providers
+GPT-5.6 Sol (Non-reasoning)
+1M
+OpenAI
+OpenAI
+41
+$4.35
+55
+1.10
+10.18
+Model
+Providers
+Nex-N2-Pro
+262k
+Nex AGI
+Nex AGI
+41
+$0.53
+136
+1.58
+19.90
+Model
+Providers
+DeepSeek V4 Pro (high)
+1M
+DeepSeek
+DeepSeek
+41*
+$0.18
+63
+1.53
+40.98
+Model
+Providers
+Inkling
+1M
+Thinking Machines
+Thinking Machines
+41
+$1.10
+73
+1.75
+36.12
+Model
+Providers
+GPT-5.6 Terra (low)
+1M
+OpenAI
+OpenAI
+40
+$2.17
+125
+1.47
+5.48
+Model
+Providers
+DeepSeek V4 Flash (max)
+1M
+DeepSeek
+DeepSeek
+40
+$0.06
+104
+1.16
+60.11
+Model
+Providers
+GLM-5.1
+200k
+Z AI
+Z AI
+40
+$0.90
+62
+1.77
+70.97
+Model
+Providers
+GPT-5.4 mini (xhigh)
+400k
+OpenAI
+OpenAI
+40
+$0.65
+170
+11.22
+14.16
+Model
+Providers
+Grok Build 0.1 0616
+256k
+SpaceXAI
+SpaceXAI
+40
+$0.54
+83
+0.52
+30.72
+Model
+Providers
+Qwen3.6 Plus
+1M
+Alibaba
+Alibaba
+40
+$0.43
+53
+2.55
+116.65
+Model
+Providers
+Qwen3.7 Plus
+1M
+Alibaba
+Alibaba
+39
+$0.27
+53
+2.77
+49.90
+Model
+Providers
+JT-4.1 Flash 236B A21B
+256k
+China Mobile
+China Mobile
+39
+--
+--
+--
+--
+Model
+Providers
+GPT-5.4 nano (xhigh)
+400k
+OpenAI
+OpenAI
+38
+$0.18
+161
+6.73
+9.85
+Model
+Providers
+MiniMax-M2.7
+205k
+MiniMax
+MiniMax
+38
+$0.22
+60
+1.79
+50.80
+Model
+Providers
+GLM-5-Turbo
+200k
+Z AI
+Z AI
+38*
+--
+--
+--
+--
+Model
+Providers
+GPT-5.6 Luna (medium)
+1M
+OpenAI
+OpenAI
+38
+$0.87
+167
+2.17
+5.16
+Model
+Providers
+Nemotron 3 Ultra
+262k
+NVIDIA
+NVIDIA
+38
+$0.58
+186
+1.24
+16.20
+Model
+Providers
+Grok 4.3 (high)
+1M
+SpaceXAI
+SpaceXAI
+38
+$0.64
+127
+23.97
+27.92
+Model
+Providers
+DeepSeek V4 Flash (high)
+1M
+DeepSeek
+DeepSeek
+37*
+$0.08
+--
+--
+--
+Model
+Providers
+MiMo-V2.5
+1M
+Xiaomi
+Xiaomi
+37
+$0.06
+72
+3.12
+38.00
+Model
+Providers
+Qwen3.6 27B
+262k
+Alibaba
+Alibaba
+37
+$0.90
+55
+3.79
+115.95
+Model
+Providers
+MiMo-V2-Omni-0327
+256k
+Xiaomi
+Xiaomi
+36*
+--
+--
+--
+--
+Model
+Providers
+Grok 4.3 (medium)
+1M
+SpaceXAI
+SpaceXAI
+36*
+$0.64
+117
+13.72
+17.99
+Model
+Providers
+Grok 4.3 (low)
+1M
+SpaceXAI
+SpaceXAI
+35*
+$0.64
+106
+6.73
+11.47
+Model
+Providers
+GPT-5.5 (Non-reasoning)
+922k
+OpenAI
+OpenAI
+35
+$4.35
+63
+0.90
+8.81
+Model
+Providers
+GLM-5.1
+200k
+Z AI
+Z AI
+35*
+$0.90
+53
+2.27
+11.79
+Model
+Providers
+MiMo-V2-Omni
+256k
+Xiaomi
+Xiaomi
+35*
+--
+--
+--
+--
+Model
+Providers
+Gemini 3.5 Flash (minimal)
+1M
+Google
+Google
+35*
+$1.31
+145
+0.97
+4.41
+Model
+Providers
+Kimi K2.6
+256k
+Kimi
+Kimi
+35*
+$0.70
+44
+2.81
+14.30
+Model
+Providers
+GLM 5V Turbo
+200k
+Z AI
+Z AI
+34*
+--
+--
+--
+--
+Model
+Providers
+Claude Sonnet 4.6 (Non-reasoning, Low Effort)
+1M
+Anthropic
+Anthropic
+34*
+$2.31
+43
+1.24
+12.79
+Model
+Providers
+GLM-5.2
+1M
+Z AI
+Z AI
+34
+$2.52
+73
+1.80
+8.62
+Model
+Providers
+GPT-5.6 Terra (Non-reasoning)
+1M
+OpenAI
+OpenAI
+34
+$2.17
+123
+0.76
+4.82
+Model
+Providers
+KAT-Coder-Pro V2
+256k
+KwaiKAT
+KwaiKAT
+34
+$0.22
+--
+--
+--
+Model
+Providers
+Qwen3.5 397B A17B
+262k
+Alibaba
+Alibaba
+34
+$0.90
+60
+2.51
+64.42
+Model
+Providers
+Hy3-preview
+256k
+Tencent
+Tencent
+34*
+$0.10
+119
+3.13
+24.09
+Model
+Providers
+LongCat 2.0
+1M
+LongCat
+LongCat
+33
+--
+--
+--
+--
+Model
+Providers
+GPT-5.6 Luna (low)
+1M
+OpenAI
+OpenAI
+33
+$0.87
+174
+1.38
+4.24
+Model
+Providers
+MiMo-V2-Flash (Feb 2026)
+256k
+Xiaomi
+Xiaomi
+33*
+--
+--
+--
+--
+Model
+Providers
+Qwen3.5 122B A10B
+262k
+Alibaba
+Alibaba
+32
+$0.68
+134
+2.37
+21.00
+Model
+Providers
+Qwen3.5 397B A17B
+262k
+Alibaba
+Alibaba
+32*
+$0.90
+60
+2.55
+10.89
+Model
+Providers
+Qwen3.6 35B A3B
+262k
+Alibaba
+Alibaba
+32
+$0.37
+143
+2.36
+43.67
+Model
+Providers
+DeepSeek V4 Pro
+1M
+DeepSeek
+DeepSeek
+31*
+$0.18
+63
+1.60
+9.59
+Model
+Providers
+Qwen3.5 Omni Plus
+256k
+Alibaba
+Alibaba
+31*
+$0.84
+55
+2.41
+11.46
+Model
+Providers
+Ring-2.6-1T
+262k
+InclusionAI
+InclusionAI
+31
+$0.52
+127
+3.19
+22.92
+Model
+Providers
+Qwen3.6 27B
+262k
+Alibaba
+Alibaba
+30
+$0.90
+56
+3.85
+12.73
+Model
+Providers
+o3
+200k
+OpenAI
+OpenAI
+30*
+$1.55
+118
+9.01
+13.26
+Model
+Providers
+Step 3.7 Flash
+262k
+StepFun
+StepFun
+30
+$0.18
+378
+0.87
+7.48
+Model
+Providers
+GPT-5.4 nano
+400k
+OpenAI
+OpenAI
+30*
+$0.18
+159
+4.95
+8.09
+Model
+Providers
+Mistral Medium 3.5
+256k
+Mistral
+Mistral
+30
+$1.16
+70
+2.19
+37.95
+Model
+Providers
+GPT-5.4 mini (medium)
+400k
+OpenAI
+OpenAI
+30*
+$0.65
+166
+11.92
+14.94
+Model
+Providers
+Claude 4.5 Haiku
+200k
+Anthropic
+Anthropic
+30
+$0.77
+90
+21.67
+27.19
+Model
+Providers
+Gemma 4 31B
+256k
+Google
+Google
+29
+$0.00
+36
+1.11
+63.83
+Model
+Providers
+GPT-5.5 Instant (June 2026)
+400k
+OpenAI
+OpenAI
+29
+$4.35
+--
+--
+--
+Model
+Providers
+DeepSeek V4 Flash
+1M
+DeepSeek
+DeepSeek
+29*
+$0.06
+115
+1.28
+5.63
+Model
+Providers
+JT-35B-Flash
+256k
+China Mobile
+China Mobile
+28*
+--
+--
+--
+--
+Model
+Providers
+KAT-Coder-Pro V1
+256k
+KwaiKAT
+KwaiKAT
+28*
+--
+--
+--
+--
+Model
+Providers
+MiMo-V2.5-Pro
+1M
+Xiaomi
+Xiaomi
+28*
+$0.36
+61
+2.48
+10.66
+Model
+Providers
+Qwen3.5 122B A10B
+262k
+Alibaba
+Alibaba
+28
+$0.68
+148
+2.34
+5.71
+Model
+Providers
+GPT-5.6 Luna (Non-reasoning)
+1M
+OpenAI
+OpenAI
+27
+$0.87
+176
+0.65
+3.48
+Model
+Providers
+Hy3-preview
+256k
+Tencent
+Tencent
+26*
+$0.10
+118
+3.10
+7.32
+Model
+Providers
+Ling-2.6-1T
+262k
+InclusionAI
+InclusionAI
+26*
+$0.52
+--
+--
+--
+Model
+Providers
+Step 3.5 Flash 2603
+256k
+StepFun
+StepFun
+26*
+$0.06
+298
+0.97
+9.37
+Model
+Providers
+Doubao Seed Code
+256k
+ByteDance Seed
+ByteDance Seed
+26*
+--
+--
+--
+--
+Model
+Providers
+Gemini 2.5 Pro
+1M
+Google
+Google
+26
+$1.34
+135
+22.47
+26.17
+Model
+Providers
+Gemma 4 26B A4B
+256k
+Google
+Google
+26
+$0.13
+--
+--
+--
+Model
+Providers
+NVIDIA Nemotron 3 Super
+1M
+NVIDIA
+NVIDIA
+25
+$0.23
+147
+1.69
+18.74
+Model
+Providers
+Mercury 2
+128k
+Inception
+Inception
+25*
+$0.14
+805
+3.73
+4.36
+Model
+Providers
+Gemini 3.1 Flash-Lite
+1M
+Google
+Google
+25
+$0.22
+278
+6.41
+8.21
+Model
+Providers
+Grok 4.3 (Non-reasoning)
+1M
+SpaceXAI
+SpaceXAI
+25
+$0.64
+112
+0.96
+5.43
+Model
+Providers
+K-EXAONE
+256k
+LG AI Research
+LG AI Research
+25*
+--
+--
+--
+--
+Model
+Providers
+MiMo-V2-Flash
+256k
+Xiaomi
+Xiaomi
+25
+--
+--
+--
+--
+Model
+Providers
+Trinity Large Thinking
+512k
+Arcee AI
+Arcee AI
+24*
+$0.24
+171
+1.18
+15.80
+Model
+Providers
+Qwen3.6 35B A3B
+262k
+Alibaba
+Alibaba
+24
+$0.56
+170
+2.23
+5.18
+Model
+Providers
+gpt-oss-120b (high)
+131k
+OpenAI
+OpenAI
+24
+$0.20
+258
+0.86
+10.56
+Model
+Providers
+Claude 4.5 Haiku
+200k
+Anthropic
+Anthropic
+24*
+$0.77
+87
+1.01
+6.74
+Model
+Providers
+Qwen3.5 35B A3B
+262k
+Alibaba
+Alibaba
+23*
+$0.42
+155
+2.14
+5.36
+Model
+Providers
+EXAONE 4.5 33B
+262k
+LG AI Research
+LG AI Research
+23*
+--
+--
+--
+--
+Model
+Providers
+Command A+
+192k
+Cohere
+Cohere
+23
+$0.00
+192
+0.39
+13.40
+Model
+Providers
+Gemma 4 12B
+256k
+Google
+Google
+22*
+$0.12
+108
+2.55
+25.79
+Model
+Providers
+ERNIE 5.0 Thinking Preview
+128k
+Baidu
+Baidu
+22*
+--
+--
+--
+--
+Model
+Providers
+Gemma 4 31B
+256k
+Google
+Google
+22
+$0.17
+38
+2.25
+15.26
+Model
+Providers
+Nova 2.0 Pro Preview (medium)
+256k
+Amazon
+Amazon
+22
+$1.47
+122
+12.36
+32.83
+Model
+Providers
+Qwen3.5 9B
+262k
+Alibaba
+Alibaba
+21
+$0.11
+59
+1.40
+43.96
+Model
+Providers
+Nemotron Cascade 2 30B A3B
+1M
+NVIDIA
+NVIDIA
+21*
+--
+--
+--
+--
+Model
+Providers
+Qwen3 Coder Next
+256k
+Alibaba
+Alibaba
+21
+$0.43
+101
+1.67
+6.63
+Model
+Providers
+Nova 2.0 Omni (medium)
+1M
+Amazon
+Amazon
+21*
+$0.52
+--
+--
+--
+Model
+Providers
+Apriel-v1.6-15B-Thinker
+128k
+ServiceNow
+ServiceNow
+21*
+$0.00
+--
+--
+--
+Model
+Providers
+Qwen3.5 9B
+262k
+Alibaba
+Alibaba
+20*
+--
+--
+--
+--
+Model
+Providers
+Gemma 4 26B A4B
+256k
+Google
+Google
+20*
+$0.15
+60
+1.16
+9.51
+Model
+Providers
+Qwen3.5 4B
+262k
+Alibaba
+Alibaba
+20*
+$0.04
+21
+0.75
+120.27
+Model
+Providers
+North Mini Code
+256k
+Cohere
+Cohere
+20
+$0.00
+95
+0.30
+26.73
+Model
+Providers
+Nova 2.0 Pro Preview (low)
+256k
+Amazon
+Amazon
+20
+$2.13
+126
+13.05
+32.83
+Model
+Providers
+Mistral Small 4
+256k
+Mistral
+Mistral
+20
+$0.20
+175
+0.77
+15.05
+Model
+Providers
+Devstral 2
+256k
+Mistral
+Mistral
+19
+$0.00
+43
+1.76
+13.27
+Model
+Providers
+Nova 2.0 Lite (medium)
+1M
+Amazon
+Amazon
+19*
+$0.52
+156
+18.37
+34.42
+Model
+Providers
+Qwen3.5 Omni Flash
+256k
+Alibaba
+Alibaba
+19*
+$0.17
+251
+1.81
+3.80
+Model
+Providers
+JT-MINI
+128k
+China Mobile
+China Mobile
+19*
+--
+--
+--
+--
+Model
+Providers
+Nova 2.0 Lite (high)
+1M
+Amazon
+Amazon
+18
+$0.52
+156
+17.62
+33.62
+Model
+Providers
+Magistral Medium 1.2
+128k
+Mistral
+Mistral
+18
+$2.30
+43
+1.81
+60.36
+Model
+Providers
+Nova 2.0 Lite (low)
+1M
+Amazon
+Amazon
+18*
+$0.52
+147
+9.50
+26.55
+Model
+Providers
+HyperNova 60B 2605
+131k
+Multiverse Computing
+Multiverse Computing
+18
+$0.05
+338
+0.95
+8.35
+Model
+Providers
+GPT-5.4 nano
+400k
+OpenAI
+OpenAI
+18*
+$0.18
+166
+0.66
+3.68
+Model
+Providers
+Devstral Small 2
+256k
+Mistral
+Mistral
+17
+$0.00
+65
+1.41
+9.05
+Model
+Providers
+K2 Think V2
+262k
+MBZUAI Institute of Foundation Models
+MBZUAI Institute of Foundation Models
+17
+--
+--
+--
+--
+Model
+Providers
+LongCat Flash Lite
+256k
+LongCat
+LongCat
+17*
+--
+--
+--
+--
+Model
+Providers
+HyperCLOVA X SEED Think (32B)
+128k
+Naver
+Naver
+17*
+--
+--
+--
+--
+Model
+Providers
+K-EXAONE
+256k
+LG AI Research
+LG AI Research
+17*
+--
+--
+--
+--
+Model
+Providers
+Qwen3 Next 80B A3B
+262k
+Alibaba
+Alibaba
+17
+$1.05
+184
+2.18
+15.77
+Model
+Providers
+GPT-5.4 mini
+400k
+OpenAI
+OpenAI
+17*
+$0.65
+174
+0.74
+3.61
+Model
+Providers
+Nova 2.0 Omni (low)
+1M
+Amazon
+Amazon
+17*
+$0.52
+--
+--
+--
+Model
+Providers
+Mi:dm K 2.5 Pro
+128k
+Korea Telecom
+Korea Telecom
+16*
+--
+--
+--
+--
+Model
+Providers
+Qwen3.5 4B
+262k
+Alibaba
+Alibaba
+16*
+$0.04
+22
+0.78
+23.58
+Model
+Providers
+Mistral Large 3
+256k
+Mistral
+Mistral
+16
+$0.60
+51
+1.17
+10.96
+Model
+Providers
+INTELLECT-3
+131k
+Prime Intellect
+Prime Intellect
+16*
+--
+--
+--
+--
+Model
+Providers
+Solar Open 100B
+128k
+Upstage
+Upstage
+15*
+--
+--
+--
+--
+Model
+Providers
+Nemotron 3 Nano Omni 30B A3B Reasoning
+256k
+NVIDIA
+NVIDIA
+15*
+$0.10
+325
+0.98
+8.67
+Model
+Providers
+gpt-oss-120b (low)
+131k
+OpenAI
+OpenAI
+15
+$0.20
+322
+0.85
+8.62
+Model
+Providers
+gpt-oss-20b (high)
+131k
+OpenAI
+OpenAI
+15
+$0.07
+196
+0.82
+13.60
+Model
+Providers
+Nova 2.0 Pro Preview
+256k
+Amazon
+Amazon
+14
+$2.13
+110
+1.06
+5.61
+Model
+Providers
+gpt-oss-20b (low)
+131k
+OpenAI
+OpenAI
+14*
+$0.07
+226
+0.86
+11.93
+Model
+Providers
+Llama 4 Maverick
+1M
+Meta
+Meta
+14
+$0.34
+102
+1.04
+5.92
+Model
+Providers
+K2-V2 (high)
+512k
+MBZUAI Institute of Foundation Models
+MBZUAI Institute of Foundation Models
+14*
+--
+--
+--
+--
+Model
+Providers
+NVIDIA Nemotron 3 Nano
+1M
+NVIDIA
+NVIDIA
+14
+$0.07
+142
+1.24
+18.88
+Model
+Providers
+Solar Pro 3
+128k
+Upstage
+Upstage
+14
+--
+--
+--
+--
+Model
+Providers
+Ling 2.6 Flash
+262k
+InclusionAI
+InclusionAI
+14
+$0.06
+159
+1.19
+4.32
+Model
+Providers
+Qwen3 Next 80B A3B
+262k
+Alibaba
+Alibaba
+14*
+$0.65
+182
+2.21
+4.95
+Model
+Providers
+Tri-21B-think Preview
+32k
+Trillion Labs
+Trillion Labs
+14*
+--
+--
+--
+--
+Model
+Providers
+DiffusionGemma 26B A4B
+256k
+Google
+Google
+13
+--
+--
+--
+--
+Model
+Providers
+Gemma 4 12B (Non-reasoning)
+262k
+Google
+Google
+13*
+$0.12
+108
+2.77
+7.41
+Model
+Providers
+Motif-2-12.7B
+128k
+Motif Technologies
+Motif Technologies
+13*
+--
+--
+--
+--
+Model
+Providers
+Nova Premier
+1M
+Amazon
+Amazon
+13*
+$2.18
+32
+2.87
+18.37
+Model
+Providers
+Gemma 4 E4B
+128k
+Google
+Google
+12*
+--
+--
+--
+--
+Model
+Providers
+K2-V2 (medium)
+512k
+MBZUAI Institute of Foundation Models
+MBZUAI Institute of Foundation Models
+12*
+--
+--
+--
+--
+Model
+Providers
+Llama Nemotron Super 49B v1.5
+128k
+NVIDIA
+NVIDIA
+12*
+$0.40
+51
+1.31
+50.61
+Model
+Providers
+Mistral Small 4
+256k
+Mistral
+Mistral
+12*
+$0.20
+151
+0.83
+4.14
+Model
+Providers
+Tri-21B-Think
+32k
+Trillion Labs
+Trillion Labs
+12*
+--
+--
+--
+--
+Model
+Providers
+MiniCPM5-1B
+128k
+OpenBMB
+OpenBMB
+12*
+--
+--
+--
+--
+Model
+Providers
+Sarvam 105B (high)
+128k
+Sarvam
+Sarvam
+12*
+$0.04
+93
+2.04
+28.82
+Model
+Providers
+Nova 2.0 Lite
+1M
+Amazon
+Amazon
+12*
+$0.52
+142
+1.05
+4.57
+Model
+Providers
+MiniCPM5-1B
+128k
+OpenBMB
+OpenBMB
+12*
+--
+--
+--
+--
+Model
+Providers
+Magistral Small 1.2
+128k
+Mistral
+Mistral
+11
+$0.60
+81
+0.95
+31.90
+Model
+Providers
+Nanbeige4.1-3B
+256k
+Nanbeige
+Nanbeige
+11
+--
+--
+--
+--
+Model
+Providers
+Ministral 3 14B
+256k
+Mistral
+Mistral
+11
+$0.20
+64
+0.91
+8.67
+Model
+Providers
+EXAONE 4.0 32B
+131k
+LG AI Research
+LG AI Research
+11*
+--
+--
+--
+--
+Model
+Providers
+Nova 2.0 Omni
+1M
+Amazon
+Amazon
+11*
+$0.52
+--
+--
+--
+Model
+Providers
+Llama 4 Scout
+10M
+Meta
+Meta
+10
+$0.22
+95
+0.90
+6.18
+Model
+Providers
+Hermes 4 70B
+128k
+Nous Research
+Nous Research
+10*
+$0.16
+84
+1.38
+31.09
+Model
+Providers
+Falcon-H1R-7B
+256k
+TII UAE
+TII UAE
+10*
+--
+--
+--
+--
+Model
+Providers
+Qwen3 Omni 30B A3B
+65.5k
+Alibaba
+Alibaba
+10*
+$0.32
+100
+1.90
+26.93
+Model
+Providers
+Step3 VL 10B
+65.5k
+StepFun
+StepFun
+9*
+--
+--
+--
+--
+Model
+Providers
+Llama 3.3 70B
+128k
+Meta
+Meta
+9
+$0.59
+85
+1.61
+7.46
+Model
+Providers
+Gemma 4 E2B
+128k
+Google
+Google
+9*
+--
+--
+--
+--
+Model
+Providers
+Llama Nemotron Ultra
+128k
+NVIDIA
+NVIDIA
+9*
+$0.72
+52
+2.35
+50.04
+Model
+Providers
+ERNIE 4.5 300B A47B
+131k
+Baidu
+Baidu
+9*
+$0.36
+--
+--
+--
+Model
+Providers
+Hermes 4 405B
+128k
+Nous Research
+Nous Research
+9*
+$1.20
+34
+2.48
+75.44
+Model
+Providers
+Solar Pro 2
+65.5k
+Upstage
+Upstage
+9*
+--
+--
+--
+--
+Model
+Providers
+NVIDIA Nemotron Nano 12B v2 VL
+128k
+NVIDIA
+NVIDIA
+9*
+$0.24
+271
+0.48
+9.72
+Model
+Providers
+Ministral 3 8B
+256k
+Mistral
+Mistral
+9
+$0.15
+89
+0.77
+6.38
+Model
+Providers
+Gemma 4 E4B
+128k
+Google
+Google
+9*
+--
+--
+--
+--
+Model
+Providers
+Granite 4.1 30B
+131k
+IBM
+IBM
+9
+--
+--
+--
+--
+Model
+Providers
+NVIDIA Nemotron Nano 9B V2
+131k
+NVIDIA
+NVIDIA
+9*
+$0.05
+77
+9.56
+41.93
+Model
+Providers
+Hermes 4 405B
+128k
+Nous Research
+Nous Research
+9*
+$1.20
+33
+2.38
+17.67
+Model
+Providers
+NVIDIA Nemotron 3 Nano 4B
+262k
+NVIDIA
+NVIDIA
+9
+--
+--
+--
+--
+Model
+Providers
+Llama Nemotron Super 49B v1.5
+128k
+NVIDIA
+NVIDIA
+9*
+$0.40
+51
+1.24
+11.08
+Model
+Providers
+K2-V2 (low)
+512k
+MBZUAI Institute of Foundation Models
+MBZUAI Institute of Foundation Models
+9*
+--
+--
+--
+--
+Model
+Providers
+Kimi Linear 48B A3B Instruct
+1M
+Kimi
+Kimi
+9*
+--
+--
+--
+--
+Model
+Providers
+Llama 3.1 405B
+128k
+Meta
+Meta
+9*
+$3.13
+79
+2.44
+8.80
+Model
+Providers
+LFM2.5-8B-A1B
+32.8k
+Liquid AI
+Liquid AI
+8*
+$0.00
+336
+1.97
+9.42
+Model
+Providers
+Ring-flash-2.0
+128k
+InclusionAI
+InclusionAI
+8*
+$0.18
+--
+--
+--
+Model
+Providers
+Olmo 3.1 32B Think
+65.5k
+Allen Institute for AI
+Allen Institute for AI
+8*
+$0.00
+--
+--
+--
+Model
+Providers
+Solar Pro 2
+65.5k
+Upstage
+Upstage
+8*
+--
+--
+--
+--
+Model
+Providers
+Command A
+256k
+Cohere
+Cohere
+8*
+$3.25
+55
+1.67
+10.68
+Model
+Providers
+Qwen3.5 2B
+262k
+Alibaba
+Alibaba
+8
+--
+--
+--
+--
+Model
+Providers
+Llama 3.1 Nemotron 70B
+128k
+NVIDIA
+NVIDIA
+8*
+$1.20
+279
+4.73
+6.53
+Model
+Providers
+NVIDIA Nemotron 3 Nano
+1M
+NVIDIA
+NVIDIA
+7*
+$0.07
+120
+0.94
+5.10
+Model
+Providers
+NVIDIA Nemotron Nano 9B V2
+131k
+NVIDIA
+NVIDIA
+7*
+$0.06
+140
+4.17
+7.74
+Model
+Providers
+Hermes 4 70B
+128k
+Nous Research
+Nous Research
+7*
+$0.16
+82
+1.42
+7.53
+Model
+Providers
+Ministral 3 3B
+256k
+Mistral
+Mistral
+7
+$0.10
+177
+0.62
+3.44
+Model
+Providers
+Granite 4.1 8B
+131k
+IBM
+IBM
+7*
+$0.06
+115
+0.80
+5.13
+Model
+Providers
+Sarvam 30B (high)
+65.5k
+Sarvam
+Sarvam
+7*
+$0.03
+167
+1.86
+16.83
+Model
+Providers
+Olmo 3.1 32B Instruct
+65.5k
+Allen Institute for AI
+Allen Institute for AI
+6*
+--
+--
+--
+--
+Model
+Providers
+Gemma 4 E2B
+128k
+Google
+Google
+6*
+--
+--
+--
+--
+Model
+Providers
+R1 1776
+128k
+Perplexity
+Perplexity
+6*
+--
+--
+--
+--
+Model
+Providers
+Llama 3.2 90B (Vision)
+128k
+Meta
+Meta
+6*
+$1.38
+57
+1.11
+9.83
+Model
+Providers
+Phi-4 Mini
+128k
+Microsoft
+Microsoft
+6
+$0.00
+45
+0.85
+12.08
+Model
+Providers
+EXAONE 4.0 32B
+131k
+LG AI Research
+LG AI Research
+6*
+--
+--
+--
+--
+Model
+Providers
+Qwen3.5 2B
+262k
+Alibaba
+Alibaba
+6
+--
+--
+--
+--
+Model
+Providers
+Qwen3.5 0.8B
+262k
+Alibaba
+Alibaba
+5
+--
+--
+--
+--
+Model
+Providers
+DeepHermes 3 - Mistral 24B
+32k
+Nous Research
+Nous Research
+5*
+--
+--
+--
+--
+Model
+Providers
+Jamba 1.7 Large
+256k
+AI21 Labs
+AI21 Labs
+5*
+$2.60
+54
+1.49
+10.77
+Model
+Providers
+Granite 4.0 H Small
+128k
+IBM
+IBM
+5*
+$0.08
+411
+10.25
+11.47
+Model
+Providers
+Qwen3 Omni 30B A3B
+65.5k
+Alibaba
+Alibaba
+5*
+$0.32
+96
+1.89
+7.12
+Model
+Providers
+LFM2 24B A2B
+32.8k
+Liquid AI
+Liquid AI
+5*
+--
+--
+--
+--
+Model
+Providers
+Phi-4
+16k
+Microsoft
+Microsoft
+5*
+$0.16
+31
+3.63
+20.00
+Model
+Providers
+Nova Micro
+130k
+Amazon
+Amazon
+5*
+$0.03
+283
+1.09
+2.86
+Model
+Providers
+Granite 4.1 3B
+131k
+IBM
+IBM
+5
+--
+--
+--
+--
+Model
+Providers
+NVIDIA Nemotron Nano 12B v2 VL
+128k
+NVIDIA
+NVIDIA
+5*
+$0.24
+214
+1.11
+3.45
+Model
+Providers
+Phi-4 Multimodal
+128k
+Microsoft
+Microsoft
+5*
+$0.00
+17
+0.83
+30.85
+Model
+Providers
+Qwen3.5 0.8B
+262k
+Alibaba
+Alibaba
+4*
+--
+--
+--
+--
+Model
+Providers
+MiniCPM-V 4.6 1.3B
+262k
+OpenBMB
+OpenBMB
+4
+--
+--
+--
+--
+Model
+Providers
+Jamba Reasoning 3B
+262k
+AI21 Labs
+AI21 Labs
+4*
+--
+--
+--
+--
+Model
+Providers
+Reka Flash 3
+128k
+Reka AI
+Reka AI
+4*
+$0.26
+--
+--
+--
+Model
+Providers
+Olmo 3 7B Think
+65.5k
+Allen Institute for AI
+Allen Institute for AI
+4*
+--
+--
+--
+--
+Model
+Providers
+Molmo 7B-D
+4.1k
+Allen Institute for AI
+Allen Institute for AI
+4*
+--
+--
+--
+--
+Model
+Providers
+Ling-mini-2.0
+131k
+InclusionAI
+InclusionAI
+4*
+--
+--
+--
+--
+Model
+Providers
+Llama 3.2 11B (Vision)
+128k
+Meta
+Meta
+3*
+$0.35
+48
+0.73
+11.14
+Model
+Providers
+Exaone 4.0 1.2B
+64k
+LG AI Research
+LG AI Research
+3*
+--
+--
+--
+--
+Model
+Providers
+Olmo 3 7B
+65.5k
+Allen Institute for AI
+Allen Institute for AI
+3*
+$0.11
+--
+--
+--
+Model
+Providers
+Exaone 4.0 1.2B
+64k
+LG AI Research
+LG AI Research
+3*
+--
+--
+--
+--
+Model
+Providers
+LFM2.5-1.2B-Thinking
+32k
+Liquid AI
+Liquid AI
+3*
+--
+--
+--
+--
+Model
+Providers
+Jamba 1.7 Mini
+258k
+AI21 Labs
+AI21 Labs
+3*
+--
+--
+--
+--
+Model
+Providers
+LFM2 2.6B
+32.8k
+Liquid AI
+Liquid AI
+3*
+--
+--
+--
+--
+Model
+Providers
+LFM2.5-1.2B-Instruct
+32k
+Liquid AI
+Liquid AI
+3*
+--
+--
+--
+--
+Model
+Providers
+Granite 4.0 H 1B
+128k
+IBM
+IBM
+3*
+--
+--
+--
+--
+Model
+Providers
+Gemma 3 270M
+32k
+Google
+Google
+2*
+--
+--
+--
+--
+Model
+Providers
+Apertus 70B Instruct
+65.5k
+Swiss AI Initiative
+Swiss AI Initiative
+2*
+$1.03
+--
+--
+--
+Model
+Providers
+Granite 4.0 Micro
+128k
+IBM
+IBM
+2*
+--
+--
+--
+--
+Model
+Providers
+DeepHermes 3 - Llama-3.1 8B
+128k
+Nous Research
+Nous Research
+2*
+--
+--
+--
+--
+Model
+Providers
+Granite 4.0 1B
+128k
+IBM
+IBM
+2*
+--
+--
+--
+--
+Model
+Providers
+Molmo2-8B
+36.9k
+Allen Institute for AI
+Allen Institute for AI
+2*
+--
+--
+--
+--
+Model
+Providers
+LFM2 8B A1B
+32.8k
+Liquid AI
+Liquid AI
+2*
+--
+--
+--
+--
+Model
+Providers
+LFM2.5-VL-1.6B
+32k
+Liquid AI
+Liquid AI
+1*
+$0.00
+383
+1.24
+2.55
+Model
+Providers
+Granite 4.0 350M
+32.8k
+IBM
+IBM
+1*
+--
+--
+--
+--
+Model
+Providers
+Tiny Aya Global
+8.19k
+Cohere
+Cohere
+1*
+$0.00
+--
+--
+--
+Model
+Providers
+Apertus 8B Instruct
+65.5k
+Swiss AI Initiative
+Swiss AI Initiative
+1*
+$0.11
+--
+--
+--
+Model
+Providers
+Granite 4.0 H 350M
+32.8k
+IBM
+IBM
+1*
+--
+--
+--
+--
+Model
+Providers
+Claude Sonnet 5 (low)
+1M
+Anthropic
+Anthropic
+--
+$1.54
+61
+1.98
+10.17
+Model
+Providers
+EXAONE 4.5 33B
+262k
+LG AI Research
+LG AI Research
+--
+--
+--
+--
+--
+Model
+Providers
+Claude Sonnet 5 (xhigh)
+1M
+Anthropic
+Anthropic
+--
+$1.54
+70
+32.99
+40.16
+Model
+Providers
+Gemini 3 Deep Think
+128k
+Google
+Google
+--
+--
+--
+--
+--
+Model
+Providers
+Claude Sonnet 5 (high)
+1M
+Anthropic
+Anthropic
+--
+$1.54
+65
+13.51
+21.26
+Model
+Providers
+Mi:dm K 2.5 Pro Preview
+128k
+Korea Telecom
+Korea Telecom
+--
+--
+--
+--
+--
+Model
+Providers
+GPT-5.5 Pro (xhigh)
+922k
+OpenAI
+OpenAI
+--
+--
+--
+--
+--
+Model
+Providers
+Cogito v2.1
+128k
+Deep Cogito
+Deep Cogito
+--
+$1.25
+--
+--
+--
+Model
+Providers
+Claude Sonnet 5 (medium)
+1M
+Anthropic
+Anthropic
+--
+$1.54
+62
+2.75
+10.76
+Model
+Providers
+Key definitions
+
+Context Window
+
+
+Output Speed
+
+
+Latency (Time to First Token)
+
+
+Price
+
+
+Output Price
+
+
+Input Price
+
+
+Time Period
+
+Frequently Asked Questions
+Which AI model ranks #1 on the LLM Leaderboard?
+
+What are the top models on the LLM Leaderboard?
+
+Which AI model has the fastest output speed?
+
+Which AI model is the most affordable?
+
+Which is the best open weights model on the leaderboard?
+
+What are the top open weights models on the leaderboard?
+
+Which is the best reasoning model on the leaderboard?
+
+How do I filter models on the leaderboard?
+
+Where can I see more detailed metrics for a model?
+
+
+Get notified about new articles
+
+Email address
+What's your email?
+Subscribe
+Artificial Analysis
+
+Explore
+
+LLM Leaderboard
+Image Arena
+Video Arena
+AI Agents
+Evaluations
+Company
+
+Methodology
+Services
+Contact
+Articles
+FAQ
+X
+LinkedIn
+YouTube
+Rednote
+Discord
+© 2026 Artificial Analysis
+
+Terms of Use
+Privacy Policy

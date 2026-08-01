@@ -1,0 +1,3 @@
+# CSV artifacts preserve source fields losslessly, including quoted embedded
+# newlines and occasional trailing spaces inherited from upstream datasets.
+*.csv -whitespace

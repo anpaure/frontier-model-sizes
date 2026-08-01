@@ -1,0 +1,47 @@
+{
+  "observations": 4117,
+  "measurements": 12329,
+  "observationsBySource": {
+    "AA": 274,
+    "ECI": 211,
+    "Epoch": 3555,
+    "METR": 27,
+    "No-CoT": 50
+  },
+  "aaRows": 274,
+  "aaUniqueDisplayNames": 241,
+  "aaSelectedForModelLevel": 241,
+  "aaUniqueBaseCreatorPairs": 191,
+  "aaEpochStatus": {
+    "ambiguous_epoch_candidate": 6,
+    "matched_base_only": 8,
+    "matched_base_only_duplicate_label": 1,
+    "matched_checkpoint": 146,
+    "matched_checkpoint_duplicate_label": 1,
+    "matched_checkpoint_system_configuration": 1,
+    "matched_family_record": 2,
+    "not_in_epoch_after_manual_review": 109
+  },
+  "aaEpochLinkLevel": {
+    "base_only": 9,
+    "candidate_only": 6,
+    "checkpoint": 147,
+    "checkpoint_system_configuration": 1,
+    "family_record": 2,
+    "none": 109
+  },
+  "duplicateEpochLabels": [
+    "Gemini 3.1 Pro",
+    "GLM-5",
+    "SAM 3",
+    "Eurus-2-7B-PRIME",
+    "Tulu 3 (Tülu 3) 70B"
+  ],
+  "outputs": {
+    "observationsPath": "./outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_2026-07-17.csv",
+    "measurementsPath": "./outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_measurements_long_2026-07-17.csv",
+    "aaAuditPath": "./outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_epoch_match_audit_2026-07-17.csv",
+    "manifestPath": "./outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_source_manifest_2026-07-17.csv",
+    "metrPath": "./sources/metr_horizon_user_snapshot_2026-07-17.csv"
+  }
+}

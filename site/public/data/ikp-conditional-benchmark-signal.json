@@ -1,0 +1,917 @@
+{
+  "decision": {
+    "change_live_ikp_weight": false,
+    "conditional_incremental_signal_corroborated": true,
+    "gpqa_passes_all_four_sensitivity_specifications": true,
+    "mmlu_passing_specifications_out_of_four": 3,
+    "mmlu_pro_passing_specifications_out_of_four": 0,
+    "primary_parameter_signal_promoted": false,
+    "primary_parameter_signal_reason": "IKP is retained as a direct Fable sensitivity because it does not pass every encoded incremental-validation gate.",
+    "reason": "GPQA shows robust incremental IKP information in all four date/architecture/training-weight sensitivities, and MMLU passes three of four. This strengthens the case that IKP is not merely a standard-benchmark proxy. The conditional audit does not independently set or override the live weight: it retains the primary IKP audit's current decision because both analyses use the same IKP source, Fable remains an extrapolation, and no Sol IKP result exists.",
+    "retain_current_final_fable_ikp_weight": 0.0,
+    "simpleqa_has_sufficient_strict_predictions": false
+  },
+  "generated_on": "2026-07-18",
+  "heldout_results": {
+    "gpqa_diamond": {
+      "label": "GPQA Diamond",
+      "panel_vendors": 12,
+      "passing_specifications": 4,
+      "specifications": {
+        "row_equal__score_date": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.7240923885445293,
+            "families": 10,
+            "mean_absolute_log10_error": 0.9460650861560738,
+            "median_multiplicative_error": 4.59771454356453,
+            "n": 18,
+            "p80_multiplicative_error": 34.111814232319794,
+            "rmse_log10": 1.2350152177378537,
+            "signed_bias_factor": 0.2937764157257633,
+            "vendors": 9,
+            "within_2x": 0.1111111111111111
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.2906065374401178,
+            "families": 10,
+            "mean_absolute_log10_error": 0.3349036192697193,
+            "median_multiplicative_error": 2.187753333641501,
+            "n": 18,
+            "p80_multiplicative_error": 2.609532378722981,
+            "rmse_log10": 0.3810784713421403,
+            "signed_bias_factor": 0.631483610733311,
+            "vendors": 9,
+            "within_2x": 0.4444444444444444
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.7740843388538974,
+              -0.15355966920743624
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.4334858511044114,
+            "probability_candidate_better": 0.9986,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        },
+        "row_equal__score_date_arch": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.6243315820107482,
+            "families": 10,
+            "mean_absolute_log10_error": 0.7521133862993207,
+            "median_multiplicative_error": 3.4040606766666075,
+            "n": 18,
+            "p80_multiplicative_error": 19.704544856655218,
+            "rmse_log10": 0.8833863441940786,
+            "signed_bias_factor": 0.5361663245487814,
+            "vendors": 9,
+            "within_2x": 0.1111111111111111
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.244532375607055,
+            "families": 10,
+            "mean_absolute_log10_error": 0.3162547317308498,
+            "median_multiplicative_error": 1.7002508318984102,
+            "n": 18,
+            "p80_multiplicative_error": 3.8730746093199064,
+            "rmse_log10": 0.4186824089697873,
+            "signed_bias_factor": 0.6281075960541636,
+            "vendors": 9,
+            "within_2x": 0.6111111111111112
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.5105474880408376,
+              -0.26223518936315815
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.37979920640369325,
+            "probability_candidate_better": 1.0,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        },
+        "vendor_equal__score_date": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.9130704851079362,
+            "families": 10,
+            "mean_absolute_log10_error": 1.1718331469945704,
+            "median_multiplicative_error": 6.008878078808029,
+            "n": 18,
+            "p80_multiplicative_error": 104.71756268167648,
+            "rmse_log10": 1.6139585344757623,
+            "signed_bias_factor": 0.12977353088707558,
+            "vendors": 9,
+            "within_2x": 0.1111111111111111
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.3509300596170001,
+            "families": 10,
+            "mean_absolute_log10_error": 0.3757796963396754,
+            "median_multiplicative_error": 2.1841015768653658,
+            "n": 18,
+            "p80_multiplicative_error": 3.697331282368114,
+            "rmse_log10": 0.41912536831817576,
+            "signed_bias_factor": 0.5462104375853398,
+            "vendors": 9,
+            "within_2x": 0.3888888888888889
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -1.060039180778083,
+              -0.1841244161635237
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.5621404254909362,
+            "probability_candidate_better": 0.9999,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        },
+        "vendor_equal__score_date_arch": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.7157931095919875,
+            "families": 10,
+            "mean_absolute_log10_error": 0.8771792780854436,
+            "median_multiplicative_error": 5.613159765029762,
+            "n": 18,
+            "p80_multiplicative_error": 26.416817740925993,
+            "rmse_log10": 1.0244013204886004,
+            "signed_bias_factor": 0.5110920218410424,
+            "vendors": 9,
+            "within_2x": 0.05555555555555555
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.2830752918616357,
+            "families": 10,
+            "mean_absolute_log10_error": 0.36544291695641024,
+            "median_multiplicative_error": 1.8469192790440137,
+            "n": 18,
+            "p80_multiplicative_error": 4.776460069154004,
+            "rmse_log10": 0.4730338788652374,
+            "signed_bias_factor": 0.6076739367606564,
+            "vendors": 9,
+            "within_2x": 0.5
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.5937833314751207,
+              -0.28126428657889857
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.43271781773035184,
+            "probability_candidate_better": 1.0,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 9
+          },
+          "passes_predeclared_gate": true
+        }
+      },
+      "strict_prediction_models": 18,
+      "strict_prediction_vendors": 9,
+      "weight_base_panel_rows": 30
+    },
+    "mmlu": {
+      "label": "MMLU",
+      "panel_vendors": 13,
+      "passing_specifications": 3,
+      "specifications": {
+        "row_equal__score_date": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.5207040766379366,
+            "families": 11,
+            "mean_absolute_log10_error": 0.4983450238413814,
+            "median_multiplicative_error": 2.663334840957525,
+            "n": 16,
+            "p80_multiplicative_error": 6.033739698247343,
+            "rmse_log10": 0.5691441981461052,
+            "signed_bias_factor": 0.9159010437755217,
+            "vendors": 11,
+            "within_2x": 0.3125
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.25919791040541623,
+            "families": 11,
+            "mean_absolute_log10_error": 0.2550047270491792,
+            "median_multiplicative_error": 1.700712250066151,
+            "n": 16,
+            "p80_multiplicative_error": 2.4014711097355814,
+            "rmse_log10": 0.32387197437211096,
+            "signed_bias_factor": 0.8957597847998175,
+            "vendors": 11,
+            "within_2x": 0.625
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.38390388682672094,
+              -0.13861057492811732
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.2615061662325204,
+            "probability_candidate_better": 0.9999,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": true
+        },
+        "row_equal__score_date_arch": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.36750871214593417,
+            "families": 11,
+            "mean_absolute_log10_error": 0.3762623404401508,
+            "median_multiplicative_error": 1.9979187091680137,
+            "n": 16,
+            "p80_multiplicative_error": 3.356360761737142,
+            "rmse_log10": 0.46501809787047466,
+            "signed_bias_factor": 1.0193484414602099,
+            "vendors": 11,
+            "within_2x": 0.5
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.262755246439716,
+            "families": 11,
+            "mean_absolute_log10_error": 0.25211498253784204,
+            "median_multiplicative_error": 1.4326322900062465,
+            "n": 16,
+            "p80_multiplicative_error": 3.18782687361285,
+            "rmse_log10": 0.344496595104772,
+            "signed_bias_factor": 0.9358435711311702,
+            "vendors": 11,
+            "within_2x": 0.6875
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.18320001199589195,
+              -0.029236655562980194
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.10475346570621823,
+            "probability_candidate_better": 0.99035,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": true
+        },
+        "vendor_equal__score_date": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.5832063190072259,
+            "families": 11,
+            "mean_absolute_log10_error": 0.5514590193112453,
+            "median_multiplicative_error": 3.2363905111231683,
+            "n": 16,
+            "p80_multiplicative_error": 6.965046169377063,
+            "rmse_log10": 0.604648794971287,
+            "signed_bias_factor": 1.1562520971231423,
+            "vendors": 11,
+            "within_2x": 0.1875
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.29446642071895784,
+            "families": 11,
+            "mean_absolute_log10_error": 0.26951418706064056,
+            "median_multiplicative_error": 1.7109002479259052,
+            "n": 16,
+            "p80_multiplicative_error": 2.781248162006824,
+            "rmse_log10": 0.33859914147688397,
+            "signed_bias_factor": 0.889503414417476,
+            "vendors": 11,
+            "within_2x": 0.5625
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.41916375259653355,
+              -0.15754465214084107
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.288739898288268,
+            "probability_candidate_better": 1.0,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": true
+        },
+        "vendor_equal__score_date_arch": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.3873776592982528,
+            "families": 11,
+            "mean_absolute_log10_error": 0.38749989793641615,
+            "median_multiplicative_error": 1.9492990151144445,
+            "n": 16,
+            "p80_multiplicative_error": 4.396697010861663,
+            "rmse_log10": 0.47985667914203206,
+            "signed_bias_factor": 0.9343389124009392,
+            "vendors": 11,
+            "within_2x": 0.5
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.37543029817834894,
+            "families": 11,
+            "mean_absolute_log10_error": 0.3365519126422199,
+            "median_multiplicative_error": 1.8215072273228223,
+            "n": 16,
+            "p80_multiplicative_error": 3.383245724749747,
+            "rmse_log10": 0.4192422700746767,
+            "signed_bias_factor": 0.8838009608018019,
+            "vendors": 11,
+            "within_2x": 0.625
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.13328420404533647,
+              0.10450872583877673
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.01194736111990381,
+            "probability_candidate_better": 0.5564,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 11
+          },
+          "passes_predeclared_gate": false
+        }
+      },
+      "strict_prediction_models": 16,
+      "strict_prediction_vendors": 11,
+      "weight_base_panel_rows": 30
+    },
+    "mmlu_pro": {
+      "label": "MMLU-Pro",
+      "panel_vendors": 11,
+      "passing_specifications": 0,
+      "specifications": {
+        "row_equal__score_date": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.4351861125012683,
+            "families": 8,
+            "mean_absolute_log10_error": 0.3742430871721119,
+            "median_multiplicative_error": 2.6847070324881184,
+            "n": 15,
+            "p80_multiplicative_error": 3.384720266087009,
+            "rmse_log10": 0.43849792139203003,
+            "signed_bias_factor": 0.897870793365192,
+            "vendors": 7,
+            "within_2x": 0.4
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.3196636432486434,
+            "families": 8,
+            "mean_absolute_log10_error": 0.33952311550607556,
+            "median_multiplicative_error": 2.248882896415589,
+            "n": 15,
+            "p80_multiplicative_error": 3.0878091917381894,
+            "rmse_log10": 0.39104516760038177,
+            "signed_bias_factor": 0.5850495645061375,
+            "vendors": 7,
+            "within_2x": 0.4
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.3270424988616606,
+              0.015639574664357704
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.11552246925262503,
+            "probability_candidate_better": 0.86475,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        },
+        "row_equal__score_date_arch": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.4211300044470142,
+            "families": 8,
+            "mean_absolute_log10_error": 0.42948374941499473,
+            "median_multiplicative_error": 2.0709581454394512,
+            "n": 15,
+            "p80_multiplicative_error": 4.652061571447848,
+            "rmse_log10": 0.5108629816964861,
+            "signed_bias_factor": 0.8682978045675841,
+            "vendors": 7,
+            "within_2x": 0.4
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.26134691733723153,
+            "families": 8,
+            "mean_absolute_log10_error": 0.3057555876490108,
+            "median_multiplicative_error": 1.9167429922091468,
+            "n": 15,
+            "p80_multiplicative_error": 2.5970257913665806,
+            "rmse_log10": 0.3873112702589671,
+            "signed_bias_factor": 0.6689555389397828,
+            "vendors": 7,
+            "within_2x": 0.5333333333333333
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.35216468492316483,
+              0.03059161888487331
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.15978308710978265,
+            "probability_candidate_better": 0.91135,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        },
+        "vendor_equal__score_date": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.5052574797486046,
+            "families": 8,
+            "mean_absolute_log10_error": 0.3995081792973925,
+            "median_multiplicative_error": 2.284431757599048,
+            "n": 15,
+            "p80_multiplicative_error": 2.93539950717968,
+            "rmse_log10": 0.466053986212549,
+            "signed_bias_factor": 0.5748011264125554,
+            "vendors": 7,
+            "within_2x": 0.26666666666666666
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.3778007893379444,
+            "families": 8,
+            "mean_absolute_log10_error": 0.40020549351120177,
+            "median_multiplicative_error": 2.7323061064528846,
+            "n": 15,
+            "p80_multiplicative_error": 3.454565914841731,
+            "rmse_log10": 0.44771238407609254,
+            "signed_bias_factor": 0.4916637076451873,
+            "vendors": 7,
+            "within_2x": 0.3333333333333333
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.3692795927652997,
+              0.07506627674928826
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.12745669041066027,
+            "probability_candidate_better": 0.8172,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        },
+        "vendor_equal__score_date_arch": {
+          "baseline": {
+            "equal_vendor_mean_absolute_log10_error": 0.4384209477583711,
+            "families": 8,
+            "mean_absolute_log10_error": 0.48610829673256045,
+            "median_multiplicative_error": 2.7357031077445337,
+            "n": 15,
+            "p80_multiplicative_error": 6.366815656778418,
+            "rmse_log10": 0.5689529155535231,
+            "signed_bias_factor": 0.959358999935336,
+            "vendors": 7,
+            "within_2x": 0.3333333333333333
+          },
+          "candidate_with_ikp": {
+            "equal_vendor_mean_absolute_log10_error": 0.2824048775114326,
+            "families": 8,
+            "mean_absolute_log10_error": 0.33147440234404973,
+            "median_multiplicative_error": 2.0213229261365764,
+            "n": 15,
+            "p80_multiplicative_error": 2.8918793626270163,
+            "rmse_log10": 0.41148718009633656,
+            "signed_bias_factor": 0.6679361105243997,
+            "vendors": 7,
+            "within_2x": 0.4666666666666667
+          },
+          "paired_vendor_bootstrap": {
+            "ci_90": [
+              -0.3636044925002787,
+              0.051828147776413994
+            ],
+            "metric": "equal-vendor mean absolute log10 error; IKP candidate minus benchmark/date baseline",
+            "observed_delta": -0.15601607024693848,
+            "probability_candidate_better": 0.8817,
+            "random_seed": 20260718,
+            "samples": 20000,
+            "vendors": 7
+          },
+          "passes_predeclared_gate": false
+        }
+      },
+      "strict_prediction_models": 15,
+      "strict_prediction_vendors": 7,
+      "weight_base_panel_rows": 25
+    },
+    "simpleqa": {
+      "label": "SimpleQA",
+      "panel_vendors": 5,
+      "passing_specifications": 0,
+      "specifications": {
+        "row_equal__score_date": {
+          "baseline": {
+            "n": 0,
+            "vendors": 0
+          },
+          "candidate_with_ikp": {
+            "n": 0,
+            "vendors": 0
+          },
+          "paired_vendor_bootstrap": {
+            "samples": 0,
+            "vendors": 0
+          },
+          "passes_predeclared_gate": false
+        },
+        "row_equal__score_date_arch": {
+          "baseline": {
+            "n": 0,
+            "vendors": 0
+          },
+          "candidate_with_ikp": {
+            "n": 0,
+            "vendors": 0
+          },
+          "paired_vendor_bootstrap": {
+            "samples": 0,
+            "vendors": 0
+          },
+          "passes_predeclared_gate": false
+        },
+        "vendor_equal__score_date": {
+          "baseline": {
+            "n": 0,
+            "vendors": 0
+          },
+          "candidate_with_ikp": {
+            "n": 0,
+            "vendors": 0
+          },
+          "paired_vendor_bootstrap": {
+            "samples": 0,
+            "vendors": 0
+          },
+          "passes_predeclared_gate": false
+        },
+        "vendor_equal__score_date_arch": {
+          "baseline": {
+            "n": 0,
+            "vendors": 0
+          },
+          "candidate_with_ikp": {
+            "n": 0,
+            "vendors": 0
+          },
+          "paired_vendor_bootstrap": {
+            "samples": 0,
+            "vendors": 0
+          },
+          "passes_predeclared_gate": false
+        }
+      },
+      "strict_prediction_models": 0,
+      "strict_prediction_vendors": 0,
+      "weight_base_panel_rows": 10
+    }
+  },
+  "limitations": [
+    "Vendor-reported benchmark scores are not a randomized or uniformly scaffolded panel.",
+    "MMLU-Pro does not pass the cluster-interval gate, and SimpleQA is too sparse for strict folds.",
+    "The MoE control is binary and cannot identify undisclosed active fractions.",
+    "This audit validates conditional signal on open-weight bases; it is not an independent Fable measurement.",
+    "Upstream generated CSVs are internally reproducible, but the pinned narrative summary is stale and is not treated as evidence."
+  ],
+  "outputs": {
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_conditional_benchmark_predictions_2026-07-18.csv"
+  },
+  "protocol": {
+    "architecture_sensitivity": "MoE binary included in both baseline and candidate",
+    "baseline": "benchmark score plus exact day-level release date",
+    "bootstrap": "equal-vendor cluster bootstrap of paired absolute log10 error",
+    "candidate": "baseline plus collapsed mean IKP score",
+    "minimum_train_rows": 10,
+    "minimum_train_vendors": 5,
+    "promotion_gate": "at least 12 test bases from 8 vendors, candidate CI90 upper bound below zero, and >=90% bootstrap probability of improvement",
+    "target": "log10 total parameters in billions",
+    "test_fold": "release dates strictly earlier than test and test vendor fully excluded",
+    "training_weight_sensitivity": "row-equal OLS and equal-total-weight-per-vendor WLS"
+  },
+  "question": "Does IKP add held-out parameter-count information beyond a standard knowledge benchmark, exact release date, and architecture sensitivity?",
+  "source_files": {
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_parameter_signal_audit_2026-07-18.json": "75bbf6a3d44a29af0853f9b554d9744260d34e192b96ae73ed2317e7b95eaa7d",
+    "sources/ikp_source_metadata_2026-07-18.json": "738397b2dced2c63fc5a6ab6db13a07a780e44b4838c6fe7359797ad48d48285",
+    "sources/ikp_upstream_benchmark_joined_2026-07-18.csv": "707273dacdbb76e43825bc491016f93798159b50ba510dc87eea722bd863cb5b",
+    "sources/ikp_upstream_benchmark_raw_anthropic_2026-07-18.md": "182594023dcaba8cb59f77160cbb6787b90d3097e47b558e93c605934b3fa367",
+    "sources/ikp_upstream_benchmark_raw_deepseek_qwen_kimi_glm_2026-07-18.md": "fdd8fa7ee60d5f7ba581a0c920c92c42fb5e4decfaf93ce7271d5551adb878a6",
+    "sources/ikp_upstream_benchmark_raw_google_meta_2026-07-18.md": "fe2359ba6d141610db2dd179c1c85b954b4aa7a75b0fe58456700f247d6d39cf",
+    "sources/ikp_upstream_benchmark_raw_openai_2026-07-18.md": "65761bb7e5c0b0e58b7bdc82ce347b25c7f776c8e8e61a44ff6ac78b60799cab",
+    "sources/ikp_upstream_benchmark_raw_others_2026-07-18.md": "cd26b9f931cd1eb375e6d1e961900d935fe92173c756d2df2b1d6680c28010a8",
+    "sources/ikp_upstream_benchmark_regression_summary_2026-07-18.csv": "c8c615e3dfb23f9b62b10245884564403bcd418a4466cbbcb30897bd7a25fe04",
+    "sources/ikp_upstream_benchmark_scores_2026-07-18.csv": "163d8a72fd7cc0fa0dc387f1590c10a4703407ae8198c67d165629e4fd6a2b29",
+    "sources/ikp_upstream_benchmark_summary_2026-07-18.md": "79bc705a437e12d8474ac33377068c2ec9600091a19de59e5e7775f27acc6b7b",
+    "sources/ikp_upstream_benchmark_time_coefficients_2026-07-18.csv": "4cf721af4def0b6d123d7ecde1c776310c492eb0581846acead9628c4d390be2",
+    "sources/ikp_upstream_densing_analysis_2026-07-18.csv": "2f51325f47f4f51708666ff3912efa691fe0b14f5d3bf4a5739d87c3239521a3"
+  },
+  "source_inventory": {
+    "benchmark_rows": 81,
+    "excluded_configurations": [
+      "deepseek-v3.1-nex-n1",
+      "hermes-3-405b",
+      "hunyuan-a13b",
+      "hunyuan-a13b-think",
+      "intellect-3-think",
+      "ling-2.6-flash",
+      "minimax-m1-think"
+    ],
+    "post_collapse_weight_bases": 87,
+    "post_exclusion_configurations": 93,
+    "raw_benchmark_provenance": {
+      "benchmark_rows": 81,
+      "benchmark_rows_matched": 81,
+      "distinct_primary_urls": 54,
+      "mismatches": [],
+      "populated_score_cells_matched": 173,
+      "raw_markdown_rows": 86
+    },
+    "raw_ikp_configurations": 100,
+    "serving_variants_collapsed": 6
+  },
+  "upstream_reproduction": {
+    "joined_panel": {
+      "fields_compared": [
+        "model",
+        "params_B",
+        "log10_params",
+        "release_date",
+        "pen_acc",
+        "mmlu",
+        "mmlu_pro",
+        "gpqa_diamond",
+        "simpleqa"
+      ],
+      "mismatches": [],
+      "order_identical": true,
+      "rows": 93
+    },
+    "narrative_summary_audit": {
+      "all_claims_match_generated_outputs": false,
+      "authority_policy": "Pinned generated CSV outputs override the stale narrative summary.",
+      "claims": [
+        {
+          "claim": "setup_post_exclusion_configurations",
+          "generated_output": 93,
+          "matches_generated_output": false,
+          "narrative": 89
+        },
+        {
+          "claim": "headline_full_set_configurations",
+          "generated_output": 93,
+          "matches_generated_output": false,
+          "narrative": 89
+        },
+        {
+          "claim": "headline_full_set_r_squared",
+          "generated_output": 0.9105,
+          "matches_generated_output": false,
+          "narrative": 0.917
+        },
+        {
+          "claim": "headline_full_set_time_slope_pp_per_month",
+          "generated_output": 0.0864,
+          "matches_generated_output": false,
+          "narrative": -0.06
+        },
+        {
+          "claim": "interpretation_full_set_time_slope_pp_per_month",
+          "generated_output": 0.0864,
+          "matches_generated_output": false,
+          "narrative": -0.02
+        },
+        {
+          "claim": "methodology_raw_configurations",
+          "generated_output": 100,
+          "matches_generated_output": false,
+          "narrative": 96
+        }
+      ],
+      "stale_claim_count": 6,
+      "stale_claims": [
+        {
+          "claim": "setup_post_exclusion_configurations",
+          "generated_output": 93,
+          "matches_generated_output": false,
+          "narrative": 89
+        },
+        {
+          "claim": "headline_full_set_configurations",
+          "generated_output": 93,
+          "matches_generated_output": false,
+          "narrative": 89
+        },
+        {
+          "claim": "headline_full_set_r_squared",
+          "generated_output": 0.9105,
+          "matches_generated_output": false,
+          "narrative": 0.917
+        },
+        {
+          "claim": "headline_full_set_time_slope_pp_per_month",
+          "generated_output": 0.0864,
+          "matches_generated_output": false,
+          "narrative": -0.06
+        },
+        {
+          "claim": "interpretation_full_set_time_slope_pp_per_month",
+          "generated_output": 0.0864,
+          "matches_generated_output": false,
+          "narrative": -0.02
+        },
+        {
+          "claim": "methodology_raw_configurations",
+          "generated_output": 100,
+          "matches_generated_output": false,
+          "narrative": 96
+        }
+      ]
+    },
+    "regression_summary": {
+      "reproduction": {
+        "exact_after_upstream_rounding": true,
+        "mismatches": [],
+        "rows": 9
+      },
+      "rows": [
+        {
+          "intercept": 24.225587514729146,
+          "metric": "IKP (full set)",
+          "n": 93,
+          "p": "1.80e-49",
+          "r2": 0.9105,
+          "slope": 15.8784,
+          "stderr": 0.5219587020114268
+        },
+        {
+          "intercept": 56.85936017838674,
+          "metric": "mmlu",
+          "n": 30,
+          "p": "6.67e-09",
+          "r2": 0.7049,
+          "slope": 12.8884,
+          "stderr": 1.5759871079522478
+        },
+        {
+          "intercept": 25.522482523911737,
+          "metric": "IKP (subset matching mmlu)",
+          "n": 30,
+          "p": "8.19e-15",
+          "r2": 0.8875,
+          "slope": 14.3472,
+          "stderr": 0.9652124001867076
+        },
+        {
+          "intercept": 33.281812964143235,
+          "metric": "mmlu_pro",
+          "n": 25,
+          "p": "2.82e-07",
+          "r2": 0.6894,
+          "slope": 18.3442,
+          "stderr": 2.567459942085695
+        },
+        {
+          "intercept": 24.398259807613556,
+          "metric": "IKP (subset matching mmlu_pro)",
+          "n": 25,
+          "p": "9.35e-13",
+          "r2": 0.8952,
+          "slope": 14.388,
+          "stderr": 1.0263149043346569
+        },
+        {
+          "intercept": 28.96954449309761,
+          "metric": "gpqa_diamond",
+          "n": 30,
+          "p": "7.03e-06",
+          "r2": 0.5196,
+          "slope": 15.8156,
+          "stderr": 2.8741055072435087
+        },
+        {
+          "intercept": 23.0221686679902,
+          "metric": "IKP (subset matching gpqa_diamond)",
+          "n": 30,
+          "p": "1.20e-15",
+          "r2": 0.9019,
+          "slope": 15.0382,
+          "stderr": 0.9373466582343287
+        },
+        {
+          "intercept": -3.8093265540467307,
+          "metric": "simpleqa",
+          "n": 10,
+          "p": "2.44e-05",
+          "r2": 0.9038,
+          "slope": 10.6104,
+          "stderr": 1.2241281804256479
+        },
+        {
+          "intercept": 22.32263890680831,
+          "metric": "IKP (subset matching simpleqa)",
+          "n": 10,
+          "p": "4.12e-10",
+          "r2": 0.9938,
+          "slope": 16.4343,
+          "stderr": 0.4599479171490571
+        }
+      ]
+    },
+    "time_coefficients": {
+      "reproduction": {
+        "exact_after_upstream_rounding": true,
+        "mismatches": [],
+        "rows": 9
+      },
+      "rows": [
+        {
+          "intercept": 53.3753,
+          "metric": "mmlu",
+          "n": 30,
+          "r2": 0.7914,
+          "slope_months": 0.5794,
+          "slope_params": 11.4109
+        },
+        {
+          "intercept": 26.3611,
+          "metric": "IKP (subset mmlu)",
+          "n": 30,
+          "r2": 0.8926,
+          "slope_months": -0.1395,
+          "slope_params": 14.7028
+        },
+        {
+          "intercept": 24.2399,
+          "metric": "mmlu_pro",
+          "n": 25,
+          "r2": 0.7166,
+          "slope_months": 0.8157,
+          "slope_params": 17.2421
+        },
+        {
+          "intercept": 26.9526,
+          "metric": "IKP (subset mmlu_pro)",
+          "n": 25,
+          "r2": 0.8998,
+          "slope_months": -0.2304,
+          "slope_params": 14.6993
+        },
+        {
+          "intercept": 5.2049,
+          "metric": "gpqa_diamond",
+          "n": 30,
+          "r2": 0.7203,
+          "slope_months": 1.9855,
+          "slope_params": 13.124
+        },
+        {
+          "intercept": 25.9904,
+          "metric": "IKP (subset gpqa_diamond)",
+          "n": 30,
+          "r2": 0.9079,
+          "slope_months": -0.248,
+          "slope_params": 15.3744
+        },
+        {
+          "intercept": -4.2711,
+          "metric": "simpleqa",
+          "n": 10,
+          "r2": 0.9038,
+          "slope_months": 0.0317,
+          "slope_params": 10.6026
+        },
+        {
+          "intercept": 25.9367,
+          "metric": "IKP (subset simpleqa)",
+          "n": 10,
+          "r2": 0.9956,
+          "slope_months": -0.2477,
+          "slope_params": 16.4949
+        },
+        {
+          "intercept": 23.3428,
+          "metric": "IKP (full set)",
+          "n": 93,
+          "r2": 0.9118,
+          "slope_months": 0.0864,
+          "slope_params": 15.5458
+        }
+      ]
+    }
+  }
+}

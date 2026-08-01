@@ -1,0 +1,81 @@
+{
+  "files": {
+    "sources/metr_benchmark_results_1_1_2026-07-18.yaml": {
+      "sha256": "aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9"
+    },
+    "sources/metr_horizon_official_metadata_2026-07-18.json": {
+      "sha256": "0cc6b5a92f2b1a1928c35751ddd344b1d8c4868f2f3bde203bfc49d3fc8a4d3e"
+    },
+    "sources/metr_horizon_official_signals_2026-07-18.csv": {
+      "sha256": "05b055467ab579b2c46100ce65bed05108863e64beb4f36d83d0c0b82f0ee85c"
+    },
+    "sources/metr_horizon_user_snapshot_2026-07-17.csv": {
+      "sha256": "a9719b3ea8e1c7fd32bf44414578c8e800ad2505d4153d55b05f884c65b3f944"
+    }
+  },
+  "legacy_exact_crosscheck": {
+    "common_fields_compared": [
+      "source_id",
+      "benchmark_name",
+      "release_date",
+      "average_score",
+      "is_sota",
+      "p50_estimate_minutes",
+      "p50_ci_low_minutes",
+      "p50_ci_high_minutes",
+      "p80_estimate_minutes",
+      "p80_ci_low_minutes",
+      "p80_ci_high_minutes",
+      "scaffold_family",
+      "long_tasks_version",
+      "swaa_version"
+    ],
+    "exact_rows": 26,
+    "legacy_rows": 26,
+    "mismatch_count": 0,
+    "mismatches": [],
+    "official_rows": 26
+  },
+  "losslessness": {
+    "full_scaffold_arrays_preserved": true,
+    "full_scaffold_entries": 114,
+    "legacy_collapsed_scaffold_family_preserved": true,
+    "normalized_columns": [
+      "source_id",
+      "benchmark_name",
+      "release_date",
+      "average_score",
+      "is_sota",
+      "p50_estimate_minutes",
+      "p50_ci_low_minutes",
+      "p50_ci_high_minutes",
+      "p80_estimate_minutes",
+      "p80_ci_low_minutes",
+      "p80_ci_high_minutes",
+      "scaffold_family",
+      "scaffolds_json",
+      "long_tasks_version",
+      "swaa_version"
+    ]
+  },
+  "official_asset": {
+    "raw_bytes": 16255,
+    "raw_sha256": "aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9",
+    "result_rows": 26,
+    "unique_source_ids": 26,
+    "url": "https://metr.org/assets/benchmark_results_1_1.yaml"
+  },
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-18",
+  "status": "PASS",
+  "trend": {
+    "all_time_stitched_point_estimate_days": "187.778",
+    "benchmark_name": "METR-Horizon-v1.1",
+    "exclusion_rule": "excludes points with central estimate p50 > 16 hrs",
+    "from_2023_on_ci_high_days": "158.012",
+    "from_2023_on_ci_low_days": "104.428",
+    "from_2023_on_point_estimate_days": "128.744",
+    "long_tasks_version": "799cc9c4b4483a93fc3445623a49ea1bd74fdeb2",
+    "swaa_version": "f6cc84052e2a79dd540766c8a1b15ff399696371"
+  }
+}

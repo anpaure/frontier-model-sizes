@@ -1,0 +1,142 @@
+{
+  "policy": {
+    "deduplicate_checkpoints": false,
+    "expand_global_parameter_match_tolerance": false,
+    "ordinary_build_network_reads": 0,
+    "preserve_raw_values": true,
+    "same_weight_claim_from_equal_shape": false
+  },
+  "purpose": "Resolve only evidenced coarse parameter-label conflicts without changing checkpoint identity or widening global match tolerances.",
+  "records": [
+    {
+      "accepted_raw_active_parameters_b": [
+        32.0,
+        32.6
+      ],
+      "accepted_raw_total_parameters_b": [
+        1000.0,
+        1040.0
+      ],
+      "aliases": [
+        "Kimi K2",
+        "Kimi K2 (Jul 2025)",
+        "Kimi K2 Instruct",
+        "Kimi K2-0905",
+        "Kimi K2 (Sep 2025)",
+        "Kimi K2 Thinking",
+        "Kimi K2.5",
+        "Kimi K2.5 Reasoning",
+        "Kimi K2.5 (Reasoning)",
+        "Kimi K2.5 (Non-reasoning)",
+        "Kimi K2.6",
+        "Kimi K2.6 Reasoning",
+        "Kimi K2.6 (Non-reasoning)",
+        "Kimi K2.7 Code"
+      ],
+      "canonical_active_parameters_b": 32.6,
+      "canonical_total_parameters_b": 1040.0,
+      "checkpoint_policy": "retain every release as a distinct checkpoint in one Kimi K2 lineage; equal parameter shape is not a same-weight claim",
+      "modality_caveat": "32.6B is the reported K2 activated count; multimodal-path activation can depend on the request modality.",
+      "parameter_shape": {
+        "normalization": "remove eos_token_id and quantization_config only",
+        "normalized_parameter_shape_sha256": "c035ea1346d476c18c12cf16e457e3e4891e18a1343d4da7bdf2add3f08009d5",
+        "raw_config_sha256": {
+          "moonshotai/kimi-k2.5": "acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6",
+          "moonshotai/kimi-k2.6": "85825ca6e18cbe539eb83ee09eedfb3f4222265929f06e9f535a6d9364f55899",
+          "moonshotai/kimi-k2.7-code": "ffbb57bff844e024f6c112640b63da80af228ceb8fb3e2e21908a21febbcdffb"
+        },
+        "repositories": [
+          "moonshotai/kimi-k2.5",
+          "moonshotai/kimi-k2.6",
+          "moonshotai/kimi-k2.7-code"
+        ],
+        "same_parameter_shape": true,
+        "same_weight_identity": "unproven"
+      },
+      "parameter_value_basis": "publisher_disclosed_model_total; Moonshot K3 technical report page 11 Table 1",
+      "reported_precision_t": 0.01,
+      "truth_id": "moonshot-kimi-k2-family-report-table-1"
+    },
+    {
+      "accepted_raw_active_parameters_b": [
+        10.0
+      ],
+      "accepted_raw_total_parameters_b": [
+        228.703644928,
+        229.0,
+        230.0
+      ],
+      "aliases": [
+        "MiniMax-M2.5",
+        "MiniMax M2.5"
+      ],
+      "canonical_active_parameters_b": 10.0,
+      "canonical_total_parameters_b": 228.703644928,
+      "config_shape_crosscheck": "M2.5 and M2.7 official configs have identical SHA-256 3372a31ecbdba614b309cfa5b3dfec33ceea3c580cb9612ff35345d92ced8618",
+      "exact_tensor_parameters": 228703644928,
+      "parameter_value_basis": "official Hugging Face safetensors tensor inventory",
+      "repository_revision": "f710177d938eff80b684d42c5aa84b382612f21f",
+      "truth_id": "minimax-m2-5-official-safetensors"
+    },
+    {
+      "accepted_raw_active_parameters_b": [
+        10.0
+      ],
+      "accepted_raw_total_parameters_b": [
+        228.703644928,
+        229.0,
+        230.0
+      ],
+      "aliases": [
+        "MiniMax-M2.7",
+        "MiniMax M2.7"
+      ],
+      "canonical_active_parameters_b": 10.0,
+      "canonical_total_parameters_b": 228.703644928,
+      "config_shape_crosscheck": "M2.5 and M2.7 official configs have identical SHA-256 3372a31ecbdba614b309cfa5b3dfec33ceea3c580cb9612ff35345d92ced8618",
+      "exact_tensor_parameters": 228703644928,
+      "parameter_value_basis": "official Hugging Face safetensors tensor inventory",
+      "repository_revision": "d494266a4affc0d2995ba1fa35c8481cbd84294b",
+      "truth_id": "minimax-m2-7-official-safetensors"
+    }
+  ],
+  "schema_version": "1.0",
+  "snapshot_date": "2026-07-31",
+  "source_files": [
+    {
+      "bytes": 5453,
+      "path": "sources/kimi_k3_release_evidence_2026-07-31.json",
+      "role": "Moonshot K3 report extraction containing K2 Table 1",
+      "sha256": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+      "url": "https://arxiv.org/abs/2607.24653"
+    },
+    {
+      "bytes": 15978,
+      "path": "sources/huggingface_architecture_config_snapshot_2026-07-18.json.gz",
+      "role": "frozen official Hugging Face config snapshot",
+      "sha256": "412d80e27a36477636599eeb9fcaade8924f1d7cd97fd8db16305677f3f00c06",
+      "url": "https://huggingface.co/"
+    },
+    {
+      "bytes": 1652,
+      "path": "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_config.json",
+      "role": "commit-pinned official MiniMax M2.7 config",
+      "sha256": "3372a31ecbdba614b309cfa5b3dfec33ceea3c580cb9612ff35345d92ced8618",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+    },
+    {
+      "bytes": 22862,
+      "path": "sources/open_model_parameter_truth_evidence_2026-07-31/minimax-m2-5__hugging_face_model_api.json",
+      "role": "official MiniMax M2.5 Hugging Face model API",
+      "sha256": "fc9fb99250c391235be9895965d314d4ef06ff5be0123beef115f03b6f561288",
+      "url": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M2.5"
+    },
+    {
+      "bytes": 21923,
+      "path": "sources/open_model_parameter_truth_evidence_2026-07-31/minimax-m2-7__hugging_face_model_api.json",
+      "role": "official MiniMax M2.7 Hugging Face model API",
+      "sha256": "04d1696088347dfb1cd141d9682be9abd2f661519c9a96007effc21f5e1e2b58",
+      "url": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M2.7"
+    }
+  ]
+}

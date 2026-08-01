@@ -1,0 +1,37 @@
+{
+  "snapshot_date": "2026-07-18",
+  "facts": {
+    "kimi_k3": {
+      "release_date": "2026-07-16",
+      "total_parameters_b": 2800.0,
+      "selected_experts_per_token": 16,
+      "total_experts": 896,
+      "reported_scaling_efficiency_vs_k2": 2.5,
+      "active_parameters_disclosed": false,
+      "technical_report_status": "Moonshot says the technical report and further architecture/training details will follow the launch; no exact active-parameter count is stated on the launch page.",
+      "source_url": "https://www.kimi.com/fr-fr/blog/kimi-k3"
+    },
+    "kimi_k2": {
+      "total_parameters_b": 1000.0,
+      "active_parameters_b": 32.0,
+      "selected_experts_per_token": 8,
+      "total_experts": 384,
+      "shared_experts": 1,
+      "pretraining_tokens_t": 15.5,
+      "source_url": "https://github.com/MoonshotAI/Kimi-K2"
+    }
+  },
+  "derived_quantities": {
+    "k3_selected_expert_fraction": 0.017857142857142856,
+    "k3_naive_expert_fraction_equivalent_active_b": 50.0,
+    "k3_expert_count_ratio_upper_bound_if_all_parameters_were_routed_experts": 56.0,
+    "k2_observed_total_to_active_ratio": 31.25,
+    "log_midpoint_k2_ratio_and_k3_expert_count_bound": 41.83300132670378
+  },
+  "interpretation_limits": [
+    "The 50B K3 value is a naive expert-fraction equivalent, not a disclosed active-parameter count.",
+    "Shared attention, embeddings, shared experts, vision components, and unequal expert sizes make 16/896 insufficient to recover exact activated parameters.",
+    "The 56x quantity is therefore a structural extreme, not an estimate to enter as ground truth.",
+    "The 2.5x scaling-efficiency statement combines architecture, training, and data-recipe changes and cannot be translated directly into a parameter multiplier."
+  ]
+}

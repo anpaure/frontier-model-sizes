@@ -1,0 +1,397 @@
+{
+  "generated_on": "2026-07-31",
+  "question": "Does the exact AA\u2194Epoch checkpoint extension improve frontier parameter inference enough to replace the live AA calibration?",
+  "data_audit": {
+    "current_panel_models": 50,
+    "exact_open_epoch_checkpoints": 63,
+    "lower_scoring_duplicate_configurations_discarded": 9,
+    "current_exact_overlaps": 19,
+    "expanded_unique_models": 94,
+    "expanded_developers": 27,
+    "primary_parameter_overrides_of_epoch_rounded_values": 1,
+    "matching_policy": "Unique high-confidence checkpoint link, unique Epoch label, exact Epoch release date, open weights, then highest AA score per checkpoint. Total parameters must exactly match Epoch except Kimi K3, where the official technical report's exact 2.780T value supersedes Epoch's rounded 2.800T entry.",
+    "overlap_policy": "Normalized exact AA model labels plus one manually verified Nemotron alias; the exact Epoch-backed row supersedes the current duplicate.",
+    "parameter_label_timing_records": 6
+  },
+  "backtest": {
+    "target": "log10 total parameters in billions",
+    "specification": "log10(total parameters) ~ AA score + exact release date",
+    "outer_split": "strictly earlier parameter-training eligibility date; entire test developer removed",
+    "training_weights": "equal total weight per developer; AA scores marked with an asterisk receive 0.5 quality weight",
+    "minimum_training_rows": 16,
+    "minimum_training_developers": 6,
+    "eligible_predictions": 46,
+    "scopes": {
+      "all": {
+        "scope": "all",
+        "n": 46,
+        "developers": 15,
+        "current_50": {
+          "n": 46,
+          "median_multiplicative_error": 2.0583639657668473,
+          "mean_absolute_log10_error": 0.5264629887663709,
+          "geomean_multiplicative_error": 3.360957252397044,
+          "rmse_log10": 0.704056708655357,
+          "p80_multiplicative_error": 7.955339830499281,
+          "within_2x": 0.45652173913043476,
+          "signed_bias_factor": 2.4813334825106974
+        },
+        "expanded_panel": {
+          "n": 46,
+          "median_multiplicative_error": 1.9816560286254523,
+          "mean_absolute_log10_error": 0.41769250532070445,
+          "geomean_multiplicative_error": 2.6163299052330866,
+          "rmse_log10": 0.5536845640311607,
+          "p80_multiplicative_error": 5.27767809644397,
+          "within_2x": 0.5217391304347826,
+          "signed_bias_factor": 1.7710190399453554
+        },
+        "paired_developer_bootstrap": {
+          "metric": "equal-developer mean absolute log10 error; expanded minus current",
+          "observed_delta": -0.06400894997102032,
+          "ci_90": [
+            -0.11521722697913647,
+            -0.017422418899448712
+          ],
+          "bootstrap_probability_expanded_better": 0.99075,
+          "samples": 20000,
+          "developer_clusters": 15
+        }
+      },
+      "current_panel": {
+        "scope": "current_panel",
+        "n": 34,
+        "developers": 13,
+        "current_50": {
+          "n": 34,
+          "median_multiplicative_error": 2.086033074546023,
+          "mean_absolute_log10_error": 0.5743960409022844,
+          "geomean_multiplicative_error": 3.7531510279002336,
+          "rmse_log10": 0.764329087759506,
+          "p80_multiplicative_error": 12.695934942860697,
+          "within_2x": 0.4411764705882353,
+          "signed_bias_factor": 2.7636086223560032
+        },
+        "expanded_panel": {
+          "n": 34,
+          "median_multiplicative_error": 2.23490747359744,
+          "mean_absolute_log10_error": 0.4555790218164003,
+          "geomean_multiplicative_error": 2.854821914101231,
+          "rmse_log10": 0.5983343749300548,
+          "p80_multiplicative_error": 6.543639158959549,
+          "within_2x": 0.47058823529411764,
+          "signed_bias_factor": 1.9054552685814077
+        },
+        "paired_developer_bootstrap": {
+          "metric": "equal-developer mean absolute log10 error; expanded minus current",
+          "observed_delta": -0.05999700916517147,
+          "ci_90": [
+            -0.13468564042496092,
+            0.012393888999502672
+          ],
+          "bootstrap_probability_expanded_better": 0.91095,
+          "samples": 20000,
+          "developer_clusters": 13
+        }
+      },
+      "exact_additions": {
+        "scope": "exact_additions",
+        "n": 12,
+        "developers": 10,
+        "current_50": {
+          "n": 12,
+          "median_multiplicative_error": 2.0035651807891743,
+          "mean_absolute_log10_error": 0.39065267438128237,
+          "geomean_multiplicative_error": 2.4584007196585014,
+          "rmse_log10": 0.4949111540368283,
+          "p80_multiplicative_error": 5.973950439818512,
+          "within_2x": 0.5,
+          "signed_bias_factor": 1.8285611718096413
+        },
+        "expanded_panel": {
+          "n": 12,
+          "median_multiplicative_error": 1.7882211097070069,
+          "mean_absolute_log10_error": 0.31034737524956596,
+          "geomean_multiplicative_error": 2.0433717046727287,
+          "rmse_log10": 0.4010326891241099,
+          "p80_multiplicative_error": 3.3831736599839886,
+          "within_2x": 0.6666666666666666,
+          "signed_bias_factor": 1.439436690262386
+        },
+        "paired_developer_bootstrap": {
+          "metric": "equal-developer mean absolute log10 error; expanded minus current",
+          "observed_delta": -0.06411290813613515,
+          "ci_90": [
+            -0.141816101055248,
+            0.005739783085180601
+          ],
+          "bootstrap_probability_expanded_better": 0.93075,
+          "samples": 20000,
+          "developer_clusters": 10
+        }
+      },
+      "frontier_like": {
+        "scope": "frontier_like",
+        "n": 15,
+        "developers": 6,
+        "current_50": {
+          "n": 15,
+          "median_multiplicative_error": 1.9490818299043928,
+          "mean_absolute_log10_error": 0.3247454661447974,
+          "geomean_multiplicative_error": 2.11225071671104,
+          "rmse_log10": 0.4500571163395304,
+          "p80_multiplicative_error": 2.0673208725122225,
+          "within_2x": 0.7333333333333333,
+          "signed_bias_factor": 1.5201447868039795
+        },
+        "expanded_panel": {
+          "n": 15,
+          "median_multiplicative_error": 1.9103252845002296,
+          "mean_absolute_log10_error": 0.3427393059368858,
+          "geomean_multiplicative_error": 2.201604508609544,
+          "rmse_log10": 0.4731505311316202,
+          "p80_multiplicative_error": 2.803222173051529,
+          "within_2x": 0.6,
+          "signed_bias_factor": 1.7451487340327403
+        },
+        "paired_developer_bootstrap": {
+          "metric": "equal-developer mean absolute log10 error; expanded minus current",
+          "observed_delta": 0.019801946591490944,
+          "ci_90": [
+            -0.018035065059434714,
+            0.05688938430494391
+          ],
+          "bootstrap_probability_expanded_better": 0.1888,
+          "samples": 20000,
+          "developer_clusters": 6
+        }
+      }
+    }
+  },
+  "full_fit": {
+    "current_50_developer_balanced_coefficients": {
+      "intercept": 2.0540733501435935,
+      "score_slope": 0.04213889854756407,
+      "date_slope": -0.2942531155032659
+    },
+    "expanded_panel_developer_balanced_coefficients": {
+      "intercept": 2.8432223725544277,
+      "score_slope": 0.05835802074579482,
+      "date_slope": -0.7247761384917846
+    },
+    "current_live_k3_anchored_coefficients": {
+      "score_slope": 0.04520595908212863,
+      "date_slope": -0.35092795129752774
+    },
+    "expanded_coefficient_developer_bootstrap": {
+      "samples": 5000,
+      "intercept": {
+        "p05": 1.5715636817930312,
+        "median": 2.8726208392730523,
+        "p95": 4.164922056535351
+      },
+      "score_slope": {
+        "p05": 0.04595790715368116,
+        "median": 0.05869291992225205,
+        "p95": 0.07033651640993491
+      },
+      "date_slope": {
+        "p05": -1.243239882022624,
+        "median": -0.7355450206085653,
+        "p95": -0.21743422108946248
+      }
+    }
+  },
+  "pre_anchor_k3_checks": [
+    {
+      "panel": "current_50",
+      "moonshot_held_out": false,
+      "train_n": 50,
+      "train_developer_n": 17,
+      "predicted_k3_b": 2629.431948327036,
+      "multiplicative_error": 1.0572625778616414,
+      "coefficients": [
+        2.0540733501435935,
+        0.04213889854756407,
+        -0.2942531155032659
+      ]
+    },
+    {
+      "panel": "current_50",
+      "moonshot_held_out": true,
+      "train_n": 46,
+      "train_developer_n": 16,
+      "predicted_k3_b": 2310.4787523850987,
+      "multiplicative_error": 1.2032138348514203,
+      "coefficients": [
+        1.9155986382555694,
+        0.03988364569935402,
+        -0.2345699306841147
+      ]
+    },
+    {
+      "panel": "expanded_panel",
+      "moonshot_held_out": false,
+      "train_n": 93,
+      "train_developer_n": 27,
+      "predicted_k3_b": 4250.32213563887,
+      "multiplicative_error": 1.5288928545463563,
+      "coefficients": [
+        2.856179117212069,
+        0.058867642634245515,
+        -0.7321470339105844
+      ]
+    },
+    {
+      "panel": "expanded_panel",
+      "moonshot_held_out": true,
+      "train_n": 88,
+      "train_developer_n": 26,
+      "predicted_k3_b": 3987.3552783597506,
+      "multiplicative_error": 1.434300459841637,
+      "coefficients": [
+        2.833211133390147,
+        0.058167297888498476,
+        -0.7221876396443991
+      ]
+    }
+  ],
+  "frontier_aa_stability": [
+    {
+      "model": "Claude Opus 5",
+      "release_date": "2026-07-24",
+      "aa_score": 60.6918740157091,
+      "current_live_aa_t": 3.964375492233051,
+      "expanded_panel_aa_t": 4.3357548417036895,
+      "expanded_over_current": 1.093679155821198
+    },
+    {
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "aa_score": 59.8606463217303,
+      "current_live_aa_t": 4.016370921146618,
+      "expanded_panel_aa_t": 4.76267247189778,
+      "expanded_over_current": 1.1858148974293696
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "aa_score": 58.889831189723,
+      "current_live_aa_t": 3.3972189184817894,
+      "expanded_panel_aa_t": 3.644735349548439,
+      "expanded_over_current": 1.0728585460654576
+    },
+    {
+      "model": "GPT-5.5",
+      "release_date": "2026-04-23",
+      "aa_score": 54.8375984166433,
+      "current_live_aa_t": 2.641916999152284,
+      "expanded_panel_aa_t": 3.0059312376378693,
+      "expanded_over_current": 1.1377841312207715
+    },
+    {
+      "model": "Claude Opus 4.8",
+      "release_date": "2026-05-28",
+      "aa_score": 55.6920406995495,
+      "current_live_aa_t": 2.6724984334935096,
+      "expanded_panel_aa_t": 2.8733669350687836,
+      "expanded_over_current": 1.0751613168628493
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "release_date": "2026-07-09",
+      "aa_score": 54.9528567569231,
+      "current_live_aa_t": 2.255011852012751,
+      "expanded_panel_aa_t": 2.1473951273133487,
+      "expanded_over_current": 0.9522766478573728
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "release_date": "2026-06-30",
+      "aa_score": 53.3500026989169,
+      "current_live_aa_t": 1.9468718656749269,
+      "expanded_panel_aa_t": 1.803979230911928,
+      "expanded_over_current": 0.9266039859724092
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "release_date": "2026-07-09",
+      "aa_score": 51.2359331798034,
+      "current_live_aa_t": 1.5315166889172218,
+      "expanded_panel_aa_t": 1.3031657584905176,
+      "expanded_over_current": 0.8508988298468052
+    },
+    {
+      "model": "Grok 4.5",
+      "release_date": "2026-07-08",
+      "aa_score": 53.8265951657731,
+      "current_live_aa_t": 2.0099991870584817,
+      "expanded_panel_aa_t": 1.8542568622616635,
+      "expanded_over_current": 0.9225162249817931
+    }
+  ],
+  "external_grok_check": {
+    "actual_t": 1.5,
+    "current_live_aa_t": 2.0099991870584817,
+    "expanded_panel_aa_t": 1.8542568622616635
+  },
+  "decision": {
+    "change_live_aa_branch": false,
+    "incremental_expanded_aa_weight": 0.0,
+    "reason": "The extension robustly reduces equal-developer mean error on the broad and current-panel tests, but it does not improve the frontier-like subset: that interval crosses zero and the score/date coefficients move frontier AA centers materially. Retain the current K3-anchored AA branch until new high-score disclosures prospectively distinguish the slopes."
+  },
+  "k3_anchor": {
+    "total_parameters_b": 2780.0,
+    "source": "Kimi K3 official technical report Table 1"
+  },
+  "limitations": [
+    "AA scores come from the current leaderboard snapshot, not historical score vintages.",
+    "AA does not expose a machine-readable reasoning-budget field for every row; the main comparison therefore uses the predeclared score+date specification without a subjective reasoning label.",
+    "Developer holdout is conservative but cannot remove distillation or algorithm diffusion across developers.",
+    "The extension adds many small and mid-scale models; frontier-like held-out coverage remains only 15 checkpoints across seven developers."
+  ],
+  "files": {
+    "expanded_panel": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_panel_2026-07-18.csv",
+    "predictions": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_predictions_2026-07-18.csv",
+    "overlap_audit": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_overlap_audit_2026-07-18.csv"
+  },
+  "source_manifest": {
+    "regression_results.json": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/unified_model_observations_compute_enriched_2026-07-17.csv": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
+    "sources/epoch_all_ai_models_2026-07-31.csv": "0d1fcfc497cccc1079068a1ec3031e30e97ad5c8e6f5b5d43baceac3778ba579",
+    "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "sources/aa_parameter_label_availability_2026-07-31.json": "ddcb74ba7234af648d6712be4c24ac23cb185f388d61844f39aabecdc9a7d845",
+    "sources/aa_score_availability_2026-07-31.json": "5d61f803e6cc8de6082400218a9a3c941f93eec7301e6b4aded55d9ec227c9b9",
+    "sources/aa_changelog_2026-07-31.json.gz": "f0eb36386c6e22de238687e533b5d9a29deddc39039b175edb88739a32b01e5a",
+    "sources/open_model_parameter_truth_reconciliation_2026-07-31.json": "cbfc667c884f88d7a4456efde5a47f24ca6ca481f0e30a67cbfcc419c7c0ad89",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_model_api.json": "89e2abe5443efe5fa26b952a7138c2f05d483232b9ffd9044227817e2c893b90",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__hugging_face_commit_history.json": "b5986d40bf9558ce48afb431abc7ff802b0bd6f543bc72fda917ee0ec2ca5ee7",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_config.json": "c5719c2df9c931b11b0336a0fa8bfdceae617c5303d1bad7197436a7daea33a0",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__commit_pinned_model_card.md": "b23e647f56fd30a03523be4ab94f5022a5327cfcb83eb5b69320c8b26cbee714",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-flash-lite-2026-01-29__first_party_label_source.html": "3323609924fe41785bdb00edfc2f655cfa18e5dea8b1e992a0f44209b4cab5d3",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_model_api.json": "102169550714100c8fd01a3d922e1e1313b5e71b827d706b65f4f894b36748f9",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__hugging_face_commit_history.json": "6880c6d3837f120da6641bee8d97a876b284c845a5e482035158914d225f9140",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_config.json": "3372a31ecbdba614b309cfa5b3dfec33ceea3c580cb9612ff35345d92ced8618",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__commit_pinned_model_card.md": "d0a0743fd312760e619049cdecb347344cd3beea48a867f2b277481d79ea06ba",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m2-7-2026-04-09__first_party_launch_page.html": "2a42caede98841a19ce51e74859278029ebd493903a8d23432266fd1743a14d4",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_model_api.json": "c4b713c73a7cea22f2502abc610c50894713fa50bd4e8dee948e1be7b9511de8",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__hugging_face_commit_history.json": "139415d50cc77ce0b96cd6bea40b1eb77cc2a1309e553a01eb9f05b403739a7f",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_config.json": "48f5c3616813a76d80d1895f3b6cc1d8df9b0b2a34d732fd825cab670ebfc8a5",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__commit_pinned_model_card.md": "31bfe317627714a8cbc9f4102b826d8370b202fce93b582074ef0cdc3b2c099a",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-mimo-v2-5-2026-04-22__first_party_label_source.html": "b470a6bf40358a35bd927c87361597e22c51a5ff7fb677660e166e6a45961f06",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_model_api.json": "2ea4de95a54b646abf7d354123d2fef559e33bb184857c177f0ab32860c2c336",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__hugging_face_commit_history.json": "bd802a0bd90ebd397028dd78730da48f6e3fad52d7c53933e94965d804ae293f",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_config.json": "c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__commit_pinned_model_card.md": "03dc56061db0f91e054c9194b74541a6d0616c6892f01fae6612bdd352d7a16f",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-minimax-m3-2026-06-12__first_party_launch_page.html": "b6c35e9ca6f5d69c4eada19cf97c68491e1e90b5eaffee3b0f5190001eafb732",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_model_api.json": "b84e4de07c881d3fce7cd5fd38941de3a052cd70a65a09b160b2746bdf8c649d",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__hugging_face_commit_history.json": "35392481ebd28c116931133b1a34ed397a5895337c022327e4235495daad4604",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_config.json": "117cf53ddda3bd6778477e4cfa3371c4f8d6a7adae10a322a4545358e61f56d0",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-nex-n2-pro-2026-06-03__commit_pinned_model_card.md": "5b9de04586801239f13892018630434b81889cd687476361b0d02d56ed769c8d",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_model_api.json": "46e4abcd862ceb44a594adb1fea2e10afed27eba50cb74fcc839f6c797e58976",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__hugging_face_commit_history.json": "2dc06efd1f0ba08059aac6c6bd9bdce7166883bcc1bc1cd85e6271922f972caa",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_config.json": "c77120ade725b51d4911469fcefccdb46bf31c14465531533a68b74d54df16a5",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__commit_pinned_model_card.md": "3e0e15fa0c5cc81675bd69af8eb469d128a725c1a7bfc71f03b7877b7b650567",
+    "sources/aa_parameter_label_availability_evidence_2026-07-31/aa-label-longcat-2-0-2026-06-30__first_party_label_source.html": "b4f3da932292f5da49185b53923e6b2751f032e0f36e2983528fae3caaec8972"
+  }
+}

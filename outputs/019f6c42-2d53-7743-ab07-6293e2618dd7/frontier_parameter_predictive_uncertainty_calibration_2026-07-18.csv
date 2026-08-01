@@ -1,0 +1,165 @@
+cohort,holdout_spec,release_date,model,family,developer,moe,reasoning,frontier_signal_rank,actual_b,predicted_b,absolute_error_factor,latest_in_family_for_cohort,latest_in_developer_for_cohort
+all_ensemble,model_lineage_holdout,2025-12-01,DeepSeek-V3.2,deepseek_v3,DeepSeek,1,1,0.8809523809523809,671.0,316.16812460343056,2.122288579348835,True,False
+all_ensemble,model_lineage_holdout,2026-04-24,DeepSeek-V4-Flash,deepseek,DeepSeek,1,1,0.8186274509803921,284.0,274.98376283018445,1.0327882529390777,True,False
+all_ensemble,model_lineage_holdout,2026-04-24,DeepSeek-V4-Pro (max),deepseek_v4,DeepSeek,1,1,0.9938997821350762,1600.0,309.68451354930505,5.166548309640489,True,True
+all_ensemble,model_lineage_holdout,2024-05-09,Falcon 2 11B,falcon2,Technology Innovation Institute,0,0,0.7367389993972273,11.0,20.738076393522974,1.8852796721384517,True,True
+all_ensemble,model_lineage_holdout,2024-06-24,Gemma 2 27B,gemma2,Google DeepMind,0,0,0.9462461695607762,27.0,50.39566220493507,1.8665060075901876,False,False
+all_ensemble,model_lineage_holdout,2024-06-24,Gemma 2 9B,gemma2,Google DeepMind,0,0,0.8728294177732381,9.0,36.532879283168825,4.059208809240981,True,False
+all_ensemble,model_lineage_holdout,2026-04-02,Gemma 4 31B IT,gemma4,Google DeepMind,0,,0.9121863799283154,31.0,85.18689716919434,2.747964424812721,True,True
+all_ensemble,model_lineage_holdout,2025-09-30,GLM-4.6,glm,Z.ai (Zhipu AI),1,1,0.9555917986952469,357.0,156.33053597831955,2.2836229516254583,False,False
+all_ensemble,model_lineage_holdout,2025-12-22,GLM-4.7 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.974025974025974,358.0,403.04498671503956,1.1258239852375402,False,False
+all_ensemble,model_lineage_holdout,2026-02-11,GLM-5 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.9827018237380322,744.0,498.1486752621221,1.4935300181386864,False,False
+all_ensemble,model_lineage_holdout,2026-06-16,GLM-5.2 (max),glm,Z.ai (Zhipu AI),1,1,1.0,744.0,625.3025547644878,1.1898240209177104,True,True
+all_ensemble,model_lineage_holdout,2025-08-05,gpt-oss-120b,gpt_oss,OpenAI,1,1,0.9698067632850241,116.83,166.30791112421136,1.423503476197992,True,True
+all_ensemble,model_lineage_holdout,2026-01-27,Kimi K2.5 Reasoning,kimi_k2,Moonshot,1,1,0.9908333333333333,1040.0,436.18783370611374,2.3842939202671825,False,False
+all_ensemble,model_lineage_holdout,2026-04-20,Kimi K2.6 Reasoning,kimi_k2,Moonshot,1,1,0.8787878787878788,1040.0,192.70028255006272,5.396982226685694,False,False
+all_ensemble,model_lineage_holdout,2026-06-12,Kimi K2.7 Code,kimi_k2,Moonshot,1,1,0.9600951374207187,1040.0,322.9852346854934,3.219961435737763,False,False
+all_ensemble,model_lineage_holdout,2026-07-16,Kimi K3,kimi_k2,Moonshot,1,1,0.9989281886387996,2780.0,838.686809173933,3.3147057633327615,True,True
+all_ensemble,model_lineage_holdout,2024-07-23,Llama 3.1-405B,llama31,Meta AI,0,0,1.0,405.0,78.2385824764537,5.176474153553165,True,False
+all_ensemble,model_lineage_holdout,2024-07-23,Llama 3.1-70B,llama31,Meta AI,0,0,0.9972826086956521,70.0,55.42509713933745,1.2629657612330671,False,False
+all_ensemble,model_lineage_holdout,2024-07-23,Llama 3.1-8B,llama31,Meta AI,0,0,0.8184551341350601,8.0,26.358526112949235,3.294815764118655,False,False
+all_ensemble,model_lineage_holdout,2024-12-06,Llama 3.3 70B,llama33,Meta AI,0,0,0.9513376200682702,70.0,65.93034343188609,1.0617266095742148,True,False
+all_ensemble,model_lineage_holdout,2024-04-18,Llama 3-70B,llama3,Meta AI,0,0,1.0,70.0,38.40323498159941,1.8227631092417067,False,False
+all_ensemble,model_lineage_holdout,2024-04-18,Llama 3-8B,llama3,Meta AI,0,0,0.9094794094794094,8.0,23.17546818653554,2.896933523316943,True,False
+all_ensemble,model_lineage_holdout,2025-04-05,Llama 4 Maverick,llama4,Meta AI,1,0,0.9493955761316872,400.0,75.80926846302135,5.276399681855711,True,True
+all_ensemble,model_lineage_holdout,2025-04-05,Llama 4 Scout,llama4,Meta AI,1,0,0.94653420781893,109.0,68.24703393140769,1.5971390069427998,False,False
+all_ensemble,model_lineage_holdout,2025-12-16,MiMo-V2-Flash Reasoning,mimo_v2,Xiaomi Corp,1,1,0.8826480424945897,309.0,472.86520857888615,1.5303081183782725,True,True
+all_ensemble,model_lineage_holdout,2026-02-12,MiniMax-M2.5,minimax_m2,MiniMax,1,1,0.93125,228.703644928,491.85715228430377,2.15063101613072,False,False
+all_ensemble,model_lineage_holdout,2026-03-18,MiniMax-M2.7,minimax_m2,MiniMax,1,1,0.9544299201161945,228.703644928,462.8283533617697,2.0237034416634527,True,True
+all_ensemble,model_lineage_holdout,2024-04-17,Mixtral 8x22B,mixtral,Mistral AI,1,0,0.9894366197183099,141.0,22.79182746394447,6.1864280178083515,True,True
+all_ensemble,model_lineage_holdout,2023-12-11,Mixtral 8x7B,mixtral,Mistral AI,1,0,0.9776785714285714,46.7,25.846933447529654,1.8067907395979081,False,False
+all_ensemble,model_lineage_holdout,2025-12-15,Nemotron 3 Nano 30B A3B Reasoning,nemotron3,NVIDIA,1,1,0.42156040268456374,31.6,125.71407165192826,3.97829340670659,True,True
+all_ensemble,model_lineage_holdout,2023-12-12,Phi-2,phi,Microsoft,0,0,0.5707646176911544,2.7,14.221378554198127,5.267177242295602,False,False
+all_ensemble,model_lineage_holdout,2024-04-23,phi-3-medium 14B,phi,Microsoft,0,0,0.9188896899783705,14.0,31.694296926261732,2.2638783518758383,False,False
+all_ensemble,model_lineage_holdout,2024-04-23,phi-3-mini 3.8B,phi,Microsoft,0,0,0.7247656813266041,3.8,22.55730300184776,5.936132368907306,False,False
+all_ensemble,model_lineage_holdout,2024-04-23,phi-3-small 7.4B,phi,Microsoft,0,0,0.8704037490987744,7.4,30.688589819992462,4.147106732431413,False,False
+all_ensemble,model_lineage_holdout,2024-12-12,Phi-4,phi,Microsoft,0,0,0.9444444444444444,14.0,71.97322659306649,5.140944756647607,True,True
+all_ensemble,model_lineage_holdout,2024-09-19,Qwen2.5-72B,qwen25,Alibaba,0,0,0.9900497512437811,72.7,74.2356703760557,1.0211233889416187,True,False
+all_ensemble,model_lineage_holdout,2024-09-18,Qwen2.5-Coder-32B,qwen25_coder,Alibaba,0,0,0.8485671191553544,32.5,34.52192587088393,1.0622131037195055,True,False
+all_ensemble,model_lineage_holdout,2024-06-07,Qwen2-72B,qwen2,Alibaba,0,0,0.9941176470588236,72.71,60.08058242863954,1.2102079750368766,True,False
+all_ensemble,model_lineage_holdout,2026-04-16,Qwen3.6-35B-A3B Reasoning,qwen36,Alibaba,1,1,0.7930053547523427,36.0,224.6176021215034,6.239377836708428,True,True
+all_ensemble,model_lineage_holdout,2025-09-10,Qwen3-Next-80B-A3B,qwen,Alibaba,1,0,0.7235001840264998,80.0,483.17740574444605,6.039717571805577,True,False
+all_ensemble,model_lineage_holdout,2024-02-20,StarCoder 2 15B,starcoder2,Hugging Face,0,0,0.750381679389313,15.0,12.798096927184892,1.172049257428108,False,False
+all_ensemble,model_lineage_holdout,2024-02-22,StarCoder 2 3B,starcoder2,Hugging Face,0,0,0.30348583877995644,3.0,4.853682607138027,1.6178942023793423,True,True
+all_ensemble,model_lineage_holdout,2024-02-20,StarCoder 2 7B,starcoder2,Hugging Face,0,0,0.4907124681933842,7.0,7.169681209759811,1.0242401728228303,False,False
+all_ensemble,model_lineage_holdout,2023-11-22,Yi-34B,yi,01.AI,0,0,0.9855769230769231,34.0,24.354852344319646,1.3960257085249757,True,True
+all_ensemble,whole_developer_holdout,2025-12-01,DeepSeek-V3.2,deepseek_v3,DeepSeek,1,1,0.8809523809523809,671.0,327.5348896868512,2.0486367136079093,True,False
+all_ensemble,whole_developer_holdout,2026-04-24,DeepSeek-V4-Flash,deepseek,DeepSeek,1,1,0.8186274509803921,284.0,211.70185923690474,1.3415092386231242,True,False
+all_ensemble,whole_developer_holdout,2026-04-24,DeepSeek-V4-Pro (max),deepseek_v4,DeepSeek,1,1,0.9938997821350762,1600.0,441.5778894305084,3.6233698251139295,True,True
+all_ensemble,whole_developer_holdout,2024-05-09,Falcon 2 11B,falcon2,Technology Innovation Institute,0,0,0.7367389993972273,11.0,16.28113968118575,1.4801036073805223,True,True
+all_ensemble,whole_developer_holdout,2024-06-24,Gemma 2 27B,gemma2,Google DeepMind,0,0,0.9462461695607762,27.0,43.46874643965626,1.6099535718391205,False,False
+all_ensemble,whole_developer_holdout,2024-06-24,Gemma 2 9B,gemma2,Google DeepMind,0,0,0.8728294177732381,9.0,32.089739700747934,3.565526633416437,True,False
+all_ensemble,whole_developer_holdout,2026-04-02,Gemma 4 31B IT,gemma4,Google DeepMind,0,,0.9121863799283154,31.0,93.48446747486503,3.0156279830601624,True,True
+all_ensemble,whole_developer_holdout,2025-09-30,GLM-4.6,glm,Z.ai (Zhipu AI),1,1,0.9555917986952469,357.0,176.10947694299816,2.0271481478282465,False,False
+all_ensemble,whole_developer_holdout,2025-12-22,GLM-4.7 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.974025974025974,358.0,427.46471386589974,1.194035513591898,False,False
+all_ensemble,whole_developer_holdout,2026-02-11,GLM-5 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.9827018237380322,744.0,529.1846294461268,1.4059365268766597,False,False
+all_ensemble,whole_developer_holdout,2026-06-16,GLM-5.2 (max),glm,Z.ai (Zhipu AI),1,1,1.0,744.0,735.5157116749009,1.0115351557967112,True,True
+all_ensemble,whole_developer_holdout,2025-08-05,gpt-oss-120b,gpt_oss,OpenAI,1,1,0.9698067632850241,116.83,207.449016776472,1.7756485215824025,True,True
+all_ensemble,whole_developer_holdout,2026-01-27,Kimi K2.5 Reasoning,kimi_k2,Moonshot,1,1,0.9908333333333333,1040.0,548.8809542171829,1.8947642325889293,False,False
+all_ensemble,whole_developer_holdout,2026-04-20,Kimi K2.6 Reasoning,kimi_k2,Moonshot,1,1,0.8787878787878788,1040.0,190.8191260561695,5.4501874182877525,False,False
+all_ensemble,whole_developer_holdout,2026-06-12,Kimi K2.7 Code,kimi_k2,Moonshot,1,1,0.9600951374207187,1040.0,377.65455131933896,2.753839444981537,False,False
+all_ensemble,whole_developer_holdout,2026-07-16,Kimi K3,kimi_k2,Moonshot,1,1,0.9989281886387996,2780.0,846.8630647497508,3.282703090636611,True,True
+all_ensemble,whole_developer_holdout,2024-07-23,Llama 3.1-405B,llama31,Meta AI,0,0,1.0,405.0,63.48348580614715,6.37961187633436,True,False
+all_ensemble,whole_developer_holdout,2024-07-23,Llama 3.1-70B,llama31,Meta AI,0,0,0.9972826086956521,70.0,45.95837214576418,1.5231174807058885,False,False
+all_ensemble,whole_developer_holdout,2024-07-23,Llama 3.1-8B,llama31,Meta AI,0,0,0.8184551341350601,8.0,23.39625821725326,2.9245322771566573,False,False
+all_ensemble,whole_developer_holdout,2024-12-06,Llama 3.3 70B,llama33,Meta AI,0,0,0.9513376200682702,70.0,47.64151648265504,1.469306713305087,True,False
+all_ensemble,whole_developer_holdout,2024-04-18,Llama 3-70B,llama3,Meta AI,0,0,1.0,70.0,40.43513408657225,1.7311677475862681,False,False
+all_ensemble,whole_developer_holdout,2024-04-18,Llama 3-8B,llama3,Meta AI,0,0,0.9094794094794094,8.0,23.868785875569206,2.9835982344461507,True,False
+all_ensemble,whole_developer_holdout,2025-04-05,Llama 4 Maverick,llama4,Meta AI,1,0,0.9493955761316872,400.0,65.54029508929058,6.1031156398525415,True,True
+all_ensemble,whole_developer_holdout,2025-04-05,Llama 4 Scout,llama4,Meta AI,1,0,0.94653420781893,109.0,60.51118447467309,1.8013198873279685,False,False
+all_ensemble,whole_developer_holdout,2025-12-16,MiMo-V2-Flash Reasoning,mimo_v2,Xiaomi Corp,1,1,0.8826480424945897,309.0,483.9566658811828,1.5662028022044752,True,True
+all_ensemble,whole_developer_holdout,2026-02-12,MiniMax-M2.5,minimax_m2,MiniMax,1,1,0.93125,228.703644928,535.7303358582128,2.3424652284263794,False,False
+all_ensemble,whole_developer_holdout,2026-03-18,MiniMax-M2.7,minimax_m2,MiniMax,1,1,0.9544299201161945,228.703644928,512.4078935684588,2.240488531478255,True,True
+all_ensemble,whole_developer_holdout,2024-04-17,Mixtral 8x22B,mixtral,Mistral AI,1,0,0.9894366197183099,141.0,30.283521990925323,4.655997411471875,True,True
+all_ensemble,whole_developer_holdout,2023-12-11,Mixtral 8x7B,mixtral,Mistral AI,1,0,0.9776785714285714,46.7,35.50356382538977,1.315360909391392,False,False
+all_ensemble,whole_developer_holdout,2025-12-15,Nemotron 3 Nano 30B A3B Reasoning,nemotron3,NVIDIA,1,1,0.42156040268456374,31.6,136.70828492432682,4.32621154823819,True,True
+all_ensemble,whole_developer_holdout,2023-12-12,Phi-2,phi,Microsoft,0,0,0.5707646176911544,2.7,15.052069577165975,5.574840584135545,False,False
+all_ensemble,whole_developer_holdout,2024-04-23,phi-3-medium 14B,phi,Microsoft,0,0,0.9188896899783705,14.0,33.28898350197292,2.377784535855209,False,False
+all_ensemble,whole_developer_holdout,2024-04-23,phi-3-mini 3.8B,phi,Microsoft,0,0,0.7247656813266041,3.8,23.34633604993778,6.143772644720469,False,False
+all_ensemble,whole_developer_holdout,2024-04-23,phi-3-small 7.4B,phi,Microsoft,0,0,0.8704037490987744,7.4,32.2228143703254,4.354434374368297,False,False
+all_ensemble,whole_developer_holdout,2024-12-12,Phi-4,phi,Microsoft,0,0,0.9444444444444444,14.0,62.96445398400343,4.497460998857388,True,True
+all_ensemble,whole_developer_holdout,2024-09-19,Qwen2.5-72B,qwen25,Alibaba,0,0,0.9900497512437811,72.7,58.3094063580763,1.2467971214378604,True,False
+all_ensemble,whole_developer_holdout,2024-09-18,Qwen2.5-Coder-32B,qwen25_coder,Alibaba,0,0,0.8485671191553544,32.5,28.740316350887568,1.1308156668566498,True,False
+all_ensemble,whole_developer_holdout,2024-06-07,Qwen2-72B,qwen2,Alibaba,0,0,0.9941176470588236,72.71,47.6161373287267,1.5270033244829002,True,False
+all_ensemble,whole_developer_holdout,2026-04-16,Qwen3.6-35B-A3B Reasoning,qwen36,Alibaba,1,1,0.7930053547523427,36.0,341.59037968217507,9.488621657838197,True,True
+all_ensemble,whole_developer_holdout,2025-09-10,Qwen3-Next-80B-A3B,qwen,Alibaba,1,0,0.7235001840264998,80.0,482.60123883206205,6.032515485400776,True,False
+all_ensemble,whole_developer_holdout,2024-02-20,StarCoder 2 15B,starcoder2,Hugging Face,0,0,0.750381679389313,15.0,12.995141010120836,1.1542775863930794,False,False
+all_ensemble,whole_developer_holdout,2024-02-22,StarCoder 2 3B,starcoder2,Hugging Face,0,0,0.30348583877995644,3.0,4.638609348362567,1.5462031161208556,True,True
+all_ensemble,whole_developer_holdout,2024-02-20,StarCoder 2 7B,starcoder2,Hugging Face,0,0,0.4907124681933842,7.0,6.943090680021259,1.008196539927456,False,False
+all_ensemble,whole_developer_holdout,2023-11-22,Yi-34B,yi,01.AI,0,0,0.9855769230769231,34.0,26.813436364664796,1.2680209853596305,True,True
+frontier_like,model_lineage_holdout,2026-04-24,DeepSeek-V4-Pro (max),deepseek_v4,DeepSeek,1,1,0.9938997821350762,1600.0,309.68451354930505,5.166548309640489,True,True
+frontier_like,model_lineage_holdout,2024-06-24,Gemma 2 27B,gemma2,Google DeepMind,0,0,0.9462461695607762,27.0,50.39566220493507,1.8665060075901876,True,False
+frontier_like,model_lineage_holdout,2026-04-02,Gemma 4 31B IT,gemma4,Google DeepMind,0,,0.9121863799283154,31.0,85.18689716919434,2.747964424812721,True,True
+frontier_like,model_lineage_holdout,2025-09-30,GLM-4.6,glm,Z.ai (Zhipu AI),1,1,0.9555917986952469,357.0,156.33053597831955,2.2836229516254583,False,False
+frontier_like,model_lineage_holdout,2025-12-22,GLM-4.7 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.974025974025974,358.0,403.04498671503956,1.1258239852375402,False,False
+frontier_like,model_lineage_holdout,2026-02-11,GLM-5 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.9827018237380322,744.0,498.1486752621221,1.4935300181386864,False,False
+frontier_like,model_lineage_holdout,2026-06-16,GLM-5.2 (max),glm,Z.ai (Zhipu AI),1,1,1.0,744.0,625.3025547644878,1.1898240209177104,True,True
+frontier_like,model_lineage_holdout,2025-08-05,gpt-oss-120b,gpt_oss,OpenAI,1,1,0.9698067632850241,116.83,166.30791112421136,1.423503476197992,True,True
+frontier_like,model_lineage_holdout,2026-01-27,Kimi K2.5 Reasoning,kimi_k2,Moonshot,1,1,0.9908333333333333,1040.0,436.18783370611374,2.3842939202671825,False,False
+frontier_like,model_lineage_holdout,2026-06-12,Kimi K2.7 Code,kimi_k2,Moonshot,1,1,0.9600951374207187,1040.0,322.9852346854934,3.219961435737763,False,False
+frontier_like,model_lineage_holdout,2026-07-16,Kimi K3,kimi_k2,Moonshot,1,1,0.9989281886387996,2780.0,838.686809173933,3.3147057633327615,True,True
+frontier_like,model_lineage_holdout,2024-07-23,Llama 3.1-405B,llama31,Meta AI,0,0,1.0,405.0,78.2385824764537,5.176474153553165,True,False
+frontier_like,model_lineage_holdout,2024-07-23,Llama 3.1-70B,llama31,Meta AI,0,0,0.9972826086956521,70.0,55.42509713933745,1.2629657612330671,False,False
+frontier_like,model_lineage_holdout,2024-12-06,Llama 3.3 70B,llama33,Meta AI,0,0,0.9513376200682702,70.0,65.93034343188609,1.0617266095742148,True,False
+frontier_like,model_lineage_holdout,2024-04-18,Llama 3-70B,llama3,Meta AI,0,0,1.0,70.0,38.40323498159941,1.8227631092417067,False,False
+frontier_like,model_lineage_holdout,2024-04-18,Llama 3-8B,llama3,Meta AI,0,0,0.9094794094794094,8.0,23.17546818653554,2.896933523316943,True,False
+frontier_like,model_lineage_holdout,2025-04-05,Llama 4 Maverick,llama4,Meta AI,1,0,0.9493955761316872,400.0,75.80926846302135,5.276399681855711,True,True
+frontier_like,model_lineage_holdout,2025-04-05,Llama 4 Scout,llama4,Meta AI,1,0,0.94653420781893,109.0,68.24703393140769,1.5971390069427998,False,False
+frontier_like,model_lineage_holdout,2026-02-12,MiniMax-M2.5,minimax_m2,MiniMax,1,1,0.93125,228.703644928,491.85715228430377,2.15063101613072,False,False
+frontier_like,model_lineage_holdout,2026-03-18,MiniMax-M2.7,minimax_m2,MiniMax,1,1,0.9544299201161945,228.703644928,462.8283533617697,2.0237034416634527,True,True
+frontier_like,model_lineage_holdout,2024-04-17,Mixtral 8x22B,mixtral,Mistral AI,1,0,0.9894366197183099,141.0,22.79182746394447,6.1864280178083515,True,True
+frontier_like,model_lineage_holdout,2023-12-11,Mixtral 8x7B,mixtral,Mistral AI,1,0,0.9776785714285714,46.7,25.846933447529654,1.8067907395979081,False,False
+frontier_like,model_lineage_holdout,2024-04-23,phi-3-medium 14B,phi,Microsoft,0,0,0.9188896899783705,14.0,31.694296926261732,2.2638783518758383,False,False
+frontier_like,model_lineage_holdout,2024-12-12,Phi-4,phi,Microsoft,0,0,0.9444444444444444,14.0,71.97322659306649,5.140944756647607,True,True
+frontier_like,model_lineage_holdout,2024-09-19,Qwen2.5-72B,qwen25,Alibaba,0,0,0.9900497512437811,72.7,74.2356703760557,1.0211233889416187,True,True
+frontier_like,model_lineage_holdout,2024-06-07,Qwen2-72B,qwen2,Alibaba,0,0,0.9941176470588236,72.71,60.08058242863954,1.2102079750368766,True,False
+frontier_like,model_lineage_holdout,2023-11-22,Yi-34B,yi,01.AI,0,0,0.9855769230769231,34.0,24.354852344319646,1.3960257085249757,True,True
+frontier_like,whole_developer_holdout,2026-04-24,DeepSeek-V4-Pro (max),deepseek_v4,DeepSeek,1,1,0.9938997821350762,1600.0,441.5778894305084,3.6233698251139295,True,True
+frontier_like,whole_developer_holdout,2024-06-24,Gemma 2 27B,gemma2,Google DeepMind,0,0,0.9462461695607762,27.0,43.46874643965626,1.6099535718391205,True,False
+frontier_like,whole_developer_holdout,2026-04-02,Gemma 4 31B IT,gemma4,Google DeepMind,0,,0.9121863799283154,31.0,93.48446747486503,3.0156279830601624,True,True
+frontier_like,whole_developer_holdout,2025-09-30,GLM-4.6,glm,Z.ai (Zhipu AI),1,1,0.9555917986952469,357.0,176.10947694299816,2.0271481478282465,False,False
+frontier_like,whole_developer_holdout,2025-12-22,GLM-4.7 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.974025974025974,358.0,427.46471386589974,1.194035513591898,False,False
+frontier_like,whole_developer_holdout,2026-02-11,GLM-5 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.9827018237380322,744.0,529.1846294461268,1.4059365268766597,False,False
+frontier_like,whole_developer_holdout,2026-06-16,GLM-5.2 (max),glm,Z.ai (Zhipu AI),1,1,1.0,744.0,735.5157116749009,1.0115351557967112,True,True
+frontier_like,whole_developer_holdout,2025-08-05,gpt-oss-120b,gpt_oss,OpenAI,1,1,0.9698067632850241,116.83,207.449016776472,1.7756485215824025,True,True
+frontier_like,whole_developer_holdout,2026-01-27,Kimi K2.5 Reasoning,kimi_k2,Moonshot,1,1,0.9908333333333333,1040.0,548.8809542171829,1.8947642325889293,False,False
+frontier_like,whole_developer_holdout,2026-06-12,Kimi K2.7 Code,kimi_k2,Moonshot,1,1,0.9600951374207187,1040.0,377.65455131933896,2.753839444981537,False,False
+frontier_like,whole_developer_holdout,2026-07-16,Kimi K3,kimi_k2,Moonshot,1,1,0.9989281886387996,2780.0,846.8630647497508,3.282703090636611,True,True
+frontier_like,whole_developer_holdout,2024-07-23,Llama 3.1-405B,llama31,Meta AI,0,0,1.0,405.0,63.48348580614715,6.37961187633436,True,False
+frontier_like,whole_developer_holdout,2024-07-23,Llama 3.1-70B,llama31,Meta AI,0,0,0.9972826086956521,70.0,45.95837214576418,1.5231174807058885,False,False
+frontier_like,whole_developer_holdout,2024-12-06,Llama 3.3 70B,llama33,Meta AI,0,0,0.9513376200682702,70.0,47.64151648265504,1.469306713305087,True,False
+frontier_like,whole_developer_holdout,2024-04-18,Llama 3-70B,llama3,Meta AI,0,0,1.0,70.0,40.43513408657225,1.7311677475862681,False,False
+frontier_like,whole_developer_holdout,2024-04-18,Llama 3-8B,llama3,Meta AI,0,0,0.9094794094794094,8.0,23.868785875569206,2.9835982344461507,True,False
+frontier_like,whole_developer_holdout,2025-04-05,Llama 4 Maverick,llama4,Meta AI,1,0,0.9493955761316872,400.0,65.54029508929058,6.1031156398525415,True,True
+frontier_like,whole_developer_holdout,2025-04-05,Llama 4 Scout,llama4,Meta AI,1,0,0.94653420781893,109.0,60.51118447467309,1.8013198873279685,False,False
+frontier_like,whole_developer_holdout,2026-02-12,MiniMax-M2.5,minimax_m2,MiniMax,1,1,0.93125,228.703644928,535.7303358582128,2.3424652284263794,False,False
+frontier_like,whole_developer_holdout,2026-03-18,MiniMax-M2.7,minimax_m2,MiniMax,1,1,0.9544299201161945,228.703644928,512.4078935684588,2.240488531478255,True,True
+frontier_like,whole_developer_holdout,2024-04-17,Mixtral 8x22B,mixtral,Mistral AI,1,0,0.9894366197183099,141.0,30.283521990925323,4.655997411471875,True,True
+frontier_like,whole_developer_holdout,2023-12-11,Mixtral 8x7B,mixtral,Mistral AI,1,0,0.9776785714285714,46.7,35.50356382538977,1.315360909391392,False,False
+frontier_like,whole_developer_holdout,2024-04-23,phi-3-medium 14B,phi,Microsoft,0,0,0.9188896899783705,14.0,33.28898350197292,2.377784535855209,False,False
+frontier_like,whole_developer_holdout,2024-12-12,Phi-4,phi,Microsoft,0,0,0.9444444444444444,14.0,62.96445398400343,4.497460998857388,True,True
+frontier_like,whole_developer_holdout,2024-09-19,Qwen2.5-72B,qwen25,Alibaba,0,0,0.9900497512437811,72.7,58.3094063580763,1.2467971214378604,True,True
+frontier_like,whole_developer_holdout,2024-06-07,Qwen2-72B,qwen2,Alibaba,0,0,0.9941176470588236,72.71,47.6161373287267,1.5270033244829002,True,False
+frontier_like,whole_developer_holdout,2023-11-22,Yi-34B,yi,01.AI,0,0,0.9855769230769231,34.0,26.813436364664796,1.2680209853596305,True,True
+frontier_moe_reasoning,model_lineage_holdout,2026-04-24,DeepSeek-V4-Pro (max),deepseek_v4,DeepSeek,1,1,0.9938997821350762,1600.0,309.68451354930505,5.166548309640489,True,True
+frontier_moe_reasoning,model_lineage_holdout,2025-09-30,GLM-4.6,glm,Z.ai (Zhipu AI),1,1,0.9555917986952469,357.0,156.33053597831955,2.2836229516254583,False,False
+frontier_moe_reasoning,model_lineage_holdout,2025-12-22,GLM-4.7 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.974025974025974,358.0,403.04498671503956,1.1258239852375402,False,False
+frontier_moe_reasoning,model_lineage_holdout,2026-02-11,GLM-5 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.9827018237380322,744.0,498.1486752621221,1.4935300181386864,False,False
+frontier_moe_reasoning,model_lineage_holdout,2026-06-16,GLM-5.2 (max),glm,Z.ai (Zhipu AI),1,1,1.0,744.0,625.3025547644878,1.1898240209177104,True,True
+frontier_moe_reasoning,model_lineage_holdout,2025-08-05,gpt-oss-120b,gpt_oss,OpenAI,1,1,0.9698067632850241,116.83,166.30791112421136,1.423503476197992,True,True
+frontier_moe_reasoning,model_lineage_holdout,2026-01-27,Kimi K2.5 Reasoning,kimi_k2,Moonshot,1,1,0.9908333333333333,1040.0,436.18783370611374,2.3842939202671825,False,False
+frontier_moe_reasoning,model_lineage_holdout,2026-06-12,Kimi K2.7 Code,kimi_k2,Moonshot,1,1,0.9600951374207187,1040.0,322.9852346854934,3.219961435737763,False,False
+frontier_moe_reasoning,model_lineage_holdout,2026-07-16,Kimi K3,kimi_k2,Moonshot,1,1,0.9989281886387996,2780.0,838.686809173933,3.3147057633327615,True,True
+frontier_moe_reasoning,model_lineage_holdout,2026-02-12,MiniMax-M2.5,minimax_m2,MiniMax,1,1,0.93125,228.703644928,491.85715228430377,2.15063101613072,False,False
+frontier_moe_reasoning,model_lineage_holdout,2026-03-18,MiniMax-M2.7,minimax_m2,MiniMax,1,1,0.9544299201161945,228.703644928,462.8283533617697,2.0237034416634527,True,True
+frontier_moe_reasoning,whole_developer_holdout,2026-04-24,DeepSeek-V4-Pro (max),deepseek_v4,DeepSeek,1,1,0.9938997821350762,1600.0,441.5778894305084,3.6233698251139295,True,True
+frontier_moe_reasoning,whole_developer_holdout,2025-09-30,GLM-4.6,glm,Z.ai (Zhipu AI),1,1,0.9555917986952469,357.0,176.10947694299816,2.0271481478282465,False,False
+frontier_moe_reasoning,whole_developer_holdout,2025-12-22,GLM-4.7 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.974025974025974,358.0,427.46471386589974,1.194035513591898,False,False
+frontier_moe_reasoning,whole_developer_holdout,2026-02-11,GLM-5 Reasoning,glm,Z.ai (Zhipu AI),1,1,0.9827018237380322,744.0,529.1846294461268,1.4059365268766597,False,False
+frontier_moe_reasoning,whole_developer_holdout,2026-06-16,GLM-5.2 (max),glm,Z.ai (Zhipu AI),1,1,1.0,744.0,735.5157116749009,1.0115351557967112,True,True
+frontier_moe_reasoning,whole_developer_holdout,2025-08-05,gpt-oss-120b,gpt_oss,OpenAI,1,1,0.9698067632850241,116.83,207.449016776472,1.7756485215824025,True,True
+frontier_moe_reasoning,whole_developer_holdout,2026-01-27,Kimi K2.5 Reasoning,kimi_k2,Moonshot,1,1,0.9908333333333333,1040.0,548.8809542171829,1.8947642325889293,False,False
+frontier_moe_reasoning,whole_developer_holdout,2026-06-12,Kimi K2.7 Code,kimi_k2,Moonshot,1,1,0.9600951374207187,1040.0,377.65455131933896,2.753839444981537,False,False
+frontier_moe_reasoning,whole_developer_holdout,2026-07-16,Kimi K3,kimi_k2,Moonshot,1,1,0.9989281886387996,2780.0,846.8630647497508,3.282703090636611,True,True
+frontier_moe_reasoning,whole_developer_holdout,2026-02-12,MiniMax-M2.5,minimax_m2,MiniMax,1,1,0.93125,228.703644928,535.7303358582128,2.3424652284263794,False,False
+frontier_moe_reasoning,whole_developer_holdout,2026-03-18,MiniMax-M2.7,minimax_m2,MiniMax,1,1,0.9544299201161945,228.703644928,512.4078935684588,2.240488531478255,True,True
