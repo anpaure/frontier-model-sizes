@@ -244,6 +244,87 @@ class ParameterPredictiveUncertaintyTest(unittest.TestCase):
                 model["currentEvidenceT"] * factor,
             )
 
+    def test_k3_efficiency_projection_changes_only_upper_tail(self) -> None:
+        self.assertTrue(
+            self.result["decision"]["k3_efficiency_projection_live_for_upper_tail"]
+        )
+        self.assertFalse(
+            self.result["decision"]["k3_efficiency_projection_changes_centers"]
+        )
+        self.assertEqual(
+            self.result["decision"][
+                "k3_efficiency_default_projection_strength"
+            ],
+            0.8,
+        )
+        for target in self.result["targets"]:
+            projection = target["k3_efficiency_projection"]
+            self.assertEqual(projection["default_projection_percent"], 80)
+            self.assertFalse(projection["lower_tail_changed"])
+            self.assertFalse(projection["point_center_changed"])
+            self.assertFalse(projection["formal_coverage_guarantee"])
+            self.assertFalse(projection["literal_conditioning"])
+            self.assertFalse(
+                projection["literal_ceiling_enforced_when_reference_below_center"]
+            )
+            self.assertGreaterEqual(
+                projection["binding_probability_against_raw_upper_draws"], 0
+            )
+            self.assertLessEqual(
+                projection["binding_probability_against_raw_upper_draws"], 1
+            )
+            self.assertGreaterEqual(projection["center_override_probability"], 0)
+            self.assertLessEqual(projection["center_override_probability"], 1)
+            self.assertEqual(
+                projection["center_override_probability"],
+                projection["literal_reference_violation_probability_at_100pct"],
+            )
+            previous_by_level = {
+                level: float(target["intervals"][level]["high_t"])
+                for level in ("50", "80", "90")
+            }
+            for percent in range(0, 101, 5):
+                grid = projection["strength_grid"][str(percent)]
+                for level in ("50", "80", "90"):
+                    raw = target["intervals"][level]
+                    projected = grid[level]
+                    self.assertEqual(projected["low_t"], raw["low_t"])
+                    self.assertEqual(projected["raw_low_t"], raw["low_t"])
+                    self.assertEqual(projected["raw_high_t"], raw["high_t"])
+                    self.assertGreaterEqual(
+                        projected["high_t"], target["center_t"]
+                    )
+                    self.assertLessEqual(projected["high_t"], raw["high_t"])
+                    self.assertLessEqual(
+                        projected["high_t"], previous_by_level[level] + 1e-12
+                    )
+                    previous_by_level[level] = projected["high_t"]
+            self.assertEqual(
+                projection["projected_intervals"], projection["strength_grid"]["80"]
+            )
+            self.assertLess(
+                projection["projected_intervals"]["80"]["high_t"],
+                target["intervals"]["80"]["high_t"],
+            )
+
+        by_id = {row["model_id"]: row for row in self.result["targets"]}
+        self.assertTrue(
+            by_id["gpt-56-sol"]["k3_efficiency_projection"][
+                "order_projection_applied"
+            ]
+        )
+        self.assertFalse(
+            by_id["claude-fable-5"]["k3_efficiency_projection"][
+                "order_projection_applied"
+            ]
+        )
+        self.assertGreater(
+            by_id["claude-fable-5"]["k3_efficiency_projection"][
+                "center_override_probability"
+            ],
+            0.8,
+        )
+
     def test_opus_5_is_an_unlocked_distinct_target_with_exact_inputs(self) -> None:
         opus = next(row for row in self.site["models"] if row["id"] == "claude-opus-5")
         self.assertEqual(opus["name"], "Claude Opus 5")

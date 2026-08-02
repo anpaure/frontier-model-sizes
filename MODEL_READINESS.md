@@ -1,6 +1,6 @@
 # Current frontier-parameter model readiness
 
-Generated automatically from the audited pipeline on 2026-07-31.
+Generated automatically from the audited pipeline on 2026-08-01.
 
 ## Current forecasts
 
@@ -11,6 +11,18 @@ Generated automatically from the audited pipeline on 2026-07-31.
 | Claude Opus 5 | 3.0T | — | **3.0T** | 1.0T–9.1T | 0.6T–15.8T |
 
 The intervals are calibrated around the evidence centers. Crowd forecasts shift Fable/Sol's displayed centers but do not narrow coverage.
+
+## K3 efficiency upper-tail stress test
+
+The user-supplied assumption that the targets are at least as parameter-efficient as disclosed 2.780T Kimi K3 is represented by center-preserving winsorization on 80% of upper-tail draws. It has 0% point-center weight, leaves every lower endpoint unchanged, preserves the exact 50% Fable/Sol crowd blend, and assigns the rejected nonlinear ECI extrapolation 0% weight.
+
+| Model | Pooled K3-relative reference median | Reference 10–90% | Raw 80% band | Projected 80% stress test | Center override |
+|---|---:|---:|---:|---:|---:|
+| Claude Fable 5 | 4.1T | 3.6T–4.9T | 0.9T–25.0T | 0.9T–5.5T | 84% |
+| GPT-5.6 Sol | 3.9T | 3.4T–4.6T | 0.6T–16.3T | 0.6T–4.7T | 1% |
+| Claude Opus 5 | 4.0T | 3.5T–4.6T | 0.6T–15.8T | 0.6T–4.8T | 0% |
+
+This is a center-preserving winsorized structural stress test—not literal conditioning, an empirical coverage interval, or a formal Bayesian credible interval. The pooled AA/ECI reference is not a strict ceiling under either mapping. The high Fable override rate exposes tension with the existing evidence center: when the reference is lower, the center wins rather than silently recentering Fable.
 
 ## Precision
 

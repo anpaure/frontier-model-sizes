@@ -32,7 +32,9 @@ def watched_state():
         paths.extend(ROOT.glob(suffix))
         paths.extend((ROOT / "tests").glob(suffix))
     paths.extend((ROOT / "site" / "app").rglob("*.tsx"))
+    paths.extend((ROOT / "site" / "app").rglob("*.css"))
     paths.extend((ROOT / "site" / "tests").rglob("*.mjs"))
+    paths.extend(ROOT.glob("*.md"))
     return tuple(
         (str(path.relative_to(ROOT)), path.stat().st_size, path.stat().st_mtime_ns)
         for path in sorted(set(paths))
@@ -251,6 +253,21 @@ def build(
     run([PYTHON, ROOT / "tests/test_eci_component_extended_audit.py"])
     run([PYTHON, ROOT / "analyze_eci_fit_tournament.py"])
     run([PYTHON, "-m", "unittest", "-v", "tests.test_eci_fit_tournament"])
+    # Convert the user-supplied "at least K3-efficient" assumption into a
+    # one-sided reference distribution. The retained log-linear laws already
+    # encode diminishing returns; rejected nonlinear ECI forms remain at zero
+    # weight. Downstream this is a center-preserving upper-tail winsorization,
+    # explicitly not literal conditioning, and cannot move centers or crowd weight.
+    run([PYTHON, ROOT / "analyze_k3_efficiency_prior.py"])
+    run(
+        [
+            PYTHON,
+            "-m",
+            "unittest",
+            "-v",
+            "tests.test_k3_efficiency_prior",
+        ]
+    )
     run([PYTHON, ROOT / "analyze_eci_architecture_blend_challenger.py"])
     run(
         [
@@ -340,6 +357,8 @@ def build(
     # that they contain.  No upstream audit may read these final artifacts.
     run([NODE, ROOT / "build_horizon_informed_model.mjs"])
     run([PYTHON, ROOT / "generate_forecast_site_data.py"])
+    run([PYTHON, ROOT / "generate_parameter_scatter_data.py"])
+    run([PYTHON, "-m", "unittest", "-v", "tests.test_parameter_scatter_data"])
     # Keep the publisher-defined LongCat 1.6T model total canonical while
     # quantifying the exact 1.7756T serialized-tensor convention downstream.
     # This diagnostic depends on the rebuilt site centers but has no path back

@@ -387,7 +387,7 @@
   },
   "source_files": {
     "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_chronological_backtest_2026-07-17.json": "7ae67d3d92cfe72771cf460a8ef254cd73f3be775e618124e7ddbca7f170088c",
-    "site/public/data/forecast-model.json": "9d9cc4676a0b3455134adbc0b90d07e9b45bd642cb2339204c77fd6eebfc44c0",
+    "site/public/data/forecast-model.json": "a5f80e78a4a7893bbbae7a7ffe0150e126920d64e0f418595ee5cafd1fa485e8",
     "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_incremental_price_backtest_2026-07-18.json": "18be22bc18aee2ea64492a19b025764724e3a59806fc0873e72dbbf89c7b1289",
     "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/ikp_parameter_signal_audit_2026-07-18.json": "75bbf6a3d44a29af0853f9b554d9744260d34e192b96ae73ed2317e7b95eaa7d"
   }

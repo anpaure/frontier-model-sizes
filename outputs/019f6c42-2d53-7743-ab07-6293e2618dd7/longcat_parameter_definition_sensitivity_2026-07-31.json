@@ -599,7 +599,7 @@
       "build_k3_calibrated_crosscheck.mjs": "f3e12ca865b9df77125a4235a91e3029e56b72d867cd4a708e6479c1270ce741",
       "build_price_informed_crosscheck.mjs": "11620bac5c645f9ab655e34bd0f69a1634bac2af8d76593b44e3785314116c2c",
       "build_horizon_informed_model.mjs": "516951b1f9e5fc86d49bc403bf39e23a16f31c9b7248bd35502dfeb2df28c980",
-      "site/public/data/forecast-model.json": "9d9cc4676a0b3455134adbc0b90d07e9b45bd642cb2339204c77fd6eebfc44c0"
+      "site/public/data/forecast-model.json": "a5f80e78a4a7893bbbae7a7ffe0150e126920d64e0f418595ee5cafd1fa485e8"
     }
   },
   "decision": {

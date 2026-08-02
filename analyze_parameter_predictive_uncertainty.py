@@ -29,6 +29,8 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 from analyze_parameter_vintage_sensitivity import (
     developer_lookup,
     fallback_developer,
@@ -53,6 +55,8 @@ OPUS_5_EVIDENCE = ROOT / "sources/claude_opus_5_evidence_2026-07-31.json"
 RESULT = OUT / "frontier_parameter_predictive_uncertainty_2026-07-18.json"
 LEDGER = OUT / "frontier_parameter_predictive_uncertainty_calibration_2026-07-18.csv"
 SITE_OUTPUT = ROOT / "site/public/data/predictive-uncertainty.json"
+K3_EFFICIENCY_PRIOR = OUT / "k3_efficiency_prior_2026-08-01.json"
+K3_EFFICIENCY_DRAWS = OUT / "k3_efficiency_prior_cap_draws_2026-08-01.csv"
 
 LEVELS = (0.50, 0.80, 0.90)
 MIN_SEQUENTIAL_CALIBRATION_FAMILIES = 5
@@ -66,6 +70,13 @@ TARGETS = {
 LINEAGE_HOLDOUT = "model_lineage_holdout"
 DEVELOPER_HOLDOUT = "whole_developer_holdout"
 
+K3_EFFICIENCY_DRAW_FIELDS = {
+    "claude-fable-5": "fable_ordered_reference_t",
+    "gpt-56-sol": "sol_ordered_reference_t",
+    "claude-opus-5": "opus5_ordered_reference_t",
+}
+EFFICIENCY_STRENGTH_GRID = tuple(range(0, 101, 5))
+
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -73,6 +84,149 @@ def sha256(path: Path) -> str:
         for block in iter(lambda: handle.read(1 << 20), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def load_k3_efficiency_reference() -> tuple[dict[str, Any], dict[str, np.ndarray]]:
+    reference = json.loads(K3_EFFICIENCY_PRIOR.read_text(encoding="utf-8"))
+    decision = reference["decision"]
+    if (
+        not decision["apply_center_preserving_upper_tail_projection"]
+        or decision["change_point_centers"]
+        or decision["incremental_point_center_weight"] != 0
+        or decision["change_crowd_weight"]
+        or decision["crowd_weight_for_fable_and_sol"] != 0.5
+        or decision["rejected_nonlinear_eci_weight"] != 0
+        or decision["literal_constraint_enforced_when_reference_below_center"]
+    ):
+        raise ValueError("K3 efficiency reference violates the center-preserving policy")
+    with K3_EFFICIENCY_DRAWS.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    if len(rows) != int(reference["method"]["draws"]):
+        raise ValueError("K3 efficiency draw ledger does not match its audit")
+    if sha256(K3_EFFICIENCY_DRAWS) != reference["outputs"]["draw_ledger_sha256"]:
+        raise ValueError("K3 efficiency draw ledger hash does not match its audit")
+    draws = {
+        model_id: np.asarray([float(row[field]) for row in rows], dtype=float)
+        for model_id, field in K3_EFFICIENCY_DRAW_FIELDS.items()
+    }
+    if any(np.any(values <= 0) for values in draws.values()):
+        raise ValueError("K3 efficiency reference draws must be positive")
+    return reference, draws
+
+
+def upper_quantile_draws(
+    center: float,
+    intervals: dict[str, dict[str, Any]],
+    size: int,
+    seed: int,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Reconstruct a deterministic upper-half quantile sample.
+
+    The interpolation passes through the three published upper endpoints
+    exactly in the continuum: q75/q90/q95 correspond to the 50/80/90 central
+    bands. This lets the center-preserving structural projection alter only the
+    upper half while the empirical intervals remain authoritative and unchanged.
+    """
+
+    probabilities = np.asarray([0.50, 0.75, 0.90, 0.95, 0.9995])
+    factors = np.asarray(
+        [
+            1.0,
+            float(intervals["50"]["multiplicative_factor"]),
+            float(intervals["80"]["multiplicative_factor"]),
+            float(intervals["90"]["multiplicative_factor"]),
+            0.0,
+        ]
+    )
+    tail_log_slope = (
+        math.log(factors[3]) - math.log(factors[2])
+    ) / (probabilities[3] - probabilities[2])
+    factors[4] = math.exp(
+        math.log(factors[3])
+        + tail_log_slope * (probabilities[4] - probabilities[3])
+    )
+    upper_probability = 0.50 + 0.4995 * (
+        np.arange(size, dtype=float) + 0.5
+    ) / size
+    rng = np.random.default_rng(seed)
+    rng.shuffle(upper_probability)
+    log_factor = np.interp(upper_probability, probabilities, np.log(factors))
+    raw_upper = center * np.exp(log_factor)
+    application_uniform = rng.random(size)
+    return raw_upper, application_uniform
+
+
+def k3_efficiency_projection(
+    model_id: str,
+    center: float,
+    intervals: dict[str, dict[str, Any]],
+    reference_draws: np.ndarray,
+    reference_metadata: dict[str, Any],
+    default_strength: float,
+) -> dict[str, Any]:
+    raw_upper, application_uniform = upper_quantile_draws(
+        center, intervals, len(reference_draws), 20260810 + sum(map(ord, model_id))
+    )
+    # This is intentionally a center-preserving winsorization, not literal
+    # conditioning. If a reference draw lies below the published evidence
+    # center, the center overrides it and that conflict is reported below.
+    projected_upper = np.minimum(raw_upper, np.maximum(center, reference_draws))
+    quantile_by_level = {"50": 0.50, "80": 0.80, "90": 0.90}
+    strength_grid: dict[str, Any] = {}
+    for percent in EFFICIENCY_STRENGTH_GRID:
+        strength = percent / 100
+        projected = np.where(
+            application_uniform < strength, projected_upper, raw_upper
+        )
+        level_rows: dict[str, Any] = {}
+        for level, upper_half_quantile in quantile_by_level.items():
+            raw = intervals[level]
+            high = (
+                float(raw["high_t"])
+                if percent == 0
+                else float(np.quantile(projected, upper_half_quantile))
+            )
+            high = max(center, min(float(raw["high_t"]), high))
+            level_rows[level] = {
+                "low_t": float(raw["low_t"]),
+                "high_t": high,
+                "raw_low_t": float(raw["low_t"]),
+                "raw_high_t": float(raw["high_t"]),
+                "upper_reduction_t": float(raw["high_t"]) - high,
+                "upper_reduction_fraction": 1 - high / float(raw["high_t"]),
+            }
+        strength_grid[str(percent)] = level_rows
+
+    default_percent = int(round(100 * default_strength))
+    if str(default_percent) not in strength_grid:
+        raise ValueError("Default K3 efficiency strength is absent from the grid")
+    return {
+        "status": "live center-preserving upper-tail projection; point centers unchanged",
+        "default_projection_strength": default_strength,
+        "default_projection_percent": default_percent,
+        "pooled_reference_quantiles_t": reference_metadata[
+            "pooled_parameter_equivalent_reference_t"
+        ],
+        "raw_unordered_pooled_reference_quantiles_t": reference_metadata[
+            "raw_unordered_pooled_reference_t"
+        ],
+        "order_projection_applied": reference_metadata["order_projection_applied"],
+        "binding_probability_against_raw_upper_draws": float(
+            np.mean(reference_draws < raw_upper)
+        ),
+        "center_override_probability": float(np.mean(reference_draws < center)),
+        "literal_reference_violation_probability_at_100pct": float(
+            np.mean(reference_draws < center)
+        ),
+        "projected_intervals": strength_grid[str(default_percent)],
+        "strength_grid": strength_grid,
+        "transformation": "min(raw upper draw, max(evidence center, pooled K3-relative reference draw))",
+        "literal_conditioning": False,
+        "literal_ceiling_enforced_when_reference_below_center": False,
+        "lower_tail_changed": False,
+        "point_center_changed": False,
+        "formal_coverage_guarantee": False,
+    }
 
 
 def latest_per_group(
@@ -354,6 +508,15 @@ def chronological_coverage(
 def main() -> None:
     backtest = json.loads(BACKTEST.read_text(encoding="utf-8"))
     site = json.loads(SITE_DATA.read_text(encoding="utf-8"))
+    efficiency_reference, efficiency_draws = load_k3_efficiency_reference()
+    efficiency_targets = {
+        row["model_id"]: row for row in efficiency_reference["targets"]
+    }
+    if set(TARGETS) - efficiency_targets.keys():
+        raise ValueError("K3 efficiency reference is missing a required uncertainty target")
+    default_efficiency_strength = float(
+        efficiency_reference["decision"]["default_projection_strength"]
+    )
     opus_5_evidence = json.loads(OPUS_5_EVIDENCE.read_text(encoding="utf-8"))
     opus_5_identity = opus_5_evidence["identity"]
     if (
@@ -630,6 +793,14 @@ def main() -> None:
                 "target_chronological_intervals": chronological_intervals,
                 "lineage_intervals": lineage_intervals,
                 "holdout_specs": target_holdout_specs,
+                "k3_efficiency_projection": k3_efficiency_projection(
+                    model_id,
+                    center,
+                    intervals,
+                    efficiency_draws[model_id],
+                    efficiency_targets[model_id],
+                    default_efficiency_strength,
+                ),
             }
         )
 
@@ -643,7 +814,7 @@ def main() -> None:
     }
     developer_coverage = primary_coverage_by_spec[DEVELOPER_HOLDOUT]
     result = {
-        "generated_on": "2026-07-31",
+        "generated_on": "2026-08-01",
         "method": {
             "primary_cohort": PRIMARY_COHORT,
             "error_source": (
@@ -670,6 +841,12 @@ def main() -> None:
             ),
             "levels": list(LEVELS),
             "crowd_policy": "crowd forecasts affect the displayed center but are not treated as independent calibration data and do not narrow intervals",
+            "k3_efficiency_policy": (
+                "retain the empirical intervals unchanged; separately transform only "
+                "upper-half draws with a center-preserving winsorization against the pooled "
+                f"K3-relative reference at an explicit {100 * default_efficiency_strength:.0f}% projection strength; "
+                "this is not literal conditioning"
+            ),
         },
         "cohorts": cohorts,
         "targets": target_intervals,
@@ -683,6 +860,9 @@ def main() -> None:
                 f"{primary_developer_count}-developer frontier-like cohort ({primary_family_count} model-series lineages)."
             ),
             "change_central_forecasts": False,
+            "k3_efficiency_projection_live_for_upper_tail": True,
+            "k3_efficiency_projection_changes_centers": False,
+            "k3_efficiency_default_projection_strength": default_efficiency_strength,
             "formal_coverage_guarantee": False,
             "sequential_coverage_warning": (
                 "Sequential checks are reported three ways rather than treating repeated "
@@ -718,6 +898,7 @@ def main() -> None:
             "The expanding fits, current benchmark snapshots, clustered residuals, and out-of-support targets violate the exchangeability conditions required for a formal split-conformal guarantee.",
             "The requested 50% sequential band undercovers in the available historical sample and should not be read as a validated 50% probability statement.",
             "The intervals calibrate total-parameter prediction error, not uncertainty about active parameters or system-level inference compute.",
+            "The K3-efficiency-projected bands are center-preserving winsorized stress tests, not literal conditioning, empirical coverage intervals, or formal Bayesian credible intervals.",
         ],
         "source_files": {
             str(BACKTEST.relative_to(ROOT)): sha256(BACKTEST),
@@ -726,6 +907,8 @@ def main() -> None:
             str(REGRESSION_PATH.relative_to(ROOT)): sha256(REGRESSION_PATH),
             str(UNIFIED_PATH.relative_to(ROOT)): sha256(UNIFIED_PATH),
             str(K3_EVIDENCE_PATH.relative_to(ROOT)): sha256(K3_EVIDENCE_PATH),
+            str(K3_EFFICIENCY_PRIOR.relative_to(ROOT)): sha256(K3_EFFICIENCY_PRIOR),
+            str(K3_EFFICIENCY_DRAWS.relative_to(ROOT)): sha256(K3_EFFICIENCY_DRAWS),
         },
         "outputs": {
             "calibration_ledger": str(LEDGER.relative_to(ROOT)),

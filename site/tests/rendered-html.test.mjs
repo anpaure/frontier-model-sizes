@@ -13,89 +13,107 @@ async function render() {
   );
 }
 
-test("renders the finished frontier parameter lab", async () => {
-  const data = JSON.parse(await readFile(new URL("../public/data/forecast-model.json", import.meta.url), "utf8"));
-  const uncertainty = JSON.parse(await readFile(new URL("../public/data/predictive-uncertainty.json", import.meta.url), "utf8"));
+test("renders the Epoch-layout parameter explorer from project data", async () => {
+  const scatter = JSON.parse(await readFile(new URL("../public/data/parameter-scatter.json", import.meta.url), "utf8"));
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
+  const styleSource = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Frontier Parameter Lab<\/title>/i);
-  assert.match(html, /Change the evidence/);
-  assert.match(html, /Weight controls/);
+  assert.match(html, /<title>Frontier estimates<\/title>/i);
+  assert.doesNotMatch(html, /Frontier Parameter Lab/);
+  assert.match(html, /interactive forest plot/i);
+  assert.match(html, /og-v3\.png/);
+  assert.match(layoutSource, /icons: \{ icon: \[\{ url: "\/og-v3\.png"/);
+  assert.match(html, /Frontier estimates/);
+  assert.match(html, /href="https:\/\/twitter\.com\/anpaure"/);
+  assert.match(html, /made by @anpaure/);
+  assert.doesNotMatch(html, /Model estimates are colored diamonds/);
+  assert.match(pageSource, /<h1>\{data\.title\}<\/h1>\s*<p className="eyebrow">/);
+  assert.doesNotMatch(html, /Current frontier set|Pipeline synced/i);
   assert.match(html, /Implied total parameters/);
-  assert.match(html, /data-axis-max="5"/);
+  assert.match(html, /class="rail-toggle floating"/);
+  assert.match(html, /aria-label="Show controls"/);
+  assert.match(html, /aria-expanded="false"/);
+  assert.doesNotMatch(html, />Controls<\/button>/);
+  assert.doesNotMatch(html, new RegExp(`${scatter.counts.models}(?:<!-- -->)? Results`));
+  assert.doesNotMatch(html, /Developer|Evidence weights/);
+  assert.match(html, /Public estimate/);
+  assert.match(html, /Model estimate/);
+  assert.match(html, /Methodology/);
+  assert.match(html, /Artificial Analysis Intelligence Index/);
+  assert.match(html, /Epoch Capabilities Index/);
+  assert.match(html, /METR Time Horizon/);
+  assert.match(html, /Public estimate/);
+  assert.match(html, /lower-weight correlated structural checks/);
+  assert.doesNotMatch(html, /Published mix|Scenario estimate|Live scenario/i);
+  assert.doesNotMatch(html, /\bCI\b|confidence interval/i);
+  assert.doesNotMatch(html, /Exactly ten models|Three marks per row|Select for contribution|Method &amp; provenance/i);
+  assert.match(html, /data-axis-max="7"/);
+  assert.match(html, /data-axis-min="1"/);
   assert.match(html, /data-past-baseline="false"/);
+  assert.doesNotMatch(html, />0B<\/i>/);
   assert.doesNotMatch(html, /scale expanded/i);
-  assert.doesNotMatch(html, /-0\.0%/);
+  assert.doesNotMatch(html, /scatterplot/i);
+  assert.doesNotMatch(html, /0\.0%/);
   assert.match(html, /Claude Fable 5/);
   assert.match(html, /Claude Opus 5/);
   assert.match(html, /GPT-5\.6 Sol/);
-  assert.match(html, /<strong>89<\/strong> component checks/);
-  assert.match(html, new RegExp(`<strong>${data.componentSignals.multivariateOuterPredictions}<\\/strong> nested ECI folds`));
-  assert.match(html, /<strong>6<\/strong> lineage bases/);
-  assert.match(html, /no individual benchmark survives familywise correction/i);
-  const eciComponentSummary = `${data.componentSignals.multivariateOuterPredictions}-fold median error from ${data.componentSignals.multivariateBaselineMedianX.toFixed(2)}× to ${data.componentSignals.multivariateCandidateMedianX.toFixed(2)}×`;
-  assert.ok(html.includes(eciComponentSummary));
-  assert.match(
-    html,
-    new RegExp(`${data.posttrainingSignals.epochBaseLinks} Epoch base links narrow to ${data.posttrainingSignals.candidateOpenLanguageLinks} candidate open-language, unchanged-size links and ${data.posttrainingSignals.measuredEdges} measured edges`, "i"),
-  );
-  assert.match(html, /user-supplied shared-lineage assumptions, not public disclosures/i);
-  assert.match(html, /<strong>94<\/strong> AA checks/);
-  assert.match(html, new RegExp(`${data.aaExpansionSignals.frontierLikePredictions} frontier-like tests are neutral`));
-  assert.match(html, /<strong>587<\/strong> AA records/);
-  assert.match(html, /100 same-checkpoint reasoning pairs/);
-  assert.match(html, /<strong>28<\/strong> cross-source checks/);
-  assert.match(html, /0\.83 cross-source price rank correlation/);
-  assert.match(html, new RegExp(`<strong>${data.openRouterTemporalSignals.immutableSnapshots}<\\/strong> OR snapshots`));
-  assert.match(html, new RegExp(`<strong>${(100 * data.openRouterOfficialSignals.officialPriceExactShare).toFixed(1)}(?:<!-- -->)?%<\\/strong> OR price exact`));
-  assert.match(html, new RegExp(`<strong>${data.eciReproductionSignals.reproducedModels}<\\/strong> reproduced ECI`));
-  assert.match(html, /<strong>15<\/strong> archived ECI vintages/);
-  assert.match(html, /<strong>27<\/strong> vintage fit tests/);
-  assert.match(html, /flexible ridge form cuts the 25-row selection median error/i);
-  assert.match(html, /live linear blend is retained/i);
-  assert.match(html, new RegExp(`${data.openRouterTemporalSignals.historyDailyRows.toLocaleString("en-US")} daily rows`));
-  assert.match(
-    html,
-    new RegExp(`${data.openRouterRequestWeightedSignals.completeCheckpoints}-checkpoint request-supported audit, no throughput, latency, joint, or tail-spread candidate passes`, "i"),
-  );
-  assert.match(html, /Default-tier serving stability/);
-  assert.match(html, new RegExp(`<strong>${data.activeParameterSignals.activeParameterCheckpoints}<\\/strong> active-param checks`));
-  assert.match(html, new RegExp(`<strong>${data.activePriceSignals.exactActiveMatches}<\\/strong> active-price labels`));
-  assert.match(html, new RegExp(`<strong>${data.historicalPriceSignals.changePoints.toLocaleString("en-US")}<\\/strong> dated prices`));
-  assert.match(html, /<strong>49(?:<!-- -->)?\/(?:<!-- -->)?49<\/strong> exact no-CoT dates/);
-  assert.match(html, /changes the published time law from 373\.0 to 365\.9 days/i);
-  assert.match(html, /token law from 437\.0 to 438\.4 days/i);
-  assert.match(html, /3\.6(?:<!-- -->)? min<\/strong> direct Sol no-CoT/i);
-  assert.match(html, new RegExp(`<strong>${data.ikpSignals.overlapModels}<\\/strong> IKP overlap tests`, "i"));
-  assert.match(html, /<strong>3\.6T<\/strong> strict IKP Fable/i);
-  assert.match(html, /strict pre-Fable, Anthropic-excluded sensitivity is 3\.6T/i);
-  assert.match(
-    html,
-    new RegExp(`mappings of the same point span ${data.frontierPrimarySignals.modelLevelSolT.toFixed(1)}T to ${data.frontierPrimarySignals.rebasedPooledSolT.toFixed(1)}T`, "i"),
-  );
-  assert.match(html, /Fable = Mythos weights/i);
-  assert.match(html, /Opus 4\.8 fallback is serving behavior, not another base model/i);
-  assert.match(html, /Held-out predictive uncertainty/);
-  assert.match(html, /undercovered in sequential backtests/);
-  const fableTarget = uncertainty.targets.find((target) => target.model_id === "claude-fable-5");
-  const fable50 = fableTarget.intervals["50"];
-  assert.match(html, new RegExp(`${fable50.low_t.toFixed(1)}T(?:<!-- -->)?–(?:<!-- -->)?${fable50.high_t.toFixed(1)}T`));
-  assert.match(html, new RegExp(`${fableTarget.calibration_developers}(?:<!-- -->)? independent frontier developers`));
-  assert.match(html, /crowd does not narrow the band/i);
-  assert.match(html, /all 26 official model rows, 114 scaffold entries/i);
-  assert.match(html, /26\/26 rows across every common field with 0 mismatches/i);
-  assert.match(html, /K3-anchored active-parameter transport/);
-  assert.match(html, /Launch-price sensitivity/);
-  assert.match(html, /Launch-vintage price beats date alone in every predeclared 1–90 day window/i);
-  assert.match(html, /K3 has one explicitly speculative Epoch training-compute estimate/i);
-  assert.doesNotMatch(html, /six independent views/i);
+  assert.equal(scatter.models.length, 10);
+  assert.equal(new Set(scatter.models.map((model) => model.id)).size, 10);
+  assert.equal(scatter.models.filter((model) => model.id === "checkpoint:moonshot:kimi-k3").length, 1);
+  assert.equal(scatter.models.filter((model) => model.forecastModelId === "claude-opus-47-48-shared-base").length, 1);
+  assert.equal((html.match(/<button class="forest-row/g) ?? []).length, 10);
+  assert.equal((html.match(/class="factor-whisker"/g) ?? []).length, 8);
+  assert.equal((html.match(/class="public-marker"/g) ?? []).length, 2);
+  assert.doesNotMatch(html, /whisker-overflow|Factor range extends/);
+  assert.equal((html.match(/relative weight"/g) ?? []).length, 0);
+  assert.ok(scatter.models.every((model) => model.releaseDate && model.parameterT > 0));
+  assert.ok(scatter.models.every((model) => model.organizationGroup));
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
+  assert.match(pageSource, /<h3>Evidence weights<\/h3>/);
+  assert.match(pageSource, /className="contribution-rows"/);
+  assert.match(pageSource, /!selected\.lockedAnchor && <div className="card-section">/);
+  assert.match(pageSource, /!focused\.lockedAnchor && <ContributionList/);
+  assert.match(pageSource, /const ONE_X/);
+  assert.match(pageSource, /min="-1" max="1" step="0\.01"/);
+  assert.match(pageSource, /Math\.pow\(10,/);
+  assert.doesNotMatch(pageSource, /Evidence weight preset/);
+  assert.match(pageSource, /window\.matchMedia\("\(prefers-color-scheme: dark\)"\)/);
+  assert.match(pageSource, /Use dark mode/);
+  assert.match(pageSource, /className="rail-close"/);
+  assert.match(pageSource, /aria-label="Close controls"/);
+  assert.doesNotMatch(pageSource, /\{data\.counts\.models\} Results/);
+  assert.match(pageSource, /Math\.abs\(delta\) < \.05\) return null/);
+  assert.match(styleSource, /@media \(prefers-color-scheme: dark\)/);
+  assert.match(styleSource, /color-scheme: dark/);
+  assert.match(styleSource, /:root\[data-theme="dark"\]/);
+  assert.match(styleSource, /\.forest-value \{[^}]+align-items: center/);
+  assert.match(styleSource, /\.evidence-card \{[^}]+top: 50%;[^}]+left: 50%;[^}]+width: min\(640px, calc\(100% - 48px\)\);[^}]+transform: translate\(-50%, -50%\)/);
+  assert.doesNotMatch(styleSource, /\.evidence-card \{ position: absolute;[^}]+(?:max-height|overflow)/);
+  assert.match(styleSource, /\.card-header h2 \{[^}]+font-size: 30px/);
+  assert.match(styleSource, /\.summary-grid dd \{[^}]+font-size: 18px/);
+  assert.match(styleSource, /\.contribution-row > span \{[^}]+font-size: 15px/);
+  assert.match(styleSource, /@media \(max-width: 1040px\)[\s\S]+?\.control-rail \{ position: fixed;/);
+  assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?grid-template-columns: clamp\(104px, 34vw, 132px\) minmax\(0, 1fr\) 58px/);
+  assert.match(styleSource, /@media \(max-height: 850px\) and \(min-width: 681px\)/);
+  assert.match(styleSource, /@media \(min-width: 3000px\)/);
+  assert.doesNotMatch(styleSource, /min-width: 626px/);
+  assert.match(pageSource, /mobile-optional/);
+  assert.match(pageSource, /<dt>Weighted factor range<\/dt>/);
+  assert.match(pageSource, /<dt>Architecture<\/dt><dd>MoE<\/dd>/);
+  assert.doesNotMatch(pageSource, /MoE · reasoning/);
+  assert.match(pageSource, /weightedQuantile\(points, \.1\)/);
+  assert.match(pageSource, /weightedQuantile\(points, \.9\)/);
+  assert.doesNotMatch(pageSource, /onMouseEnter=\{\(\) => setHoveredId\(model\.id\)\}\s+onMouseLeave[^<]+onFocus/);
+  assert.match(styleSource, /\.public-marker, \.scenario-marker[^}]+pointer-events: auto/);
+  assert.doesNotMatch(pageSource, /Benchmarks & evidence contribution|Effective log weight|signal-strip|card-note|Missing factors are omitted/);
 });
-
 test("ships a complete pipeline-generated data contract", async () => {
   const data = JSON.parse(await readFile(new URL("../public/data/forecast-model.json", import.meta.url), "utf8"));
   const uncertainty = JSON.parse(await readFile(new URL("../public/data/predictive-uncertainty.json", import.meta.url), "utf8"));
+  const k3Efficiency = JSON.parse(await readFile(new URL("../../outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_efficiency_prior_2026-08-01.json", import.meta.url), "utf8"));
   const temporalAudit = JSON.parse(await readFile(new URL("../../outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_temporal_stability_audit_2026-07-18.json", import.meta.url), "utf8"));
   const officialAudit = JSON.parse(await readFile(new URL("../../outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_official_endpoint_audit_2026-07-18.json", import.meta.url), "utf8"));
   const collectionAudit = JSON.parse(await readFile(new URL("../../outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/openrouter_collection_audit_2026-07-18.json", import.meta.url), "utf8"));
@@ -127,6 +145,9 @@ test("ships a complete pipeline-generated data contract", async () => {
   assert.equal(uncertainty.cohorts.frontier_moe_reasoning.families, 5);
   assert.equal(uncertainty.decision.use_frontier_moe_reasoning_cohort, false);
   assert.equal(uncertainty.decision.change_central_forecasts, false);
+  assert.equal(uncertainty.decision.k3_efficiency_projection_live_for_upper_tail, true);
+  assert.equal(uncertainty.decision.k3_efficiency_projection_changes_centers, false);
+  assert.equal(uncertainty.decision.k3_efficiency_default_projection_strength, 0.8);
   assert.equal(uncertainty.targets.length, 3);
   assert.ok(uncertainty.targets.every((target) => target.intervals["50"].multiplicative_factor > 1));
   assert.ok(uncertainty.targets.every(
@@ -144,6 +165,25 @@ test("ships a complete pipeline-generated data contract", async () => {
     ikp: 0,
     crowd: 50,
   });
+  assert.equal(k3Efficiency.decision.incremental_point_center_weight, 0);
+  assert.equal(k3Efficiency.decision.crowd_weight_for_fable_and_sol, 0.5);
+  assert.equal(k3Efficiency.decision.rejected_nonlinear_eci_weight, 0);
+  assert.deepEqual(k3Efficiency.method.nonlinear_forms_used, []);
+  for (const target of uncertainty.targets) {
+    const projection = target.k3_efficiency_projection;
+    assert.equal(projection.point_center_changed, false);
+    assert.equal(projection.lower_tail_changed, false);
+    assert.equal(projection.formal_coverage_guarantee, false);
+    assert.equal(projection.literal_conditioning, false);
+    assert.equal(projection.literal_ceiling_enforced_when_reference_below_center, false);
+    for (const level of ["50", "80", "90"]) {
+      assert.equal(projection.strength_grid["0"][level].low_t, target.intervals[level].low_t);
+      assert.equal(projection.strength_grid["0"][level].high_t, target.intervals[level].high_t);
+      assert.equal(projection.strength_grid["100"][level].low_t, target.intervals[level].low_t);
+      assert.ok(projection.strength_grid["100"][level].high_t <= target.intervals[level].high_t);
+    }
+  }
+  assert.ok(data.sources.k3EfficiencyPrior.sha256.length === 64);
   assert.equal(data.ikpSignals.overlapModels, ikpAudit.incremental_overlap.models);
   assert.equal(data.ikpSignals.overlapFamilies, ikpAudit.incremental_overlap.families);
   assert.equal(data.ikpSignals.calibrationConfigurations, 93);

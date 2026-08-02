@@ -1,0 +1,323 @@
+{
+  "anchor": {
+    "aa_score": 57.1123394372091,
+    "activated_parameters_b": 104.2,
+    "eci_ci_90": [
+      153.7185667991785,
+      158.77314102065105
+    ],
+    "eci_score": 155.5939255295791,
+    "model": "Kimi K3",
+    "release_date": "2026-07-16",
+    "total_parameters_t": 2.78
+  },
+  "decision": {
+    "apply_center_preserving_upper_tail_projection": true,
+    "change_crowd_weight": false,
+    "change_point_centers": false,
+    "crowd_weight_for_fable_and_sol": 0.5,
+    "default_projection_strength": 0.8,
+    "incremental_point_center_weight": 0.0,
+    "literal_constraint_enforced_when_reference_below_center": false,
+    "reason": "The efficiency statement supplies a one-sided structural reference. The live layer winsorizes upper-tail draws while preserving the evidence center, and therefore is not literal conditioning. The nonlinear challenger failed its promotion gates.",
+    "rejected_nonlinear_eci_weight": 0.0
+  },
+  "generated_on": "2026-08-01",
+  "limitations": [
+    "AA and ECI are post-training/deployment capability aggregates, not clean pretraining-loss measurements.",
+    "The target architecture and sparsity ratios are undisclosed; the reference is conditional on the user's comparable-MoE assumption.",
+    "Published ECI bootstrap covariance between target and K3 scores is unavailable, so marginal score draws are treated independently.",
+    "The five uniformly sampled ECI slope variants are uncalibrated sensitivity specifications, not five independent datasets or posterior model probabilities.",
+    "AA score/slope uncertainty and within-fit ECI coefficient uncertainty are not propagated; reference quantiles are specification sensitivities, not posterior intervals.",
+    "The center-preserving upper-tail projections produced downstream are winsorized structural sensitivities, not conditioning, conformal intervals, or Bayesian credible intervals."
+  ],
+  "linear_eci_slope_variants": [
+    {
+      "blended_log10_slope": 0.051977876330273086,
+      "dated_same_efficiency_log10_slope": 0.06372807130480052,
+      "id": "live_inverse_eci_ci__all_rows",
+      "no_date_log10_slope": 0.04414441301392147,
+      "same_base_collapsed": false,
+      "training_families": 40,
+      "training_rows": 88,
+      "weight_mode": "live_inverse_eci_ci"
+    },
+    {
+      "blended_log10_slope": 0.04476031514682344,
+      "dated_same_efficiency_log10_slope": 0.05091002208272011,
+      "id": "live_inverse_eci_ci__collapsed",
+      "no_date_log10_slope": 0.040660510522892324,
+      "same_base_collapsed": true,
+      "training_families": 40,
+      "training_rows": 69,
+      "weight_mode": "live_inverse_eci_ci"
+    },
+    {
+      "blended_log10_slope": 0.03443200932385278,
+      "dated_same_efficiency_log10_slope": 0.04117095699098039,
+      "id": "equal_family__all_rows",
+      "no_date_log10_slope": 0.029939377545767698,
+      "same_base_collapsed": false,
+      "training_families": 40,
+      "training_rows": 88,
+      "weight_mode": "equal_family"
+    },
+    {
+      "blended_log10_slope": 0.033705897445945696,
+      "dated_same_efficiency_log10_slope": 0.03975563111785618,
+      "id": "equal_family__collapsed",
+      "no_date_log10_slope": 0.029672741664672042,
+      "same_base_collapsed": true,
+      "training_families": 40,
+      "training_rows": 69,
+      "weight_mode": "equal_family"
+    },
+    {
+      "blended_log10_slope": 0.050804406165290736,
+      "dated_same_efficiency_log10_slope": 0.06429752658522685,
+      "id": "canonical_live_coefficients",
+      "no_date_log10_slope": 0.041808992552,
+      "same_base_collapsed": false,
+      "training_families": null,
+      "training_rows": null,
+      "weight_mode": "canonical"
+    }
+  ],
+  "method": {
+    "aa_eci_pool": "equal log weight; judgmental pool of correlated alternative mappings, not an independent likelihood or a strict logical ceiling",
+    "aa_log10_parameter_slope": 0.04520595908212863,
+    "aa_mapping": "exact K3-relative score difference under the retained log10-parameter slope; target and K3 dates held equal",
+    "diminishing_returns_interpretation": "linear capability versus log10(parameters) already gives diminishing marginal capability per raw parameter",
+    "draws": 20000,
+    "eci_mapping": "60/40 no-date/dated log-linear slope blend; target and K3 dates held equal; K3 parameter label excluded from slope fits",
+    "eci_model_form_sensitivity": "uniform over the canonical live coefficients and four retained linear weighting/base-collapse variants",
+    "eci_score_uncertainty": "independent piecewise half-normal approximation to published 90% marginal intervals; covariance unavailable",
+    "logical_direction": "under any specified capability mapping, at-least-K3-efficient implies target parameters are no greater than that mapping's K3-relative parameter equivalent",
+    "nonlinear_forms_used": [],
+    "reference_order_projection": "Sol pooled reference is projected not to exceed Fable's; actual-size draws and centers are untouched",
+    "seed": 20260801
+  },
+  "outputs": {
+    "draw_ledger": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_efficiency_prior_cap_draws_2026-08-01.csv",
+    "draw_ledger_sha256": "ff6deea85d782fcdfc5532fc9724f879badf829b7c545451fe9c263e385abc1a"
+  },
+  "question": "How should the assumption that frontier labs are at least as parameter-efficient as Kimi K3 affect upper-tail sensitivity without silently overriding the published centers?",
+  "schema_version": "1.0",
+  "sources": {
+    "aa_exact_target_snapshot": "sources/aa_detailed_model_signals_2026-07-31.csv",
+    "aa_exact_target_snapshot_sha256": "c00553aa052e8e5fd40bf84637bc17663e407b5f6d348ddb1140c2df48b39404",
+    "aa_live_fit_audit": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_audit_2026-07-18.json",
+    "aa_live_fit_audit_sha256": "172b4dce48d2bf705d1f9824ddb0f4105be7b114d8b106a7e8a128a664d2308a",
+    "canonical_eci_coefficient_source": "analyze_epoch_feedback_signal.py",
+    "canonical_eci_coefficient_source_sha256": "e852a735f2f75737c0a88d3eb4e3ebbc6035d00ce43e82e4b4f2804201d8b845",
+    "eci_fit_tournament": "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/eci_fit_tournament_2026-07-18.json",
+    "eci_fit_tournament_sha256": "f766993cb86397c5efce6e127eee1281f0ff8ba125a04a1bd4139dea3c6b31b5",
+    "k3_primary_evidence": "sources/kimi_k3_release_evidence_2026-07-31.json",
+    "k3_primary_evidence_sha256": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
+    "regression_results": "regression_results.json",
+    "regression_results_sha256": "c8add60b6702a7f2b83efe5e803875cf18fbae28987598ab26b13786e4b9bae7"
+  },
+  "targets": [
+    {
+      "aa_same_efficiency_equivalent_t": 3.7007065133226313,
+      "aa_score": 59.8606463217303,
+      "eci_ci_90": [
+        158.50469067162285,
+        164.45972388277295
+      ],
+      "eci_same_efficiency_equivalent_t": {
+        "canonical": 5.06845768239281,
+        "variant_centers": [
+          {
+            "equivalent_t": 5.139258330808966,
+            "variant": "live_inverse_eci_ci__all_rows"
+          },
+          {
+            "equivalent_t": 4.718949370900577,
+            "variant": "live_inverse_eci_ci__collapsed"
+          },
+          {
+            "equivalent_t": 4.176567938255355,
+            "variant": "equal_family__all_rows"
+          },
+          {
+            "equivalent_t": 4.140870746620912,
+            "variant": "equal_family__collapsed"
+          },
+          {
+            "equivalent_t": 5.06845768239281,
+            "variant": "canonical_live_coefficients"
+          }
+        ]
+      },
+      "eci_score": 160.72794930035383,
+      "model": "Claude Fable 5",
+      "model_id": "claude-fable-5",
+      "order_projection_applied": false,
+      "pooled_parameter_equivalent_reference_t": {
+        "median": 4.105948118527798,
+        "p025": 3.2940910403644392,
+        "p10": 3.5529457584870476,
+        "p25": 3.7978279150052114,
+        "p75": 4.499160853008519,
+        "p90": 4.936145169982782,
+        "p95": 5.231674170466836,
+        "p975": 5.504705614240793
+      },
+      "raw_unordered_pooled_reference_t": {
+        "median": 4.105948118527798,
+        "p025": 3.2940910403644392,
+        "p10": 3.5529457584870476,
+        "p25": 3.7978279150052114,
+        "p75": 4.499160853008519,
+        "p90": 4.936145169982782,
+        "p95": 5.231674170466836,
+        "p975": 5.504705614240793
+      },
+      "release_date": "2026-06-09"
+    },
+    {
+      "aa_same_efficiency_equivalent_t": 3.3450145821002732,
+      "aa_score": 58.889831189723,
+      "eci_ci_90": [
+        159.3057997035483,
+        165.50349970145692
+      ],
+      "eci_same_efficiency_equivalent_t": {
+        "canonical": 5.692881055820191,
+        "variant_centers": [
+          {
+            "equivalent_t": 5.787915246397924,
+            "variant": "live_inverse_eci_ci__all_rows"
+          },
+          {
+            "equivalent_t": 5.22755880854764,
+            "variant": "live_inverse_eci_ci__collapsed"
+          },
+          {
+            "equivalent_t": 4.518722017040394,
+            "variant": "equal_family__all_rows"
+          },
+          {
+            "equivalent_t": 4.472667493806253,
+            "variant": "equal_family__collapsed"
+          },
+          {
+            "equivalent_t": 5.692881055820191,
+            "variant": "canonical_live_coefficients"
+          }
+        ]
+      },
+      "eci_score": 161.7210971187139,
+      "model": "GPT-5.6 Sol",
+      "model_id": "gpt-56-sol",
+      "order_projection_applied": true,
+      "pooled_parameter_equivalent_reference_t": {
+        "median": 3.917123508631141,
+        "p025": 3.1828922358432608,
+        "p10": 3.4244472304913125,
+        "p25": 3.649173616108743,
+        "p75": 4.22152503983193,
+        "p90": 4.550248802087187,
+        "p95": 4.780800325314924,
+        "p975": 4.990000628928245
+      },
+      "raw_unordered_pooled_reference_t": {
+        "median": 4.093710896830691,
+        "p025": 3.249208828083195,
+        "p10": 3.5116170378377674,
+        "p25": 3.765375916481937,
+        "p75": 4.491206789227644,
+        "p90": 4.968589823056363,
+        "p95": 5.2894429426430225,
+        "p975": 5.576001876767647
+      },
+      "release_date": "2026-07-09"
+    },
+    {
+      "aa_same_efficiency_equivalent_t": 4.035163064229386,
+      "aa_score": 60.6918740157091,
+      "eci_ci_90": [
+        157.24933114170264,
+        162.20640578425878
+      ],
+      "eci_same_efficiency_equivalent_t": {
+        "canonical": 4.327984378272587,
+        "variant_centers": [
+          {
+            "equivalent_t": 4.372461827656393,
+            "variant": "live_inverse_eci_ci__all_rows"
+          },
+          {
+            "equivalent_t": 4.105964585034152,
+            "variant": "live_inverse_eci_ci__collapsed"
+          },
+          {
+            "equivalent_t": 3.7526105622582815,
+            "variant": "equal_family__all_rows"
+          },
+          {
+            "equivalent_t": 3.7289446061782394,
+            "variant": "equal_family__collapsed"
+          },
+          {
+            "equivalent_t": 4.327984378272587,
+            "variant": "canonical_live_coefficients"
+          }
+        ]
+      },
+      "eci_score": 159.3778667882398,
+      "model": "Claude Opus 5",
+      "model_id": "claude-opus-5",
+      "order_projection_applied": false,
+      "pooled_parameter_equivalent_reference_t": {
+        "median": 3.995939538860445,
+        "p025": 3.2347797132448943,
+        "p10": 3.485300424152937,
+        "p25": 3.720418845435726,
+        "p75": 4.306154057856105,
+        "p90": 4.646699425669847,
+        "p95": 4.869905249102148,
+        "p975": 5.079462914790338
+      },
+      "raw_unordered_pooled_reference_t": {
+        "median": 3.995939538860445,
+        "p025": 3.2347797132448943,
+        "p10": 3.485300424152937,
+        "p25": 3.720418845435726,
+        "p75": 4.306154057856105,
+        "p90": 4.646699425669847,
+        "p95": 4.869905249102148,
+        "p975": 5.079462914790338
+      },
+      "release_date": "2026-07-24"
+    }
+  ],
+  "validation": {
+    "chronological_validation_claim": "none beyond the existing ECI tournament; this artifact transports only retained linear slopes and remains a structural sensitivity",
+    "eci_calibration_max_excluding_k3": 151.36582865860095,
+    "eci_slope_fit_families_excluding_k3": 40,
+    "eci_slope_fit_rows_excluding_k3": 88,
+    "existing_eci_tournament_changed_live_form": false,
+    "existing_eci_tournament_frontier_stability_gate_passed": false,
+    "k3_eci_points_beyond_calibration": 4.228096870978163,
+    "k3_parameter_labels_used_in_slope_fit": 0,
+    "rejected_convex_extrapolation": {
+      "claimed_fable_t": [
+        8.5,
+        10.6
+      ],
+      "claimed_sol_t": [
+        9.7,
+        12.2
+      ],
+      "live_weight": 0.0,
+      "reason": "out-of-support nonlinear derivative plus transport of K3's full model-specific residual"
+    },
+    "target_eci_points_beyond_calibration": {
+      "Claude Fable 5": 9.362120641752881,
+      "Claude Opus 5": 8.012038129638853,
+      "GPT-5.6 Sol": 10.355268460112967
+    }
+  }
+}

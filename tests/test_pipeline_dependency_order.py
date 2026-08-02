@@ -50,6 +50,7 @@ class PipelineDependencyOrderTest(unittest.TestCase):
     def test_statistical_contract_precedes_single_presentation_build(self) -> None:
         self.assertEqual(self.scripts.count("build_horizon_informed_model.mjs"), 1)
         self.assertEqual(self.scripts.count("generate_forecast_site_data.py"), 1)
+        self.assertEqual(self.scripts.count("generate_parameter_scatter_data.py"), 1)
         self.assertEqual(self.scripts.count("run_parameter_backtest.py"), 1)
         backtest = self.index("run_parameter_backtest.py")
         label_availability = self.index("collect_aa_parameter_label_availability.py")
@@ -65,9 +66,12 @@ class PipelineDependencyOrderTest(unittest.TestCase):
         architecture_blend = self.index(
             "analyze_eci_architecture_blend_challenger.py"
         )
+        eci_tournament = self.index("analyze_eci_fit_tournament.py")
+        k3_efficiency = self.index("analyze_k3_efficiency_prior.py")
         ikp = self.index("analyze_ikp_parameter_signal.py")
         workbook = self.index("build_horizon_informed_model.mjs")
         site = self.index("generate_forecast_site_data.py")
+        scatter = self.index("generate_parameter_scatter_data.py")
         longcat_definition = self.index(
             "analyze_longcat_parameter_definition_sensitivity.py"
         )
@@ -88,10 +92,15 @@ class PipelineDependencyOrderTest(unittest.TestCase):
         self.assertLess(active_transport, active_shrinkage)
         self.assertLess(active_shrinkage, workbook)
         self.assertLess(architecture_blend, workbook)
+        self.assertLess(eci_tournament, k3_efficiency)
+        self.assertLess(k3_efficiency, site)
+        self.assertLess(k3_efficiency, uncertainty)
         self.assertLess(backtest, ikp)
         self.assertLess(epoch_feedback, workbook)
         self.assertLess(ikp, workbook)
         self.assertLess(workbook, site)
+        self.assertLess(site, scatter)
+        self.assertLess(scatter, longcat_definition)
         self.assertLess(site, longcat_definition)
         self.assertLess(longcat_definition, readiness)
         self.assertLess(site, crowd_robustness)
@@ -108,6 +117,12 @@ class PipelineDependencyOrderTest(unittest.TestCase):
             self.index("verify_prospective_forecast_freeze.py"),
             self.index("manage_epoch_snapshot.py"),
         )
+
+    def test_watch_mode_tracks_site_styles_and_method_docs(self) -> None:
+        watched = {row[0] for row in pipeline.watched_state()}
+        self.assertIn("site/app/globals.css", watched)
+        self.assertIn("README.md", watched)
+        self.assertIn("FORECAST_PIPELINE.md", watched)
 
     def test_release_gates_run_after_statistical_regeneration(self) -> None:
         final_statistical_stage = max(

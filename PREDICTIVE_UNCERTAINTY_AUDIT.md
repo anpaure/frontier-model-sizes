@@ -1,6 +1,6 @@
 # Predictive uncertainty audit
 
-Generated: 2026-07-31
+Generated: 2026-08-01
 
 Central forecasts changed by this uncertainty step: **No**. The upstream Fable center uses the baseline evidence mix because IKP failed its current chronological-coverage promotion gate and receives 0% live weight.
 
@@ -27,6 +27,30 @@ These intervals are intentionally much wider than coefficient-only regression in
 - Transparency: the per-specification bands, model-lineage grouping comparison, target-date factors, and selected envelope source all remain in the JSON.
 
 Kimi K3 required a retrospective join correction. K3 is deliberately withheld from the AA parameter-target table, but its exact score is observed. The prior available-component row silently treated this as missing AA evidence and combined only ECI (449.8B) with speculative compute (211.1B), yielding 384.5B / 7.23×. The corrected row adds a leakage-safe AA prediction trained on 46 strictly earlier checkpoints across 21 families with every Kimi lineage excluded; AA alone predicts 2.243T / 1.24×. The unchanged weighted available-component result is 838.7B / 3.31×. This correction lowers the diagnostic tails but does not alter any central forecast or rewrite the immutable prospective freeze.
+
+## K3 efficiency upper-tail stress test
+
+The separate user-supplied statement that the targets are at least as parameter-efficient as disclosed 2.780T Kimi K3 is now implemented as a center-preserving, winsorized upper-tail structural sensitivity. It is not literal conditioning, an extra AA/ECI likelihood, or a point-estimate factor. Its point-center weight is 0%, and the exact crowd contribution remains 50% for Fable and Sol.
+
+The equal-efficiency transport holds target and K3 dates equal and uses only retained laws that are linear in `log10(parameters)`. Those laws already encode diminishing returns in raw parameters. K3's parameter label is excluded from the slope fit and used only to anchor the level. The flexible quadratic/ridge challenger remains rejected at 0% weight; the earlier 8.5–12.2T claim used an out-of-support convex derivative and transported K3's full residual.
+
+| Target | AA equivalent | Canonical ECI equivalent | Pooled reference median | Reference 10–90% |
+|---|---:|---:|---:|---:|
+| Claude Fable 5 | 3.7T | 5.1T | 4.1T | 3.6–4.9T |
+| GPT-5.6 Sol | 3.3T | 5.7T | 3.9T | 3.4–4.6T |
+| Claude Opus 5 | 4.0T | 4.3T | 4.0T | 3.5–4.6T |
+
+Five retained ECI slope variants and the published target/K3 ECI intervals generate 20,000 deterministic reference draws. AA and ECI receive equal log weight but are explicitly labeled correlated alternative mappings. Their geometric pool is not a strict ceiling under either mapping, and the uniform slope-specification weights are not learned posterior probabilities. The user-supplied `Sol < Fable` judgment projects only Sol's reference draws, not actual parameter draws. The maximum non-K3 calibration ECI is 151.37, so K3 and all three targets are out of support; the result is therefore an extrapolative sensitivity, not a newly validated scaling law.
+
+At the default 80% projection strength, the layer winsorizes only upper-half uncertainty draws:
+
+| Target | Raw 80% band | Projected 80% stress test | Lower endpoint changed | Center changed |
+|---|---:|---:|---:|---:|
+| Claude Fable 5 | 0.9–25.0T | 0.9–5.5T | No | No |
+| GPT-5.6 Sol | 0.6–16.3T | 0.6–4.7T | No | No |
+| Claude Opus 5 | 0.6–15.8T | 0.6–4.8T | No | No |
+
+Fable's pooled equal-efficiency reference falls below its 4.7T evidence center in about 84% of draws. The center overrides the reference in exactly those draws, so even 100% projection strength is not a literal hard constraint. The pipeline exposes that override rate rather than silently recentering Fable or falsely claiming conditioning. The projected values are not empirical coverage intervals, conformal intervals, or formal Bayesian credible intervals. The raw bands remain authoritative and unchanged; projection strength is exposed from 0% to 100% in the site.
 
 Sequential coverage is no longer summarized as though all repeated checkpoints were independent:
 
@@ -60,8 +84,13 @@ This correction was performed after the immutable `2026-07-31-frontier-parameter
 - `outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_predictive_uncertainty_2026-07-18.json`
 - `outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_predictive_uncertainty_calibration_2026-07-18.csv`
 - `site/public/data/predictive-uncertainty.json`
+- `analyze_k3_efficiency_prior.py`
+- `K3_EFFICIENCY_PRIOR_AUDIT.md`
+- `outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_efficiency_prior_2026-08-01.json`
+- `outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_efficiency_prior_cap_draws_2026-08-01.csv`
+- `tests/test_k3_efficiency_prior.py`
 - `analyze_parameter_vintage_sensitivity.py`
 - `tests/test_parameter_vintage_sensitivity.py`
 - `outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/parameter_developer_vintage_sensitivity_2026-07-31.json`
 
-The main chart remains free of error bars. The selected-model inspector displays the empirical prequential bands separately, so changing scenario weights does not falsely rescale or reinterpret a fixed historical error statement.
+The main chart remains free of error bars. The selected-model inspector displays the raw empirical band, the K3-projected stress test, its center-override rate, and its independent projection-strength control separately, so changing factor weights does not falsely rescale or reinterpret a fixed historical error statement.

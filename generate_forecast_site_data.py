@@ -99,6 +99,7 @@ METR_PRIMARY_AUDIT = OUT / "metr_primary_source_audit_2026-07-18.json"
 IKP_RESULT = OUT / "ikp_parameter_signal_audit_2026-07-18.json"
 IKP_CONDITIONAL_RESULT = OUT / "ikp_conditional_benchmark_signal_audit_2026-07-18.json"
 OPUS_5_EVIDENCE = ROOT / "sources/claude_opus_5_evidence_2026-07-31.json"
+K3_EFFICIENCY_PRIOR = OUT / "k3_efficiency_prior_2026-08-01.json"
 
 BASELINE_FINAL_WEIGHTS = {
     "aa": 9.5625,
@@ -230,6 +231,7 @@ def main():
     aa_detailed_metadata = json.loads(AA_DETAILED_METADATA.read_text(encoding="utf-8"))
     k3_evidence = json.loads(K3_RELEASE_EVIDENCE.read_text(encoding="utf-8"))
     k3 = k3_evidence["kimi_k3"]
+    k3_efficiency = json.loads(K3_EFFICIENCY_PRIOR.read_text(encoding="utf-8"))
     if epoch_snapshot["snapshot_as_of"] != "2026-07-31":
         raise ValueError("Site build requires the installed 2026-07-31 Epoch snapshot")
     if aa_detailed_metadata["snapshot_date"] != "2026-07-31":
@@ -241,6 +243,18 @@ def main():
         or not k3["activated_parameter_count_disclosed"]
     ):
         raise ValueError("K3 official evidence must retain exact 2.78T total / 104.2B active")
+    if (
+        k3_efficiency["anchor"]["total_parameters_t"] != 2.780
+        or not k3_efficiency["decision"]["apply_center_preserving_upper_tail_projection"]
+        or k3_efficiency["decision"]["change_point_centers"]
+        or k3_efficiency["decision"]["incremental_point_center_weight"] != 0
+        or k3_efficiency["decision"]["change_crowd_weight"]
+        or k3_efficiency["decision"]["crowd_weight_for_fable_and_sol"] != 0.5
+        or k3_efficiency["decision"]["rejected_nonlinear_eci_weight"] != 0
+        or k3_efficiency["decision"]["literal_constraint_enforced_when_reference_below_center"]
+        or k3_efficiency["method"]["nonlinear_forms_used"]
+    ):
+        raise ValueError("K3 efficiency-projection contract is inconsistent with the live model")
 
     opus_5_evidence = json.loads(OPUS_5_EVIDENCE.read_text(encoding="utf-8"))
     opus_5_identity = opus_5_evidence["identity"]
@@ -407,9 +421,9 @@ def main():
             "id": name.lower().replace(" / ", "-").replace(" ", "-").replace(".", "").replace("/", "-"),
             "name": name,
             "shortName": {
-                "Claude Fable 5": "Fable 5",
+                "Claude Fable 5": "Claude Fable 5",
                 "GPT-5.6 Sol": "GPT-5.6 Sol",
-                OPUS_5_MODEL: "Opus 5",
+                OPUS_5_MODEL: "Claude Opus 5",
                 "Claude Opus 4.7 / 4.8 shared base": "Opus 4.7/4.8",
             }.get(name, name),
             "provider": frontier_row["Provider"],
@@ -467,17 +481,17 @@ def main():
     data = {
         "schemaVersion": 1,
         "snapshotDate": "2026-07-31",
-        "title": "Frontier Parameter Lab",
+        "title": "Frontier estimates",
         "unit": "trillion total base parameters",
         "defaultWeights": default_weights,
         "factors": [
-            {"id": "aa", "label": "Artificial Analysis", "shortLabel": "AA", "description": "K3-anchored, family-balanced direct parameter regression."},
-            {"id": "eci", "label": "Epoch ECI", "shortLabel": "ECI", "description": "60/40 blend of no-date and exact-date direct regressions."},
+            {"id": "aa", "label": "Artificial Analysis Intelligence Index", "shortLabel": "Artificial Analysis Intelligence Index", "description": "K3-anchored, family-balanced direct parameter regression."},
+            {"id": "eci", "label": "Epoch Capabilities Index", "shortLabel": "Epoch Capabilities Index", "description": "60/40 blend of no-date and exact-date direct regressions."},
             {"id": "price", "label": "API price", "shortLabel": "Price", "description": "Correlated size signal; launch-vintage prices beat date alone, but add no robust active-size information beyond AA plus date."},
-            {"id": "horizon", "label": "No-CoT horizon", "shortLabel": "Horizon", "description": "Primary task-horizon branch; all 49 releases use audited day-level dates."},
+            {"id": "horizon", "label": "METR Time Horizon", "shortLabel": "METR Time Horizon", "description": "Primary task-horizon branch; all 49 releases use audited day-level dates."},
             {"id": "compute", "label": "Compute-structured AA", "shortLabel": "Compute", "description": "AA/date is mapped through Epoch compute calibrations; a correlated structural regularizer, not observed target compute."},
             {"id": "ikp", "label": "Knowledge capacity", "shortLabel": "IKP", "description": f"Incompressible Knowledge Probes: a direct Fable factual-capacity sensitivity. Its live weight is {100 * ikp['decision']['incremental_evidence_weight']:.0f}% because promotion requires every predeclared validation gate to pass."},
-            {"id": "crowd", "label": "Human crowd", "shortLabel": "Crowd", "description": "Equal-weight geometric center of active human forecasts."},
+            {"id": "crowd", "label": "Public estimate", "shortLabel": "Public estimate", "description": "Equal-weight geometric center of active human forecasts."},
         ],
         "presets": [
             {"id": "current", "label": "Current posterior", "weights": default_weights},
@@ -503,6 +517,7 @@ def main():
             "operationalTemporal": f"OpenRouter temporal cross-check: every refresh is archived byte-for-byte, with default, priority, and flex throughput retained separately. Across {openrouter_temporal['inventory']['immutable_snapshots']} immutable snapshots and {openrouter_temporal['inventory']['history_daily_rows']:,} daily rows, default-tier tok/s still fails after price. In a separate {openrouter_request_weighted['inventory']['complete_checkpoints']}-checkpoint request-supported audit, no throughput, latency, joint, or tail-spread candidate passes the family-interval plus chronological-direction gate. Tok/s and latency remain at 0%.",
             "eciReproduction": f"ECI reproduction cross-check: the pinned official Epoch implementation reproduces all {eci_reproduction['reproduction']['reproduced_models']} scores from {eci_reproduction['reproduction']['input_rows']:,} benchmark rows spanning {eci_reproduction['reproduction']['input_benchmarks']} benchmarks. All {eci_reproduction['published_score_crosscheck']['published_nonblank_scores']} published nonblank scores agree within two-decimal display rounding. The audit preserves {eci_reproduction['release_date_crosscheck']['published_vs_input_date_disagreements']} input-date/release-date disagreements and uses the published checkpoint release date for chronological regression.",
             "eciFit": f"ECI fit tournament: {eci_fit['inventory']['historical_snapshots']} hash-pinned vintages yield {eci_fit['inventory']['first_observed_outer_targets']} first-observed tests, including {eci_fit['inventory']['interval_prospective_targets']} interval-prospective Kimi checkpoints. The flexible ridge form cuts the 25-row selection median error, but fails the inverse-CI prospective veto and spans {eci_fit['decision']['frontier_sensitivity']['Claude Fable 5']['max_over_min']:.2f}x for Fable and {eci_fit['decision']['frontier_sensitivity']['GPT-5.6 Sol']['max_over_min']:.2f}x for Sol across weighting/base-collapse sensitivities. Because both targets are 8.8–10.2 ECI points beyond the open-weight calibration range, the live linear blend is retained.",
+            "k3Efficiency": f"K3 efficiency stress test: the statement that a target is at least as parameter-efficient as disclosed 2.780T Kimi K3 is represented by a center-preserving upper-tail projection, not another point-estimate factor or literal conditioning. K3-relative AA and retained log-linear ECI mappings are judgmentally pooled in log space, with target and K3 dates held equal. The default applies winsorization to {100 * k3_efficiency['decision']['default_projection_strength']:.0f}% of upper-tail draws; a below-center reference is overridden by the center. Point centers, lower tails, the exact 50% Fable/Sol crowd blend, and the rejected nonlinear ECI form remain unchanged.",
             "activePrice": f"Active-price cross-check: {active_price['inventory']['active_parameter_matches']} labels—{active_price['inventory']['aa_disclosed_active_parameter_matches']} disclosed active counts plus {active_price['inventory']['dense_config_active_equals_total_controls']} primary-config dense controls—produce {active_price['inventory']['release_ordered_predictions']} release-ordered developer-held-out tests. The config audit parsed {hf_architecture['successful_json_configs']} repositories and retains {hf_architecture['architecture_classification_counts']['unavailable']} gated repositories as unresolved. Active-to-total MoE transport improves point metrics on 16 high-sparsity models, but its seven-developer interval crosses zero and target prices extrapolate beyond training support. It remains a 0%-weight sensitivity.",
             "historicalPrice": f"Historical-price cross-check: a hash-pinned ledger rebuilt from {historical_price_metadata['source']['full_git_history_rebuild_snapshot_count']:,} committed official OpenRouter catalog snapshots retains {historical_price['inventory']['historical_ledger_models']} model IDs and {historical_price['inventory']['historical_change_points']:,} price changes from 21 Sep 2024. All {historical_price['inventory']['calibration_checkpoints_audited']} calibration aliases match exactly; {historical_price['inventory']['eligible_total_rows_by_window']['1']} total-size and {historical_price['inventory']['eligible_active_rows_by_window']['1']} active-size labels have eligible first-day prices. Launch-vintage price beats date alone in every predeclared 1–90 day window, but no active-size window adds a developer-cluster interval wholly below zero beyond AA score plus date. The first-day K3-anchored sensitivities are {historical_price['headline_crosscheck']['fable_k3_anchored_score_date_first_day_price_t']:.1f}T for Fable and {historical_price['headline_crosscheck']['sol_k3_anchored_score_date_first_day_price_t']:.1f}T for Sol; incremental weight remains 0%.",
             "components": f"ECI component cross-check: no individual benchmark survives familywise correction. A separately nested multivariate model moves the {eci_multivariate['inventory']['outer_predictions']}-fold median error from {eci_multivariate['backtest']['total']['all']['baseline']['median_multiplicative_error']:.2f}× to {eci_multivariate['backtest']['total']['all']['candidate']['median_multiplicative_error']:.2f}×, but its family interval crosses zero; the narrow-ECI-CI replication also crosses zero. The split is aggregate-score uncertainty, not parameter-disclosure status. Incremental component weight remains 0%.",
@@ -923,6 +938,7 @@ def main():
             "ikpAudit": {"name": IKP_RESULT.name, "sha256": sha256(IKP_RESULT)},
             "ikpConditionalAudit": {"name": IKP_CONDITIONAL_RESULT.name, "sha256": sha256(IKP_CONDITIONAL_RESULT)},
             "claudeOpus5Evidence": {"name": OPUS_5_EVIDENCE.name, "sha256": sha256(OPUS_5_EVIDENCE)},
+            "k3EfficiencyPrior": {"name": K3_EFFICIENCY_PRIOR.name, "sha256": sha256(K3_EFFICIENCY_PRIOR)},
         },
     }
     SITE_DATA.parent.mkdir(parents=True, exist_ok=True)

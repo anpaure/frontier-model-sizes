@@ -18,13 +18,15 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "outputs" / "019f6c42-2d53-7743-ab07-6293e2618dd7"
-DATE = "2026-07-31"
+DATE = "2026-07-31"  # durable compatibility suffix
+GENERATED_ON = "2026-08-01"
 
 INPUTS = {
     "forecast": ROOT / "site/public/data/forecast-model.json",
     "backtest": OUT / "frontier_parameter_chronological_backtest_2026-07-17.json",
     "vintage": OUT / "parameter_developer_vintage_sensitivity_2026-07-31.json",
     "uncertainty": OUT / "frontier_parameter_predictive_uncertainty_2026-07-18.json",
+    "k3_efficiency": OUT / "k3_efficiency_prior_2026-08-01.json",
     "eci_extension": OUT / "eci_historical_validation_extension_2026-07-31.json",
     "common_components": OUT / "eci_historical_common_component_audit_2026-07-31.json",
     "knowledge": OUT / "eci_vintage_knowledge_residual_audit_2026-07-31.json",
@@ -88,6 +90,7 @@ def build_result(data: dict[str, Any]) -> dict[str, Any]:
     backtest = data["backtest"]
     vintage = data["vintage"]
     uncertainty = data["uncertainty"]
+    k3_efficiency = data["k3_efficiency"]
     extension = data["eci_extension"]
     common_components = data["common_components"]
     knowledge = data["knowledge"]
@@ -114,10 +117,17 @@ def build_result(data: dict[str, Any]) -> dict[str, Any]:
         )
 
     target_rows = []
+    efficiency_by_model = {
+        row["model"]: row for row in k3_efficiency["targets"]
+    }
+    if set(efficiency_by_model) != set(TARGETS):
+        raise ValueError("K3 efficiency-reference targets do not match readiness targets")
     for name in TARGETS:
         model = model_by_name(forecast, name)
         interval = target_interval(uncertainty, name)
         frozen = frozen_targets[name]
+        efficiency = efficiency_by_model[name]
+        projection = interval["k3_efficiency_projection"]
         if abs(model["currentFinalT"] - interval["displayed_final_center_t"]) > 1e-12:
             raise ValueError(f"Forecast/uncertainty center mismatch for {name}")
         if abs(model["currentFinalT"] - frozen["forecast"]["final_center_t"]) > 1e-12:
@@ -136,9 +146,25 @@ def build_result(data: dict[str, Any]) -> dict[str, Any]:
                 "empirical_80_factor": interval["intervals"]["80"]["multiplicative_factor"],
                 "empirical_80_low_t": interval["intervals"]["80"]["low_t"],
                 "empirical_80_high_t": interval["intervals"]["80"]["high_t"],
+                "k3_efficiency_reference_median_t": projection["pooled_reference_quantiles_t"]["median"],
+                "k3_efficiency_reference_p10_t": projection["pooled_reference_quantiles_t"]["p10"],
+                "k3_efficiency_reference_p90_t": projection["pooled_reference_quantiles_t"]["p90"],
+                "k3_efficiency_default_strength": projection["default_projection_strength"],
+                "k3_efficiency_80_low_t": projection["projected_intervals"]["80"]["low_t"],
+                "k3_efficiency_80_high_t": projection["projected_intervals"]["80"]["high_t"],
+                "k3_efficiency_center_override_probability": projection["center_override_probability"],
+                "k3_efficiency_literal_conditioning": projection["literal_conditioning"],
+                "k3_efficiency_point_center_changed": projection["point_center_changed"],
+                "k3_efficiency_lower_tail_changed": projection["lower_tail_changed"],
                 "parameter_count_disclosed": bool(model["lockedAnchor"]),
             }
         )
+        pooled_reference = efficiency["pooled_parameter_equivalent_reference_t"]
+        if any(
+            abs(projection["pooled_reference_quantiles_t"][key] - pooled_reference[key]) > 1e-12
+            for key in ("p10", "median", "p90")
+        ):
+            raise ValueError(f"K3 efficiency reference mismatch for {name}")
 
     frontier = backtest["frontier_like_metrics"]["Available-components ensemble"]
     developer = vintage["developer_holdout_current_snapshot"]["developer_frontier"]
@@ -163,10 +189,21 @@ def build_result(data: dict[str, Any]) -> dict[str, Any]:
     k3_old_prediction_b = math.exp(k3_old_log)
 
     result = {
-        "generated_on": DATE,
+        "generated_on": GENERATED_ON,
         "role": "descriptive current-state report; never a model input",
         "headline_forecasts": target_rows,
         "live_weights_percent": forecast["defaultWeights"],
+        "k3_efficiency_projection": {
+            "status": "live center-preserving upper-tail projection; no point-center weight",
+            "default_projection_strength": k3_efficiency["decision"]["default_projection_strength"],
+            "point_center_weight": k3_efficiency["decision"]["incremental_point_center_weight"],
+            "crowd_weight_for_fable_and_sol": k3_efficiency["decision"]["crowd_weight_for_fable_and_sol"],
+            "rejected_nonlinear_eci_weight": k3_efficiency["decision"]["rejected_nonlinear_eci_weight"],
+            "logical_direction": k3_efficiency["method"]["logical_direction"],
+            "diminishing_returns_interpretation": k3_efficiency["method"]["diminishing_returns_interpretation"],
+            "literal_conditioning": False,
+            "formal_coverage_guarantee": False,
+        },
         "heldout_precision": {
             "frontier_lineage_holdout": frontier,
             "frontier_whole_developer_holdout": developer,
@@ -340,6 +377,7 @@ def build_result(data: dict[str, Any]) -> dict[str, Any]:
             "Only 11 independent frontier calibration developers make empirical tail factors coarse.",
             "The targets extrapolate beyond the observed open-weight capability frontier.",
             "The central estimates are total-parameter equivalents at observed inference budgets, not physical weight disclosures.",
+            "The K3-projected bands are center-preserving winsorized stress tests, not literal conditioning, empirical coverage intervals, or formal Bayesian credible intervals.",
         ],
         "source_files": {relative(path): sha256(path) for path in INPUTS.values()},
         "outputs": {"markdown": relative(MARKDOWN)},
@@ -359,6 +397,7 @@ def render_markdown(result: dict[str, Any]) -> str:
         return f"{value:.2f}×"
 
     rows = result["headline_forecasts"]
+    efficiency = result["k3_efficiency_projection"]
     precision = result["heldout_precision"]
     lineage = precision["frontier_lineage_holdout"]
     developer = precision["frontier_whole_developer_holdout"]
@@ -407,6 +446,27 @@ def render_markdown(result: dict[str, Any]) -> str:
         [
             "",
             "The intervals are calibrated around the evidence centers. Crowd forecasts shift Fable/Sol's displayed centers but do not narrow coverage.",
+            "",
+            "## K3 efficiency upper-tail stress test",
+            "",
+            f"The user-supplied assumption that the targets are at least as parameter-efficient as disclosed 2.780T Kimi K3 is represented by center-preserving winsorization on {efficiency['default_projection_strength']:.0%} of upper-tail draws. It has {efficiency['point_center_weight']:.0%} point-center weight, leaves every lower endpoint unchanged, preserves the exact {efficiency['crowd_weight_for_fable_and_sol']:.0%} Fable/Sol crowd blend, and assigns the rejected nonlinear ECI extrapolation {efficiency['rejected_nonlinear_eci_weight']:.0%} weight.",
+            "",
+            "| Model | Pooled K3-relative reference median | Reference 10–90% | Raw 80% band | Projected 80% stress test | Center override |",
+            "|---|---:|---:|---:|---:|---:|",
+        ]
+    )
+    for row in rows:
+        lines.append(
+            f"| {row['model']} | {t(row['k3_efficiency_reference_median_t'])} | "
+            f"{t(row['k3_efficiency_reference_p10_t'])}–{t(row['k3_efficiency_reference_p90_t'])} | "
+            f"{t(row['empirical_80_low_t'])}–{t(row['empirical_80_high_t'])} | "
+            f"{t(row['k3_efficiency_80_low_t'])}–{t(row['k3_efficiency_80_high_t'])} | "
+            f"{row['k3_efficiency_center_override_probability']:.0%} |"
+        )
+    lines.extend(
+        [
+            "",
+            "This is a center-preserving winsorized structural stress test—not literal conditioning, an empirical coverage interval, or a formal Bayesian credible interval. The pooled AA/ECI reference is not a strict ceiling under either mapping. The high Fable override rate exposes tension with the existing evidence center: when the reference is lower, the center wins rather than silently recentering Fable.",
             "",
             "## Precision",
             "",

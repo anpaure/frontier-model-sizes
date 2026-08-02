@@ -49,7 +49,12 @@ flowchart TD
 
     H["Disclosed anchors<br/>Kimi K3 = 2.8T<br/>Grok 4.5 = 1.5T"] --> I["Anchor lock"]
     G --> I
+    D1 --> K["Pooled K3-relative efficiency reference<br/>center-preserving upper-tail stress test"]
+    D2 --> K
+    E --> L["Empirical predictive bands"]
+    K --> L
     I --> J["Workbook + JSON contract + website<br/>generated from one pipeline"]
+    L --> J
 ```
 
 This is Bayesian in spirit rather than a fully specified generative Bayesian model. Factor weights act like tempered likelihood powers in log-parameter space. Correlated or weak evidence is downweighted, retained as a zero-weight diagnostic, or rejected by held-out promotion gates.
@@ -401,11 +406,35 @@ Uncertainty is calibrated separately from the central forecast. The 27 frontier-
 - Fable evidence center: 2.0–11.3T
 - Sol evidence center: 1.0–9.9T
 
-The current frontier-cohort envelope factors are `3.02×`, `5.28×`, and `6.19×` at 50%, 80%, and 90%. The descriptive 50% level remains target-chronological—2.38× for Fable, 3.22× for Sol, and 3.02× for Opus 5—while the conservative 80% factor is 5.276400× for every target. The 80% bands are 0.9–25.0T for Fable, 0.6–16.3T for Sol, and 0.6–15.8T for Opus 5. Sequential coverage is reported by raw checkpoint, equal developer, and latest developer; most early 90% ranks are correctly marked unsupported instead of clipping to a finite maximum. The chart omits error bars, but the uncertainty artifact remains available at [`frontier_parameter_predictive_uncertainty_2026-07-18.json`](outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_predictive_uncertainty_2026-07-18.json). Its filename is a compatibility path; the embedded `generated_on` date is 2026-07-31.
+The current frontier-cohort envelope factors are `3.02×`, `5.28×`, and `6.19×` at 50%, 80%, and 90%. The descriptive 50% level remains target-chronological—2.38× for Fable, 3.22× for Sol, and 3.02× for Opus 5—while the conservative 80% factor is 5.276400× for every target. The 80% bands are 0.9–25.0T for Fable, 0.6–16.3T for Sol, and 0.6–15.8T for Opus 5. Sequential coverage is reported by raw checkpoint, equal developer, and latest developer; most early 90% ranks are correctly marked unsupported instead of clipping to a finite maximum. The chart omits error bars, but the uncertainty artifact remains available at [`frontier_parameter_predictive_uncertainty_2026-07-18.json`](outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/frontier_parameter_predictive_uncertainty_2026-07-18.json). Its filename is a compatibility path; the embedded `generated_on` date is 2026-08-01.
+
+### K3 parameter-efficiency upper-tail stress test
+
+The user-supplied assumption “the frontier labs are at least as parameter-efficient as Kimi K3” is now live as a center-preserving **upper-tail stress test**. It is not another independent AA/ECI factor and has 0% point-center weight. Conditional on any one capability-to-size map, equal or better parameter efficiency means:
+
+```text
+P_target <= 2.780T * 10^(slope * (score_target - score_K3))
+```
+
+Target and K3 dates are held equal in this comparison: the statement being tested is parameter efficiency itself, not a second date-progress adjustment. The retained laws are already linear in `log10(parameters)`, so performance is logarithmic in raw parameter count and diminishing returns are already present. The rejected quadratic/ridge ECI challenger receives exactly 0% weight; the earlier 8.5–12.2T result came from unvalidated convex extrapolation plus transporting K3's full residual, not from a valid diminishing-returns calculation.
+
+The direct equal-efficiency equivalents are:
+
+| Target | AA | Canonical ECI | Pooled reference median | Reference 10–90% |
+|---|---:|---:|---:|---:|
+| Claude Fable 5 | 3.7T | 5.1T | 4.1T | 3.6–4.9T |
+| GPT-5.6 Sol | 3.3T | 5.7T | 3.9T | 3.4–4.6T |
+| Claude Opus 5 | 4.0T | 4.3T | 4.0T | 3.5–4.6T |
+
+The reference distribution propagates the published ECI score intervals and five retained log-linear slope specifications. AA and ECI are pooled with equal log weight but explicitly treated as correlated alternative mappings, not independent likelihoods. Their geometric mean is a judgmental pooled parameter equivalent, not a strict logical ceiling under either mapping. The five slope specifications are sampled uniformly as sensitivities, not learned posterior model probabilities. AA score/slope and within-fit ECI coefficient uncertainty are not propagated. The user's `Sol < Fable` judgment projects only Sol's reference draws; it neither alters the centers nor enforces actual-size ordering.
+
+At the default 80% projection strength, only upper-half uncertainty draws are winsorized. The raw 80% bands remain published and unchanged, while the projected stress-test bands become 0.9–5.5T for Fable, 0.6–4.7T for Sol, and 0.6–4.8T for Opus 5. Every lower endpoint, point center, chart bar, and the exact 50% Fable/Sol crowd weight remains unchanged. Fable's pooled reference is below its 4.7T evidence center in about 84% of draws. In those draws the center explicitly overrides the reference; the pipeline reports that rate rather than pretending the reference was enforced or silently pulling Fable downward.
+
+These projected bands are center-preserving winsorized structural sensitivities—not literal conditioning, empirical coverage intervals, conformal intervals, or formal Bayesian credible intervals. The default 80% strength is an explicit judgmental setting and can be varied from 0% to 100% in the site. A truly hard efficiency constraint would have to move Fable's center when the reference falls below it. The source contract and full draw ledger are [`K3_EFFICIENCY_PRIOR_AUDIT.md`](K3_EFFICIENCY_PRIOR_AUDIT.md) and [`k3_efficiency_prior_2026-08-01.json`](outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_efficiency_prior_2026-08-01.json).
 
 Claude Opus 5's `3.0T` is a central parameter-equivalent estimate, not a disclosed count or a narrow confidence claim. Applying the same framework gives an inherited 50% empirical range of `1.0–9.1T` and an 80% range of `0.5–18.6T`. These are cross-model calibration bands, not Opus-5-specific residual estimates; the missing METR, no-CoT, IKP, and crowd observations do not narrow them. Rounding the center to one decimal place should not be read as precision.
 
-This uncertainty correction was completed after the immutable v1 pre-disclosure forecast freeze. It does not alter any central forecast and does not rewrite the freeze; the artifact explicitly records the later diagnostic correction so the original commitment remains auditable.
+This uncertainty correction and the later K3-efficiency sensitivity were completed after the immutable v1 pre-disclosure forecast freeze. Neither alters a central forecast or rewrites the freeze; the artifacts explicitly record the later diagnostic layers so the original commitment remains auditable.
 
 ## Retained zero-weight diagnostics
 
@@ -469,6 +498,6 @@ For automatic rebuilds while editing the crowd ledger:
 ./run_forecast_pipeline.py --watch
 ```
 
-The website is not a second implementation of the model. It reads [`site/public/data/forecast-model.json`](site/public/data/forecast-model.json) and applies the same log-space combination function. The build fails if the default website calculation and workbook disagree by more than `1e-9`.
+The website is not a second implementation of the model. It reads [`site/public/data/forecast-model.json`](site/public/data/forecast-model.json) and applies the same log-space combination function. [`generate_parameter_scatter_data.py`](generate_parameter_scatter_data.py) then deterministically projects that contract into the ten-row forest-plot dataset at [`site/public/data/parameter-scatter.json`](site/public/data/parameter-scatter.json); no external chart data enters it. The fixed 1–7T default axis, expandable evidence controls, identity collapses, locked anchors, and live default centers are covered by rendered and data-contract tests. The build fails if the default website calculation and workbook disagree by more than `1e-9`.
 
 For a shorter operational description, see [`FORECAST_PIPELINE.md`](FORECAST_PIPELINE.md).

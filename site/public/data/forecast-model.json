@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "snapshotDate": "2026-07-31",
-  "title": "Frontier Parameter Lab",
+  "title": "Frontier estimates",
   "unit": "trillion total base parameters",
   "defaultWeights": {
     "aa": 9.5625,
@@ -15,14 +15,14 @@
   "factors": [
     {
       "id": "aa",
-      "label": "Artificial Analysis",
-      "shortLabel": "AA",
+      "label": "Artificial Analysis Intelligence Index",
+      "shortLabel": "Artificial Analysis Intelligence Index",
       "description": "K3-anchored, family-balanced direct parameter regression."
     },
     {
       "id": "eci",
-      "label": "Epoch ECI",
-      "shortLabel": "ECI",
+      "label": "Epoch Capabilities Index",
+      "shortLabel": "Epoch Capabilities Index",
       "description": "60/40 blend of no-date and exact-date direct regressions."
     },
     {
@@ -33,8 +33,8 @@
     },
     {
       "id": "horizon",
-      "label": "No-CoT horizon",
-      "shortLabel": "Horizon",
+      "label": "METR Time Horizon",
+      "shortLabel": "METR Time Horizon",
       "description": "Primary task-horizon branch; all 49 releases use audited day-level dates."
     },
     {
@@ -51,8 +51,8 @@
     },
     {
       "id": "crowd",
-      "label": "Human crowd",
-      "shortLabel": "Crowd",
+      "label": "Public estimate",
+      "shortLabel": "Public estimate",
       "description": "Equal-weight geometric center of active human forecasts."
     }
   ],
@@ -114,7 +114,7 @@
     {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
-      "shortName": "Fable 5",
+      "shortName": "Claude Fable 5",
       "provider": "Anthropic",
       "releaseDate": "2026-06-09",
       "aaScore": 60,
@@ -488,7 +488,7 @@
     {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
-      "shortName": "Opus 5",
+      "shortName": "Claude Opus 5",
       "provider": "Anthropic",
       "releaseDate": "2026-07-24",
       "aaScore": 60.6918740157091,
@@ -538,6 +538,7 @@
     "operationalTemporal": "OpenRouter temporal cross-check: every refresh is archived byte-for-byte, with default, priority, and flex throughput retained separately. Across 8 immutable snapshots and 60,307 daily rows, default-tier tok/s still fails after price. In a separate 81-checkpoint request-supported audit, no throughput, latency, joint, or tail-spread candidate passes the family-interval plus chronological-direction gate. Tok/s and latency remain at 0%.",
     "eciReproduction": "ECI reproduction cross-check: the pinned official Epoch implementation reproduces all 213 scores from 2,059 benchmark rows spanning 54 benchmarks. All 196 published nonblank scores agree within two-decimal display rounding. The audit preserves 43 input-date/release-date disagreements and uses the published checkpoint release date for chronological regression.",
     "eciFit": "ECI fit tournament: 15 hash-pinned vintages yield 27 first-observed tests, including 2 interval-prospective Kimi checkpoints. The flexible ridge form cuts the 25-row selection median error, but fails the inverse-CI prospective veto and spans 1.34x for Fable and 1.38x for Sol across weighting/base-collapse sensitivities. Because both targets are 8.8–10.2 ECI points beyond the open-weight calibration range, the live linear blend is retained.",
+    "k3Efficiency": "K3 efficiency stress test: the statement that a target is at least as parameter-efficient as disclosed 2.780T Kimi K3 is represented by a center-preserving upper-tail projection, not another point-estimate factor or literal conditioning. K3-relative AA and retained log-linear ECI mappings are judgmentally pooled in log space, with target and K3 dates held equal. The default applies winsorization to 80% of upper-tail draws; a below-center reference is overridden by the center. Point centers, lower tails, the exact 50% Fable/Sol crowd blend, and the rejected nonlinear ECI form remain unchanged.",
     "activePrice": "Active-price cross-check: 63 labels—45 disclosed active counts plus 18 primary-config dense controls—produce 45 release-ordered developer-held-out tests. The config audit parsed 73 repositories and retains 14 gated repositories as unresolved. Active-to-total MoE transport improves point metrics on 16 high-sparsity models, but its seven-developer interval crosses zero and target prices extrapolate beyond training support. It remains a 0%-weight sensitivity.",
     "historicalPrice": "Historical-price cross-check: a hash-pinned ledger rebuilt from 1,062 committed official OpenRouter catalog snapshots retains 914 model IDs and 2,566 price changes from 21 Sep 2024. All 93 calibration aliases match exactly; 73 total-size and 55 active-size labels have eligible first-day prices. Launch-vintage price beats date alone in every predeclared 1–90 day window, but no active-size window adds a developer-cluster interval wholly below zero beyond AA score plus date. The first-day K3-anchored sensitivities are 5.4T for Fable and 3.8T for Sol; incremental weight remains 0%.",
     "components": "ECI component cross-check: no individual benchmark survives familywise correction. A separately nested multivariate model moves the 73-fold median error from 2.32× to 2.10×, but its family interval crosses zero; the narrow-ECI-CI replication also crosses zero. The split is aggregate-score uncertainty, not parameter-disclosure status. Incremental component weight remains 0%.",
@@ -1172,11 +1173,11 @@
     },
     "finalWorkbook": {
       "name": "frontier_parameter_model_crowd_50pct_2026-07-17.xlsx",
-      "sha256": "317b57384f40c1b8ae9af635bcbba220ac98b72ac636a27b0dfd5ab431bc0cc1"
+      "sha256": "017c4d3f02745bb11a37062bfc4c6d10f8b3e664aea084c96a2485010e77ed40"
     },
     "branchWorkbook": {
       "name": "k3_calibrated_frontier_parameter_crosscheck_2026-07-17.xlsx",
-      "sha256": "8a1eaded1a325a0cb79e532c9775801e5520bf603135566f687dad53a8565273"
+      "sha256": "fbf1b448598ff6a0ef5f7abd0ec965a9405e709d3f8b582da43709f5b2d76478"
     },
     "openRouterModels": {
       "name": "openrouter_model_signals_2026-07-18.csv",
@@ -1280,7 +1281,7 @@
     },
     "posttrainingLineageAudit": {
       "name": "posttraining_lineage_audit_2026-07-18.json",
-      "sha256": "6126e17ff2fa16aef4ad029e7796a5760facac98ef03b61afb467e7abbe4f222"
+      "sha256": "fb51ed88f10e5fc998b9e15d9cb95734cc3e5b881cec49fc98c6f8c5828f6066"
     },
     "posttrainingLineageEdges": {
       "name": "posttraining_lineage_edges_2026-07-18.csv",
@@ -1328,7 +1329,7 @@
     },
     "aaInferenceAudit": {
       "name": "aa_inference_budget_audit_2026-07-18.json",
-      "sha256": "cb7b11524d1cf2375649bfa65e0685a3b51697a5eef6f632957643a433a58bf3"
+      "sha256": "71c02249900c1f38d35747049de326ab7feb0681e4ebc9addc23e99499536ae5"
     },
     "aaDetailedPanel": {
       "name": "aa_detailed_parameter_panel_2026-07-18.csv",
@@ -1501,6 +1502,10 @@
     "claudeOpus5Evidence": {
       "name": "claude_opus_5_evidence_2026-07-31.json",
       "sha256": "f2277d6b2608ba418257eda09b83a198600d466c2d1a1d6c5a56e28f30317ae5"
+    },
+    "k3EfficiencyPrior": {
+      "name": "k3_efficiency_prior_2026-08-01.json",
+      "sha256": "0052807a5d37a2250c0cb7922ed9bf5e6f4076e127c02415006699497576b60a"
     }
   }
 }

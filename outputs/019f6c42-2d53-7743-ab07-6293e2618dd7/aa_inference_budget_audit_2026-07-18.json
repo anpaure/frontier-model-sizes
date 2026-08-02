@@ -711,7 +711,7 @@
     "sources/aa_changelog_2026-07-31.json.gz": "f0eb36386c6e22de238687e533b5d9a29deddc39039b175edb88739a32b01e5a",
     "sources/open_model_parameter_truth_reconciliation_2026-07-31.json": "cbfc667c884f88d7a4456efde5a47f24ca6ca481f0e30a67cbfcc419c7c0ad89",
     "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/aa_expanded_parameter_panel_2026-07-18.csv": "e90578d9330126d2c2eabef50d3712bdac1d5c66ae2964c4bbb079345b9b01d4",
-    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_calibrated_frontier_parameter_crosscheck_2026-07-17.xlsx": "8a1eaded1a325a0cb79e532c9775801e5520bf603135566f687dad53a8565273",
+    "outputs/019f6c42-2d53-7743-ab07-6293e2618dd7/k3_calibrated_frontier_parameter_crosscheck_2026-07-17.xlsx": "fbf1b448598ff6a0ef5f7abd0ec965a9405e709d3f8b582da43709f5b2d76478",
     "sources/kimi_k3_release_evidence_2026-07-31.json": "f38da7ad2ced836cef909f0be4d688c3d8f80215fc6b0d6902bfa9488357b600",
     "sources/aa_calibration_evidence/motif_3_beta_readme_eee2817.md": "99b3f5c9c3607ca945fbcd81444d8dd70c7853ca36cb12c347feba8928dde240",
     "sources/aa_calibration_evidence/motif_3_beta_hf_api_eee2817.json": "469bc665426ec0500d39e5ffc1fea43c0d4b37445f76c4022011034b94090f97",

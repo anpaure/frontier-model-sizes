@@ -1,0 +1,656 @@
+{
+  "counts": {
+    "calibration": 0,
+    "disclosedAnchors": 2,
+    "frontier": 10,
+    "models": 10
+  },
+  "defaultWeights": {
+    "aa": 9.5625,
+    "compute": 2.5,
+    "crowd": 50.0,
+    "eci": 9.5625,
+    "horizon": 25.0,
+    "ikp": 0.0,
+    "price": 3.375
+  },
+  "factors": [
+    {
+      "description": "K3-anchored, family-balanced direct parameter regression.",
+      "id": "aa",
+      "label": "Artificial Analysis Intelligence Index",
+      "shortLabel": "Artificial Analysis Intelligence Index"
+    },
+    {
+      "description": "60/40 blend of no-date and exact-date direct regressions.",
+      "id": "eci",
+      "label": "Epoch Capabilities Index",
+      "shortLabel": "Epoch Capabilities Index"
+    },
+    {
+      "description": "Correlated size signal; launch-vintage prices beat date alone, but add no robust active-size information beyond AA plus date.",
+      "id": "price",
+      "label": "API price",
+      "shortLabel": "Price"
+    },
+    {
+      "description": "Primary task-horizon branch; all 49 releases use audited day-level dates.",
+      "id": "horizon",
+      "label": "METR Time Horizon",
+      "shortLabel": "METR Time Horizon"
+    },
+    {
+      "description": "AA/date is mapped through Epoch compute calibrations; a correlated structural regularizer, not observed target compute.",
+      "id": "compute",
+      "label": "Compute-structured AA",
+      "shortLabel": "Compute"
+    },
+    {
+      "description": "Incompressible Knowledge Probes: a direct Fable factual-capacity sensitivity. Its live weight is 0% because promotion requires every predeclared validation gate to pass.",
+      "id": "ikp",
+      "label": "Knowledge capacity",
+      "shortLabel": "IKP"
+    },
+    {
+      "description": "Equal-weight geometric center of active human forecasts.",
+      "id": "crowd",
+      "label": "Public estimate",
+      "shortLabel": "Public estimate"
+    }
+  ],
+  "models": [
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 2.290785766269785,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 2.641916999152285,
+        "compute": 2.289414646239948,
+        "crowd": null,
+        "eci": 2.469118947768164,
+        "horizon": 2.0046743725696254,
+        "ikp": null,
+        "price": 3.3238315545112043
+      },
+      "forecastModelId": "gpt-55",
+      "id": "checkpoint:openai:gpt-5-5",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "GPT-5.5",
+      "organization": "OpenAI",
+      "organizationGroup": "OpenAI",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 2.290785766269785,
+      "publicEstimateT": null,
+      "releaseDate": "2026-04-23",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "GPT-5.5",
+      "signals": {
+        "aaScore": 55,
+        "activeParametersB": null,
+        "eciScore": 158.33,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 2.7165307282992077,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 2.501599027726546,
+        "compute": 2.2176120217905924,
+        "crowd": null,
+        "eci": 2.065667853750635,
+        "horizon": 3.180401274462439,
+        "ikp": null,
+        "price": 2.6952034847314126
+      },
+      "forecastModelId": "claude-opus-47-48-shared-base",
+      "id": "weight-identity:anthropic:claude-opus-4-7-4-8",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "Claude Opus 4.7 / 4.8 shared base",
+      "organization": "Anthropic",
+      "organizationGroup": "Anthropic",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 2.7165307282992077,
+      "publicEstimateT": null,
+      "releaseDate": "2026-05-28",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "Opus 4.7/4.8",
+      "signals": {
+        "aaScore": 55,
+        "activeParametersB": null,
+        "eciScore": 156.93,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 4.548292155336898,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 4.016370921146617,
+        "compute": 2.4775210449595826,
+        "crowd": 4.371847506331046,
+        "eci": 3.0885868628263564,
+        "horizon": 6.59544467651061,
+        "ikp": 3.6426590968396315,
+        "price": 3.48028632934279
+      },
+      "forecastModelId": "claude-fable-5",
+      "id": "checkpoint:anthropic:claude-fable-5",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "Claude Fable 5",
+      "organization": "Anthropic",
+      "organizationGroup": "Anthropic",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 4.548292155336898,
+      "publicEstimateT": 4.371847506331046,
+      "releaseDate": "2026-06-09",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "Claude Fable 5",
+      "signals": {
+        "aaScore": 60,
+        "activeParametersB": null,
+        "eciScore": 160.44,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 1.6440151206205922,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 1.946871865674927,
+        "compute": 1.9493651699052128,
+        "crowd": null,
+        "eci": 1.2974259253341616,
+        "horizon": 1.6293400551610284,
+        "ikp": null,
+        "price": 1.875952028866749
+      },
+      "forecastModelId": "claude-sonnet-5",
+      "id": "checkpoint:anthropic:claude-sonnet-5",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "Claude Sonnet 5",
+      "organization": "Anthropic",
+      "organizationGroup": "Anthropic",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 1.6440151206205922,
+      "publicEstimateT": null,
+      "releaseDate": "2026-06-30",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "Claude Sonnet 5",
+      "signals": {
+        "aaScore": 53,
+        "activeParametersB": null,
+        "eciScore": 153.2,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 1.5,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 2.0099991870584826,
+        "compute": 1.952395320644401,
+        "crowd": null,
+        "eci": 1.3090579803054672,
+        "horizon": 1.5,
+        "ikp": null,
+        "price": null
+      },
+      "forecastModelId": "grok-45",
+      "id": "checkpoint:xai:grok-4-5",
+      "labelPriority": 110,
+      "lockedAnchor": true,
+      "name": "Grok 4.5",
+      "organization": "SpaceXAI",
+      "organizationGroup": "xAI",
+      "parameterKind": "disclosed",
+      "parameterSource": "Project disclosure ledger",
+      "parameterSourceUrl": null,
+      "parameterT": 1.5,
+      "publicEstimateT": null,
+      "releaseDate": "2026-07-08",
+      "roles": [
+        "disclosed anchor"
+      ],
+      "shortName": "Grok 4.5",
+      "signals": {
+        "aaScore": 53.8265951657731,
+        "activeParametersB": null,
+        "eciScore": 153.17,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 1.4756441184859073,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 1.5315166889172227,
+        "compute": 1.7967771815517266,
+        "crowd": null,
+        "eci": 1.6030809523637135,
+        "horizon": 1.3928657916908038,
+        "ikp": null,
+        "price": 1.3922076796534568
+      },
+      "forecastModelId": "gpt-56-luna",
+      "id": "checkpoint:openai:gpt-5-6-luna",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "GPT-5.6 Luna",
+      "organization": "OpenAI",
+      "organizationGroup": "OpenAI",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 1.4756441184859073,
+      "publicEstimateT": null,
+      "releaseDate": "2026-07-09",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "GPT-5.6 Luna",
+      "signals": {
+        "aaScore": 51,
+        "activeParametersB": null,
+        "eciScore": 155.62,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 3.145668582841,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 3.3972189184817907,
+        "compute": 2.2851690247440986,
+        "crowd": 3.2116911484449235,
+        "eci": 3.378210011120845,
+        "horizon": 2.9850434724007573,
+        "ikp": null,
+        "price": 2.838375200042036
+      },
+      "forecastModelId": "gpt-56-sol",
+      "id": "checkpoint:openai:gpt-5-6-sol",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "GPT-5.6 Sol",
+      "organization": "OpenAI",
+      "organizationGroup": "OpenAI",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 3.145668582841,
+      "publicEstimateT": 3.2116911484449235,
+      "releaseDate": "2026-07-09",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "GPT-5.6 Sol",
+      "signals": {
+        "aaScore": 59,
+        "activeParametersB": null,
+        "eciScore": 161.77,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 2.1261839550663577,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 2.2550118520127516,
+        "compute": 2.019320112047976,
+        "crowd": null,
+        "eci": 2.2467896289463845,
+        "horizon": 2.0333299595509313,
+        "ikp": null,
+        "price": 2.226203154213069
+      },
+      "forecastModelId": "gpt-56-terra",
+      "id": "checkpoint:openai:gpt-5-6-terra",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "GPT-5.6 Terra",
+      "organization": "OpenAI",
+      "organizationGroup": "OpenAI",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 2.1261839550663577,
+      "publicEstimateT": null,
+      "releaseDate": "2026-07-09",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "GPT-5.6 Terra",
+      "signals": {
+        "aaScore": 55,
+        "activeParametersB": null,
+        "eciScore": 158.25,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 2.78,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 2.7799999999999994,
+        "compute": 2.135837940148138,
+        "crowd": null,
+        "eci": 1.6394913252498788,
+        "horizon": 2.78,
+        "ikp": null,
+        "price": null
+      },
+      "forecastModelId": "kimi-k3",
+      "id": "checkpoint:moonshot:kimi-k3",
+      "labelPriority": 110,
+      "lockedAnchor": true,
+      "name": "Kimi K3",
+      "organization": "Moonshot AI",
+      "organizationGroup": "Moonshot AI",
+      "parameterKind": "disclosed",
+      "parameterSource": "Project disclosure ledger",
+      "parameterSourceUrl": null,
+      "parameterT": 2.78,
+      "publicEstimateT": null,
+      "releaseDate": "2026-07-16",
+      "roles": [
+        "disclosed anchor"
+      ],
+      "shortName": "Kimi K3",
+      "signals": {
+        "aaScore": 57.1123394372091,
+        "activeParametersB": 104.2,
+        "eciScore": 155.5939255295791,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    },
+    {
+      "architecture": {
+        "moe": true,
+        "reasoning": true
+      },
+      "backtest": null,
+      "currentFinalT": 3.003794890426257,
+      "factorWeights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      },
+      "factors": {
+        "aa": 3.964375492233051,
+        "compute": 2.3581807647976416,
+        "crowd": null,
+        "eci": 2.53440192011516,
+        "horizon": 3.042296195182693,
+        "ikp": null,
+        "price": 2.4110202558207794
+      },
+      "forecastModelId": "claude-opus-5",
+      "id": "checkpoint:anthropic:claude-opus-5",
+      "labelPriority": 100,
+      "lockedAnchor": false,
+      "name": "Claude Opus 5",
+      "organization": "Anthropic",
+      "organizationGroup": "Anthropic",
+      "parameterKind": "forecast",
+      "parameterSource": "Audited final forecast",
+      "parameterSourceUrl": null,
+      "parameterT": 3.003794890426257,
+      "publicEstimateT": null,
+      "releaseDate": "2026-07-24",
+      "roles": [
+        "frontier forecast"
+      ],
+      "shortName": "Claude Opus 5",
+      "signals": {
+        "aaScore": 60.6918740157091,
+        "activeParametersB": null,
+        "eciScore": 159.3778667882398,
+        "metrP50Minutes": null,
+        "noCotMinutes": null,
+        "trainingComputeFlop": null
+      }
+    }
+  ],
+  "organizationGroups": [
+    {
+      "color": "#E03D90",
+      "id": "OpenAI"
+    },
+    {
+      "color": "#6A3ECB",
+      "id": "Anthropic"
+    },
+    {
+      "color": "#0058DC",
+      "id": "xAI"
+    },
+    {
+      "color": "#2AA74B",
+      "id": "Moonshot AI"
+    }
+  ],
+  "parameterPolicy": "Every plotted value, identity, date, and contribution comes from the project's published forecast data. External visual references contribute layout only.",
+  "presets": [
+    {
+      "id": "current",
+      "label": "Current posterior",
+      "weights": {
+        "aa": 9.5625,
+        "compute": 2.5,
+        "crowd": 50.0,
+        "eci": 9.5625,
+        "horizon": 25.0,
+        "ikp": 0.0,
+        "price": 3.375
+      }
+    },
+    {
+      "id": "regression",
+      "label": "Regression only",
+      "weights": {
+        "aa": 50,
+        "compute": 0,
+        "crowd": 0,
+        "eci": 50,
+        "horizon": 0,
+        "ikp": 0,
+        "price": 0
+      }
+    },
+    {
+      "id": "capability",
+      "label": "Capability heavy",
+      "weights": {
+        "aa": 15,
+        "compute": 10,
+        "crowd": 0,
+        "eci": 15,
+        "horizon": 60,
+        "ikp": 0,
+        "price": 0
+      }
+    },
+    {
+      "id": "crowd",
+      "label": "Crowd heavy",
+      "weights": {
+        "aa": 5,
+        "compute": 5,
+        "crowd": 70,
+        "eci": 5,
+        "horizon": 15,
+        "ikp": 0,
+        "price": 0
+      }
+    }
+  ],
+  "schemaVersion": 2,
+  "snapshotDate": "2026-07-31",
+  "sources": {
+    "forecast": {
+      "name": "forecast-model.json",
+      "sha256": "066d5b1e647a305495322d337aa43f926e5a492bfd93d7120d910710cbb50be7"
+    }
+  },
+  "title": "Frontier estimates",
+  "unit": "trillion parameters"
+}

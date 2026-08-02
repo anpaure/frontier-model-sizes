@@ -30,18 +30,57 @@ class ModelReadinessReportTest(unittest.TestCase):
                 OUT / "frontier_parameter_chronological_backtest_2026-07-17.json"
             ).read_text(encoding="utf-8")
         )
+        cls.uncertainty = json.loads(
+            (
+                OUT / "frontier_parameter_predictive_uncertainty_2026-07-18.json"
+            ).read_text(encoding="utf-8")
+        )
+        cls.k3_efficiency = json.loads(
+            (OUT / "k3_efficiency_prior_2026-08-01.json").read_text(
+                encoding="utf-8"
+            )
+        )
 
     def test_headline_forecasts_and_intervals_are_exact(self) -> None:
         rows = {row["model"]: row for row in self.result["headline_forecasts"]}
         self.assertEqual(set(rows), {"Claude Fable 5", "GPT-5.6 Sol", "Claude Opus 5"})
         forecast_rows = {row["name"]: row for row in self.forecast["models"]}
+        uncertainty_rows = {
+            row["model"]: row for row in self.uncertainty["targets"]
+        }
         for row in rows.values():
             source = forecast_rows[row["model"]]
+            projection = uncertainty_rows[row["model"]]["k3_efficiency_projection"]
             self.assertAlmostEqual(row["final_center_t"], source["currentFinalT"])
             self.assertAlmostEqual(row["evidence_center_t"], source["currentEvidenceT"])
             self.assertFalse(row["parameter_count_disclosed"])
             self.assertGreater(row["empirical_50_high_t"], row["empirical_50_low_t"])
             self.assertGreater(row["empirical_80_factor"], row["empirical_50_factor"])
+            self.assertAlmostEqual(
+                row["k3_efficiency_reference_median_t"],
+                projection["pooled_reference_quantiles_t"]["median"],
+            )
+            self.assertAlmostEqual(
+                row["k3_efficiency_80_low_t"], row["empirical_80_low_t"]
+            )
+            self.assertLess(
+                row["k3_efficiency_80_high_t"], row["empirical_80_high_t"]
+            )
+            self.assertFalse(row["k3_efficiency_point_center_changed"])
+            self.assertFalse(row["k3_efficiency_lower_tail_changed"])
+
+    def test_k3_efficiency_projection_is_center_preserving_and_does_not_reweight_centers(self) -> None:
+        policy = self.result["k3_efficiency_projection"]
+        self.assertEqual(policy["default_projection_strength"], 0.8)
+        self.assertEqual(policy["point_center_weight"], 0)
+        self.assertEqual(policy["crowd_weight_for_fable_and_sol"], 0.5)
+        self.assertEqual(policy["rejected_nonlinear_eci_weight"], 0)
+        self.assertIn("no greater than", policy["logical_direction"])
+        self.assertIn(
+            "log10(parameters)", policy["diminishing_returns_interpretation"]
+        )
+        self.assertFalse(policy["formal_coverage_guarantee"])
+        self.assertFalse(policy["literal_conditioning"])
 
     def test_precision_and_zero_weight_decisions_are_honest(self) -> None:
         precision = self.result["heldout_precision"]
@@ -180,6 +219,9 @@ class ModelReadinessReportTest(unittest.TestCase):
         self.assertIn("High-sparsity shrinkage challenger", text)
         self.assertIn("Crowd center robustness", text)
         self.assertIn("Kimi K3 audit correction", text)
+        self.assertIn("K3 efficiency upper-tail stress test", text)
+        self.assertIn("rejected nonlinear ECI extrapolation 0% weight", text)
+        self.assertIn("center-preserving winsorized structural stress test", text)
 
     def test_offline_rebuild_is_byte_exact(self) -> None:
         before = {path: sha256(path) for path in (RESULT, MARKDOWN)}

@@ -2346,7 +2346,7 @@
     "metr_source_sha256": "05b055467ab579b2c46100ce65bed05108863e64beb4f36d83d0c0b82f0ee85c",
     "observations_sha256": "c52906493bf4bb5b22dfed9822cf42e23094b97cce10d1264343ba7b9ead9794",
     "registry_sha256": "5772e396c7123f3ca12682acdef99dcf7ff48d397f42c01ae36f8967b476ce26",
-    "workbook_sha256": "317b57384f40c1b8ae9af635bcbba220ac98b72ac636a27b0dfd5ab431bc0cc1"
+    "workbook_sha256": "017c4d3f02745bb11a37062bfc4c6d10f8b3e664aea084c96a2485010e77ed40"
   },
   "manifest_all_pass": true,
   "megafile_integrity": {

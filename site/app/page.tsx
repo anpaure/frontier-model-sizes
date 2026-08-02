@@ -1,838 +1,362 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import rawData from "../public/data/forecast-model.json";
-import rawUncertainty from "../public/data/predictive-uncertainty.json";
+import { type CSSProperties, useEffect, useMemo, useState } from "react";
+import rawData from "../public/data/parameter-scatter.json";
 
 type FactorId = "aa" | "eci" | "price" | "horizon" | "compute" | "ikp" | "crowd";
 type Weights = Record<FactorId, number>;
 type Factor = { id: FactorId; label: string; shortLabel: string; description: string };
-type Model = {
+type ScatterModel = {
   id: string;
+  forecastModelId: string;
   name: string;
   shortName: string;
-  provider: string;
+  organization: string;
+  organizationGroup: string;
   releaseDate: string;
-  aaScore: number | null;
-  eciScore: number | null;
-  eciCi90: [number, number] | null;
-  aaConfiguration: string | null;
-  aaFallbackModel: string | null;
+  parameterT: number;
+  parameterKind: "forecast" | "disclosed";
+  parameterSource: string;
   lockedAnchor: boolean;
-  disclosedT: number | null;
-  currentEvidenceT: number;
   currentFinalT: number;
+  publicEstimateT: number | null;
   factors: Record<FactorId, number | null>;
-  crowd: { n: number; pooled: boolean; contributors: string[]; forecasts: string[] };
-  methodNote: string;
+  factorWeights: Weights;
+  signals: {
+    aaScore: number | null;
+    eciScore: number | null;
+    noCotMinutes: number | null;
+    metrP50Minutes: number | null;
+    trainingComputeFlop: number | null;
+    activeParametersB: number | null;
+  };
+  architecture: { moe: boolean; reasoning: boolean };
 };
 type Dataset = {
   snapshotDate: string;
-  unit: string;
-  defaultWeights: Weights;
+  title: string;
+  parameterPolicy: string;
+  counts: { models: number; frontier: number; calibration: number; disclosedAnchors: number };
+  organizationGroups: { id: string; color: string }[];
   factors: Factor[];
+  defaultWeights: Weights;
   presets: { id: string; label: string; weights: Weights }[];
-  models: Model[];
-  humanForecasts: { activeRecords: number; contributors: number };
-  method: { combination: string; anchors: string; currentMix: string; ikp: string; noCotDates: string; noCotArchitecture: string; primaryEvidence: string; metrPrimary: string; operational: string; operationalTemporal: string; eciReproduction: string; eciFit: string; activePrice: string; historicalPrice: string; components: string; posttraining: string; aaExpansion: string; aaInference: string; activeTransport: string; computeDependency: string };
-  noCotDateSignals: {
-    models: number;
-    exactDates: number;
-    remainingMonthOnly: number;
-    dateOnlyOverrides: number;
-    parameterIdentitiesAdded: number;
-    paperTimeDays: number;
-    adjustedTimeDays: number;
-    paperTokenDays: number;
-    adjustedTokenDays: number;
-    weightChanged: boolean;
-  };
-  noCotArchitectureSignals: {
-    models: number;
-    families: number;
-    denseModels: number;
-    moeModels: number;
-    moeParetoModels: number;
-    moeFactor: number;
-    directDelta: number;
-    directCi90: [number, number];
-    paretoDelta: number;
-    paretoCi90: [number, number];
-    replacePooled: boolean;
-  };
-  frontierPrimarySignals: {
-    directSolMinutes: number;
-    gpt55ComparatorMinutes: number;
-    currentProjectedSolMinutes: number;
-    currentProjectedSolPriorT: number;
-    modelLevelSolT: number;
-    pooledElasticitySolT: number;
-    moeElasticitySolT: number;
-    rebasedPooledSolT: number;
-    methodSpread: number;
-    heldoutPredictions: number;
-    heldoutDevelopers: number;
-    horizonBetterProbability: number;
-    incrementalCi90: [number, number];
-    incrementalWeight: number;
-    fableMythosSharedWeights: boolean;
-    opusFallbackIsSharedBase: boolean;
-  };
-  metrPrimarySignals: {
-    officialRows: number;
-    uniqueSourceIds: number;
-    fullScaffoldEntries: number;
-    legacyExactRows: number;
-    legacyRows: number;
-    mismatchCount: number;
-    from2023DoublingDays: number;
-    from2023CiLowDays: number;
-    from2023CiHighDays: number;
-  };
-  ikpSignals: {
-    calibrationConfigurations: number;
-    calibrationWeightBases: number;
-    servingVariantsCollapsed: number;
-    strictPredictionRows: number;
-    overlapModels: number;
-    overlapFamilies: number;
-    existingMedianX: number;
-    ikpMedianX: number;
-    blendMedianX: number;
-    fullBootstrapCi90: [number, number];
-    chronologicalSubsetModels: number;
-    chronologicalSubsetFamilies: number;
-    chronologicalBootstrapCi90: [number, number];
-    familiesImproved: number;
-    signedErrorCorrelation: number;
-    fableStrictT: number;
-    fablePublishedT: number;
-    fableStrictFormRangeT: [number, number];
-    fableSourcePi90T: [number, number];
-    fableRefusalRate: number;
-    evidenceWeight: number;
-    finalWeight: number;
-    solObserved: boolean;
-    conditionalGpqaModels: number;
-    conditionalGpqaVendors: number;
-    conditionalGpqaPassingSpecifications: number;
-    conditionalMmluModels: number;
-    conditionalMmluPassingSpecifications: number;
-    conditionalMmluProPassingSpecifications: number;
-    conditionalSignalCorroborated: boolean;
-    conditionalWeightChanged: boolean;
-    staleUpstreamNarrativeClaims: number;
-  };
-  operationalSignals: {
-    snapshotDate: string;
-    epochCalibrationCheckpoints: number;
-    developerFamilies: number;
-    priceMedianHeldoutErrorX: number;
-    tokSIncrementalWeight: number;
-  };
-  openRouterTemporalSignals: {
-    immutableSnapshots: number;
-    currentDailyRows: number;
-    historyDailyRows: number;
-    serviceTierRows: { default: number; priority: number; flex: number };
-    multiTierEndpointModels: number;
-    unmatchedEndpointModels: number;
-    familyPriceMae: number;
-    familyPriceTokSMae: number;
-    chronologicalPriceMae: number;
-    chronologicalPriceTokSMae: number;
-    medianModelWithinWeekMaxOverMin: number;
-    p90ModelWithinWeekMaxOverMin: number;
-    focalModels: {
-      model: string;
-      openrouter_model_id: string;
-      refresh_max_over_min: number;
-      refresh_median_tps: number;
-      refreshes: number;
-      within_week_dates: number;
-      within_week_max_over_min: number;
-      within_week_median_tps: number;
-    }[];
-    tokSIncrementalWeight: number;
-  };
-  openRouterOfficialSignals: {
-    modelRequests: number;
-    successfulModelRequests: number;
-    officialEndpointRows: number;
-    frontendEndpointTierRows: number;
-    officialPriceExactShare: number;
-    comparisonGroupCounts: { exact: number; frontend_only: number; official_only: number; signature_mismatch: number };
-    endpointTierRows: number;
-    endpointTierServiceTierCounts: { default: number; flex: number; priority: number };
-    highContextPriceRows: number;
-    focalModels: Record<string, { official_rows: number; frontend_rows: number; non_exact_groups: string[] }>;
-    incrementalForecastWeight: number;
-  };
-  openRouterRequestWeightedSignals: {
-    completeCheckpoints: number;
-    completeFamilies: number;
-    minimumRequests: number;
-    supportedCandidates: string[];
-    familyPriceMedianX: number;
-    familyLatencyMedianX: number;
-    familyLatencyCi90: [number, number];
-    incrementalWeight: number;
-  };
-  eciReproductionSignals: {
-    officialCommit: string;
-    inputRows: number;
-    reproducedModels: number;
-    publishedScoreMatches: number;
-    maximumPublishedScoreDifference: number;
-    publishedReleaseDatesUsed: number;
-    canonicalInputDateFallbacks: number;
-    preservedDateDisagreements: number;
-  };
-  eciFitSignals: {
-    historicalSnapshots: number;
-    historicalScoreRows: number;
-    firstObservedTargets: number;
-    selectionTargets: number;
-    prospectiveTargets: number;
-    selectedCandidate: string;
-    baselineSelectionMedianX: number;
-    candidateSelectionMedianX: number;
-    selectionCi90: [number, number];
-    baselineProspectiveMae: number;
-    candidateProspectiveMae: number;
-    fableExtrapolationPoints: number;
-    solExtrapolationPoints: number;
-    fableSensitivityRatio: number;
-    solSensitivityRatio: number;
-    changeLiveForm: boolean;
-  };
-  componentSignals: {
-    expandedParameterCheckpoints: number;
-    exactEpochAdditions: number;
-    activeParameterCheckpoints: number;
-    eligibleBenchmarks: number;
-    familywiseSupported: number;
-    incrementalWeight: number;
-    bestUncorrectedBenchmark: string;
-    bestAdjustedP: number;
-    multivariateOuterPredictions: number;
-    multivariateFamilies: number;
-    multivariateBaselineMedianX: number;
-    multivariateCandidateMedianX: number;
-    multivariateCi90: [number, number];
-    narrowCiOnlyPredictions: number;
-    narrowCiOnlyFamilies: number;
-    narrowCiOnlyBaselineMedianX: number;
-    narrowCiOnlyCandidateMedianX: number;
-    narrowCiOnlyCi90: [number, number];
-    multivariateIncrementalWeight: number;
-    targetSensitivities: {
-      model: string;
-      observed_selected_count: number;
-      narrow_ci_training_observed_count: number;
-      component_adjustment_factor: number;
-      narrow_ci_training_adjustment_factor: number;
-      full_vs_narrow_ci_direction_agrees: boolean;
-    }[];
-  };
-  posttrainingSignals: {
-    epochBaseLinks: number;
-    sameParameterBothOpenLinks: number;
-    candidateOpenLanguageLinks: number;
-    measuredEdges: number;
-    measuredBases: number;
-    measuredDevelopers: number;
-    eciPredictionEdges: number;
-    aaPredictionEdges: number;
-    noCotEdges: number;
-    metrEdges: number;
-    sameWeightReasoningPairs: number;
-    sameWeightReasoningCreators: number;
-    sameWeightReasoningMedianUplift: number;
-    eciMedianImpliedRatio: number;
-    eciCollapseCi90: [number, number];
-    aaCollapseCi90: [number, number];
-    knowledgeMedianUplift: number;
-    otherMedianUplift: number;
-    incrementalWeight: number;
-    publiclyVerifiedProprietarySharedBase: boolean;
-  };
-  aaExpansionSignals: {
-    currentCheckpoints: number;
-    exactEpochCheckpoints: number;
-    reconciledOverlaps: number;
-    expandedCheckpoints: number;
-    eligiblePredictions: number;
-    frontierLikePredictions: number;
-    incrementalWeight: number;
-  };
-  aaInferenceSignals: {
-    rawModels: number;
-    openWeightConfigurations: number;
-    uniqueCheckpoints: number;
-    tokenCoveredCheckpoints: number;
-    allReasoningPairs: number;
-    exactWeightPairs: number;
-    pairCreators: number;
-    equalCreatorMedianUplift: number;
-    exactEpochCrosschecks: number;
-    metadataDisagreements: number;
-    portableFrontierBaselineMedianX: number;
-    portableFrontierCandidateMedianX: number;
-    incrementalTokenWeight: number;
-    incrementalReasoningWeight: number;
-  };
-  aaOperationalSignals: {
-    priceCheckpoints: number;
-    speedCheckpoints: number;
-    providerMedianPriceCheckpoints: number;
-    firstPartyPriceCheckpoints: number;
-    exactOpenRouterOverlap: number;
-    priceSpearman: number;
-    speedSpearman: number;
-    providerMedianFrontierBaselineMedianX: number;
-    providerMedianFrontierCandidateMedianX: number;
-    firstPartyFrontierBaselineMedianX: number;
-    firstPartyFrontierCandidateMedianX: number;
-    incrementalPriceWeight: number;
-    incrementalSpeedWeight: number;
-    incrementalLatencyWeight: number;
-  };
-  activeParameterSignals: {
-    totalParameterCheckpoints: number;
-    activeParameterCheckpoints: number;
-    developers: number;
-    chronologicalPredictions: number;
-    frontierLikePredictions: number;
-    activeMedianErrorX: number;
-    samePanelTotalMedianErrorX: number;
-    activeComparisonCi90: [number, number];
-    highSparsityPredictions: number;
-    transportCandidateMedianErrorX: number;
-    transportBaselineMedianErrorX: number;
-    transportCi90: [number, number];
-    predictedK3ActiveB: number;
-    k3ImpliedRatio: number;
-    targetSensitivities: {
-      model: string;
-      release_date: string;
-      aa_score: number;
-      predicted_active_b: number;
-      k3_anchored_total_t: number;
-      k2_k3_structural_midpoint_total_t: number;
-      status: string;
-    }[];
-    incrementalWeight: number;
-    estimatedTargetComputeModels: number;
-    disclosedTargetComputeModels: number;
-    computeIndependent: boolean;
-  };
-  activePriceSignals: {
-    exactActiveMatches: number;
-    disclosedActiveMatches: number;
-    denseConfigControls: number;
-    developers: number;
-    chronologicalPredictions: number;
-    predictionDevelopers: number;
-    highSparsityPredictions: number;
-    highSparsityDevelopers: number;
-    candidateMedianErrorX: number;
-    baselineMedianErrorX: number;
-    transportCi90: [number, number];
-    performanceGatePassed: boolean;
-    coverageGatePassed: boolean;
-    incrementalWeight: number;
-    prospectivePriceBacktest: boolean;
-    targetSensitivities: {
-      model: string;
-      release_date: string;
-      aa_score: number;
-      blended_price_usd_per_mtoken: number;
-      price_over_training_max: number;
-      predicted_active_date_price_b: number;
-      predicted_active_score_date_price_b: number;
-      k3_anchored_total_date_price_t: number;
-      k3_anchored_total_score_date_price_t: number;
-      status: string;
-    }[];
-  };
-  historicalPriceSignals: {
-    ledgerModels: number;
-    changePoints: number;
-    calibrationCheckpoints: number;
-    missingCalibrationAliases: number;
-    oneDayTotalRows: number;
-    oneDayActiveRows: number;
-    oneDayTotalPredictions: number;
-    oneDayTotalMedianErrorX: number;
-    oneDayDateOnlyMedianErrorX: number;
-    totalRobustAcrossWindows: boolean;
-    activeIncrementalRobust: boolean;
-    incrementalWeight: number;
-    targetSensitivities: {
-      model: string;
-      release_date: string;
-      openrouter_first_seen: string;
-      aa_score: number;
-      first_day_prompt_price_usd_per_mtoken: number;
-      first_day_completion_price_usd_per_mtoken: number;
-      first_day_blended_price_usd_per_mtoken: number;
-      predicted_active_date_historical_price_b: number;
-      k3_anchored_total_date_historical_price_t: number;
-      predicted_active_score_date_historical_price_b: number;
-      k3_anchored_total_score_date_historical_price_t: number;
-      status: string;
-    }[];
-  };
+  models: ScatterModel[];
   sources: Record<string, { name: string; sha256: string }>;
 };
-
-type PredictiveUncertainty = {
-  method: {
-    primary_cohort: string;
-    family_policy: string;
-    crowd_policy: string;
-  };
-  cohorts: Record<string, {
-    rows: number;
-    families: number;
-    chronological_coverage: Record<string, {
-      eligible_tests: number;
-      test_families: number;
-      observed_coverage: number | null;
-    }>;
-  }>;
-  targets: {
-    model_id: string;
-    center_t: number;
-    displayed_final_center_t: number;
-    calibration_rows: number;
-    calibration_families: number;
-    calibration_developers: number;
-    intervals: Record<string, {
-      multiplicative_factor: number;
-      low_t: number;
-      high_t: number;
-    }>;
-  }[];
-  decision: {
-    use_frontier_moe_reasoning_cohort: boolean;
-    change_central_forecasts: boolean;
-  };
-  source_files: Record<string, string>;
-};
-
 const data = rawData as Dataset;
-const uncertainty = rawUncertainty as PredictiveUncertainty;
-const factorClass: Record<FactorId, string> = {
-  aa: "factor-aa",
-  eci: "factor-eci",
-  price: "factor-price",
-  horizon: "factor-horizon",
-  compute: "factor-compute",
-  ikp: "factor-ikp",
-  crowd: "factor-crowd",
+const ONE_X = Object.fromEntries(data.factors.map((factor) => [factor.id, 1])) as Weights;
+const BASE_MIN_T = 1;
+const BASE_MAX_T = 7;
+const FACTOR_COLORS: Record<FactorId, string> = {
+  aa: "#00A5A6",
+  eci: "#6A3ECB",
+  price: "#C48A17",
+  horizon: "#E45C45",
+  compute: "#377FC4",
+  ikp: "#C84B8F",
+  crowd: "#5E8C42",
 };
 
-const formatT = (value: number) => `${value.toFixed(1)}T`;
-const formatPct = (value: number) => `${Math.min(100, Math.max(0, value)).toFixed(4)}%`;
-const BASE_AXIS_MAX_T = 5;
-const axisTicks = (maximum: number) => {
-  if (maximum === BASE_AXIS_MAX_T) return [0, 1.25, 2.5, 3.75, 5];
-  return [...new Set([0, maximum / 2, BASE_AXIS_MAX_T, maximum])].sort((a, b) => a - b);
-};
-
-function axisMaximum(peak: number) {
-  if (peak <= BASE_AXIS_MAX_T) return BASE_AXIS_MAX_T;
-  return peak * 1.06;
-}
-const formatDate = (value: string) =>
-  new Intl.DateTimeFormat("en", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }).format(
-    new Date(`${value}T00:00:00Z`),
+const clamp = (value: number, low: number, high: number) => Math.min(high, Math.max(low, value));
+const formatDate = (date: string) =>
+  new Intl.DateTimeFormat("en", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(
+    new Date(`${date}T00:00:00Z`),
   );
+const formatParameter = (valueT: number) => valueT >= 1 ? `${valueT.toFixed(1)}T` : `${(valueT * 1000).toFixed(0)}B`;
+const formatFactorRange = (range: readonly [number, number]) => `${range[0].toFixed(1)}–${range[1].toFixed(1)}T`;
+const formatMultiplier = (value: number) => `${Number(value.toPrecision(2))}x`;
+const formatChange = (valueT: number, baselineT: number) => {
+  const delta = (valueT / baselineT - 1) * 100;
+  if (Math.abs(delta) < .05) return null;
+  return `${delta > 0 ? "+" : ""}${delta.toFixed(1)}%`;
+};
+const changeTone = (valueT: number, baselineT: number) => {
+  const delta = (valueT / baselineT - 1) * 100;
+  if (delta > .05) return "positive";
+  if (delta < -.05) return "negative";
+  return "neutral";
+};
 
-function forecast(model: Model, weights: Weights) {
-  if (model.lockedAnchor) return model.disclosedT ?? model.currentFinalT;
-  const evidence = data.factors.filter((factor) => factor.id !== "crowd");
-  const availableEvidence = evidence.filter((factor) => model.factors[factor.id] != null && weights[factor.id] > 0);
-  const requestedEvidenceWeight = evidence.reduce((sum, factor) => sum + Math.max(0, weights[factor.id]), 0);
-  const availableEvidenceWeight = availableEvidence.reduce((sum, factor) => sum + weights[factor.id], 0);
-  const effective = availableEvidence.map((factor) => ({
-    factor,
-    weight: availableEvidenceWeight ? requestedEvidenceWeight * weights[factor.id] / availableEvidenceWeight : 0,
+function adaptiveMaximum(peak: number) {
+  if (peak <= BASE_MAX_T) return BASE_MAX_T;
+  return Math.max(BASE_MAX_T + .5, peak * 1.08);
+}
+
+function axisTicks(maximum: number) {
+  if (maximum === BASE_MAX_T) return [1, 2, 3, 4, 5, 6, 7];
+  const span = maximum - BASE_MIN_T;
+  const ticks = [BASE_MIN_T, BASE_MIN_T + span * .25, BASE_MIN_T + span * .5, BASE_MIN_T + span * .75, maximum];
+  if (!ticks.some((tick) => Math.abs(tick - BASE_MAX_T) < .01)) ticks.push(BASE_MAX_T);
+  return [...new Set(ticks)].sort((a, b) => a - b);
+}
+
+function forecast(model: ScatterModel, weights: Weights) {
+  if (model.lockedAnchor) return model.parameterT;
+  const evidenceIds = data.factors.filter((factor) => factor.id !== "crowd").map((factor) => factor.id);
+  const availableEvidence = evidenceIds.filter((id) => model.factors[id] != null && weights[id] > 0);
+  const requestedEvidenceWeight = evidenceIds.reduce((sum, id) => sum + Math.max(0, weights[id]), 0);
+  const availableEvidenceWeight = availableEvidence.reduce((sum, id) => sum + weights[id], 0);
+  const effective = availableEvidence.map((id) => ({
+    id,
+    weight: availableEvidenceWeight ? requestedEvidenceWeight * weights[id] / availableEvidenceWeight : 0,
   }));
-  const crowd = data.factors.find((factor) => factor.id === "crowd")!;
-  if (model.factors.crowd != null && weights.crowd > 0) effective.push({ factor: crowd, weight: weights.crowd });
+  if (model.factors.crowd != null && weights.crowd > 0) effective.push({ id: "crowd" as FactorId, weight: weights.crowd });
   const total = effective.reduce((sum, item) => sum + item.weight, 0);
   if (!total) return model.currentFinalT;
   return Math.exp(
-    effective.reduce((sum, item) => sum + (item.weight / total) * Math.log(model.factors[item.factor.id] as number), 0),
+    effective.reduce((sum, item) => sum + (item.weight / total) * Math.log(model.factors[item.id] as number), 0),
   );
 }
 
-function normalizedWeights(model: Model, weights: Weights) {
-  const evidence = data.factors.filter((factor) => factor.id !== "crowd");
-  const availableEvidence = evidence.filter((factor) => model.factors[factor.id] != null && weights[factor.id] > 0);
-  const requestedEvidenceWeight = evidence.reduce((sum, factor) => sum + Math.max(0, weights[factor.id]), 0);
-  const availableEvidenceWeight = availableEvidence.reduce((sum, factor) => sum + weights[factor.id], 0);
-  const raw = Object.fromEntries(data.factors.map((factor) => [factor.id, 0])) as Record<FactorId, number>;
-  for (const factor of availableEvidence) {
-    raw[factor.id] = availableEvidenceWeight ? requestedEvidenceWeight * weights[factor.id] / availableEvidenceWeight : 0;
+function effectiveWeights(model: ScatterModel, weights: Weights): Weights {
+  const result = Object.fromEntries(data.factors.map((factor) => [factor.id, 0])) as Weights;
+  const evidenceIds = data.factors.filter((factor) => factor.id !== "crowd").map((factor) => factor.id);
+  const availableEvidence = evidenceIds.filter((id) => model.factors[id] != null && weights[id] > 0);
+  const requestedEvidenceWeight = evidenceIds.reduce((sum, id) => sum + Math.max(0, weights[id]), 0);
+  const availableEvidenceWeight = availableEvidence.reduce((sum, id) => sum + weights[id], 0);
+  for (const id of availableEvidence) {
+    result[id] = availableEvidenceWeight ? requestedEvidenceWeight * weights[id] / availableEvidenceWeight : 0;
   }
-  if (model.factors.crowd != null && weights.crowd > 0) raw.crowd = weights.crowd;
-  const total = Object.values(raw).reduce((sum, value) => sum + value, 0);
-  return Object.fromEntries(data.factors.map((factor) => [factor.id, total ? raw[factor.id] / total : 0])) as Record<FactorId, number>;
+  if (model.factors.crowd != null && weights.crowd > 0) result.crowd = weights.crowd;
+  const total = Object.values(result).reduce((sum, value) => sum + value, 0);
+  for (const factor of data.factors) result[factor.id] = total ? result[factor.id] / total : 0;
+  return result;
+}
+
+function weightedQuantile(points: { value: number; weight: number }[], quantile: number) {
+  const sorted = [...points].sort((a, b) => a.value - b.value);
+  const total = sorted.reduce((sum, point) => sum + point.weight, 0);
+  if (!sorted.length || !total) return null;
+  const positioned = sorted.map((point, index) => {
+    const cumulative = sorted.slice(0, index + 1).reduce((sum, item) => sum + item.weight, 0);
+    return { ...point, position: (cumulative - point.weight / 2) / total };
+  });
+  if (quantile <= positioned[0].position) return positioned[0].value;
+  if (quantile >= positioned[positioned.length - 1].position) return positioned[positioned.length - 1].value;
+  const upperIndex = positioned.findIndex((point) => point.position >= quantile);
+  const lower = positioned[upperIndex - 1];
+  const upper = positioned[upperIndex];
+  const interpolation = (quantile - lower.position) / (upper.position - lower.position);
+  return Math.exp(Math.log(lower.value) + interpolation * (Math.log(upper.value) - Math.log(lower.value)));
+}
+
+function factorRange(model: ScatterModel, weights: Weights) {
+  const effective = effectiveWeights(model, weights);
+  const points = data.factors
+    .filter((factor) => effective[factor.id] > 0 && model.factors[factor.id] != null)
+    .map((factor) => ({ value: model.factors[factor.id] as number, weight: effective[factor.id] }));
+  const low = weightedQuantile(points, .1);
+  const high = weightedQuantile(points, .9);
+  return low != null && high != null ? [low, high] as const : [model.currentFinalT, model.currentFinalT] as const;
+}
+
+function ContributionList({ model, weights, compact = false }: { model: ScatterModel; weights: Weights; compact?: boolean }) {
+  const effective = effectiveWeights(model, weights);
+  const rows = data.factors
+    .map((factor) => ({ factor, value: model.factors[factor.id], weight: effective[factor.id] }))
+    .filter((row) => row.value != null && row.weight > 0);
+  return (
+    <div className={compact ? "contribution-list compact" : "contribution-list"}>
+      <div className="contribution-stack" aria-label="Effective evidence contribution weights">
+        {rows.map(({ factor, weight }) => (
+          <span key={factor.id} title={`${factor.label}: ${(weight * 100).toFixed(1)}%`} style={{ width: `${weight * 100}%`, background: FACTOR_COLORS[factor.id] }} />
+        ))}
+      </div>
+      <div className="contribution-rows">
+        {rows.map(({ factor, weight }) => (
+          <div className="contribution-row" key={factor.id}>
+            <span><i style={{ background: FACTOR_COLORS[factor.id] }} />{factor.shortLabel}</span>
+            <b>{(weight * 100).toFixed(1)}%</b>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default function Home() {
-  const [weights, setWeights] = useState<Weights>({ ...data.defaultWeights });
-  const [selectedId, setSelectedId] = useState(data.models[0].id);
-  const [showSpread, setShowSpread] = useState(true);
+  const [multipliers, setMultipliers] = useState<Weights>({ ...ONE_X });
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [activeOrganization, setActiveOrganization] = useState<string | null>(null);
+  const [openHelp, setOpenHelp] = useState<FactorId | null>(null);
+  const [railOpen, setRailOpen] = useState(false);
+  const [themeMode, setThemeMode] = useState<"system" | "light" | "dark">("system");
+  const [systemDark, setSystemDark] = useState(false);
+
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setSelectedId(null);
+      setRailOpen(false);
+      setOpenHelp(null);
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
+
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-color-scheme: dark)");
+    const update = () => setSystemDark(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
+    if (themeMode === "system") delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = themeMode;
+  }, [themeMode]);
+
+  const weights = useMemo(
+    () => Object.fromEntries(data.factors.map((factor) => [factor.id, data.defaultWeights[factor.id] * multipliers[factor.id]])) as Weights,
+    [multipliers],
+  );
 
   const results = useMemo(
-    () =>
-      data.models
-        .map((model) => ({ model, value: forecast(model, weights), delta: forecast(model, weights) / model.currentFinalT - 1 }))
-        .sort((a, b) => b.value - a.value),
+    () => data.models.map((model) => ({ model, value: forecast(model, weights) })),
     [weights],
   );
-  const selected = data.models.find((model) => model.id === selectedId) ?? data.models[0];
-  const selectedResult = results.find((result) => result.model.id === selected.id)!;
-  const selectedUncertainty = uncertainty.targets.find((row) => row.model_id === selected.id);
-  const activeSensitivity = data.activeParameterSignals.targetSensitivities.find((row) => row.model === selected.name);
-  const activePriceSensitivity = data.activePriceSignals.targetSensitivities.find((row) => row.model === selected.name);
-  const historicalPriceSensitivity = data.historicalPriceSignals.targetSensitivities.find((row) => row.model === selected.name);
-  const selectedTemporalName = selected.name === "Claude Opus 4.7 / 4.8 shared base" ? "Claude Opus 4.8" : selected.name;
-  const throughputStability = data.openRouterTemporalSignals.focalModels.find((row) => row.model === selectedTemporalName);
-  const effective = normalizedWeights(selected, weights);
-  const peak = Math.max(
-    ...results.map((result) => result.value),
-    ...data.models.map((model) => model.currentFinalT),
-  );
-  const maximum = axisMaximum(peak);
-  const pastBaseline = maximum > BASE_AXIS_MAX_T;
-  const globalTotal = Object.values(weights).reduce((sum, value) => sum + value, 0);
-  const activePreset = data.presets.find((preset) =>
-    data.factors.every((factor) => Math.abs(preset.weights[factor.id] - weights[factor.id]) < 0.0001),
-  )?.id;
+  const stableRows = [...results].sort((a, b) => b.model.currentFinalT - a.model.currentFinalT);
+  const peak = Math.max(...results.flatMap(({ model, value }) => [value, model.publicEstimateT ?? value]));
+  const maximum = adaptiveMaximum(peak);
+  const ticks = axisTicks(maximum);
+  const pastBaseline = maximum > BASE_MAX_T;
+  const selected = selectedId ? data.models.find((model) => model.id === selectedId) ?? null : null;
+  const selectedFactorRange = selected && !selected.lockedAnchor ? factorRange(selected, weights) : null;
+  const focused = data.models.find((model) => model.id === (hoveredId ?? selectedId)) ?? null;
+  const focusedValue = focused ? forecast(focused, weights) : null;
+  const colors = Object.fromEntries(data.organizationGroups.map((organization) => [organization.id, organization.color]));
+  const axisSpan = maximum - BASE_MIN_T;
+  const position = (value: number) => `${clamp((value - BASE_MIN_T) / axisSpan, 0, 1) * 100}%`;
+  const width = (low: number, high: number) => `${Math.max(0, clamp(high, BASE_MIN_T, maximum) - clamp(low, BASE_MIN_T, maximum)) / axisSpan * 100}%`;
+  const focusId = hoveredId ?? selectedId;
+  const darkMode = themeMode === "dark" || (themeMode === "system" && systemDark);
 
-  const setWeight = (factor: FactorId, value: number) => setWeights((current) => ({ ...current, [factor]: value }));
+  const setMultiplier = (factor: FactorId, value: number) => setMultipliers((current) => ({ ...current, [factor]: value }));
 
   return (
-    <main>
-      <header className="masthead">
-        <div className="navline">
-          <a className="brand" href="#top" aria-label="Frontier Parameter Lab home">
-            <span className="brand-mark">FP</span>
-            <span>Frontier Parameter Lab</span>
-          </a>
-          <div className="sync-status"><span className="sync-dot" />Pipeline synced · {formatDate(data.snapshotDate)}</div>
-        </div>
-        <div className="hero" id="top">
-          <div>
-            <p className="eyebrow">Interactive posterior explorer</p>
-            <h1>Change the evidence.<br />Watch the frontier move.</h1>
-          </div>
-          <div className="hero-copy">
-            <p>Reweight seven audited, partly correlated views of model scale and see the implied total parameter counts update instantly.</p>
-            <div className="hero-metrics">
-              <span><strong>{data.models.length}</strong> frontier bases</span>
-              <span><strong>{data.humanForecasts.activeRecords}</strong> human forecasts</span>
-              <span><strong>{data.humanForecasts.contributors}</strong> contributors</span>
-              <span><strong>{data.operationalSignals.epochCalibrationCheckpoints}</strong> price checks</span>
-              <span><strong>{data.openRouterTemporalSignals.immutableSnapshots}</strong> OR snapshots</span>
-              <span><strong>{(100 * data.openRouterOfficialSignals.officialPriceExactShare).toFixed(1)}%</strong> OR price exact</span>
-              <span><strong>{data.eciReproductionSignals.reproducedModels}</strong> reproduced ECI</span>
-              <span><strong>{data.eciFitSignals.historicalSnapshots}</strong> archived ECI vintages</span>
-              <span><strong>{data.eciFitSignals.firstObservedTargets}</strong> vintage fit tests</span>
-              <span><strong>{data.componentSignals.activeParameterCheckpoints}</strong> component checks</span>
-              <span><strong>{data.componentSignals.multivariateOuterPredictions}</strong> nested ECI folds</span>
-              <span><strong>{data.posttrainingSignals.measuredBases}</strong> lineage bases</span>
-              <span><strong>{data.aaExpansionSignals.expandedCheckpoints}</strong> AA checks</span>
-              <span><strong>{data.aaInferenceSignals.rawModels}</strong> AA records</span>
-              <span><strong>{data.aaOperationalSignals.exactOpenRouterOverlap}</strong> cross-source checks</span>
-              <span><strong>{data.activeParameterSignals.activeParameterCheckpoints}</strong> active-param checks</span>
-              <span><strong>{data.activePriceSignals.exactActiveMatches}</strong> active-price labels</span>
-              <span><strong>{data.historicalPriceSignals.changePoints.toLocaleString("en-US")}</strong> dated prices</span>
-              <span><strong>{data.noCotDateSignals.exactDates}/{data.noCotDateSignals.models}</strong> exact no-CoT dates</span>
-              <span><strong>{data.noCotArchitectureSignals.models}</strong> architecture checks</span>
-              <span><strong>{data.frontierPrimarySignals.directSolMinutes.toFixed(1)} min</strong> direct Sol no-CoT</span>
-              <span><strong>{data.ikpSignals.overlapModels}</strong> IKP overlap tests</span>
-              <span><strong>{data.ikpSignals.conditionalGpqaModels}</strong> conditional IKP tests</span>
-              <span><strong>{formatT(data.ikpSignals.fableStrictT)}</strong> strict IKP Fable</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <section className="lab-shell" aria-label="Weighting laboratory">
-        <aside className="control-panel">
-          <div className="panel-heading">
+    <main className="site-shell">
+      <section className={railOpen ? "chart-layout" : "chart-layout rail-collapsed"} id="top">
+        <div className="plot-panel">
+          <div className="plot-header">
             <div>
-              <p className="section-kicker">01 · Evidence mix</p>
-              <h2>Weight controls</h2>
+              <h1>{data.title}</h1>
+              <p className="eyebrow"><a href="https://twitter.com/anpaure" target="_blank" rel="noreferrer">made by @anpaure</a></p>
             </div>
-            <button className="text-button" onClick={() => setWeights({ ...data.defaultWeights })}>Reset</button>
+            <div className="header-actions">
+              <button className="rail-toggle theme-toggle" onClick={() => setThemeMode(darkMode ? "light" : "dark")} aria-label={darkMode ? "Use light mode" : "Use dark mode"} title={darkMode ? "Use light mode" : "Use dark mode"} aria-pressed={darkMode}><span aria-hidden="true">{darkMode ? "☀" : "☾"}</span></button>
+              <button className={`rail-toggle floating${railOpen ? " active" : ""}`} onClick={() => setRailOpen((open) => !open)} aria-label={railOpen ? "Hide controls" : "Show controls"} title={railOpen ? "Hide controls" : "Show controls"} aria-expanded={railOpen} aria-controls="evidence-controls"><i /></button>
+            </div>
           </div>
 
-          <div className="presets" aria-label="Weight presets">
-            {data.presets.map((preset) => (
-              <button
-                key={preset.id}
-                className={activePreset === preset.id ? "preset active" : "preset"}
-                onClick={() => setWeights({ ...preset.weights })}
-              >
-                {preset.label}
-              </button>
-            ))}
-          </div>
+          <div className="forest-chart" data-model-count={data.counts.models} data-axis-min={BASE_MIN_T} data-axis-max={maximum} data-past-baseline={pastBaseline}>
+            <div className="forest-axis">
+              <span />
+              <div>
+                <strong>Implied total parameters</strong>
+                {ticks.map((tick, index) => {
+                  const internal = index > 0 && index < ticks.length - 1;
+                  return <i className={`${pastBaseline && tick === BASE_MAX_T ? "baseline" : ""}${internal ? " mobile-internal" : ""}${internal && index % 2 === 1 ? " mobile-optional" : ""}${index === Math.floor((ticks.length - 1) / 2) ? " mobile-midpoint" : ""}`} key={tick} style={{ left: position(tick) }}>{formatParameter(tick)}</i>;
+                })}
+              </div>
+              <span />
+            </div>
 
-          <div className="sliders">
-            {data.factors.map((factor) => {
-              const normalized = globalTotal ? (weights[factor.id] / globalTotal) * 100 : 0;
-              return (
-                <label className="slider-row" key={factor.id}>
-                  <span className="slider-label">
-                    <span><i className={`factor-dot ${factorClass[factor.id]}`} />{factor.label}</span>
-                    <strong>{normalized.toFixed(1)}%</strong>
-                  </span>
-                  <span className="slider-input-row">
-                    <input
-                      aria-label={`${factor.label} relative weight`}
-                      type="range"
-                      min="0"
-                      max="100"
-                      step="0.5"
-                      value={weights[factor.id]}
-                      onChange={(event) => setWeight(factor.id, Number(event.target.value))}
-                    />
-                    <input
-                      className="weight-number"
-                      aria-label={`${factor.label} weight value`}
-                      type="number"
-                      min="0"
-                      max="100"
-                      step="0.5"
-                      value={weights[factor.id]}
-                      onChange={(event) => setWeight(factor.id, Math.max(0, Number(event.target.value)))}
-                    />
-                  </span>
-                  <small>{factor.description}</small>
-                </label>
-              );
-            })}
-          </div>
-          {!globalTotal && <p className="warning">Set at least one factor above zero. Current workbook values are shown meanwhile.</p>}
-          <p className="control-note">Unavailable factors are omitted model by model; the remaining weights renormalize automatically.</p>
-        </aside>
+            <div className="forest-rows">
+              {stableRows.map(({ model, value }, index) => {
+                const [low, high] = factorRange(model, weights);
+                const change = formatChange(value, model.currentFinalT);
+                const color = colors[model.organizationGroup] ?? "#A75237";
+                const highlighted = focusId === model.id;
+                const dimmed = (focusId != null && !highlighted) || (activeOrganization != null && model.organizationGroup !== activeOrganization);
+                return (
+                  <button
+                    className={`forest-row${index % 2 ? " striped" : ""}${highlighted ? " highlighted" : ""}${dimmed ? " dimmed" : ""}`}
+                    key={model.id}
+                    onFocus={() => setHoveredId(model.id)}
+                    onBlur={() => setHoveredId(null)}
+                    onClick={() => setSelectedId((current) => current === model.id ? null : model.id)}
+                    aria-pressed={selectedId === model.id}
+                    aria-label={`Inspect ${model.name}, model estimate ${formatParameter(value)}${model.publicEstimateT != null ? `, public estimate ${formatParameter(model.publicEstimateT)}` : ""}`}
+                  >
+                    <span className="forest-label"><strong>{model.shortName}</strong></span>
+                    <span className="forest-track">
+                      {ticks.map((tick) => <i className={`row-grid${pastBaseline && tick === BASE_MAX_T ? " baseline" : ""}`} key={tick} style={{ left: position(tick) }} />)}
+                      {!model.lockedAnchor && <span className="factor-whisker" style={{ left: position(low), width: width(low, high) }} title={`Weighted factor range ${formatFactorRange([low, high])}`}><i /><i /></span>}
+                      {model.publicEstimateT != null && <span className="public-marker" style={{ left: position(model.publicEstimateT) }} title={`Public estimate ${formatParameter(model.publicEstimateT)}`} onMouseEnter={() => setHoveredId(model.id)} onMouseLeave={() => setHoveredId(null)} />}
+                      <span className="scenario-marker" style={{ left: position(value), background: color }} title={`Model estimate ${formatParameter(value)}`} onMouseEnter={() => setHoveredId(model.id)} onMouseLeave={() => setHoveredId(null)} />
+                    </span>
+                    <span className="forest-value"><strong>{formatParameter(value)}</strong>{model.lockedAnchor ? <small>disclosed</small> : change && <small className={changeTone(value, model.currentFinalT)}>{change}</small>}</span>
+                  </button>
+                );
+              })}
+            </div>
 
-        <div className="chart-panel">
-          <div className="panel-heading chart-heading">
-            <div>
-              <p className="section-kicker">02 · Live output</p>
-              <h2>Implied total parameters</h2>
+            <div className="forest-legend">
+              <span><i className="legend-circle" />Public estimate</span>
+              <span><i className="legend-diamond" />Model estimate</span>
+              <span><i className="legend-line" />Weighted factor range</span>
             </div>
-            <div className="chart-tools">
-              <label className="toggle">
-                <input type="checkbox" checked={showSpread} onChange={(event) => setShowSpread(event.target.checked)} />
-                <span />Factor spread
-              </label>
-            </div>
-          </div>
-          <div className="axis" data-axis-max={maximum} data-past-baseline={pastBaseline}>
-            {axisTicks(maximum).map((tick, index, ticks) => (
-              <span
-                key={tick}
-                className={`${index === 0 ? "axis-first " : ""}${index === ticks.length - 1 ? "axis-last " : ""}${pastBaseline && tick === BASE_AXIS_MAX_T ? "baseline-tick" : ""}`.trim()}
-                style={{ left: formatPct((tick / maximum) * 100) }}
-              >
-                {formatT(tick)}
-                {pastBaseline && tick === BASE_AXIS_MAX_T && <small>baseline</small>}
-              </span>
-            ))}
-          </div>
-          <div className="bars">
-            {results.map(({ model, value, delta }) => {
-              const availableValues = Object.values(model.factors).filter((item): item is number => item != null);
-              const low = Math.min(...availableValues);
-              const high = Math.max(...availableValues);
-              const clippedLow = Math.min(low, maximum);
-              const clippedHigh = Math.min(high, maximum);
-              const displayedDelta = Math.abs(delta) < 0.0005 ? 0 : delta;
-              return (
-                <button
-                  className={selected.id === model.id ? "model-bar selected" : "model-bar"}
-                  key={model.id}
-                  onClick={() => setSelectedId(model.id)}
-                  aria-label={`Inspect ${model.name}, ${formatT(value)}`}
-                >
-                  <span className="bar-label"><strong>{model.shortName}</strong><small>{model.provider}</small></span>
-                  <span className="bar-stage">
-                    {pastBaseline && <span className="normal-ceiling" style={{ left: formatPct((BASE_AXIS_MAX_T / maximum) * 100) }} />}
-                    {showSpread && !model.lockedAnchor && (
-                      <span
-                        className={high > maximum ? "factor-spread overflowing" : "factor-spread"}
-                        style={{ left: formatPct((clippedLow / maximum) * 100), width: formatPct(((clippedHigh - clippedLow) / maximum) * 100) }}
-                        title={high > maximum ? `Factor range extends to ${formatT(high)}` : undefined}
-                      />
-                    )}
-                    <span className="current-marker" style={{ left: formatPct((model.currentFinalT / maximum) * 100) }} />
-                    <span className="bar-fill" style={{ width: formatPct((value / maximum) * 100) }} />
-                    {value > BASE_AXIS_MAX_T && (
-                      <span
-                        className="bar-overflow"
-                        style={{
-                          left: formatPct((BASE_AXIS_MAX_T / maximum) * 100),
-                          width: formatPct(((value - BASE_AXIS_MAX_T) / maximum) * 100),
-                        }}
-                      />
-                    )}
-                  </span>
-                  <span className="bar-value">
-                    <strong>{formatT(value)}</strong>
-                    {model.lockedAnchor ? <em className="anchor-tag">disclosed</em> : <em className={displayedDelta === 0 ? "flat" : displayedDelta > 0 ? "up" : "down"}>{displayedDelta > 0 ? "+" : ""}{(displayedDelta * 100).toFixed(1)}%</em>}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-          <div className="chart-legend">
-            <span><i className="legend-bar" />Scenario</span>
-            <span><i className="legend-mark" />Published mix</span>
-            <span><i className="legend-range" />Factor range</span>
-          </div>
-        </div>
-      </section>
 
-      <section className="model-inspector" aria-live="polite">
-        <div className="inspector-intro">
-          <p className="section-kicker">03 · Selected model</p>
-          <div className="selected-title">
-            <div>
-              <h2>{selected.name}</h2>
-              <p>{selected.provider} · released {formatDate(selected.releaseDate)}</p>
-            </div>
-            <div className="selected-forecast">
-              <span>Scenario forecast</span>
-              <strong>{formatT(selectedResult.value)}</strong>
-              <small>Published mix {formatT(selected.currentFinalT)}</small>
-            </div>
-          </div>
-          <p className="model-note">{selected.methodNote}</p>
-          {selectedUncertainty && (
-            <div className="active-transport-callout">
-              <span>Held-out predictive uncertainty · evidence center</span>
-              <strong>80%: {formatT(selectedUncertainty.intervals["80"].low_t)}–{formatT(selectedUncertainty.intervals["80"].high_t)}</strong>
-              <small>Descriptive 50% band: {formatT(selectedUncertainty.intervals["50"].low_t)}–{formatT(selectedUncertainty.intervals["50"].high_t)} · it undercovered in sequential backtests · {selectedUncertainty.calibration_developers} independent frontier developers · crowd does not narrow the band</small>
-            </div>
-          )}
-          {selected.name === "GPT-5.6 Sol" && (
-            <div className="active-transport-callout">
-              <span>Official no-CoT measurement · 0% incremental weight</span>
-              <strong>{data.frontierPrimarySignals.directSolMinutes.toFixed(1)} min</strong>
-              <small>{data.frontierPrimarySignals.heldoutPredictions} chronological developer-holdouts · parameter mappings span {formatT(data.frontierPrimarySignals.modelLevelSolT)}–{formatT(data.frontierPrimarySignals.rebasedPooledSolT)}</small>
-            </div>
-          )}
-          {selected.name === "Claude Fable 5" && data.frontierPrimarySignals.fableMythosSharedWeights && (
-            <div className="active-transport-callout">
-              <span>Official parameter identity</span>
-              <strong>Fable = Mythos weights</strong>
-              <small>Opus 4.8 fallback is serving behavior, not another base model.</small>
-            </div>
-          )}
-          {selected.name === "Claude Opus 5" && selected.eciCi90 && (
-            <div className="active-transport-callout">
-              <span>New-base regression inputs</span>
-              <strong>AA {selected.aaScore?.toFixed(1)} · ECI {selected.eciScore?.toFixed(1)}</strong>
-              <small>ECI 90% CI {selected.eciCi90[0].toFixed(1)}–{selected.eciCi90[1].toFixed(1)} · AA {selected.aaConfiguration?.replace(/_/g, " ")} with {selected.aaFallbackModel} fallback · parameter count undisclosed · no crowd, IKP, No-CoT, or METR model-level measurement</small>
-            </div>
-          )}
-          {activeSensitivity && (
-            <div className="active-transport-callout">
-              <span>Architecture sensitivity · 0% live weight</span>
-              <strong>{formatT(activeSensitivity.k3_anchored_total_t)}</strong>
-              <small>K3-anchored active-parameter transport · predicted active {activeSensitivity.predicted_active_b.toFixed(1)}B</small>
-            </div>
-          )}
-          {activePriceSensitivity && (
-            <div className="active-transport-callout">
-              <span>API-price active-capacity sensitivity · 0% live weight</span>
-              <strong>{formatT(activePriceSensitivity.k3_anchored_total_score_date_price_t)}</strong>
-              <small>Current-price diagnostic · target price is {activePriceSensitivity.price_over_training_max.toFixed(1)}× the common training maximum</small>
-            </div>
-          )}
-          {historicalPriceSensitivity && (
-            <div className="active-transport-callout">
-              <span>Launch-price sensitivity · 0% incremental weight</span>
-              <strong>{formatT(historicalPriceSensitivity.k3_anchored_total_score_date_historical_price_t)}</strong>
-              <small>First observed day · ${historicalPriceSensitivity.first_day_prompt_price_usd_per_mtoken.toFixed(1)} input / ${historicalPriceSensitivity.first_day_completion_price_usd_per_mtoken.toFixed(1)} output per million tokens</small>
-            </div>
-          )}
-          {throughputStability && (
-            <div className="active-transport-callout">
-              <span>Default-tier serving stability · 0% tok/s weight</span>
-              <strong>{throughputStability.within_week_median_tps.toFixed(1)} tok/s</strong>
-              <small>{throughputStability.within_week_dates} daily points · {throughputStability.within_week_max_over_min.toFixed(1)}× within-week max/min · {throughputStability.refreshes} immutable refreshes</small>
-            </div>
-          )}
-          {selected.lockedAnchor && <div className="anchor-callout"><strong>Fixed disclosed anchor.</strong> Weight changes do not override a public total parameter count.</div>}
-        </div>
-        <div className="factor-grid">
-          {data.factors.map((factor) => {
-            const value = selected.factors[factor.id];
-            return (
-              <article className="factor-card" key={factor.id}>
-                <div><i className={`factor-dot ${factorClass[factor.id]}`} /><span>{factor.shortLabel}</span></div>
-                <strong>{value == null ? "—" : formatT(value)}</strong>
-                <small>{value == null ? (factor.id === "crowd" && selected.crowd.n > 0 ? `${selected.crowd.n} forecast${selected.crowd.n === 1 ? "" : "s"} · not pooled` : "No model-level observation") : `${(effective[factor.id] * 100).toFixed(1)}% effective weight`}</small>
+            {selected && (
+              <article className="evidence-card" role="dialog" aria-modal="false" aria-label={`${selected.name} evidence contribution`}>
+                <div className="card-header"><div><p>{selected.organization}</p><h2>{selected.name}</h2></div><button onClick={() => setSelectedId(null)} aria-label="Close model details">×</button></div>
+                <dl className="summary-grid">
+                  <div><dt>Model estimate</dt><dd>{formatParameter(forecast(selected, weights))} <small>{selected.parameterKind}</small></dd></div>
+                  {selected.publicEstimateT != null && <div><dt>Public estimate</dt><dd>{formatParameter(selected.publicEstimateT)}</dd></div>}
+                  {selectedFactorRange && <div><dt>Weighted factor range</dt><dd>{formatFactorRange(selectedFactorRange)}</dd></div>}
+                  <div><dt>Release date</dt><dd>{formatDate(selected.releaseDate)}</dd></div>
+                  <div><dt>Architecture</dt><dd>MoE</dd></div>
+                  {selected.signals.activeParametersB != null && <div><dt>Active parameters</dt><dd>{formatParameter(selected.signals.activeParametersB / 1000)}</dd></div>}
+                </dl>
+                {!selected.lockedAnchor && <div className="card-section"><div className="section-title"><h3>Evidence weights</h3></div><ContributionList model={selected} weights={weights} /></div>}
               </article>
-            );
-          })}
-        </div>
-        {selected.crowd.n > 0 && (
-          <div className="crowd-strip">
-            <div><span>Human pool</span><strong>n={selected.crowd.n}</strong></div>
-            <div className="forecast-chips">
-              {selected.crowd.contributors.map((contributor, index) => <span key={`${contributor}-${index}`}>{contributor} <b>{selected.crowd.forecasts[index]}</b></span>)}
-            </div>
+            )}
           </div>
+        </div>
+
+        {railOpen && (
+          <aside className="control-rail" id="evidence-controls" aria-label="Chart controls">
+            <div className="rail-head"><button className="rail-close" onClick={() => setRailOpen(false)} aria-label="Close controls">×</button></div>
+            <section className="rail-section">
+              <h2>Developer</h2>
+              <div className="organization-legend">
+                {data.organizationGroups.map((organization) => {
+                  const count = data.models.filter((model) => model.organizationGroup === organization.id).length;
+                  return (
+                    <button className={activeOrganization && activeOrganization !== organization.id ? "inactive" : ""} key={organization.id} onClick={() => setActiveOrganization((current) => current === organization.id ? null : organization.id)}>
+                      <i style={{ background: organization.color }} /><span>{organization.id}</span><small>{count}</small>
+                    </button>
+                  );
+                })}
+              </div>
+            </section>
+            <section className="rail-section weights-section">
+              <div className="weights-heading"><h2>Evidence weights</h2><button onClick={() => setMultipliers({ ...ONE_X })}>Reset</button></div>
+              <div className="weight-sliders">
+                {data.factors.filter((factor) => data.defaultWeights[factor.id] > 0).map((factor) => {
+                  const exponent = Math.log10(multipliers[factor.id]);
+                  const progress = (exponent + 1) * 50;
+                  return (
+                    <div className="weight-control" key={factor.id}>
+                      <div className="weight-label"><b>{factor.shortLabel}</b><button type="button" aria-label={`Explain ${factor.label}`} aria-expanded={openHelp === factor.id} aria-controls={`factor-help-${factor.id}`} onClick={() => setOpenHelp((current) => current === factor.id ? null : factor.id)}>?</button><em>{formatMultiplier(multipliers[factor.id])}</em></div>
+                      {openHelp === factor.id && <p className="factor-explanation" id={`factor-help-${factor.id}`}>{factor.description}</p>}
+                      <input aria-label={`${factor.label} weight multiplier`} aria-valuetext={formatMultiplier(multipliers[factor.id])} type="range" min="-1" max="1" step="0.01" value={exponent} style={{ "--factor-color": FACTOR_COLORS[factor.id], "--factor-progress": `${progress}%` } as CSSProperties} onChange={(event) => setMultiplier(factor.id, Math.pow(10, Number(event.target.value)))} />
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+            {focused && focusedValue != null && <section className="rail-section rail-preview" aria-live="polite"><p>Highlighted model</p><h2>{focused.shortName}</h2><strong>{formatParameter(focusedValue)}</strong>{!focused.lockedAnchor && <ContributionList model={focused} weights={weights} compact />}</section>}
+          </aside>
         )}
       </section>
-
-      <section className="method-section">
-        <div>
-          <p className="section-kicker">04 · What the controls mean</p>
-          <h2>A geometric ensemble, not a parameter census.</h2>
-        </div>
-        <div className="method-copy">
-          <p>{data.method.combination}</p>
-          <p>{data.method.anchors}</p>
-          <p>{data.method.currentMix}</p>
-          <p>{data.method.ikp}</p>
-          <p>{data.method.noCotDates}</p>
-          <p>{data.method.noCotArchitecture}</p>
-          <p>{data.method.primaryEvidence}</p>
-          <p>{data.method.metrPrimary}</p>
-          <p>{data.method.operational}</p>
-          <p>{data.method.operationalTemporal}</p>
-          <p>{data.method.eciReproduction}</p>
-          <p>{data.method.eciFit}</p>
-          <p>{data.method.activePrice}</p>
-          <p>{data.method.historicalPrice}</p>
-          <p>{data.method.components}</p>
-          <p>{data.method.posttraining}</p>
-          <p>{data.method.aaExpansion}</p>
-          <p>{data.method.aaInference}</p>
-          <p>{data.method.activeTransport}</p>
-          <p>{data.method.computeDependency}</p>
-        </div>
+      <section className="methodology-note" aria-labelledby="methodology-title">
+        <h2 id="methodology-title">Methodology</h2>
+        <p>The Artificial Analysis Intelligence Index, Epoch Capabilities Index, and METR Time Horizon were retained for their audited capability and time-horizon signal, API price and compute enter only as lower-weight correlated structural checks, and public estimates remain a separate judgment layer.</p>
       </section>
-
-      <footer>
-        <div><span className="brand-mark">FP</span><strong>Frontier Parameter Lab</strong></div>
-        <p>Generated directly from the audited forecast pipeline. Values are system-equivalent estimates unless marked disclosed.</p>
-        <p className="hash">Ledger {data.sources.forecastLedger.sha256.slice(0, 10)} · Workbook {data.sources.finalWorkbook.sha256.slice(0, 10)} · Opus 5 evidence {data.sources.claudeOpus5Evidence.sha256.slice(0, 10)} · IKP {data.sources.ikpAudit.sha256.slice(0, 10)} · IKP conditional {data.sources.ikpConditionalAudit.sha256.slice(0, 10)} · Frontier primary {data.sources.frontierPrimaryAudit.sha256.slice(0, 10)} · METR primary {data.sources.metrPrimaryAudit.sha256.slice(0, 10)} · No-CoT dates {data.sources.noCotExactDateAudit.sha256.slice(0, 10)} · No-CoT architecture {data.sources.noCotArchitectureAudit.sha256.slice(0, 10)} · OpenRouter {data.sources.openRouterAudit.sha256.slice(0, 10)} · OR official prices {data.sources.openRouterOfficialAudit.sha256.slice(0, 10)} · OR temporal {data.sources.openRouterTemporalAudit.sha256.slice(0, 10)} · OR history {data.sources.openRouterHistoryManifest.sha256.slice(0, 10)} · OR dated prices {data.sources.openRouterHistoricalPriceAudit.sha256.slice(0, 10)} · HF configs {data.sources.hfArchitectureAudit.sha256.slice(0, 10)} · ECI reproduction {data.sources.eciReproductionAudit.sha256.slice(0, 10)} · ECI vintages {data.sources.eciFitTournament.sha256.slice(0, 10)} · Active price {data.sources.openRouterActivePriceAudit.sha256.slice(0, 10)} · ECI components {data.sources.eciComponentAudit.sha256.slice(0, 10)} · ECI multivariate {data.sources.eciMultivariateAudit.sha256.slice(0, 10)} · Lineage {data.sources.posttrainingLineageAudit.sha256.slice(0, 10)} · AA detailed {data.sources.aaInferenceAudit.sha256.slice(0, 10)} · AA operations {data.sources.aaOperationalAudit.sha256.slice(0, 10)} · Active transport {data.sources.activeTransportAudit.sha256.slice(0, 10)}</p>
-      </footer>
     </main>
   );
 }
