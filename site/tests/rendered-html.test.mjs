@@ -24,7 +24,7 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(html, /<title>Frontier model size estimates<\/title>/i);
   assert.doesNotMatch(html, /Frontier Parameter Lab/);
   assert.match(html, /evidence-backed parameter-count estimates/i);
-  assert.match(html, /og-v3\.png/);
+  assert.match(html, /og-v4\.png/);
   assert.match(layoutSource, /icons: \{ icon: \[\{ url: `\$\{publicUrl\}favicon\.svg`/);
   assert.match(html, /Frontier model size estimates/);
   assert.match(html, /href="https:\/\/twitter\.com\/anpaure"/);

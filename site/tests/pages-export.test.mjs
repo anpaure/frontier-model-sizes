@@ -17,6 +17,8 @@ test("GitHub Pages export is complete and repository-path aware", async () => {
   assert.doesNotMatch(html, /(?:href=|url\()["']?\/assets\//);
   assert.doesNotMatch(rsc, /(?:href|src|url)[^\n]*["'(]\/assets\//);
 
-  await access(new URL("og-v3.png", output));
+  const socialPreview = await readFile(new URL("og-v4.png", output));
+  assert.equal(socialPreview.readUInt32BE(16), 1200);
+  assert.equal(socialPreview.readUInt32BE(20), 630);
   await access(new URL(".nojekyll", output));
 });
