@@ -106,7 +106,7 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(styleSource, /:root\[data-theme="dark"\]/);
   assert.match(styleSource, /\.forest-value \{[^}]+align-items: center/);
   assert.match(styleSource, /\.plot-header \{[^}]+min-height: 88px/);
-  assert.match(styleSource, /\.repo-link \{[^}]+transform: translateX\(-2px\)/);
+  assert.match(styleSource, /\.repo-link \{[^}]+transform: translateX\(-1px\)/);
   assert.match(styleSource, /\.public-marker \{ width: 14px; height: 14px/);
   assert.match(styleSource, /\.scenario-marker \{ width: 14px; height: 14px/);
   assert.match(styleSource, /\.forest-axis i \{[^}]+font: 700 15px\/1/);
