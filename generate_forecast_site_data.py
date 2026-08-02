@@ -419,12 +419,12 @@ def main():
         }
         model = {
             "id": name.lower().replace(" / ", "-").replace(" ", "-").replace(".", "").replace("/", "-"),
-            "name": name,
+            "name": "Claude Opus 4.8" if name == "Claude Opus 4.7 / 4.8 shared base" else name,
             "shortName": {
                 "Claude Fable 5": "Claude Fable 5",
                 "GPT-5.6 Sol": "GPT-5.6 Sol",
                 OPUS_5_MODEL: "Claude Opus 5",
-                "Claude Opus 4.7 / 4.8 shared base": "Opus 4.7/4.8",
+                "Claude Opus 4.7 / 4.8 shared base": "Claude Opus 4.8",
             }.get(name, name),
             "provider": frontier_row["Provider"],
             "releaseDate": frontier_row["Release"],

@@ -291,8 +291,8 @@
     },
     {
       "id": "claude-opus-47-48-shared-base",
-      "name": "Claude Opus 4.7 / 4.8 shared base",
-      "shortName": "Opus 4.7/4.8",
+      "name": "Claude Opus 4.8",
+      "shortName": "Claude Opus 4.8",
       "provider": "Anthropic",
       "releaseDate": "2026-05-28",
       "aaScore": 55,

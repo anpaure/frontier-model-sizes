@@ -64,6 +64,8 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.doesNotMatch(html, /0\.0%/);
   assert.match(html, /Claude Fable 5/);
   assert.match(html, /Claude Opus 5/);
+  assert.match(html, /Claude Opus 4\.8/);
+  assert.doesNotMatch(html, /shared base/i);
   assert.match(html, /GPT-5\.6 Sol/);
   assert.equal(scatter.models.length, 10);
   assert.equal(new Set(scatter.models.map((model) => model.id)).size, 10);
@@ -78,6 +80,7 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.ok(scatter.models.every((model) => model.organizationGroup));
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
   assert.match(pageSource, /<h3>Evidence weights<\/h3>/);
+  assert.match(pageSource, /CONTRIBUTION_LABELS: Partial<Record<FactorId, string>> = \{ aa: "AA Index" \}/);
   assert.match(pageSource, /className="contribution-rows"/);
   assert.match(pageSource, /!selected\.lockedAnchor && <div className="card-section">/);
   assert.match(pageSource, /!focused\.lockedAnchor && <ContributionList/);
@@ -88,26 +91,48 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(pageSource, /window\.matchMedia\("\(prefers-color-scheme: dark\)"\)/);
   assert.match(pageSource, /Use dark mode/);
   assert.match(pageSource, /className="rail-close"/);
+  assert.match(pageSource, /const hasExplanation = factor\.id !== "aa" && factor\.id !== "eci"/);
+  assert.match(pageSource, /className="help-spacer"/);
   assert.match(pageSource, /aria-label="Close controls"/);
   assert.doesNotMatch(pageSource, /\{data\.counts\.models\} Results/);
   assert.match(pageSource, /Math\.abs\(delta\) < \.05\) return null/);
+  assert.match(pageSource, /const toggleSelectedModel = \(modelId: string\) => \{\s*setHoveredId\(null\);\s*setSelectedId\(\(current\) => current === modelId \? null : modelId\);/);
+  assert.match(pageSource, /onClick=\{\(\) => toggleSelectedModel\(model\.id\)\}/);
+  assert.match(pageSource, /button onClick=\{clearSelectedModel\} aria-label="Close model details"/);
   assert.match(styleSource, /@media \(prefers-color-scheme: dark\)/);
   assert.match(styleSource, /\.eyebrow \{[^}]+color: var\(--ink\)/);
   assert.match(styleSource, /color-scheme: dark/);
   assert.match(styleSource, /:root\[data-theme="dark"\]/);
   assert.match(styleSource, /\.forest-value \{[^}]+align-items: center/);
+  assert.match(styleSource, /\.public-marker \{ width: 14px; height: 14px/);
+  assert.match(styleSource, /\.scenario-marker \{ width: 14px; height: 14px/);
+  assert.match(styleSource, /\.forest-axis i \{[^}]+font: 700 15px\/1/);
+  assert.match(styleSource, /\.forest-label \{[^}]+justify-content: center[^}]+text-align: center/);
+  assert.match(styleSource, /\.forest-label strong \{[^}]+text-align: center[^}]+-webkit-line-clamp: 2/);
   assert.match(styleSource, /\.evidence-card \{[^}]+top: 50%;[^}]+left: 50%;[^}]+width: min\(640px, calc\(100% - 48px\)\);[^}]+transform: translate\(-50%, -50%\)/);
   assert.doesNotMatch(styleSource, /\.evidence-card \{ position: absolute;[^}]+(?:max-height|overflow)/);
   assert.match(styleSource, /\.card-header h2 \{[^}]+font-size: 30px/);
   assert.match(styleSource, /\.summary-grid dd \{[^}]+font-size: 18px/);
+  assert.match(styleSource, /\.contribution-stack \{[^}]+margin-bottom: 10px/);
+  assert.match(styleSource, /\.section-title h3 \{ margin: 0 0 14px/);
   assert.match(styleSource, /\.contribution-row > span \{[^}]+font-size: 15px/);
   assert.match(styleSource, /@media \(max-width: 1040px\)[\s\S]+?\.control-rail \{ position: fixed;/);
   assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?grid-template-columns: clamp\(104px, 34vw, 132px\) minmax\(0, 1fr\) 58px/);
+  assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?\.weight-label button \{[^}]+width: 18px;[^}]+height: 18px;[^}]+margin: 0/);
+  assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?\.evidence-card \.contribution-rows \{ display: block; \}/);
+  const narrowCardCss = styleSource.slice(
+    styleSource.indexOf("@media (min-width: 360px) and (max-width: 680px)"),
+    styleSource.indexOf("@media (max-width: 430px)"),
+  );
+  assert.doesNotMatch(narrowCardCss, /\.evidence-card \.contribution-rows \{ display: grid/);
+  assert.match(styleSource, /@media \(max-width: 430px\)[\s\S]+?\.forest-label strong \{[^}]+font-size: 15px/);
   assert.match(styleSource, /@media \(max-height: 850px\) and \(min-width: 681px\)/);
   assert.match(styleSource, /@media \(min-width: 3000px\)/);
   assert.doesNotMatch(styleSource, /min-width: 626px/);
   assert.match(pageSource, /mobile-optional/);
   assert.match(pageSource, /<dt>Weighted factor range<\/dt>/);
+  assert.match(pageSource, /selected\.lockedAnchor && <small>disclosed<\/small>/);
+  assert.doesNotMatch(pageSource, /<small>\{selected\.parameterKind\}<\/small>/);
   assert.match(pageSource, /<dt>Architecture<\/dt><dd>MoE<\/dd>/);
   assert.doesNotMatch(pageSource, /MoE · reasoning/);
   assert.match(pageSource, /weightedQuantile\(points, \.1\)/);
@@ -226,7 +251,7 @@ test("ships a complete pipeline-generated data contract", async () => {
   assert.equal(sol.crowd.n, sol.crowd.contributors.length);
   assert.equal(sol.crowd.n, sol.crowd.forecasts.length);
   assert.equal(sol.crowd.pooled, true);
-  const opus = data.models.find((model) => model.name === "Claude Opus 4.7 / 4.8 shared base");
+  const opus = data.models.find((model) => model.id === "claude-opus-47-48-shared-base");
   assert.equal(opus.crowd.n, 1);
   assert.equal(opus.crowd.pooled, false);
   assert.deepEqual(opus.crowd.contributors, ["Respondent R17"]);

@@ -59,6 +59,7 @@ const FACTOR_COLORS: Record<FactorId, string> = {
   ikp: "#C84B8F",
   crowd: "#5E8C42",
 };
+const CONTRIBUTION_LABELS: Partial<Record<FactorId, string>> = { aa: "AA Index" };
 
 const clamp = (value: number, low: number, high: number) => Math.min(high, Math.max(low, value));
 const formatDate = (date: string) =>
@@ -168,7 +169,7 @@ function ContributionList({ model, weights, compact = false }: { model: ScatterM
       <div className="contribution-rows">
         {rows.map(({ factor, weight }) => (
           <div className="contribution-row" key={factor.id}>
-            <span><i style={{ background: FACTOR_COLORS[factor.id] }} />{factor.shortLabel}</span>
+            <span><i style={{ background: FACTOR_COLORS[factor.id] }} />{CONTRIBUTION_LABELS[factor.id] ?? factor.shortLabel}</span>
             <b>{(weight * 100).toFixed(1)}%</b>
           </div>
         ))}
@@ -191,6 +192,7 @@ export default function Home() {
     const close = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
       setSelectedId(null);
+      setHoveredId(null);
       setRailOpen(false);
       setOpenHelp(null);
     };
@@ -237,6 +239,14 @@ export default function Home() {
   const darkMode = themeMode === "dark" || (themeMode === "system" && systemDark);
 
   const setMultiplier = (factor: FactorId, value: number) => setMultipliers((current) => ({ ...current, [factor]: value }));
+  const toggleSelectedModel = (modelId: string) => {
+    setHoveredId(null);
+    setSelectedId((current) => current === modelId ? null : modelId);
+  };
+  const clearSelectedModel = () => {
+    setSelectedId(null);
+    setHoveredId(null);
+  };
 
   return (
     <main className="site-shell">
@@ -279,7 +289,7 @@ export default function Home() {
                     key={model.id}
                     onFocus={() => setHoveredId(model.id)}
                     onBlur={() => setHoveredId(null)}
-                    onClick={() => setSelectedId((current) => current === model.id ? null : model.id)}
+                    onClick={() => toggleSelectedModel(model.id)}
                     aria-pressed={selectedId === model.id}
                     aria-label={`Inspect ${model.name}, model estimate ${formatParameter(value)}${model.publicEstimateT != null ? `, public estimate ${formatParameter(model.publicEstimateT)}` : ""}`}
                   >
@@ -304,9 +314,9 @@ export default function Home() {
 
             {selected && (
               <article className="evidence-card" role="dialog" aria-modal="false" aria-label={`${selected.name} evidence contribution`}>
-                <div className="card-header"><div><p>{selected.organization}</p><h2>{selected.name}</h2></div><button onClick={() => setSelectedId(null)} aria-label="Close model details">×</button></div>
+                <div className="card-header"><div><p>{selected.organization}</p><h2>{selected.name}</h2></div><button onClick={clearSelectedModel} aria-label="Close model details">×</button></div>
                 <dl className="summary-grid">
-                  <div><dt>Model estimate</dt><dd>{formatParameter(forecast(selected, weights))} <small>{selected.parameterKind}</small></dd></div>
+                  <div><dt>Model estimate</dt><dd>{formatParameter(forecast(selected, weights))}{selected.lockedAnchor && <small>disclosed</small>}</dd></div>
                   {selected.publicEstimateT != null && <div><dt>Public estimate</dt><dd>{formatParameter(selected.publicEstimateT)}</dd></div>}
                   {selectedFactorRange && <div><dt>Weighted factor range</dt><dd>{formatFactorRange(selectedFactorRange)}</dd></div>}
                   <div><dt>Release date</dt><dd>{formatDate(selected.releaseDate)}</dd></div>
@@ -341,10 +351,11 @@ export default function Home() {
                 {data.factors.filter((factor) => data.defaultWeights[factor.id] > 0).map((factor) => {
                   const exponent = Math.log10(multipliers[factor.id]);
                   const progress = (exponent + 1) * 50;
+                  const hasExplanation = factor.id !== "aa" && factor.id !== "eci";
                   return (
                     <div className="weight-control" key={factor.id}>
-                      <div className="weight-label"><b>{factor.shortLabel}</b><button type="button" aria-label={`Explain ${factor.label}`} aria-expanded={openHelp === factor.id} aria-controls={`factor-help-${factor.id}`} onClick={() => setOpenHelp((current) => current === factor.id ? null : factor.id)}>?</button><em>{formatMultiplier(multipliers[factor.id])}</em></div>
-                      {openHelp === factor.id && <p className="factor-explanation" id={`factor-help-${factor.id}`}>{factor.description}</p>}
+                      <div className="weight-label"><b>{factor.shortLabel}</b>{hasExplanation ? <button type="button" aria-label={`Explain ${factor.label}`} aria-expanded={openHelp === factor.id} aria-controls={`factor-help-${factor.id}`} onClick={() => setOpenHelp((current) => current === factor.id ? null : factor.id)}>?</button> : <span className="help-spacer" aria-hidden="true" />}<em>{formatMultiplier(multipliers[factor.id])}</em></div>
+                      {hasExplanation && openHelp === factor.id && <p className="factor-explanation" id={`factor-help-${factor.id}`}>{factor.description}</p>}
                       <input aria-label={`${factor.label} weight multiplier`} aria-valuetext={formatMultiplier(multipliers[factor.id])} type="range" min="-1" max="1" step="0.01" value={exponent} style={{ "--factor-color": FACTOR_COLORS[factor.id], "--factor-progress": `${progress}%` } as CSSProperties} onChange={(event) => setMultiplier(factor.id, Math.pow(10, Number(event.target.value)))} />
                     </div>
                   );

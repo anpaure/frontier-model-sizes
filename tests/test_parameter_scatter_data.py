@@ -44,7 +44,8 @@ class ParameterScatterDataTest(unittest.TestCase):
         self.assertAlmostEqual(by_forecast["claude-fable-5"]["publicEstimateT"], 4.371847506331046)
         self.assertAlmostEqual(by_forecast["gpt-56-sol"]["publicEstimateT"], 3.2116911484449235)
         self.assertEqual(sum(model["publicEstimateT"] is not None for model in by_forecast.values()), 2)
-        self.assertEqual(by_forecast["claude-opus-47-48-shared-base"]["name"], "Claude Opus 4.7 / 4.8 shared base")
+        self.assertEqual(by_forecast["claude-opus-47-48-shared-base"]["name"], "Claude Opus 4.8")
+        self.assertEqual(by_forecast["claude-opus-47-48-shared-base"]["shortName"], "Claude Opus 4.8")
 
     def test_every_model_retains_its_published_factor_inputs(self) -> None:
         factor_ids = {factor["id"] for factor in self.data["factors"]}

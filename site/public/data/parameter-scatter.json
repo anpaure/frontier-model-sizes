@@ -139,7 +139,7 @@
       "id": "weight-identity:anthropic:claude-opus-4-7-4-8",
       "labelPriority": 100,
       "lockedAnchor": false,
-      "name": "Claude Opus 4.7 / 4.8 shared base",
+      "name": "Claude Opus 4.8",
       "organization": "Anthropic",
       "organizationGroup": "Anthropic",
       "parameterKind": "forecast",
@@ -151,7 +151,7 @@
       "roles": [
         "frontier forecast"
       ],
-      "shortName": "Opus 4.7/4.8",
+      "shortName": "Claude Opus 4.8",
       "signals": {
         "aaScore": 55,
         "activeParametersB": null,
@@ -648,7 +648,7 @@
   "sources": {
     "forecast": {
       "name": "forecast-model.json",
-      "sha256": "ff90a20d9042f498d63681be9bfbc37e9bca905da5197f0ba04a14caaa98fd35"
+      "sha256": "8af02c64cdfe29816c0d555983804cd022e94cae007d87d0531ecf6092a906e4"
     }
   },
   "title": "Frontier model size estimates",

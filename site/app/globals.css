@@ -53,7 +53,7 @@ h1 { margin: 0; font-size: clamp(34px, 3.1vw, 49px); font-weight: 620; line-heig
 .forest-axis { min-height: 66px; }
 .forest-axis > div { position: relative; border-bottom: 1px solid var(--axis); }
 .forest-axis strong { position: absolute; top: 0; left: 0; color: var(--ink-soft); font-size: 17px; font-weight: 640; letter-spacing: -.02em; }
-.forest-axis i { position: absolute; bottom: 13px; min-width: 34px; transform: translateX(-50%); color: var(--ink-soft); font: 560 12px/1 var(--font-geist-mono), monospace; font-style: normal; text-align: center; white-space: nowrap; }
+.forest-axis i { position: absolute; bottom: 13px; min-width: 34px; transform: translateX(-50%); color: var(--ink-soft); font: 700 15px/1 var(--font-geist-mono), monospace; font-style: normal; text-align: center; white-space: nowrap; }
 .forest-axis i:first-of-type { transform: none; text-align: left; }
 .forest-axis i:last-of-type { transform: translateX(-100%); text-align: right; }
 .forest-axis i.baseline { color: #b84a3b; font-weight: 700; }
@@ -64,8 +64,8 @@ h1 { margin: 0; font-size: clamp(34px, 3.1vw, 49px); font-weight: 620; line-heig
 .forest-row:focus-visible, .forest-row.highlighted { z-index: 2; background: var(--row-hover); outline: none; }
 .forest-row:focus-visible { box-shadow: inset 0 0 0 2px rgba(0, 163, 165, .55); }
 .forest-row.dimmed { opacity: .17; }
-.forest-label { display: flex; min-width: 0; justify-content: flex-start; align-items: center; padding: 0 14px 0 4px; }
-.forest-label strong { width: 100%; overflow: hidden; font-size: clamp(17px, 1.3vw, 20px); font-weight: 620; line-height: 1.08; letter-spacing: -.035em; text-overflow: ellipsis; white-space: nowrap; }
+.forest-label { display: flex; min-width: 0; justify-content: center; align-items: center; padding: 0 14px 0 4px; text-align: center; }
+.forest-label strong { display: -webkit-box; width: 100%; overflow: hidden; font-size: clamp(17px, 1.3vw, 20px); font-weight: 620; line-height: 1.08; letter-spacing: -.035em; text-align: center; text-overflow: clip; white-space: normal; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .forest-track { position: relative; display: block; height: 100%; min-height: 56px; }
 .row-grid { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); pointer-events: none; }
 .row-grid.baseline { width: 1.5px; background: rgba(228, 92, 69, .55); }
@@ -74,8 +74,8 @@ h1 { margin: 0; font-size: clamp(34px, 3.1vw, 49px); font-weight: 620; line-heig
 .factor-whisker > i:first-child { left: 0; }
 .factor-whisker > i:last-child { right: 0; }
 .public-marker, .scenario-marker { position: absolute; z-index: 4; top: 50%; pointer-events: auto; cursor: pointer; transition: left .22s ease, transform .16s ease; }
-.public-marker { width: 13px; height: 13px; border: 1px solid var(--public-border); border-radius: 50%; background: var(--public-marker); transform: translate(-50%, -50%); }
-.scenario-marker { width: 13px; height: 13px; border: 1.5px solid var(--marker-edge); border-radius: 1px; box-shadow: 0 0 0 2px var(--marker-halo); transform: translate(-50%, -50%) rotate(45deg); }
+.public-marker { width: 14px; height: 14px; border: 1px solid var(--public-border); border-radius: 50%; background: var(--public-marker); transform: translate(-50%, -50%); }
+.scenario-marker { width: 14px; height: 14px; border: 1.5px solid var(--marker-edge); border-radius: 1px; box-shadow: 0 0 0 2px var(--marker-halo); transform: translate(-50%, -50%) rotate(45deg); }
 .scenario-marker:hover, .forest-row:focus-visible .scenario-marker, .forest-row.highlighted .scenario-marker { transform: translate(-50%, -50%) rotate(45deg) scale(1.22); }
 .public-marker:hover, .forest-row:focus-visible .public-marker, .forest-row.highlighted .public-marker { transform: translate(-50%, -50%) scale(1.22); }
 .forest-value { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding-left: 0; text-align: center; }
@@ -131,7 +131,7 @@ h1 { margin: 0; font-size: clamp(34px, 3.1vw, 49px); font-weight: 620; line-heig
 .rail-preview h2 { margin-bottom: 7px; }
 .rail-preview > strong { display: block; margin-bottom: 16px; font: 650 31px/1 var(--font-geist-mono), monospace; letter-spacing: -.06em; }
 
-.contribution-stack { display: flex; width: 100%; height: 10px; overflow: hidden; border-radius: 99px; background: var(--grid); }
+.contribution-stack { display: flex; width: 100%; height: 10px; margin-bottom: 10px; overflow: hidden; border-radius: 99px; background: var(--grid); }
 .contribution-stack span { min-width: 2px; }
 .contribution-rows { min-width: 0; }
 .contribution-row { display: grid; grid-template-columns: 1fr 52px; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--grid); }
@@ -258,22 +258,31 @@ h1 { margin: 0; font-size: clamp(34px, 3.1vw, 49px); font-weight: 620; line-heig
   .plot-header { min-height: 128px; gap: 14px; }
   .header-actions { gap: 6px; }
   .rail-toggle { width: 44px; height: 44px; }
+  .weight-label { grid-template-columns: minmax(0, 1fr) 20px 30px; gap: 8px; }
+  .weight-label button { position: relative; width: 18px; height: 18px; margin: 0; font-size: 9px; }
+  .weight-label button::after { position: absolute; inset: -9px; content: ""; }
+  .weight-label em { min-width: 30px; font-size: 12px; text-align: right; }
   h1 { font-size: 30px; }
   .forest-chart { overflow-x: visible; padding-bottom: 8px; }
   .forest-axis, .forest-row { grid-template-columns: clamp(104px, 34vw, 132px) minmax(0, 1fr) 58px; min-width: 0; }
   .forest-axis strong { font-size: 13px; }
+  .forest-axis i { font-size: 13px; }
   .forest-axis i.mobile-optional { display: none; }
-  .forest-label { padding-right: 4px; padding-left: 2px; }
+  .forest-label { padding-right: 6px; padding-left: 2px; }
   .forest-label strong { font-size: 16px; }
   .forest-value strong { font-size: 16px; }
   .forest-value small { min-height: 9px; font-size: 8px; letter-spacing: 0; }
   .forest-legend { min-width: 0; justify-content: center; gap: 10px; padding: 16px 0 4px; font-size: 9px; }
   .evidence-card { position: fixed; top: 12px; right: 12px; bottom: auto; left: 12px; width: auto; max-height: calc(100dvh - 24px); overflow: auto; overscroll-behavior: contain; transform: none; }
   .card-header { position: sticky; z-index: 2; top: 0; background: var(--row); }
-  .summary-grid { grid-template-columns: 1fr; }
+  .summary-grid { grid-template-columns: 1fr; padding-right: 20px; padding-left: 20px; }
   .summary-grid div:nth-child(odd), .summary-grid div:nth-child(even) { padding: 11px 0; border-left: 0; }
   .card-header, .card-section { padding-right: 20px; padding-left: 20px; }
-  .contribution-row { grid-template-columns: 1fr 46px; gap: 8px; }
+  .evidence-card .contribution-stack { margin-bottom: 10px; }
+  .evidence-card .contribution-rows { display: block; }
+  .evidence-card .contribution-row { grid-template-columns: minmax(0, 1fr) 48px; min-height: 44px; gap: 10px; padding: 9px 0; }
+  .evidence-card .contribution-row > span { min-width: 0; font-size: 14px; line-height: 1.3; }
+  .evidence-card .contribution-row i { flex: 0 0 auto; }
   .methodology-note { grid-template-columns: 1fr; gap: 6px; padding-inline: 14px; }
 }
 
@@ -282,7 +291,26 @@ h1 { margin: 0; font-size: clamp(34px, 3.1vw, 49px); font-weight: 620; line-heig
   .summary-grid div:nth-child(odd) { padding-right: 12px; }
   .summary-grid div:nth-child(even) { padding-left: 12px; border-left: 1px solid var(--grid); }
   .summary-grid div:last-child:nth-child(odd) { grid-column: 1 / -1; padding-right: 0; }
-  .evidence-card .contribution-rows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; }
+}
+
+@media (max-width: 430px) {
+  .chart-layout { --layout-pad-x: 12px; padding-top: 18px; padding-bottom: 18px; }
+  .plot-header { min-height: 112px; gap: 8px; }
+  .plot-header > div:first-child { min-width: 0; }
+  h1 { font-size: clamp(28px, 8.6vw, 34px); line-height: 1; }
+  .eyebrow { margin-top: 8px; font-size: 10px; letter-spacing: .1em; }
+  .header-actions { gap: 5px; }
+  .rail-toggle { width: 42px; height: 42px; }
+  .forest-row, .forest-track { min-height: 60px; }
+  .forest-label strong { font-size: 15px; line-height: 1.08; }
+  .forest-value strong { font-size: 15px; }
+  .public-marker, .scenario-marker { width: 16px; height: 16px; }
+  .forest-legend { display: grid; grid-template-columns: repeat(2, max-content); justify-content: center; gap: 10px 16px; padding: 16px 0 4px; }
+  .forest-legend span:last-child { grid-column: 1 / -1; justify-self: center; }
+  .methodology-note { gap: 10px; padding: 18px 12px max(22px, env(safe-area-inset-bottom)); }
+  .methodology-meta { width: 100%; flex-direction: row; align-items: center; justify-content: space-between; }
+  .methodology-note p { font-size: 12px; line-height: 1.58; }
+  .repo-link { min-height: 36px; font-size: 12px; }
 }
 
 @media (max-height: 850px) and (min-width: 681px) {
