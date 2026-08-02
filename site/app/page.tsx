@@ -374,7 +374,7 @@ export default function Home() {
             Check the repo
           </a>
         </div>
-        <p>The Artificial Analysis Intelligence Index and Epoch Capabilities Index provide audited capability signals, while the No-CoT Time Horizon supplies the primary parameter-scaling branch; API price and compute are lower-weight checks. The goal is to make otherwise opaque frontier-model parameter counts inspectable, adjustable, and reproducible instead of presenting one unexplained guess.</p>
+        <p>The Artificial Analysis Intelligence Index and Epoch Capabilities Index provide audited capability signals, while the No-CoT Time Horizon supplies the primary parameter-scaling branch; API price and compute are lower-weight checks. For Fable and Sol, the public estimate is the geometric mean of parameter-count forecasts from a 20-person poll of researchers and engineers. The goal is to make otherwise opaque frontier-model parameter counts inspectable, adjustable, and reproducible instead of presenting one unexplained guess.</p>
       </section>
     </main>
   );

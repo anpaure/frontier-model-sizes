@@ -46,6 +46,7 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(html, /Check the repo/);
   assert.match(html, /class="repo-mark"/);
   assert.match(html, /inspectable, adjustable, and reproducible/);
+  assert.match(html, /For Fable and Sol, the public estimate is the geometric mean of parameter-count forecasts from a 20-person poll of researchers and engineers\./);
   assert.match(html, /Artificial Analysis Intelligence Index/);
   assert.match(html, /Epoch Capabilities Index/);
   assert.match(html, /No-CoT Time Horizon/);
@@ -104,6 +105,8 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(styleSource, /color-scheme: dark/);
   assert.match(styleSource, /:root\[data-theme="dark"\]/);
   assert.match(styleSource, /\.forest-value \{[^}]+align-items: center/);
+  assert.match(styleSource, /\.plot-header \{[^}]+min-height: 88px/);
+  assert.match(styleSource, /\.repo-link \{[^}]+transform: translateX\(-2px\)/);
   assert.match(styleSource, /\.public-marker \{ width: 14px; height: 14px/);
   assert.match(styleSource, /\.scenario-marker \{ width: 14px; height: 14px/);
   assert.match(styleSource, /\.forest-axis i \{[^}]+font: 700 15px\/1/);
