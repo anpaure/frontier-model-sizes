@@ -651,6 +651,6 @@
       "sha256": "ff90a20d9042f498d63681be9bfbc37e9bca905da5197f0ba04a14caaa98fd35"
     }
   },
-  "title": "Frontier estimates",
+  "title": "Frontier model size estimates",
   "unit": "trillion parameters"
 }

@@ -8,7 +8,7 @@ test("GitHub Pages export is complete and repository-path aware", async () => {
   const html = await readFile(new URL("index.html", output), "utf8");
   const rsc = await readFile(new URL("index.rsc", output), "utf8");
 
-  assert.match(html, /Frontier model-size estimates/);
+  assert.match(html, /Frontier model size estimates/);
   assert.match(html, /frontier-model-sizes\/assets\//);
   assert.match(html, /frontier-model-sizes\/assets\/_vinext_fonts\//);
   assert.match(html, /https:\/\/anpaure\.github\.io\/frontier-model-sizes\//);

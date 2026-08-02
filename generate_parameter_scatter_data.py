@@ -87,7 +87,7 @@ def build() -> dict:
     payload = {
         "schemaVersion": 2,
         "snapshotDate": forecast["snapshotDate"],
-        "title": "Frontier estimates",
+        "title": "Frontier model size estimates",
         "unit": "trillion parameters",
         "parameterPolicy": "Every plotted value, identity, date, and contribution comes from the project's published forecast data. External visual references contribute layout only.",
         "counts": {

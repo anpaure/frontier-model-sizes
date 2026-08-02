@@ -21,12 +21,12 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Frontier model-size estimates<\/title>/i);
+  assert.match(html, /<title>Frontier model size estimates<\/title>/i);
   assert.doesNotMatch(html, /Frontier Parameter Lab/);
   assert.match(html, /evidence-backed parameter-count estimates/i);
   assert.match(html, /og-v3\.png/);
   assert.match(layoutSource, /icons: \{ icon: \[\{ url: `\$\{publicUrl\}favicon\.svg`/);
-  assert.match(html, /Frontier estimates/);
+  assert.match(html, /Frontier model size estimates/);
   assert.match(html, /href="https:\/\/twitter\.com\/anpaure"/);
   assert.match(html, /made by @anpaure/);
   assert.doesNotMatch(html, /Model estimates are colored diamonds/);
@@ -92,6 +92,7 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.doesNotMatch(pageSource, /\{data\.counts\.models\} Results/);
   assert.match(pageSource, /Math\.abs\(delta\) < \.05\) return null/);
   assert.match(styleSource, /@media \(prefers-color-scheme: dark\)/);
+  assert.match(styleSource, /\.eyebrow \{[^}]+color: var\(--ink\)/);
   assert.match(styleSource, /color-scheme: dark/);
   assert.match(styleSource, /:root\[data-theme="dark"\]/);
   assert.match(styleSource, /\.forest-value \{[^}]+align-items: center/);

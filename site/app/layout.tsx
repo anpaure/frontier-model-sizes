@@ -11,19 +11,19 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicUrl),
-  title: "Frontier model-size estimates",
+  title: "Frontier model size estimates",
   description: "Explore evidence-backed parameter-count estimates for current frontier AI models and reweight every evidence channel live.",
   icons: { icon: [{ url: `${publicUrl}favicon.svg`, type: "image/svg+xml" }] },
   openGraph: {
-    title: "Frontier model-size estimates",
+    title: "Frontier model size estimates",
     description: "Explore evidence-backed parameter-count estimates for current frontier AI models and reweight every evidence channel live.",
     type: "website",
     url: publicUrl,
-    images: [{ url: socialImage, width: 1568, height: 1003, alt: "Frontier model-size estimates forest plot" }],
+    images: [{ url: socialImage, width: 1568, height: 1003, alt: "Frontier model size estimates forest plot" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Frontier model-size estimates",
+    title: "Frontier model size estimates",
     description: "Explore evidence-backed parameter-count estimates for current frontier AI models and reweight every evidence channel live.",
     images: [socialImage],
   },
