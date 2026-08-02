@@ -487,11 +487,11 @@ def main():
         "factors": [
             {"id": "aa", "label": "Artificial Analysis Intelligence Index", "shortLabel": "Artificial Analysis Intelligence Index", "description": "K3-anchored, family-balanced direct parameter regression."},
             {"id": "eci", "label": "Epoch Capabilities Index", "shortLabel": "Epoch Capabilities Index", "description": "60/40 blend of no-date and exact-date direct regressions."},
-            {"id": "price", "label": "API price", "shortLabel": "Price", "description": "Correlated size signal; launch-vintage prices beat date alone, but add no robust active-size information beyond AA plus date."},
-            {"id": "horizon", "label": "No-CoT Time Horizon", "shortLabel": "No-CoT Time Horizon", "description": "Primary No-CoT task-completion-horizon branch: 50% of the evidence model, or 25% of the Fable/Sol final after their separate 50% public blend; all 49 releases use audited day-level dates."},
-            {"id": "compute", "label": "Compute-structured AA", "shortLabel": "Compute", "description": "AA/date is mapped through Epoch compute calibrations; a correlated structural regularizer, not observed target compute."},
+            {"id": "price", "label": "API price", "shortLabel": "Price", "description": "API price should correlate with model size because larger models generally cost more to serve; we use it as a low-weight cross-check, not a primary signal."},
+            {"id": "horizon", "label": "No-CoT Time Horizon", "shortLabel": "No-CoT Time Horizon", "description": "No-CoT measures how long a task a model can complete without explicit chain-of-thought reasoning; we use that task horizon as our strongest capability-to-parameter scaling signal."},
+            {"id": "compute", "label": "Compute-structured AA", "shortLabel": "Compute", "description": "Training compute should rise with model scale; we map AA and release date through Epoch's compute estimates and use the result as a low-weight structural cross-check."},
             {"id": "ikp", "label": "Knowledge capacity", "shortLabel": "IKP", "description": f"Incompressible Knowledge Probes: a direct Fable factual-capacity sensitivity. Its live weight is {100 * ikp['decision']['incremental_evidence_weight']:.0f}% because promotion requires every predeclared validation gate to pass."},
-            {"id": "crowd", "label": "Public estimate", "shortLabel": "Public estimate", "description": "Equal-weight geometric center of active human forecasts."},
+            {"id": "crowd", "label": "Public estimate", "shortLabel": "Public estimate", "description": "Geometric mean of parameter-count forecasts from a 20-person poll of researchers and engineers; used only for Fable and Sol."},
         ],
         "presets": [
             {"id": "current", "label": "Current posterior", "weights": default_weights},

@@ -51,6 +51,12 @@ class ParameterScatterDataTest(unittest.TestCase):
         factor_ids = {factor["id"] for factor in self.data["factors"]}
         self.assertEqual(factor_ids, {"aa", "eci", "price", "horizon", "compute", "ikp", "crowd"})
         self.assertTrue(all(set(model["factors"]) == factor_ids for model in self.data["models"]))
+        descriptions = {factor["id"]: factor["description"] for factor in self.data["factors"]}
+        self.assertIn("larger models generally cost more to serve", descriptions["price"])
+        self.assertIn("without explicit chain-of-thought reasoning", descriptions["horizon"])
+        self.assertIn("low-weight structural cross-check", descriptions["compute"])
+        self.assertIn("20-person poll of researchers and engineers", descriptions["crowd"])
+        self.assertIn("used only for Fable and Sol", descriptions["crowd"])
 
     def test_declared_source_hashes_reconcile(self) -> None:
         lookup = {"forecast": ROOT / "site" / "public" / "data" / "forecast-model.json"}

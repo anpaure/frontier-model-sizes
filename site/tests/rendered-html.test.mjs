@@ -119,6 +119,7 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(styleSource, /@media \(max-width: 1040px\)[\s\S]+?\.control-rail \{ position: fixed;/);
   assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?grid-template-columns: clamp\(104px, 34vw, 132px\) minmax\(0, 1fr\) 58px/);
   assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?\.weight-label button \{[^}]+width: 18px;[^}]+height: 18px;[^}]+margin: 0/);
+  assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?\.factor-explanation \{[^}]+font-size: 11px/);
   assert.match(styleSource, /@media \(max-width: 680px\)[\s\S]+?\.evidence-card \.contribution-rows \{ display: block; \}/);
   const narrowCardCss = styleSource.slice(
     styleSource.indexOf("@media (min-width: 360px) and (max-width: 680px)"),
@@ -197,7 +198,7 @@ test("ships a complete pipeline-generated data contract", async () => {
     crowd: 50,
   });
   assert.equal(data.factors.find((factor) => factor.id === "horizon").label, "No-CoT Time Horizon");
-  assert.match(data.factors.find((factor) => factor.id === "horizon").description, /50% of the evidence model/);
+  assert.match(data.factors.find((factor) => factor.id === "horizon").description, /without explicit chain-of-thought reasoning/);
   assert.equal(k3Efficiency.decision.incremental_point_center_weight, 0);
   assert.equal(k3Efficiency.decision.crowd_weight_for_fable_and_sol, 0.5);
   assert.equal(k3Efficiency.decision.rejected_nonlinear_eci_weight, 0);

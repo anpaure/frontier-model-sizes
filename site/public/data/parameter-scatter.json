@@ -28,19 +28,19 @@
       "shortLabel": "Epoch Capabilities Index"
     },
     {
-      "description": "Correlated size signal; launch-vintage prices beat date alone, but add no robust active-size information beyond AA plus date.",
+      "description": "API price should correlate with model size because larger models generally cost more to serve; we use it as a low-weight cross-check, not a primary signal.",
       "id": "price",
       "label": "API price",
       "shortLabel": "Price"
     },
     {
-      "description": "Primary No-CoT task-completion-horizon branch: 50% of the evidence model, or 25% of the Fable/Sol final after their separate 50% public blend; all 49 releases use audited day-level dates.",
+      "description": "No-CoT measures how long a task a model can complete without explicit chain-of-thought reasoning; we use that task horizon as our strongest capability-to-parameter scaling signal.",
       "id": "horizon",
       "label": "No-CoT Time Horizon",
       "shortLabel": "No-CoT Time Horizon"
     },
     {
-      "description": "AA/date is mapped through Epoch compute calibrations; a correlated structural regularizer, not observed target compute.",
+      "description": "Training compute should rise with model scale; we map AA and release date through Epoch's compute estimates and use the result as a low-weight structural cross-check.",
       "id": "compute",
       "label": "Compute-structured AA",
       "shortLabel": "Compute"
@@ -52,7 +52,7 @@
       "shortLabel": "IKP"
     },
     {
-      "description": "Equal-weight geometric center of active human forecasts.",
+      "description": "Geometric mean of parameter-count forecasts from a 20-person poll of researchers and engineers; used only for Fable and Sol.",
       "id": "crowd",
       "label": "Public estimate",
       "shortLabel": "Public estimate"
@@ -648,7 +648,7 @@
   "sources": {
     "forecast": {
       "name": "forecast-model.json",
-      "sha256": "8af02c64cdfe29816c0d555983804cd022e94cae007d87d0531ecf6092a906e4"
+      "sha256": "b77af68a8b02776ab21837c2515a9fdd1e1352fe47ab52f7ce716f91b9a922de"
     }
   },
   "title": "Frontier model size estimates",
