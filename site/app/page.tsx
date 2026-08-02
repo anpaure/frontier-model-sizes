@@ -363,7 +363,7 @@ export default function Home() {
             Check the repo
           </a>
         </div>
-        <p>The Artificial Analysis Intelligence Index and Epoch Capabilities Index provide audited capability signals, while the No-CoT Time Horizon supplies the primary parameter-scaling branch; API price and compute are lower-weight checks, and METR is retained only as a post-training decomposition diagnostic. The goal is to make otherwise opaque frontier-model parameter counts inspectable, adjustable, and reproducible instead of presenting one unexplained guess.</p>
+        <p>The Artificial Analysis Intelligence Index and Epoch Capabilities Index provide audited capability signals, while the No-CoT Time Horizon supplies the primary parameter-scaling branch; API price and compute are lower-weight checks. The goal is to make otherwise opaque frontier-model parameter counts inspectable, adjustable, and reproducible instead of presenting one unexplained guess.</p>
       </section>
     </main>
   );

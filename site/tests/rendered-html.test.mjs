@@ -49,7 +49,7 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(html, /Artificial Analysis Intelligence Index/);
   assert.match(html, /Epoch Capabilities Index/);
   assert.match(html, /No-CoT Time Horizon/);
-  assert.match(html, /METR is retained only as a post-training decomposition diagnostic/);
+  assert.doesNotMatch(html, /METR/);
   assert.match(html, /Public estimate/);
   assert.match(html, /are lower-weight checks/);
   assert.doesNotMatch(html, /Published mix|Scenario estimate|Live scenario/i);
