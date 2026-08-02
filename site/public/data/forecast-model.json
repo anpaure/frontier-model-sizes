@@ -33,9 +33,9 @@
     },
     {
       "id": "horizon",
-      "label": "METR Time Horizon",
-      "shortLabel": "METR Time Horizon",
-      "description": "Primary task-horizon branch; all 49 releases use audited day-level dates."
+      "label": "No-CoT Time Horizon",
+      "shortLabel": "No-CoT Time Horizon",
+      "description": "Primary No-CoT task-completion-horizon branch: 50% of the evidence model, or 25% of the Fable/Sol final after their separate 50% public blend; all 49 releases use audited day-level dates."
     },
     {
       "id": "compute",

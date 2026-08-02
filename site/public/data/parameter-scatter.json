@@ -34,10 +34,10 @@
       "shortLabel": "Price"
     },
     {
-      "description": "Primary task-horizon branch; all 49 releases use audited day-level dates.",
+      "description": "Primary No-CoT task-completion-horizon branch: 50% of the evidence model, or 25% of the Fable/Sol final after their separate 50% public blend; all 49 releases use audited day-level dates.",
       "id": "horizon",
-      "label": "METR Time Horizon",
-      "shortLabel": "METR Time Horizon"
+      "label": "No-CoT Time Horizon",
+      "shortLabel": "No-CoT Time Horizon"
     },
     {
       "description": "AA/date is mapped through Epoch compute calibrations; a correlated structural regularizer, not observed target compute.",
@@ -648,7 +648,7 @@
   "sources": {
     "forecast": {
       "name": "forecast-model.json",
-      "sha256": "066d5b1e647a305495322d337aa43f926e5a492bfd93d7120d910710cbb50be7"
+      "sha256": "ff90a20d9042f498d63681be9bfbc37e9bca905da5197f0ba04a14caaa98fd35"
     }
   },
   "title": "Frontier estimates",

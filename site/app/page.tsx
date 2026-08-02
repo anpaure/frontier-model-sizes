@@ -3,6 +3,8 @@
 import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import rawData from "../public/data/parameter-scatter.json";
 
+export const dynamic = "force-static";
+
 type FactorId = "aa" | "eci" | "price" | "horizon" | "compute" | "ikp" | "crowd";
 type Weights = Record<FactorId, number>;
 type Factor = { id: FactorId; label: string; shortLabel: string; description: string };
@@ -354,8 +356,14 @@ export default function Home() {
         )}
       </section>
       <section className="methodology-note" aria-labelledby="methodology-title">
-        <h2 id="methodology-title">Methodology</h2>
-        <p>The Artificial Analysis Intelligence Index, Epoch Capabilities Index, and METR Time Horizon were retained for their audited capability and time-horizon signal, API price and compute enter only as lower-weight correlated structural checks, and public estimates remain a separate judgment layer.</p>
+        <div className="methodology-meta">
+          <h2 id="methodology-title">Methodology</h2>
+          <a className="repo-link" href="https://github.com/anpaure/frontier-model-sizes" target="_blank" rel="noreferrer">
+            <svg className="repo-mark" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M16 0C7.16 0 0 7.16 0 16c0 7.08 4.58 13.06 10.94 15.18.8.14 1.1-.34 1.1-.76 0-.38-.02-1.64-.02-2.98-4.02.74-5.06-.98-5.38-1.88-.18-.46-.96-1.88-1.64-2.26-.56-.3-1.36-1.04-.02-1.06 1.26-.02 2.16 1.16 2.46 1.64 1.44 2.42 3.74 1.74 4.66 1.32.14-1.04.56-1.74 1.02-2.14-3.56-.4-7.28-1.78-7.28-7.9 0-1.74.62-3.18 1.64-4.3-.16-.4-.72-2.04.16-4.24 0 0 1.34-.42 4.4 1.64 1.28-.36 2.64-.54 4-.54s2.72.18 4 .54c3.06-2.08 4.4-1.64 4.4-1.64.88 2.2.32 3.84.16 4.24 1.02 1.12 1.64 2.54 1.64 4.3 0 6.14-3.74 7.5-7.3 7.9.58.5 1.08 1.46 1.08 2.96 0 2.14-.02 3.86-.02 4.4 0 .42.3.92 1.1.76C27.42 29.06 32 23.06 32 16 32 7.16 24.84 0 16 0Z" /></svg>
+            Check the repo
+          </a>
+        </div>
+        <p>The Artificial Analysis Intelligence Index and Epoch Capabilities Index provide audited capability signals, while the No-CoT Time Horizon supplies the primary parameter-scaling branch; API price and compute are lower-weight checks, and METR is retained only as a post-training decomposition diagnostic. The goal is to make otherwise opaque frontier-model parameter counts inspectable, adjustable, and reproducible instead of presenting one unexplained guess.</p>
       </section>
     </main>
   );

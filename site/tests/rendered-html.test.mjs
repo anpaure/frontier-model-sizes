@@ -21,11 +21,11 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Frontier estimates<\/title>/i);
+  assert.match(html, /<title>Frontier model-size estimates<\/title>/i);
   assert.doesNotMatch(html, /Frontier Parameter Lab/);
-  assert.match(html, /interactive forest plot/i);
+  assert.match(html, /evidence-backed parameter-count estimates/i);
   assert.match(html, /og-v3\.png/);
-  assert.match(layoutSource, /icons: \{ icon: \[\{ url: "\/og-v3\.png"/);
+  assert.match(layoutSource, /icons: \{ icon: \[\{ url: `\$\{publicUrl\}favicon\.svg`/);
   assert.match(html, /Frontier estimates/);
   assert.match(html, /href="https:\/\/twitter\.com\/anpaure"/);
   assert.match(html, /made by @anpaure/);
@@ -42,11 +42,16 @@ test("renders the Epoch-layout parameter explorer from project data", async () =
   assert.match(html, /Public estimate/);
   assert.match(html, /Model estimate/);
   assert.match(html, /Methodology/);
+  assert.match(html, /href="https:\/\/github\.com\/anpaure\/frontier-model-sizes"/);
+  assert.match(html, /Check the repo/);
+  assert.match(html, /class="repo-mark"/);
+  assert.match(html, /inspectable, adjustable, and reproducible/);
   assert.match(html, /Artificial Analysis Intelligence Index/);
   assert.match(html, /Epoch Capabilities Index/);
-  assert.match(html, /METR Time Horizon/);
+  assert.match(html, /No-CoT Time Horizon/);
+  assert.match(html, /METR is retained only as a post-training decomposition diagnostic/);
   assert.match(html, /Public estimate/);
-  assert.match(html, /lower-weight correlated structural checks/);
+  assert.match(html, /are lower-weight checks/);
   assert.doesNotMatch(html, /Published mix|Scenario estimate|Live scenario/i);
   assert.doesNotMatch(html, /\bCI\b|confidence interval/i);
   assert.doesNotMatch(html, /Exactly ten models|Three marks per row|Select for contribution|Method &amp; provenance/i);
@@ -165,6 +170,8 @@ test("ships a complete pipeline-generated data contract", async () => {
     ikp: 0,
     crowd: 50,
   });
+  assert.equal(data.factors.find((factor) => factor.id === "horizon").label, "No-CoT Time Horizon");
+  assert.match(data.factors.find((factor) => factor.id === "horizon").description, /50% of the evidence model/);
   assert.equal(k3Efficiency.decision.incremental_point_center_weight, 0);
   assert.equal(k3Efficiency.decision.crowd_weight_for_fable_and_sol, 0.5);
   assert.equal(k3Efficiency.decision.rejected_nonlinear_eci_weight, 0);
